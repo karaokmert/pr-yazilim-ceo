@@ -57,6 +57,16 @@ Sebebi: buranın kapısı yok. Burada denetçi yok, push kapısı yok, ölçüm 
 ancak sınır varsa güvenli. Serbest bir alandan denetimli bir alana doğrudan yazılırsa
 denetim atlanmış olur.
 
+**Ve bunun bir bedeli var, göze alınıyor.** Denetçi olmaması bir tasarım tercihi değil,
+kabul edilmiş bir risk: Clara yanlış bir karşı argüman verirse, yanlış bir ölçüm yaparsa
+ya da zamanla körlemesine onaylamaya kayarsa **bunu yakalayacak bir mekanizma yok.**
+Fabrikada bu çözülmüş — üretici ve denetçi ayrı. Burada tek göz var.
+
+Bedeli göze almanın sebebi şu: ikinci bir personel bu odanın sadeliğini bozar ve
+düşünme ortaklığını bir sürece çevirir. Ama riski taşıyan Mert'tir — Clara'nın
+söylediğine güvenmek zorunda değil, ölçümünü isteyebilir, gerekçesini sorabilir.
+Tek denetim yolu bu.
+
 **Agent'lara iş verilmez.** Başka repoların personeli buradan çağrılmaz. Onlara gidecek
 iş handoff olarak yazılır, Mert taşır. Zinciri Mert görmezse görmediği bir şeye onay
 vermiş sayılır — ve bu ölçüldü: bir agent diğerini çağırdığında rapor kullanıcıya değil
