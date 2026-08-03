@@ -31,16 +31,41 @@ v7'deki hâli (emekli kanon, referans olarak):
 3 Maestro, `ui-designer`'da 4 Figma MCP vardı; `qa-engineer` ve `code-auditor`'a
 `Write`/`Edit` verilmemişti.
 
+**v8 kısıtı `disallowedTools` ile yapıyor** (Mert'in tespiti, sonra ölçüldü) — ve
+içinde tek bir şey var:
+
+- OY ailesi, dokuz agent'ın dokuzunda da: `disallowedTools: Workflow`
+- Websitesi ailesi, yedi agent: `disallowedTools:` **boş** — hiçbir kısıt yok
+
+Yani `Workflow` dışında **hiçbir araç kapalı değil.** `qa-engineer` ve `code-auditor`
+`Write`, `Edit`, `Bash`, `Task`, `Skill` dahil her şeye sahip.
+
 ### Bu kaydın ilk hâli yanlıştı — düzeltme notu
 
 İlk yazımda *"OY ekibinde `Skill` aracı yok, bu bir açık"* denmişti. **Yanlış.**
 Sebep: grep sonucunda v7 kopyası da listeye karışmıştı ve yürürlükteki hâl sanıldı.
-Mert itiraz etti (*"OY 8'de yok ama disallow'da da değil, böyle olunca her şeyi
-kullanabiliyor"*) ve ölçüm onu doğruladı.
+Ayrıca yalnız `tools:` arandı, `disallowedTools` hiç aranmadı — yani ölçüm yarımdı ve
+yarım ölçüm yanlış sonuç verdi.
+
+Mert itiraz etti (*"OY 8'de yok ama disallow'da da değil"*, sonra *"oraya
+yazdıklarımız aktif oluyordu, biz disallow'u kullandık"*) ve ikisi de ölçümle
+doğrulandı.
 
 Ders, bugün kanona eklenen kuralın bir başka biçimi: kaynağa gitmek yetmiyor,
 **hangi kaynağa** gidildiğini kontrol etmek gerekiyor. Aynı dosyanın 9 kopyası varsa
-"okudum" bir kanıt değil.
+"okudum" bir kanıt değil. Ve bir alanı aramak, **onun karşıtını aramamak** demek
+değil.
+
+### Asimetri — iki ekip iki farklı yöntem
+
+Fabrika `tools:` kullanıyor (**beyaz liste** — yalnız izin verilenler),
+OY/websitesi `disallowedTools` kullanıyor (**siyah liste** — yalnız yasaklananlar).
+
+Aradaki fark gelecekte ortaya çıkar: Claude Code yeni bir araç eklediğinde beyaz liste
+onu **otomatik kapatır**, siyah liste **otomatik açar.** Yani OY ekibi bir sonraki
+sürümün getirdiği her aracı sormadan alır.
+
+Bu bir arıza değil ama bir tercih ve tercihin kaydı bulunamadı.
 
 ## Doküman okuması — 46 built-in araç
 
@@ -92,29 +117,33 @@ Sonucu genel bir kural: **bu listedeki hiçbir araç ölçülmeden kanona alınm
 Doküman bir aracın var olduğunu söylüyor; o aracın bir subagent'ta çalıştığını
 söylemiyor.
 
-## Asıl açık — v8 araç kısıtını bıraktı, kural metne kaldı
+## Asıl açık — kural metne kaldı, mekanizma kalmadı
 
-Ölçülen fark şu: v7 her agent'ın aracını tek tek sayıyordu, **v8 hiç saymıyor.**
+v7 her agent'ın aracını tek tek sayıyordu. v8 `disallowedTools`'a geçti ve içine
+yalnız `Workflow` yazdı — yani pratikte **kısıt kalmadı.**
 
-v7'de `qa-engineer` ve `code-auditor`'a `Write`/`Edit` verilmemişti — yani *"kod
-yazmazsın"* kuralı araç seviyesinde **mekanik olarak** engelliydi. v8'de alan
-olmadığı için o iki agent da `Write`, `Edit`, `Bash`, `Task`, hepsine sahip.
+Somut sonuç: v7'de `qa-engineer` ve `code-auditor`'a `Write`/`Edit` verilmemişti,
+*"kod yazmazsın"* kuralı **mekanik olarak** engelliydi. v8'de ikisi de yazabiliyor.
+`code-auditor`'ın description'ında büyük harfle *"KOD YAZMAZSIN"* yazıyor ve bunu
+tutan tek şey artık o cümle.
 
-Kanon hâlâ *"KOD YAZMAZSIN"* diyor (`code-auditor` description'ında büyük harfle).
-Ama artık bunu tutan tek şey **metin**; mekanizma yok.
+Bu bir arıza mı, bilinmiyor. İki okuma var:
 
-Bu bir arıza mı bilinmiyor. İki okuma var:
+**Bilinçli tercih olabilir.** Araçla kısıtlamak bakım maliyeti getirir — bir agent'ın
+yeni bir araca ihtiyacı olduğunda liste güncellenmeli. v8'in tasarım yönü buydu.
+Mert'in ifadesi bu yönü destekliyor: *"oraya yazdıklarımız aktif oluyordu, biz
+disallow'u kullandık"* — yani `tools:` alanının davranışı sorun çıkarmış.
 
-**Bilinçli tercih olabilir.** Araçla kısıtlamak kırılgandır — bir agent'ın yeni bir
-araca ihtiyacı olduğunda liste güncellenmeli ve bu bakım maliyeti. v8'in tasarım
-yönü buydu (bakımı kolaylaştırmak).
+**Ama kısıtın kalkması ayrı bir karar.** `disallowedTools`'a geçmek bir şey,
+o listeyi tek satırda bırakmak başka şey. İkincisinin gerekçesi bulunamadı.
 
-**Boşluk olabilir.** v7'den v8'e geçerken alan düşmüş ve kimse fark etmemiş olabilir —
-tıpkı `skills:` alanının çalışmadığının altı ay fark edilmemesi gibi.
+**Neden önemli:** v8'in ölçülmüş arızası kuralların davranışa dönüşmemesiydi
+(preload). O mekanik çözüldü. Ama araç kısıtı da bir mekanizmaydı ve o hâlâ yok —
+yani *"denetçi kod yazmaz"* bugün yalnız agent'ın kurala uymasına bağlı, hiçbir
+teknik engel yok.
 
-**Ayıran soru Mert'e ait:** v8'de `tools:` alanının kaldırılması yazılı bir karar mı?
-`agent-project` ya da `skill-project` altında bu kararın kaydı varsa okunmalı; yoksa
-sessiz bir kayıp.
+**Karar Mert'te:** `Write`/`Edit`'in QA ve CA'dan alınması gerekli mi? Alınırsa
+`disallowedTools: Workflow, Write, Edit` yeterli — tek satır, dokuz dosya.
 
 ## Fabrikaya MCP verilmemiş — sebep bilinmiyor
 
