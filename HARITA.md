@@ -22,12 +22,14 @@ kayıtsız harita satırı yalan olur.
 - **Memory disiplini** — üretim hattının memory kanonundan iki kural alındı, üçü bilinçli bırakıldı · 2026-08-03 · `kararlar/2026-08-03-clara-memory-disiplini.md` · kapalı ama "kendi kanonuna yazmaz" bölümü **iptal** (bkz. kanon yetkisi)
 - **Clara'nın büyüme düzeni** — ne hafızaya ne repoya gider, ne zaman yazılır, oturum başında ne okunur; araç eşiği · 2026-08-03 · `kararlar/2026-08-03-clara-buyume-duzeni.md` · kapalı
 - **Clara'nın kanon yetkisi** — kanona yazma yasağı kaldırıldı; kural içeride/gerekçe dışarıda, üç dokunulmaz, şişme freni · 2026-08-03 · `kararlar/2026-08-03-clara-kanon-yetkisi.md` · kapalı
+- **Yazma sınırı değişti** — `CLA-WRITE-HERE-ONLY` kaldırıldı, yerine `CLA-ASK-BEFORE-WRITING-OUT`: başka repoya yazılır ama metni gösterip onay alınır; izin kuralı hâlâ yasak · 2026-08-03 · `kararlar/2026-08-03-clara-yazma-sinirinin-degismesi.md` · kapalı
 
 ## İncelemeler
 
 - **Clara'nın ilk sınaması** — kanon dört baskı testinde davranış üretti; sekiz boşluk kapatıldı · 2026-08-02 · `incelemeler/clara-ilk-sinama/kayit.md` · kapalı
 - **v7 iletişim düzeni** — v7'nin kural biçimi nasıl davranış üretiyordu (kısıt, negatif liste, rol-ton) · 2026-08-03 · `incelemeler/v7-iletisim-duzeni/bulgu.md` · kapalı
 - **Skill preload bulgusu** — agent'lar `skills:` listesini yükleyemiyor ve kendi frontmatter'ını göremiyor; fabrika hook'u kısmen çözüyor, kapsamı dar · 2026-08-03 · `incelemeler/skill-preload-bulgusu/kayit.md` · eskimiş olabilir (Claude Code sürümüne bağlı; `anthropics/claude-code#25834`)
+- **PAM'in `CLAUDE.md` yetkisi** — üç dosya düzeltildi (yazma sınırı değiştikten sonra); auto-mode bloğu ölçüldü: geçici, ikinci denemede geçti, izin kuralı gereksiz · 2026-08-03 · `incelemeler/pam-claude-md-yetkisi/kayit.md` · kapalı (commit fabrikada)
 - **`CLAUDE.md` otomatik yükleme** — subagent `CLAUDE.md` hiyerarşisini görüyor ve uyguluyor (3/3 tuhaf kural); agent tanımı/skill gövdesi gelmiyor — iki mekanizma ayrı · 2026-08-03 · `incelemeler/claude-md-otomatik-yukleme/kayit.md` · kapalı (ölçek ölçülmedi)
 - **Kanon yetkisi sınaması** — üç baskı testi (yetkiyi kendine karşı kullanma, yanlış teşhis, kötü fikir + acele); dört yeni kural da davranış üretti · 2026-08-03 · `incelemeler/clara-kanon-yetkisi-sinamasi/kayit.md` · kapalı
 - **Clara'nın beyni — ilk tespit** — üç kat (kanon/kayıt/hafıza), hafızada tek `user` kaydı yok, `.remember` git dışı, RAG gerekmiyor · 2026-08-03 · `incelemeler/clara-beyni/tespit.md` · kapalı
