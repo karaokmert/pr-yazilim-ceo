@@ -75,17 +75,43 @@ Gövde taşımaz; hook çıktısı 10.000 karakterle sınırlı ve kanon 105.000
 Doğrulandı: hook'tan önce PAM *"bilmiyorum"* diyordu, sonra `uretim` kanonundaki üç
 soruyu tam verdi. v8 PA altı skill'i `Skill` aracıyla yükledi ve sürümünü doğruladı.
 
-## Açık kalan
+## Çözüldü — plugin hook'u sahada çalışıyor
 
-**Hook skill adlarını gömmüyor** — yukarıdaki ikinci bulgu yüzünden agent tahmin
-ediyor. Düzeltmesi hazır, uygulanmadı (AG yeni sürüm çıkarıyor, bekleniyor).
+Aynı gün AG (eski kuşak üretici) hook'u iki plugin'e ekledi ve sürüm bump'ladı:
+OY `0.6.1`, WS `0.8.1`.
 
-**Açılış şişkin.** *"Selamlar PAM"* demek 52 saniye ve 413 bin token'a mal oldu. Sebep:
-hook'un *"iş akışına göre göreve başla"* cümlesi 6 gereksiz tool çağrısı tetikliyor.
+Doğru tasarım kararları:
 
-**Preload maliyeti görünür oldu.** v8 PA açılışta %15 context yiyor (~21 bin token,
-altı skill). Bu yeni bir maliyet değil — `skills:` çalışsaydı aynı yükü sessizce
-alacaktı. Ama artık ölçülebiliyor.
+**Skill adları script'e gömülmedi**, çalışma anında agent `.md`'sinden okunuyor. Gömülse
+iki kaynak olurdu — frontmatter değişir, hook eskir, kimse fark etmez. Bu aynı zamanda
+*"agent kendini göremez"* tuzağını da kapatıyor: liste agent'a **dışarıdan** veriliyor.
+
+**`SessionStart` seçildi**, `SubagentStart` değil — bu ekosistemde agent'lar terminal
+profilinden ana oturum olarak açılıyor.
+
+**Matcher düzeltildi.** İlk sürümde `"matcher": "ozel-yazilim:.*"` yazılmıştı; doküman
+net — `SessionStart` matcher'ı oturum kaynağını eşler (`startup`, `resume`, `clear`,
+`compact`, `fork`), agent adını değil. Agent tipi filtreleme yalnız
+`SubagentStart`/`SubagentStop`'ta var. Namespace filtresi script içinde yapılıyor.
+
+**Saha doğrulaması.** `ozel-yazilim:backend-developer` açıldı, ilk cümlesi:
+*"6 skill yüklendi. Kanonum context'te; artık ezberden değil kaynaktan çalışıyorum."*
+Altısı da doğru — frontmatter'la birebir. Ve aynı turda kanondan bir kural uygulayıp
+yanlış dizinde olduğunu fark etti (`.csproj` yok, bu bir meta-repo).
+
+## Hâlâ açık
+
+**Fabrika ve bu oda plugin değil.** `agent-project`'in personeli (PAM, PAD, PQA, PCA) ve
+Clara hook'suz — kanonlarını yüklemeden açılıyorlar. Bir fabrika agent'ına iş verirken
+ilk turda skill'lerini okumasını istemek gerekiyor.
+
+**Açılış maliyeti görünür oldu.** v8 PA açılışta ~%15 context yiyor (~21 bin token, altı
+skill). Yeni bir maliyet değil — `skills:` çalışsaydı aynı yükü sessizce alacaktı. Ama
+artık ölçülebiliyor, ve hangi skill'in gerçekten her oturumda gerektiği ölçülebilir.
+
+**v8 adil sınav görmedi.** AG'nin ölçümü: `backend-developer` beklenen ~11.500 kelimelik
+kanonun **1.067 kelimesini** görüyordu — %91'ini hiç görmedi. Yani *"v8 olmadı"* yargısı
+yanlış deneyden çıktı. Bu v8'i aklamaz ama yeniden ölçüm gerektirir.
 
 ## Bir sınama yaparken
 
