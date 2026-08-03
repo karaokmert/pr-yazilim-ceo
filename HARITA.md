@@ -12,6 +12,10 @@ Durumlar: **kapalı** (karar verildi, tartışılmaz) · **yarım** (iş bitmedi
 Kural: bir kayıt yazıldığında buraya satırı da yazılır. Haritasız kayıt kaybolur;
 kayıtsız harita satırı yalan olur.
 
+## Projeler
+
+- **Proje envanteri** — 16 + 8 klasör tarandı: kendi ürün WupDoc (+ BalkanBee belirsiz), 8 aktif müşteri projesi, 4 yarı yolda, 3 git dışı, 1 şifre sızıntısı · 2026-08-03 · `projeler/envanter.md` · **referans** (durum değişince güncellenir)
+
 ## Kararlar
 
 - **Clara kurulumu** — bu odanın neden ayrı olduğu, tek personel, üç sert kuralın gerekçesi · 2026-08-02 · `kararlar/2026-08-02-clara-kurulumu.md` · kapalı
