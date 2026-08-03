@@ -24,6 +24,7 @@ kayıtsız harita satırı yalan olur.
 - **Clara'nın ilk sınaması** — kanon dört baskı testinde davranış üretti; sekiz boşluk kapatıldı · 2026-08-02 · `incelemeler/clara-ilk-sinama/kayit.md` · kapalı
 - **v7 iletişim düzeni** — v7'nin kural biçimi nasıl davranış üretiyordu (kısıt, negatif liste, rol-ton) · 2026-08-03 · `incelemeler/v7-iletisim-duzeni/bulgu.md` · kapalı
 - **Skill preload bulgusu** — agent'lar `skills:` listesini yükleyemiyor ve kendi frontmatter'ını göremiyor; fabrika hook'u kısmen çözüyor, kapsamı dar · 2026-08-03 · `incelemeler/skill-preload-bulgusu/kayit.md` · eskimiş olabilir (Claude Code sürümüne bağlı; `anthropics/claude-code#25834`)
+- **`CLAUDE.md` otomatik yükleme** — subagent `CLAUDE.md` hiyerarşisini görüyor ve uyguluyor (3/3 tuhaf kural); agent tanımı/skill gövdesi gelmiyor — iki mekanizma ayrı · 2026-08-03 · `incelemeler/claude-md-otomatik-yukleme/kayit.md` · kapalı (ölçek ölçülmedi)
 - **Kanon yetkisi sınaması** — üç baskı testi (yetkiyi kendine karşı kullanma, yanlış teşhis, kötü fikir + acele); dört yeni kural da davranış üretti · 2026-08-03 · `incelemeler/clara-kanon-yetkisi-sinamasi/kayit.md` · kapalı
 - **Clara'nın beyni — ilk tespit** — üç kat (kanon/kayıt/hafıza), hafızada tek `user` kaydı yok, `.remember` git dışı, RAG gerekmiyor · 2026-08-03 · `incelemeler/clara-beyni/tespit.md` · kapalı
 
