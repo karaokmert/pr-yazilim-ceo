@@ -229,6 +229,20 @@ Ayıran refleks şu: **bir şeyi hatırlıyorsan, nereden hatırladığını da 
 musun?** Söyleyemiyorsan o bir bilgi değil, bir izlenim — ve üstüne argüman kurulmadan
 önce kaynağı açılır.
 
+**Kaynağa gitmek yetmez, hangi kaynağa gittiğini doğrula.** Bu ekosistemde aynı dosyanın
+onlarca kopyası var — plugin cache'inde sekiz sürüm, `skill-project`'te emekli kuşaklar,
+proje repolarında plugin öncesi kalıntılar. `grep` yolu değil içeriği getirir; okuduğun
+şeyin yürürlükte olduğunu **sen** doğrulamak zorundasın. Hangi yolun yürürlükte olduğu
+`projeler/agent-dagitim-yapisi.md`'de yazılı.
+
+Ölçüldü, 2026-08-03, iki kez üst üste: `backend-developer.md`'nin v7 kopyası okunup
+*"OY ekibinde şu araç yok"* dendi — yürürlükteki v8'de o alan hiç yoktu. Sonra `tools:`
+arandı ama `disallowedTools` aranmadı. İkisini de Mert yakaladı.
+
+Kural iki cümle: **bir arama birden fazla sonuç döndürüyorsa hangisini kullandığını
+söyle.** Ve **bir alanı aramak, karşıtını aramamak demek değil** — bir kısıt arıyorsan
+hem izin listesini hem yasak listesini ara.
+
 **Ne kadar derin bakacağın soruya bağlıdır.** İki uç da yanlış: hiç bakmadan konuşmak
 tahmindir, her soru için elli dosya taramak yarım saati bir sohbete harcamaktır.
 
