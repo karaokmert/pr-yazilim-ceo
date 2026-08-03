@@ -66,6 +66,12 @@ Skill adları, araç listesi, sürüm — hepsi dışarıdan verilir.
 
 ## Yürürlükteki çözüm
 
+> ⚠️ **Bu bölüm 2026-08-03 14:47'de ölçüldü ve artık doğru değil.** Aşağıda anlatılan
+> global hook **yok**: `~/.claude/hooks/preload-skills.py` dosyası mevcut değil ve
+> `~/.claude/settings.json` → `SessionStart` altında yalnız git durumu basan tek satır
+> var. Ya hiç kurulmadı ya sonradan kaldırıldı. Plugin tarafındaki hook ayrı bir şey ve
+> o duruyor (aşağıdaki "Çözüldü" bölümü). Bölüm tarihçe olarak bırakıldı.
+
 Global bir `SessionStart` + `SubagentStart` hook'u: `~/.claude/hooks/preload-skills.py`.
 Agent oturumlarında bir açılış talimatı basar — *"preload çalışmıyor, skill'lerini
 `Skill` aracıyla kendin yükle"*.
@@ -112,6 +118,83 @@ artık ölçülebiliyor, ve hangi skill'in gerçekten her oturumda gerektiği ö
 **v8 adil sınav görmedi.** AG'nin ölçümü: `backend-developer` beklenen ~11.500 kelimelik
 kanonun **1.067 kelimesini** görüyordu — %91'ini hiç görmedi. Yani *"v8 olmadı"* yargısı
 yanlış deneyden çıktı. Bu v8'i aklamaz ama yeniden ölçüm gerektirir.
+
+## Fabrikada kural denendi ve tutmadı — sebebi teşhis edildi
+
+`agent-project/CLAUDE.md`'ye koşulsuz bir açılış kuralı yazıldı: *"tanımındaki `skills:`
+listesindeki skill'leri `Skill` aracıyla yükle"*. Denendi. PAM kuralı gördü, *"devam
+edeceksek yükleyeceğim"* dedi ve listeyi yanlış saydı — `behavior`'ı atladı,
+`yapi-taslari`'nı uydurdu.
+
+İlk okuma şuydu: *"koşulsuz yazılmış bir kural bile koşullu okunabiliyor."* Bu okuma
+yanlış — ya da en azından asıl sebebi ıskalıyor.
+
+**Asıl sebep ikinci bulgunun kendisi.** Kural agent'a *"tanımındaki listeyi"* yükle
+diyor, ama agent kendi frontmatter'ını göremez (yukarıda ölçüldü). Yani kural, agent'a
+**elinde olmayan bir bilgiye dayanan iş** veriyor. PAM kuralı gevşek okumadı; listeyi
+göremediği için tahmin etti. Kural ne kadar sert yazılırsa yazılsın aynı boşluğa düşer.
+
+Plugin tarafındaki çözümün çalışma sebebi tam da bu farkı kapatması: hook, skill
+adlarını çalışma anında agent `.md`'sinden okuyup **dışarıdan** veriyor. Fabrika
+CLAUDE.md'si o adımı yapmıyor — talimatı yazıyor, veriyi vermiyor.
+
+**Çıkan ders:** metin, dışarıdan veri gerektiren bir talimatın yerine geçmez. Sertleştirme
+bu sınıf bir arızayı çözmez.
+
+Buradan iki yol var, ikisi de denenmedi:
+
+- Skill adlarını CLAUDE.md'ye **agent başına isim isim yazmak** — veriyi metne gömer,
+  ama iki kaynak yaratır (frontmatter değişir, liste eskir, kimse fark etmez).
+- Fabrikaya bir açılış hook'u koymak — plugin'dekiyle aynı mekanik, tek kaynak korunur.
+
+Bu bölüm ölçümle değil okumayla çıkarıldı: `agent-project/CLAUDE.md` "Açılış" bölümü +
+bu kaydın "İkinci bulgu" bölümü karşılaştırılarak. PAM'in davranışı Mert tarafından
+sahada gözlendi, burada yeniden ölçülmedi.
+
+## Fabrika ölçümü — 2026-08-03 14:47
+
+Soru şuydu: fabrika bu kurallara göre çalışıyor mu. Cevap **hayır**, ama sebebi
+beklenenden dar çıktı.
+
+**Ölçülenler.** `agent-project/.claude/` altında `hooks/` dizini yok, `settings.json`
+yok. Dört agent var (PAM, PAD, PQA, PCA), beş skill var (`behavior`, `is-duzeni`,
+`uretim`, `yapi-taslari`, `dagitim`). Dördünün de frontmatter'ında `skills:` listesi
+dolu ve `Skill` aracı tanımlı — yani mekanizma yerinde, tetikleyen yok.
+
+**Kural yeterli, kapsamı dar.** `dagitim` skill'indeki `DAG-SHIP-PRELOAD-HOOK` hook'un
+nasıl yazılacağını tam anlatıyor: agent `.md`'sinden `skills:` oku, adları bas,
+*"`Skill` aracıyla yükle"* de; gövde taşıma (10.000 karakter sınırı); olay `SessionStart`;
+namespace filtresi script içinde; adları script'e gömme. Hatta bir önceki bölümde
+çıkardığım teşhis birebir orada yazılı: *"'Tanımındaki listeyi yükle' demek yetmez;
+agent tahmin eder ve yanlış yükler."*
+
+Yani **ekip nasıl yazacağını biliyor.** Eksik olan şu: kural *"her **plugin** bir açılış
+hook'uyla doğar"* diyor ve Dağıtım bölümünde duruyor. Fabrika plugin değil — kural kendi
+kapsamına fabrikayı almıyor. PAD bunu okuduğunda ürettiği takıma hook koyar, kendi evine
+koymaz.
+
+**Bir önceki bölümün düzeltmesi.** Orada CLAUDE.md metnini sertleştirme yerine "skill
+adlarını isim isim yaz" seçeneği öneriliyordu. Ölçümden sonra bu zayıf bir öneri:
+`DAG-SHIP-PRELOAD-HOOK` gömmeyi zaten gerekçesiyle yasaklamış (iki kaynak sorunu). Doğru
+yol hook, ve şartnamesi hazır.
+
+**Yarısı hazır duruyor.** `~/.claude/hooks/sessionstart.py` mevcut ve tam da doğru işi
+yapıyor — agent `.md`'sini bulup `skills:` listesini iki formatta da parse ediyor ve
+`additionalContext` olarak basıyor. İki eksiği var: `settings.json`'da hiçbir yere
+bağlanmamış (script duruyor, çağıran yok) ve *"yükle"* talimatını basmıyor, yalnız
+listeyi yazıyor.
+
+**Bu kayıt yönlendirme için değil.** Mert fabrikaya farklı bir yapı kuracağını ve ekibi
+kendisinin yönlendireceğini söyledi (2026-08-03). Buradaki ölçüm o iş başlarken
+başlangıç durumunu göstermek için duruyor.
+
+## Açık soru — v8 yeniden ölçülürken ölçüt ne olacak
+
+*"v8 adil sınav görmedi"* doğru, ama *"yeniden ölçelim"* dendiği anda bir ölçüt gerekiyor.
+Yoksa ikinci deney de birincisi gibi izlenime dayanır ve *"bu sefer iyi gitti"* diye
+kapanır — o da bir yargı, veri değil.
+
+Ölçüt belirlenmeden yeniden ölçüm başlatılmamalı. Bu soru açık.
 
 ## Bir sınama yaparken
 
