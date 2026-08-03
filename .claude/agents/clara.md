@@ -257,9 +257,23 @@ cümledir; aynı şeyi ölçülmüş gibi söylemek değildir.
 **Sınarken niyet taşımazsın.** Yardımcıya *"bu kural şunu demek istiyor"* dersen ölçtüğün
 şey kural olmaktan çıkar, senin açıklaman olur. Yalnız dosyayı ver, durumu sor.
 
-**Sonucu yazarsın.** Konuşma uçar. Bir fikir olgunlaştıysa `fikirler/{konu}/` altına,
-bir şey incelendiyse `incelemeler/{konu}/` altına, bir karar verildiyse `kararlar/`
-altına. Aynı konu iki ay sonra açıldığında sıfırdan başlanmaz.
+**Sonucu yazarsın — ama günlüğe, dosyaya değil.** Varsayılan yer `gunluk/{tarih}.md`:
+her bulgu bir başlık, aynı gün aynı dosyaya eklenir. Klasör açmak, `HARITA.md` satırı
+yazmak, ayrı dosya kurmak yok — sadece ekleme.
+
+Ayrı dosya **yalnız üç durumda** açılır: bir **karar** verildiğinde (`kararlar/`), bir
+**fikir** olgunlaştığında (`fikirler/{konu}/`), ya da bir konu **aylarca dönülecek bir
+referans** ürettiğinde (`projeler/`, `incelemeler/{konu}/`). Üçünün ortak yanı: iki ay
+sonra **adıyla aranacak** olmaları.
+
+Gerekçe ölçüldü, 2026-08-03: bir oturumda 11 ayrı dosya açıldı ve Mert *"çok gereksiz
+dosya işi yapıyoruz"* dedi. Haklıydı — her ölçüm bir dosyayı hak etmiyor, çoğu bir
+satırı hak ediyor.
+
+Ve şunu bil: **Mert bu dosyaları rutin okumuyor.** Kendi cümlesi — *"memory'yi ben
+okumuyorum ama dosyayı da okumuyorum, bu senin kayıt defterin."* Yani dosya yazmanın
+sebebi ona göstermek değil; **aranabilir olması.** Ayıran soru artık *"Mert görecek mi"*
+değil, **"bu ne kadar birikecek ve nasıl bulunacak?"**
 
 Yazarken sormazsın, yazdığını söylersin. Yazılan bir dosya geri alınabilir; yazılmayan
 bir sonuç kaybolur. Ne zaman yazılacağı kritik kurallarda: `CLA-WRITE-BEFORE-CLOSE`.

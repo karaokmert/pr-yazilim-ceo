@@ -12,6 +12,14 @@ Durumlar: **kapalı** (karar verildi, tartışılmaz) · **yarım** (iş bitmedi
 Kural: bir kayıt yazıldığında buraya satırı da yazılır. Haritasız kayıt kaybolur;
 kayıtsız harita satırı yalan olur.
 
+## Günlük
+
+Günlük ölçümler ve bulgular `gunluk/{tarih}.md` altında birikir — her bulgu bir başlık,
+konu başına ayrı dosya açılmaz. Haritaya yalnız **karar**, **fikir** ve **referans**
+girer.
+
+- `gunluk/2026-08-04.md` — token maliyeti (OY agent'ı 145k açılış), `cache_create` başa baş 12'de, skill listesi 197→126 (kapatmak≠kaldırmak≠reload), v7 kanonu kazası, disk 1,9GB→42MB
+
 ## Projeler
 
 - **Agent dağıtım yapısı** — hangi kopya yürürlükte: plugin v8 + fabrika repoda; 20 v7 symlink'i ve 27 proje içi kalıntı duruyor (Mert: şimdilik kalsın) · 2026-08-03 · `projeler/agent-dagitim-yapisi.md` · **referans** (okuma öncesi yol doğrulaması)
@@ -32,8 +40,6 @@ kayıtsız harita satırı yalan olur.
 - **Skill preload bulgusu** — agent'lar `skills:` listesini yükleyemiyor ve kendi frontmatter'ını göremiyor; fabrika hook'u kısmen çözüyor, kapsamı dar · 2026-08-03 · `incelemeler/skill-preload-bulgusu/kayit.md` · eskimiş olabilir (Claude Code sürümüne bağlı; `anthropics/claude-code#25834`)
 - **Fabrika ölçütü** — kuruluş oturumu (13,5 MB) tarandı; ölçüt Mert'in kendi cümlelerinde: sıfırdan üretme + alan bağımsızlığı + kestirmeden yapmama + bakım. Fabrika bitmedi, 08-02 23:50'de beklemeye alındı · 2026-08-03 · `incelemeler/fabrika-olcutu/kayit.md` · yarım (fabrika ölçütle okunmadı; devam mı baştan mı — Mert'te)
 - **Yerel symlink temizliği** — `~/.claude/skills` ve `agents` boşaltıldı (50 symlink, 30 skill + 20 agent); v7 emekli. Gerekçe: agent v8'den çağrılıp v7 kanonu okuyordu (ölçüldü) · 2026-08-04 · `kararlar/2026-08-04-yerel-symlink-temizligi.md` · kapalı
-- **Token tüketimi** — 08-03 tek başına haftanın %24'ü; sebep uzun oturum (19 saat) + 100-240 Bash çağrısı + Playwright (dk başına 7 kat pahalı) + "bitene kadar devam et" kalıbı · 2026-08-04 · `incelemeler/token-tuketimi/kayit.md` · kapalı (dört öneri, karar Mert'te)
-- **`SendMessage` ölçümü** — çalışıyor, ölü agent transcript'ten canlanıyor (bağlam korunur); ama dönüş kanalı yok — aşağı mesaj gider, yukarı gitmez. PAM'in 10 handoff derdi araç sorunu · 2026-08-04 · `incelemeler/sendmessage-olcumu/kayit.md` · kapalı (PAM'in kendi oturumunda denemesi gerekiyor)
 - **Fabrikanın saha davranışı** — 41 oturum tarandı; zincir 2 kez döndü ve **düzgün döndü** (5 PAD/5 PQA turu, 4 red, 7 bulgu, ihlal yok). Ama `team/` boş: sıfırdan üretme hiç denenmedi · 2026-08-03 · `incelemeler/fabrika-olcutu/saha-davranisi.md` · kapalı
 - **Fabrikanın zayıf noktaları** — filo bakımı sahipsiz (fabrikanın var olma sebebi!); `Skill` aracı 7 oturumda 0 çağrı; `dagitim` 20 kural sıfır test; PQA aracı olmadan Write yaptı; kanonun yalnız yasak tarafı sınandı · 2026-08-03 · `incelemeler/fabrika-olcutu/zayif-noktalar.md` · kapalı (kayıt tam; işlenmesi Mert'te)
 - **Agent araç envanteri** — 46 araç var; fabrika beyaz liste (`tools:`), v8 OY siyah liste (`disallowedTools: Workflow` — tek kısıt). QA/CA artık Write/Edit'e sahip, "kod yazmazsın" yalnız metinde · 2026-08-03 · `incelemeler/agent-arac-envanteri/kayit.md` · yarım (QA/CA'dan Write alınacak mı — Mert'te)
