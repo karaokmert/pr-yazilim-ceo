@@ -2,6 +2,23 @@
 
 Tarih: 2026-08-03 · **Yarım** — ölçüm yapılmadı, karar verilmedi
 
+> **GÜNCELLENDİ — 2026-08-03 akşamı.** Aşağıdaki iki hipotez (bilgi kaybı / bağlanma
+> kaybı) **büyük ölçüde geçersiz.** v8'in *"sahada tutmadı"* sonucunun sebebi bulundu ve
+> mekanik: agent'lar `skills:` listesini hiç yükleyemiyordu, yani kanonlarını
+> **okumadan** çalıştılar (`incelemeler/skill-preload-bulgusu/kayit.md`). Kural biçimi
+> sınanmamıştı — kural elde bile değildi.
+>
+> Mert bir hook yapısı kurdu ve v8 iki gündür sahada çalışıyor, gözlemi *"mükemmel
+> çalışıyor."*
+>
+> **Açık kalan soru:** preload arızasının çözülmesi kural **biçiminin** doğrulandığı
+> anlamına gelmiyor. İki ayrı soru var — *kural elinde miydi* (artık evet) ve *kural
+> davranış üretiyor mu* (henüz ölçülmedi). İki günlük gözlem birincisine yeter,
+> ikincisine yetmez.
+>
+> Yani aşağıdaki *"ayıran ölçüm"* hâlâ anlamlı ama sorusu değişti: artık *"v8 neden
+> tutmadı"* değil, **"v8 kuralları eline geçtiğinde davranış üretiyor mu"**.
+
 ## Durum
 
 Fabrika ekibinin ilk işi OY agent takımını üretmek. Elde iki eski kuşak var ve ikisi de

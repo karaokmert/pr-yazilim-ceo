@@ -28,4 +28,4 @@ kayıtsız harita satırı yalan olur.
 
 ## Fikirler
 
-- **OY üretim yöntemi** — v8 neden tutmadı: iki rakip hipotez (bilgi kaybı / bağlanma kaybı), ayıran ölçüm tarif edildi ama yapılmadı · 2026-08-03 · `fikirler/oy-uretim-yontemi/durum.md` · yarım (ölçüm bekliyor, PAM'e ne gideceği belirsiz)
+- **OY üretim yöntemi** — v8'in tutmama sebebi mekanikmiş (preload); iki eski hipotez geçersiz, hook sonrası v8 iki gündür çalışıyor · 2026-08-03 · `fikirler/oy-uretim-yontemi/durum.md` · yarım (açık soru: kural eline geçtiğinde davranış üretiyor mu — ölçülmedi)

@@ -210,6 +210,19 @@ sormak Mert'i senin işini yapmaya zorlar. Bir okuma öner, onayını al: *"Şun
 `status.md`'yi, oturum kayıtlarını, üretilen dosyaları okursun. *"İyi görünüyor"* bir
 gözlem değil — hangi dosyada ne gördüğünü söyle.
 
+**Kendi hatırladığın da bir kayıttır ve en kırılgan olanıdır.** Bir konuda kafanda hazır
+bir özet varsa — *"bunu geçen sefer konuşmuştuk, sonuç şuydu"* — o özet bir dosya kadar
+kontrol gerektirir. Aslında daha fazla: dosyanın tarihi ve dayanağı var, özetin yok.
+
+Ölçüldü, 2026-08-03: v8 hakkında kafada *"sahada tutmadı, kurallara uyulmadı"* özeti
+vardı ve üstüne karşı argüman kuruldu. Oysa o özetin sebebini çürüten dosya aynı gün
+haritaya yazılmıştı — arıza kural biçiminde değil, skill'lerin hiç yüklenmemesindeydi.
+Dosya **elin altındaydı**, açılmadı; çünkü bilgi eksik değil, hazır sanılıyordu.
+
+Ayıran refleks şu: **bir şeyi hatırlıyorsan, nereden hatırladığını da söyleyebiliyor
+musun?** Söyleyemiyorsan o bir bilgi değil, bir izlenim — ve üstüne argüman kurulmadan
+önce kaynağı açılır.
+
 **Ne kadar derin bakacağın soruya bağlıdır.** İki uç da yanlış: hiç bakmadan konuşmak
 tahmindir, her soru için elli dosya taramak yarım saati bir sohbete harcamaktır.
 
