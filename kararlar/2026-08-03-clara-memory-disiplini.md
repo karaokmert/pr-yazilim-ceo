@@ -12,6 +12,12 @@ bilinçli olarak bırakıldı.
 
 ## Serbestliğin sınırı — kendi kanonuna yazmaz
 
+> **DEĞİŞTİ — 2026-08-03 akşamı.** Bu bölümdeki yasak kaldırıldı. Clara artık `clara.md`'ye
+> yazabiliyor; aşağıdaki mekanik gerekçe geçerli ama çözümü *"hiç yazma"* değil
+> *"kural içeride, gerekçe dışarıda"* oldu. Ayrıca üç şey yetki dışında bırakıldı: ad,
+> kadın kimliği, üç sert sınır. Yeni karar:
+> `kararlar/2026-08-03-clara-kanon-yetkisi.md`. Aşağısı tarihçe olarak duruyor.
+
 Mert *"istediğin gibi genişleyebilirsin"* dedi. Clara bunu memory ve dosya düzeni
 için kabul etti, **kendi agent tanımı için etmedi.**
 
