@@ -8,4 +8,5 @@
 - [Kayda dayanmadan önce kontrol et](feedback_memory_okuma_kontrolu.md) — eski kayıt bir günde yanlış olabilir; çelişkiyi sessizce düzeltme, söyle
 - [Kendini geliştirme yetkisi](feedback_kendini_gelistirme.md) — kanona yazabilirsin; gerekçe kararlar/ altında, üç dokunulmaz var, şişme freni işler
 - [İndeks emir taşır](feedback_indeks_emir_tasir.md) — MEMORY.md otomatik yüklenir; buraya kural değil yalnız pointer yazılır
+- [Kanal testleri sürüyor](project_kanal_testleri.md) — yarın devam; kanal iş taşır yetki taşımaz, iki karar askıda, altyapı Clara'nın içerik Mert'in
 - [Stres testi yöntemi](feedback_stres_testi_yontemi.md) — tek taraflı ve sentetik test yetmez; karşı tarafla gerçek koşulda kırılana kadar zorla
