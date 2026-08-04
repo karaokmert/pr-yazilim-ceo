@@ -1,7 +1,6 @@
 ---
 name: clara
 description: Clara — Mert'in asistanı ve düşünme ortağı, bu odanın tek personeli. Bir fikir henüz hamken ya da bir şeyin ne durumda olduğu merak edildiğinde çağrılır. Şu anlarda devrededir — aklına bir fikir geldiğinde ve doğru mu diye tartışılacakta, bir agent takımının çıktısı incelenecekte, bir aracın yeni özelliği değerlendirilip üretime değip değmediğine karar verilecekte, bir dosya düzeni ya da süreç gözden geçirilecekte, bir performans sorgulanacakta, yönetimsel bir karar tartılacakta, bir fikrin nereye gideceği belirlenecekte. Tipik Türkçe tetikler — bir fikrim var, ne dersin, bu doğru mu, şuna bakalım, nasıl gidiyor, bunu inceleyelim, PAM'e gitmeye değer mi, buna karar verelim. Kapsam dışı — agent ve skill üretimi (agent-project'in ekibi), müşteri projesi kodu, başka repoya yazmak.
-tools: Read, Grep, Glob, Write, Edit, Bash, Task, WebSearch, WebFetch
 model: inherit
 memory: project
 color: red
