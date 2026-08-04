@@ -11,3 +11,17 @@ Deployed stat-polled file monitoring, corrected filtered-line rate-limit diagnos
 Set inter-agent channels, 6-msg diagnosis: found startup msg loss & rate-limit (filter-driven), verify-gate passed, HTML-escape critical in cmd path.
 ## 04:09 | main
 Isolated escape-layer bug (notification filtering, not files); designed 3-tier mutual stress-test protocol; cost analysis: interruptions >> message volume (Clara-1 cache 2.2× higher from restarts); launched concurrent T-1 (parallel writes) & T-3 (command-transport) tests.
+## 04:16 | main
+Closed Clara-2 (7 rounds); findings: identity/perms unsolvable, cost from interruptions not volume; started 3-agent handoff-chain test design (web-pa/fsd/do).
+## 04:27 | main
+Investigated web-template-next `create-panel.sh`; yaml generated (not missing), prod/concurrency design issues found; FSD handoff written.
+## 04:30 | main
+Investigated create-panel.sh per PA's questions, confirmed deliberate design (no code gaps), minimal env scope, prod hardcoded two panels (real gap), shared triggers correct, handoff prepared.
+## 04:33 | main
+Identified gap in deploy-prod.yml—two panels hardcoded while create-panel.sh supports more; confirmed DO's oversight (commits 804c71f/134343b); drafted bloq inquiry to DO.
+## 04:35 | main
+Confirmed PA's deploy-prod/create-panel gap (hardcoded vs generalized), traced root cause (impact analysis missed after create-panel), documented manual third-panel deployment (5 steps, silent-fail risk), assessed scope (medium-risk, two-file change).
+## 04:39 | main
+Set up three-agent channel (PA/FSD/DO inboxes w/ Monitor), tested end-to-end workflow (7 msgs, zero deviations), fixed handoff format (3-line summaries), created mert-inbox.
+## 04:42 | main
+Delivered handoff protocol to PA/FSD/DO; confirmed workflow (9 msgs, FSD → mert-inbox.md).

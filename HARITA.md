@@ -18,7 +18,7 @@ Günlük ölçümler ve bulgular `gunluk/{tarih}.md` altında birikir — her bu
 konu başına ayrı dosya açılmaz. Haritaya yalnız **karar**, **fikir** ve **referans**
 girer.
 
-- `gunluk/2026-08-04.md` — token maliyeti (OY agent'ı 145k açılış), `cache_create` başa baş 12'de, skill listesi 197→126 (kapatmak≠kaldırmak≠reload), v7 kanonu kazası, disk 1,9GB→42MB
+- `gunluk/2026-08-04.md` — token maliyeti (OY agent'ı 145k açılış), `cache_create` başa baş 12'de, skill listesi 197→126 (kapatmak≠kaldırmak≠reload), v7 kanonu kazası, disk 1,9GB→42MB, **agent-agent kanalı 7 turluk stres testi** (uyanma+iş taşıma+komut taşıma çalıştı; 8 risk, kimlik ve yetki temel; maliyeti mesaj değil duraklama belirliyor)
 
 ## Projeler
 
