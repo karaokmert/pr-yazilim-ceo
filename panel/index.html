@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<title>CLARA :: agent panel</title>
+<style>
+  :root{
+    --bg:#000; --fg:#00ff41; --dim:#0a7a25; --dim2:#064d17;
+    --kirmizi:#ff2b2b; --sari:#ffb300; --mavi:#00cfff; --gri:#4a4a4a;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{
+    background:var(--bg); color:var(--fg);
+    font:13px/1.45 "SF Mono",Menlo,Consolas,monospace;
+    padding:14px 16px 40px; min-height:100vh;
+  }
+  body::before{
+    content:""; position:fixed; inset:0; pointer-events:none; z-index:99;
+    background:repeating-linear-gradient(0deg,rgba(0,0,0,.16) 0 1px,transparent 1px 3px);
+  }
+  a{color:var(--mavi)}
+  .ust{
+    display:flex; flex-wrap:wrap; gap:10px 22px; align-items:baseline;
+    border-bottom:1px solid var(--dim2); padding-bottom:9px; margin-bottom:14px;
+  }
+  .baslik{font-size:16px; letter-spacing:3px; text-shadow:0 0 8px rgba(0,255,65,.45)}
+  .kucuk{color:var(--dim); font-size:11px}
+  .sayac{color:var(--fg)}
+  .rozet{
+    border:1px solid var(--dim2); padding:1px 7px; font-size:11px; color:var(--dim);
+  }
+  .rozet b{color:var(--fg)}
+  #bekleyenler{
+    border:1px solid var(--kirmizi); padding:9px 11px; margin-bottom:16px;
+  }
+  #bekleyenler.bos{display:none}
+  #bekleyenler h2{
+    font-size:11px; letter-spacing:2px; color:var(--kirmizi); margin-bottom:7px;
+  }
+  .bk{display:flex; gap:9px; padding:2px 0; font-size:12px; flex-wrap:wrap}
+  .bk .p{color:var(--sari); min-width:110px}
+  .bk .s{color:var(--kirmizi); min-width:120px}
+  .bk .t{color:var(--dim); min-width:90px}
+  .bk .n{color:#cfffd8; flex:1; min-width:220px}
+
+  .proje{margin-bottom:20px; border-left:2px solid var(--dim2); padding-left:11px}
+  .proje > h2{
+    font-size:13px; letter-spacing:2px; margin-bottom:6px;
+    display:flex; gap:12px; align-items:baseline; flex-wrap:wrap;
+  }
+  .proje > h2 .ad{color:var(--sari); text-shadow:0 0 6px rgba(255,179,0,.35)}
+  .proje > h2 .adet{color:var(--dim); font-size:11px}
+  .proje.dikkat{border-left-color:var(--kirmizi)}
+
+  .kaydir{overflow-x:auto}
+  table{border-collapse:collapse; width:100%; min-width:820px}
+  th{
+    text-align:left; font-weight:400; font-size:10px; letter-spacing:1.5px;
+    color:var(--dim); border-bottom:1px solid var(--dim2); padding:3px 9px 3px 0;
+  }
+  td{padding:4px 9px 4px 0; vertical-align:top; border-bottom:1px dotted #0a2a12}
+  tr.bekler td{background:rgba(255,43,43,.07)}
+  tr.calisir td{background:rgba(0,255,65,.05)}
+  .rol{color:var(--mavi); white-space:nowrap}
+  .otr{color:var(--gri); font-size:11px; white-space:nowrap}
+  .sure{white-space:nowrap}
+  .sure.taze{color:var(--fg)}
+  .sure.orta{color:var(--sari)}
+  .sure.eski{color:var(--gri)}
+  .durum{white-space:nowrap; font-size:11px; letter-spacing:.5px}
+  .d-bekler{color:var(--kirmizi)}
+  .d-handoff{color:var(--sari)}
+  .d-calisir{color:var(--fg)}
+  .d-bos{color:var(--gri)}
+  .mesaj{color:#a8ffbd; font-size:11.5px; max-width:640px}
+  .mesaj .kim{color:var(--dim); margin-right:5px}
+  .ne{color:#ffd9d9; font-size:11.5px; max-width:640px}
+  .alt{
+    position:fixed; left:0; right:0; bottom:0; background:#000;
+    border-top:1px solid var(--dim2); padding:5px 16px;
+    font-size:11px; color:var(--dim); display:flex; gap:20px; flex-wrap:wrap;
+  }
+  .yanip{animation:yp 1.1s steps(2,start) infinite}
+  @keyframes yp{50%{opacity:.25}}
+  #hata{color:var(--kirmizi); margin-bottom:12px}
+</style>
+</head>
+<body>
+
+<div class="ust">
+  <span class="baslik">CLARA :: AGENT PANEL</span>
+  <span class="rozet">proje <b id="s-proje">–</b></span>
+  <span class="rozet">oturum <b id="s-oturum">–</b></span>
+  <span class="rozet">süreç <b id="s-surec">–</b></span>
+  <span class="rozet">bekleyen <b id="s-bekleyen">–</b></span>
+  <span class="kucuk" id="s-zaman">bağlanıyor…</span>
+</div>
+
+<div id="hata"></div>
+
+<section id="bekleyenler" class="bos">
+  <h2>▸ SENİ BEKLEYENLER</h2>
+  <div id="bk-liste"></div>
+</section>
+
+<div id="projeler"></div>
+
+<div class="alt">
+  <span>■ <span class="d-bekler">kırmızı</span> = seni bekliyor</span>
+  <span>■ <span class="d-handoff">sarı</span> = handoff hazır, taşınacak</span>
+  <span>■ <span class="d-calisir">yeşil</span> = çalışıyor</span>
+  <span>■ <span class="d-bos">gri</span> = boşta</span>
+  <span class="yanip">● canlı · 5 sn</span>
+</div>
+
+<script>
+const BEKLEME_SINIF = {
+  "SORU":"d-bekler", "SECENEKLI SORU":"d-bekler",
+  "ONAY BEKLIYOR":"d-bekler", "IZIN BEKLIYOR":"d-bekler",
+  "HANDOFF URETTI":"d-handoff"
+};
+const SENI_BEKLER = ["SORU","SECENEKLI SORU","ONAY BEKLIYOR","IZIN BEKLIYOR"];
+
+function kacar(s){
+  return String(s ?? "").replace(/[&<>"]/g, c => (
+    {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]
+  ));
+}
+function sureSinif(sn){
+  if (sn < 300) return "taze";
+  if (sn < 3600) return "orta";
+  return "eski";
+}
+function durumMetni(o){
+  if (o.bekleme) return o.bekleme;
+  if (o.son_hareket_sn < 120) return "ÇALIŞIYOR";
+  return "BOŞTA";
+}
+function durumSinif(o){
+  if (o.bekleme) return BEKLEME_SINIF[o.bekleme] || "d-bekler";
+  if (o.son_hareket_sn < 120) return "d-calisir";
+  return "d-bos";
+}
+
+function ciz(d){
+  document.getElementById("s-proje").textContent   = d.proje_sayisi ?? "–";
+  document.getElementById("s-oturum").textContent  = (d.oturumlar||[]).length;
+  document.getElementById("s-surec").textContent   = d.acik_surec ?? "–";
+  document.getElementById("s-zaman").textContent   = "son güncelleme " + d.guncelleme;
+
+  const otr = d.oturumlar || [];
+  const bekleyen = otr.filter(o => SENI_BEKLER.includes(o.bekleme));
+  document.getElementById("s-bekleyen").textContent = bekleyen.length;
+
+  // seni bekleyenler
+  const bl = document.getElementById("bk-liste");
+  const bs = document.getElementById("bekleyenler");
+  if (bekleyen.length) {
+    bs.classList.remove("bos");
+    bekleyen.sort((a,b) => b.son_hareket_sn - a.son_hareket_sn);
+    bl.innerHTML = bekleyen.map(o => `
+      <div class="bk">
+        <span class="p">${kacar(o.proje)}</span>
+        <span class="s">${kacar(o.bekleme)}</span>
+        <span class="t">${kacar(o.son_hareket)}</span>
+        <span class="n">${kacar((o.bekleme_ne||o.son_mesaj||"").slice(0,180))}</span>
+      </div>`).join("");
+  } else {
+    bs.classList.add("bos");
+    bl.innerHTML = "";
+  }
+
+  // proje bazli gruplama
+  const grup = {};
+  for (const o of otr) (grup[o.proje] ||= []).push(o);
+
+  const sirali = Object.keys(grup).sort((a,b) => {
+    const ab = grup[a].some(o => SENI_BEKLER.includes(o.bekleme));
+    const bb = grup[b].some(o => SENI_BEKLER.includes(o.bekleme));
+    if (ab !== bb) return ab ? -1 : 1;
+    return Math.min(...grup[a].map(o=>o.son_hareket_sn))
+         - Math.min(...grup[b].map(o=>o.son_hareket_sn));
+  });
+
+  document.getElementById("projeler").innerHTML = sirali.map(p => {
+    const liste = grup[p].slice().sort((a,b) => a.son_hareket_sn - b.son_hareket_sn);
+    const dikkat = liste.some(o => SENI_BEKLER.includes(o.bekleme));
+    const bekSay = liste.filter(o => SENI_BEKLER.includes(o.bekleme)).length;
+    return `
+    <section class="proje ${dikkat ? "dikkat" : ""}">
+      <h2>
+        <span class="ad">▸ ${kacar(p).toUpperCase()}</span>
+        <span class="adet">${liste.length} oturum${bekSay ? " · " + bekSay + " bekliyor" : ""}</span>
+      </h2>
+      <div class="kaydir">
+      <table>
+        <thead><tr>
+          <th>ROL</th><th>OTURUM</th><th>SON HAREKET</th><th>DURUM</th><th>NE / SON MESAJ</th>
+        </tr></thead>
+        <tbody>
+        ${liste.map(o => {
+          const bekler = SENI_BEKLER.includes(o.bekleme);
+          const cls = bekler ? "bekler" : (o.son_hareket_sn < 120 ? "calisir" : "");
+          const ne = o.bekleme_ne
+            ? `<span class="ne">${kacar(o.bekleme_ne.slice(0,240))}</span>`
+            : `<span class="mesaj"><span class="kim">${kacar(o.son_kim||"")}</span>${kacar((o.son_mesaj||"").slice(0,240))}</span>`;
+          return `<tr class="${cls}">
+            <td class="rol">${kacar(o.rol)}</td>
+            <td class="otr">${kacar(o.oturum)}</td>
+            <td class="sure ${sureSinif(o.son_hareket_sn)}">${kacar(o.son_hareket)}</td>
+            <td class="durum ${durumSinif(o)}">${kacar(durumMetni(o))}</td>
+            <td>${ne}</td>
+          </tr>`;
+        }).join("")}
+        </tbody>
+      </table>
+      </div>
+    </section>`;
+  }).join("");
+}
+
+async function yenile(){
+  try {
+    const r = await fetch("durum.json?t=" + Date.now(), {cache:"no-store"});
+    if (!r.ok) throw new Error("durum.json okunamadı (" + r.status + ")");
+    ciz(await r.json());
+    document.getElementById("hata").textContent = "";
+  } catch (e) {
+    document.getElementById("hata").textContent =
+      "! " + e.message + " — toplayıcı çalışıyor mu? (python3 panel/topla.py)";
+  }
+}
+yenile();
+setInterval(yenile, 5000);
+</script>
+</body>
+</html>
