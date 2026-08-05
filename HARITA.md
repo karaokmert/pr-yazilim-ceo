@@ -27,11 +27,14 @@ girer.
 
 ## Kararlar
 
+- **Devir kaydı — 4/5 Ağustos oturumu** — 21 saatlik oturumun kazanımları, açık ölçümler, bekleyen işler, Clara'nın hataları · 2026-08-05 · `gunluk/2026-08-05-devir.md` · kapalı
+
 - **Clara kurulumu** — bu odanın neden ayrı olduğu, tek personel, üç sert kuralın gerekçesi · 2026-08-02 · `kararlar/2026-08-02-clara-kurulumu.md` · kapalı
 - **Memory disiplini** — üretim hattının memory kanonundan iki kural alındı, üçü bilinçli bırakıldı · 2026-08-03 · `kararlar/2026-08-03-clara-memory-disiplini.md` · kapalı ama "kendi kanonuna yazmaz" bölümü **iptal** (bkz. kanon yetkisi)
 - **Clara'nın büyüme düzeni** — ne hafızaya ne repoya gider, ne zaman yazılır, oturum başında ne okunur; araç eşiği · 2026-08-03 · `kararlar/2026-08-03-clara-buyume-duzeni.md` · kapalı
 - **Clara'nın kanon yetkisi** — kanona yazma yasağı kaldırıldı; kural içeride/gerekçe dışarıda, üç dokunulmaz, şişme freni · 2026-08-03 · `kararlar/2026-08-03-clara-kanon-yetkisi.md` · kapalı
 - **Yazma sınırı değişti** — `CLA-WRITE-HERE-ONLY` kaldırıldı, yerine `CLA-ASK-BEFORE-WRITING-OUT`: başka repoya yazılır ama metni gösterip onay alınır; izin kuralı hâlâ yasak · 2026-08-03 · `kararlar/2026-08-03-clara-yazma-sinirinin-degismesi.md` · kapalı
+- **Çok proje yönetim düzeni** — kanal (Clara taşır, çağırmaz) + oturum belleği (agent detayı yazar, Clara özeti tutar) + kural agent kanonunda (`pause` skill'i); 11 açık oturum/4 PA ölçüldü, bir iş 4 durak geziyor; Mert düzeltmiyor besliyor (21 mesajda 2 düzeltme) · 2026-08-04 · `kararlar/2026-08-04-cok-proje-yonetim-duzeni.md` · yarım (AG'ye 3 üretim kalemi gitmedi; 3 açık soru)
 
 ## İncelemeler
 
@@ -47,6 +50,9 @@ girer.
 - **`CLAUDE.md` otomatik yükleme** — subagent `CLAUDE.md` hiyerarşisini görüyor ve uyguluyor (3/3 tuhaf kural); agent tanımı/skill gövdesi gelmiyor — iki mekanizma ayrı · 2026-08-03 · `incelemeler/claude-md-otomatik-yukleme/kayit.md` · kapalı (ölçek ölçülmedi)
 - **Kanon yetkisi sınaması** — üç baskı testi (yetkiyi kendine karşı kullanma, yanlış teşhis, kötü fikir + acele); dört yeni kural da davranış üretti · 2026-08-03 · `incelemeler/clara-kanon-yetkisi-sinamasi/kayit.md` · kapalı
 - **Clara'nın beyni — ilk tespit** — üç kat (kanon/kayıt/hafıza), hafızada tek `user` kaydı yok, `.remember` git dışı, RAG gerekmiyor · 2026-08-03 · `incelemeler/clara-beyni/tespit.md` · kapalı
+
+- **Onay brief kalıbı** — Mert'in onaylayabildiği biçim bulundu (4 denemede). Her iş: şu an ne oluyor / akış / **nereye yazılıyor** (Handler·DataLayer·Cache·Tablo·Emsal, boş olan da yazılır). Ölçütü: "başka biri sorsa anlatabilir miyim" · 2026-08-04 · `incelemeler/pa-davranis-senaryolari/onay-brief-kalibi.md` · kapalı (gereksinim PAM'e gitmedi)
+- **PA Senaryo 1 — erken adımlama** — GOAT'ta 6 düzeltme, tek kök: eldeki bilgi tamamlanmadan adıma geçme. Kural elinde VAR (`WEB-PA-DANISMA-EYLEM-AYRIMI`) ama görev adımı ID'siz olduğu için tespit edilemiyor. Mert'in istediği 7 maddelik yöntem + PA'nın kendi teşhisleri · 2026-08-04 · `incelemeler/pa-davranis-senaryolari/senaryo-1-erken-adimlama.md` · kapalı (gereksinim PAM'e gitmedi)
 
 ## Fikirler
 
