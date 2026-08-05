@@ -1,0 +1,32 @@
+{
+  "_kurulum": [
+    "cp .mcp.json.example .mcp.json  →  QDRANT_API_KEY'i doldur  →  Claude Code'u yeniden başlat.",
+    ".mcp.json gitignore'lı: JWT düz durduğu için git'e girmez. Bu şablon girer.",
+    "Ön koşul: uv kurulu olmalı (brew install uv) — MCP 'uvx mcp-server-qdrant' ile çalışır.",
+    "QDRANT_API_KEY: Qdrant panelinden üretilen JWT (api-key header'ı olarak gider). JWT, sunucunun config.yaml'ındaki api_key ile imzalanır — panele farklı bir key'le girildiyse 403 InvalidSignature gelir.",
+    "URL'de :443 ŞART. Port yazılmazsa qdrant-client varsayılan 6333'e gider; Cloudflare proxy'si o portu geçirmediği için 'No route to host' alınır.",
+    "Doğrulama: /mcp yazınca qdrant sunucusu 'connected' görünmeli.",
+    "İki araç gelir: qdrant-find (arama) ve qdrant-store (kayıt). Başka araç yok.",
+    "COLLECTION_NAME bilerek YOK: collection adı her çağrıda parametre olarak verilir. Tek collection'a sabitlemek istersen env'e ekle.",
+    "Collection önceden oluşturulmaz — ilk qdrant-store çağrısında MCP kendi kurar (doğru boyut + 'fast-<model>' vektör ismi).",
+    "EMBEDDING_MODEL çok dilli seçildi: Türkçe içerik için zorunlu. Varsayılan all-MiniLM-L6-v2 sadece İngilizce bilir, Türkçe'de sessizce isabetsiz sonuç verir.",
+    "Vektör boyutu (bu modelde 768) collection'a çivilenir ve DEĞİŞTİRİLEMEZ. Model değişirse collection silinip yeniden doldurulmalı.",
+    "AYRI ALAN kararı: sunucudaki 43 collection'ın neredeyse tamamı 1024 boyut (pr-clara-1024, *-personal-1024 ...), muhtemelen BGE-M3 ile üretilmiş. FastEmbed BGE-M3'ü desteklemiyor, bu yüzden MCP o ekosisteme katılamaz — bu kurulum 768'lik AYRI bir alan. Buradaki notlar mevcut collection'larla karşılaştırılamaz.",
+    "1024 boyuta çıkmak uyum sağlamaz: aynı boyut ≠ aynı model. Farklı modelin 1024'lük vektörü aynı uzayda değildir; arama HATA VERMEZ, sessizce saçmalar.",
+    "Doğrulandı (2026-08-05): bağlantı OK, Türkçe semantik arama 3/3 doğru sonuç verdi.",
+    "FASTEMBED_CACHE_PATH şart: yazılmazsa model /var/folders (macOS /tmp) altına iner ve reboot'ta silinir — MCP her açılışta 1 GB'ı ~4 dk yeniden indirir, bu da bağlantı hatası gibi görünür. Yol makineye özel, farklı kullanıcıda güncellenmeli.",
+    "Salt okunur istersen env'e \"QDRANT_READ_ONLY\": \"true\" ekle — qdrant-store hiç yüklenmez."
+  ],
+  "mcpServers": {
+    "qdrant": {
+      "command": "uvx",
+      "args": ["mcp-server-qdrant"],
+      "env": {
+        "QDRANT_URL": "https://qdrant.prventurestudio.com:443",
+        "QDRANT_API_KEY": "",
+        "EMBEDDING_MODEL": "sentence-transformers/paraphrase-multilingual-mpnet-base-v2",
+        "FASTEMBED_CACHE_PATH": "/Users/karaok/.cache/fastembed"
+      }
+    }
+  }
+}
