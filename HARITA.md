@@ -18,6 +18,7 @@ Günlük ölçümler ve bulgular `gunluk/{tarih}.md` altında birikir — her bu
 konu başına ayrı dosya açılmaz. Haritaya yalnız **karar**, **fikir** ve **referans**
 girer.
 
+- `gunluk/2026-08-05.md` — web kanal deneyi 2. tur + **saha izleme (23 bulgu)**: `#PRY-17533` tam zinciri (16 handoff/7 oturum/dev→prod), QA prod GO verdi Mert SQL hatasını yakaladı, discovery kapanışta okunmuyor (GOAT), kanon aletin adını veriyor amacını vermiyor (Platin BE), **ÖRÜNTÜ (Bulgu 23): agent'lar yetki sınırını biliyor dayanağa dönmeyi bilmiyor — 5 ölçüm noktası**
 - `gunluk/2026-08-04.md` — token maliyeti (OY agent'ı 145k açılış), `cache_create` başa baş 12'de, skill listesi 197→126 (kapatmak≠kaldırmak≠reload), v7 kanonu kazası, disk 1,9GB→42MB, **agent-agent kanalı 7 turluk stres testi** (uyanma+iş taşıma+komut taşıma çalıştı; 8 risk, kimlik ve yetki temel; maliyeti mesaj değil duraklama belirliyor)
 
 ## Projeler
@@ -28,6 +29,8 @@ girer.
 ## Kararlar
 
 - **Devir kaydı — 4/5 Ağustos oturumu** — 21 saatlik oturumun kazanımları, açık ölçümler, bekleyen işler, Clara'nın hataları · 2026-08-05 · `gunluk/2026-08-05-devir.md` · kapalı
+
+- **Release tag sistemi kaldırıldı** — `vX.Y.Z` tag'i akıştan çıkıyor; EGELI `v1.3.3` canlı izlendi: prod'a çıktıktan SONRA atıldı, 5 adım/0 bilgi kazancı, rollback SHA ile çalışıyor · 2026-08-05 · `kararlar/2026-08-05-release-tag-sistemi-kaldirildi.md` · kapalı (kanondan çıkarılması PAM'de — devir bloğu yazılmadı)
 
 - **Clara kurulumu** — bu odanın neden ayrı olduğu, tek personel, üç sert kuralın gerekçesi · 2026-08-02 · `kararlar/2026-08-02-clara-kurulumu.md` · kapalı
 - **Memory disiplini** — üretim hattının memory kanonundan iki kural alındı, üçü bilinçli bırakıldı · 2026-08-03 · `kararlar/2026-08-03-clara-memory-disiplini.md` · kapalı ama "kendi kanonuna yazmaz" bölümü **iptal** (bkz. kanon yetkisi)

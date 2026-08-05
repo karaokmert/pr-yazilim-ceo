@@ -12,4 +12,6 @@
 - [Kanal testleri sürüyor](project_kanal_testleri.md) — yarın devam; kanal iş taşır yetki taşımaz, iki karar askıda, altyapı Clara'nın içerik Mert'in
 - [Kanon ölçümü — PA + UID](project_kanon_olcumu.md) — kanon çalışıyor; preload arızası canlı (hook telafi), 9-dosya yanlışı, görevler ID'siz, AG'ye 3 kalem
 - [Stres testi yöntemi](feedback_stres_testi_yontemi.md) — tek taraflı ve sentetik test yetmez; karşı tarafla gerçek koşulda kırılana kadar zorla
+- [Bulgu task değil, not](feedback_bulgu_task_degil_not.md) — bulgu iş kalemine çevrilmez, günlüğe yazılır; task listesi karışıyor
+- [Agent'ın davranışını ölç, Mert'in yönlendirmesini değil](feedback_agent_davranisi_olc.md) — "istedin mi bunu" diye sor; takip öğrenme aleti, trafik sayacı değil
 - [Ölçümde kaynağa git](feedback_olcum_kaynaga_git.md) — işi biten sanmadan bakma, kullanıcının özetini kaynak sayma; ikisine de düştüm
