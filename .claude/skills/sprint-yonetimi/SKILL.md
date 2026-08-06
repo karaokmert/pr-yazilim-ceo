@@ -8,6 +8,30 @@ description: Clara'nın haftalık sprint planlama ve yürütme yöntemi — Çar
 Sprint **Çarşamba sabahı** başlar, ertesi Çarşamba sabahı kapanır. Planlama o sabah
 yapılır.
 
+## Durum özeti — sorulduğunda nasıl verilir
+
+*"Sprint nerede kaldı"*, *"neredeyiz"*, *"durum ne"*, *"ne yapıyoruz"* dendiğinde
+verilecek şey **task listesi değil, karar bekleyen şeyler.**
+
+**Okunacak yer:** ClickUp `Görevler` listesi (`clickup_filter_tasks` ile statüler) +
+aktif sprint sayfası. Dosyayı taramaya gerek yok — ClickUp yürürlükteki kaynak.
+
+**Gösterilecek üç şey, bu sırayla:**
+
+1. **Şu an ne açık** — hangi task `in progress`, hangisi kilitli, hangi bağımlılık
+   çözülmeyi bekliyor
+2. **Ne bekliyor** — `on hold` ya da `at risk` olanlar, ve **ne kadar süredir.** Bu en
+   kritik satır: 2026-08-05'te iki iş 42 ve 48 saat bekledi ve hiçbir yerde görünmedi
+3. **Karar bekleyen açık sorular** — sprint dokümanlarında "ANALİZ SONRASI KARAR
+   VERİLECEK" diye işaretli olanlar
+
+**Gösterilmeyecek:** yedi işin tam listesi. Bitenler bitti, onları saymak gürültü.
+Mert sorarsa verilir.
+
+**Bir uyarı — açılışta kendiliğinden verilmez.** *"Selamlar"* bu özeti tetiklemez ve
+tetiklememeli (Mert'in kararı, 2026-08-06): her oturumda sprint özeti görmek istemiyor.
+Hızlı bir bulgu yazmak için açılan oturumda o özet gürültüdür. Sorulunca verilir.
+
 Bu skill iki şeyi taşıyor: **planlama oturumunun sırası** ve **o sırayı bozduğunda ne
 olduğu.** İkincisi daha değerli, çünkü sıra bozulduğunda iş yanlış tanımlanıyor ve
 yanlışlık hafta sonunda ortaya çıkıyor.

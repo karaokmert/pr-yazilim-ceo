@@ -172,3 +172,69 @@ devam mı edecek, yoksa preload dersiyle baştan mı kurulacak?**
 İkisi farklı iş. Devam etmek fabrikayı ölçütle denetleyip eksik kapatmak; baştan kurmak
 ise fabrikanın kendi kanonunu yeniden yazmak — ve o iş fabrikanın kendi eliyle
 yapılamaz (`BHV-NO-SELF-CONFIG`).
+
+---
+
+# GÜNCELLEME — dört şartın durumu ölçüldü (2026-08-06)
+
+Bu dosya ölçütü tanımlıyor. Ölçüt **değişmedi**; aşağıdaki satırlar şartların
+2026-08-06'daki karşılanma durumunu ekliyor. Ölçümün tamamı:
+`incelemeler/fabrika-denetimi/` (dört eksen + `eksikler.md`).
+
+**Bir: sıfırdan üretme — KARŞILANMIYOR, en zayıf halka.**
+Hedef cümle kanona geçmiş (`dagitim/SKILL.md:11`) ama **yöntem yok.** Bir takımın kendi
+tasarımı — hangi roller, kaç personel, devir hattı — hiçbir dosyada tanımlı değil.
+Elde iki uç var, arası boş: PAM'de 15 satır tutum (*"acele etme, günler sürebilir"*),
+PCA'da ölçüm tarifi (*"hangi roller var"*) — ve `PCA-NO-PROPOSE-RULE` PCA'yı
+bulgudan role geçmekten men ediyor. PAM'e verilen tek bitiş testi *"PAD katman kararı
+verebilir mi"*, yani rol mimarisinin doğruluğunu ölçen eşik yok.
+Ve `team/` boş: sahada bir kez bile denenmedi.
+
+**İki: alan bağımsızlığı — BEKLENENDEN İYİ.**
+123 kuralın hüküm cümlelerinin **hiçbirinde** yazılım domain terimi yok (`frontend` 0,
+`API` 0, `.NET` 0, `React` 0; `backend` 2 / `developer` 5 yalnız gerekçe içinde biçim
+örneği). Araç varsayımı yoğun (`plugin` 74, `push` 45) ama bu engel değil — marketing
+takımı da plugin olacak. Gerçekten anlamsız kalan üç kalem var
+(`ISD-APPEND-DONT-REWRITE`'ın ayrım ölçütü *"commit"*; `CLAUDE.md:199` kod varsayımı;
+`behavior:209` grep talimatı). Asıl boşluk birinci şartla aynı.
+
+**Üç: kestirmeden yapmama — KARŞILANIYOR, en iyi karşılanan.**
+Bu şartı zorlayan kural yoğunluğu diğer dördünün toplamından fazla (`BHV-NO-RUSH`,
+`BHV-READ-FULL`, `BHV-OPEN-SOURCE`, `BHV-NO-GUESS`, `BHV-SCAN-FIRST`,
+`BHV-FOUR-PHASES`, `BHV-PROVE-DONE`, `BHV-BUILD-ON-FINDINGS` + üç üretim kapısı).
+*"Günler alabilir ama detaylandır"* cümlesi `pr-agent-manager.md:81-88`'e neredeyse
+birebir geçmiş. Yumuşak boşluk: *"reponun en büyük hakimi olmalı"* kısmı yazılı değil —
+okuma yükümlülüğü iş bazlı, hâkimiyet bir durum ama kanondaki her şey bir refleks.
+
+**Dört: bakım kabiliyeti — YUKARIDAKİ TESPİT GEÇERSİZ, düzeltiliyor.**
+Bu dosyada *"kısmen — refleks var, mekanizma yok"* yazıyordu. **Yanlış:** madde
+2026-08-02'de kapatılmış (`docs/fabrika/ekip-dogrulama/oturum-06-filo-bakimi.md`) ve o
+tarih bu kaydın yazılmasından önce. Yapı var: sorumlu isimli (PAM,
+`PAM-REPORT-FLEET-AGE`), yayılma sırası dört rolde tanımlı (`is-duzeni:267-327`), iki
+kural koruyor.
+
+Karşılanmama sebebi başka ve iki tane: **yapı sıfır kez koştu**
+(`docs/filo/durum.md`: *"Son filo taraması — Yapılmadı"*) ve **cascade haritası boş**
+(`atif_verenler` 112/123 kuralda boş, anılan 38 kimliğin 28'i atıfsız). Yani *"6 ay
+sonra tüm takımlarda değiştirebilir miyiz"* sorusunun cevabı bugün haritaya bakarak
+hayır — cascade elle grep gerektiriyor.
+
+Mimari bedel (karar değil, bilgi): ortak çekirdek yok — 8 takımda bir behavior
+değişikliği **8 ayrı iş** ve `ISD-ONE-TEAM-PER-TURN` bunu zorunlu kılıyor.
+
+**Beş: insan okunabilir çıktı — YARISI KARŞILANIYOR, dördüncü tekrarda.**
+Rapor **biçimi** için 7 kural var ve iyi yazılmış. Ama üç şikâyetten ikisinin geldiği an
+— **soru sorma anı** — kanonun kapsamı dışında: `BHV-SHAPE-REPORT` kendi kapsam
+cümlesiyle o anı açıkça dışarıda bırakıyor (`:373-376`). Soru sayısını sınırlayan ya da
+blok biçimini düzenleyen kural yok; uzunluk sınırı sayı olarak hiçbir yerde yok
+(`CLAUDE.md:132` tutum bildiriyor, kimliksiz ve *"agent üretirken"* kapsamına yazılmış).
+`docs/filo/durum.md:120-133`: *"Dört oturumdur aynı şikâyet... Kapsamı çizilmedi, iş
+açılmadı."* Tanınmış gerilim: `ISD-PRINT-AUDIT-RAW` denetim raporunun özetlenmesini
+yasaklıyor, gerekçesi ölçülmüş.
+
+## Açık soru kapandı
+
+Bu dosyanın sonundaki soru — *"fabrika bugünkü hâlinden devam mı edecek, yoksa preload
+dersiyle baştan mı kurulacak?"* — 2026-08-05'te Mert tarafından cevaplandı: **devam,
+yapılandırılacak.** Ve 2026-08-06 ölçümü bu kararı destekliyor: teknik kat sağlam,
+onarılacak mimari yok. Gerekçe: `kararlar/2026-08-05-sprint-planlama-kararlari.md`.

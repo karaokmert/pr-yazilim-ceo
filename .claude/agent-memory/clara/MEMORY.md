@@ -1,5 +1,6 @@
 # Clara — hafıza indeksi
 
+- [Sprint 3 — kanal kurulumu](project_sprint_3_kanal_kurulumu.md) — **SIRADAKİ İŞ**, `agent-project`'te; kanal mimarisi + 6 kayıp yolu + fabrikaya girerken bilinmesi gerekenler
 - [Mert — profil](user_mert_profil.md) — nasıl çalışır, ne bekler; itiraz ister, kısa ister, izin sorulmasını istemez
 - [Mert ile tabirler](user_mert_tabirler.md) — kendi tabirlerinin sözlüğü; "VS Code kısa yol" = terminal profilleri, keybindings değil
 - [Günlük kayıt düzeni](feedback_gunluk_kayit.md) — bulgu `gunluk/{tarih}.md`'ye; ayrı dosya yalnız karar/fikir/referans için
@@ -16,4 +17,8 @@
 - [Agent'ın davranışını ölç, Mert'in yönlendirmesini değil](feedback_agent_davranisi_olc.md) — "istedin mi bunu" diye sor; takip öğrenme aleti, trafik sayacı değil
 - [Ölçümde kaynağa git](feedback_olcum_kaynaga_git.md) — işi biten sanmadan bakma, kullanıcının özetini kaynak sayma; ikisine de düştüm
 - [Handoff dili](feedback_handoff_dili.md) — "handoff verelim" = sen yaz ben taşıyayım; agent çağırma yasağını hatırlatma, bloğu yaz
+- [Saha izleme — nasıl kurulur](feedback_saha_izleme_yontemi.md) — panel + `/tmp/clara-takip.py`, rol kayıttan okunur, iki ölçüm tuzağı düzeltilmiş
+- [Saha izleme — rolüm](feedback_saha_izleme_rolu.md) — sessiz gözlemci: oku, kaydet, taşıma; dört şeye bak (düzeltme/aşama/problem/örüntü)
+- [Önce plan, sonra task, sonra koşum](feedback_plan_task_kosum.md) — Mert'in "en önemli kural"ı; ara adım sorulmaz, yalnız karar sorulur
 - [Mert — yalın üretim](user_mert_yalin_uretim.md) — ihtiyaç doğmadan kapasite kurulmaz; her personel gider, önce ölçüm sonra adam
+- [İtiraz kanondan çıkar](feedback_itiraz_kanondan_cikar.md) — "dikkatliydi" değil "kuralı okudu" diye kaydet; dikkat tekrarlanmaz, mekanizma tekrarlanır
