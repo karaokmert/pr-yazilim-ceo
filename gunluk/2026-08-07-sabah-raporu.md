@@ -229,3 +229,51 @@ tutarsızlığı (cascade taranmadı)
 mi"* sorusu **ölçülmedi.** Bu gece ölçülen şey fabrikanın **kendi kanonunun
 tutarlılığı.** Üretim yeteneği ancak bir takım üretilirken ölçülür — ve `team/` hâlâ
 boş.
+
+### PAD bir katman ekledi — doğrulamanın üç kademesi
+
+PQA'nın döngü şerhine PAD şunu ekledi ve bu gerçekten yeni bir ayrım:
+
+> *"Bugün üç bulgu **isimsiz yardımcıdan** geldi — zincirden değil. Yardımcı bir
+> personel değil, kanonu okumuyor, benim ne demek istediğimi bilmiyor. Ona yalnız dosya
+> verildi ve durum soruldu.*
+>
+> *Bu tam 'dışarıdan' değil — yardımcıyı ben açtım, soruyu ben yazdım, yani hangi
+> durumun sorulacağını ben seçtim. Ama zincirin içi de değil.*
+>
+> *Yani ölçüt **üç kademeli** olabilir: zincir içi (en zayıf), isimsiz yardımcı (arada),
+> dışarıdan bakan insan (en güçlü). Bugün ilk ikisi çalıştı. Üçüncüsü sabaha kaldı ve
+> PQA haklı — asıl ölçüm o."*
+
+İsimsiz yardımcıdan çıkan üç bulgu: şemanın prefix eşlemesinin yerini söylemediği ·
+bölüm doğrulamasının **yanlış negatif** ürettiği · `CLAUDE.md`'nin kapsam dışı kaldığı.
+
+## SON COMMIT — `60e4f95` (denetimden sonra)
+
+PQA'nın tekrarlanamazlık bulgusu kapatıldı: geniş kapsam ölçümünün **tanımı artık kodda
+yaşıyor** (pasif fonksiyon, metin olarak değil — *"çalıştırılabilir tanım
+ayrışamaz"*). PAD şemadaki talimatı harfiyen uygulayıp koşturdu: **46/77 birebir
+tekrarlandı**, sonra geri aldı.
+
+**Amend etmedi ve gerekçesi doğru:** *"PQA denetimi `eacdc93`'ün ağacını ölçtü. Amend
+etseydim denetlenen ağaç değişirdi ve PQA'nın raporu artık var olmayan bir commit'i
+tarif ederdi."*
+
+**Ve kendi filtresinin bir eksiğini buldu:** desen dosya adının **başına** bakıyor, o
+yüzden `hook-olcumu-2026-08-06.md` yakalanmıyor — *"olcum"* ile başlamıyor. Yani filtre
+kendi tanımına göre bile eksik: **bir ölçüm kaydını ölçüm saymıyor.** Bu, PQA'nın 36 vs
+PAD'in 37 farkının muhtemel sebebi. Kodda ve şemada yazılı.
+
+**Sayı değişmedi:** 97/26. Bu commit yalnız tekrarlanabilirliği onarıyor.
+
+## AÇIK KALANLAR — güncel altı kalem
+
+1. **`ISD-STAY-IN-ROLE` hiçbir body'de yok** ← YENİ (iki bağımsız ölçüm), senin kararın
+2. **PAM body'sinin hüküm ihtiyacı** — senin kararın
+3. **`PAM-WRITE-DOCS-ONLY` tanım yeri** — senin kararın
+4. **Preload gerekçesi** — senin kararın
+5. **8 kaydın bölüm alanı boş** (PQA-*, PCA-*) — devralınan
+6. **DAG'ın 26 kuralından 15'i anılmıyor** — ilk paketlemede ölçülecek
+7. **Süreç dokümanı filtresinin ad-başı eksiği** ← YENİ
+8. **Başlık tutarsızlığı** — cascade taranmadı
+9. **Canlılık ölçütü çalışmıyor** — Karar 8 yeniden ölçülmeli
