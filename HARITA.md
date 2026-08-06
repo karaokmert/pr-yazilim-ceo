@@ -18,7 +18,8 @@ Günlük ölçümler ve bulgular `gunluk/{tarih}.md` altında birikir — her bu
 konu başına ayrı dosya açılmaz. Haritaya yalnız **karar**, **fikir** ve **referans**
 girer.
 
-- `gunluk/2026-08-05.md` — web kanal deneyi 2. tur + **saha izleme (23 bulgu)**: `#PRY-17533` tam zinciri (16 handoff/7 oturum/dev→prod), QA prod GO verdi Mert SQL hatasını yakaladı, discovery kapanışta okunmuyor (GOAT), kanon aletin adını veriyor amacını vermiyor (Platin BE), **ÖRÜNTÜ (Bulgu 23): agent'lar yetki sınırını biliyor dayanağa dönmeyi bilmiyor — 5 ölçüm noktası**
+- `gunluk/2026-08-06.md` — **Qdrant MCP ölçümü (ARGE, yarım)**: anlam eşleşmesi çalışıyor ama MCP alaka skorunu atıyor (400 kayıtta her sorgu 10 alakasız not döndürür), `COLLECTION_NAME` tanımsız → kutu adını model uyduruyor, 43 koleksiyonun 26'sı ölü. **Grep 0.041 sn vs vektör 11+ dk indeksleme** — ama grep'in bulamadığı niyet sorusu ölçülmedi, karşılaştırma script'i `arge/qdrant/` altında koşulmayı bekliyor
+- `gunluk/2026-08-05.md` — **ilk sprint planlandı (yedi iş, ClickUp'a taşındı)** + iki skill yazıldı (`sprint-yonetimi`, `clickup-duzeni`, preload YOK — body'den yönlendirme) + ClickUp araç sınırları ölçüldü (yazma güvenilmez: 9 sayfada 2 sessiz hata; sayfa silinemiyor; arama tam kelimeyi kaçırıyor) + **`skill-creator` eval koşucusu kırık** (gövdesiz kopya ölçüyor — recall %0 bulgusu geçersiz, düzeltildi) + web kanal deneyi 2. tur + **saha izleme (23 bulgu)**: `#PRY-17533` tam zinciri (16 handoff/7 oturum/dev→prod), QA prod GO verdi Mert SQL hatasını yakaladı, discovery kapanışta okunmuyor (GOAT), kanon aletin adını veriyor amacını vermiyor (Platin BE), **ÖRÜNTÜ (Bulgu 23): agent'lar yetki sınırını biliyor dayanağa dönmeyi bilmiyor — 5 ölçüm noktası**
 - `gunluk/2026-08-04.md` — token maliyeti (OY agent'ı 145k açılış), `cache_create` başa baş 12'de, skill listesi 197→126 (kapatmak≠kaldırmak≠reload), v7 kanonu kazası, disk 1,9GB→42MB, **agent-agent kanalı 7 turluk stres testi** (uyanma+iş taşıma+komut taşıma çalıştı; 8 risk, kimlik ve yetki temel; maliyeti mesaj değil duraklama belirliyor)
 
 ## Projeler
@@ -27,6 +28,10 @@ girer.
 - **Proje envanteri** — 16 + 8 klasör tarandı: kendi ürün WupDoc (+ BalkanBee belirsiz), 8 aktif müşteri projesi, 4 yarı yolda, 3 git dışı, 1 şifre sızıntısı · 2026-08-03 · `projeler/envanter.md` · **referans** (durum değişince güncellenir)
 
 ## Kararlar
+
+- **Sprint planlama kararları** — ilk sprint (5→12 Ağustos) planlandı, yedi iş detaylandı. Üç karar verildi: fabrika yeniden kurulmuyor **yapılandırılıyor**, PAM düğümü (planı Clara yazar), kanal kimliği (proje bazlı oturum kimliği → keşif zorunlu hâle geldi). Üç karar ölçüme bırakıldı: yönlendirme, preload, onay akışı · 2026-08-05 · `kararlar/2026-08-05-sprint-planlama-kararlari.md` · kapalı
+- **Yönetim kurulu konumu + yalın üretim** — Mert+Clara yönetim kurulu, fabrika üretici, birimler saha; ihtiyaç doğmadan kapasite kurulmaz. Kanona iki madde: "Nerede duruyorsun" + "olmayan probleme çözüm önermezsin" · 2026-08-05 · `kararlar/2026-08-05-yonetim-kurulu-ve-yalin-uretim.md` · kapalı
+- **Clara merak kuralı** — ClickUp araması ölçülmeden hüküm verildi (elli aracın ikisi okundu, `hasContentMatch` kanıtı görmezden gelindi). Kanona **MERAK EDERSİN** maddesi eklendi · 2026-08-05 · `kararlar/2026-08-05-clara-merak-kurali.md` · kapalı
 
 - **Devir kaydı — 4/5 Ağustos oturumu** — 21 saatlik oturumun kazanımları, açık ölçümler, bekleyen işler, Clara'nın hataları · 2026-08-05 · `gunluk/2026-08-05-devir.md` · kapalı
 

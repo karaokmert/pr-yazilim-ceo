@@ -1,0 +1,82 @@
+[
+  {
+    "query": "clickup'ta clara space'ine bir doküman sayfası aç, adı ARGE olsun. sprint planları gibi kök sayfa olsun",
+    "should_trigger": true
+  },
+  {
+    "query": "şu task'ın statüsünü on hold'a çek, 42 saattir bekliyor ve hiçbir yerde görünmüyor",
+    "should_trigger": true
+  },
+  {
+    "query": "bu işi clickup'a alalım, task açalım",
+    "should_trigger": true
+  },
+  {
+    "query": "clara doc altında kaç sayfa var, listeyi çıkarabilir misin? bir de dün açtığım deneme sayfaları silinmiş mi kontrol et",
+    "should_trigger": true
+  },
+  {
+    "query": "task'ın açıklamasını güncelle, detay dokümanının linkini ekle içine",
+    "should_trigger": true
+  },
+  {
+    "query": "clickup'ta 'preload' geçen bir doküman var mı? aramaya çalıştım bulamadım",
+    "should_trigger": true
+  },
+  {
+    "query": "şu iki task arasına bağımlılık kur, ikincisi birincisini beklesin",
+    "should_trigger": true
+  },
+  {
+    "query": "dün yazdığım sprint sayfasını güncellemem lazım, yedi işin adı değişti",
+    "should_trigger": true
+  },
+  {
+    "query": "görevler listesinde hangi statüler var? at risk diye bir şey var mıydı",
+    "should_trigger": true
+  },
+  {
+    "query": "bugün çarşamba, oturup bu haftayı planlayalım. elimde 5-6 iş var ama sıralamasını çıkaramadım",
+    "should_trigger": false
+  },
+  {
+    "query": "görev 2'ye başla",
+    "should_trigger": false
+  },
+  {
+    "query": "GOAT'ta PA'nın açtığı task'lara bakabilir misin, #PRY-17484 chat işi hangi durumda",
+    "should_trigger": false
+  },
+  {
+    "query": "şu 4 işi haftalık kapsama bölmek istiyorum ama hangisi hangisini bekliyor bilmiyorum",
+    "should_trigger": false
+  },
+  {
+    "query": "bu ölçümü kayda geçir — clickup araması gövdedeki tam kelimeyi bulamıyor, dokuz sayfada iki yazma hatası çıktı",
+    "should_trigger": false
+  },
+  {
+    "query": "fabrika ekibinin agent body'lerini oku bakalım, PQA ile PCA'nın işi örtüşüyor mu",
+    "should_trigger": false
+  },
+  {
+    "query": "sprinti kapatalım, bitmeyen işleri yeni haftaya taşı",
+    "should_trigger": false
+  },
+  {
+    "query": "OY projelerinde 20 oturum açık, hangisi ne kadar beklemede? bir tarama yap",
+    "should_trigger": false
+  },
+  {
+    "query": "kanal sisteminde iki BE açılırsa izolasyon nereden sağlanır, bunu netleştirelim",
+    "should_trigger": false
+  },
+  {
+    "query": "web sitesi projesinde clickup'tan gelen müşteri talebini discovery'ye çevirmemiz lazım, PA ne yapmalı",
+    "should_trigger": false
+  },
+  {
+    "query": "bir fikrim var, fabrikaya koordinatör alsak nasıl olur? ne dersin",
+    "should_trigger": false
+  }
+]

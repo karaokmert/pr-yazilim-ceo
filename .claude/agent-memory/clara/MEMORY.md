@@ -15,3 +15,5 @@
 - [Bulgu task değil, not](feedback_bulgu_task_degil_not.md) — bulgu iş kalemine çevrilmez, günlüğe yazılır; task listesi karışıyor
 - [Agent'ın davranışını ölç, Mert'in yönlendirmesini değil](feedback_agent_davranisi_olc.md) — "istedin mi bunu" diye sor; takip öğrenme aleti, trafik sayacı değil
 - [Ölçümde kaynağa git](feedback_olcum_kaynaga_git.md) — işi biten sanmadan bakma, kullanıcının özetini kaynak sayma; ikisine de düştüm
+- [Handoff dili](feedback_handoff_dili.md) — "handoff verelim" = sen yaz ben taşıyayım; agent çağırma yasağını hatırlatma, bloğu yaz
+- [Mert — yalın üretim](user_mert_yalin_uretim.md) — ihtiyaç doğmadan kapasite kurulmaz; her personel gider, önce ölçüm sonra adam

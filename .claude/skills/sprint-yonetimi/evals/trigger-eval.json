@@ -1,0 +1,82 @@
+[
+  {
+    "query": "clara selam. bugün çarşamba, oturup bu haftayı planlayalım. elimde 5-6 iş var kafamda ama sıralamasını çıkaramadım",
+    "should_trigger": true
+  },
+  {
+    "query": "sprint planı yapalım",
+    "should_trigger": true
+  },
+  {
+    "query": "görev 2'ye başla",
+    "should_trigger": true
+  },
+  {
+    "query": "geçen hafta başladığımız sprint nerede kalmıştı? bitmeyen işler vardı sanırım, onları bu haftaya taşımak lazım",
+    "should_trigger": true
+  },
+  {
+    "query": "şu 4 işi haftalık kapsama bölmek istiyorum ama hangisi hangisini bekliyor bilmiyorum. bağımlılıkları çıkarabilir misin",
+    "should_trigger": true
+  },
+  {
+    "query": "sprinti kapatalım, çarşamba oldu",
+    "should_trigger": true
+  },
+  {
+    "query": "bu işi de sprinte alalım — kanal testinde çıkan şu bulgu var, onu da bu haftaya sıkıştırabilir miyiz",
+    "should_trigger": true
+  },
+  {
+    "query": "yeni bir iş anlatacağım sana, dinle sonra dokümante et. fabrika ekibinin talimatlarını gözden geçireceğiz",
+    "should_trigger": true
+  },
+  {
+    "query": "önümüzdeki hafta neler yapacağız oturup konuşalım. ben anlatayım sen dinle, sonra netleştirelim",
+    "should_trigger": true
+  },
+  {
+    "query": "GOAT projesinde PA'nın açtığı sprint task'larına bakabilir misin? #PRY-17484 chat işi hangi sprintte kalmış",
+    "should_trigger": false
+  },
+  {
+    "query": "clickup'ta clara space'ine bir doküman sayfası aç, adı ARGE olsun",
+    "should_trigger": false
+  },
+  {
+    "query": "şu task'ın statüsünü on hold'a çek, 42 saattir bekliyor",
+    "should_trigger": false
+  },
+  {
+    "query": "fabrika ekibinin agent body'lerini oku bakalım, PQA ile PCA'nın işi örtüşüyor mu",
+    "should_trigger": false
+  },
+  {
+    "query": "kanal sisteminde iki BE açılırsa izolasyon nereden sağlanır? bunu şimdi netleştirelim",
+    "should_trigger": false
+  },
+  {
+    "query": "backend-developer.md kaç kopya var ekosistemde? grep çekip say",
+    "should_trigger": false
+  },
+  {
+    "query": "bu ölçümü günlüğe yaz — clickup araması gövdedeki tam kelimeyi bulamıyor, dokuz sayfada iki yazma hatası çıktı",
+    "should_trigger": false
+  },
+  {
+    "query": "EGELI prod'a çıktı mı? PR #178'in durumuna bakabilir misin",
+    "should_trigger": false
+  },
+  {
+    "query": "OY ekibinin iş akışını değiştirmek istiyorum, hangi agentları etkiler bir analiz lazım",
+    "should_trigger": false
+  },
+  {
+    "query": "bir fikrim var — fabrikaya koordinatör alsak nasıl olur? ne dersin",
+    "should_trigger": false
+  },
+  {
+    "query": "web-pa ile web-do arasındaki kanal deneyinin sonuçlarını okuyup bana özet geç",
+    "should_trigger": false
+  }
+]

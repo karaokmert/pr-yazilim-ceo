@@ -1,0 +1,56 @@
+Split: 13 train, 7 test (holdout=0.4)
+
+============================================================
+Iteration 1/5
+Description: Clara'nın haftalık sprint planlama ve yürütme yöntemi — Çarşamba ritüeli, işi anlamadan yazmama disiplini, zorunlu sıra çıkarma, doküman-task akışı ve sprint içinde çıkan ara işlerin yönetimi. Bu skill'i "sprint planı yapalım / sprint planlama / bu hafta ne yapacağız / sprinte alalım / görev N'e başla / sprint nerede kaldı / sprinti kapatalım" denen her durumda kullan. Ayrıca bir iş listesi haftalık kapsama bölünecekse, işler arası bağımlılık çıkarılacaksa ya da yarım kalmış bir sprint devralınacaksa da kullan — planlama sırası bu skill'de yazılı ve sırası bozulduğunda iş yanlış tanımlanıyor. Kapsam dışı — ClickUp mekaniği (`clickup-duzeni` skill'i), proje sprint'leri (PA'nın alanı).
+============================================================
+Train: 21/39 correct, precision=100% recall=0% accuracy=54% (162.9s)
+  [FAIL] rate=0/3 expected=True: önümüzdeki hafta neler yapacağız oturup konuşalım. ben anlat
+  [FAIL] rate=0/3 expected=True: sprinti kapatalım, çarşamba oldu
+  [FAIL] rate=0/3 expected=True: şu 4 işi haftalık kapsama bölmek istiyorum ama hangisi hangi
+  [FAIL] rate=0/3 expected=True: görev 2'ye başla
+  [FAIL] rate=0/3 expected=True: clara selam. bugün çarşamba, oturup bu haftayı planlayalım. 
+  [FAIL] rate=0/3 expected=True: sprint planı yapalım
+  [PASS] rate=0/3 expected=False: backend-developer.md kaç kopya var ekosistemde? grep çekip s
+  [PASS] rate=0/3 expected=False: GOAT projesinde PA'nın açtığı sprint task'larına bakabilir m
+  [PASS] rate=0/3 expected=False: bu ölçümü günlüğe yaz — clickup araması gövdedeki tam kelime
+  [PASS] rate=0/3 expected=False: EGELI prod'a çıktı mı? PR #178'in durumuna bakabilir misin
+  [PASS] rate=0/3 expected=False: web-pa ile web-do arasındaki kanal deneyinin sonuçlarını oku
+  [PASS] rate=0/3 expected=False: clickup'ta clara space'ine bir doküman sayfası aç, adı ARGE 
+  [PASS] rate=0/3 expected=False: OY ekibinin iş akışını değiştirmek istiyorum, hangi agentlar
+Test : 12/21 correct, precision=100% recall=0% accuracy=57% (0.0s)
+  [FAIL] rate=0/3 expected=True: geçen hafta başladığımız sprint nerede kalmıştı? bitmeyen iş
+  [FAIL] rate=0/3 expected=True: bu işi de sprinte alalım — kanal testinde çıkan şu bulgu var
+  [FAIL] rate=0/3 expected=True: yeni bir iş anlatacağım sana, dinle sonra dokümante et. fabr
+  [PASS] rate=0/3 expected=False: fabrika ekibinin agent body'lerini oku bakalım, PQA ile PCA'
+  [PASS] rate=0/3 expected=False: şu task'ın statüsünü on hold'a çek, 42 saattir bekliyor
+  [PASS] rate=0/3 expected=False: kanal sisteminde iki BE açılırsa izolasyon nereden sağlanır?
+  [PASS] rate=0/3 expected=False: bir fikrim var — fabrikaya koordinatör alsak nasıl olur? ne 
+
+Improving description...
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/Users/karaok/.claude/plugins/cache/claude-plugins-official/skill-creator/unknown/skills/skill-creator/scripts/run_loop.py", line 328, in <module>
+    main()
+    ~~~~^^
+  File "/Users/karaok/.claude/plugins/cache/claude-plugins-official/skill-creator/unknown/skills/skill-creator/scripts/run_loop.py", line 293, in main
+    output = run_loop(
+        eval_set=eval_set,
+    ...<11 lines>...
+        log_dir=log_dir,
+    )
+  File "/Users/karaok/.claude/plugins/cache/claude-plugins-official/skill-creator/unknown/skills/skill-creator/scripts/run_loop.py", line 199, in run_loop
+    new_description = improve_description(
+        skill_name=name,
+    ...<6 lines>...
+        iteration=iteration,
+    )
+  File "/Users/karaok/.claude/plugins/cache/claude-plugins-official/skill-creator/unknown/skills/skill-creator/scripts/improve_description.py", line 144, in improve_description
+    text = _call_claude(prompt, model)
+  File "/Users/karaok/.claude/plugins/cache/claude-plugins-official/skill-creator/unknown/skills/skill-creator/scripts/improve_description.py", line 44, in _call_claude
+    raise RuntimeError(
+        f"claude -p exited {result.returncode}\nstderr: {result.stderr}"
+    )
+RuntimeError: claude -p exited 1
+stderr: 
