@@ -64,6 +64,15 @@ denetlemesi.
 
 ## Uygulama
 
-Bu karar henüz kanona yazılmadı. `docs/fabrika/` altında bir iş olarak açılacak.
-Sıradaki iş **PAM'in analiz eksikliği** (Mert'in kararı) — ikisi aynı kökten,
-birlikte ele alınabilir.
+Bu karar henüz kanona yazılmadı. **Önce sahada doğrulanacak** (Mert, 2026-08-07:
+*"son task olarak yeni zincir tamamen çalışıyorsa sorun yoksa onu da yazdır"*).
+
+İlk koşumu `Task` kaldırma işinin kapanışında yapılıyor. Doğrulanacak beş adım:
+PQA→PAM bilgi · PAM döküman düzeltmesi · PAM commit (yalnız `docs/`) · PAM'in push
+onayı · PQA'nın son commit denetimi.
+
+Beşi de temiz koşarsa kanona yazılır. Sorun çıkarsa önce sorun çözülür —
+**çalışmayan bir mekanizma kanonlaşmamalı** (kanal işinde ölçülmüş ders: `PID`
+alanı üç turda üç kez düzeltildi, hiçbirinde bir soruya cevap vermedi).
+
+Sıradaki iş **PAM'in analiz eksikliği** (Mert'in kararı) — ikisi aynı kökten.

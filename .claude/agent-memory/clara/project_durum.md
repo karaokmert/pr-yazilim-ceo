@@ -8,26 +8,47 @@ metadata:
 # Durum
 
 **Son kapanış:** `gunluk/2026-08-07-kapanis-3.md` — oku, çalışmaya başlayabilirsin.
-Aynı günün önceki ikisini (`-kapanis.md` gece/fabrika, `-kapanis-2.md` öğleden
-sonra/kanal) **iptal etmiyor, üstüne ekliyor.**
+Aynı günün önceki ikisini iptal etmiyor, üstüne ekliyor.
 
-**Tek cümlede:** Clara'nın kendi düzeni elden geçirildi — üç katman kendi kanonuna
-uygulandı (body 953→771, iki yeni skill), bir kural ablasyonla ölçüldü, ve **kaydın
-ömrü** kanona girdi (dört yazma tetiği vardı, sıfır kapanma tetiği).
+**Tek cümlede:** Fabrikanın kanalı ayağa kalktı ve kanonu bir günde baştan elden
+geçti — `Task` çağrısı kaldırıldı, iletişim kanala taşındı, kural sayısı 123→131.
+On altı denetim turu, on üç bulgu, hepsi kapandı.
 
-**İlk hareket: PUSH.** 21 commit bekliyor, `git push origin main` **izin katmanında
-engellendi** — Clara aşamaz. Mert çalıştıracak. Kontroller temiz (hassas bilgi yok,
-çakışma yok, ağaç temiz).
+## Şu an nerede
 
-**Sonraki konu: ortak hafıza.** Mert erteledi (*"önce doküman yapısı, sonra ortak
-memory"*). Ölçüm hazır, karar verilmedi.
+**GÖREV DEVREDİLDİ.** Mert 2026-08-07 01:34'te sekiz maddelik bir gece görevi
+verdi (fabrikayı push'a hazır hâle getir: tüm kuralları sorgula, çelişkileri
+temizle, agent'ların kuralları bildiğini doğrula). Context dolduğu için **yeni bir
+Clara oturumu** açıldı ve devir yazıldı:
+`~/.pr-kanal/agent-project/clara-ceo-20260807-1653/inbox` (6.072 karakter).
 
-**Bilinen risk — graph güvensiz yerde:** kayıtlar `~/.npm/_npx/2e72.../dist/memory.jsonl`
-içinde, yani **npx paket önbelleğinde** (silinebilir). Yedek: `~/.pr-memory/memory.jsonl`.
-Yapılandırmaya dokunulmadı. Çözüm hazır ama plugin dosyasında (tüm OY ekibini etkiler).
+Bu oturum kapandı, izleyicileri durduruldu.
 
-**Bilinen sınır — hafıza taşınmıyor:** `agent-project`'te açılan Clara'nın hafızası
-**boş başlar**. Taşınan tek şey graph, o da yukarıdaki riski taşıyor.
+## Beklemede
 
-**Bugün konan üç kural:** mesai bitiş kararı Mert'in · maliyet ölçülmeden söylenmez ·
-önce kural sonra temizlik.
+**PUSH — 22 commit, on bir iş.** Brief: `gunluk/2026-08-07-push-brief.md`
+PQA denetim onayı verildi. Mert: *"Push'un bir acelesi yok, çalışıyoruz zaten."*
+
+**Karar defteri — yedi kalem:** `gunluk/2026-08-07-mert-e-sorulacaklar.md`
+En kritik üçü: push kapsamı · iki commit'lenmemiş dosya (index'te on kural onlara
+atıf veriyor) · index paralel düzende güncel kalamıyor.
+
+## Ölçülmemiş — gece görevinin merkezi
+
+**Agent'ların kanonu GERÇEKTEN bilip bilmediği hiç sınanmadı.** PCA'nın uyarısı:
+*"kanona uygun görünmek ile kanondan gelmek aynı şey değil."*
+
+Ve bir risk: bu oturumda merkez **çok fazla bağlam taşıdı** — her mesajda
+gerekçeler tekrarlandı. Doğru davranışın ne kadarı kanondan, ne kadarı merkezin
+mesajlarından, ayırt edilmedi.
+
+## Bugün ölçülen üç ders
+
+**Dört taraf da aynı kuralı aynı gün ihlal etti** — `BHV-DATE-THE-MEASUREMENT`
+kanona girdi ve PAM, PAD, PQA, Clara dördü de kaynağa bakmadan hatırlananı taşıdı.
+
+**Kendi dosyasına bakan göz kör, ve sistematik** — dört kez, dört farklı elde.
+
+**Eksen devredilebiliyor** — günün örüntüsünü (*"her tur bir öncekinin açığını
+kapatır"*) kıran tek örnek: PAD, PQA'nın eksenini kendi üstüne koşturdu ve aynı
+sınıftan bulgu buldu.

@@ -13,15 +13,19 @@
 - [Mert'e anlatım biçimi](feedback_mert_e_anlatim_bicimi.md) — jargon yok, kural adı yok; süreci bilmeyen birine anlatır gibi
 - [Mert ile tabirler](user_mert_tabirler.md) — kendi tabirlerinin sözlüğü; "VS Code kısa yol" = terminal profilleri
 - [Mert — yalın üretim](user_mert_yalin_uretim.md) — ihtiyaç doğmadan kapasite kurulmaz; önce ölçüm sonra adam
+- [Mert — karar düzeni](user_mert_karar_duzeni.md) — **"Mert olsa ne yapardı"**; sunulan seçenekleri reddedip sorunun kendisini yeniden kurar
 
 ## Nasıl konuşulur, nasıl yazılır
 
 - [Cevap uzunluğu ve karar alma](feedback_cevap_uzunlugu.md) — bir bulgu/üç paragraf/tek soru; izin sorulmaz, yazılır ve bildirilir
 - [Günlük kayıt düzeni](feedback_gunluk_kayit.md) — bulgu `gunluk/{tarih}.md`'ye; ayrı dosya yalnız karar/fikir/referans için
+- [Kayıt kapanış notu](feedback_kayit_kapanis_notu.md) — açık bulgu kapanınca üstüne KAPANDI notu; bayat kayıt yanlış bulgu üretir
 - [Gece kapanışı ve hafıza düzeni](feedback_gece_kapanisi_ve_hafiza_duzeni.md) — uzun oturum kapanış dokümanıyla biter; `project` kayıtları iş bitince silinir
 - [İndeks emir taşır](feedback_indeks_emir_tasir.md) — MEMORY.md otomatik yüklenir; buraya kural değil yalnız pointer yazılır
 - [Handoff dili](feedback_handoff_dili.md) — "handoff verelim" = sen yaz ben taşıyayım
 - [Bulgu task değil, not](feedback_bulgu_task_degil_not.md) — bulgu iş kalemine çevrilmez, günlüğe yazılır
+- [Görev listesi disiplini](feedback_gorev_listesi_disiplini.md) — her mesajda/her iş bitişinde güncelle; elimde ne var · kimden ne bekliyorum · kime ne vereceğim
+- [Raporu kim okumalı](feedback_rapor_kime_gider.md) — başlığa değil içeriğe bak; içinde başkasının sorusunun cevabı varsa ona da ilet
 - [Doğru katmana yaz](feedback_dogru_katmana_yaz.md) — skill kaynağı kopyalamaz işaret eder; kural ile gerekçe ayrı ömürlü
 
 ## Ölçüm disiplini — en çok hata buradan çıkıyor
