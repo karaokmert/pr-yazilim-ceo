@@ -51,6 +51,47 @@ kapatır, yasak. Yalnız bir davranış gösteriyorsa → serbest.
 Yardımcıya *"bu kural şunu demek istiyor"* dersen ölçtüğün şey kural olmaktan çıkar,
 **senin açıklaman** olur. Yalnız dosya verilir, durum sorulur.
 
+## Bir kural yük taşıyor mu — ablasyon
+
+Yukarıdakiler *"kural davranış üretiyor mu"* sorusunu cevaplıyor. Ablasyon başka bir
+şey sorar: **bu kural olmasa da aynı davranış gelir miydi?**
+
+Fark önemli, çünkü bir kural doğru davranışla birlikte görüldüğünde onu **ürettiği**
+sanılır — oysa davranış modelin varsayılanı olabilir. O satır o zaman maliyet taşır,
+değer taşımaz.
+
+**Yöntem:** aynı senaryo, iki yardımcıya paralel. **A** tam kanonu okur, **B** kuralı
+çıkarılmış kanonu. Fark varsa kural yük taşıyor.
+
+**İki adım atlanırsa test çöker:**
+
+**Bir — kuralın TÜM izleri silinir.** Bir kural body'de birden fazla yerde geçiyorsa
+ana bloğu silmek yetmez; B onu başka satırdan öğrenir. Silmeden önce `grep` ile kuralın
+adı **ve** anlattığı davranışın kelimeleri aranır.
+
+**İki — senaryo kuralı anmaz.** *"Kanıtını etiketler misin"* diye sorulursa ölçülen şey
+kural değil, sorunun kendisi olur. Senaryo, kuralı **ihlal etmenin kolay olduğu** bir iş
+olmalı — baskı altında (kısalık isteği, pahalı ölçüm, acele) doğal davranış görülür.
+
+**Sonuç üç türlü okunur:**
+
+- **İkisi de yapıyor** → davranış varsayılan, kural dekoratif (kırpılabilir)
+- **Yalnız A yapıyor** → kural yük taşıyor (kalır, hatta güçlendirilir)
+- **Kısmen** → kuralın bir parçası taşıyor, diğeri taşımıyor → **kural o parçaya
+  odaklanacak biçimde yeniden yazılır**
+
+Üçüncüsü en sık çıkanı ve en değerlisi: kuralı kısaltmıyor, **nişanlıyor.**
+
+### Ablasyonun sınırı
+
+**Pahalı.** Bir koşum ~200 bin token (iki yardımcı, orta boy senaryo). Her kural için
+koşulacak bir test değil — **şüphe duyulan** kurala saklanır.
+
+**Tek koşum kanıt değil.** Model çıktısı turdan tura değişir; tek koşumda görülen fark
+gerçek etki de olabilir varyans da. Bulgu *"kural işe yarıyor"* değil, **"bu koşumda
+fark üretti"** diye yazılır. Kesinlik isteniyorsa aynı senaryo 3 kez ya da 3 farklı
+senaryo — maliyet katlanır.
+
 ## Başkasının raporundaki mekanik iddia ölçüm değildir
 
 Bir agent *"şu araçla kurdum"*, *"şu mekanizma çalışıyor"* dediğinde bu bir **beyan**.
