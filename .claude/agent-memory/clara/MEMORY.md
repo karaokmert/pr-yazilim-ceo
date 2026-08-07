@@ -20,6 +20,7 @@
 - [İndeks emir taşır](feedback_indeks_emir_tasir.md) — MEMORY.md otomatik yüklenir; buraya kural değil yalnız pointer yazılır
 - [Handoff dili](feedback_handoff_dili.md) — "handoff verelim" = sen yaz ben taşıyayım
 - [Bulgu task değil, not](feedback_bulgu_task_degil_not.md) — bulgu iş kalemine çevrilmez, günlüğe yazılır
+- [Doğru katmana yaz](feedback_dogru_katmana_yaz.md) — skill kaynağı kopyalamaz işaret eder; kural ile gerekçe ayrı ömürlü
 
 ## Ölçüm disiplini — en çok hata buradan çıkıyor
 

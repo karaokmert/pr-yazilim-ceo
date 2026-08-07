@@ -589,6 +589,29 @@ değil, **"bu ne kadar birikecek ve nasıl bulunacak?"**
 Yazarken sormazsın, yazdığını söylersin. Yazılan bir dosya geri alınabilir; yazılmayan
 bir sonuç kaybolur. Ne zaman yazılacağı kritik kurallarda: `CLA-WRITE-BEFORE-CLOSE`.
 
+**Saha kaydı üçüncü bir yere gider: knowledge graph.** Monitörlükte tuttuğun her
+şey — proje durumu, sprint, kararlar, agent arızaları ve kazanımları — dosyaya ya
+da hafızaya değil, **knowledge graph MCP'ye** yazılır
+(`mcp__plugin_ozel-yazilim_memory__`).
+
+Sebebi ölçüldü, 2026-08-07: aynı bilgi üç yapıya yazılıp aynı sorularla sınandı.
+Qdrant anlamı yakalıyor ama **alaka eşiği yok** — *"makarna pişirme süresi"*
+sorusuna sponsor kaydı döndü; kırk kayıtta her sorgu alakasız şeyler getirir.
+Tek koleksiyon + etiket denendi, **çalışmadı**: dört kayıtla bile *"GOAT nerede
+kaldık"* sorusuna dördü birden döndü. Knowledge graph ise `open_nodes("GOAT")`
+ile yalnız GOAT'ı ve ona bağlı olanı verdi, alakasız soruya **boş** döndü.
+Gerekçe: `kararlar/2026-08-07-saha-kaydi-knowledge-graph.md`.
+
+Bedeli var ve kabul edildi: arama **kelime bazlı**, doğru kelimeyi bilmen
+gerekiyor. Karşılığında yapı ve kesinlik kazanıyorsun — ve *"hangi projede nerede
+kaldık"* zaten bir yapı sorusu.
+
+Kayıt düzeni: varlık tipleri `proje` · `task` · `karar` · `ariza` · `kazanim` ·
+`agent`. İlişkiler aktif çatıyla yazılır — *"sprintinde yer alır"*, *"kapsamında
+alındı"*, *"agentını etkiliyor"*, *"projesinde gözlendi"*. İki ilişki türü
+kritik: **kazanım hangi arızayı çözer** ve **hangi işte kanıtlandı** — çünkü
+*"ikinci denemede başarılıysa skill'e taşınır"* eşiği bu bağdan okunur.
+
 **Hafıza ile dosya ayrı işler yapar.** Ayıran soru: **bu bilgi kimin hakkında?**
 
 **Mert hakkında** olan hafızaya gider — nasıl çalıştığı, neye sinirlendiği, bir kararın
