@@ -83,6 +83,18 @@
   .yanip{animation:yp 1.1s steps(2,start) infinite}
   @keyframes yp{50%{opacity:.25}}
   #hata{color:var(--kirmizi); margin-bottom:12px}
+
+.kanal{border:1px solid #2a2f3a;border-radius:6px;padding:8px 10px;margin:6px 0;background:#171b23}
+.kanal.k-kapali{opacity:.45}
+.k-bas{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.k-proje{color:#7b8497;font-size:12px}
+.k-durum{font-size:11px;padding:1px 6px;border-radius:3px;background:#2a2f3a;color:#9aa4b8}
+.k-acik .k-durum{background:#1d3a2a;color:#6ee7a0}
+.k-is{color:#9aa4b8;font-size:12px;margin-top:3px}
+.k-sayi{color:#7b8497;font-size:12px;margin-top:4px}
+.k-son{color:#8b93a7;font-size:12px;margin-top:4px;font-style:italic}
+.uyari{color:#f0b849}
+.ozet{color:#7b8497;font-size:12px;margin-bottom:6px}
 </style>
 </head>
 <body>
@@ -101,6 +113,11 @@
 <section id="bekleyenler" class="bos">
   <h2>▸ SENİ BEKLEYENLER</h2>
   <div id="bk-liste"></div>
+</section>
+
+<section id="kanal-bolum" style="display:none">
+  <h2>▸ KANALLAR</h2>
+  <div id="kanallar"></div>
 </section>
 
 <div id="projeler"></div>
@@ -142,7 +159,44 @@ function durumSinif(o){
   return "d-bos";
 }
 
+
+function kanalCiz(kanallar){
+  const bolum = document.getElementById("kanal-bolum");
+  const el = document.getElementById("kanallar");
+  if (!kanallar || !kanallar.length){ bolum.style.display = "none"; return; }
+  bolum.style.display = "";
+  const acik = kanallar.filter(k => k.durum === "ACIK");
+  const kapali = kanallar.length - acik.length;
+  el.innerHTML = `<div class="ozet">${acik.length} açık${kapali ? " · " + kapali + " kapalı/belirsiz" : ""}</div>` +
+    kanallar.map(k => {
+      const bekliyor = k.yon === "clara->agent" && k.durum === "ACIK";
+      const pidNot = k.pid_canli === false
+        ? `<span class="uyari" title="PID ölü görünüyor — ama bu ölçüt güvenilmez (2026-08-07)">PID?</span>` : "";
+      return `
+      <div class="kanal ${k.durum === "ACIK" ? "k-acik" : "k-kapali"}">
+        <div class="k-bas">
+          <b>${kacar(k.rol)}</b>
+          <span class="k-proje">${kacar(k.proje)}</span>
+          <span class="k-durum">${kacar(k.durum)}</span>
+          ${pidNot}
+          <span class="${sureSinif(k.son_hareket_sn)}">${k.son_hareket_sn < 0 ? "—" : kacar(gecenSn(k.son_hareket_sn))}</span>
+        </div>
+        ${k.is ? `<div class="k-is">${kacar(k.is)}</div>` : ""}
+        <div class="k-sayi">gelen ${k.inbox} · giden ${k.outbox}${bekliyor ? ' <b class="uyari">← son yazan Clara, cevap bekliyor</b>' : ""}</div>
+        ${k.son_outbox ? `<div class="k-son">↩ ${kacar(k.son_outbox)}</div>` : ""}
+      </div>`;
+    }).join("");
+}
+
+function gecenSn(sn){
+  if (sn < 60) return sn + " sn";
+  if (sn < 3600) return Math.floor(sn/60) + " dk";
+  if (sn < 86400) return Math.floor(sn/3600) + " sa";
+  return Math.floor(sn/86400) + " gün";
+}
+
 function ciz(d){
+  kanalCiz(d.kanallar);
   document.getElementById("s-proje").textContent   = d.proje_sayisi ?? "–";
   document.getElementById("s-oturum").textContent  = (d.oturumlar||[]).length;
   document.getElementById("s-surec").textContent   = d.acik_surec ?? "–";

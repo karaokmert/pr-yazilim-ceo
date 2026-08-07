@@ -189,6 +189,86 @@ def gecen(ts):
     return f"{sn // 86400} gun {(sn % 86400) // 3600} sa", sn
 
 
+KANAL_KOK = os.path.expanduser("~/.pr-kanal")
+
+
+def kanallari_tara():
+    """~/.pr-kanal altindaki kutulari okur. Arsiv haric."""
+    kanallar = []
+    if not os.path.isdir(KANAL_KOK):
+        return kanallar
+    for proje in sorted(os.listdir(KANAL_KOK)):
+        pdizin = os.path.join(KANAL_KOK, proje)
+        if not os.path.isdir(pdizin):
+            continue
+        for kutu in sorted(os.listdir(pdizin)):
+            kdizin = os.path.join(pdizin, kutu)
+            if not os.path.isdir(kdizin) or kutu == "arsiv":
+                continue
+            inbox = os.path.join(kdizin, "inbox", "mesajlar.md")
+            outbox = os.path.join(kdizin, "outbox", "mesajlar.md")
+            durum_md = os.path.join(kdizin, "DURUM.md")
+            if not (os.path.isdir(os.path.join(kdizin, "inbox"))
+                    or os.path.isfile(durum_md)):
+                continue
+
+            rol = pid = basla = is_ = durum = ""
+            if os.path.isfile(durum_md):
+                for satir in open(durum_md, errors="replace"):
+                    for alan, ad in (("ROL:", "rol"), ("PID:", "pid"),
+                                     ("BAŞLANGIÇ:", "basla"), ("İŞ:", "is_"),
+                                     ("DURUM:", "durum")):
+                        if satir.startswith(alan):
+                            deger = satir.split(":", 1)[1].strip()
+                            if ad == "rol": rol = deger
+                            elif ad == "pid": pid = deger
+                            elif ad == "basla": basla = deger
+                            elif ad == "is_": is_ = deger
+                            elif ad == "durum": durum = deger
+
+            def say_ve_son(yol):
+                if not os.path.isfile(yol):
+                    return 0, 0, ""
+                adet = 0
+                son_bas = ""
+                for satir in open(yol, errors="replace"):
+                    if satir.startswith("## "):
+                        adet += 1
+                        son_bas = satir[3:].strip()
+                return adet, os.path.getmtime(yol), son_bas
+
+            i_adet, i_ts, i_son = say_ve_son(inbox)
+            o_adet, o_ts, o_son = say_ve_son(outbox)
+            son_ts = max(i_ts, o_ts)
+
+            # canlilik: PID varsa kontrol et (guvenilmez, olculdu 2026-08-07)
+            canli = None
+            if pid and pid.strip("—- ").isdigit():
+                try:
+                    os.kill(int(pid), 0)
+                    canli = True
+                except (ProcessLookupError, PermissionError, OSError):
+                    canli = False
+
+            kanallar.append({
+                "proje": proje,
+                "kutu": kutu,
+                "rol": rol or kutu,
+                "is": is_,
+                "durum": durum or "?",
+                "pid": pid,
+                "inbox": i_adet,
+                "outbox": o_adet,
+                "son_inbox": i_son[:110],
+                "son_outbox": o_son[:110],
+                "son_hareket_sn": int(time.time() - son_ts) if son_ts else -1,
+                "yon": "clara->agent" if i_ts >= o_ts else "agent->clara",
+                "pid_canli": canli,
+            })
+    kanallar.sort(key=lambda k: (k["durum"] != "ACIK", k["son_hareket_sn"]))
+    return kanallar
+
+
 def topla():
     canli = canli_oturumlar()
     projeler = {}
@@ -246,6 +326,7 @@ def topla():
         "acik_surec": len(canli),
         "proje_sayisi": len(projeler),
         "oturumlar": kayit,
+        "kanallar": kanallari_tara(),
     }
     tmp = OUT + ".tmp"
     with open(tmp, "w") as fh:

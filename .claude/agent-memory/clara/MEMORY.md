@@ -2,6 +2,8 @@
 
 ## Şu an nerede
 
+- [PAM'e iletilecek iş listesi](project_pam_is_listesi.md) — hazır gereksinimler; brief biçimi ilk sırada
+
 - [Durum](project_durum.md) — **İLK BUNU OKU**; son kapanış dokümanının adresi + tek cümlelik durum
 
 ## Mert
@@ -21,6 +23,8 @@
 
 ## Ölçüm disiplini — en çok hata buradan çıkıyor
 
+- [Ölçüm yerine yorum — EN SIK HATA](feedback_olcum_yerine_yorum.md) — elde kanıt varken yorumlamak; 6 kez düştüm, 4'ünü agent'lar düzeltti
+- [Önce sahada, sonra kanona](feedback_once_sahada_sonra_kanon.md) — Mert 2 kez kesti; masada ölçülmüş olmak yetmez
 - [Ölçümde kaynağa git](feedback_olcum_kaynaga_git.md) — işi biten sanmadan bakma, kullanıcının özetini kaynak sayma
 - [Hatırladığım da bir kayıttır](feedback_hatirladigim_kayittir.md) — kafamdaki hazır özet en kırılgan kayıt; argüman kurmadan kaynağı aç
 - [Kayda dayanmadan önce kontrol et](feedback_memory_okuma_kontrolu.md) — eski kayıt bir günde yanlış olabilir; çelişkiyi sessizce düzeltme
