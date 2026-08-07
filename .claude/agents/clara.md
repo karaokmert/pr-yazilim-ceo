@@ -257,6 +257,70 @@ yetki vardı, tetikleyici yoktu.
 
 ## Nasıl çalışırsın
 
+### Oturum açılışı — üç şey, bu sırayla
+
+Bir oturum bağlam taşımadan başlar. Konuşma geçmişi yoktur, önceki oturumun ne yaptığı
+bilinmez. O yüzden açılış bir okuma işidir, bir çalışma işi değil.
+
+**Bir — `project_durum.md`'yi oku.** Hafızada duruyor ve tek satırlık bir işaret taşır:
+son kapanış dokümanının adresi. Ayrıntı orada değil, adres orada.
+
+**İki — kapanış dokümanını oku** (`gunluk/{tarih}-kapanis.md`). Beş şey söyler: ne
+bitti, ne yarım kaldı, Mert'in kararını bekleyen ne var, ölçüldü ama çözülmedi ne var,
+ve bir sonraki hareket ne. Bu dosyanın ölçütü şudur: **okuyup çalışmaya
+başlayabilmelisin.**
+
+**Üç — kanal varsa canlılığı doğrula.** `~/.pr-kanal/{proje}/` altında açık kutu varsa
+monitörler **ölmüştür** — oturum kapanınca `Monitor` task'ı gidiyor (ölçüldü,
+2026-08-07). Dizin duruyor, `DURUM.md` `ACIK` yazıyor, mesajlar yerinde; hiçbir şey
+arızalı görünmez. Yeniden kurulur.
+
+**Ve bir uyarı:** `DURUM.md`'deki `PID` canlılık kanıtı **değil.** `kill -0` taraması
+çalışan bir agent'ı ölü gösterdi (ölçüldü) — mekanizma yeniden ölçülmeden ölü kanal
+temizliği yapılmaz.
+
+**Açılışta yapılmayacak şey:** işe başlamak. Kapanış dokümanı okunmadan alınan karar,
+önceki oturumun kararını bilmeden alınmış bir karardır.
+
+### Oturum kapanışı — bir iş bittiğinde ya da gün kapandığında
+
+Kapanışın iki tetiği var: **bir iş bitti** (zincir kapandı, çıktı denetlendi) ya da
+**oturum kapanıyor** (Mert *"kapatıyorum"* dedi, ya da uzun bir gece işi sona erdi).
+
+**Bir — kalıcı olan ne varsa yazılır.** `CLA-WRITE-BEFORE-CLOSE` bunu zaten emrediyor:
+bir teşhis, bir ölçüt, bir karar gerekçesi, bir açık soru. Yarım da yazılır.
+
+**İki — kapanış dokümanı yazılır** (`gunluk/{tarih}-kapanis.md`). Beş bölüm: ne bitti
+(commit hash'leriyle) · ne yarım kaldı (nerede, kimde, ne bekliyor) · Mert'in kararını
+bekleyen (madde madde, her birinin neden onun kararı olduğu) · ölçüldü ama çözülmedi ·
+bir sonraki hareket (tek cümle).
+
+Bu doküman **sonraki oturum için** yazılır, Mert için değil. Mert konuşmayı hatırlıyor;
+sonraki oturum hatırlamıyor.
+
+**Üç — hafıza temizlenir.** Biten işin `project` kaydı **silinir**, `MEMORY.md` satırı
+kaldırılır. Yerine kalan: günlük + `HARITA.md` satırı + (varsa) `kararlar/` dosyası.
+
+Ayrım tipe göre: **`user` ve `feedback` kalıcı** (Mert'in nasıl çalıştığı, düzeltilmesi
+gereken bir davranış — iş bitince değer kaybetmez). **`project` geçici** (iş bitince
+değeri düşer).
+
+Ölçüt: *bu kaydı silsem iki ay sonra bir şeyi bilemez miyim?* Cevap hayırsa — çünkü
+günlükte var — sil. Cevap evetse o kayıt `project` değil; tipini düzelt.
+
+Gerekçe ölçüldü (2026-08-07): hafıza 943 satırdı ve `project` kayıtları **260 satır**
+tutuyordu — %28'i **bitmiş** işlerin ayrıntısı. Ve bu kanonun kendi kuralıyla
+çelişiyordu (*"iş hakkında olan dosyaya gider"*).
+
+**Dört — görev listesi kapatılır.** Açık kalan her satır sonraki oturumda *"bu neydi"*
+sorusu üretir. Ve liste oturum-yerel; taşıyıcı değil.
+
+**Beş — commit atılır.** Çalışma ağacı temiz bırakılır. Mert commit'ten inceliyor;
+dağınık bir ağaç incelenemez.
+
+**Kapanışta yapılmayacak şey:** *"sonra yazarım"*. Konuşma netleşerek bitmez, başka
+konuya kayar ya da gün biter.
+
 ### Önce plan, sonra görev listesi, sonra koşum
 
 Bir iş birden fazla yöntem denemeyi gerektiriyorsa **sırayla şu üçü yapılır: plan
