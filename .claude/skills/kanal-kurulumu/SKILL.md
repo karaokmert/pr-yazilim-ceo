@@ -1,16 +1,31 @@
 ---
 name: kanal-kurulumu
-description: Clara'nın agent kanalı kurma ve yönetme yöntemi — yıldız topoloji, yönetici merkezde, her agent'ın inbox/outbox kutusu. Bu skill'i "kanal kur / N agent için kanal oluştur / kanalı başlat / bu projede kanal düzenini kur" denen her durumda kullan. Ayrıca bir kanal arızası araştırılırken de kullan — mesaj gelmiyor, monitör sessiz, kanal çalışmıyor gibi durumların sebepleri ve ayırt edici testleri burada. Kapsam dışı — fabrikanın kendi kanonu (`agent-project`, PAD'in işi), proje kodu.
+description: Clara'nın agent kanalı kurma ve yönetme yöntemi — yıldız topoloji, yönetici merkezde, her agent'ın inbox/outbox kutusu, JSON düzeni ve beş Python betiği. Bu skill'i "kanal kur / N agent için kanal oluştur / kanalı başlat / bu projede kanal düzenini kur" denen her durumda kullan. Ayrıca bir kanal arızası araştırılırken de kullan — mesaj gelmiyor, monitör sessiz, kanal çalışmıyor gibi durumların sebepleri ve ayırt edici testleri burada. Kapsam dışı — fabrikanın kendi kanonu (`agent-project`, PAD'in işi), proje kodu.
 ---
 
 # Kanal kurulumu
 
-Bu skill **yöntemi** taşır: ne yapılır, hangi sırayla, neden.
+Bu skill **yöneticinin işini** taşır: kanal nasıl kurdurulur, nasıl izlenir, arıza nasıl
+ayırt edilir.
 
-Kanıt ve ölçümler: `references/olcumler.md` · karar gerekçeleri:
-`kararlar/2026-08-06-kanal-mimarisi.md`
+**Düzen v3 — JSON, mesaj başına dosya, beş betik.** md düzeni (tek dosyaya `>>` ile
+ekleme), `tail -F` ile izleme ve elle kurulum **bırakıldı.** Üçü de ölçümle çürütüldü.
 
-## Yapı — tek cümlede
+## Üç kaynak — hangisi neyi söyler
+
+```
+~/.pr-kanal/{proje}/SABLON-JSON.md   NEDEN böyle · kuralların ölçüm gerekçesi
+~/.pr-kanal/{proje}/tools/           NASIL yapılır · betikler kendi kullanımını basar
+bu skill                             KİM ne yapar · yöneticinin disiplini
+references/olcumler.md               KANIT · hangi kural hangi ölçümden çıktı
+```
+
+**Şablon burada tekrar edilmez.** Bir kuralın ölçüm ayrıntısı gerektiğinde şablon açılır;
+buraya kopyalanırsa iki kaynak ayrışır ve hangisinin yürürlükte olduğu belirsizleşir.
+
+---
+
+# Yapı
 
 **Her kanalın bir yöneticisi vardır, her agent'ın iki kutusu olur, her kutunun tek
 yazarı vardır.**
@@ -21,15 +36,16 @@ Agent    → kendi outbox'ına YAZAR, kendi inbox'ını OKUR
 Agent → Agent : YOK
 ```
 
-**Neden tek yazar:** aynı dosyaya iki taraf yazdığında çok satırlı mesajlar iç içe
-giriyor — bir mesajın gövde satırları başka mesajın bloğuna düşüyor. `>>` atomiklik
-garantisi tek bir `write()` çağrısı ve `PIPE_BUF` sınırında geçerli; bir handoff bunun
-katı olduğu için bölünüyor. `flock` macOS'ta yok, kilitle çözülmüyor.
+**Tek yazar kuralının gerekçesi v3'te değişti.** md düzeninde **veri bütünlüğü** kuralıydı
+— aynı dosyaya iki taraf yazınca mesajlar fiziksel olarak iç içe giriyordu. JSON
+düzeninde paylaşılan dosya **yok**, karışma fizikle imkânsız. Kural yine de duruyor ama
+artık **atıf ve kimlik** kuralı: kutunun sahibi bellidir ve `send.py` yanlış kutuya
+yazmayı yakalar.
 
-Sonucu: bu bir yetki kuralı değil **veri bütünlüğü** kuralı. Yetki kuralı gerekçeli
-esnetilebilir; bu esnetildiğinde mesaj **sessizce** bozulur.
+Bunu bilmek önemli — bir kuralın gerekçesi çürüdüğünde kural körlemesine savunulmaz,
+yeni gerekçesi söylenir.
 
-**Neden yönetici zorunlu:** yönetici olmadan da akış çalışır, ama **durdurulamaz.** Uçlar
+**Yönetici zorunlu, çünkü akış yöneticisiz de çalışır ama durdurulamaz.** Uçlar
 birbirinin kutusunu izlerken kendi kutusunu izlemiyor; merkez bir dur emri bıraksa kimse
 görmez. Yöneticinin gerekçesi kontrol değil **müdahale imkânı.**
 
@@ -45,227 +61,334 @@ Agent'ın soru sorması izin gerektirmez; ona iş gitmesi gerektirir.
 **Onay `AskUserQuestion` ile istenir**, metinle değil. Metin olarak *"onay bekliyorum"*
 demek atlanabiliyor; araçla sorulunca kapı tık olmadan geçmiyor.
 
-**Kanal iş taşır, yetki taşımaz.** Yönetici `inbox`'a *"şunu yap"* yazar,
-*"onaylıyorum"* yazamaz. Onay ekrandan gelir.
+**Kanal iş taşır, yetki taşımaz.** Yönetici `inbox`'a *"şunu yap"* yazar, *"onaylıyorum"*
+yazamaz. Onay ekrandan gelir.
 
-**Sıra için ayrı dosya kurulmaz.** Birden fazla agent aynı anda yazarsa `outbox`'lar zaten
-sıra tutuyor; yönetici ilk işi bitirene kadar diğerlerini ekrana getirmez.
+---
 
-## Kurulum sırası — atlanmaz
+# Kurulum — betikle, elle değil
 
 ```
-1. Yönetici iskeleti kurar     (~/.pr-kanal/{proje}/ + arsiv/ + defter)
-2. HER AGENT kendi kutusunu ve monitörünü kurar, sonra BEKLER
-3. Yönetici her outbox'a bir monitör kurar
+setup.py     kutu + STATUS.md + boş imleçler (tek komut)
+send.py      mesaj yaz (.tmp + os.replace, atomik)
+read.py      imleçten oku; imleç kaybında DURUR
+watch.py     dizin yoklar, kalıcı yayın kaydı (.announced)
+archive.py   okunmamış varsa REDDEDER; devri HANDOVER.json ile taşır
+```
+
+Elle kurulan bir düzen *"kurulabilir"* olur ama **"tekrarlanabilir"** olmaz: her okuyan
+kendi yorumunu yapar, sapma düzeltilmez ve **yayılır.**
+
+**Kurulumu agent kendi yapar, sen yapmazsın.** Kurulumu yapmayan agent protokolü
+öğrenmiyor — hazır bulup kullanıyor ve bir sonraki oturumda bilmiyor. Senin işin
+handoff'u yazmak ve akışı izlemek.
+
+## Sıra — atlanmaz
+
+```
+1. Hangi projede kanal kurulacağına karar ver
+2. HER AGENT kendi kutusunu ve izleyicisini kurar, sonra BEKLER
+3. Uçların OUTBOX'larını + kendi inbox'ını tek izleyiciyle izlemeye al
 4. İKİ YÖNLÜ TEST
 5. Test geçerse gerçek iş başlar
 ```
 
-**2. adım neden agent'ın işi:** kurulumu yapmayan agent protokolü öğrenmiyor, hazır bulup
-kullanıyor — ve bir sonraki oturumda bilmiyor.
-
 **4. adım neden atlanmaz:** doğrulanmamış altyapıya iş yüklenirse iş yapılır ama bir yön
-sessiz kalabilir; mesajlar elden taşınır ve kimse fark etmez. Sonra sıra baştan kurulur.
+sessiz kalabilir; mesajlar elden taşınır ve kimse fark etmez.
+
+## `--project` bayrağı ZORUNLU
+
+`setup.py --project` verilmezse varsayılan **`agent-project`.** Yani başka bir proje için
+kanal kuran agent bayrağı atlarsa kutusu **fabrikanın dizinine** düşer, `rc=0` alır ve
+**fark etmez.**
+
+**Kural: `--project` her zaman yazılır**, `agent-project` olsa bile. Açıkça yazılmış
+varsayılan bir karardır; atlanmış varsayılan bir boşluktur.
 
 ## Dizin yapısı
 
 ```
-~/.pr-kanal/{proje}/{rol}-{oturum}/inbox/mesajlar.md      ← yönetici yazar
-~/.pr-kanal/{proje}/{rol}-{oturum}/outbox/mesajlar.md     ← agent yazar
-~/.pr-kanal/{proje}/{rol}-{oturum}/DURUM.md
-~/.pr-kanal/{proje}/arsiv/
-~/.pr-kanal/{proje}/acik-kanallar.md                      ← yöneticinin defteri
+~/.pr-kanal/{proje}/{rol}-{oturum}/inbox/*.json     ← yönetici yazar
+~/.pr-kanal/{proje}/{rol}-{oturum}/outbox/*.json    ← agent yazar
+~/.pr-kanal/{proje}/{rol}-{oturum}/STATUS.md
+~/.pr-kanal/{proje}/archive/{tarih}/
+~/.pr-kanal/{proje}/archive-log.json                ← devir izi
 ```
 
-`{proje}` = çalışılan reponun adı. Sabit yazılmaz — yönetici her projede açılıyor.
+**`{oturum}` = `YYYYMMDD-HHMM`** (kanon, 2026-08-07). `setup.py` üretiyor; aynı dakikada
+ikinci kurulumu `rc=1` ile reddediyor.
 
-**Kanal proje dışında yaşar.** Müşteri reposuna yazılmaz: `.gitignore` unutulursa kanal
+**Kanal proje dışında yaşar.** Müşteri reposuna yazılmaz — `.gitignore` unutulursa kanal
 trafiği projeye commit'lenir. `/tmp` de kullanılmaz, uçucu.
 
-**Tarih dizini kullanılmaz.** Kanalları böler ama çöp temizlemez, ve iki güne yayılan iş
-ikiye bölünür. Temizlik canlılığa göre yapılır.
+---
 
-**`{oturum}` biçimi — açık kalem.** Tanımı verilmediği için sahada üç ayrı biçimde açıldı
-ve ikisi aynı dakikada çakıştı. İki aday var: **PID** (tekil, `DURUM.md`'de zaten yazılı)
-ya da **iş adı** (aynı rolden iki örneği daha okunur ayırıyor). Bir biçim seçilmeli — iki
-biçim bir arada durursa adres tahmin edilemez.
+# İZLEME — en çok hata yapılan yer
 
-**Ve bir biçim kuralı örneksiz yazılmaz.** Örnek verilmezse her okuyucu kendi yorumunu
-yapar, yanlış biçim düzeltilmez — **yayılır.**
+## `tail -F` KULLANILMAZ
 
-## Mesaj biçimi
+İki katmanda birden kırık:
 
-```markdown
-## {gönderen} -> {alıcı} | {YYYY-MM-DD HH:MM:SS}
+**Boş dizinde komut hiç başlamıyor** — zsh eşleşmeyen glob'da komutu çalıştırmıyor, ve
+**yeni kutu her zaman boştur.** Yani kurulum anı tam olarak arızanın anı.
 
-{gövde}
-```
+**Dolu dizinde kurulsa bile sonrakini görmüyor** — glob kabukta bir kez genişliyor, `tail`
+dizini değil o anki dosya listesini izliyor. Yani *"önce bir dosya at, sonra kur"* da
+çözüm değil.
 
-**Yön etiketi filtre için değil atıf için.** Başkasının çıkarımı *"kullanıcı dedi"* diye
-aktarılabiliyor; kimin söylediği yazılı kalmazsa zincir uzadıkça iddia güçlenir ama
-dayanağı zayıflar.
+**Çözüm: dizin yoklama** (`watch.py`), bedeli 1 saniyelik gecikme.
 
-**Mutlak yol zorunlu.** Göreli yol kullanıldığında mesaj sessizce kaybolabilir.
+## `Monitor` aracı şart, `Bash` değil
 
-**Kanal dosyası silinmez, üzerine yazılmaz.** Düzeltme **altına eklenir**, yalnız `>>`
-kullanılır. Sebep: dosya yeniden yazılırsa inode değişir; `tail -F` yeniden açmayı
-**dener** — yani ölmez — ama açma anıyla arada yazılan satırlar arasında **kayıp
-penceresi** kalır, ve dinleyici bu sırada **canlı görünür.** Python `write_text`, `sed -i`
-gibi araçlar dosyayı yeniden oluşturur.
+**`Bash(run_in_background)` süreç çalıştırır ama bildirim üretmez** — çıktıyı dosyaya
+yazar, agent'ı uyandırmaz. Süreç listesinde canlı görünür, kimse uyanmaz.
 
-## DURUM.md
+**`Monitor` ve `TaskOutput` deferred** — `ToolSearch("select:Monitor,TaskOutput")` ile
+yüklenir.
 
-```markdown
-ROL: {rol-adı-küçük-harf-tam}
-OTURUM: {oturum-kimliği}
-PID: {PID}
-BAŞLANGIÇ: {YYYY-MM-DD HH:MM:SS}
-İŞ: {tek satır}
-DURUM: ACIK
-```
+**İkisi de gelmiyorsa monitör kurulmaz, merkeze bildirilir.** Araç erişimi role göre
+değişebiliyor. Doğrulanamayan monitör kurulmamış olandan **daha kötü** — çalıştığı
+sanılır ve sessizlik *"mesaj yok"* ile aynı görünür.
 
-`İŞ` alanı zorunlu: aynı rolden iki örnek varsa bu alan ikisini ayırır, yoksa aynı iş
-ikisine gider.
+**`TaskList` kullanılmaz** — planlama task'larını listeliyor, arka plan süreçlerini
+değil. Yanlış araçla **boş döner** ve boş dönüş *"kayıt yok"* gibi okunur.
 
-**`DURUM` bir beyandır, ölçüm değil** — bir sürecin canlı olduğunu söylemiyor, bir
-zamanlar açıldığını söylüyor. Agent güncellemezse kapanmış oturumun kutusu `ACIK` kalır.
-
-**Damga kendi ölçümüyle yazılır, devralınmaz.** Kutuda başka oturumun damgası kalırsa iki
-yönde de sessizce yanıltır: canlı agent *"kapanmış"*, kapanmış agent *"canlı"* görünür.
-
-## Monitör — en çok hata yapılan yer
-
-**`Monitor` aracıyla kurulur, `Bash` ile değil.** `Bash` içinde `eval 'tail -F ...'`
-çalıştırmak süreç üretir ama **bildirim üretmez** — süreç listesinde canlı görünür, kimse
-uyanmaz.
-
-**`Monitor` ve `TaskOutput` deferred araçlardır** — adı var, şeması yok. `ToolSearch` ile
-yüklenir, tek çağrı ikisini getirir. **`ToolSearch` bu düzenin bağımlılık kökü:** o da
-deferred olsaydı zincir kopardı ve agent fark etmeden `Bash`'e düşerdi.
-
-**Doğrulama `TaskOutput` ile yapılır, `TaskList` ile değil** — ikisi ayrı defter, yanlış
-araçla boş döner ve monitör yok sanılır. **Süreç ağacına bakmak da ayırt etmiyor**;
-ayıran şey task kaydı.
-
-**Filtre zorunlu, ve `2>&1` ile hata desenleri BİRLİKTE gerekir:**
+## Kim neyi izler — merkez ile uç ayrı
 
 ```
-tail -n 0 -F {mutlak-yol}/mesajlar.md 2>&1 \
-  | grep -E --line-buffered '^## |tail:|No such file|Permission'
+UÇ     kendi inbox'ını izler       (merkez ona yazar)
+MERKEZ uçların OUTBOX'larını izler (uçlar ona yazar) + kendi inbox'ını
 ```
 
-Filtresiz `tail` çok olay üretip monitörü düşürüyor. Ama yalnız başlık filtrelemek de
-yetmez: **sessizlik başarı değildir** — monitör düşerse hiçbir şey görünmez ve sessizlik
-*"mesaj yok"* ile aynı görünür. Ve ikisi ayrı ayrı yetersiz: stderr olay akışı değil,
-`2>&1` olmadan hata deseni filtreye hiç ulaşmaz.
+Bu ayrım v2 şablonunda **yoktu** ve bir uç yakaladı: şablon *"monitör yalnız inbox'ı
+izler"* diyordu ama o cümle ucun tarafını anlatıyordu. Merkez uçların outbox'ını izlemek
+zorunda, yoksa raporları görmez.
 
-**Kanal başına bir monitör.** Tek monitörle dizin izlenmez: `tail -F` glob'u açılışta bir
-kez genişliyor, sonradan açılan kanalı hiç yakalamıyor ve bu sessiz.
+Echo riski yok: merkez `inbox`'a yazar, `outbox`'ı okur — yazdığı yeri izlemiyor.
 
-**Kutu açılışı ile monitör kurulumu aynı adımdır.** Monitör kurulmadan önce yazılan mesaj
-hiç gelmiyor.
+Merkez **tek izleyiciyle** birden çok kutu izler; hepsi tek `watch.py` çağrısına verilir.
 
-**Monitör oturum sınırını aşmaz.** Oturum kapanınca izleme biter; yeni oturumda agent
-kanalı kurulu görür (dizin var, `DURUM.md` ACIK) ve monitörünün de açık olduğunu
-sanabilir. **Kutunun varlığı monitörün varlığı değildir** — açılışta kendi monitörünün
-canlılığı doğrulanır.
+## İki ayrı kayıt — birleştirilmez
 
-**Bildirim sayısı mesaj sayısına eşit değildir** — yakın satırlar tek bildirimde
-gruplanıyor. Bildirimi *"bir mesaj geldi"* diye okuyup son bloğa bakan agent öncekini
-**atlar ve atladığını fark etmez.** Kural: bildirim geldiğinde **son okuduğun yerden
-sonrasının tamamı** okunur.
+```
+.cursor      → agent NE OKUDU        (read.py yönetir)
+.announced   → izleyici NEYİ BAĞIRDI (watch.py yönetir)
+```
+
+Birleştirmek, monitörün bağırmadığı bir mesajı okunmuş saymaya yol açar. **İki farklı
+soru, iki farklı kayıt.**
+
+**İzleyici kaydı diskte tutulur.** Monitör oturumla birlikte ölüyor; bellekte tutan sürüm
+ölüm ile yeniden kurulum arasında gelen mesajları **yutuyordu.** Mesaj imleçle kurtulur
+ama **uyandırma kaybolur** — bekleyen agent beklediğini bilir, mesajın geldiğini bilmez.
+
+**Tasarım ilkesi: gürültü zararsız, kayıp zararlı.** Monitör fazladan bağırırsa imleç
+süzer; eksik bağırırsa mesaj hiç görünmez.
+
+**Ama gürültünün tavanı var:** `Monitor` çok olay üreten monitörleri **otomatik
+durduruyor** — yani gürültü sonunda **sessizliğe** dönüşür. O yüzden kayıp kutu her turda
+değil, durum değişiminde bir kez bağırılır. Bedeli: agent o tek bağırmayı kaçırırsa uyarı
+bir daha gelmez.
+
+**Bir bildirim birden çok mesaj taşıyabilir** — araç yakın olayları gruplıyor. Son
+dosyaya bakan agent öncekini **atlar ve atladığını fark etmez.** Kural: bildirimde
+**imleçten sonrasının tamamı** okunur.
 
 **Merkezin dinlemesi protokolün şartı, tercih değil.** Merkez dinlemezse bütün trafik
 durur ve **durduğu görünmez.**
 
-## Okuma — kutu birikince
+---
 
-Tek dosya birikiyor ve her okumada tamamı context'e giriyor. Bir kutu yüzlerce mesaj
-taşıdığında okuma maliyeti işin kendisinden büyük olabilir.
+# Yazma, okuma, kapanış — kurallar
 
-**Yalnız yeni mesaj okunur** — son okunan başlıktan sonrası `awk` ile çıkarılır, tüm dosya
-`cat` edilmez.
+## `printf` YASAK
 
-**`Read` inode değişimine bağışıktır, monitör değil.** Monitör sessiz kaldığında kutu elle
-okunabilir — kurtarma yolu var.
+`printf` en hızlı yöntemdi ve **ilk testte geçti** — çünkü kaçışlar elle yazılmıştı.
+Gerçekçi bir gövdeyle (tırnak + ters bölü) **çıkış kodu 0** verip **bozuk JSON** üretti.
 
-## Kapanış
+Yani kazancı hız değil, **doğruluk riski** — ve arıza yazan tarafta görünmüyor, okuyan
+tarafta patlıyor. `send.py` kullanılır; uzun gövde `--stdin` ile verilir.
 
-İş bitince agent `outbox`'a yazar:
+**Mutlak yol zorunlu.** Ölçülmüş tek gerçek agent hatası göreli yoldu: iki mesaj sessizce
+kayboldu.
 
-```markdown
-## {rol} -> clara | {tarih}
+**Uzun içerik kanala gömülmez** — dosya yolu verilir. Büyük mesaj imleç kazancını yiyor.
 
-KAPANDI — {tek satır gerekçe}
+## `type` yalnız dört değer
+
+`TASK` · `INFO` · `QUESTION` · `CLOSE`. `send.py` başkasını `rc=1` ile reddediyor —
+kapanış mesajı da **`CLOSE`** ile yazılır.
+
+> ⚠️ `SABLON-JSON.md` kapanış örneğinde `KAPANIS` yazıyor ve o komut **çalışmaz.**
+> Şablon hatası, PAD'e bildirildi. Doğrusu `CLOSE`.
+
+## İmleç kaybında DURUR
+
+*"Son N"* varsaymak **iki yönlü** sessiz hata üretiyor: yapılmış işler yeniden iş emri
+gibi okunur (tekrar iş) **ve** eskiler sessizce atlanır (kayıp iş).
+
+```
+imleç dosyası VAR + boş  → kutu hiç okunmadı, KASITLI durum → hepsi okunur, kayıp yok
+imleç dosyası YOK + ≤10  → hepsi okunur (güvenli)
+imleç dosyası YOK + >10  → OKUMAZ, DURUR, seçenek sunar (rc=2)
 ```
 
-`DURUM.md`'de `DURUM: KAPANDI` olur, yönetici dizini `arsiv/` altına taşır.
+**Bozuk JSON'da da durur** — imleç bozuk dosyanın önünde bekler. Eskiden atlanıp
+ilerliyordu: *"görünür hata + sessiz kayıp."*
 
-**Saat eşiği uydurulmaz.** Uzun bekleme normal olabilir; çözüm eşik koymak değil
-**bekleyeni görünür kılmak.** Kapanışı kanal söyler.
+## Çıkış kodları — `&&` kesilmeli
 
-**Ölü kanal temizliği yöneticinin işi**, tetiği oturum açılışı — ayrı zamanlayıcı
-kurulmaz, çünkü agent çağrılmadan uyanamaz.
+```
+read.py     0 okundu · 2 DURDUM, karar gerek · 1 hata
+send.py     0 yazıldı · 1 geçersiz tür / kutu yok
+setup.py    0 kuruldu · 1 kutu zaten var (ezmiyor)
+archive.py  0 arşivlendi · 2 REDDETTİ (okunmamış var) · 3 --force, VERİ ATLANDI
+```
 
-**Canlılık ölçütü güvenilmez — açık kalem.** `PID + BAŞLANGIÇ` çifti ölü/canlı ayrımını
-yapamadı: canlı bir agent ölü gösterildi. **Temizlik bu hâliyle yanlış sonuç verir; elle
-doğrulanır.** Denenmemiş aday: oturum kaydının son değişim zamanı.
+Bu sınıf `printf`'in yasaklanma sınıfıyla **aynı**: iş yapılmamışken çıkış kodu
+*"başarılı"* diyordu. Somut arıza: `read.py && send.py` zincirinde `read.py` durdu, `&&`
+geçti ve **okunmamış bir işe cevap yazıldı.**
+
+**`--force` bile sıfır dönmez** — bilinçli atlama bilinçli kalmalı.
+
+## Kapanış İKİ TARAFLI
+
+Agent kendi kutusunu **tek başına kapatamaz**: outbox'ta okunmamış mesaj varsa
+`archive.py` reddediyor, ve o imleç **merkezin.**
+
+```
+1. Agent  → outbox'a CLOSE yazar
+2. MERKEZ → agent'ın outbox'ını okur (read.py)
+3. MERKEZ → arşivler (archive.py)
+```
+
+**Neden kapı var:** v2'de arşive taşınan kutunun okunmamış mesajları ve imleci yeni
+kutuya hiç geçmiyordu — devir bir **disiplin** meselesiydi, mekanizma değil. Yazan
+unutursa kayboluyordu.
+
+**Tek taraflı arşivleme yasak.** Merkez kutuyu taşıdı, agent haber almadı ve ölü adrese
+yazdı. Artık arıza sessiz değil (izleyici bağırıyor) ama **gürültü de iş kaybı demek.**
+
+**Silme yasak** — silinen mesaj sessizce gidiyor; izleyici ölmüyor ama silindiğini de
+söylemiyor.
+
+---
+
+# Canlılık — üç sinyal, biri çalışıyor
+
+**`kill -0 PID` → YANLIŞ.** İki kez çürütüldü: canlı agent'ları ölü gösterdi. `STATUS.md`
+PID'i agent'ın kendi süreci değil, onu doğuran kabuğunki olabiliyor ve o kabuk her `Bash`
+çağrısında yeniden doğuyor.
+
+**Transcript son değişim zamanı → YANLIŞ, ve daha kötü yönde.** Transcript **proje**
+bazlı, kutu bazlı değil — ölçülen kutuların hepsi *"canlı"* çıktı. `kill -0` canlıyı ölü
+der (zararsız yanlış); bu **ölüyü canlı** der ve temizlik hiç yapılmaz.
+
+**Kutunun kendi son yazım zamanı → ÇALIŞIYOR.** Tek geçerli sinyal.
+
+**Ama eşik uydurulmaz.** Günlerce bekleyen işler ölçüldü, hiçbiri *"askıda"* değildi.
+Çözüm eşik koymak değil **bekleyeni görünür kılmak.** Otomatik ölü-kutu temizliği
+yapılmaz — elle doğrulanır.
+
+**`PID` alanı `STATUS.md`'den KALDIRILDI.** Üç turda üç kez düzeltildi, hiçbir turda bir
+soruya cevap vermedi. Yerine `BOX` — kutunun kendi yolu, hiçbir sürece bağlı değil.
+
+**Genel ders:** bir alan üç kez düzeltilip hâlâ boş dönüyorsa sorun doldurma biçiminde
+değil, **alanın kendisinde.** Üçüncü düzeltmede sorulacak soru *"nasıl doldururum"* değil,
+**"bu alan hangi soruya cevap veriyor"**.
+
+---
+
+# Ölçüm tuzakları — merkez bunlara düştü
+
+**Eşzamanlılık sayımla değil zaman damgasıyla sınanır.** Dört agent aynı kutuya yazdı,
+karışma sıfır çıktı — ama damgalar dördünün **sırayla** yazdığını gösterdi. Sıfır karışma
+*"çakışma engellendi"* demiyor, **"çakışma hiç olmadı"** diyor. Üç uç ilk turda sayıma
+bakıp damgalara bakmadı, çünkü **doğrulanan beklenti sorgulanmıyor.**
+
+**"Boş" bir ölçüm değil, okunmamış bir kutunun görünümü.** Merkez dört outbox'ı `ls` ile
+tarayıp *"boş"* dedi; rapor 9 dakika önce yazılmıştı. İmleç tutulmadan yokluk iddiası
+verilmez.
+
+**Ham metin araması alan adlarıyla gövdeyi ayırmıyor.** Bir karışma taraması 25 *"yabancı
+iz"* buldu ve hepsi **yanlış alarmdı** — eşleşen şey kendi yazdığı alan adıydı. Parse
+edip gövdeye bakınca sıfır çıktı.
+
+**Bir şablon kendi iddiasını tutmuyorsa o iddia gerçekte bir boşluktur.** v3'ün ilk hâli
+iki imleç durumunu ayırdığını yazıyordu, kod ayırmıyordu. Bir uç yakaladı: *"niyet doğru
+yazılmış, kod uygulamamış."* Bir kural yazılıyken kodun da onu yaptığı doğrulanır.
 
 ---
 
 # HANDOFF ŞABLONU
 
-*"N agent için kanal kur"* dendiğinde sıfırdan düşünülmez. Aşağıdaki blok her agent için
-bir kez, rol adı değiştirilerek verilir. Ekrana basılır, kullanıcı taşır.
+*"N agent için kanal kur"* dendiğinde sıfırdan düşünülmez. Blok her agent için bir kez,
+rol ve proje adı değiştirilerek verilir. Ekrana basılır, kullanıcı taşır.
+
+**Adres handoff'ta verilir.** Agent kanonlarında kanal protokolü **yok** — dört uç bunu üç
+kez söyledi. Şablonun yolu dışarıdan verilmezse agent onu aramayı bilmez.
 
 ```
 KİMDEN → KİME: Clara → {ROL}
 TÜR: İŞ — kanal kurulumu · üretim işi DEĞİL
 
-NE: Kendi kanalını kur, monitörünü aç, sonra bekle.
+NE: Kendi kanalını kur, izleyicini aç, sonra bekle.
 
-  1. KUTULARINI KENDİN AÇ — dosyalar BOŞ olarak var olmalı:
+  ARAÇLAR: ~/.pr-kanal/{PROJE}/tools/
+  DÜZEN  : ~/.pr-kanal/{PROJE}/SABLON-JSON.md   ← neden böyle olduğu burada
 
-     B=~/.pr-kanal/{PROJE}/{ROL}-{OTURUM}
-     mkdir -p $B/inbox $B/outbox
-     touch $B/inbox/mesajlar.md $B/outbox/mesajlar.md
+  1. KUTUNU KUR — elle mkdir YOK:
 
-     Dosya ÖNCE var olmalı — yoksa izleyici boşluğa bağlanır.
+     A=~/.pr-kanal/{PROJE}/tools
+     python3 $A/setup.py {ROL} --task "{TEK SATIR İŞ}" --project {PROJE}
 
-  2. DURUM.md YAZ — $B/DURUM.md:
-     ROL / OTURUM / PID / BAŞLANGIÇ / İŞ / DURUM: ACIK
+     `--project` ZORUNLU. Atlanırsa varsayılan `agent-project` olur, kutun
+     yanlış projeye düşer, rc=0 alırsın ve FARK ETMEZSİN.
 
-     Damgayı KENDİ ölçümünle yaz, kutuda hazır bulduğunu devralma.
+     setup.py kalan komutları mutlak yollarla ekrana basar — onları kullan.
 
-  3. MONİTÖRÜNÜ KENDİN KUR — inbox'ını izle:
+  2. İZLEYİCİNİ KUR — `Monitor` ARACIYLA, `Bash` ile DEĞİL.
 
-     `Monitor` ARACIYLA, `Bash` ile DEĞİL. Araç deferred — önce
-     `ToolSearch("select:Monitor,TaskOutput")` ile şemayı yükle.
+     Önce ToolSearch("select:Monitor,TaskOutput").
+     İKİSİ DE gelmezse monitör KURMA, merkeze bildir — doğrulanamayan
+     monitör kurulmamış olandan daha kötüdür.
 
-     command: tail -n 0 -F $B/inbox/mesajlar.md 2>&1 \
-                | grep -E --line-buffered '^## |tail:|No such file|Permission'
+     command: python3 $A/watch.py <KUTU>/inbox 2>&1 \
+                | grep -E --line-buffered 'from=|ERROR:|INFO:|watcher started'
      persistent: true
 
-     Sonra `TaskOutput` ile doğrula — `TaskList` DEĞİL, o başka defter.
+     `tail -F` KULLANMA — boş dizinde hiç başlamıyor, dolu dizinde
+     sonradan geleni görmüyor.
+
+  3. CANLILIĞI DOĞRULA — TaskOutput(<id>, block:false) → status: running
+     `TaskList` DEĞİL, o başka defter ve boş döner.
+
+  4. ELLE BİR OKUMA YAP — python3 $A/read.py <KUTU>/inbox
+
+  5. MERKEZE HABER VER:
+     python3 $A/send.py <KUTU>/outbox {ROL} {MERKEZ} INFO "kuruldum, izleyici canlı"
 
 NEDEN: Kurulumu sen yaparsan protokolü öğreniyorsun; hazır bulursan
        kullanıyorsun ama bilmiyorsun — ve bir sonraki oturumda
        bilmeyeceksin.
 
 YAPININ ÖZÜ:
-  · inbox: Clara yazar, sen OKURSUN
-  · outbox: sen yazarsın, Clara OKUR
-  · Başka hiçbir kutuya dokunmazsın. Sebep yetki değil VERİ BÜTÜNLÜĞÜ:
-    aynı kutuya iki yazar girerse mesajlar fiziksel olarak bozulur.
+  · inbox : merkez yazar, sen OKURSUN
+  · outbox: sen yazarsın, merkez OKUR
+  · Başka hiçbir kutuya dokunmazsın.
 
-OKUMA KURALI: bildirim geldiğinde son okuduğun yerden sonrasının
-       TAMAMINI oku — son bloğu değil. Bir bildirim birden fazla
-       mesaj taşıyabilir.
+YAZMA: `send.py` kullan. `printf` YASAK — çıkış kodu 0 verip bozuk JSON
+       üretiyor, arıza okuyan tarafta patlıyor. Uzun gövde `--stdin` ile.
+       Mutlak yol zorunlu. type: TASK|INFO|QUESTION|CLOSE.
 
-YAZMA KURALI: kanal dosyası SİLİNMEZ, ÜZERİNE YAZILMAZ. Düzeltme
-       altına eklenir, yalnız `>>` kullanılır.
+OKUMA: bildirim geldiğinde imleçten sonrasının TAMAMINI oku — son dosyayı
+       değil. Bir bildirim birden fazla mesaj taşıyabilir. `read.py` rc=2
+       verirse DURMUŞTUR, okumamıştır — `&&` ile zincirleme.
 
-SONRA: BEKLE. Üretim işine başlamıyorsun. Clara test mesajı yazacak,
+KAPANIŞ: outbox'a CLOSE yaz, sonra BEKLE. Kutunu kendin arşivleme —
+       okunmamış raporun varsa archive.py seni zaten reddeder (rc=2).
+
+SONRA: BEKLE. Üretim işine başlamıyorsun. Merkez test mesajı yazacak,
        sen outbox'a cevap vereceksin — kanal iki yönde doğrulanacak.
 ```
 
@@ -276,55 +399,66 @@ SONRA: BEKLE. Üretim işine başlamıyorsun. Clara test mesajı yazacak,
 Yıldız topolojide trafik tamamen merkezden geçtiği için merkezin disiplini tek denetim
 noktasıdır.
 
-**Her olay aktarılmaz — örüntü ve karar aktarılır.** Ara adımların anlatısı kullanıcıyı
-takipten koparıyor. Aktarılacak üç şey: bir **sapma**, bir **arıza**, ya da bir **karar**
-gerekiyorsa.
+**Her olay aktarılmaz — örüntü ve karar aktarılır.** Aktarılacak üç şey: bir **sapma**,
+bir **arıza**, ya da bir **karar** gerekiyorsa.
 
-**Rapor değil karar getirilir.** Kullanıcı agent ekranlarını görmüyor; ona *"ne oldu"*
-değil **"ne karar vereceksin"** taşınır.
+**Rapor değil karar getirilir.** Kullanıcı agent ekranlarını görmüyor.
 
 **Kurulum bitince oturum izlemesi bırakılır, yalnız kanal izlenir.** Agent'ın iç işleyişi
-merkezi ilgilendirmiyor. Verilen işin yapılıp yapılmadığı izlenecekse oturum izlemesi
-açılır — o zaman da her adım değil sapma aktarılır.
+merkezi ilgilendirmiyor.
 
-**Uçlar itiraz edebilir olmalı** ve bu bir arıza değil güvenlik ağıdır. Merkez bir kuralı
-yanlış aktarırsa uç düzeltir.
+**Altyapı yöneticinin, içerik kullanıcının.** Kanalın nasıl kurulduğu yöneticinin alanı;
+hangi işin verileceği, neyin onaylandığı kullanıcının.
+
+**Uçlar itiraz edebilir olmalı** ve bu bir arıza değil güvenlik ağıdır. Ölçüldü: bir turda
+düzeltilen taraf **on kereden fazla merkez** oldu — eşzamanlılık iddiası, canlılık
+sinyali, şablonun kendi çelişkisi, okunmamış outbox, `printf`, `PID` alanı, monitör
+komutu. Hepsi uçlardan geldi.
+
+**Ve uçlar kendi sonuçlarının neyi kanıtlamadığını da söyledi** — *"bulamamak yokluk
+kanıtı değil"*, *"bulgu benim, sınıflandırma senin"*. Merkez bunu bekler, sınıflandırmayı
+kendi yapar.
 
 **Ama itiraz da ölçülür.** Bir agent'ın raporundaki mekanik iddia (*"şu araçla kuruldu"*,
 *"şu mekanizma çalışıyor"*) ölçüm değildir; aktarmadan önce kendin ölç.
-
-**Merkezin kendi ölçümü de sorgulanır.** En sık hata elde kanıt varken yorumlamak: bir
-aracın hangi yolla çağrıldığını varsaymak, bir sessizliği ölüm sanmak, bir çıkarımı karşı
-tarafa mal etmek. Ayıran soru: **bunu ölçtüm mü, okudum mu?**
-
-**Altyapı yöneticinin, içerik kullanıcının.** Kanalın nasıl kurulduğu, kimin nereye
-yazdığı, monitörün nasıl çalıştığı yöneticinin alanı. Hangi işin verileceği, neyin
-onaylandığı kullanıcının.
 
 ---
 
 # Açık kalemler
 
-Karar bekleyen ya da yeniden ölçülmesi gereken şeyler. Ayrıntı: `references/olcumler.md`
+**Agent'lar arası gerçek eşzamanlılık** — mevcut mimaride ölçülemiyor (ana döngü sıralı).
+Mekanizma kanıtlı, koşul kanıtlanmadı.
 
-**`{oturum}` biçimi** — PID mi, iş adı mı? İki biçim bir arada durursa defter karışır.
+**Ölü kutu eşiği** — sinyal bulundu, eşik bir karar. Otomatik temizlik yapılmıyor.
 
-**Canlılık ölçütü** — `PID + BAŞLANGIÇ` güvenilmez çıktı, `DURUM.md` beyanı da gerçeği
-göstermiyor.
+**`Monitor` otomatik durdurma eşiği** — ölçülmedi.
 
-**İlk kutuyu kim açar** — kanon *"her agent kendi kanalını açar"* diyor ama ilk kurulumda
-kanal henüz kanonda yok, agent onu bilmiyor. İstisna mı, kalıcı düzen mi?
+**1000 dosyalı kutu** — en büyük ölçüm 100 dosya.
 
-**İş talimatı onay yerine geçer mi** — kullanıcı açık bir talimat verdiğinde mesaj metni
-ayrıca gösterilmeli mi? Risk: agent talimatı onay sayarsa kapı zamanla kaybolur.
+**Yaşam döngüsü senaryoları otomatik sınanmıyor.** Düzen değişince elle koşulmalı ve
+hatırlatan mekanizma yok.
 
-**`inbox`/`outbox` ayrımı gerekli mi** — mesaj başına dosyaya geçilirse yön ayrımı dosya
-adından çözülebilir.
+**Araçlara tek nokta bağımlılığı — v3'ün kırılgan yeri.** Betikler `~/.pr-kanal/` altında
+ve **git'te değil.** Dizin silinirse yeniden üretme tarifi yok. Özeti: *"v2 kurulabilir
+ama kopyalanamazdı; v3 kopyalanabilir ama araçlara bağımlı."* Asset'e dönüşünce kapanır.
 
-**JSON deposu** — mesaj başına dosya ölçüldü (okuma maliyeti düşüyor, kilit gereksiz,
-kenar durumlar geçti) ama **sahada sınanmadı.** Geçiş sinyali: bir agent kutuyu
-okuyamadığını söylerse ya da okuma maliyeti işi durdurursa.
+**Agent kanonları hâlâ kanalı bilmiyor** — üçüncü kez söylendi. Handoff şablonu geçici
+olarak kapatıyor; kalıcı çözüm fabrikanın (PAD) işi.
 
-**Protokol kanona ne zaman girer** — şu an bu skill yaşayan bir taslak; agent'ların
-kanonunda yok, her oturumda elden anlatılıyor. Kanona girmesi için sahada olgunlaşması
-gerekiyor: eksikleri görülmeden yazılırsa yanlış kalıcı olur.
+**Şablonun `KAPANIS` hatası** — PAD'e bildirildi, düzeltilmedi.
+
+## Kapanmış kalemler — artık sorulmaz
+
+**`{oturum}` biçimi** → `YYYYMMDD-HHMM`, Mert kanona aldı (2026-08-07).
+
+**Canlılık ölçütü** → kutunun kendi son yazım zamanı; diğer iki aday çürütüldü.
+
+**`inbox`/`outbox` ayrımı gerekli mi** → evet. İmleçler ayrı: outbox imleci **merkezin**,
+inbox imleci **agent'ın.** Tek dizin bunu çözemezdi.
+
+**JSON deposu** → sahada sınandı, dört uç *"üretim işi için engel yok"* dedi.
+
+**İlk kutuyu kim açar** → agent kendi kutusunu `setup.py` ile açar, adres handoff'ta
+verilir. Kalıcı düzen bu.
+
+**İş talimatı onay yerine geçer mi** → geçmez. Onay `AskUserQuestion` ile ekrandan alınır.
