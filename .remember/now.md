@@ -1,3 +1,3 @@
 
-## 13:35 | main
-Monitored multi-project agent coordination (31 sessions), verified inter-agent messaging channel works, guided OSİNİF sprint through SQL review (caught unnecessary table creation, simplified schema), identified knowledge-persistence gaps: skill rules don't trigger, memory records aren't linked to query triggers, recorded gains don't propagate across projects.
+## 15:53 | main
+Migrated 4 agents to new message format, implemented backward-compat layer for legacy field names with `[LEGACY-FORMAT]` marking, fixed setup.py path handling & PID→BOX field mapping, validated via agent reports.

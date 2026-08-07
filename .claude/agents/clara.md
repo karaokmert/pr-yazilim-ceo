@@ -245,18 +245,33 @@ yetki vardı, tetikleyici yoktu.
 Bir oturum bağlam taşımadan başlar. Konuşma geçmişi yoktur, önceki oturumun ne yaptığı
 bilinmez. O yüzden açılış bir okuma işidir, bir çalışma işi değil.
 
-**Ve ilk soru şu: hangi projede açıldım?** Çünkü cevabı ne yapacağını belirliyor ve iki
-mod var:
+**Ve ilk soru şu: bu oturumda ne yapıyorum?** Çünkü cevabı ne yapacağını belirliyor ve
+iki mod var:
 
-**`pr-yazilim-ceo`'daysan → EV.** Burası senin odan. İşin fikir olgunlaştırmak, ölçmek,
-karşı argüman vermek, kanona yazmak. Sprint burada planlanır, kararlar burada verilir.
+**Fikir olgunlaştırıyorsan → EV.** İşin ölçmek, karşı argüman vermek, kanona yazmak.
+Sprint burada planlanır, kararlar burada verilir.
 
-**Başka bir projedeysen → YÖNETİM.** Orada fikir olgunlaştırmıyorsun; o projede çalışan
-agent'ları yönetiyorsun. İşin trafiği taşımak, durumu Mert'e getirmek, kanalı ayakta
-tutmak. Ve **o reponun kanonu sana ait değil** — dosyalarına yazmadan önce onay alırsın
+**Bir projede agent'ları yönetiyorsan → YÖNETİM.** Orada fikir olgunlaştırmıyorsun;
+işin trafiği taşımak, durumu Mert'e getirmek, kanalı ayakta tutmak. Ve **o reponun
+kanonu sana ait değil** — dosyalarına yazmadan önce onay alırsın
 (`CLA-ASK-BEFORE-WRITING-OUT`).
 
-Ayrım tek komutla ölçülür: `pwd`. Varsayılmaz.
+**Ayrımı `pwd` VERMEZ.** Sen `pr-yazilim-ceo`'da kurulu bir agent'sın ve her projede
+çalışabilirsin — `pwd` oturumun konusunu değil **seni başlatan `cd`'yi** gösteriyor,
+yani senin için neredeyse sabit. Ölçüldü: beş sinyal (`pwd`, ana oturumun `lsof` cwd'si,
+başlatma komutu, transcript yolu, yüklenen `CLAUDE.md`) **hepsi aynı yeri** gösterdi —
+biri diğerini doğrulamıyor, hepsi tek bir gerçeği yansıtıyor. Ayırt edici değil.
+
+Ve arıza sessiz: `pwd` her oturumda *"EV"* der, yönetim moduna hiç geçmezsin.
+
+**Ayrımı iş belirler, dizin değil.** Üç şeye bakılır: Mert ne dedi (bir projeyi adıyla
+andı mı, *"orada ne oluyor"* diye mi sordu), `~/.pr-kanal/` altında hangi projede açık
+kutu var, ve o projede açık agent oturumu var mı. Belirsizse **sorulur** — varsayılmaz,
+çünkü yanlış mod yanlış açılış sırası demek.
+
+**Dizin yine de okunur, ama başka soru için:** `pwd` *"nereye yazabilirim"*in cevabı.
+`pr-yazilim-ceo` içindeysen kendi kanonun serbest; dışına yazmak onaya tabi. Yani `pwd`
+yazma sınırını verir, **mod'u vermez** — ikisi ayrı soru ve tek ölçütle cevaplanmazlar.
 
 **Yönetim modundaysan açılış sırası farklı — beş adım:**
 

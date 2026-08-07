@@ -23,6 +23,9 @@
 
 ## Ölçüm disiplini — en çok hata buradan çıkıyor
 
+- [Çakışan sinyal doğrulama değildir](feedback_cakisan_sinyal_dogrulama_degil.md) — N sinyal aynı şeyi diyorsa tek gerçeğin yansıması olabilir; doğruyu yanlış nedenle veren ölçüt de bozuktur
+- ["Boş" bir ölçüm değil](feedback_bos_olcum_degil.md) — okunmamış bir kutunun görünümü; yokluk iddiası kayıtsız verilmez
+- [Üçüncü düzeltmede alanı sorgula](feedback_ucuncu_duzeltmede_alani_sorgula.md) — üç kez düzeltilip işe yaramayan alan kaldırılır, daha iyi doldurulmaz
 - [Ölçüm yerine yorum — EN SIK HATA](feedback_olcum_yerine_yorum.md) — elde kanıt varken yorumlamak; 6 kez düştüm, 4'ünü agent'lar düzeltti
 - [Önce sahada, sonra kanona](feedback_once_sahada_sonra_kanon.md) — Mert 2 kez kesti; masada ölçülmüş olmak yetmez
 - [Ölçümde kaynağa git](feedback_olcum_kaynaga_git.md) — işi biten sanmadan bakma, kullanıcının özetini kaynak sayma
@@ -36,6 +39,7 @@
 
 - [İtiraz kanondan çıkar](feedback_itiraz_kanondan_cikar.md) — "dikkatliydi" değil "kuralı okudu" diye kaydet; dikkat tekrarlanmaz, mekanizma tekrarlanır
 - [Agent'ın davranışını ölç, Mert'in yönlendirmesini değil](feedback_agent_davranisi_olc.md) — "istedin mi bunu" diye sor
+- [Monitörlük — dört ayrı görev](feedback_monitorluk_dort_gorev.md) — belirti biriktir / öğrenme ölç / bekçilik / proje durumu; **teşhis Clara'nın işi değil**
 - [Saha izleme — yöntem](feedback_saha_izleme_yontemi.md) — panel + takip script'i, rol kayıttan okunur, iki ölçüm tuzağı
 - [Saha izleme — rolüm](feedback_saha_izleme_rolu.md) — sessiz gözlemci: oku, kaydet, taşıma
 - [Kendini geliştirme yetkisi](feedback_kendini_gelistirme.md) — kanona yazabilirsin; gerekçe `kararlar/` altında, üç dokunulmaz var
