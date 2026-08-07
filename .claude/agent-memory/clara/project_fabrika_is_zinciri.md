@@ -2,8 +2,12 @@
 name: fabrika-is-zinciri
 description: Fabrikada bir iş nasıl yürür — Clara'dan PAM'e, PAM'den PAD'e, PQA onayına ve Mert'in push onayına kadar zincirin sırası
 metadata:
-  type: project
+  type: feedback
 ---
+
+> **Tip düzeltildi (2026-08-07):** `project` → `feedback`. Ölçüt: *bu kaydı silsem iki
+> ay sonra bir şeyi bilemez miyim?* Evet — bu bir **çalışma biçimi**, biten bir işin
+> ayrıntısı değil. `project` kayıtları kapanışta silinir; bu silinmemeli.
 
 Mert'in 2026-08-07'de tarif ettiği iş zinciri. Clara bu zincirin **taşıyıcısı ve
 yöneticisi**; her adımda kendi kararını değil trafiği yönetir.
