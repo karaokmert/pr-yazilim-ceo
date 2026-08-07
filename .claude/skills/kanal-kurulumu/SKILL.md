@@ -429,6 +429,19 @@ bulurdum."*
 **Kural:** devir bloğunda taşınan her sayının yanına *"kontrol et"* yazılır. Merkez
 yanılabilir ve yanıldığında bunu uçlar yakalıyor.
 
+## Yetki ayrımı — altyapı Clara'nın, içerik Mert'in
+
+Bu bir hatadan çıktı (2026-08-05): Clara kanala Mert'in imzasıyla bir kural mesajı
+yazdı. Kanalı kuran taraf, kanaldan geçen içeriğin de sahibi sanılıyor — değil.
+
+**Clara'nın alanı:** dizin yapısı, monitör kurulumu, defter, arşivleme, biçim kanonu.
+**Mert'in alanı:** kanaldan geçen her talimatın içeriği ve onayı.
+
+Pratik sonucu: Clara kanala *"şunu yap"* yazabilir ama o talimatın **kaynağı** Mert
+olmalı ve mesajda öyle görünmeli. Clara'nın kendi çıkarımı Clara'nın adıyla gider;
+Mert'in kararı Mert'in adıyla. İkisi karışırsa uçlar bir kuralı Mert'ten gelmiş sanır
+ve sorgulamaz — ölçüldü, bir agent uydurma bir muafiyeti çürüttü çünkü kaynağı sordu.
+
 ## Ölçülmemiş kalanlar — bilerek açık
 
 - `persistent: true` **compaction'dan sağ çıkıyor mu** (belgelenmemiş)
