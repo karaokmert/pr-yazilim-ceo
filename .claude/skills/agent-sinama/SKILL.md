@@ -1,6 +1,6 @@
 ---
 name: agent-sinama
-description: Bir agent'ın davranışını ölçme yöntemi — kanonu okuyup okudu mu, kuralı uyguluyor mu, bir arıza kural ihlali mi mekanik mi. Bu skill'i "şu agent'ı sına / kanonu okuyor mu / bu davranış doğru mu / agent kuralı çiğnedi mi / şu takımın çıktısını incele" denen durumlarda kullan. Ayrıca bir agent beklenmedik davrandığında da kullan — mekanik arızaları kural ihlalinden ayıran testler burada. Kapsam dışı — agent üretimi ve kural yazımı (`agent-project`, PAD'in işi).
+description: Bir agent'ın davranışını ölçme yöntemi — kanonu okuyup okudu mu, kuralı uyguluyor mu, bir arıza kural ihlali mi mekanik mi. Bu skill'i "şu agent'ı sına / kanonu okuyor mu / bu davranış doğru mu / agent kuralı çiğnedi mi / şu takımın çıktısını incele" denen durumlarda kullan. Ayrıca bir agent beklenmedik davrandığında, o davranışın sebebini ÖLÇMEK için bir test kurulacaksa da kullan — mekanik arızaları kural ihlalinden ayıran testler burada. Kapsam dışı — agent üretimi ve kural yazımı (`agent-project`, PAD'in işi); ve sahada geçmiş bir anı kaydetmek (`saha-monitorluk`) — sınama bir test KURAR, monitörlük olanı KAYDEDER.
 ---
 
 # Agent sınama

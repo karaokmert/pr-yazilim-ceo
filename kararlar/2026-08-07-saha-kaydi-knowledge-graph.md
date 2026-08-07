@@ -6,9 +6,21 @@
 
 ## Karar
 
-Monitörlükte tutulan her kayıt — proje durumu, sprint, kararlar, agent arızaları
-ve kazanımları — **knowledge graph MCP'ye** (`mcp__plugin_ozel-yazilim_memory__`)
-yazılır.
+Monitörlükte tutulan kayıt **knowledge graph MCP'ye**
+(`mcp__plugin_ozel-yazilim_memory__`) yazılır.
+
+**Ama her şey değil — durum tutulmaz.** Mert (16:58): *"durum tutulmasın,
+taskler kapanış notunda alınır, bitince tamamlandı kaydı atılır ve eski kayıt
+silinir. Güncelleme değil, silme ve yazma var elimizde."*
+
+Graph'ta yaşayan dört şey: **karar** (birikir), **tamamlanmış task** (açık iş
+girmez), **arıza** ve **kazanım** (agent tarafı, birikir).
+
+**Durum kaynaktan okunur** — panel, ClickUp, oturum kayıtları. Kaydedilen durum
+bayat bilgi üretir ve bu 2026-08-06'da üç kez ölçüldü (*"IS-PLANI'ndaki push
+bekliyor başlığı bayat"*, *"dokümanlarda bayat bilgiyi düzelt"*, `Oku:` satırının
+var olmayan kayda işaret etmesi). Böylece graph'ta bayatlayabilecek hiçbir şey
+kalmıyor: durum canlı, tamamlanan iş kalıcı.
 
 Mert'in cümlesi: *"bence knowledge graph ile ilerleyelim şimdilik, bunu kanona
 yazalım. Takip ve kayıt buraya yapılsın, arama bulma ilişki bilgileriyle."*

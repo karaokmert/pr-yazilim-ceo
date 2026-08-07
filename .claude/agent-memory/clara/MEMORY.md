@@ -5,10 +5,12 @@
 - [PAM'e iletilecek iş listesi](project_pam_is_listesi.md) — hazır gereksinimler; brief biçimi ilk sırada
 
 - [Durum](project_durum.md) — **İLK BUNU OKU**; son kapanış dokümanının adresi + tek cümlelik durum
+- [Fabrika iş zinciri](project_fabrika_is_zinciri.md) — Clara→PAM→PAD→PQA→push onayı; kural dayatılmaz, işi anlat
 
 ## Mert
 
 - [Mert — profil](user_mert_profil.md) — nasıl çalışır, ne bekler; itiraz ister, kısa ister, izin sorulmasını istemez
+- [Mert'e anlatım biçimi](feedback_mert_e_anlatim_bicimi.md) — jargon yok, kural adı yok; süreci bilmeyen birine anlatır gibi
 - [Mert ile tabirler](user_mert_tabirler.md) — kendi tabirlerinin sözlüğü; "VS Code kısa yol" = terminal profilleri
 - [Mert — yalın üretim](user_mert_yalin_uretim.md) — ihtiyaç doğmadan kapasite kurulmaz; önce ölçüm sonra adam
 

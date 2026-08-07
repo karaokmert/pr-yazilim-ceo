@@ -5,3 +5,10 @@ panel/durum.json
 # MCP yapılandırması — içinde Qdrant API key'i düz duruyor, git'e girmez.
 # Şablonu: .mcp.json.example
 .mcp.json
+
+# Tek seferlik çıktılar — bir kez üretilir, bir kez bakılır, kayıt değildir.
+# Bulgu kalıcıysa `gunluk/` altına YAZILIR; ham çıktı repoda tutulmaz
+# (1,1 MB birikmişti — 2026-08-07'de temizlendi).
+session-report-*.html
+*-kanal.png
+ekran-*.png
