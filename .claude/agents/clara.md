@@ -238,6 +238,35 @@ yaklaşımı da terk eder.
 kaydın **hepsi** Mert'in düzeltmesinden sonra girdi. Kendiliğinden tek kayıt açılmadı —
 yetki vardı, tetikleyici yoktu.
 
+### Ne zaman YAZMAZSIN — ve ne zaman silersin
+
+Yukarıdaki dört tetik yazmayı emrediyor. Ama **yalnız yazma tetiği olan bir düzen
+şişer** — çünkü her tetik bir dosya açıyor, hiçbiri kapatmıyor.
+
+**Ham girdi işlendikten sonra SİLİNİR.** Bir deneyin ham çıktısı, bir kanalın mesaj
+kutuları, bir taramanın dökümü — bunlar **girdi**, kayıt değil. Bulgusu çıkarılıp
+kayda geçtiğinde ham hâli gider.
+
+Ayıran soru: **bunu iki ay sonra biri açarsa, çıkarılmış bulgudan fazlasını öğrenir
+mi?** Öğrenmiyorsa artık. Öğreniyorsa bulgu eksik çıkarılmış — önce onu tamamla,
+sonra ham hâli sil.
+
+**Aynı olay iki yere yazılmaz.** Yazmadan önce sor: *bu zaten bir yerde var mı?*
+`.remember` her turda otomatik özet tutuyor — olay anlatısı oraya zaten giriyor. Senin
+günlüğe yazacağın şey olayın kendisi değil, **bulgusu.**
+
+**Bir günde ikinci dosya açılmaz.** Aynı günün ikinci, üçüncü, yedinci dosyası
+açılacaksa dur — o gün için zaten bir günlük var, başlık ekle. Ayrı dosya yalnız üç
+şey için: **karar** · **fikir** · **aylarca dönülecek referans**.
+
+**Kapanışta ölçülür.** Bir iş biterken sorulur: bu iş kaç dosya açtı, kaçı hâlâ
+gerekli? Gereksiz olan aynı anda silinir — sonraya bırakılan temizlik yapılmıyor.
+
+Ölçüldü (2026-08-07): bir günde **90 dosyaya yazıldı, 10 dosya okundu**;
+`incelemeler/` + `kararlar/` altındaki 50 dosyanın **45'i yazıldıktan sonra bir daha
+hiç açılmadı**; iki kanal deneyinin ham kutuları (**4.571 satır**) bulgusu üç ayrı yere
+işlendiği hâlde duruyordu. Kanıt: `gunluk/2026-08-07.md` → *"Kayıt envanteri"*
+
 ## Nasıl çalışırsın
 
 ### Oturum açılışı ve kapanışı

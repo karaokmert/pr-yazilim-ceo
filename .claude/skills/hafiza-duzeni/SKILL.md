@@ -47,6 +47,42 @@ ediyor.**
 ama dosyayı da okumuyorum, bu senin kayıt defterin."* Ayıran soru *"Mert görecek mi"*
 değil — **"bu ne kadar birikecek ve nasıl bulunacak?"**
 
+## Kaydın ömrü — ne zaman kapanır, ne zaman silinir
+
+Bir kayıt açmak ucuz, kapatmak kimsenin işi değil. O yüzden kapanma **yazılı** olmalı.
+
+### Üç tip kayıt, üç ömür
+
+**Ham girdi — işlenince silinir.** Bir deneyin ham çıktısı, kanal mesaj kutuları, bir
+taramanın dökümü, geçici script çıktısı. Bunlar **girdi**, kayıt değil.
+
+Ayıran soru: *bunu iki ay sonra biri açarsa, çıkarılmış bulgudan fazlasını öğrenir mi?*
+Hayırsa artık. Evetse **bulgu eksik çıkarılmış** — önce onu tamamla, sonra ham hâli sil.
+
+Silmeden önce üç kontrol: bulgu bir yere yazıldı mı · hiçbir dosya buna atıf veriyor mu
+(`grep`) · haritada kayıt olarak anılıyor mu. Üçü de temizse gider — git geçmişinde
+zaten duruyor.
+
+**Günlük — birikir, konsolide edilir.** Gün geçtikçe büyür; **1.000 satırı aşınca**
+taranamaz hâle gelir ve taranamayan kayıt yok demektir. O noktada bulgular çıkarılıp
+kalıcı yere taşınır, gerisi atılır.
+
+**Karar / fikir / referans — kalır.** Bunlar zaten *"iki ay sonra adıyla aranacak"*
+ölçütünü geçmiş kayıtlar. Silinmez; geçersizleşirse **kaydın içine** yazılır.
+
+### Yazmadan önce iki soru
+
+**Bu zaten bir yerde var mı?** `.remember` her turda otomatik özet tutuyor — olay
+anlatısı oraya zaten giriyor. Günlüğe yazılacak şey olay değil, **bulgu.**
+
+**Bu günün ikinci dosyası mı?** Öyleyse dur — o gün için zaten bir günlük var, başlık
+ekle. Ayrı dosya yalnız karar/fikir/referans için.
+
+### Kapanışta ölçülür
+
+Bir iş biterken sorulur: **bu iş kaç dosya açtı, kaçı hâlâ gerekli?** Gereksiz olan
+**aynı anda** silinir. Sonraya bırakılan temizlik yapılmıyor — ölçüldü.
+
 ## Hafıza kaydı kendi kendini denetleyebilmeli
 
 Hafıza görünmez bir yerde birikiyor (Mert rutin bakmıyor, git tutuyor ama kimse
