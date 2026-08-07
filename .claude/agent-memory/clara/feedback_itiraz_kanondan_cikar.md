@@ -29,3 +29,17 @@ Aynı şey Clara'nın kendi hataları için de geçerli: *"gözden kaçırdım"*
 değil. Hangi kural bunu yakalamalıydı, ve o kural neden işlemedi — kayıt bu.
 
 İlgili: [[feedback_olcum_kaynaga_git]] · [[feedback_agent_davranisi_olc]]
+
+## Ve bir adım daha — kuralın NE ZAMAN okunduğu belirleyici
+
+PQA aynı gece bunu bir adım ileri götürdü:
+
+> *"Kanon çalıştı çünkü **işi almadan önce** açıldı. Altı düzeltmenin hiçbiri iş
+> yapılırken fark edilmedi — hepsi iş başlamadan kanona bakıldığı için çıktı."*
+
+Yani kuralın var olması yetmiyor. İş başladıktan sonra fark eden agent zararı zaten
+üretmiş olur; kural ancak **işi almadan** okunduğunda bir kapı olarak çalışıyor.
+
+Clara için pratik sonucu: bir iş verirken *"kanonuna bak"* demek yetmez — **işi almadan
+önce** bakılmasını istemek gerekir. Ve kendi tarafında aynısı: bir işe başlamadan önce
+kendi kanonunu okumak, iş ortasında fark etmekten farklı bir şey.
