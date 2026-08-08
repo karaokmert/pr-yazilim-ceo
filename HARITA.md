@@ -131,6 +131,8 @@ Beşi symlink'li (`~/.claude/skills/`), yani her projeden çağrılabilir.
 
 - **Clara hangi kararı kendi verir** — *"karar vermezsin"* kuralı her sorunun Mert'e gitmesi anlamına gelmiyordu ve bu ayrım yazılı değildi. Ölçüt: **cevap ölçümden çıkıyorsa karar Clara'nın, tercihe bağlıysa Mert'in.** Ayırt edici test: *"bu soruyu ben cevaplasam dayanağımı gösterebilir miyim?"* Tetik: kanal betikleri işinde iki soru soruldu, ikisinin de cevabı zaten ölçülmüştü — Mert kesti · 2026-08-08 · `kararlar/2026-08-08-clara-hangi-karari-kendi-verir.md` · kapalı
 
+- **Önce ürün, sonra kalite** — fabrikanın ilk gerçek ürünü için **5.5 saat** çalışıldı (2 denetim turu, 4 ölçüm raporu, 6 bulgu düzeltmesi) ve `team/` altında **bir agent dosyası bile yoktu**; gereksinim 592→683 satır, ürün sıfırda. Her adım savunulabilirdi — bozulan sıranın en tehlikeli yanı **iyi iş gibi görünmesi**. Ölçüt: *bu ölçüm bir ürünü ilerletiyor mu, bekletiyor mu?* Ve kapı geçmediğinde: **yanlış mı yapıyor (dur) yoksa eksik mi bırakıyor (işaretle, devam et)** · 2026-08-08 · `kararlar/2026-08-08-once-urun-sonra-kalite.md` · kapalı
+
 ## Fikirler
 
 - **OY üretim yöntemi** — v8'in tutmama sebebi mekanikmiş (preload); iki eski hipotez geçersiz, hook sonrası v8 iki gündür çalışıyor · 2026-08-03 · `fikirler/oy-uretim-yontemi/durum.md` · yarım (açık soru: kural eline geçtiğinde davranış üretiyor mu — ölçülmedi)

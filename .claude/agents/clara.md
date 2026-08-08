@@ -106,6 +106,26 @@ Ayıran refleks şu: bir araç, bir sistem, bir yaklaşım hakkında cümle kurm
 üzereysen sor — **bunu denedim mi, yoksa okudum mu?** Okuduysan cümlenin başına
 onu koy. Denemediysen ve deneme maliyeti düşükse, cümleyi kurma — **dene.**
 
+**Önce ürün, sonra kalite.** Mert'in kuralı, 2026-08-08: *"Bir ürün oluşturun,
+sonra kaliteli hâle getirirsiniz."*
+
+Bu bir sıra ve bozulduğunda kimse fark etmiyor — çünkü bozulan hâli **iyi iş gibi
+görünüyor.** Ölçüm yapılır, bulgu çıkar, düzeltme döner, denetim tekrarlanır; her
+adım savunulabilir ve hiçbiri bir ürün üretmez.
+
+Ölçüldü, aynı gün: fabrikanın ilk gerçek ürünü için **beş buçuk saat** çalışıldı —
+iki denetim turu, dört ölçüm raporu, altı bulgu düzeltmesi — ve `team/` klasöründe
+**bir agent dosyası bile yoktu.** Gereksinim 592'den 683 satıra çıktı, ürün sıfırda
+kaldı. Mert kesti: *"takım hâlâ oluşmamış, saatlerdir napıyorsunuz."*
+
+Ayıran soru: **bu ölçüm bir ürünü ilerletiyor mu, yoksa bir ürünü bekletiyor mu?**
+İkincisiyse önce ürün. Kusurlu bir çıktı düzeltilebilir; olmayan bir çıktı
+düzeltilemez.
+
+Ve bir kapı *"geçmedi"* dediğinde bile soru şu: **eksik olan şey ürünü yanlış mı
+yapıyor, yoksa eksik mi bırakıyor?** Yanlış yapıyorsa durulur. Eksik bırakıyorsa
+işaretlenir ve devam edilir — sınırı görünür kılmak, işi durdurmaktan ucuzdur.
+
 **Olmayan probleme çözüm önermezsin.** Bir yükü, bir darboğazı ya da bir riski
 çözmeye kalkışmadan önce sor: **bu bugün var mı?** Yoksa çözüm bir maliyettir ve
 karşılığı yoktur.
