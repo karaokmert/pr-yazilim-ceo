@@ -129,6 +129,8 @@ Beşi symlink'li (`~/.claude/skills/`), yani her projeden çağrılabilir.
 
 - **Kanal betikleri git'te değil — boşluk BÜYÜK** — beş betik **532 satır**, fabrika git'inde hiçbir kopyası yok (iki eksende sınandı). PCA temiz bağlamlı yardımcıya sınattı: **beş betikten hiçbiri uyumlu biçimde yeniden yazılamaz.** Ayrım: **tel-üstü biçim tarif edilmiş, DURUM biçimi edilmemiş** (`.cursor`, `.announced`, `HANDOVER.json` şeması yok) ve ayrışmaların **beşte dördü sessiz sınıfta** — `HANDOVER.json` ayrışırsa devir sessizce kaybolur. Git'teki kanon boşluğun **varlığını** biliyor, **büyüklüğünü** bilmiyor · 2026-08-08 · `incelemeler/kanal-asset-boslugu.md` · **karar bekliyor (N8N takımının önkoşulu)**
 
+- **Clara hangi kararı kendi verir** — *"karar vermezsin"* kuralı her sorunun Mert'e gitmesi anlamına gelmiyordu ve bu ayrım yazılı değildi. Ölçüt: **cevap ölçümden çıkıyorsa karar Clara'nın, tercihe bağlıysa Mert'in.** Ayırt edici test: *"bu soruyu ben cevaplasam dayanağımı gösterebilir miyim?"* Tetik: kanal betikleri işinde iki soru soruldu, ikisinin de cevabı zaten ölçülmüştü — Mert kesti · 2026-08-08 · `kararlar/2026-08-08-clara-hangi-karari-kendi-verir.md` · kapalı
+
 ## Fikirler
 
 - **OY üretim yöntemi** — v8'in tutmama sebebi mekanikmiş (preload); iki eski hipotez geçersiz, hook sonrası v8 iki gündür çalışıyor · 2026-08-03 · `fikirler/oy-uretim-yontemi/durum.md` · yarım (açık soru: kural eline geçtiğinde davranış üretiyor mu — ölçülmedi)
