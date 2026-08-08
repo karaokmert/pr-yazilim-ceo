@@ -82,3 +82,64 @@ onayladığı canlılık sinyali). Sinyal Clara'nın elindeydi, kullanılmadı.
 
 Mod mekanizması ölçülecek: nasıl set edilir, kalıcı mı, alt-agent'ta geçerli mi.
 Ölçüm sonucu bir karar kalemi üretirse `kararlar/` altına gider.
+
+---
+
+## İKİNCİ VAKA — ölü monitör (22:18)
+
+Aynı gün, aynı sınıf, **farklı mekanizma.**
+
+**PCA'nın monitörü 19:06'da öldü** (task killed). PCA bunu **22:18'de** fark
+etti — üç saat dinlemiyordu. Kutusu duruyordu, mesajları birikiyordu, dışarıdan
+her şey normal görünüyordu.
+
+**PCA'nın cümlesi bulgunun kendisi:** *"kutu duruyor olması dinliyor olmam demek
+değil."*
+
+### Neden PAD vakasından daha sinsi
+
+```
+PAD  (17:43→18:27)  onay ekranında asılı   → bir İNSAN ekranda gördü
+PCA  (19:06→22:18)  dinleyici ölmüş        → görülecek HİÇBİR ŞEY yok
+```
+
+Onay ekranı en azından bir yerde duruyor. Ölü monitörün hiçbir görünür izi yok —
+ve kanal tarafında sessizlik yine *"çalışıyor"* ile aynı görünüyor.
+
+### Bu, Clara'nın çözümünü de deliyor
+
+18:27'de şu karara varılmıştı: *"izin-bekleme hâlini yalnız MERKEZ ölçebilir."*
+Ama **merkez de bir monitöre güveniyor** — ve Clara'nın izleyicisi de bugün
+öldü (oturum yeniden başladığında yok olmuştu).
+
+Yani: *"merkez ölçer"* çözümü, **merkezin ölçüm aracının canlı olduğunu
+varsayıyor.** Doğrulanmamış bir mekanizmaya yaslanmak — PAM'in bugün kanona aday
+gösterdiği desenin ta kendisi: *"doğrulanmamış bir mekanizmaya yaslanmak hiç
+korumadan KÖTÜDÜR, çünkü koruma varmış gibi görünür."*
+
+**Eksik olan katman:** monitörün kendisinin canlılığını kim ölçüyor? Bugün
+cevap: **hiç kimse.** İki uç da kendi kendine fark etti (PCA kendi monitörünü,
+Clara oturum yeniden başlarken).
+
+### Filtre düzeltmesi — iki uç bağımsız aynı yere vardı
+
+PCA ve Clara **aynı anda** filtreye Türkçe deseni ekledi:
+
+```
+önce   'from=|ERROR:|INFO:|watcher started'
+sonra  'from=|ERROR:|INFO:|HATA:|BILGI:|watcher started'
+```
+
+**PCA'nın gerekçesi bir filtre ayarından fazlası** — ölçülemeyen bir
+belirsizlikte hangi tarafa yanılmak gerektiğini söylüyor:
+
+> *"Yanlış olan desen zarar vermez (hiç eşleşmez), EKSİK olan desen sessizliğe
+> dönüşür. Asimetrik maliyet, ucuz taraf seçilir."*
+
+### Açık ölçüm
+
+`Monitor`'ün **otomatik durdurma eşiği** kanal kanonunda *"ölçülmedi"* diye
+işaretli. PCA'nın vakası o eşiğin **ilk gerçek verisi** olabilir — kendi
+kutusundaki kanıttan (ölmeden önce kaç olay bağırdı, hangi aralıkta) ölçmesi
+istendi. Üç uca da monitör kontrolü gönderildi (22:19); üçünün verisi bir araya
+gelince *"monitör ne sıklıkta ölüyor"* sorusunun ilk cevabı çıkacak.
