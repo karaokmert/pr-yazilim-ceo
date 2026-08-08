@@ -7,48 +7,42 @@ metadata:
 
 # Durum
 
-**Son kapanış:** `gunluk/2026-08-07-kapanis-3.md` — oku, çalışmaya başlayabilirsin.
-Aynı günün önceki ikisini iptal etmiyor, üstüne ekliyor.
+**Son kapanış:** `gunluk/2026-08-08-kapanis.md` — oku, çalışmaya başlayabilirsin.
 
-**Tek cümlede:** Fabrikanın kanalı ayağa kalktı ve kanonu bir günde baştan elden
-geçti — `Task` çağrısı kaldırıldı, iletişim kanala taşındı, kural sayısı 123→131.
-On altı denetim turu, on üç bulgu, hepsi kapandı.
+**Tek cümlede:** Fabrika kanonunun sekiz maddelik denetimi tamamlandı ve **push
+edildi** — 27 commit, `origin/main` = `89d131f`, kanon 123→131 kural. Davranış
+testinde dört rol de geçti (16/16).
 
 ## Şu an nerede
 
-**GÖREV DEVREDİLDİ.** Mert 2026-08-07 01:34'te sekiz maddelik bir gece görevi
-verdi (fabrikayı push'a hazır hâle getir: tüm kuralları sorgula, çelişkileri
-temizle, agent'ların kuralları bildiğini doğrula). Context dolduğu için **yeni bir
-Clara oturumu** açıldı ve devir yazıldı:
-`~/.pr-kanal/agent-project/clara-ceo-20260807-1653/inbox` (6.072 karakter).
+**Oturum kapandı, iş bitti.** Yarım kalan yok; üç iş zinciri de denetimden geçti.
 
-Bu oturum kapandı, izleyicileri durduruldu.
+Dört fabrika agent'ına kapanış bildirimi gitti. Kutular arşivlenmeyi bekliyor —
+**arşivleme merkezde** (outbox imleçleri Clara'da, `ISD-OPEN-YOUR-BOX`).
 
-## Beklemede
+## Bir sonraki iş — YENİ SESSION'DA
 
-**PUSH — 22 commit, on bir iş.** Brief: `gunluk/2026-08-07-push-brief.md`
-PQA denetim onayı verildi. Mert: *"Push'un bir acelesi yok, çalışıyoruz zaten."*
+**N8N kurulumu yapan bir agent takımı üretilecek — fabrikanın İLK GERÇEK ÜRÜNÜ.**
 
-**Karar defteri — yedi kalem:** `gunluk/2026-08-07-mert-e-sorulacaklar.md`
-En kritik üçü: push kapsamı · iki commit'lenmemiş dosya (index'te on kural onlara
-atıf veriyor) · index paralel düzende güncel kalamıyor.
+Bugüne kadar fabrika yalnız kendi kanonunu işledi; `team/` altı **boş**. Bu iş
+`DAG`'ın 26 kuralını ilk kez sahada sınayacak: paketleme, manifest, marketplace,
+sürüm, kurulum sihirbazı, hook yerleşimi, MCP, terminal kısayolu.
 
-## Ölçülmemiş — gece görevinin merkezi
+Sıra PAM'den başlar — gereksinim netleştirmesi.
 
-**Agent'ların kanonu GERÇEKTEN bilip bilmediği hiç sınanmadı.** PCA'nın uyarısı:
-*"kanona uygun görünmek ile kanondan gelmek aynı şey değil."*
+## Mert'in kararını bekleyen
 
-Ve bir risk: bu oturumda merkez **çok fazla bağlam taşıdı** — her mesajda
-gerekçeler tekrarlandı. Doğru davranışın ne kadarı kanondan, ne kadarı merkezin
-mesajlarından, ayırt edilmedi.
+**Yedi karar kalemi:** `incelemeler/2026-08-08-fabrika-kanon-sorgulama/karar-kalemleri.md`
 
-## Bugün ölçülen üç ders
+En kritiği **atıf sahipliği boşluğu** — index'i kim günceller, kanonda tanımsız;
+bugün beş vaka üretti. Clara'nın önerisi mekanik çözüm (script üretsin).
 
-**Dört taraf da aynı kuralı aynı gün ihlal etti** — `BHV-DATE-THE-MEASUREMENT`
-kanona girdi ve PAM, PAD, PQA, Clara dördü de kaynağa bakmadan hatırlananı taşıdı.
+## En kritik ölçülmemiş şey
 
-**Kendi dosyasına bakan göz kör, ve sistematik** — dört kez, dört farklı elde.
+**Sahada kanon yükleniyor mu — ÖLÇÜLMEDİ.**
 
-**Eksen devredilebiliyor** — günün örüntüsünü (*"her tur bir öncekinin açığını
-kapatır"*) kıran tek örnek: PAD, PQA'nın eksenini kendi üstüne koşturdu ve aynı
-sınıftan bulgu buldu.
+Bugünkü 16/16 davranış testi dosyaları **elle okutarak** yapıldı. Sahada skill
+gövdeleri gelmiyor (`#25834`) ve açılış hook'u alt-agent'ta hiç çalışmıyor.
+
+Yani ölçülen şey kanonun **kalitesi**, dağıtımın çalışması değil. Bu ayrım
+korunmalı — "kanon iyi" ile "kanon agent'ın elinde" aynı şey değil.

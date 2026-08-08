@@ -89,17 +89,41 @@ kanona giriş zamanı) — ayrıntı `kanal-kurulumu` skill'inin *"Açık kaleml
 **Kaynak:** `incelemeler/fabrika-denetimi/eksikler.md` (dosya:satır kanıtlı)
 **Karar:** `kararlar/2026-08-06-fabrika-denetimi-sonucu.md`
 
-Özet sıra:
+**Durum 2026-08-08 itibariyle güncellendi:**
 
-1. **Cascade onarımı** — `atif_verenler` 112/123 kuralda boş; index'in kendi beyanında
-   *"cascade haritası"* ve PQA'nın denetim ekseni. **Dördüncü ölçüt (bakım kabiliyeti)
-   buna bağlı.** Bu iş şu an PAM'de (gereksinim yazılıyor).
-2. **Alt-agent'a kanon ulaştırma** — hook alt-agent'ta çalışmıyor, `CLAUDE_CODE_AGENT`
-   çağıranın adını taşıyor. **Sıra tersine kurulamaz:** hook'u env düzeltilmeden
-   çalıştırmak sistemi bugünkünden kötü yapar.
-3. **Sıfırdan üretme yöntemi** — en zayıf halka, en büyük iş. Bir takımın kendi tasarımı
-   (hangi roller, kaç personel, devir hattı) hiçbir dosyada yok. Kapsamı Mert'le çizilecek.
-4. **Rapor biçimi** — 1. maddeyle aynı kökten; brief kalıbı bunun bir parçası.
+1. **Cascade onarımı** — **KAPANDI.** Atıf haritası onarıldı (2026-08-07),
+   131 kuralın atıf listeleri birebir tutuyor (PQA iki kez doğruladı).
+   *Ama yeni bir boşluk doğdu:* atıfları **kimin güncelleyeceği** tanımsız —
+   2026-08-08'de beş vaka üretti. Gereksinim açık:
+   `agent-project/docs/fabrika/atif-sahipligi/gereksinim.md`
+2. **Alt-agent'a kanon ulaştırma** — **AÇIK, en kritik.** Hook alt-agent'ta
+   çalışmıyor, `CLAUDE_CODE_AGENT` çağıranın adını taşıyor. **Sıra tersine
+   kurulamaz:** hook'u env düzeltilmeden çalıştırmak sistemi bugünkünden kötü
+   yapar (görünür arıza → sessiz arıza). Ölçüm kaydı yayınlandı:
+   `docs/filo/hook-olcumu-2026-08-06.md`
+3. **Sıfırdan üretme yöntemi** — **SIRADAKİ İŞ.** N8N takımı bunu ilk kez
+   sahada sınayacak. Bir takımın kendi tasarımı (hangi roller, kaç personel,
+   devir hattı) hâlâ hiçbir dosyada yok.
+4. **Rapor biçimi** — kalem 1'e bakıldı, brief kalıbı Clara tarafında uygulanıyor.
 5. **Filo bakımını bir kez koştur** + kimlik çakışması + plugin skill'inin ezilmesi.
-6. **Küçük sessiz kalemler** — `Task`→`Agent` metin düzeltmesi, PQA'nın ölçüt skill'i
-   elinde değil, iki skill kendi satır eşiğini aşıyor.
+6. **Küçük sessiz kalemler** — `Task`→`Agent` düzeltmesi **KAPANDI** (2026-08-07);
+   PQA'nın ölçüt skill'i elinde değil ve iki skill satır eşiğini aşıyor: **AÇIK.**
+
+---
+
+## 4. Cascade tetikleyicisi yok — YENİ, 2026-08-08
+
+**Ölçüm:** PAD, temiz yardımcıyla. *"Bir kuralı değiştirdin, etkilenen yerleri
+bul"* durumunda **hiçbir skill açılmıyor.**
+
+Yardımcının cümlesi: *"en yakını `uretim` ama o ÜRETİM ANINA bakıyor, değişiklik
+sonrası YAYILIMA değil. Tetikleyici yoksa kural pratikte yok."*
+
+**Neden önemli:** cascade kanonun en çok işlenen konusu — `BHV-READ-TO-CLOSE`,
+`ISD-CASCADE-IN-ONE-TURN`, `ISD-CASCADE-COVERS-DESCRIPTIONS`,
+`PAD-CASCADE-SAME-TURN`. Hepsi bunu tarif ediyor ama hiçbiri o **anda** açılmıyor.
+
+**Katman kararı açık:** `behavior`'a mı, `is-duzeni`'ne mi, ikisine birden mi
+(çakışma riski). Karar Mert'te.
+
+Ayrıntı: `incelemeler/2026-08-08-fabrika-kanon-sorgulama/karar-kalemleri.md` KALEM 2
