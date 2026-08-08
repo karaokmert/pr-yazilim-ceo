@@ -12,6 +12,7 @@
 - [Mert — profil](user_mert_profil.md) — nasıl çalışır, ne bekler; itiraz ister, kısa ister, izin sorulmasını istemez
 - [Mert'e anlatım biçimi](feedback_mert_e_anlatim_bicimi.md) — jargon yok, kural adı yok; süreci bilmeyen birine anlatır gibi
 - [Mert ile tabirler](user_mert_tabirler.md) — kendi tabirlerinin sözlüğü; "VS Code kısa yol" = terminal profilleri
+- [Mert — ürün ölçütleri](user_mert_urun_olcutleri.md) — **tekrar sorulmayacak uyarılar**: önce ürün · hız kısıttır · kapasite sorgulanır · isim piyasada olmalı
 - [Mert — yalın üretim](user_mert_yalin_uretim.md) — ihtiyaç doğmadan kapasite kurulmaz; önce ölçüm sonra adam
 - [Mert — karar düzeni](user_mert_karar_duzeni.md) — **"Mert olsa ne yapardı"**; sunulan seçenekleri reddedip sorunun kendisini yeniden kurar
 
