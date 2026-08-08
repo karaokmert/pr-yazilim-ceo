@@ -664,3 +664,79 @@ kişi testi kendi beklentisine göre kurmuş olur."*
 Üç şerh: zorluk kalibrasyonu yapılmadı (*"hepsi geçerse bu kanonun sağlam
 olduğunu değil SORULARIN KOLAY olduğunu da gösterebilir"*) · çok-rollü vaka yok ·
 iki soru B dalı varsayıyor.
+
+---
+
+## ROL SAYISI: DÖRT → ÜÇ (2026-08-09 01:58)
+
+**Mert'in itirazı ölçüldü ve haklı çıktı.** *"Dört kişi gerekli mi gerçekten"* —
+gerekli değilmiş. Koşturan ile denetçi birleşti.
+
+Ölçüm sorusu her rol için tek: **kaldırılırsa işi kim yapar ve ne kaybedilir?**
+
+```
+üreten      kaldırılırsa N8N'e yazan kimse kalmaz            KALIR
+planlayan   kullanıcının muhatabı ve gereksinim yazan kalmaz  KALIR
+denetçi     aktivasyon kapısı üreticiye düşer                 KALIR
+koşturan    → "hiçbir şey kaybedilmiyor"                      ELENDİ
+```
+
+### Koşturan neden elendi — üç ölçüm
+
+**(1) Kuralın üçte biri rolün KENDİ VARLIĞINDAN doğan riski yönetiyordu.**
+Koşturma skilinde 9 kural vardı, **3'ü sınır kuralıydı** (`FINDING-NOT-FIX`,
+`FINDING-DOESNT-STOP`, `DONT-FIX-WHAT-YOU-MEASURE`) ve üçü de aynı şeyi
+koruyordu: *"ölçtüğün şeye dokunma, hüküm verme."*
+
+Rol birleşince o üç kural **gereksizleşiyor** — koruduğu sınır ortadan kalkıyor.
+Kanon küçülüyor ve küçüklüğü bir kayıp değil.
+
+**(2) Ayıran tek şey KAPI YETKİSİYDİ.** İkisi de ölçer, ikisi de *"çalışmıyor"*
+diyebilir; fark yalnız birinin sözünün akışı durdurması. Bu bir **rol** farkı
+değil **yetki** farkı — ve yetki tek rolde de taşınabilir.
+
+**(3) Üretici/denetçi omurgası korunuyor.** Asıl ayrım *"ölçen ile üreten"*,
+*"ölçen ile hüküm veren"* değil. Birleşmiş rol hâlâ üretenden **bağımsız**:
+kendi kurmadığı bir akışı ölçüyor.
+
+**Karşı argümanı da ölçtü:** emsalde (OY, 9 rol) TE ile QA ayrı ve gerekçe
+*"kapı da test koştururssa sınır bulanıklaşır."* Ama o gerekçe **iki rol varken**
+geçerli — tek rol varken bulanacak sınır yok. Emsalin dokuz rolü ayrık
+yığınlardan doğuyor; burada o koşul yok.
+
+### Planlayan + üreten birleşmesi REDDEDİLDİ — ve gerekçesi ince
+
+Gereksinimin kendi (c) maddesi bu ikisinin *"anormal yakın"* olduğunu yazıyordu.
+PAD'in çıkarımı: **yakınlık birleştirme gerekçesi değil, AYIRMA gerekçesi.**
+
+Birleşirse tek el hem *ne isteneceğine* hem *nasıl yapılacağına* karar verir ve
+kullanıcının istediğinden sapma **hiçbir yerde görünmez** — çünkü
+karşılaştırılacak bir gereksinim belgesi olmaz. Gereksinimin cümlesi: *"ikisi de
+sessizdir."*
+
+*"Sınırın kendiliğinden korunmadığı yerde yazılı olması gerekiyor."*
+
+### Üç rol
+
+```
+1. gereksinimi yazan + merkez
+2. otomasyonu kuran
+3. ölçen + kapı
+```
+
+**Kazanılan:** üç kural, bir agent body'si, bir skill ve sürekli bir bakım
+maliyeti. *"İhtiyaç doğmadan kapasite kurulmaz"* kuralına uyuyor.
+
+**PAD'in şerhi:** bu bir **metin** ölçümü. Sahada tek rolün iki işi taşıyıp
+taşımadığı ölçülmedi — ilk üç işte *"ölçüm ile hüküm aynı turda mı veriliyor"*
+diye bakılmalı. *"Ayrışma görülürse rol yeniden bölünebilir; bölmek
+birleştirmekten kolay."*
+
+### Çift tanım temizliği de bitti
+
+```
+önce   82 tanım · 11 çift · 18 atıf (yetim yok)
+sonra  71 tanım · 71 tekil · SIFIR çift · sıfır yetim
+```
+
+Ölçüm tekrarlandı, beyanla kapatılmadı.
