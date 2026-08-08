@@ -143,3 +143,88 @@ işaretli. PCA'nın vakası o eşiğin **ilk gerçek verisi** olabilir — kendi
 kutusundaki kanıttan (ölmeden önce kaç olay bağırdı, hangi aralıkta) ölçmesi
 istendi. Üç uca da monitör kontrolü gönderildi (22:19); üçünün verisi bir araya
 gelince *"monitör ne sıklıkta ölüyor"* sorusunun ilk cevabı çıkacak.
+
+### Teşhis netleşti — üç uçtan veri (22:22)
+
+Üçünün monitörü de **19:06'da, aynı dakikada** öldü. Bu tesadüfi süreç ölümü
+değil.
+
+**Sebep: oturum sonu. Deterministik, rastgele değil.** PCA kanıtladı: iki
+monitör iki farklı oturum dizininde (`ff65a5dd` son yazım 18:56 → `fea73e0d`
+22:15'te açıldı), ve `ps` çıktısında eski oturumdan kalan **hiçbir `watch.py`
+süreci yok** — süreç oturumla gitti, yetim kalmadı.
+
+Bu zaten kanonda **yazılı** (`ISD-OPEN-YOUR-BOX`: *"monitör oturumla ölür, her
+açılışta yeniden kurulur"*). Yani arıza değil, **beklenen davranış.**
+
+**"Çok olay üreten monitör" hipotezi ÇÜRÜDÜ.** Kanal kanonunda *"Monitor
+otomatik durdurma eşiği — ölçülmedi"* diye açık bir kalem vardı; bu vaka onun
+verisi **değil**: 105 dakikada 7 olay, en sık aralık 2 dakika. Hiçbir makul
+eşiği zorlamaz. **Eşik hâlâ ölçülmedi** — ve yanlış sebebe bakan bir önlem işe
+yaramazdı.
+
+### Asıl bulgu: agent monitörünün öldüğünü ANLAYAMAZ
+
+PCA üç sinyali de kontrol etti, **üçü de sessiz**:
+
+```
+kutu           duruyor, dosyaları yerinde, okunabilir
+çıktı dosyası  duruyor — ve son satırı NORMAL bir mesaj olayı
+sessizlik      "mesaj yok" ile "dinleyici yok" ayırt edilemez
+```
+
+İkincisi en sinsisi: çıktı dosyası kesilmiş gibi görünmüyor, son mesaj ile son
+satır aynı. Yani dosyaya bakan *"demek ki o zamandan beri mesaj gelmedi"* der —
+**tam olarak yanlış çıkarım.**
+
+**Ölüm bir olay üretmiyor.** Tek çalışan sinyal `TaskOutput(<id>, block:false)`
+→ `status` ve kanonda o **kurulum adımı** olarak var (*"kur, sonra doğrula"*).
+Kurulumdan **sonra** periyodik kontrol eden hüküm yok. Fark: kurulum anındaki
+doğrulama *"kurdum mu"* sorusunu cevaplıyor; *"hâlâ yaşıyor mu"* sorusunun
+cevabı **hiçbir yerde yok.**
+
+### Risk penceresi: oturum ARASI değil, oturum İÇİ
+
+PAM'in ayrımı: oturum arasında zaten kimse çalışmıyor — zararsız. Tehlikeli
+senaryo **oturum açık, monitör ölmüş, agent çalışıyor ve dinlediğini sanıyor.**
+
+Bugünkü üç vaka da oturum-arası çıktı (üçü de resume'da fark etti, üçünü de
+`ISD-OPEN-YOUR-BOX` kurtardı — *"beni kurtaran refleks değil kanon oldu"*).
+**Oturum İÇİNDE ölüm gözlenmedi, ama dışlanmadı da.** Kural gerekip
+gerekmediğini bu belirliyor: gerekmiyorsa açılış adımı yeterli.
+
+### Veri kaybı olmadı — ve sebebi bir tasarım kararı
+
+`.announced` (izleyici neyi bağırdı) ile `.cursor` (agent ne okudu) **ayrı**
+tutuluyor. PCA'nın kaydı: 8 mesaj bağırılmış, imleç 8'de. Sağır pencerede mesaj
+gelmediği için kayıp yok — **ama bu şans.** O pencerede mesaj gelseydi kutuda
+dururdu, imleç kurtarırdı, izleyici döndüğünde *"yeni mesaj"* diye bağırırdı.
+
+**Yani ölü monitör mesaj KAYBETTİRMİYOR, GECİKTİRİYOR.** Ayrımı kuran şey
+`SABLON:137-138`'deki karar: *"birleştirmek, monitörün bağırmadığı bir mesajı
+okunmuş saymaya yol açar."* O ayrım bugün işe yaradı.
+
+### Clara'nın çözümünü kurtaran asimetri
+
+*"Merkez sessizliği ölçer"* çözümü merkezin monitörüne bağımlı görünüyordu — ve
+o da öldü. Ama PCA bir asimetri gösterdi: **merkez uçların DOSYA yazım zamanına
+bakabiliyor** (`kanal.md:246-256`, *"kutunun kendi son yazım zamanı — tek
+çalışan sinyal"*) ve **bu sinyal monitöre bağımlı değil.**
+
+Yani merkezin ölçümü kendi monitöründen bağımsız çalışabilir. Ucun kendi
+ölümünü fark etmesi için böyle bir dış sinyal **yok** — asimetri buradan
+doğuyor ve çözümün merkeze verilmesinin sebebi de bu.
+
+### Filtre meselesi kapandı — Clara yanılmıştı
+
+Clara ve PCA bağımsız olarak filtreye `HATA:|BILGI:` ekledi (`ERROR:`/`HATA:`
+belirsizliği yüzünden). **PAD ölçtü ve gerekçeyi çürüttü:** betiklerin
+kaynağında `ERROR:` 14 kez, `HATA:` **0** — betikler İngilizce basıyor. Eski
+filtre zaten doğruydu; çelişki mekanizmada değil **`SABLON:487`'nin tarifinde.**
+
+Ekleme yine de korundu, PAD'in gerekçesiyle: *"ölçülmüş olması eklemeyi
+gereksiz kılmıyor, sadece ACİL olmaktan çıkarıyor"* — ve betikler bir gün
+Türkçeleştirilirse filtre kendiliğinden doğru kalır.
+
+**Kayıt için:** belirsizlik **kapatılmadı, etkisizleştirildi** (PAM'in ayrımı).
+Şablonun yanlış tarifi ayrı bir kalem ve `SABLON-JSON.md` git'te değil.
