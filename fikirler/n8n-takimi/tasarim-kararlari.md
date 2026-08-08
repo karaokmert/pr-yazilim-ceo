@@ -440,3 +440,111 @@ alındı, iş PAM'e gitti.
 
 **Ve PCA itiraz ederken çözümü de taşıdı** — iki dosyanın kapsam özetini çıkarıp
 PAM'in işini kolaylaştırdı. `BHV-OBJECT-DONT-REFUSE` böyle işliyor.
+
+---
+
+## İkinci denetim: GEÇMEDİ — ama sebebi tek ve karar Mert'te (22:24)
+
+**Altı bulgunun altısı da gerçekten kapandı, yeni bulgu yok.** PQA kapsamını
+yine açıkça yazdı: `gereksinim.md` tamamı (683 satır, diff değil), `status.md`
+(160), PCA'nın asset ölçümü (217), iki commit'in kapsam doğrulaması.
+
+Geçmeme sebebi **tek**: iki önkoşulun birbirine bağlı olduğu görülmemiş.
+
+### PAM'in iki sorusuna cevap
+
+**S1 — B1'in özne çözümü kopya olmadan aynı korumayı sağlıyor mu?** **EVET, ve
+kopyalamaması DOĞRU karardı.** Fabrikanın cümlesi üç rol tanıyor; bu takımın
+zinciri **dört** rol ve merkez aynı zamanda bir rol — birebir taşınsaydı
+*"planlayan kendi işini kendine iletir"* gibi bir adım üreterek **yanlış**
+olurdu. Korumanın özü korunmuş: her adımın öznesi var, son halka ayrı bir elde
+bitiyor. Üstelik **fabrikadakinden daha güçlü** yazılmış, çünkü bedel farkı da
+yazılmış: *"orada denetlenmemiş bir commit kalıyordu, burada denetlenmemiş bir
+otomasyon aktive edilebilir."*
+
+**S2 — önkoşulu işaretlemek yeterli mi?** **İkisi aynı sınıfta değil.**
+Ölçüt: önkoşul PAD'in **üretim anında** yapacağı işi durduruyor mu, yoksa takım
+**sahada** çalışırken mi çıkar?
+
+```
+N8N mekaniği şerhi  →  İŞARETLEMEK YETERLİ. PAD'in şu an yapacağı iş
+                        (rol body'leri, skill katmanı, kimlikler) mekaniğin
+                        doğruluğundan bağımsız. Yanlış çıkarsa düzeltilecek
+                        şey kural METNİ olur ve hattan geçer.
+Kanal betikleri     →  KAPANMALI. PAD üretim anında tıkanır: "kanal düzeni
+                        kur" talimatı yazılacak ve kuracağı şeyin kaynağı yok.
+```
+
+### B7 — üçüncü edilgen vaka VAR (hafif)
+
+PAM *"aynı belgede iki kez özne düşürmüşüm"* deyip üçüncüsünü sormuştu.
+
+**PQA'nın yöntemi kayda değer:** ekseni PAM'in bulduklarına göre **seçmedi** —
+`BHV-DONT-AIM-AT-LAST-MISS`, *"geçmiş bulguya nişan alan arama geçmiş bulguyu
+bulur."* Bağımsız eksen kullandı: *"bir işi tarif eden ama o işi KİMİN yapacağını
+söylemeyen cümle."* 38 satır çıktı, okuyarak ayıkladı.
+
+Sonuç: üç yerde aynı sınıf, **ikisi eksik biri temiz** — ve üçü de *"kanonda ne
+bulunmalı"* cümlelerinde yoğunlaşıyor. PQA'nın yorumu: o cümleler bir **hükmü**
+tarif ediyor ve hükmün öznesi kural yazılırken belirlenecek sanılmış olabilir.
+
+**Ağırlık: hafif**, üretimi bloklamaz — PAD kural yazarken zaten özne vermek
+zorunda (`URT-` kanonu istiyor). Ama B1'in kendi dersi *"öznesiz bırakılan adımı
+kimse üstlenmez"* ve o ders belgenin kendi içinde üç yerde uygulanmamış.
+
+### S4 — PCA'nın ölçümü B6'nın AĞIRLIĞINI değiştiriyor
+
+PAM'in çözümü (iki yol + karar kullanıcıda) **doğru ama artık eksik** — çünkü
+yazıldığında bu ölçüm yoktu.
+
+**İkinci yol fiilen kapalı.** PAM ikinci yolun bedelini *"iki ayrı uygulama
+doğar, zamanla ayrışır"* diye yazmıştı. PCA'nın ölçümü bu bedeli **düzeltiyor**:
+beş betikten hiçbiri uyumlu biçimde yeniden yazılamıyor, ayrışma *"zamanla"*
+değil **anında** oluşuyor, ve beşten dördü sessiz sınıfta — **yanlış yeniden
+üretim çalışır görünüyor.**
+
+> PQA'nın cümlesi: *"iki yol eşit değil: birincisi bir iş, ikincisi bir arıza
+> üretimi."*
+
+**Ve boşluk gereksinimde olduğundan küçük görünüyor.** PAM `kanal.md`'den doğru
+alıntı yapmış ama `kanal.md` boşluğun **varlığını** biliyor, büyüklüğünü değil —
+büyüklüğü anlatan cümle (`SABLON:647-648`) git'e **hiç geçmemiş.** Yani PAM
+**eksik bir kaynaktan doğru alıntı** yapmış.
+
+**Sonuç:** önkoşul *"karar bekliyor"* değil, **"tek uygulanabilir yol var ve o
+yol fabrikanın bekleyen bir işi."** İki yol arasında seçim gibi sunulursa
+kullanıcı **olmayan bir seçeneği** seçebilir.
+
+### B8 — asıl tıkayan bulgu: B1, B6'ya BAĞLI
+
+Gereksinimin kendi yazdığı desen: *"koruma mekanizmayla sağlanabiliyorsa metinle
+bırakılmaz"* + ters yönü *"mekanizmanın varlığı doğrulanmadan ona atıf
+verilmez."*
+
+PQA mekanizmaya yaslanan üç yer buldu (sat. 307/311, 347-356, 642-643) ve
+**üçü de aynı mekanizmaya yaslanıyor: kanal kutusu.** O mekanizmanın bu takımda
+var olacağı **doğrulanmamış** — kaynağı B6'nın önkoşulu.
+
+**Yani belgenin kendi yazdığı ters-yön kuralı, kendi B1 çözümüne
+uygulanmamış.** B1 *"koruma iyi niyete dayanmasın, mekanizmaya dayansın"* diyor;
+dayandığı mekanizmanın kurulup kurulamayacağı açık kalem.
+
+**Bu bir çelişki değil, bir BAĞIMLILIK** — ve görülmemiş olması bulgu. PQA
+doğruladı: sat. 347-356 ile sat. 313-329 birbirini **anmıyor.**
+
+### Kapı açılırsa ne olur
+
+PAD *"kanal düzeni kur"* ve *"denetçinin raporu kalıcı olsun"* talimatlarını
+**birlikte** alacak; ikincisi birincinin kurulmasına bağlı ve birincinin kaynağı
+yok. PAD ya tıkanır (**izin-bekleme değil, malzeme-yok sınıfı**) ya kendi
+çözümünü uydurur — ve `PAD-WRITE-WHAT-WAS-ASKED` gereği uyduramaz, bildirmek
+zorunda. **Yani kapı açılırsa iş birinci turda geri döner.**
+
+### Geçmek için gereken üç şey
+
+1. **B6 önkoşulunun kapanması** — karar verilmesi, ve PCA'nın ölçümünün karara
+   girdi olması (iki yol eşit değil)
+2. **B1 ile B6 arasındaki bağımlılığın belgede görünür olması**
+3. B7'deki üç öznesiz cümle — **hafif**, üretimi bloklamaz
+
+N8N mekaniği şerhi üretimi **bloklamıyor.**
