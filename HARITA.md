@@ -127,6 +127,8 @@ Beşi symlink'li (`~/.claude/skills/`), yani her projeden çağrılabilir.
 
 - **Agent'lar onay akışına düşüyor — oturum modu** — fabrikanın dört agent'ından ikisi (PAD/PQA) Bash komutlarında onay ekranında **44 dakika** bekledi ve kanal bunu göremedi. Clara'nın ilk teşhisi (izin listesi dar + komut biçimi) doğru ama yüzeyseldi; **Mert'in teşhisi sebep:** agent auto mode'da açılmazsa her araç çağrısı onaya düşüyor. Ayrıca Clara'nın sabahki *"kanal ayakta"* ölçümü eksikti — mesajın gidip geldiği ölçüldü, agent'ın **iş yapabildiği** ölçülmedi (test tam da tıkanmayan yolu sınadı) · 2026-08-08 · `arge/agent-oturum-modu/onay-akisi-tikanmasi.md` · **açık (mod mekanizması ölçülecek)**
 
+- **Kanal betikleri git'te değil — boşluk BÜYÜK** — beş betik **532 satır**, fabrika git'inde hiçbir kopyası yok (iki eksende sınandı). PCA temiz bağlamlı yardımcıya sınattı: **beş betikten hiçbiri uyumlu biçimde yeniden yazılamaz.** Ayrım: **tel-üstü biçim tarif edilmiş, DURUM biçimi edilmemiş** (`.cursor`, `.announced`, `HANDOVER.json` şeması yok) ve ayrışmaların **beşte dördü sessiz sınıfta** — `HANDOVER.json` ayrışırsa devir sessizce kaybolur. Git'teki kanon boşluğun **varlığını** biliyor, **büyüklüğünü** bilmiyor · 2026-08-08 · `incelemeler/kanal-asset-boslugu.md` · **karar bekliyor (N8N takımının önkoşulu)**
+
 ## Fikirler
 
 - **OY üretim yöntemi** — v8'in tutmama sebebi mekanikmiş (preload); iki eski hipotez geçersiz, hook sonrası v8 iki gündür çalışıyor · 2026-08-03 · `fikirler/oy-uretim-yontemi/durum.md` · yarım (açık soru: kural eline geçtiğinde davranış üretiyor mu — ölçülmedi)
