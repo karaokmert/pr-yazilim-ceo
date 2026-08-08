@@ -740,3 +740,72 @@ sonra  71 tanım · 71 tekil · SIFIR çift · sıfır yetim
 ```
 
 Ölçüm tekrarlandı, beyanla kapatılmadı.
+
+---
+
+## İSİMLER PİYASADAN SEÇİLDİ (02:07) — Mert'in ölçütü tuttu
+
+**Mert'in ölçütü Clara'nınkinden keskindi.** Clara *"bir insan bu unvanla işe
+alınabilir mi"* demişti (teorik); Mert **"ben bu ilanı bu isimle açar mıydım"**
+dedi (gerçek). Fark: unvanın **piyasada karşılığı** olmalı, iç jargon değil.
+
+```
+n8n-planlayan  →  n8n-automation-analyst
+n8n-ureten     →  n8n-automation-engineer
+n8n-kosturan   →  (elendi, rol birleşti)
+n8n-denetci    →  n8n-qa-engineer
+```
+
+### PAD araştırdı, uydurmadı
+
+**`automation engineer`** — n8n'in **kendi topluluğunda** ve iş panolarında
+kullanılıyor. Somut ilanlar: *"Automation Engineer (n8n)"* (Everstake),
+*"N8N Automation Engineer"* (Newxel), *"AI Workflow Automation Engineer – n8n"*.
+ZipRecruiter'da *"N8N Developer"* başlığı altında 40–72 USD/saat ilanlar.
+
+**`automation analyst`** — *"Automation Business Analyst"* (UiPath'in kendi
+kariyer yolu tanımı), *"Business Automation Analyst"* (Hitachi Energy). Ve iş
+tanımı **birebir örtüşüyor**: *"gereksinim toplar, süreci analiz eder, otomasyon
+fırsatı belirler, as-is durumu belgeler."*
+
+**`qa-engineer`** — hem piyasada hem **kendi emsalimizde** var (`ozel-yazilim` ve
+`websitesi` ailelerinde). Yeni bir şey uydurulmadı.
+
+### Dil kararı: İngilizce — ikinci gerekçe asıl olan
+
+1. Emsal İngilizce (`backend-developer`, `qa-engineer`) — aynı fabrikanın
+   ürünleri farklı dilde ad taşırsa tutarsızlık görünür
+2. **Bu alanın terimleri İngilizce doğmuş.** *"Automation engineer"* bir çeviri
+   değil, sektörün kelimesi. Türkçeleştirmek **piyasa karşılığını zayıflatır** —
+   tam da ölçütün elemek istediği şey
+
+Takım adı `n8n-otomasyon` Türkçe kaldı ve bu bilinçli: o bir **ürün** adı, unvan
+değil.
+
+### Cascade tam — ve Clara doğruladı
+
+Değişen: 3 body (dosya adı + `name` + description) · 2 skill dizini
+(`n8n-planlama`→`n8n-analiz`, `n8n-uretim`→`n8n-gelistirme`) · 2 skill birleşti
+(`n8n-kosturma`+`n8n-denetim`→`n8n-kalite`) · `plugin.json` · `KURULUM.md` (4 yer)
+· `is-duzeni` gövdesi (zincir şeması + 13 metin atfı).
+
+**PAD'in doğrulaması:** eski ad izi sıfır · hook filtresi üç yeni adı da yakalıyor
+· hook **elle test edildi** (doğru dört skill basıldı) · `validate` **çıktısı
+okundu**, rc'ye güvenilmedi.
+
+**Clara'nın bağımsız doğrulaması (02:08):** eski ad izi → **0 dosya** ·
+`claude plugin validate --strict` → **✔ Validation passed** · yapı: 13 dosya,
+3 body, 6 skill.
+
+### Ürün küçüldü ve bu kazanç
+
+```
+dün 22:48   15 dosya · 4 rol · 7 skill · 82 kural tanımı
+bugün 02:08 13 dosya · 3 rol · 6 skill · 71 kural tanımı
+```
+
+İkisi de Mert'in itirazlarından: rol sorgulaması bir rolü ve üç kuralı eledi,
+isim ölçütü fiil adları meslek adlarına çevirdi.
+
+**Silinmedi, `trash/n8n-takim-kurulumu/` altına taşındı** — kanon *"dosya
+silinmez"* diyor, kullanıcı siler.
