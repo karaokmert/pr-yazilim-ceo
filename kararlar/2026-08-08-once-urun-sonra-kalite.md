@@ -71,3 +71,31 @@ Denetim zinciri yerinde: PQA denetler, push'u Mert açar. Kaldırılan şey
 
 Ve `URT-NO-AUDIT-WITHOUT-TEST` gibi üretim kapıları duruyor — onlar bir çıktının
 **kalitesini** koruyor, çıktının **doğmasını** engellemiyor.
+
+---
+
+## PQA'nın eklediği boşluk — denetçinin durma eşiği yok
+
+PQA kararı kabul etti (*"hükmümü atlamadın, üzerine karar verdin; ikisi farklı
+şey"*) ve **kendi payını da yazdı**:
+
+> *"İki turda altı + üç bulgu ürettim ve hiçbirinde 'bu kadarı yeter, kalanı
+> üretimde çözülür' demedim. Denetçi bulgu üretmeye ayarlı, ve durma eşiğini
+> kimse söylemiyor. Bu bir kanon boşluğu olabilir."*
+
+**Bu doğru ve merkezin hatasıyla aynı madalyonun iki yüzü.** Clara mükemmelleştirme
+refleksiyle kapıyı açmadı; PQA bulgu üretme refleksiyle *"yeter"* demedi. İkisi
+birbirini besledi — her denetim yeni bulgu üretti, her bulgu yeni bir düzeltme
+turu açtı.
+
+**Eksik olan kural:** bir denetçi ne zaman *"kalan bulgular üretimde çözülür"*
+der? Kanonda karşılığı yok — `URT-NO-AUDIT-WITHOUT-TEST` denetimin **yapılmasını**
+emrediyor, **durmasını** düzenleyen bir hüküm yok.
+
+Bu karardaki ölçüt (*yanlış mı yapıyor → dur; eksik mi bırakıyor → işaretle,
+devam et*) denetçi tarafında da geçerli olmalı. Ama o, fabrikanın kanonuna
+girecek bir kural ve **PAM'in gereksinimi + PAD'in üretimi** üzerinden gider —
+Clara yazmaz.
+
+**Fabrikaya gidecek gereksinim adayı:** *"denetçi bulguyu sınıflandırır: üretimi
+durduran / işaretlenip geçilen. İkincisi denetimi bloke etmez."*
