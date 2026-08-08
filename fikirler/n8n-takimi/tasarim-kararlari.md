@@ -257,3 +257,96 @@ Reference **gövdeleri** okunmadı (14.080 satır) · üretici katman (`marketpl
 kapsam dışıydı, `uretim-standardi` skill'inin kendisi okunmadı — **fabrikanın
 kanon üretim standardı orada yaşıyor olabilir, N8N işi için doğrudan girdi** ·
 ve hangi granülerliğin (16 mi 76 mı) sahada **daha az hata ürettiği ölçülmedi**.
+
+---
+
+## PQA denetimi — kanonun zemini sorgulandı (18:29)
+
+PQA gereksinimi onaylamadı, **altındaki zemini** sorguladı. Sekiz bulgu; dördü
+doğrudan tasarımı değiştiriyor.
+
+### En sert bulgu: test kanonu doküman için yazılmış
+
+Kanondaki üç test kuralı (`PAD-TEST-BEFORE-HANDOFF`, `URT-NO-AUDIT-WITHOUT-TEST`,
+`ISD-SHOW-TEST-SCOPE`) **doküman üretimi** için kurulmuş. Birincisinin kendi
+gerekçesi (body 198-200): *"PQA kuralın YAZILIŞINI denetler, İŞLEYİP İŞLEMEDİĞİNİ
+değil."*
+
+Doküman için doğru. **N8N'de bozuluyor** — orada ürün zaten bir işleyiş.
+Workflow JSON'ı kanona uygun yazılmış olabilir ve çalışmayabilir.
+
+**Sonuç:** mevcut kanonla PQA bir N8N çıktısını onaylarsa onayladığı şey
+*"dosya doğru yazılmış"*tır. *"Otomasyon çalışıyor"* iddiasını denetleyen
+**hiçbir kural yok.**
+
+### Çatışma adayı: denetçi doğrulayamıyor
+
+`PQA-NO-FILE-EDIT` (denetlediğine el sürme) ile `PQA-VERIFY-DONT-TRUST`
+(beyanı kanıt sayma, ölçümü kendin yap) dokümanda çelişmiyor — okuyarak ölçmek
+mümkün. N8N'de çelişiyor: *"çalıştırarak ölçmek dokunmak mı, değil mi"* —
+**kanonda cevabı yok.** İki kural ilk kez aynı yerde.
+
+PQA bir emsal de gösterdi: `DAG-BUMP-BY-AUDITOR` zaten *"PQA'nın dosyaya el
+sürmeme kuralının TEK istisnası"* ve gerekçesi yazılı (*"sebep rol değil SIRA"*).
+Ama **ne yapılacağını söylemedi** — `PQA-NO-PROPOSE-FIX`'e uydu.
+
+### Dört kapının dördü de İÇERİ bakıyor
+
+`URT-NO-PRODUCTION-WITHOUT-NEED` · `URT-NO-AUDIT-WITHOUT-TEST` ·
+`URT-NO-PUSH-WITHOUT-AUDIT` · `ISD-COMMIT-THEN-PUSH` — dördü de **repo** içine
+dokunan işe göre kurulmuş. En riskli kapı (push) bile yalnız git'i koruyor.
+
+**N8N'de ürün kabul edilmeden ÖNCE bir sunucuya yazılıyor olabilir — yani en
+riskli an, kanonun hiç kapı koymadığı an.**
+
+Ölçüm: *"prod / canlı / geri dönüşü olmayan zarar"* ifadeleri tüm kanonda **tek**
+yerde geçiyor (`BHV-RATION-ABSOLUTES`) ve orada bile bir **yazım** ölçütü —
+*"mutlak ne zaman yazılır"*. Dış sisteme dokunan **işi** düzenleyen hüküm yok.
+
+### DAG sayımı keskinleşti
+
+PQA ölçtü: `team/team-1-oy/` var ama **içi tamamen boş (0 dosya)**, ve
+`.claude-plugin/marketplace.json` **hiç yok.** Yani DAG'ın 26 kuralının hiçbiri
+bir kez bile koşmadı — **26/26 sınanmamış.**
+
+```
+14 gerçekten devreye girecek   paketleme (5) + hook (6) + sürüm (3)
+ 5 muhtemelen                  MCP (3, N8N konuşacaksa) + kurulum (2)
+ 7 yine boşta                  sistem paketi · izin ayrımı · ad/renk/ikon
+```
+
+**PQA'nın notu:** boşta kalan 7 kozmetik değil — *"koşulmadan doğru
+sanılacaklar."*
+
+Ayrıca `DAG-RUN-HOOK-SCRIPTS` **kendi kaynağında** *"bugün bu makinede tek başına
+kanıt sayılabilecek script YOK"* diyor. Yani hook doğrulama tarafı zaten bilinen
+bir boşluk üstüne oturuyor — bu işte ilk kez bedeli ödenecek.
+
+### PQA'nın kendi şerhi
+
+*"DAG'ın 26 kuralının gerekçeleri ÖLÇÜMDEN değil TASARIMDAN geliyor. Bu iş onları
+ilk kez sınayacak; sınanan kuralın yanlış çıkması bir başarısızlık değil, ölçümün
+ta kendisi."*
+
+---
+
+## PAD'in ölçümü — iki kanıtlı kapanış (18:30)
+
+**`uretim-standardi` PAD'in kanonunda YOK.** Üç yoldan kanıtladı: skill listesinde
+yok (beş skill var: behavior, is-duzeni, uretim, yapi-taslari, dagitim) ·
+`rules-index.json`'da `STD-` prefixi **sıfır** · fabrikanın hiçbir dosyası ona
+atıf vermiyor (grep temiz).
+
+**Yani PCA'nın işaret ettiği boşluk gerçek:** fabrikanın üretim standardı v7
+kuşağında kalmış (268 satır + 6 reference), bugünkü üreticinin **elinde değil.**
+PAD skill'i okudu, kendi kanonuyla farkını ölçüyor.
+
+**İki dallı rol tanımının kanonda emsali YOK.** 139 kural tanımının hiçbiri bir
+rolü iki dallı tanımlamıyor; koşullu görünen 6 tanesi kuralın *uygulanıp
+uygulanmayacağını* belirliyor, rolün *ne yaptığını* ikiye bölmüyor.
+
+**Ters yönde emsal buldu:** `YT-ASSUME-BACKGROUND` belirsizliği dallandırmıyor,
+**tek varsayıma sabitliyor.**
+
+**Bu Clara'nın kararına karşı bir bulgu** (üreten rolü iki dallı bırakma kararı,
+17:21). Kayda geçti; PAD'in tam cevabı beklenecek.
