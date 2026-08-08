@@ -548,3 +548,119 @@ zorunda. **Yani kapı açılırsa iş birinci turda geri döner.**
 3. B7'deki üç öznesiz cümle — **hafif**, üretimi bloklamaz
 
 N8N mekaniği şerhi üretimi **bloklamıyor.**
+
+---
+
+## ÜRÜN DOĞDU (22:37) — ve sıra değişikliği işledi
+
+Mert 22:31'de kesti (*"takım hâlâ oluşmamış, saatlerdir napıyorsunuz"*), 22:32'de
+üretim kapısı açıldı, **22:37'de `team/n8n-otomasyon/` gerçek oldu.** Beş buçuk
+saatlik sıfırdan sonra altı dakika.
+
+```
+22:37   plugin.json · KURULUM.md · hooks/ · marketplace.json     300 satır
+22:39   + n8n-davranis/SKILL.md                                  528 satır
+22:42   + n8n-is-duzeni/SKILL.md                                 781 satır
+```
+
+**`DAG-REGISTER-IN-MARKETPLACE` ilk kez sahada koştu.** Kökteki
+`.claude-plugin/marketplace.json` **hiç yoktu** — PQA'nın ilk denetimdeki tespiti
+kapandı. 26 DAG kuralından ilki ölçüldü.
+
+### Kapı "geçmedi" hükmüne rağmen açıldı — ve bu doğru işledi
+
+İki açık kalem **durdurulmadı, işaretlendi**: kanal betikleri (`KURULUM.md`'ye
+önkoşul olarak) ve N8N erişimi (üreten rolün tanımı tek+eşik).
+
+PQA kararı kabul etti ve ayrımı kendisi kurdu: *"hükmümü atlamadın, üzerine karar
+verdin; ikisi farklı şey."*
+
+### PAM Clara'nın kararındaki belirsizliği kapattı
+
+Clara *"sıraya alındı"* demişti. PAM ayırdı:
+
+```
+ÜRETİMİ bloklamıyor  →  PAD "kanal düzeni şöyle işler" yazabilir
+KURULUMU bloklar     →  betikler pakete girmezse takım kurulur ama KONUŞAMAZ
+```
+
+*"Bu ayrım olmadan 'sırada' kelimesi 'sorun değil' gibi okunur."* Ve yetkiyi
+aşmış olabileceğini **kendisi sordu.**
+
+**PQA'nın hükmü: ÇIKARIM, karar değil.** Ölçütü: *"bir cümle KARAR ise farklı
+karar verilebilirdi; ÇIKARIM ise verilen karardan zaten çıkıyor ve tersi bir olgu
+hatası olurdu."* Ters testi de yaptı — PAM *"o zaman önce betikler taşınsın"*
+deseydi **karar** olurdu; dememiş.
+
+Ve bu çıkarım üçüncü denetimin ölçütünü de belirledi: kurulum bütünlüğü eksenini
+koşarken kanal betiklerinin pakette olup olmadığına bakılacak — *"yazılmasaydı
+'sırada' diye geçiştirilebilirdi."*
+
+### PAM kendi kuralını kendine uygulamadığını kabul etti
+
+B8'in özü: B1 çözümü (*"denetçinin raporu kalıcı dursun"*) bir **mekanizmaya**
+yaslanıyordu ve o mekanizmanın kurulabilirliği açık kalemdi.
+
+**Ve ters-yön kuralını aynı belgede PAM'in kendisi yazmıştı:** *"doğrulanmamış
+bir mekanizmaya yaslanan kural, hiç koruma olmamasından KÖTÜDÜR çünkü koruma
+varmış gibi görünür."* Kuralı yazdı, kendi çözümüne uygulamadı — ve **silmedi,
+gereksinime yazdı**: *"öğrenilecek olan şey tam o."*
+
+Bağı **iki yönlü** yazdı. PQA ölçtü — **iki kaynak değil, iki bakış**:
+
+```
+kanal betiği tarafı   "bu önkoşul kapanmazsa NELER kırılır"  → aşağı bakıyor
+merkez gerilimi       "bu koruma NEYE dayanıyor"             → yukarı bakıyor
+```
+
+*"Bir okuyucu yalnız B'yi okusa 'bu koruma neye dayanıyor' öğrenir ama 'önkoşul
+kapanmazsa başka ne kırılır' öğrenemez."* PQA'nın şerhi: bugün tek kaynak,
+**kalıcı garanti değil** — ayrışma ancak biri değiştiğinde görülür.
+
+### PAM'in üçüncü özne düşürmesi — alışkanlık teşhisi
+
+*"B1 kapanışı (edilgen), B5 ölçüm atfı, şimdi bu ikisi. Bir kere hata, üç kere
+alışkanlık."* Ve öz eleştirisi Clara'nınkinden sert:
+
+> *"Kanonum `BHV-NO-RUSH` kapsam daraltmayı meşru sayıyor AMA 'söylenmesi'
+> şartıyla. Ben daraltmadım, DERİNLEŞTİRDİM, ve o seçimi hiç söylemedim. Yani
+> sessizce genişleyen bir iş ürettim ve durdurması kullanıcıya kaldı."*
+
+### PCA kendi cümlesini çürüttü — ölü monitör kapandı
+
+22:18'de *"oturum devam ediyor, monitörüm 19:06'da öldü"* demişti (bu B'yi ima
+ediyordu: oturum içi ölüm, kural gerektirir). **Transcript'ten ölçtü:**
+
+```
+en büyük boşluk    189.5 dk   19:06:50 → 22:16:22   (ikincinin DÖRT katı)
+boşluktan sonraki ilk kayıt    "Continue from where you left off"
+dosya sistemi      19:06 sonrası eski oturum dizininde HİÇ yazım yok
+```
+
+**Sonuç: üç vaka da oturum-arası.** PAM'in *"deterministik"* çıkarımı zayıflamadı,
+**güçlendi**. Mevcut kanon (`ISD-OPEN-YOUR-BOX`) yeterli — periyodik canlılık
+kuralı için **veri yok**.
+
+Ve kapatmadığı şey doğru: *"bu ölçüm 'monitör oturum içinde ölmez' demiyor,
+'bugün ölmedi' diyor."* `Monitor`'ün otomatik durdurma eşiği hâlâ ölçülmedi ve
+PCA'nın vakası ona hiç yaklaşmadı (105 dakikada 7 olay).
+
+### PCA'nın davranış testi hazır — 16 soru, 8 eksen
+
+Clara altı eksen vermişti (üç kesişme + üç risk); PCA **iki eksen daha** çıkardı
+(*"başarılı çalıştı ≠ doğru çalıştı"* ve *"üç eşik ayrı ayrı yazılır"*) ve
+birincisini **dört rolde birden** sınadı — gereksinim onu *"rol-üstü"* diye
+işaretlemiş.
+
+Üç tasarım kararı gerekçeli: **rol adı hiçbir soruda geçmiyor** (agent kendi
+rolünü kanonundan bilmeli) · **vakaların çoğu meşru görünüyor** (*"bariz yanlış
+bir istek her kanonu geçer — sınır ihlali CAZİP olduğunda ölçülür"*) · **üç
+soruda bilgi eksik bırakıldı** (doldur mu, bildir mi, bekle mi — rol sınırının en
+keskin ölçümü).
+
+**Cevap anahtarı yok** ve gerekçesini kendi de gördü: *"beklenen davranışı yazan
+kişi testi kendi beklentisine göre kurmuş olur."*
+
+Üç şerh: zorluk kalibrasyonu yapılmadı (*"hepsi geçerse bu kanonun sağlam
+olduğunu değil SORULARIN KOLAY olduğunu da gösterebilir"*) · çok-rollü vaka yok ·
+iki soru B dalı varsayıyor.
