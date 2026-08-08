@@ -350,3 +350,93 @@ uygulanmayacağını* belirliyor, rolün *ne yaptığını* ikiye bölmüyor.
 
 **Bu Clara'nın kararına karşı bir bulgu** (üreten rolü iki dallı bırakma kararı,
 17:21). Kayda geçti; PAD'in tam cevabı beklenecek.
+
+---
+
+## Denetim GEÇMEDİ — kapı çalıştı (18:33)
+
+PQA gereksinimi **reddetti**: altı bulgu, ikisi üretimi bloke ediyor.
+Kendi kapsamını da yazdı: 592 satır tam okuma (diff değil), PCA'nın 450 satırı,
+iki commit doğrulaması, anılan dört kimliğin index'e karşı tek tek kontrolü.
+
+**B1 — merkez koruması yarım.** Fabrikada koruma **iki parçalı**, gereksinim
+birini almış. Ve kapanış bölümü **edilgen** yazılmış (*"sonuç planlayana DÖNER"*).
+PQA'nın gösterdiği tarih: fabrikada aynı kural 2026-08-07'de **özne kazandı,
+çünkü öznesiz hâli sahada kırıldı** — üç commit denetlenmeden kaldı, çünkü
+hiçbiri kendine *"ilet"* demiyordu. Yeni takım aynı cümleyle başlıyor.
+
+**B2 — PCA'nın İKİNCİ ölçümü gereksinimde yok.** `emsal-skill-katmani-bulgu.md`
+(510 satır, 92 SKILL.md) hiç işlenmemiş. Zamanlama: gereksinim 17:26'da
+commit'lendi, ölçüm 17:40'ta bitti. **Clara'nın iş sırası kurgusundan.**
+
+Ve dördüncü bir şey: **her iki PCA dosyası da commit'lenmemiş** — commit'li bir
+belge, versiyonsuz bir dosyaya atıf veriyor.
+
+**B3-B6 (bloke etmeyen):** dal seçim anı tanımsız · `status.md` yok, günlük
+gereksinimin içinde · bir ölçümün öznesi yazılmamış (PCA ölçtü, edilgen yazıldı) ·
+gereksinim *"var olmayan mekaniğe dayanma"* dersini yazıyor ama kanal düzenini
+emsal alıyor — **kanal betikleri git'te değil.**
+
+**PQA üç şeyi de ONAYLADI (kayıt için):** PAM'in *"sınırı aştım mı"* şüphesi
+**yersizmiş** — üç *"kanonda ne bulunmalı"* cümlesi de ne isteniyor söylüyor,
+nasıl yazılacağını değil. `PAM-WRITE-DOCS-ONLY` korunmuş. Ve olçüt uyarlaması
+**haklı** ama **çift değiştirmiş** (emsalde planlayan↔denetçi, burada
+planlayan↔üreten) ve bu yazılmamış — boşluk değil **eksik şerh**.
+
+## PAD'in planı — Clara'nın kararını çürüttü (18:33)
+
+**İki dallı rol tanımı kararı GERİ ALINDI.** Clara 17:21'de üreten rolü iki
+dallı bıraktırmıştı. PAD ölçtü: 139 kural tanımının hiçbiri rolü ikiye bölmüyor;
+koşullu görünen altısı kuralın *uygulanıp uygulanmayacağını* belirliyor.
+
+**Ters yönde emsal:** `YT-ASSUME-BACKGROUND` belirsizliği dallandırmıyor, **tek
+varsayıma sabitliyor** — ve o kuralın **ilk hâli dallanmıştı, ölçüm düzeltti.**
+
+**PAD'in gerekçesi Clara'nınkinden güçlü:** dallı tanım belirsizliği çözmüyor,
+**her tura dağıtıyor** — agent her işin başında *"hangi daldayım"* diye soruyor
+ve cevap rol tanımından çıkmıyor.
+
+**Çözüm — tek tanım + eşik:** rolün işi tek cümleyle sabitlenir (*"otomasyonu
+çalışır hâle getirir"*), sonra bir eşik kuralı: çalışır hâlde değilse bu
+**söylenir** ve kapsam daralması olarak işaretlenir. Fark: dallı tanımda iki meşru
+sonuç var, agent seçer; eşikli tanımda **tek meşru sonuç** var, diğeri
+**bildirilmesi gereken sapma.** PQA bağımsız olarak aynı yere baktı (B3).
+
+**Katman kararı — A yönünde ama emsal ölçeğinde değil.** 4 rol için 5-6 skill,
+ağırlık `SKILL.md`'de, reference **yalnız mekanik** için.
+
+Asıl gerekçe **hook ölçümü** — PAD dosyadan doğruladı, iddiaya güvenmedi:
+A ailesinin `preload-skills.py`'si *"Skill aracını kullan, Read gövdeyi parçalı
+getirir"* diyor. Yani **hook SKILL'i kurtarıyor, REFERENCE'i kurtarmıyor** — ve
+A kanonunun %69'u reference'ta. PAD kendi ölçülmüş yarasını dayanak yaptı:
+*"fabrikada bir agent kanonunun %91'ini hiç görmedi."*
+
+**Ve `uretim-standardi` yetim çıktı.** PAD üç yoldan kanıtladı (skill listesi ·
+`STD-` prefixi sıfır · grep'te sıfır atıf), skill'i okudu (268 satır),
+örtüşme ölçtürdü: 21 STD kimliğinden **4 doğrudan karşılıklı, 12 karşılıksız**;
+ters yönde PAD'de olup onda olmayan 13+ kimlik (`YT-*` serisinin tamamı — o seri
+preload açığının keşfinden **sonra** doğdu). Kendi kanonuyla üretecek, üç STD
+kalemini **yöntem** olarak kullanacak (ground-truth · dış-dayatma/bizim-tercih
+işaretlemesi · ölçemedim-vs-temiz).
+
+**Clara'nın kararları (18:42):** ayrı `rules-index` + ayrı kimlik uzayı (fabrika
+prefixleriyle çakışmayacak) · ADIM 0 (N8N ground-truth) **kapsamda ama bekliyor,
+atlanmıyor** — o zamana kadar N8N'e dayanan her kural dayanağını taşıyacak.
+
+## Clara'nın hatası — PCA itiraz etti, haklıydı (18:42)
+
+Clara PCA'ya *"dosyaları commit'le"* dedi. **PCA reddetmedi, itiraz etti:** commit
+onun işi değil — kendi tanımı açık (*"ürettiğini PAD commit'ler"*),
+`ISD-COMMIT-THEN-PUSH` `docs/` altını PAM'e veriyor.
+
+**PCA'nın gerekçesi:** *"elimde imkân var, yetki yok"* — `ISD-STAY-IN-ROLE`'ün
+lafzı. Ve asıl uyarı: *"sınır metinle çizili, aşındığı an görünmüyor"* — bir kez
+commit atsa, bir sonraki turda *"zaten commit'liyordum"* gerekçesiyle başka
+dosyaya uzanabilir.
+
+**Clara'nın hatasının adı:** bulguyu doğru gördü, **çözümü kanona bakmadan verdi.**
+Bir şeyin yapılması gerekmesi, onu **kimin** yapacağını söylemiyor. Karar geri
+alındı, iş PAM'e gitti.
+
+**Ve PCA itiraz ederken çözümü de taşıdı** — iki dosyanın kapsam özetini çıkarıp
+PAM'in işini kolaylaştırdı. `BHV-OBJECT-DONT-REFUSE` böyle işliyor.
