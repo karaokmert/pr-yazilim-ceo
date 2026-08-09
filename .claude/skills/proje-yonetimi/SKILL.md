@@ -1,6 +1,6 @@
 ---
 name: proje-yonetimi
-description: Clara'nın bir projede agent ekibini yönetme işi — iş zincirinin sırası (Clara→PAM→PAD→PQA→Mert'in push onayı), handoff taşıma, denetim turlarını izleme, sapmayı yakalama ve işi kapatma. Bu skill'i bir projede agent'lara iş verilecekte, yürüyen bir iş izlenecekte ya da kapatılacakta aç: "şu işi fabrikaya ver", "PAM'e ilet", "iş nerede kaldı", "denetim ne durumda", "bu işi kapatalım", "ekibi yönet", "handoff yaz" denen her durumda. Ayrıca bir zincir tıkandığında da aç — kimin neyi beklediği ve nerede durulacağı burada. Kapsam dışı — kanal mekaniği (`kanal-kurulumu`), oturum açılış/kapanış sırası (`oturum-duzeni`), haftalık plan (`sprint-yonetimi`).
+description: Clara'nın bir projede agent ekibini yönetme işi — hangi ekip olursa olsun (fabrika, Özel Yazılım, Websitesi, N8N ya da yeni bir takım). İş akışını o ekibin kendi kanonundan çıkarma, handoff taşıma, denetim turlarını izleme, sapmayı yakalama, işi kapatma. Bu skill'i bir projede agent'lara iş verilecekte, yürüyen bir iş izlenecekte ya da kapatılacakta aç: "şu işi ekibe ver", "şuna ilet", "iş nerede kaldı", "denetim ne durumda", "bu işi kapatalım", "ekibi yönet", "handoff yaz" denen her durumda. Ayrıca bir zincir tıkandığında da aç — kimin neyi beklediği ve nerede durulacağı burada. Kapsam dışı — kanal mekaniği (`kanal-kurulumu`), oturum açılış/kapanış sırası (`oturum-duzeni`), haftalık plan (`sprint-yonetimi`).
 ---
 
 # Proje yönetimi
@@ -8,33 +8,67 @@ description: Clara'nın bir projede agent ekibini yönetme işi — iş zincirin
 Bir projede agent ekibini yürütme işi. **Clara zincirin taşıyıcısı ve yöneticisidir** —
 her adımda kendi kararını değil **trafiği** yönetir.
 
-Bu bir görevdir: başlar, sürer, kapanır.
+Bu bir görevdir: başlar, sürer, kapanır. Ve **her ekipte aynı** — fabrika, Özel Yazılım,
+Websitesi, N8N ya da yarın kurulacak bir takım.
 
-## Zincirin sırası
+## İŞ AKIŞI EKİBE GÖRE DEĞİŞİR — ilk iş onu okumak
 
-Mert'in tarif ettiği akış (2026-08-07):
+**Sabit bir zincir yoktur.** Her ekibin kendi iş akışı vardır ve o akış **ekibin kendi
+kanonunda** yazılıdır. Ezberlenmez, **okunur.**
+
+Bu skill'in verdiği şey akışın kendisi değil, **akışı çıkarma yöntemi** ve her ekipte
+değişmeyen üç Clara kuralı.
+
+### Akışı çıkarmak — dört soru
+
+Bir ekiple çalışmaya başlarken **önce şunlar okunur**, sonra iş verilir:
+
+**Bir — bu ekipte kim var, hangi rol?** Ekibin agent tanımları (`.claude/agents/`,
+plugin dizini ya da `team/{takım}/KURULUM.md`). İsimler varsayılmaz.
+
+**İki — iş hangi sırayla akıyor?** Kimden başlar, kime gider, kim kapatır. Ekibin
+kanonunda genellikle bir *"iş akışı"* ya da *"handoff"* bölümü vardır.
+
+**Üç — push/onay kimde?** Bu **ekipten ekibe değişiyor** ve yanlış varsayılırsa ya
+bekleyen bir iş bekletilir ya da olmayan bir onay beklenir.
+
+**Dört — kanal var mı?** Varsa trafiği kanaldan taşırsın; yoksa ekrandan — handoff'u
+basarsın, Mert iletir.
+
+### Ölçülmüş örnekler — kural değil, emsal
+
+Bugüne kadar görülen akışlar (2026-08-09). **Bunlar şablon değildir**, her ekip kendi
+kanonundan doğrulanır:
 
 ```
-Clara → PAM (iş)
-PAM ↔ Clara   PAM işi sorgular, soru sorar, belirsizlik danışır
-              Clara cevaplayabiliyorsa cevaplar
-              ONAY gerekiyorsa Mert'e sorar, döner
-PAM → gereksinim → Clara
-              Clara sapma/kararsızlık görmezse ONAYLAR
-PAM → handoff → Clara → PAD
-              araya PCA girecekse: PAM handoff yazar, Clara iletir
-PQA onaylayana kadar sürer → commit → Clara'ya bilgi
-Clara → Mert: brief (ne yapıldı · ne değişti · ne karar alındı)
-Mert → PUSH ONAYI
+fabrika  PAM → PAD → PQA (+PCA ölçen)        push onayı MERT'te
+OY       PA  → BE/FE/MB/DO → QA (+CA/TE)     push QA'da
+WEB      web-PA → web-FSD → web-QA           push QA'da
+N8N      analyst → engineer → qa-engineer    (kurulum aşamasında)
 ```
 
-**Zincirin görünürlüğü Clara'nın taşımasıyla sağlanıyor** — agent'lar birbirini
-çağırmıyor. Bir agent diğerini doğrudan çağırdığında rapor kullanıcıya değil **çağırana**
-gider; ölçüldü 2026-07-30 (bir denetçi raporunu üreticiye verdi, atmadığı bir push'u
-*"attım"* dedi).
+Dördü de farklı: isimler farklı, üreten sayısı farklı, **push sahibi farklı.** Ortak
+olan tek şey işin bir yerde planlanıp, bir yerde üretilip, bir yerde denetlenmesi — ama
+o bile bir varsayım, ekipte doğrulanır.
 
-**Üç iş varsa üçü de aynı şekilde yönetilir** ve push onayı **her iş için ayrı** alınır.
-Bir onay diğerine geçmez.
+**Bir işlevi taşıyan kimse yoksa bu bir bulgudur.** Denetleyeni olmayan bir ekip push
+edemez; bunu Mert'e bildirirsin, kendin kapatmazsın.
+
+**Üreten birden çokça** (OY'daki gibi) her biri ayrı handoff alır ve **ayrı denetlenir** —
+bir onay diğerine geçmez. Paralel kollarda **hangi kol nerede kaldı** ayrı izlenir.
+
+## Değişmeyen üç şey — Clara'nın kuralları
+
+Akış ekibe göre değişir; **bunlar değişmez.**
+
+**Bir — zinciri Clara taşır, agent'lar birbirini çağırmaz.** Bir agent diğerini doğrudan
+çağırdığında rapor kullanıcıya değil **çağırana** gider; ölçüldü 2026-07-30 (bir denetçi
+raporunu üreticiye verdi, atmadığı bir push'u *"attım"* dedi).
+
+**İki — her iş ayrı yönetilir.** Üç iş varsa üçü de aynı şekilde; onay **her iş için
+ayrı** alınır.
+
+**Üç — kural dayatılmaz, iş anlatılır.** Aşağıda.
 
 ## En sert kural — kural dayatmazsın, işi anlatırsın
 
@@ -49,7 +83,7 @@ bu bir **gelişim bulgusudur**, düzeltilecek bir hata değil.
 
 Ayıran soru: *bu cümle ona ne yapacağını mı söylüyor, yoksa ne bulunduğunu mu?*
 
-**Handoff yazarken kim kime yazıyor karıştırılmaz.** Clara PAM'e yazarken PAM'in PAD'e
+**Handoff yazarken kim kime yazıyor karıştırılmaz.** Clara planlayana yazarken onun üretene
 ne diyeceğini yazmaz; kararı bildirir ve **handoff'unu ister.**
 
 ## İşe başlarken — beş adım
@@ -90,8 +124,8 @@ istersin.
 
 ## Yürürken — ne izlenir
 
-**Denetim turları.** Bir iş PQA'dan geçene kadar sürer. Turlar arasında ne değiştiğini
-izlersin; aynı bulgu iki kez dönüyorsa orada bir gelişim bulgusu var.
+**Denetim turları.** Bir iş **denetleyenden** geçene kadar sürer. Turlar arasında ne
+değiştiğini izlersin; aynı bulgu iki kez dönüyorsa orada bir gelişim bulgusu var.
 
 **Sapma.** Bir agent kendi rolünün dışına çıkıyorsa, ya da bir karar sana sorulmadan
 veriliyorsa yakalanır — ama düzeltmesi sana ait değil, **bildirmek** sana ait.
@@ -102,8 +136,12 @@ sağlıklı *görünürken* mesaj gelmiyor olabilir.
 
 ## Kapanış
 
-Zincir kapandığında: PQA onayı → commit → Clara'ya bilgi → **Mert'e brief** → push
-onayı **Mert'te.**
+Zincir kapandığında: **denetleyenin onayı** → commit → Clara'ya bilgi → **Mert'e brief.**
+
+**Push kimde — ekibe göre değişir, varsayılmaz.** Fabrikada Mert'te; OY ve WEB'de
+QA'da (kalite kapısı kendi atıyor). Hangisi olduğu ekibin kanonunda yazılı; okunur.
+Clara her hâlükârda **brief'i verir** — push başkasındaysa bile Mert ne olduğunu
+görmelidir.
 
 Clara push'u kendi başına atmaz, kapanışı kendi ilan etmez. *"Bitti"* demek bir hüküm ve
 o hüküm denetçinin; *"bitti mi"* diye sormak Clara'nın.
