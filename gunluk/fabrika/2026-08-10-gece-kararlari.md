@@ -178,3 +178,64 @@ sıfır ürün çıktı.
 **Sınırı neden orada çizdim:** bulgu düzeltmesi **yöntem** kararıdır, PAM'in işi.
 Kapsam değişikliği ise **benim** işim — çünkü kapsamı Mert'in altı maddesi ve benim
 gereksinimim belirliyor. Bir kalem düşerse o bir yetki sorusu, hız sorusu değil.
+
+---
+
+## BULGU 2 (01:10) — Kendi izleyicim yanlış alarm üretti
+
+**Ne oldu:** İzleyiciye *"team dizininde üretim başladı mı"* diye bir kontrol koydum:
+`ls team/*/. | wc -l`. Bu komut **boş klasörleri de saydı** — `team-1-oy` bomboş ama
+`.` ve `..` girdileri sayıya girdi. İzleyici *"TEAM DIZININDE URETIM BASLADI"* dedi,
+gidip baktım: `team/` bomboş, üretim başlamamış.
+
+**Neden bu bir bulgu:** Bu gecenin **ikinci** ölçüm arızası ve ilkiyle aynı sınıftan —
+`send.py` mesajı yanlış yere yazıp exit 0 döndürmüştü, bu komut yanlış şeyi sayıp
+pozitif döndü. **Komut çalıştı, çıktı üretti, ama ölçtüğü şey ölçmek istediğim şey
+değildi.**
+
+Ve tuzağa **ben** düştüm — memory taramasında topladığım envanterin (*"araç sessizce
+yalan söylüyor"*) canlı örneğini kendi elimle ürettim. Aynı gece, iki kez.
+
+**Düzeltme:** izleyici `find team -mindepth 2 -type f | wc -l` ile yeniden kuruldu —
+gerçek dosya sayıyor, dizin girdisi değil. Eşik de 40 dosya (bir takım bundan az
+dosyayla üretilmiş sayılmaz).
+
+**Yeni takıma taşınacak ders:** sessiz kırılma envanterine bir madde daha —
+*"`ls <dizin>/*/.` boş dizinde de pozitif döner; varlık ölçümünde `find -type f`
+kullanılır."* Ama asıl ders daha genel ve zaten kayıtlı: **"her şey pozitif" çıkan
+ölçüm önce kendi komutundan şüphelenir** (memory'de beş kayıtta, üç kutuda yazılı
+kural adayı). Ben o kuralı biliyordum ve yine de uygulamadım — çünkü pozitif sonuç
+**beklediğim** sonuçtu.
+
+---
+
+## BULGU 3 (02:06) — Zincir 55 dakika tıkalı kaldı: taşıma benim işimdi
+
+**Ne oldu:** PAM denetim devrini **01:05'te** yazdı ve bana **01:06'da** haber verdi:
+*"Denetim devri YAZILDI — outbox'ımda, PQA'ya iletilmesi gerekiyor
+(`ISD-RELAY-DONT-CALL`: ben çağırmıyorum, yönetici iletiyor)."*
+
+**Yönetici benim.** Mesajı taşımadım. Zincir **02:06'ya kadar** durdu — 55 dakika.
+
+**Neden fark etmedim:** izleyicim *"PQA'nın inbox'una mesaj düştü mü"* diye bakıyordu.
+Oysa oraya mesajı **benim** koymam gerekiyordu. Yani izleyici, benim yapmadığım işin
+sonucunu bekliyordu — sonsuza kadar bekleyecekti.
+
+**Bu diğer iki bulgudan farklı: burada hiçbir şey bozulmadı.** PAM kanonuna **doğru**
+uydu, bloğu yazdı, bana bildirdi. Arıza bendeydi — kanalın taşıma mekaniğini bilmeden
+nöbete başladım.
+
+**Düzeltme — kalıcı:** `.claude/relay.sh` yazıldı. Her agent'ın outbox'undaki,
+başkasına adreslenmiş ve henüz taşınmamış mesajı hedefin inbox'una kopyalıyor; taşınan
+mesajları `.relay-state`'te işaretliyor (aynı mesaj iki kez gitmiyor). 45 saniyede bir
+koşan kalıcı izleyiciye bağlandı.
+
+**Betiğin kendisi iki kez düştü ve ikisi de öğretici:**
+- `exit 1` — taşıyacak mesaj yoksa 1 döndürüyordu, döngüyü kırdı. Kendi kurduğum tuzak.
+- **Boş inbox'ta glob eşleşmiyor** — zsh eşleşmeyen glob'da doğrudan hata veriyor
+  (`no matches found`). `find -type f` ile düzeltildi.
+
+**Ders — ve bu geceden çıkan en önemli olabilir:** bir zinciri izlerken sorulacak soru
+*"karşı taraf ne zaman hareket edecek"* değil, **"bu adımı kim yapıyor?"** Cevap *"ben"*
+ise izlemek değil **yapmak** gerekir. İzleyici kurmak, yapılmayan bir işi bekleyen bir
+nöbete dönüşebiliyor.
