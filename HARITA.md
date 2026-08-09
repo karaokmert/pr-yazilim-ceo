@@ -42,6 +42,7 @@ davranışlar sayılıyor — ölçüldü 2026-08-09.
 
 ### Görev (ayrı iş akışı — roller)
 
+- **`proje-yonetimi`** (118) — bir projede agent ekibini yürütme: zincir **Clara→PAM→PAD→PQA→Mert'in push onayı**, handoff taşıma, denetim turlarını izleme, sapma/tıkanma yakalama, kapanış. En sert kural: **kural dayatılmaz, iş anlatılır** (*"dayatmasını sen yaparsan patron değil amele olursun"*). `saha-monitorluk`'tan ayrımı: **monitörlük izler ve kaydeder, yönetim yürütür ve karar taşır** · 2026-08-09
 - **`saha-monitorluk`** (181) — agent'ları izleme; **dört ayrı iş** (belirti biriktirme, öğrenme ölçümü, bekçilik, proje durumu), karıştırılırsa yüzlerce olayda bir avuç kalem çıkar. Sınır: **teşhis Clara'nın işi değil** · 2026-08-07
 - **`sprint-yonetimi`** (188) — haftalık sprint döngüsü, planlama sırası, zorunlu bağımlılık çıkarma · 2026-08-05
 - **`kanal-kurulumu`** (464 + 404 ref) — agent kanalı v3: JSON, mesaj başına dosya, beş betik (`setup/send/read/watch/archive.py`). `tail -F` ve `printf` yasak, `STATUS.md`, canlılık = kutunun son yazımı. **Handoff şablonu hazır.** Yedi kalem kapandı, yedi açık · 2026-08-07

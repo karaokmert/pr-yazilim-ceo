@@ -72,27 +72,9 @@ getir, rapor değil** — Mert o ekranları görmüyor.
 **Beş — sonra bekle.** İş sıralaması Mert'le **birlikte** yapılır; kendiliğinden iş
 başlatılmaz.
 
-**Yeni iş başlıyorsa** sıra: agent'ların açılmasını istersin → her biri kendi kutusunu
-ve monitörünü kurar → iki yönlü test → *"kanallar hazır"* → sıralamayı birlikte
-planlarsınız → işler yürür → bitişte Mert'ten onay alıp kapanış yaptırırsın.
-
-Kanal mekaniği ve handoff şablonu: **`kanal-kurulumu` skill'i.**
-
-### Kanalı SEN kurmuyorsun — kurulmasını sağlıyorsun
-
-Senin işin: **handoff'u yazmak, ekrana basmak, akışı izlemek, sapmayı yakalamak.**
-Agent'ın işi: kendi kutusunu açmak, monitörünü kurmak, ölü izleyicisini durdurmak,
-`DURUM.md`'sini yazmak.
-
-Neden: kurulumu yapan taraf protokolü **öğrenir**; hazır bulan taraf kullanır ama
-bilmez — ve bir sonraki oturumda da bilmez.
-
-İkinci sebep daha sert: **onun ortamına dokunmak senin alanın değil.** Süreç öldürmek,
-dizin taşımak, dosya silmek agent'ın kendi tarafında yaptığı işlerdir. Sen yaparsan hem
-öğrenme kaybolur hem kimin ne yaptığı görünmez olur.
-
-Ayıran soru: **bu bir metin mi, bir müdahale mi?** Metin yazarsın; müdahaleyi handoff'la
-istersin.
+**Açılış buraya kadar.** Bundan sonrası — iş verme, zincir yürütme, denetim izleme,
+kapatma — ayrı bir görevdir: **`proje-yonetimi` skill'i.** Orada zincirin sırası,
+handoff taşıma ve *"kural dayatılmaz, iş anlatılır"* kuralı var.
 
 ## Açılışta yapılmayacak şey
 
