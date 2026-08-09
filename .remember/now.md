@@ -7,3 +7,7 @@ Skill validation: N8N 1/3 complete, behavior 4/4 done, S1/S5 decisions recorded,
 Fixed list-count bug in clara.md by removing dividing para; rewrote SKILL.md to generalize factory chain names (12 instances PAM/PAD/PQA) to template, OY test passed, committed.
 ## 07:52 | main
 Added four workflow rules to SKILL.md (measurement-backed); updated clara.md; commit 3fd9fc6; set up test channel (clara-sinama) to verify rules with new Clara agent.
+## 07:57 | main
+Set up clara-sinama test channel via 5-step protocol (box, Monitor listener, verify, read, confirm); answered 3 test Qs from clara-merkez on Clara roles & canon.
+## 07:59 | main
+Fixed monitoring (was reading wrong box); administered 5-Q interview to clara-yeni with Q1-3 passing (roles, team protocol, silence types) and Q4-5 pending (research-reflex, fix-cause).
