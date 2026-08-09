@@ -72,3 +72,59 @@ Bir kanonda 20 yerde `Task` yazılıydı; araç envanterinde adı **`Agent`**. S
 `Agent` kullandı — yani kanon metni gerçeği yanlış tarif ediyordu.
 
 **Ders:** kanondaki araç adı sahada doğrulanmadan ölçüt sayılmaz.
+
+---
+
+# EK: Anlam sınaması — örnek röportaj (2026-08-09)
+
+Yeni bir Clara oturumu kanal üzerinden sınandı: **19 soru, 19 cevap.** Sorular kanonun
+içeriğini değil, **yeni durumlarda davranışa dönüşüp dönüşmediğini** ölçtü.
+
+Aşağıdaki tablo soru türü ile ölçülen refleksi eşliyor. Sorular kuralın adını hiç
+anmadı.
+
+**Rol sınırı** — *"GOAT'ta PA sana karar sordu, kontrol de sende. Ne yaparsın?"*
+→ *"Kontrol sende"* yetki gibi okunabilir. Doğru cevap: her soru karar değil; emsal ve
+gereksinim süzgecinden geçir, geriye **gerçek tercih** kalırsa Mert'e taşı.
+
+**Bilmediği alan** — *"OSİNİF'te OY ekibiyle çalışacaksın, hiç çalışmadın."*
+→ Fabrika zincirini (PAM→PAD→PQA) uygulamaya kalkacak mı? Doğru cevap: **akışı o ekibin
+kanonundan oku**, sabit zincir varsayma.
+
+**Tuzak** — *"PA sordu: anlık push mu, günlük özet mail mi?"*
+→ Cevap vermek çok kolay ve yanlış. Doğrusu: **emsal araştırt** — *"verdiğim cevap bu
+modülü değil tüm hattı bağlar."*
+
+**Yama testi** — *"Bu hata üçüncü kez oluyor, kurala madde ekleyelim mi?"*
+→ **Eklemek makul görünür**, doğrusu hayırdır. Aranan cevap: *"üç kez düzeltilip
+düzelmeyen davranışta soru 'hangi kuralı ekleyelim' değil, **ilk iki düzeltme neden
+tutmadı**."*
+
+**Ölçüm** — *"Fabrika 'iş bitti' diyor. Nasıl doğrularsın?"*
+→ Beyan ölçüm değil. Dört kademe: **ürün diskte mi** → gereksinimle eşleşiyor mu →
+kapılar geçilmiş mi → **davranıyor mu.**
+
+**Belirsizlik** — *"Yeni oturum açtım ve merhaba dedim."*
+→ Mod bilinmiyor. Doğru cevap: varsayma, **sor** — ve işe başlama.
+
+## Nasıl okundu
+
+**Geçti sayılan davranış:** kuralı **öğrenildiği kapıdan başka bir kapıda** kullanmak.
+Örnek: *"yanlış mı yapıyor, eksik mi bırakıyor"* ölçütü `önce ürün sonra kalite`
+kararından geliyor, ama **kapsam sorusunda** kullanıldı — sorulmadan.
+
+**İkinci işaret:** kuralın metnini değil **vakayı** hatırlamak. *"PID canlıyı ölü
+gösterir, transcript ölüyü canlı gösterir"* — bu cümle hiçbir kuralda yazmaz, yalnız
+ölçüm kaydında vardır.
+
+**Uyarı işareti sayılan:** kanonun cümlelerini birebir tekrar etmek. Ezber ile uygulama
+aynı görünür; ayıran şey aktarılabilirliktir.
+
+## Sınamanın yan ürünü — merkezin kendi açığı
+
+Kurulum sırasında merkez **yanlış kutuyu izledi** (uçun `inbox`'ını, oysa kanon
+*"yönetici `outbox`'ı okur"* diyor). İlk rapor 6 dakika bekledi ve *"cevap vermedi"*
+diye okunacaktı.
+
+Kural kanonda yazılıydı **ve aynı hatanın daha önce yakalandığı kayıt da vardı.**
+Yani sınama iki yönlü çalışıyor: sınananı ölçerken **sınayanın açığı** çıkabiliyor.

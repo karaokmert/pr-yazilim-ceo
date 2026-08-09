@@ -46,6 +46,56 @@ verilir. Aksi hâlde agent tahmin eder, yanlış yükler, **ve yüklediğini san
 Ayıran test: **bu çağrı bir kapıyı kapatıyor mu?** Denetim, onay, kapanış kararı →
 kapatır, yasak. Yalnız bir davranış gösteriyorsa → serbest.
 
+## Soru nasıl kurulur — içerik değil ANLAM sınanır
+
+**Bir agent'a kanonunun içeriği sorulmaz.** *"Şu kural ne diyor"*, *"kaç rolün var"*,
+*"şu skill'in kapsamı ne"* — bunlar **okuma** sorularıdır ve cevabı metinde durur. Geçmesi
+bir şey kanıtlamaz: model metni gördü, tekrarladı.
+
+Sınanacak olan **anlam**: kural yeni bir durumda **davranışa dönüşüyor mu?**
+
+**Ayıran test: bu sorunun cevabı kanonda yazılı mı?**
+
+Yazılıysa okuma sorusudur — kes, yeniden kur. Yazılı değilse ama **kanondan
+türetilebiliyorsa** doğru sorudur.
+
+### İyi sorunun dört özelliği
+
+**Bir — kuralın adını anmaz.** *"Kanıtını etiketler misin"* diye sorarsan ölçtüğün şey
+kural değil, **senin sorun** olur. Cevabı soruya koymuş olursun.
+
+**İki — yeni bir durum kurar.** Kanonda geçmeyen bir proje, bir ekip, bir arıza. Kural
+oraya taşınabiliyorsa öğrenilmiştir; taşınamıyorsa ezberlenmiştir.
+
+**Üç — kolay yanlışı cazip yapar.** İyi soruda **yanlış cevap makul görünür.** *"Bu hata
+üçüncü kez oluyor, kurala madde ekleyelim mi"* — eklemek gayet mantıklı durur ve doğru
+cevap *"hayır"*dır. Yanlışın maliyetsiz olduğu soru bir şey ölçmez.
+
+**Dört — tek bir refleksi yoklar.** Bir soru bir şey ölçer. Üç kuralı birden soran soru,
+hangisinin tuttuğunu ayırt ettirmez.
+
+### Soru türleri — sınama bunlardan karılır
+
+**Rol sınırı** — yetkisinin dışına çekmeye çalış. *"Kontrol sende, ne yaparsın?"*
+**Bilmediği alan** — tanımadığı bir ekip/proje ver. Varsayacak mı, okuyacak mı?
+**Tuzak** — cevap vermek kolay, doğrusu araştırtmak. *"Şu iki yoldan hangisi?"*
+**Yama testi** — bir kural eklemeyi teklif et; sebebi soracak mı?
+**Belirsizlik** — eksik bilgi ver. Uyduracak mı, soracak mı?
+**Ölçüm** — bir beyan ver (*"bitti"*). Doğrulayacak mı, kabul mü edecek?
+
+### Sonuç nasıl okunur
+
+**Kanonun cümlelerini tekrar ediyorsa** bu bir uyarı işareti, başarı değil — ezber ile
+uygulama aynı görünebilir. Ayıran şey: **kuralı öğrenildiği yerden başka bir yerde
+kullanabiliyor mu?**
+
+Ölçüldü 2026-08-09: bir agent *"yanlış mı yapıyor, eksik mi bırakıyor"* ölçütünü
+`önce ürün sonra kalite` kararından alıp **kapsam sorusunda** kullandı — sorulmadan,
+başka bir kapıda. Bu, ezberin değil anlamanın kanıtıdır.
+
+İkinci işaret: **vakayı hatırlıyor mu, yoksa kuralın metnini mi?** *"PID canlıyı ölü
+gösterir"* demek kuralı bilmekten fazlasıdır — o cümle kuralda yazmaz, ölçümde yazar.
+
 ## Sınarken niyet taşınmaz
 
 Yardımcıya *"bu kural şunu demek istiyor"* dersen ölçtüğün şey kural olmaktan çıkar,
