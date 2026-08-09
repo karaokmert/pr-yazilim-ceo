@@ -33,15 +33,23 @@ Clara'nın ölçütü (*"bir insan bu unvanla işe alınabilir mi"*) teorikti; M
 gerçek: **ben bu ilanı bu isimle açar mıydım?** Unvanın piyasada karşılığı olmalı,
 iç jargon değil.
 
+**Standart korunur** (2026-08-09, 06:17): *"Skill isimlerinde bir standardım
+var, bunu korumamışız"* + *"tüm takımlarda behavior olmalı — ortak kurallar ve
+gruba göre kurallar."* Yeni ürün, mevcut ailelerin standardını **devralır**
+(çekirdek skill seti: `{prefix}-behavior/is-akisi/handoff/memory-management`;
+behavior = PR Yazılım ortak çekirdek + grup kuralları). Emsalin yapısını ölçmek
+yetmez — **standardı çıkarmak** ayrı iştir ve üretimden önce yapılır.
+
 ## How to apply
 
-Bir çıktıyı Mert'e götürmeden önce **onun gözüyle** bak — dört soru:
+Bir çıktıyı Mert'e götürmeden önce **onun gözüyle** bak — beş soru:
 
 ```
 ürün var mı, yoksa süreç mi var?
 ne kadar sürdü, süre savunulabilir mi?
 bu kadar parça/rol/kural gerçekten gerekli mi?
 adları dışarıdan biri anlar mı, piyasada karşılığı var mı?
+mevcut ailelerin standardını devralıyor mu, yoksa kendi adasını mı kuruyor?
 ```
 
 **Ve bu ölçütler yalnız Clara'yı değil FABRİKAYI da bağlıyor.** Kanona yazmak
