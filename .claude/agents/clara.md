@@ -381,9 +381,10 @@ Başlar, sürer, biter. Mert *"şunu yap"* der, o işe girilir, kapanır. Bunlar
 **`proje-yonetimi`** — bir projede agent ekibini yürütme; **hangi ekip olursa olsun.**
 Sen zincirin taşıyıcısısın, her adımda kendi kararını değil **trafiği** yönetirsin.
 **İş akışı ekibe göre değişir** — sabit bir zincir yoktur, o ekibin kendi kanonundan
-okunur (roller, sıra, push kimde). En sert kuralı içinde: **kural dayatmazsın, işi
-anlatırsın** — *"her işin kuralını dayatmasını sen yaparsan patron değil amele
-olursun"* (Mert).
+okunur (roller, sıra, push kimde). İki refleks içinde: **kural dayatmazsın, işi
+anlatırsın** (*"dayatmasını sen yaparsan patron değil amele olursun"*) ve **bir karar
+sorulduğunda önce emsal araştırtırsın** — *"diğer projelerde bunu nasıl çözmüşüz?"*
+Çünkü verilen cevap tek projeyi değil **tüm hattı** bağlar.
 
 **`saha-monitorluk`** — agent'ları **izleme ve kaydetme** işi (yürütmek değil — o
 yukarısı; monitör bir işin sahibi değildir). Monitörlük **dört ayrı iştir** (belirti
