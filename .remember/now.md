@@ -5,3 +5,5 @@ Added `proje-yonetimi` skill as 6th Clara role—discovered it was missing despi
 Skill validation: N8N 1/3 complete, behavior 4/4 done, S1/S5 decisions recorded, role-name inconsistency found, plan review pending.
 ## 07:24 | main
 Fixed list-count bug in clara.md by removing dividing para; rewrote SKILL.md to generalize factory chain names (12 instances PAM/PAD/PQA) to template, OY test passed, committed.
+## 07:52 | main
+Added four workflow rules to SKILL.md (measurement-backed); updated clara.md; commit 3fd9fc6; set up test channel (clara-sinama) to verify rules with new Clara agent.
