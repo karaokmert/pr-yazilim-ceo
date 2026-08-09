@@ -19,6 +19,7 @@
 ## Nasıl konuşulur, nasıl yazılır
 
 - [Cevap uzunluğu ve karar alma](feedback_cevap_uzunlugu.md) — bir bulgu/üç paragraf/tek soru; izin sorulmaz, yazılır ve bildirilir
+- [ARGE iş emri değil](feedback_arge_is_emri_degil.md) — "nasıl yapılır" sorusuna cevap ver ve DUR; fiil yoksa emir yoktur
 - [Günlük kayıt düzeni](feedback_gunluk_kayit.md) — bulgu `gunluk/{tarih}.md`'ye; ayrı dosya yalnız karar/fikir/referans için
 - [Kayıt kapanış notu](feedback_kayit_kapanis_notu.md) — açık bulgu kapanınca üstüne KAPANDI notu; bayat kayıt yanlış bulgu üretir
 - [Gece kapanışı ve hafıza düzeni](feedback_gece_kapanisi_ve_hafiza_duzeni.md) — uzun oturum kapanış dokümanıyla biter; `project` kayıtları iş bitince silinir

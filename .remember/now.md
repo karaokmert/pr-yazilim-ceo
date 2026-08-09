@@ -1,13 +1,9 @@
 
-## 09:15 | main
-Configured Goat agent communication channel (Clara's side with tools, inbox/outbox, monitoring); attempted question to PA without context—rejected as insufficiently clear.
-## 09:22 | main
-Researched startup hook design; confirmed VS Code launch always from fixed directory; designed two-part hook (signal detection + single directive) awaiting implementation.
-## 09:31 | main
-Updated `oturum-duzeni` skill w/ workspace detection rule (IDE→env→no pwd); added reference docs.
-## 09:35 | main
-Validated Goat ch. w/ real ops (sprint Q/A logged), started ClickUp sprint task audit.
-## 09:38 | main
-Restructured Clara startup hook to organize session logs by project (gunluk/{project}/) instead of global closure history, eliminating context bleed between Goat & Osinif.
-## 09:46 | main
-Split 7-9 Aug logs from monolithic gunluk/ev/ into project-based dirs: created gunluk/fabrika/ (factory infra work), reorganized gunluk/ev/ (Clara's own), kept gunluk/goat/ (Goat proj) to isolate session history by project.
+## 17:47 | main
+Diagnosed v8 OY: 46% skills, 62% refs unused; clarified next phase: factory structures v8 agents per v8 format in skill-project, creates teams starting OY.
+## 17:53 | main
+Validated factory structure for v8 re-production: confirmed 15/76 skill preload pattern, selected backend-developer as pilot role, created task list.
+## 18:02 | main
+Analyzed skill-project archive (50K→20 criteria docs), measured factory via n8n case (3 agents/7 skills/15h/5 audits), identified 3 scaling gaps (role test/kanal scripts/runtime validation), backend pilot approved.
+## 18:12 | main
+Wrote gereksinim-taslagi.md requirement and fixed 6 adversarial review findings (counts, quotes, scope contradictions).
