@@ -7,8 +7,12 @@ metadata:
 
 # Durum
 
-**Son kapanış:** `gunluk/2026-08-09-kapanis-2.md` (kısa oturum: pencere ölçümü)
-**Ondan önceki:** `gunluk/2026-08-09-kapanis.md` (aşağıdaki A/B özeti onun)
+> **`gunluk/` artık proje bazlı** (2026-08-09): `gunluk/ev/` · `gunluk/{proje}/`.
+> Açılış hook'u her projenin son kapanışını ayrı listeler — **yalnız kendi modunun
+> kapanışı okunur**, başka projeninki özetlenmez. Eski düz dosyalar `gunluk/ev/`e taşındı.
+
+**Son kapanış (ev):** `gunluk/ev/2026-08-09-kapanis-2.md` (kısa oturum: pencere ölçümü)
+**Ondan önceki:** `gunluk/ev/2026-08-09-kapanis.md` (aşağıdaki A/B özeti onun)
 
 > **Push kapandı.** Aşağıdaki *"İlk hareket: PUSH"* satırı artık geçersiz — ölçüldü,
 > `origin/main..HEAD` boştu. Bekleyen sıra (A bölümü) aynen duruyor.

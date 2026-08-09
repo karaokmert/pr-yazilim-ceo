@@ -23,14 +23,22 @@ KANAL_KOK="$HOME/.pr-kanal"
 
 printf '## Clara açılışı — sinyaller\n\n'
 
-# 1 — Son kapanış dokümanı (adres, içerik değil)
-son_kapanis=$(ls -t "$CLARA_KOK"/gunluk/*-kapanis.md 2>/dev/null | head -1)
-if [ -n "${son_kapanis:-}" ]; then
-  printf '**Son kapanış:** `%s`\n' "$son_kapanis"
-  printf 'İşe başlamadan bunu oku — ne bitti, ne yarım, ne karar bekliyor orada.\n\n'
-else
-  printf '**Son kapanış:** bulunamadı (`%s/gunluk/`) — HARITA.md ile başla.\n\n' "$CLARA_KOK"
-fi
+# 1 — Son kapanışlar, PROJE BAZLI (adres, içerik değil)
+#     gunluk/{proje}/ ayrımı: farklı projelerin kapanışları tek akışta karışıyordu —
+#     yeni oturum yanlış projenin kapanışını özetliyordu (Mert yakaladı, 2026-08-09).
+printf '**Son kapanışlar (proje bazlı):**\n'
+kapanis_var=""
+for d in "$CLARA_KOK"/gunluk/*/; do
+  [ -d "$d" ] || continue
+  proje=$(basename "$d")
+  son=$(ls -t "$d"*-kapanis*.md 2>/dev/null | head -1)
+  [ -n "$son" ] || continue
+  kapanis_var=1
+  printf -- '- %s → `%s`\n' "$proje" "$son"
+done
+[ -n "$kapanis_var" ] || printf -- '- hiç kapanış dokümanı yok — HARITA.md ile başla\n'
+printf 'Modu belirledikten sonra YALNIZ o projenin kapanışını oku —\n'
+printf 'diğerleri başka oturumların işi, özetlenmez.\n\n'
 
 # 2 — IDE penceresi (Gemini CLI eklentisinin bastığı değişken; eklenti kalkarsa
 #     kaybolur — o yüzden varsa bas, yoksa sessiz atla; tek başına mod kanıtı değil)

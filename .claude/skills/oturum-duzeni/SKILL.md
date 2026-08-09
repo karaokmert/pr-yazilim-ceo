@@ -53,9 +53,14 @@ verir, **mod'u vermez** — ikisi ayrı soru, tek ölçütle cevaplanmazlar.
 **Bir — `project_durum.md`'yi oku.** Hafızada duruyor ve tek satırlık bir işaret taşır:
 son kapanış dokümanının adresi. Ayrıntı orada değil, **adres** orada.
 
-**İki — kapanış dokümanını oku** (`gunluk/{tarih}-kapanis.md`). Beş şey söyler: ne
+**İki — kapanış dokümanını oku** (`gunluk/ev/{tarih}-kapanis.md`). Beş şey söyler: ne
 bitti · ne yarım kaldı · Mert'in kararını bekleyen ne var · ölçüldü ama çözülmedi ne var
 · bir sonraki hareket. Ölçütü şudur: **okuyup çalışmaya başlayabilmelisin.**
+
+**Yalnız kendi modunun kapanışını oku.** `gunluk/` proje bazlı ayrışır
+(`ev/` · `goat/` · `websitesi/` ...) ve açılış hook'u her projenin son kapanışını
+ayrı listeler. Başka projenin kapanışı bu oturumun işi değildir — okunmaz,
+**özetlenmez** (ölçüldü: tek akışta yeni oturum yanlış projenin durumunu özetledi).
 
 **Üç — kanal varsa canlılığı doğrula.** `~/.pr-kanal/{proje}/` altında açık kutu varsa
 monitörler **ölmüştür** — oturum kapanınca `Monitor` task'ı gidiyor. Dizin duruyor,
@@ -72,8 +77,10 @@ açılmış, hangi dizinde. Kimse yoksa iş henüz başlamamış.
 **İki — kanal ne durumda?** `~/.pr-kanal/{proje}/` var mı, kaç kutu açık, monitörler
 ölmüş mü (ölmüştür). Kanal yoksa kurulacak, varsa canlandırılacak.
 
-**Üç — iş nerede kaldı?** İki kaynak okunur: kanal kutuları (son mesajlar, kim ne demiş)
-ve agent'ların oturum kayıtları. Kanalda kapanış satırı varsa iş bitmiş; yoksa yarım.
+**Üç — iş nerede kaldı?** Üç kaynak okunur: **o projenin kapanış dokümanı**
+(`gunluk/{proje}/` altındaki en yenisi — hook adresini veriyor), kanal kutuları
+(son mesajlar, kim ne demiş) ve agent'ların oturum kayıtları. Kanalda kapanış
+satırı varsa iş bitmiş; yoksa yarım.
 
 **Dört — Mert'e brief ver.** Onay brief'i biçiminde (`onay-brief` skill'i). Ve **karar
 getir, rapor değil** — Mert o ekranları görmüyor.
@@ -98,7 +105,11 @@ kapanıyor** (Mert *"kapatıyorum"* dedi, uzun bir iş sona erdi).
 **Bir — kalıcı olan ne varsa yazılır.** `CLA-WRITE-BEFORE-CLOSE` zaten emrediyor: bir
 teşhis, bir ölçüt, bir karar gerekçesi, bir açık soru. **Yarım da yazılır.**
 
-**İki — kapanış dokümanı yazılır** (`gunluk/{tarih}-kapanis.md`). Beş bölüm: ne bitti
+**İki — kapanış dokümanı yazılır** (`gunluk/{proje}/{tarih}-kapanis.md` — EV'de
+`{proje}` = `ev`, YÖNETİM'de projenin adı: `goat`, `websitesi`...). Günlük dosyası da
+aynı klasöre gider (`gunluk/{proje}/{tarih}.md`). **Klasör ayrımı atlanmaz** — kapanışlar
+tek akışa yazıldığında sonraki oturum yanlış projenin durumunu özetliyor (ölçüldü,
+2026-08-09: Goat için açılan Clara'ya EV'in push kuyruğu özetlendi). Beş bölüm: ne bitti
 (commit hash'leriyle) · ne yarım kaldı (nerede, kimde, ne bekliyor) · Mert'in kararını
 bekleyen (madde madde, her birinin **neden onun kararı olduğu**) · ölçüldü ama çözülmedi
 · bir sonraki hareket (tek cümle).

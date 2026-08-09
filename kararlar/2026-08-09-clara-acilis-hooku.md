@@ -48,6 +48,24 @@ ya kuralı sessizce deldirir ya işi süründürürdü. Görünür karar ikisind
 - `~/.pr-kanal/` altında 14 dizinden 12'si test artığı — hook bu yüzden yalnız DURUM'u
   ACIK olanları basar (gürültü filtresi).
 
+## Ek — aynı gün: `gunluk/` proje bazlı ayrıştı (Mert, 09:33)
+
+İlk tasarımın eksiği ilk gerçek koşumda çıktı: *"son kapanış"* sinyali **tek akıştan**
+geliyordu. Goat için açılan yeni Clara, en üstte EV'in kapanışını buldu ve Mert'e EV'in
+push kuyruğunu özetledi — Mert yakaladı: *"osinif'la goat'taki günlük karıştığında yeni
+açılan Clara onu özetleyemez, gereksiz özet verir."*
+
+Sebep hook'ta değil dosya düzenindeydi (`CLA-FIX-THE-CAUSE`): kapanışlar tek isim
+uzayını paylaşıyordu, *"en yeni"* anlamsızdı. Düzeltme:
+
+- **`gunluk/{proje}/` ayrımı** — EV işi `gunluk/ev/`, yönetilen projeler kendi adıyla
+  (`goat/`, `websitesi/`...). Günlük dosyası da kapanış da aynı klasöre.
+- **Hook sinyali proje bazlı liste oldu** — her projenin son kapanışı ayrı satır +
+  direktif: *yalnız kendi modunun kapanışını oku, diğerini özetleme.*
+- **Eski düz dosyalar `gunluk/ev/`e taşındı** — geçmiş kayıtlar karışık içerikli
+  (Goat gözlemi EV günlüğünün içinde), geriye dönük bölünmedi.
+- `oturum-duzeni` skill'i ve `project_durum.md` yeni yollara güncellendi.
+
 ## İlgili
 
 - `kararlar/2026-08-03-clara-yazma-sinirinin-degismesi.md` — yazma sınırının önceki daralması
