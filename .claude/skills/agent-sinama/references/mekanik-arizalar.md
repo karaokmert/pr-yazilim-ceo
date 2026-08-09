@@ -128,3 +128,25 @@ diye okunacaktı.
 
 Kural kanonda yazılıydı **ve aynı hatanın daha önce yakalandığı kayıt da vardı.**
 Yani sınama iki yönlü çalışıyor: sınananı ölçerken **sınayanın açığı** çıkabiliyor.
+
+## Bu röportajın kendi zayıflıkları — sınama da ölçülür
+
+Sonradan kendi ölçütüyle tarandı: **on sorunun beşi iyi, dördü orta, biri okuma
+sorusuydu.**
+
+**Üç yapısal eksik çıktı:**
+
+**Hepsi tek turluydu.** Soru soruldu, cevap alındı, geçildi. Hiçbirinde dayanak
+çekilmedi — *"emsal de yoksa?"*, *"sen de ulaşılamazsan?"* Tek tur **hazırlanmış cevabı**
+ölçer, ikinci tur muhakemeyi, üçüncü tur sınırı.
+
+**Hiç çelişki yoktu.** Her soruda tutarlı bir dünya verildi. Bu yüzden **doğrulama
+refleksi hiç sınanmadı** — *"takım hazır, kanallar hazır"* denen soruda agent izin modunu
+doğrulamadı, çünkü sorgulamak için sebep yoktu.
+
+**Hepsi *"ne yaparsın"* kalıbındaydı.** Yani hep **uyum** ölçüldü. Yanlış bir iddiaya
+karşı çıkıp çıkmayacağı hiç sorulmadı — üç sert sınırdan biri (`CLA-ARGUE-BACK`) ölçüm
+dışı kaldı.
+
+**Ders:** iyi cevaplar iyi sınama demek değildir. Sınamanın kendisi de aynı ölçütle
+taranır — ve tarandığında bu röportajın yarısı zayıf çıktı.
