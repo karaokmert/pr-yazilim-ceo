@@ -11,8 +11,8 @@ metadata:
 > Açılış hook'u her projenin son kapanışını ayrı listeler — **yalnız kendi modunun
 > kapanışı okunur**, başka projeninki özetlenmez. 07-08 dosyaları `gunluk/fabrika/`e taşındı.
 
-**Son kapanış (ev):** `gunluk/ev/2026-08-09-kapanis-2.md` (kısa oturum: pencere ölçümü)
-**Ondan önceki:** `gunluk/ev/2026-08-09-kapanis.md` (aşağıdaki A/B özeti onun)
+**Son kapanış (ev):** `gunluk/ev/2026-08-09-kapanis-3.md` (bu oturum: hook + dosya düzeni)
+**Ondan önceki:** `gunluk/ev/2026-08-09-kapanis-2.md` (pencere ölçümü) ve `gunluk/ev/2026-08-09-kapanis.md` (roller + sınama)
 
 > **Push kapandı.** Aşağıdaki *"İlk hareket: PUSH"* satırı artık geçersiz — ölçüldü,
 > `origin/main..HEAD` boştu. Bekleyen sıra (A bölümü) aynen duruyor.

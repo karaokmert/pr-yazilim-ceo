@@ -9,3 +9,5 @@ Updated `oturum-duzeni` skill w/ workspace detection rule (IDE→env→no pwd); 
 Validated Goat ch. w/ real ops (sprint Q/A logged), started ClickUp sprint task audit.
 ## 09:38 | main
 Restructured Clara startup hook to organize session logs by project (gunluk/{project}/) instead of global closure history, eliminating context bleed between Goat & Osinif.
+## 09:46 | main
+Split 7-9 Aug logs from monolithic gunluk/ev/ into project-based dirs: created gunluk/fabrika/ (factory infra work), reorganized gunluk/ev/ (Clara's own), kept gunluk/goat/ (Goat proj) to isolate session history by project.
