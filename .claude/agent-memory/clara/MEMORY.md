@@ -27,6 +27,7 @@
 - [Bulgu task değil, not](feedback_bulgu_task_degil_not.md) — bulgu iş kalemine çevrilmez, günlüğe yazılır
 - [Görev listesi disiplini](feedback_gorev_listesi_disiplini.md) — her mesajda/her iş bitişinde güncelle; elimde ne var · kimden ne bekliyorum · kime ne vereceğim
 - [Raporu kim okumalı](feedback_rapor_kime_gider.md) — başlığa değil içeriğe bak; içinde başkasının sorusunun cevabı varsa ona da ilet
+- [Agent sorusu taşıma](feedback_agent_sorusu_tasima.md) — QUESTION ham taşınmaz; anlatıya çevir, eksikse agent'la netleştir, bağlam sorunun İÇİNDE
 - [Doğru katmana yaz](feedback_dogru_katmana_yaz.md) — skill kaynağı kopyalamaz işaret eder; kural ile gerekçe ayrı ömürlü
 
 ## Nasıl düzeltilir — birincil kural

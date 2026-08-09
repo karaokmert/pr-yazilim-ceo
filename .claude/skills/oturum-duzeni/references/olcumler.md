@@ -77,3 +77,21 @@ Yani kanal sağlıklı görünüyor ve mesaj gelmiyor. Arıza sessiz — bu yüz
 **Ayrıca:** `DURUM.md`'deki `PID` canlılık kanıtı değil. `kill -0` taraması çalışan bir
 agent'ı (PQA) ölü gösterdi — o sırada rapor yazıyordu. Mekanizma yeniden ölçülmeden
 ölü kanal temizliği yapılmaz.
+
+---
+
+## Pencere ölçümü: üç yöntem yarıştı
+
+**Tarih:** 2026-08-09
+
+Mert *"hangi projedesin"* diye sordu; üç yöntem sırayla ölçüldü:
+
+- **`pwd`** → `pr-yazilim-ceo` dedi. Yanlış — terminal profili Clara'yı her seferinde
+  eve `cd`'leyerek başlatıyor, ölçüm doğmadan bozuk. Totoloji: her zaman "EV" der.
+- **env** → `GEMINI_CLI_IDE_WORKSPACE_PATH=/Users/karaok/p/agent-project`. Doğru ama
+  ikinci elden: yazan Gemini eklentisi (Clara değil) ve oturum başında donmuş.
+- **IDE canlı sorgu** → `mcp__ide__getDiagnostics` dört açık dosya döndü, dördü de
+  `agent-project` altında. Kaynak pencerenin kendisi, zaman şimdi.
+
+Sonuç: gerçek pencere **fabrikaydı**, `pwd` evi gösteriyordu. Mert'in sorusu üç turdu
+ve her turda bir yöntem elendi — *"hatasız olacak olanı"* canlı sorgu çıktı.

@@ -28,10 +28,19 @@ oturumun konusunu değil **başlatan `cd`'yi** gösterir — yani onun için ner
 
 Arıza sessiz: `pwd` her oturumda *"EV"* der, yönetim moduna hiç geçilmez.
 
-**Ayrımı iş belirler.** Üç şeye bakılır: Mert ne dedi (bir projeyi adıyla andı mı,
-*"orada ne oluyor"* diye mi sordu) · `~/.pr-kanal/` altında hangi projede açık kutu var
-· o projede açık agent oturumu var mı. **Belirsizse sorulur** — varsayılmaz, çünkü
-yanlış mod yanlış açılış sırası demektir.
+**Penceren ölçülebilir — IDE'ye canlı sor.** Mert seni hangi VS Code penceresinden
+başlattıysa oradasın, ve bunu pencerenin kendisi söyler: `mcp__ide__getDiagnostics`
+çağrısı açık dosyaların yollarını döner — hangi projenin altındalarsa pencere o
+projededir. Kaynak pencerenin kendisi ve zaman *şimdi*; bu yüzden hatasız. Yedek:
+`GEMINI_CLI_IDE_WORKSPACE_PATH` env değişkeni — ama iki zayıflığı var: onu yazan başka
+bir eklenti (kaldırılırsa sinyal sessizce gider) ve oturum başında donmuş (pencere
+değişse haberi olmaz). Sıra: **önce IDE'ye canlı sor, env yedek, `pwd` hiç.**
+
+**Pencere mod'u verir ama konuyu vermez.** Pencere ölçümü *"neredeyim"i* kapatır;
+*"bu oturum ne hakkında"* hâlâ Mert'in niyetidir — ölçülmez, söylenir. Üç şeye bakılır:
+Mert ne dedi (bir projeyi adıyla andı mı, *"orada ne oluyor"* diye mi sordu) ·
+`~/.pr-kanal/` altında hangi projede açık kutu var · o projede açık agent oturumu var
+mı. **Belirsizse sorulur** — varsayılmaz, çünkü yanlış mod yanlış açılış sırası demektir.
 
 **`pwd` yine okunur, ama başka soru için:** *"nereye yazabilirim."* `pr-yazilim-ceo`
 içindeysen kendi kanonun serbest, dışına yazmak onaya tabi. Yani `pwd` yazma sınırını

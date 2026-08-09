@@ -7,7 +7,11 @@ metadata:
 
 # Durum
 
-**Son kapanış:** `gunluk/2026-08-09-kapanis.md`
+**Son kapanış:** `gunluk/2026-08-09-kapanis-2.md` (kısa oturum: pencere ölçümü)
+**Ondan önceki:** `gunluk/2026-08-09-kapanis.md` (aşağıdaki A/B özeti onun)
+
+> **Push kapandı.** Aşağıdaki *"İlk hareket: PUSH"* satırı artık geçersiz — ölçüldü,
+> `origin/main..HEAD` boştu. Bekleyen sıra (A bölümü) aynen duruyor.
 
 > Aynı gün **iki ayrı oturum** çalıştı ve ikisi de bu kaydı yazdı. Aşağıda ikisi de var —
 > biri fabrika/N8N hattı, diğeri Clara'nın kendi kanonu. Karışmıyorlar.
