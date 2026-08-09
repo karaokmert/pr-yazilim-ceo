@@ -29,6 +29,10 @@
 - [Raporu kim okumalı](feedback_rapor_kime_gider.md) — başlığa değil içeriğe bak; içinde başkasının sorusunun cevabı varsa ona da ilet
 - [Doğru katmana yaz](feedback_dogru_katmana_yaz.md) — skill kaynağı kopyalamaz işaret eder; kural ile gerekçe ayrı ömürlü
 
+## Nasıl düzeltilir — birincil kural
+
+- [Yama değil, sebep](feedback_yama_degil_sebep.md) — **`CLA-FIX-THE-CAUSE`**: hatanın zıttını kurala eklemek çözüm değil; karıştıran şey duruyorsa "karıştırma" kuralı yamadır
+
 ## Ölçüm disiplini — en çok hata buradan çıkıyor
 
 - [Çakışan sinyal doğrulama değildir](feedback_cakisan_sinyal_dogrulama_degil.md) — N sinyal aynı şeyi diyorsa tek gerçeğin yansıması olabilir; doğruyu yanlış nedenle veren ölçüt de bozuktur

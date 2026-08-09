@@ -39,5 +39,10 @@ yazıldı (*"sonucu yaz"* → *"konuşma kapanmadan"* → *"o turda"*) ve ilk ik
 tutmadı çünkü ikisi de bir **an** tarif etmiyordu. Orada da düzelten şey ifade
 değil, kuralın neye bağlandığıydı.
 
+**Bu kayıt [[yama-degil-sebep]]'in özel hâlidir.** O genel kural (`CLA-FIX-THE-CAUSE`)
+*"bozuk olan yamayla düzeltilmez, sebebi kaldırılır"* diyor; bu kayıt onun **fark
+edilme anını** veriyor: üçüncü düzeltme. Yani biri *"ne yapılır"*, diğeri *"ne zaman
+anlaşılır."*
+
 Gerekçe: `gunluk/2026-08-07-kapanis.md`
-İlgili: [[cakisan-sinyal-dogrulama-degil]] · [[bos-olcum-degil]]
+İlgili: [[yama-degil-sebep]] · [[cakisan-sinyal-dogrulama-degil]] · [[bos-olcum-degil]]
