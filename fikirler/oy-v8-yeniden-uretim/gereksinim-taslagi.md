@@ -41,12 +41,91 @@ OY takımı fabrikada **yeniden üretilecek** — taşınmayacak, kopyalanmayaca
 gelir. Yeniden üretim mevcut kanonu **girdi** olarak alır ve fabrikanın kendi
 standardıyla yeniden paketler.
 
+### Yazım standardı — Mert'in kararı, 2026-08-09
+
+**Bu altı madde OY v8'in saha deneyiminden çıkarıldı ve üretimi bağlar.** Aşağıdaki her
+şey bunlara uyar; çelişki çıkarsa bu bölüm kazanır.
+
+**1. Skill haritası açık olmalı.** Bir agent hangi işi yaparken hangi skill'e gideceğini
+net bilmeli. Belirsiz harita = skill çağrılmıyor.
+
+**2. Description içeriği özetlemez, çağrılma anını söyler.** Ölçüldü: **76 skill'in
+76'sı da 300 karakteri aşıyor** (medyan 704, max 994, ortalama 712). İstisna yok. Bugünkü
+description'lar skill'in *ne içerdiğini* anlatıyor — oysa işi *ne zaman açılacağını*
+söylemek.
+
+**3. Her iş için kullanılabilecek skill'ler body'de net belirtilir.** Agent her turda
+elinin altında ne olduğunu bilmeli.
+
+**4. Rolün main skill'i, hangi skill'in ne için var olduğunu netler.** Harita tek yerde
+durur.
+
+Ölçüldü ve bu maddeyi doğruluyor: bugün beş çekirdek skill'in **her biri diğer dördünün
+sınırını kendi başında yeniden anlatıyor** (`is-akisi` → *"biçim handoff'ta, refleks
+behavior'da"*; `handoff` → *"sıra is-akisi'nde, kayıt memory'de"*; `behavior` → üçünü
+birden). **Aynı sınır haritası dört ayrı yerde yazılı** ve hiçbiri asıl işi yapmıyor.
+Tek harita, beş tekrarı birden düşürür.
+
+**5. Preload azdır — ve ölçüt sayı değil, "her turda lazım mı".** Bir şey her turda
+lazım değilse preload'a girmez; iş-anına özel olan omurga haritasından çağrılır.
+
+**6. Her skill, reference'ına ne zaman gidileceğini tarifler.** Ölçüldü: 77 reference'ın
+48'i hiç okunmamış. Reference'ı olan ama "ne zaman aç" demeyen bir skill, reference'ı
+olmayan skill'e denktir.
+
+### Katman kararları — yukarıdaki maddelerin uygulaması
+
+Bunlar Mert'in kararı (2026-08-09/10) ve **birleşme ölçütü konu benzerliği değil, aynı
+sahip / aynı refleks:**
+
+**`pr-yazilim-oy-envanteri` → main skill'e taşınır, preload'dan çıkar.** *"Kim ne
+yapıyor, elimizde neler var"* okunmak istendiğinde açılır. Ve bir refleksi taşır:
+**yeni bir şey eklenirken mutlaka alt yapıya bakılır.** Her turda değil, **bir şey
+eklenirken** lazım — bu yüzden çağrılan katmanda.
+
+**`memory-management` → `behavior` içinde yaşar.** Memory ayrı bir iş değil, bir
+refleks. (Bugün zaten birbirlerini işaret ediyorlar: memory skill'i *"refleks
+behavior'da"* diyor, behavior *"memory disiplini memory-management'ta"* diyor — ayrı
+durmalarının tek ürünü bu karşılıklı atıf.)
+
+**`is-akisi` → body'ye iner.** Her agent **kendi** iş hattını taşır: kimden alır, kime
+verir, hangi sırayla. Ortak olan kısım (sıra mantığı, devir ilkesi) `behavior`'da
+**satır olarak** yer alır.
+
+Gerekçe ölçülmüş: `is-akisi` skill olarak dururken dokuz rol aynı dosyayı okuyup içinden
+kendi payını çıkarmaya çalışıyor. Body'ye inince her agent yalnız kendi hattını görür.
+
+**`handoff` → `behavior` içine girer** (Clara'nın kararı, gerekçesi aşağıda).
+
+Devir bloğu formatı dokuz rolde **birebir aynı** ve iş biterken kullanılan bir
+**refleks** — memory ile aynı sınıf. Üç gerekçe:
+
+- **"Ayrı skill kalsın, iş bitince çağrılsın" sahada denendi ve düştü.** Bugün `handoff`
+  ayrı skill *ve preload'da* — en avantajlı konumda. Buna rağmen *"preloaded ≠ okunmuş"*
+  dersi beş kayıtta yazılı. Preload'dan çıkarmak durumu kötüleştirir.
+- **Body'ye koymak cascade borcu üretir** — dokuz body'de aynı format tekrarlanır, biri
+  değişirse dokuzu değişmeli. Fabrikanın `atif-haritasi` işi tam bu yüzden yarım
+  (beş cascade onarımı PAD'de bekliyor).
+- `is-akisi` body'ye indiğinde *"kime"* zaten orada olur; geriye kalan devir **biçimi**
+  gerçekten ortaktır.
+
+**Sonuç — preload iki skill:**
+1. **`behavior`** — karakter + memory disiplini + devir biçimi + ortak akış ilkesi
+2. **rol omurgası** — kendi aleti ve **skill haritası** (madde 4)
+
+Geri kalan her şey çağrılan katmanda: envanter (bir şey eklenirken), alet skill'leri
+(iş anında, omurga haritasından).
+
+**Bu bir hipotez değil karar; ama uygulaması PAD'in.** Birleştirme sırasında bir kural
+düşerse ya da çelişirse `status.md`'ye yazılır (n8n'de rol birleştirmesi sessizce
+yapıldı — tekrarlanmayacak).
+
 ### Üç aşama, sıralı
 
-**Aşama 1 — ortak katman.** Dokuz rolün paylaştığı zemin sabitlenir: çekirdek skill
-seti, kural kimlik düzeni, katman ölçütü (hangi kural body'ye, hangisi skill'e, hangisi
-reference'a). Bu aşama tartışma değil **derleme** — ölçütler zaten ölçülmüş hâlde
-mevcut (girdilere bakınız).
+**Aşama 1 — ortak katman.** Dokuz rolün paylaştığı zemin sabitlenir: `behavior`'ın
+birleşik hâli, kural kimlik düzeni, katman ölçütü (hangi kural body'ye, hangisi skill'e,
+hangisi reference'a), rol omurgası şablonu ve **skill haritası biçimi**. Bu aşama
+tartışma değil **derleme** — ölçütler zaten ölçülmüş hâlde mevcut (girdilere bakınız).
 
 **Aşama 2 — pilot rol: `backend-developer`.** Bir rol baştan sona üretilir ve sahada
 ölçülür.
@@ -78,12 +157,16 @@ gerçekten yüklendiğini ölçen kapı yok.
 - **Hangi işler:** üçü de o rolün **kendi sahasından gerçek iş** olacak, sentetik
   senaryo değil. Pilot rol backend olduğu için üçünün en az biri sahada en çok
   konuşulan konudan seçilir (`docker-k8s` 76 oturum, `dev-environment` 67).
-- **Neyin açılması beklenir:** rolün **preload listesindeki skill'lerin tamamı**
-  (çekirdek 5 + omurga 1). Preload edilen bir skill hiç açılmadıysa preload
-  çalışmıyor demektir — bu bir arıza, tercih değil.
-- **Alet katmanı için eşik:** işin konusuna karşılık gelen alet skill'i **açılmış
-  olmalı.** Ölçüt sayı değil eşleşme — "konu geçti, alet açılmadı" vakası sıfır olmalı.
-  OY'nin bugünkü yarası tam bu (dokuz vaka).
+- **Neyin açılması beklenir:** rolün **preload listesinin tamamı** (`behavior` + rol
+  omurgası). Preload edilen bir skill hiç açılmadıysa preload çalışmıyor demektir —
+  bu bir arıza, tercih değil.
+- **Alet katmanı için eşik — bu işin asıl sınavı:** işin konusuna karşılık gelen alet
+  skill'i **açılmış olmalı.** Ölçüt sayı değil **eşleşme** — *"konu geçti, alet
+  açılmadı"* vakası **sıfır** olmalı. OY'nin bugünkü yarası tam bu (dokuz vaka) ve
+  yeni yapı bu yarayı kapatmak için kuruldu: preload daraldı, yük **skill haritasına**
+  bindi. Harita çalışmıyorsa bu ölçüm onu gösterir.
+- **Reference için eşik:** açılan bir skill'in reference'ı, o iş onu gerektiriyorsa
+  okunmuş olmalı. (Madde 6'nın sınavı — 77 reference'ın 48'i hiç okunmamıştı.)
 - **Geçmedi sayılır:** yukarıdakilerden biri tutmazsa. Rapor "kaç skill açıldı" değil,
   **"hangi beklenen skill açılmadı ve o oturumda konusu geçti mi"** biçiminde yazılır.
 
@@ -202,6 +285,64 @@ taşıyor:
 kaçırılmaması gereken kural listesi olarak taranmalı): `agent-dogrulama/SONUC-*` 9 rol
 raporu, `v8-calisma/eksikler/*/*-mekanik.md` 19 taslak.
 
+### OY'nin kendi memory'si — kanona taşınacak saha bilgisi
+
+**Tam kayıt:** `pr-yazilim-ceo/incelemeler/oy-v8-yeniden-uretim/memory-taramasi.md`
+
+Dokuz kutu, **936 KB, ~198 dosya** tarandı. **~2/3'ü kanona taşınmalı, ~1/3'ü çöp.**
+
+**Bu kanonun bir eksiğini gösteriyor ve gereksinimi doğrudan etkiliyor: kanon "ne
+yapılır"ı söylüyor, "nasıl yanılırsın"ı söylemiyor.** Dokuz kutunun en kalın dosyaları
+kural değil, **aracın sessizce yalan söylediği an** kayıtları — ve her biri agent kanonu
+okumuş olmasına rağmen düşmüş.
+
+**Sessiz kırılma envanteri kanonda yok — yeni takımda olmalı.** Ortak imza: *derleme
+yeşil / araç sessiz / hata yok gibi görünür.* Örnekler: `HandlerOptions` varsayılanları
+açık (endpoint herkese açık kaldı) · `Enum.IsDefined` + byte enum `(int)` cast derleme
+yeşil çalışma anında patlıyor · `mutationFn: ApiService.x` → `this` kopuyor, tsc
+yakalamıyor · `DateView isUtc` ters sezgisel ve **çoğunluk deseni yanlış** (102'de 42) ·
+`grep -c` çoklu dosyada koşulu kırıyor · `git rev-parse` olmayan dosyada exit 0 · LSP
+0 sonuç ≠ tüketici yok · `gh run list` hata vermeden boş bekliyor · `nc -z` VPN arkasında
+24/24 "açık" diyor.
+
+En ağır vaka: **uydurma numaraya gerçek SMS gitti** — agent iki gerçek aboneye SMS
+yolladı ve *aynı turda* kendi raporuna *"dev'de SMS sağlayıcısı canlı"* yazmıştı.
+
+**Dört kural adayı — memory'de tekrar ettiği için güçlü:**
+- *"Emsal kanon değil"* — **altı kayıt, beş kutu**, bağımsız yazılmış
+- *"Kendi ölçüm aracından şüphelen"* — beş kayıt, üç kutu
+- *"Ekranda doğrula, kod okuması yetmez"* — üç uçta aynı ders (*build yeşili doğrulama
+  sayılmaz*)
+- *"Push onayı atlanmaz"* — üç kez tekrarlandı
+
+**Skill boşlukları — kanon eksik, agent kendi notuyla doldurmuş:** LIVE DEV geri-besleme
+kolu (`is-akisi` madde 7'de bitiyor, gerçek akış devam ediyor) · dış insan katkısının
+içeri alınması · sprint planlama yöntemi (18KB, PA kendi kanonunu memory'de yazmış) ·
+onay brief kalıbı (*"skill gelince SİL"* damgalı) · telepresence çoklu servis tarifi
+(15KB, *"2/2 tuttu"* işaretli) · enum tüketici sayımı · prod dayanıklılık üçlüsü.
+
+**Bir araç boşluğu:** `ozel-yazilim` plugin'inde **ClickUp MCP'si yok**, ama PA kanonu
+ClickUp'ı zorunlu tutuyor (`CLICKUP-TASK-FIRST`). Şu an `websitesi` plugin'inin MCP'si
+kullanılıyor — **yalnız OY kurulu bir makinede PA kanonun emrettiği işi yapamaz.**
+
+**Beş kanon–saha çelişkisi taşınacak, silinmeyecek:** `ENUM-BYTE` (kanon byte, saha
+int) · `CQ-COMMENT-WHY` (kanon yasak, sahada 74 satır) · NVARCHAR standartları (canlı DB
+sorgusuyla doğrulandı: hepsi MAX) · `BE-PERF-SQL-SIDE` (bir DataLayer **iki deseni
+birden** taşıyor, agent tuzağa düşüp yanlış yönlendirme yaptı) · `PA-DISC-CHUNK`
+(kullanıcı kanonun tersine karar verdi).
+
+Taşıma biçimi: *"kanon sahadan ileride, mevcut koda dokunma"* notuyla. Aksi hâlde emsale
+bakan agent yanılır.
+
+**Canlı borç — düşmemeli:** QA kapanış indeksinde 2 açık devir + 3 açık prod kapısı ·
+DO'da egelisaglik prod secret'ları **dış IP** kullanıyor (DB portları dünyaya açık,
+kullanıcı teyitli), osinif probe yok, ingress otomasyon dışı.
+
+**Ve bir uyarı — üretim sırasını etkiler:** kutu doluluğu kanon kalitesini değil
+**sahaya çıkma sıklığını** ölçüyor. `ui-designer` kutusu **boş**, `test-engineer` 3
+dosya — kanonları iyi olduğu için değil, hiç sahaya çıkmadıkları için. **Memory'si
+olmayan agent kanonun eksiğini raporlayamaz;** yeniden yazımda en riskli iki rol bunlar.
+
 ### Uyarı — havuzun sayılarına değil ölçütlerine güvenilecek
 
 `V8-TAMAMLAMA-DURUM.md` 12 maddenin kapandığını söylüyor, ama aynı klasördeki
@@ -293,8 +434,10 @@ girdiğinde PAM'in kuyruğu zaten dolu.
 
 ## Doğrulama eşikleri
 
-**Aşama 1 geçti sayılır:** çekirdek skill seti + kural ID standardı + katman ölçütü +
-rol açma ölçütü yazılı ve denetimden geçti.
+**Aşama 1 geçti sayılır:** birleşik `behavior` + rol omurgası şablonu + **skill haritası
+biçimi** + kural ID standardı + katman ölçütü + rol açma ölçütü yazılı ve denetimden
+geçti. Ayrıca **description biçimi**: madde 2'nin sınavı — üretilen her description
+*ne zaman açılacağını* söylüyor mu, içerik özeti mi.
 
 **Aşama 2 geçti sayılır:** pilot rol kuruldu **ve sahada gerçek bir iş koşturuldu**;
 preload edilen skill'lerin açıldığı ölçüldü. Dosya denetimi tek başına yeterli değil.
