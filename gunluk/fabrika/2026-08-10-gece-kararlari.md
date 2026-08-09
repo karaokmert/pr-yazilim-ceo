@@ -134,3 +134,47 @@ paylaşılan skill, aynı kapı) — **dokuz rolde tek gerçek birleşme adayı.
 **Neden bu benim hatamın aynısı değil:** ben *"memory boş → risk"* dedim, bu bir
 korelasyondu ve sebep sandım. PAM sebebi ölçtü. Aynı hata sınıfı: **belirtiyi sebep
 sanmak.**
+
+---
+
+## KARAR 5 (01:03) — Aşama 1 gereksinimi denetime iletiliyor
+
+**Ne:** PAM'in 626 satırlık gereksinimini okudum, onay verdim, PQA'ya devrini istedim.
+
+**Neden onayladım — üç sebep:**
+
+**Üç sınıflı ayrım doğru kurulmuş.** Sekiz kalem *"fabrikada hüküm var"* / *"yok"* /
+*"derleme işi"* diye ayrılmış ve gerekçesi `URT-NO-DUPLICATE-ID` — aynı hükmü ikinci
+kimlikle yazmak iki kaynak üretir, ikisi zamanla ayrışır. İki iddiayı kaynaktan
+doğruladım.
+
+**Rol açma ölçütü gerçek bir ürün.** Dört soru, her biri ölçümden türemiş, biçimi
+bilinçli olarak skill açma testine benzetilmiş (*"o test sahada işe yaradı"*).
+
+En güçlüsü dördüncü: *"ayrımı taşıyan eksen rol metninde değil malzemenin doğasında
+olmalı, yoksa metin değişince ayrım düşer."* Bu kanon yazımının genel bir zaafını
+yakalıyor — BE/FE/MB ayrımı sağlam çünkü teknoloji yığını **gerçek**; UID/FE zayıf
+çünkü yalnız **metinde** yaşıyor.
+
+**Kendi sınırını yazmış.** Üç ölçümden birinin kapsam şerhi belgede duruyor: PQA body'si
+ve iki reference tam okunmadı, o üç dosya için *"yok"* sonucu tarama kanıtına dayanıyor.
+Gizlemedi, kayda geçirdi — ve bulgunun üç bağımsız kaynakta doğrulandığını da yazdı.
+
+**Denetimden istediğim üç şey:** sınıf 1'deki *"zaten var"* iddialarının kaynaktan
+doğrulanabilirliği · rol açma ölçütünün dört sorusu birbirini tekrarlıyor mu / boşluk
+bırakıyor mu · kabul ölçütü eşikleri PAD'in uygulayabileceği netlikte mi.
+
+---
+
+## KARAR 6 (01:03) — Zincir durmayacak: denetim bulgusunda bana sorulmayacak
+
+**Ne:** PAM'e yetki verdim — denetim bulgusu çıkarsa düzeltip yeniden iletsin, bana
+sormasın. **Yalnız kapsam değişecekse ya da bir kalem düşecekse** sorsun.
+
+**Neden:** Mert sabaha çalışır bir takım bekliyor. Her denetim turunda bana dönmek
+zinciri durdurur — n8n'de tam bu oldu: beş denetim turu, üçü GEÇMEDİ, ve ilk 5,5 saatte
+sıfır ürün çıktı.
+
+**Sınırı neden orada çizdim:** bulgu düzeltmesi **yöntem** kararıdır, PAM'in işi.
+Kapsam değişikliği ise **benim** işim — çünkü kapsamı Mert'in altı maddesi ve benim
+gereksinimim belirliyor. Bir kalem düşerse o bir yetki sorusu, hız sorusu değil.
