@@ -228,3 +228,33 @@ Türkçeleştirilirse filtre kendiliğinden doğru kalır.
 
 **Kayıt için:** belirsizlik **kapatılmadı, etkisizleştirildi** (PAM'in ayrımı).
 Şablonun yanlış tarifi ayrı bir kalem ve `SABLON-JSON.md` git'te değil.
+
+---
+
+## DÖRDÜNCÜ SESSİZLİK TÜRÜ — "başlıyorum" dedi, tur kapandı (2026-08-09 07:18)
+
+PQA 06:42'de N8N denetim sonucunu raporladı, aynı mesajda *"kuyrukta plan
+denetimi var, ona başlıyorum"* dedi — ve **turu kapandı** (stop kaydı
+06:42:32). 34 dakika idle kaldı; Mert yakaladı (*"PQA aktif çalışıyor mu?"*).
+
+**Mekanik:** tur sonunda beyan edilen iş, turu **aşamaz**. Yeni tur ancak bir
+tetikle (inbox mesajı → monitör bildirimi) açılır. "Başlıyorum" + tur sonu =
+başlamamış iş, ve dışarıdan *"çalışıyor"* görünür.
+
+**Dört sessizlik türü artık:**
+```
+1 ilerliyor-ama-görünmüyor      → bildirim ritmi (disiplin)
+2 ilerleyemiyor-ve-söyleyemiyor → onay ekranı; merkez ölçer
+3 ilerliyor-ama-duymuyor        → ölü izleyici; açılışta yeniden kur
+4 başlıyorum-dedi-tur-kapandı   → beyan ≠ başlama; merkez tetikler
+```
+
+**Clara'nın iki yanlış okuması (kayda değer):** (1) transcript'in son yazım
+zamanına baktı — ama yazımlar pasif system kayıtlarıydı (özet hook'u, mode
+kayıtları); *"dosya yazılıyor = çalışıyor"* çıkarımı yanlış. Doğru sinyal:
+**son assistant üretiminin zamanı** + stop kaydı. (2) *"başlıyorum"* beyanını
+başlama saydı — dünkü derslerin özü buydu: beyan ölçüm değil.
+
+**Merkez için kural adayı:** bir uç *"sıradaki işe başlıyorum"* diyorsa ve o
+iş merkezin verdiği kuyruktansa, merkez **bir sonraki turda tetik atar** —
+beyana güvenmez. Ucuz önlem: tek mesaj.
