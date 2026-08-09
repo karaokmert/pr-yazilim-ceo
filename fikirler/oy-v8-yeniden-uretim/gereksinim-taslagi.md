@@ -54,6 +54,13 @@ net bilmeli. Belirsiz harita = skill çağrılmıyor.
 description'lar skill'in *ne içerdiğini* anlatıyor — oysa işi *ne zaman açılacağını*
 söylemek.
 
+**Bu madde için YENİ KURAL YAZILMAYACAK** (PAM'in ölçümü, 2026-08-10 — kaynaktan
+doğrulandı): fabrikada hüküm zaten var — `URT-DESCRIBE-MOMENTS`,
+`URT-NO-CONTENT-IN-DESCRIPTION`, ve **300 karakter hedefi** `uretim/SKILL.md:220-231`'de
+yazılı. Ölçütü de keskin: *"description'daki bir cümle skill açılmadan da
+kullanılabiliyorsa orada olmamalı."* İkinci kimlik yazmak `URT-NO-DUPLICATE-ID`
+ihlalidir. **Yapılacak iş: mevcut hükmü OY'ye uygulamak.**
+
 **3. Her iş için kullanılabilecek skill'ler body'de net belirtilir.** Agent her turda
 elinin altında ne olduğunu bilmeli.
 
@@ -72,6 +79,11 @@ lazım değilse preload'a girmez; iş-anına özel olan omurga haritasından ça
 **6. Her skill, reference'ına ne zaman gidileceğini tarifler.** Ölçüldü: 77 reference'ın
 48'i hiç okunmamış. Reference'ı olan ama "ne zaman aç" demeyen bir skill, reference'ı
 olmayan skill'e denktir.
+
+**Bu madde için de YENİ KURAL YAZILMAYACAK** (aynı ölçüm): `BHV-OPEN-SOURCE` var, ve
+emredici kalıbın örneği fabrikanın kendi kanonunda duruyor — `ISD-OPEN-YOUR-BOX`:
+*"o dosya açılmadan kurulum yapılmaz."* **Yapılacak iş: bu kalıbı OY'nin reference'ı
+olan her skill'ine uygulamak.**
 
 ### Katman kararları — yukarıdaki maddelerin uygulaması
 
@@ -340,8 +352,28 @@ kullanıcı teyitli), osinif probe yok, ingress otomasyon dışı.
 
 **Ve bir uyarı — üretim sırasını etkiler:** kutu doluluğu kanon kalitesini değil
 **sahaya çıkma sıklığını** ölçüyor. `ui-designer` kutusu **boş**, `test-engineer` 3
-dosya — kanonları iyi olduğu için değil, hiç sahaya çıkmadıkları için. **Memory'si
-olmayan agent kanonun eksiğini raporlayamaz;** yeniden yazımda en riskli iki rol bunlar.
+dosya. **Memory'si olmayan agent kanonun eksiğini raporlayamaz.**
+
+### Bu uyarının teşhisi DÜZELTİLDİ (PAM ölçümü, 2026-08-10)
+
+İlk yazdığım teşhis — *"UID ve TE en riskli iki rol, sınırları bulanık"* — **ölçülüp
+çürütüldü.** PAM dokuz rolü tam okudu: o iki rolün sınırları **daha keskin**, bulanık
+değil. UID'de 13 kuralın 8'i negatif — **dokuz rolde en yüksek oran.**
+
+**Gerçek ayıran: kapı sahipliği + zorunlu çağrı.** CA da kapısız ama iki rol onu çağırmak
+**zorunda** (`QA-IMPACT-REACTIVE-TRIGGER` + PA'nın `impact-analiz`'i — kaynaktan
+doğrulandı). **TE ve UID'i kimse zorunlu çağırmıyor.**
+
+Yani **boş memory bir sebep değil, bir sonuç.** Çağrılmayan agent sahaya çıkmaz, sahaya
+çıkmayan agent memory tutmaz, memory tutmayan agent kanonunun eksiğini raporlamaz.
+Zincirin başı **zorunlu çağrının yokluğu.**
+
+**Üretimde yapılacak:** TE ve UID için ya bir zorunlu çağrı tetiği kurulur (CA'daki
+gibi), ya da rol kararı gözden geçirilir. Bu, rol açma ölçütünün ilk sınavı.
+
+**Ve PAM'in bonus bulgusu:** UID–FE ucu **eksende örtüşüyor** — aynı repo, aynı React,
+iki paylaşılan skill, aynı kapı. Dokuz rolde **tek gerçek birleşme adayı.** Karar rol
+açma ölçütünden çıkacak; şimdiden verilmiyor.
 
 ### Uyarı — havuzun sayılarına değil ölçütlerine güvenilecek
 
