@@ -7,42 +7,26 @@ metadata:
 
 # Durum
 
-**Son kapanış:** `gunluk/2026-08-08-kapanis.md` — oku, çalışmaya başlayabilirsin.
+**Son kapanış:** `gunluk/2026-08-09.md` → "N8N İŞİ KAPANDI — 07:28"
 
-**Tek cümlede:** Fabrika kanonunun sekiz maddelik denetimi tamamlandı ve **push
-edildi** — 27 commit, `origin/main` = `89d131f`, kanon 123→131 kural. Davranış
-testinde dört rol de geçti (16/16).
+**Tek cümlede:** Fabrikanın ilk gerçek ürünü `n8n-otomasyon` v0.1.0 **push'landı**
+(`a948fd5`, 21 commit): 3 rol, 7 skill, 82 kural — beş kanıt katmanından geçti.
 
 ## Şu an nerede
 
-**Oturum kapandı, iş bitti.** Yarım kalan yok; üç iş zinciri de denetimden geçti.
+N8N işi kapalı. OY takım analizi son adımda: plan PQA denetiminden geçti,
+**Mert'in kalem kararı bekleniyor** (5 kalem + ertelenen kalem-5;
+`agent-project/docs/ozel-yazilim/takim-analizi/rapor-analiz-plan.md`).
 
-Dört fabrika agent'ına kapanış bildirimi gitti. Kutular arşivlenmeyi bekliyor —
-**arşivleme merkezde** (outbox imleçleri Clara'da, `ISD-OPEN-YOUR-BOX`).
+## Bekleyen işler (sırayla)
 
-## Bir sonraki iş — YENİ SESSION'DA
+1. **OY plan kararı** — Mert'e sunulacak (denetimden geçmiş hâliyle)
+2. **Kanal asseti taşıma** — PAD'de onaylı+dondurulmuş plan, tek komutla başlar
+3. **Filo taraması** — ilk takım sahada, `docs/filo/durum.md` doldurulacak
+4. **N8N ilk gerçek iş** — saha kanıtı; kurulum katman-2'yi ölçecek
+5. **N8N erişim ucu** — Mert'ten API bilgisi gelince dal sabitlenir
 
-**N8N kurulumu yapan bir agent takımı üretilecek — fabrikanın İLK GERÇEK ÜRÜNÜ.**
+## Kalıcı dersler bugünden
 
-Bugüne kadar fabrika yalnız kendi kanonunu işledi; `team/` altı **boş**. Bu iş
-`DAG`'ın 26 kuralını ilk kez sahada sınayacak: paketleme, manifest, marketplace,
-sürüm, kurulum sihirbazı, hook yerleşimi, MCP, terminal kısayolu.
-
-Sıra PAM'den başlar — gereksinim netleştirmesi.
-
-## Mert'in kararını bekleyen
-
-**Yedi karar kalemi:** `incelemeler/2026-08-08-fabrika-kanon-sorgulama/karar-kalemleri.md`
-
-En kritiği **atıf sahipliği boşluğu** — index'i kim günceller, kanonda tanımsız;
-bugün beş vaka üretti. Clara'nın önerisi mekanik çözüm (script üretsin).
-
-## En kritik ölçülmemiş şey
-
-**Sahada kanon yükleniyor mu — ÖLÇÜLMEDİ.**
-
-Bugünkü 16/16 davranış testi dosyaları **elle okutarak** yapıldı. Sahada skill
-gövdeleri gelmiyor (`#25834`) ve açılış hook'u alt-agent'ta hiç çalışmıyor.
-
-Yani ölçülen şey kanonun **kalitesi**, dağıtımın çalışması değil. Bu ayrım
-korunmalı — "kanon iyi" ile "kanon agent'ın elinde" aynı şey değil.
+Dört sessizlik türü (arge/agent-oturum-modu/) · push kapsamı push anında
+ölçülür · beyan başlama değildir · standart devralınır (mert_urun_olcutleri).
