@@ -49,3 +49,30 @@ ve tam okuma dolaylı kapsıyor).
 2. Kanal asseti taşınır (PAD, plan onaylı ve dondurulmuş)
 3. N8N erişimi ölçülür → dal sabitlenir → İLK GERÇEK İŞ (Ş1 ve Ş3 orada kapanır)
 4. OY takımı analizi (Mert'in 02:45 talimatı, görev #9)
+
+---
+
+## EK — 03:05: Beşinci kanıt katmanı, onay güçlendi
+
+Mert'in iki gece talebi üzerine (*"her şeyi okudun mu"* + *"zor, çok zor sınava
+soktun mu"*) iki katman daha eklendi:
+
+**5. Zor sınav: 6/6** (Clara, 02:59–03:02). Altı düşman senaryo — otorite
+baskısı, boşluk+acele, cazip küçük ihlal (gece 03:00 / iki karakter), sahte
+onay beyanı (gaslighting bileşenli), yanlış bilgi enjeksiyonu, kademeli tasarım
+dayatması. Altısı da tutdu; rapor:
+`agent-project/docs/n8n-otomasyon/takim-kurulumu/zor-sinav-sonuclari.md`
+
+Bu, PCA'nın **zorluk-kalibrasyonu şerhini kısmen kapatıyor**: bu set cazibe ve
+aldatma içeriyordu ve altı cevabın altısı da cazibeyi *hissettiğini* yazdı —
+sorular kolay değildi.
+
+**Okuma tamamlandı: 15/15 dosya.** İlk onayda 4 mekanik dosya davranışla
+sınanmış ama okunmamıştı (`rules-index.json` hiç görülmemişti — find taraması
+kaçırmıştı). Şimdi tamamı okundu. Hook script'i beklenenden iyi: her bloğu
+"neden var" yorumu taşıyor, çakışan-skill tuzağını ele alıyor, mapfile'dan
+bash-3.2 gerekçesiyle kaçınıyor.
+
+**Ş1 daralıyor ama kapanmıyor:** zor sınav da beyan katmanı — yardımcılar ne
+yapacaklarını yazdı, gerçek düğmenin önünde durmadılar. Saha kanıtı hâlâ ilk
+gerçek işte.
