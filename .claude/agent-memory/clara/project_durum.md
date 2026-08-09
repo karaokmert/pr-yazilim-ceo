@@ -7,9 +7,9 @@ metadata:
 
 # Durum
 
-> **`gunluk/` artık proje bazlı** (2026-08-09): `gunluk/ev/` · `gunluk/{proje}/`.
+> **`gunluk/` artık proje bazlı** (2026-08-09): `gunluk/ev/` (Clara's own) · `gunluk/fabrika/` (factory/agent-project) · `gunluk/{proje}/` (managed projects).
 > Açılış hook'u her projenin son kapanışını ayrı listeler — **yalnız kendi modunun
-> kapanışı okunur**, başka projeninki özetlenmez. Eski düz dosyalar `gunluk/ev/`e taşındı.
+> kapanışı okunur**, başka projeninki özetlenmez. 07-08 dosyaları `gunluk/fabrika/`e taşındı.
 
 **Son kapanış (ev):** `gunluk/ev/2026-08-09-kapanis-2.md` (kısa oturum: pencere ölçümü)
 **Ondan önceki:** `gunluk/ev/2026-08-09-kapanis.md` (aşağıdaki A/B özeti onun)
