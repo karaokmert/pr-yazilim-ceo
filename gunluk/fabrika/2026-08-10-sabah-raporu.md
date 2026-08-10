@@ -172,8 +172,12 @@ sınır bölümü) · B11 (`id_kalibi`) · B13 (prefix kırığı: **40 → 0**)
 adların hiçbiri hiçbir dosyada kalmadı. Dizin iki yönde 131/131, çift tanım 0, ölü
 atıf 0. **PQA bunu PAD'in sayılarını kullanmadan bağımsız ölçtü.**
 
-**Tek açık kalem:** `dizin-uret.py` kanonda tanımlı yere (`skills/<ad>/scripts/`)
-taşınacak — PAD'de.
+**Açık kalem kalmadı.** `dizin-uret.py` taşındı; taşıma sonrası **içindeki dört ölü
+yol** çıktı (ben yakaladım, ikisi de kaçırmıştı) ve düzeltildi — PAD script'i
+**koşturdu** da, yoksa kaynak doğru ürün yanlış kalacaktı.
+
+**Denetim 8 (09:14): GEÇTİ, cascade tam.** Sekiz denetim turu koşuldu; son ikisi
+bulgusuz.
 
 **Sonra:** **push onayı senin**, devredilemez. 23 commit bekliyor.
 
