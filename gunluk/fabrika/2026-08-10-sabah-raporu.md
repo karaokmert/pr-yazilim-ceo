@@ -162,9 +162,39 @@ koydu.** Ve üçü de memory taramasında topladığım *"sessiz kırılma"* sı
 
 ## Bir sonraki hareket
 
-**Şu an:** paket PQA denetiminde (üçüncü tur). Son davranış sınamam koşuyor.
+**Son durum (08:57):** paket **16 dosya, 9 skill**, validate temiz. **Altı denetim
+turu koşuldu; sonuncusu (denetim 6) BULGUSUZ GEÇTİ** — bu ilk temiz denetim.
 
-**Sonra:** denetim geçerse push kapısı açılır — ve **push onayı senin**, devredilemez.
+**Kapanan bulgular:** B9 (compaction — kısmen: 26 → 6 kimlik) · B10/B12 (KURULUM.md
+sınır bölümü) · B11 (`id_kalibi`) · B13 (prefix kırığı: **40 → 0**).
+
+**Cascade sıfır iz bıraktı:** 40 kimlik yeniden adlandırıldı, 43 geçiş yapıldı, eski
+adların hiçbiri hiçbir dosyada kalmadı. Dizin iki yönde 131/131, çift tanım 0, ölü
+atıf 0. **PQA bunu PAD'in sayılarını kullanmadan bağımsız ölçtü.**
+
+**Tek açık kalem:** `dizin-uret.py` kanonda tanımlı yere (`skills/<ad>/scripts/`)
+taşınacak — PAD'de.
+
+**Sonra:** **push onayı senin**, devredilemez. 23 commit bekliyor.
 
 **Sonraki iş:** kalan sekiz rol. Ama önce **yukarıdaki iki kararın** verilmesi lazım —
 özellikle birincisi, çünkü her yeni rol aynı çekirdeği taşıyacak.
+
+---
+
+## Ve bir şey daha — bu gecenin karakteri
+
+**Kimse savunmaya geçmedi.** Dört kararımı geri aldım; PQA kendi denetim raporunu
+düzeltti; PAM benim yetki sınırımı çizdi; PAD kendi körlüğünü açıkladı. Hiçbiri *"ben
+haklıydım"* demedi — hepsi ölçüme bakıp değiştirdi.
+
+**Tek bir hata sınıfı tekrarlandı, üç tarafta da:** *araç doğru çalıştı, soru yanlıştı.*
+Kimse yanlış komut yazmadı, kimse sayı uydurmadı — ama **beş kez** aranan şey ile
+ölçülen şey birbirinin yerine geçti (geçiş/tanım · kaynak/tanım · telafi/kalıp ·
+kimin bulduğu · dosya adı/kimlik).
+
+**Ve bayatlama altı kez oldu** — üçü bende, üçü PAM'de. PAM'in teşhisi: *"bir kişiye
+değil, **iş akış hızına** bağlı."* İki taraf paralel çalışırken dakikalar fark
+üretiyor; bildirim yazıldığı anda geçmiş olabiliyor.
+
+İkisi de kanona aday olarak fabrikanın kuyruğunda.
