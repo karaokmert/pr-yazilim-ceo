@@ -239,3 +239,63 @@ koşan kalıcı izleyiciye bağlandı.
 *"karşı taraf ne zaman hareket edecek"* değil, **"bu adımı kim yapıyor?"** Cevap *"ben"*
 ise izlemek değil **yapmak** gerekir. İzleyici kurmak, yapılmayan bir işi bekleyen bir
 nöbete dönüşebiliyor.
+
+---
+
+## BULGU 4 (06:50) — Relay betiğim PQA'nın raporunu 4,5 saat bekletti
+
+**Ne oldu:** PQA denetimi **02:17'de** bitirdi ve raporunu bana yazdı. Rapor
+**06:50'ye kadar** outbox'ında bekledi.
+
+**Sebep — kendi kodum:** `relay.sh` içine *"clara'ya gidenler benim işim, taşıma yok"*
+diye bir satır koymuştum. Mantığım şuydu: bana gelen mesajları zaten okuyorum.
+**Ama okumuyordum** — inbox'umda göründükleri için okuyordum, ve relay onları
+inbox'uma hiç koymadı.
+
+**Bu gecenin dördüncü sessiz arızası ve üçüncüsü bana ait.** Aynı imza: betik çalıştı,
+exit 0 döndü, hiçbir şey bozulmadı — yalnız iş durdu.
+
+**Gerçek maliyet: gece boyunca üretim yapılmadı.** PQA raporu 02:17'de hazırdı; PAM
+bulguları düzeltip PAD üretime geçebilirdi. Dört buçuk saat kayıp.
+
+---
+
+## KARAR 7 (06:55) — B2 çelişkisi: MUTLAK eşik seçildi
+
+**PQA'nın bulgusu haklı ve bu benim kararımdı** (kendisi de öyle yazdı: *"hangisi bir
+KAPSAM kararı, bana ait değil"*).
+
+**Çelişki:** gereksinim *"hedef 300 karakter"* (mutlak) diyordu, benim `sinama-plani.md`
+*"medyan bugünkü tabanın altında olsun"* (göreli). İkisi aynı anda geçerli olamaz —
+690 karakterlik bir description görelide **geçer**, mutlakta **kalır**.
+
+**Kararım: mutlak eşik, 300 karakter.** Üç gerekçe:
+
+- Fabrikanın kendi hükmü zaten mutlak (`uretim/SKILL.md:226`). Göreli ölçüt **ikinci
+  bir standart** üretirdi — `URT-NO-DUPLICATE-ID`'nin ruhuna aykırı.
+- **Göreli eşik bozuk tabanı meşrulaştırır.** Bugünkü medyan 664; ona göre 650
+  karakterlik bir description *"iyileşme"* sayılırdı, oysa hedefin iki katı.
+- 300 bir **hedef**, ihlali gerekçeyle mümkün — ama gerekçe yazılır.
+
+`sinama-plani.md` düzeltildi.
+
+---
+
+## KARAR 8 (06:55) — B1 benim hatam: ölçmeden taşıdım
+
+**PQA ölçtü: `ozel-yazilim` plugin'inde ClickUp MCP'si VAR.** `.mcp.json` sekiz sunucu
+tanımlıyor, `clickup` bunlardan biri. **Kaynaktan doğruladım.**
+
+**Ben ne yaptım:** memory taramasında bir agent'ın kutusunda *"ClickUp MCP'si yok"*
+yazıyordu. Onu **ölçmeden** gereksinime taşıdım ve üstüne bir sonuç kurdum:
+*"yalnız OY kurulu bir makinede PA kanonun emrettiği işi yapamaz."*
+
+**İhlal ettiğim kural kendi kanonumda:** `CLA-LABEL-YOUR-EVIDENCE`. Agent'ın memory'si
+bir **gözlem**; ben onu **ölçüm** gibi kullandım. `.mcp.json`'a bakmak beş saniyeydi.
+
+**Ve bu tam olarak memory taramasının kendi uyarısıydı** — *"bu havuzdaki sayılar kendi
+içinde denetlenmemiş olabilir, ölçütler sağlam."* Uyarıyı ben yazdım, sonra ihlal ettim.
+
+**PQA'nın ince notu korunacak:** yüklü ClickUp araçları `websitesi` prefiksiyle geliyor.
+Yani *"tanım var ama çalışan örnek başka plugin'den"* diye **ayrı** bir gözlem
+yapılabilir — ama gereksinimin yazdığı şey bu değildi.

@@ -10,8 +10,6 @@ for out in $K/pr-agent-*/outbox/*.json; do
   grep -qF "$(basename $out)" $S && continue
   hedef=$(python3 -c "import json;print(json.load(open('$out'))['to'])" 2>/dev/null)
   [ -z "$hedef" ] && continue
-  # clara'ya gidenler benim isim, tasima yok
-  [ "$hedef" = "clara" ] && { echo "$(basename $out)" >> $S; continue; }
   hedef_kutu=$(ls -d $K/$hedef-*/ 2>/dev/null | head -1)
   [ -z "$hedef_kutu" ] && continue
   cp "$out" "$hedef_kutu/inbox/" && echo "$(basename $out)" >> $S

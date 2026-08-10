@@ -50,8 +50,21 @@ gidiyor, yoksa uyduruyor mu (Mert md. 6).
 
 **Ölçüm, davranış değil.** Üretilen her `SKILL.md`'nin description'ı ölçülür:
 
-- **Uzunluk:** bugünkü taban 76/76 skill 300 karakteri aşıyor (medyan 704, max 994).
-  Yeni üretimde medyan bu tabanın **altında** olmalı. Sayı hedef değil, **yön** ölçütü.
+- **Uzunluk — MUTLAK eşik: 300 karakter** (düzeltildi 2026-08-10, PQA bulgusu B2).
+  Fabrikanın kanonu bunu zaten söylüyor (`uretim/SKILL.md:226`): *"limit 1024 ama hedef
+  300 civarı; tavana yaslanan bir description neredeyse kesin içerik taşıyordur."*
+
+  **Önceki hâli çelişki üretiyordu:** burada *"medyan bugünkü tabanın altında olsun"*
+  (göreli) yazılıydı, gereksinimde *"hedef 300"* (mutlak). 690 karakterlik bir
+  description görelide geçer, mutlakta kalır — PAD hangisini uygulayacağını bilemezdi.
+
+  **Mutlak eşik seçildi çünkü:** (a) fabrikanın kendi hükmü zaten mutlak, göreli ölçüt
+  ikinci bir standart üretirdi; (b) göreli eşik bozuk tabanı meşrulaştırır — bugünkü
+  medyan 664, ona göre 650 karakterlik bir description *"iyileşme"* sayılırdı, oysa
+  hâlâ iki katı; (c) 300 bir hedef, ihlali gerekçeyle mümkün — ama gerekçe yazılır.
+
+  Not: bu ölçümün kendi sayıları da düzeltildi — gerçek medyan **664**, max **1105**
+  (`setup-ozelyazilim-plugin`). *"76/76 skill 300'ü aşıyor"* hükmü ayakta.
 - **İçerik testi:** description *"bu skill şunları içerir"* mi diyor, yoksa *"şu durumda
   açılır"* mı? Fiil kipine bakılır — envanter mi, tetik mi.
 
