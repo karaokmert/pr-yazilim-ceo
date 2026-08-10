@@ -299,3 +299,52 @@ içinde denetlenmemiş olabilir, ölçütler sağlam."* Uyarıyı ben yazdım, s
 **PQA'nın ince notu korunacak:** yüklü ClickUp araçları `websitesi` prefiksiyle geliyor.
 Yani *"tanım var ama çalışan örnek başka plugin'den"* diye **ayrı** bir gözlem
 yapılabilir — ama gereksinimin yazdığı şey bu değildi.
+
+---
+
+## KARAR 9 (06:55) — Düzeltme kesildi, üretime geçiliyor (KULLANICI KARARI)
+
+**Mert 06:54'te karar verdi:** *"ikinciyi yap, üretime geç."*
+
+**Sunduğum iki yol:** (1) zinciri tam koştur — PAM düzeltir, PQA tekrar denetler, sonra
+üretim; kalite yüksek ama n8n'de bu beş tur sürdü. (2) Üç iş değiştirici bulguyu
+düzelt, kalan beşi işaretle, **hemen üret.**
+
+**Gerekçe — Mert'in kendi kuralı:** *"Bir ürün oluşturun, sonra kaliteli hâle
+getirirsiniz."* Gece boyunca **tek satır agent dosyası üretilmedi.** Elimizde 649 satır
+gereksinim + 8 bulgulu denetim raporu var, ürün yok. Bu, 2026-08-08'de ölçülen arızanın
+aynısı: her adım savunulabilir, hiçbiri ürün üretmez.
+
+**Şimdi düzeltilenler — yalnız üçü:** B1 (ClickUp iddiası yanlış), B2 (eşik çelişkisi),
+B3 (ölçüt iki modlu yazılacak).
+
+**Bırakılanlar — B4, B5, B6, B7, B8.** Ayıran ölçüt: *eksik olan şey ürünü yanlış mı
+yapıyor, yoksa eksik mi bırakıyor?* Beşi de belgeyi eksik bırakıyor, **üretimi yanlış
+yapmıyor.** Kusurlu bir çıktı düzeltilebilir; olmayan bir çıktı düzeltilemez.
+
+**Bir istisna işaretlendi:** B7(a) — QA body alıntısından *"TE senaryo"* düşürülmüştü ve
+o paragrafın tezi *"TE'nin işi developer self-verify'ıyla örtüşüyor"* idi. Kaynak tezin
+**aleyhine** konuşuyor. Bu yüzden **TE'yi birleştirme/kaldırma kararı bu tezle
+alınmayacak** — TE dokuz rolde kalır, aksi ancak Mod B iş bölünmesinden çıkarsa olur.
+
+**Neden bu istisna:** B7(a) diğer alıntı hatalarından farklı — o bir kırpma değil,
+**tezi taşıyan kanıtın kırpılması.** Üretim sırasında rol kararı verilecekse yanlış
+zemine basar.
+
+---
+
+## KARAR 10 (06:55) — Aşama 1 ve pilot rol TEK PAKETTE üretilecek
+
+**Ne:** PAD'e verilen iş, ortak katmanı ve backend rolünü **birlikte** üretmek.
+
+**Neden:** Gereksinimde üç aşama sıralıydı (ortak katman → pilot → kalan sekiz) ve
+aşama 2'nin aşama 1 denetiminden geçmeden başlamayacağı yazılıydı. **Bu sıra artık
+maliyet üretiyor** — ortak katman tek başına denetlenip beklerse bir tur daha eklenir.
+
+**Ve teknik gerekçe daha güçlü: ortak katman tek başına sınanamaz.** Birleşik
+`behavior` doğru mu, skill haritası çalışıyor mu — bunlar ancak **bir rolün içinde**
+ölçülebilir. Aşama 1'i ayrı denetlemek *"dosya üretildi"* ölçütüne geri düşmek olurdu,
+oysa kabul ölçütü *"sahada açıldı."*
+
+**Risk kabul edildi:** ortak katmanda bir hata varsa pilot rolle birlikte düzeltilecek,
+yani iki iş birden. Ama tek rol üzerinde — dokuz değil.
