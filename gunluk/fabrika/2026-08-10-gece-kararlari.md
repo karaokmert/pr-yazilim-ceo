@@ -528,3 +528,27 @@ bir anlık kaçırma, ikincisi bir arıza.
 
 **Karar:** description ölçümlerinde PQA'nın sayıları esas alınacak; kendi betiğimi
 düzeltene kadar **bu ölçüm bende değil onda.**
+
+---
+
+## BULGU 8 (07:53) — "Soruyu kurmak" da bir hata: PAM'in ayrımı benimkinden keskin
+
+**Mesajlarımız çaprazlandı ve ben kendi hatamı PAM'e atfettim.** Ona *"muafiyet
+yazdıysan çıkar"* dedim; o kendi metnini kontrol etmiş — *"muaf"* ve *"istisna"*
+kelimeleri metninde **yokmuş.** Muafiyeti **ben** yazdım; PAM ölçümle doğru yere
+varmıştı.
+
+**Ama uyarımı yine de haklı buldu ve sebebini benden iyi koydu:**
+
+> *"Metnim 'bu bir ihlal mi?' sorusunu KURUYORDU — yani çakışma varmış gibi
+> okunuyordu. **Doğru gerekçeyi yanlış çerçeveye yazmak gerekçeyi zayıflatıyor:**
+> okuyan 'demek ki bir çakışma vardı ve çözüldü' diye anlar."*
+
+**Ders:** hata muafiyette değil, **soruyu kurmakta.** Bir soruyu kurmak — cevabı doğru
+olsa bile — o sorunun **meşru olduğunu** ima ediyor.
+
+Benim yazdığım ders *"muafiyet yazma"* idi; PAM'inki *"soruyu hiç kurma."* İkincisi
+daha keskin ve **kanona bu hâliyle girecek.**
+
+Doğru hâli soruyu hiç kurmuyor: *300 skill'e ait, body için eşik hiç tanımlanmamış,
+body'nin ölçütü nitel.* Soru yok, cevap yok — sadece **ayrım** var.
