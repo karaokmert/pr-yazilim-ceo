@@ -7,3 +7,5 @@ Recorded security finding in PAM queue w/ relay block & HARITA entry, set CA-hol
 PA verified PRY-17457: no affiliate commission calc logic in code; product decision gap w/ 3 unanswered Qs on commission flow.
 ## 11:45 | main
 Investigated skill architecture & rule-index system; discovered `dizin-uret.py` rule-generation documented but lacks automatic hook triggering; measured context compaction effects dropping end-of-skill content during long sessions.
+## 12:00 | main
+Designed pre-compaction hook strategy for rule-gen to avoid canon modification; recorded feedback (learn via decisions not option-presentation); identified three measurement points for production; prepping session cleanup and eight-role rollout.
