@@ -45,6 +45,7 @@
 - [Maliyet tahmini ölçüm değildir](feedback_maliyet_tahmini_olcum_degil.md) — "pahalı/ucuz" sayı gibi konuşulan tahminler; aynı yöntem için iki gün iki zıt tahmin, gerçek 204 bin token
 - [Kapsamını yaz — neye BAKMADIĞINI da](feedback_kapsamini_yaz.md) — dar kapsam yanlış değil, yazılmamış kapsam yanlış; 3 kez ölçüldü, 2 yeni bulgu çıkardı
 - [Doğru bilgi, yanlış taşıma](feedback_dogru_bilgi_yanlis_tasima.md) — iş vermeden önce hedefin kanonuna bak; rapor özetlenmez, uzun içerik kanala gömülmez
+- [Katmanın değeri içerikten ölçülür](feedback_katman_degeri_icerikten_olculur.md) — trafik sayısı "gereksiz" der, içerik "işini yapmadı" der; ikisi zıt sonuç verir
 - [Ölçüm yerine yorum — EN SIK HATA](feedback_olcum_yerine_yorum.md) — elde kanıt varken yorumlamak; 6 kez düştüm, 4'ünü agent'lar düzeltti
 - [Önce sahada, sonra kanona](feedback_once_sahada_sonra_kanon.md) — Mert 2 kez kesti; masada ölçülmüş olmak yetmez
 - [Ölçümde kaynağa git](feedback_olcum_kaynaga_git.md) — işi biten sanmadan bakma, kullanıcının özetini kaynak sayma
