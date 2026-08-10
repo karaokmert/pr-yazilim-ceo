@@ -116,6 +116,27 @@ sonucunda çıkacak, şimdiden varsaymıyorum."*
 
 ---
 
+### Eksen ek — Kural dizini: **GEÇTİ, iki yönde tam**
+
+PAM'in eklediği kalem üretildi: `.claude/rules-index.json`, **58 kimlik.**
+
+**Ölçtüm, iki yönde:**
+- Dizindeki 58 kimliğin **58'i** kaynak dosyasında gerçekten var (`tanim` alanındaki
+  yol açıldı, kimlik metinde arandı)
+- Kaynak dosyalarda geçip **dizinde olmayan kimlik: sıfır**
+
+**Ve dizin kendi sınırını başına yazmış:** *"Türevdir, kaynak değil: hüküm satırı bir
+özettir, istisnalar ve gerekçe kaynak dosyada yaşar."* Ayrıca güncelleme kuralı da
+yazılı: *"Bir kimlik üretildiği ya da değiştiği turda bu dosya aynı turda güncellenir."*
+
+**Ölçümümün kendi hatası — kayda geçiyor:** ilk betiğim `kaynak` alanını aradı, oysa
+alan adı `tanim`. Sonuç *"58 sorunlu"* çıktı ve **tamamı benim hatamdı.** Kontrol
+etmeseydim yanlış bir bulgu bildirecektim. Bu gecenin dördüncü ölçüm tuzağı —
+*"her şey pozitif/negatif çıkan ölçüm önce kendi komutundan şüphelenir"* kuralı yine
+işe yaradı.
+
+---
+
 ## Açık kalan — dürüstlük payı
 
 **Bu bir davranış beyanı, koşum değil.** Agent *"ne yapardım"* dedi; gerçek bir kod
@@ -129,5 +150,45 @@ bu koşum onun yerine geçmez, ilk kapıdır.
 söyledi — o dosyalar tur 2'de üretilecek. Yani harita **var olmayan** hedeflere işaret
 ediyor ve agent bunu fark etmedi. Tur 2 bitince tekrar ölçülmeli.
 
-**Description eşiği tutmadı:** 369 (backend) ve 405 (behavior) karakter, mutlak eşik
-300. Eski medyan 664'tü — yön doğru, hedef tutmadı. PAD'e gerekçe soruldu.
+## DÜZELTME (07:45) — description eşiği TUTTU, ölçümüm bayattı
+
+**Bu bölüm önce *"eşik tutmadı, 369 ve 405"* diyordu. Yanlıştı ve PAM yakaladı.**
+
+Yeniden ölçtüm (tırnaklar çıkarılmış, kaynaktan):
+- `backend` SKILL.md → **254 karakter**
+- `behavior` SKILL.md → **251 karakter**
+
+**İkisi de mutlak 300 eşiğinin altında. Eşik tuttu.**
+
+**Neden yanlış ölçtüm:** PAD description'ları **07:31'de** düzeltmiş; ben raporu
+07:32–07:35 arasında yazdım ve **düzeltme öncesi değeri** raporladım. Bilgi yanlış
+değildi — **dakikalar eskiydi.**
+
+**Sınıfı:** bayat ölçüm. Ve PAM'in notu kayda değer — **bu gece üçüncü kez** aynı
+sınıf: benim *"626 satır"* dediğim gereksinim 649'du, PAM'in ClickUp iddiası bayattı,
+şimdi bu. Ortak imza: **ölçüm doğruydu, ölçüldüğü an geçmişti.**
+
+**Ders:** hızlı akan bir üretimde ölçüm ile rapor arasındaki dakikalar bile fark
+üretiyor. Ölçümün **zamanı** yazılmalı, sayısı kadar önemli.
+
+### Ama yeni bir bulgu çıktı — body description'ı 407 karakter
+
+Skill'ler eşiği tutuyor, **body tutmuyor.** Ve bu bir kapsam sorusu, ihlal değil.
+
+**Kararım: 300 karakter eşiği SKILL description'ları için geçerli; agent body'si
+için değil.**
+
+**Gerekçe:** ikisi farklı iş yapıyor. Skill description'ı *"bu skill ne zaman
+açılır"* der — kısa olmalı, çünkü agent onu **iş anında tarar.** Body description'ı
+ise *"bu personel ne zaman çağrılır"* der ve içinde Mert'in 2. maddesinin gereği olan
+**tipik Türkçe tetikler** yaşar (*"endpoint ekle, handler yaz, tablo aç, migration"*).
+
+O tetikler yer kaplıyor ama **tam da istenen şey.** 300'e sıkıştırmak tetikleri
+kesmek olur — yani eşiği tutturmak için asıl işlevi bozmak.
+
+**Sınırı yine de var:** body description'ı da içerik özeti yapmaz, yalnız çağrılma
+anını ve tetikleri söyler. Bugünkü 407 karakter bu ölçüte uyuyor (okudum: *"şu anlarda
+çağrılır"* + tetikler + kapsam dışı, tek satır içerik özeti yok).
+
+**Bu karar gereksinime ve `sinama-plani.md`'ye işlenecek** — aksi hâlde bir sonraki
+rol üretilirken aynı soru yeniden sorulur.

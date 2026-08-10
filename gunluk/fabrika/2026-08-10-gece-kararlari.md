@@ -432,3 +432,50 @@ neyi aradığını bilir; yazma neyin eksik olduğunu gösterir.
 
 PAD'e talimat verildi: okurken çarptığı her boşluğu yazsın, küçük görünse bile.
 Bunlar yeni takımın **sessiz kırılma envanterine** girecek.
+
+---
+
+## KARAR 14 (07:45) — 300 karakter eşiği skill'ler için; body için değil
+
+**Yeni bulgu:** skill description'ları eşiği tutuyor (`backend` 254, `behavior` 251),
+**agent body'si 407 karakter.**
+
+**Kararım: 300 eşiği SKILL description'ları için geçerli, body için değil.**
+
+**Gerekçe — ikisi farklı iş yapıyor:**
+- Skill description'ı *"bu skill ne zaman açılır"* der. Kısa olmalı çünkü agent onu
+  **iş anında tarar**; uzun olursa tarama maliyeti artar.
+- Body description'ı *"bu personel ne zaman çağrılır"* der ve içinde Mert'in 2.
+  maddesinin gereği olan **tipik Türkçe tetikler** yaşar.
+
+O tetikler yer kaplıyor ama **tam da istenen şey.** 300'e sıkıştırmak tetikleri kesmek
+olur — yani **eşiği tutturmak için asıl işlevi bozmak.** Bu bir yama olurdu
+(`CLA-FIX-THE-CAUSE`: ölçüt işi bozuyorsa ölçüt yanlış kurulmuş demektir).
+
+**Sınır korunuyor:** body description'ı da içerik özeti yapmaz — yalnız çağrılma anını
+ve tetikleri söyler. Bugünkü 407 karakter bu ölçüte uyuyor (okundu).
+
+---
+
+## BULGU 6 (07:45) — Bayat ölçüm: bu gece ÜÇÜNCÜ kez
+
+**PAM benim ölçümümü düzeltti ve haklıydı.** Description'ları 369/405 diye
+raporlamıştım; gerçek değer 254/251. **Eşik tutuyordu.**
+
+**Sebep:** PAD description'ları 07:31'de düzeltmiş, ben raporu 07:32–07:35 arasında
+yazdım ve **düzeltme öncesi değeri** raporladım.
+
+**Bilgi yanlış değildi — dakikalar eskiydi.** Ve PAM'in tespiti kayda değer: bu gece
+**üçüncü kez** aynı sınıf.
+- Benim *"626 satır"* dediğim gereksinim yazıldığında 649'du
+- PAM'in *"ClickUp MCP'si yok"* iddiası memory'den geliyordu, bayattı
+- Şimdi description ölçümüm
+
+**Ortak imza: ölçüm doğruydu, ölçüldüğü an geçmişti.**
+
+**Ders:** hızlı akan bir üretimde ölçüm ile rapor arasındaki **dakikalar** bile fark
+üretiyor. Ölçümün **zamanı** yazılmalı — sayısı kadar önemli. Ve bir ölçümü
+raporlamadan önce *"bu değer hâlâ geçerli mi"* diye sormak, tarama maliyetinden ucuz.
+
+**Yanlış raporlamanın somut bedeli vardı:** PAD'e haksız bir gerekçe borcu yükledim.
+Düzeltildi ve bildirildi.
