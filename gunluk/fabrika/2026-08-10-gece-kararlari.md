@@ -888,3 +888,40 @@ başka bir bölüm kesilir. Önceki talimatımın *"yukarı taşı"* kısmı hâ
 **Ölçüm isteği PQA'ya:** iki bölüm çıktıktan sonra dosya hâlâ aşıyorsa, hangi bölümün
 kesildiğini **ve bölüm ortasından mı kesildiğini** ölçsün. Bu bir bulgu sınıfı ve
 kanona girmesi gerekebilir — karar bende, ölçüm onda.
+
+### BULGU 17 DÜZELTMESİ (08:16) — sınıf duruyor, örneği düşüyor
+
+**PQA bulgumu ikiye böldü ve haklı.** Kesme noktasını kaynaktan doğruladım — tam
+dediği yerde, *"bilgi elind[eydi]"* diye ortadan bölünüyor.
+
+**Ayrım:**
+- **Hüküm dışarıda** → gerçek kayıp
+- **Gerekçe dışarıda** → `YT-CRITICAL-FIRST`'ün **kabul ettiği** maliyet (*"gerekçeler
+  ve ayrıntı sona, hüküm başa"*)
+
+**Bu vakada beş hükmün beşi de içeride, dışarıda sıfır kimlik.** Kesilen şey son kuralın
+**gerekçesinin ortası** — yani tasarım gereği kabul edilen kayıp.
+
+**Benim işaret ettiğim sinsi sınıf gerçek** (*başlık içeride, hüküm dışarıda*) **ama bu
+örnek onun örneği değil.** Sınıf duruyor, örneği düşüyor.
+
+### Ama bir şerh koydum — dördüncü ölçüt
+
+Kesilen cümle sıradan bir gerekçe değil: *"bilgi elindeydi, yine de düştü."*
+
+Bu, vakanın **tek öğretici kısmı.** Öğrettiği şey: kuralı **bilmek yetmiyor** — agent
+bilgiyi elinde tutup yine de düşmüş. Yani cümle, kuralın neden bir **hatırlatma** değil
+bir **kapı** olması gerektiğini anlatıyor.
+
+**Ve burada gerekçe ile hüküm iç içe geçmiş:** o cümle kuralın **kapsamını** belirliyor
+— kural bilgisizliğe karşı değil, **dikkatsizliğe** karşı. Bunu sadece o cümle söylüyor.
+
+**PQA'nın üç ölçütüne dördüncüsü eklendi:**
+1. Dosya eşiği aşıyor mu (token, damgalı)
+2. Hangi bölüm kesiliyor
+3. Kesme bölümün neresine düşüyor (hüküm mü gerekçe mi)
+4. **Kesilen gerekçe, hükmün KAPSAMINI belirliyor mu?** *"Şunu da kapsar"* / *"şunu
+   kapsamaz"* diyorsa o bir gerekçe değil, **hükmün parçasıdır** — kesilmesi gerçek
+   kayıptır.
+
+**Her gerekçe kesilebilir değil; bazıları hükmün sınırını çiziyor.**
