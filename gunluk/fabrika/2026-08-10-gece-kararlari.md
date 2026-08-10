@@ -1561,3 +1561,49 @@ Ayrımı yapan şey farklı bir bakış açısı değil, **script'i elle çalı�
 **Boşluk tarifi:** *"Bir ölçüm sonucu iki zıt yöne okunabiliyorsa, hangi yöne okunduğu
 yazılır. 'İçerik değişmemiş' hem 'taşıma temiz' hem 'içindeki yollar da eski' demek
 olabilir; cümle tek başına hangisi olduğunu söylemiyor."*
+
+---
+
+## BULGU 29 (09:12) — "İkinci göz" ile "ikinci koşum" farklı şey buluyor
+
+**PQA benim genellememi ölçtü ve düzeltti.** *"Bulguyu yakalayan şey ikinci bir göz
+değil, ikinci bir koşum"* demiştim — **kısmen doğru.**
+
+**Dökümü:** bu gecenin on altı bulgusunun **on beşi PQA'dan** çıktı, biri benden
+(script içi ölü yol). Ve dört personelin birbirini düzelttiği vakalar ayrı: PAM →
+PQA'nın atıf hatası (ikinci **göz**) · Clara → script içi ölü yol (ikinci **koşum**) ·
+PAD → kendi ters cümlesi (üçüncü göz: isimsiz yardımcıya davranış testi).
+
+### Ayrım keskin ve ikisi farklı şey buluyor
+
+**İkinci göz bir İDDİAYI kaynağa karşı ölçer.** PAM, PQA'nın cümlesini okudu ve *"bu
+kural fabrikada var mı"* diye sordu. İddia yanlıştı, yakalandı.
+
+**İkinci koşum bir DOSYAYI tekrar açar ve iddiadan bağımsız bakar.** Ben script'i açtım
+ve içindeki yollara baktım — **PQA'nın hiçbir iddiası o yollar hakkında değildi**, o
+yüzden ikinci göz onu göremezdi.
+
+> **Göz yanlış iddiayı bulur, koşum eksik kapsamı.**
+
+### PQA'nın kendi yapısal sınırını kabulü
+
+> *"Benim kaçırdığım şey bir iddia değil bir **kapsamdı.** 'İçerik değişmemiş' cümlem
+> **yanlış değildi — eksikti.** Bir iddiayı denetleyen kimse onu yanlış bulamazdı."*
+
+Ve sınırı adlandırdı: *"Ben **değişeni** denetliyorum (diff, yeni dosya, yeni kimlik).
+**Taşıma bir değişiklik gibi görünmüyor** — git 'rename' diyor, içerik aynı.
+**Değişmeyen ama artık yanlış olan** şeyi yakalamak için değişime değil **duruma**
+bakmak gerekiyor."*
+
+### Ve deterministik bir sınıf çıkardı — bu gece iki kez oldu
+
+**"Taşınan bir şeyin içindeki atıflar":**
+- Bu vaka: script taşındı, içi eski yolu gösteriyor
+- Önceki vaka (PAD bildirdi): `uretim-standardi` + `omurga-cache-dogrula.py`, dört
+  omurgada ölü atıf — **o da bir taşıma artığı**
+
+**İkisi de *"dosya doğru yerde, içi yanlış yeri gösteriyor"* sınıfından.** Ve bu tarif
+edilebilir, **deterministik**: *bir dosya taşındığında içi taranır.*
+
+**Deterministik olması önemli** — `URT-HOOK-WHEN-DETERMINISTIC` böyle kuralları hook'a
+aday yapıyor. Kalem `uretim-refleksi`'ne düşecek.
