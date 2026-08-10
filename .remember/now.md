@@ -7,3 +7,5 @@ PQA audit findings validated—B9 resolved via scope decision (move handoff bloc
 Devir skill extracted; B9 partial resolution ongoing (25k chars/7.9k tokens vs 5k limit), token-character unit confusion clarified.
 ## 08:21 | main
 B9 closed: confirmed core sections exceed 5k token limit; delivered 9-skill, 15-file package to review.
+## 08:27 | main
+3rd inspection complete: pkg validated, 20 decisions/findings logged, B12 (doc gap) and B13 (rule breakage) identified.

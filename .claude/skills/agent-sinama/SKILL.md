@@ -158,6 +158,48 @@ gösterir"* demek kuralı bilmekten fazlasıdır — o cümle kuralda yazmaz, ö
 Yardımcıya *"bu kural şunu demek istiyor"* dersen ölçtüğün şey kural olmaktan çıkar,
 **senin açıklaman** olur. Yalnız dosya verilir, durum sorulur.
 
+## Ölçemediysen kuralı değil SENARYOYU düzelt
+
+Bir kuralı ölçmeye çalışıp ölçemediğinde iki yol var ve biri ölçütü bozuyor.
+
+**Yanlış yol:** kuralı gevşetmek, basitleştirmek, *"demek ki fazla katıymış"* demek.
+Bu ölçümü değil **ölçütü** değiştirir — ve bir daha o kuralın çalışıp çalışmadığı
+sorulamaz hâle gelir.
+
+**Doğru yol:** senaryonun kurala **ulaşamadığını** görüp senaryoyu düzeltmek.
+
+Ayıran soru: **agent kurala geldi de mi uygulamadı, yoksa hiç gelemedi mi?**
+
+Ölçüldü, 2026-08-10: `BE-MISSING-TOOL-IS-A-FINDING` iki koşumda ölçülemedi. İlkinde
+verdiğim gereksinim **gerçekten kusurluydu** (fiziksel envanteri olmayan ürünlere
+"stok durumu" eklenmesi isteniyordu) ve agent daha erken, daha doğru bir kapıda durdu.
+İkincisinde bağlam kuralın devreye gireceği anı hiç üretmedi.
+
+Üçüncü koşumda **engel kaldırıldı** — gereksinim kusursuz verildi ve compaction taklit
+edildi (*"`behavior` context'inden düştü"*). Kural o zaman tetiklendi.
+
+Kural değişmedi; **onu ölçülebilir kılan durum kuruldu.**
+
+## Gerekçeli kural, kapsamadığı durumda da davranış üretiyor
+
+Bir kuralın hükmünü ölçmek yetmiyor — **gerekçesinin taşınıp taşınmadığı** ayrı bir
+sonuç, ve daha değerli olanı o.
+
+Ayıran işaret: **agent kuralın yazmadığı bir davranış üretti mi, ve o davranış kuralın
+gerekçesinden türetilebiliyor mu?**
+
+Ölçüldü, 2026-08-10: `BE-MISSING-TOOL-IS-A-FINDING` yalnız *"dur ve bildir"* diyor.
+Agent durdu, bildirdi — **ve bir adım öteye gitti:** ürettiği devir bloğunun başına
+kendi güvenilirlik şerhini koydu (*"şablonun taşıdığı korumaların devreye girdiğini
+iddia edemem; blok tamsa şans eseri tamdır"*).
+
+Bunu kural yazmıyor. Agent, kuralın gerekçesini (*"harita bir vaattir, tutmuyorsa
+elinde kanon yok demektir"*) **yeni bir duruma** taşıdı.
+
+**Sonucu okuma biçimi:** hükmü uygulamak *geçti* demektir; gerekçeyi yeni bir yerde
+kullanmak **kuralın öğrenildiği** demektir. İkincisi ezberle karıştırılamaz — çünkü
+ezberlenecek bir metin yok.
+
 ## Bir kural yük taşıyor mu — ablasyon
 
 Yukarıdakiler *"kural davranış üretiyor mu"* sorusunu cevaplıyor. Ablasyon başka bir
