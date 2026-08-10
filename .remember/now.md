@@ -5,3 +5,5 @@ Analyzed script, identified & fixed 4 path-ref issues, documented 23 decisions &
 Recorded security finding in PAM queue w/ relay block & HARITA entry, set CA-hold sprint rule w/ PA, opened TUR 4 (PRY-17457 Finance+Dashboard), created CA-findings tracker.
 ## 11:27 | main
 PA verified PRY-17457: no affiliate commission calc logic in code; product decision gap w/ 3 unanswered Qs on commission flow.
+## 11:45 | main
+Investigated skill architecture & rule-index system; discovered `dizin-uret.py` rule-generation documented but lacks automatic hook triggering; measured context compaction effects dropping end-of-skill content during long sessions.
