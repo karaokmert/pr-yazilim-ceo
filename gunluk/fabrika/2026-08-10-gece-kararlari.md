@@ -1360,3 +1360,65 @@ düzeltmeye çalışacaktı.
 
 **PQA'ya not düşüldü:** bu sayıları yeniden üretmesi, ve regex kurarken **rakam içeren
 kimlikleri kapsaması** — benimki kaçırdı.
+
+---
+
+## DENETİM 5 (08:53) — Üç bulgu kapandı, cascade temiz
+
+**B11 (`id_kalibi`) — KAPANDI.** Ve **PAD taşırken fabrikadan bir cümle FAZLA
+eklemiş:** *"bir prefix iki dosyaya yayılmışsa seri kırıktır."*
+
+**Yani körkopya yapmamış, B13'ün dersini de kalıba yazmış.** Bu tam istediğim şey —
+kalıbı taşı ki kırık bir daha **doğmasın.** Ders kalıbın içinde olunca sonraki rol de
+okuyacak.
+
+**B13 (prefix) — KAPANDI, TAM.** Dokuz prefix, dokuzunun da tek dosyası var. Kırık
+**sıfır** (önceki ölçüm: 40).
+
+**Ve cascade ayrıca ölçüldü** — 40 kimlik yeniden adlandırıldı, **sıfır iz bırakıldı:**
+eski kimlikler (`BHV-HANDOFF-BLOCK-FORMAT`, `BHV-NO-DIRECTIVE`…) hiçbir dosyada
+anılmıyor, ölü atıf **sıfır**, dizin iki yönde 131/131, çift tanım 0, atıf sapması 0.
+
+**B12 (KURULUM.md) — KAPANDI.** 21 hedef, beşi var, 16'sı yok — hepsi adlarıyla. Üstüne
+*"kullanıcı ne yapacak"* bölümü de yazılı.
+
+---
+
+## KARAR 22 (08:55) — B17: asset kanonda tanımlı yere konacak
+
+**Yeni bulgu:** `.claude/dizin-uret.py` (147 satır) kökte duruyor, manifest'te
+bildirilmemiş. **Doğruladım** (grep 0). Ve **fabrikanın kendisinde `.py` emsali yok.**
+
+**Kararım: `yapi-taslari`'nın dediği yere konsun** (`skills/<ad>/scripts/`). Hangi
+skill'in asset'i olduğu PAD'in kararı. Manifest bildirimini de PAD ölçsün — `plugin.json`
+asset alanı destekliyor mu.
+
+**Gerekçe — bugün küçük, yarın değil:** sekiz rol daha üretilecek. Her rol kendi
+script'ini kendi bildiği yere koyarsa iki ay sonra **dokuz farklı yerde script** olur ve
+hangisinin ne yaptığı aranmaz hâle gelir. **Şimdi bir yer sabitlemek bedava.**
+
+**Devir işaretlendi:** PAM yazacak, PAD uygulayacak. (Bu sabah verdiğim söz —
+kapsam kararı verirken devrin kimde olduğunu yazacağım.)
+
+**Ve bir ölçüm sorusu PQA'ya devredildi:** fabrika kendi dizinini nasıl üretiyor — elle
+mi, başka yerdeki bir script'le mi? **Elle üretiyorsa OY'nin script'i bir iyileştirme
+demektir** ve fabrikaya geri taşınması konuşulabilir.
+
+---
+
+## BULGU 26 (08:53) — Bayatlama bir kişiye değil, İŞ AKIŞ HIZINA bağlı
+
+**PAM altıncı bayatlama vakasını saydı ve teşhisi değiştirdi:**
+
+> *"Bu sefer ölçen taraf **sendin**, yani desen bir kişiye bağlı değil — **iş akış
+> hızına** bağlı."*
+
+**Altı vaka, altı saat, üçü bende üçü PAM'de.** Hiçbiri dikkatsizlik değil, hiçbirinde
+sayı uydurulmadı.
+
+**Boşluk tarifi düzeltildi.** Önce *"ölçümün zamanı yazılmalı"* demiştim — **yetersiz.**
+Doğrusu **iki taraflı:**
+
+> *"Bir açık kalem bildirimi, karşı taraf onu okuduğunda çoktan kapanmış olabilir.
+> Okuyan taraf **ona dayanmadan önce kontrol eder**; bildiren taraf da *'bu ölçüm şu
+> ana ait'* diye damgalar. **Tek taraflı çözülmüyor.**"*
