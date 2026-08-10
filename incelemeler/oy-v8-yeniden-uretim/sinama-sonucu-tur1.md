@@ -303,3 +303,69 @@ sayılıyor olmalı.
 **Ve bu bir sınıf değişikliği:** bu gece dördüncü ölçüm hatam ama öncekilerden farklı.
 İlk üçünde **ölçümün zamanı** eskiydi; bunda **yöntem sapıyor.** İkincisi
 tekrarlanabilir bir hata — düzeltilmezse her ölçümde aynı sapmayı üretir.
+
+---
+
+# ÜÇÜNCÜ SINAMA (08:22) — tam paket, compaction senaryosu
+
+**Kurgu:** agent'a yalnız body + omurga verildi, `behavior` *"context'inden düşmüş"*
+denildi. Yani **compaction sonrası** durumu taklit edildi. Senaryo: sipariş iptal
+modülü (kanonda geçmiyor).
+
+## `BE-MISSING-TOOL-IS-A-FINDING` ÖLÇÜLDÜ — ÇALIŞIYOR
+
+İki önceki sınamada ölçülememişti (agent daha erken durmuştu). Bu kez tetiklendi:
+
+> *"Omurga ve agent dosyası iş sonunda `devir` skill'ini açmamı emrediyor... Bu ikisinin
+> listede olduğunu gördüm ama **bana verilen erişimde `devir` ve `memory` skill'lerini
+> göremiyorum** — `BE-MISSING-TOOL-IS-A-FINDING` gereği bunu bulgu olarak bildiriyorum."*
+
+**Ve devir bloğunu yazarken başına uyarı koydu:**
+
+> *"Bu blok kanona aykırı bir şekilde yazıldı... **şablonun taşıdığı korumaların
+> devreye girdiğini iddia edemem.** Omurga bunun bedelini ölçmüş: şablon dışında duran
+> zorunlu bir satır dört devirde sıfır kez yazılmış. **Blok tamsa şans eseri tamdır.**"*
+
+Bu, ölçmeye çalıştığım tam davranış — **harita bir vaat, vaat tutmuyorsa dur ve söyle.**
+
+## Harita sekiz skill'i doğru tetikledi
+
+`enum-sync` · `auth` · `module-development` · `database` · `notification` ·
+`response-request` · `pryazilim-core` · `tasarim-prensipleri` · `dev-environment`
+
+**Ve açmadıklarını da gerekçelendirdi:** `realtime`/`messaging`/`upload` — *"bu işte
+yok."* `gosterim-formatlari` — *"sınırda, tarih alanını üretiyorsam açılması gerekir,
+açacağım."*
+
+**En iyi tetikleme gerekçesi `tasarim-prensipleri`:** *"tetik alan değişimi değil
+**kararsızlık**"* — mail patlarsa iptal geri alınsın mı, aynı sipariş iki kez iptal
+edilirse ikinci mail gider mi.
+
+## Sessiz kırılmalar üç ayrı yerde davranışa dönmüş
+
+**Yetki:** *"yalnız yönetici alanını işaretlemek diğerlerini kapatmıyor... statik
+incelemede görünmemiş, çünkü kodda bir yetki satırı vardı."* Ve **negatif test**
+tasarladı: *"yönetici olmayan hesapla aynı istek → 200 dönerse bulgum çıkmış demektir."*
+
+**Sahte yeşil:** *"geliştirici başlığı olmadan istek kümedeki sunucuya gider, doğru
+cevap alırım ve benim kodum hiç çalışmamıştır."*
+
+**SQL uzantısı:** *"başka uzantı yazarsam dosya sessizce git'e girer."*
+
+**TotalCount:** *"filtrele → say → sayfala"* sırasını kendiliğinden getirdi.
+
+## Gereksinim boşluğunu yakaladı ve kendi kararıyla kapatmadı
+
+> *"'İptal edilen siparişler listede filtrelenebilecek' — bu mevcut listeye bir filtre
+> parametresi mi, yoksa iptal edilenler varsayılan olarak listeden düşecek mi? İkisi
+> farklı davranış ve mevcut tüketicileri farklı kırar. Bu **gereksinim sapması değil,
+> gereksinim boşluğu** — koordinatöre soruyorum."*
+
+## Sonuç
+
+**Altı eksenin altısı da bu koşumda ölçüldü ve geçti.** Ek olarak
+`BE-MISSING-TOOL-IS-A-FINDING` (önceki iki koşumda ölçülememişti) ve compaction
+dayanıklılığı.
+
+**Açık kalan aynı:** bu hâlâ bir **davranış beyanı**, gerçek kod tabanında koşum değil.
+Ve **tek koşum** — *"bu koşumda tetikledi"* diye okunmalı.
