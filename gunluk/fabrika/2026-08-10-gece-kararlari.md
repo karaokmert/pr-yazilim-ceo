@@ -1319,3 +1319,44 @@ Kalem `uretim-refleksi`'ne düşecek, hüküm metni PAD'in işi.
 **Bundan sonra kapsam kararı verdiğimde devrin kimde olduğunu açıkça yazacağım.** Bu
 gece **üç kez** karar verip *"sıradaki adım"* demeden bırakmışım — üçünde de PAM
 üstlendi.
+
+---
+
+## ÖLÇÜM (08:51) — Prefix kırığı kapandı: 40 → 0
+
+**Kendi ölçümüm, dokuz seri temiz:**
+`AUTH` 11 · `BE` 8 (backend) · `BHV` 32 (behavior) · `DB` 21 · **`DEV` 14 (devir)** ·
+`ENUM` 6 · **`MEM` 7 (memory)** · **`MOD` 19 (module-development)** · `RESP` 13
+
+**Toplam kırık: 0.** Kararlaştırdığımız üç yeni prefix açılmış.
+**Dizin→kaynak doğrulaması: 131/131 tuttu.**
+
+Ve sıra doğru uygulanmış: **önce `id_kalibi` taşındı, sonra kimlikler o kalıba göre
+düzeltildi.** Dizin ayrıca fabrikanın tam yapısına hizalanmış (`bu_dosya_nedir`,
+`ne_ise_yarar`, `nasil_okunur`, `kim_gunceller`).
+
+---
+
+## BULGU 25 (08:51) — Üç "bulgu" çıktı, üçü de benim ölçüm hatam
+
+Atıf bütünlüğünü ölçerken üç kalem çıktı ve **üçü de yanlış alarmdı:**
+
+**1.** *"`SQL-MIGRATION-` ölü atıf"* → `SQL-MIGRATION-template.sql` bir **dosya adı**,
+kimlik değil. Regex'im *"büyük harfli tireli desen"* aradı, **kural kimliği** sandım.
+
+**2–3.** *"`AUTH-401-MESSAGE` ve `ENUM-1BASED` hiç anılmıyor"* → ikisi de
+skill'lerinde **tanımlı ve yerinde.** Regex'im **rakam içeren** kimlikleri kaçırıyordu
+(`401`, `1BASED`).
+
+**Üçünde de aynı mekanik: araç doğru çalıştı, soru yanlıştı.** Bu gecenin **beşinci**
+isim kayması vakası.
+
+**Ama bu sefer kontrol ettim** — çünkü sonuç şüpheli görünüyordu: *"ölü atıf"* çıkan
+şey kimlik gibi durmuyordu.
+
+**Kural işliyor:** *her şey pozitif/negatif çıkan ölçüm önce kendi komutundan
+şüphelenir.* Kontrol etmeseydim üç yanlış bulgu bildirecektim ve zincir onları
+düzeltmeye çalışacaktı.
+
+**PQA'ya not düşüldü:** bu sayıları yeniden üretmesi, ve regex kurarken **rakam içeren
+kimlikleri kapsaması** — benimki kaçırdı.
