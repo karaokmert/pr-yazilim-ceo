@@ -35,6 +35,7 @@
 ## Nasıl düzeltilir — birincil kural
 
 - [Yama değil, sebep](feedback_yama_degil_sebep.md) — **`CLA-FIX-THE-CAUSE`**: hatanın zıttını kurala eklemek çözüm değil; karıştıran şey duruyorsa "karıştırma" kuralı yamadır
+- [İki yol, tek kayıt](feedback_iki_yol_bir_kayit.md) — bir iş iki yoldan yapılıp yalnız biri kaydı tutuyorsa arıza sessiz; sonuç doğru çıkar, kayıt bozulur
 
 ## Ölçüm disiplini — en çok hata buradan çıkıyor
 

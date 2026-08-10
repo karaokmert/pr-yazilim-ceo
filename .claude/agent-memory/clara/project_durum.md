@@ -31,10 +31,11 @@ turundan geçti, **sıradaki iş kalan sekiz rol.**
 ## İlk hareket
 
 **Fabrika modundaysan:** devir dokümanını oku, sonra kalan sekiz rolün üretimini başlat.
-Fabrika ekibi kapatıldı — **yeniden açılacak.**
+Fabrika ekibi **kapatıldı** (2026-08-10 13:28-13:40, dördü de temiz arşivlendi) —
+yeniden açılacak.
 
-**Push bekliyor:** `agent-project`'te 27 commit, denetlenmiş. **Onay Mert'in,
-devredilemez.**
+**Push durumu:** 32 commit push edildi (`65496b0`, 13:05). Sonra **üç commit daha**
+eklendi (kapanış kayıtları, imleç arızası) — durumu kapanış dokümanında.
 
 ## Bu oturumda öğrenilen — kanona girmiş olanlar
 
@@ -50,11 +51,23 @@ Gerekçe: `kararlar/2026-08-10-agent-sinama-iki-ders.md`
 dokümanına geçecek. **Üretilmedi**, üç ölçüm bekliyor.
 Gerekçe: `kararlar/2026-08-10-compact-oncesi-devir-hooku.md`
 
-## Açık kalemler
+## Açık kalemler — Mert'in kararı bekleyenler
 
-**Push** (27 commit, Mert'te) · **`dizin-uret.py` hook'suz** (çalıştırılması hatırlamaya
-bağlı) · **"son commit'te bulgu çıkarsa"** kanonda ölçülmemiş · **dizin script'i
-fabrikaya taşınsın mı** (iki tur daha tutarsa)
+**B18: `behavior`'da 7 kimlik compaction kesmesi dışında** (karar 6'dayken verilmişti).
+Yenisi `BHV-REGENERATE-INDEX` — düzeltme, çözdüğü sorunu başka koşulda geri üretti.
+
+**Fabrika memory'si git'e girmiyor** (`.gitignore:9`). Diskte 63 dosya, 268 KB; hiçbiri
+taşınmıyor, her yeni ekip sıfırdan başlıyor. Gerekçesi **bayat bir yorumda** duruyor.
+
+**Kanal imleci: okuma iki yoldan yapılabiliyor, biri imleci ilerletmiyor.** Sebep
+kaldırılmadı — ya monitör imleci kendi ilerletsin, ya içerik taşımayı bıraksın.
+
+**`~/.pr-kanal` vs `SendMessage`** — cross-session mesajlaşma **v2.1.224'te geldi**
+(CHANGELOG, soket üzerinden, sunucuya uğramıyor). Kanal bu araç yokken kuruldu.
+Karşılaştırma **ölçülmedi**; Mert *"sonra bakarız"* dedi (13:33).
+
+**Diğerleri:** `dizin-uret.py` hook'suz · *"son commit'te bulgu çıkarsa"* ölçülmemiş ·
+dizin script'i fabrikaya taşınsın mı (iki tur daha tutarsa)
 
 ## Kalıcı ders — bu oturumun en pahalısı
 
