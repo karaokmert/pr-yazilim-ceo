@@ -1515,3 +1515,49 @@ gördü, doğru** — ama **dosyanın içindeki yol metinleri rename ile değiş
 
 **Araç doğru çalıştı, soru yanlıştı.** Bu gecenin **altıncı** vakası ve bu sefer
 **denetimde.**
+
+### BULGU 28 devamı — iki agent iki FARKLI sebeple kaçırdı
+
+**Bulguyu ikisi de kabul etti ve ikisi de kendi kaçırma sebebini yazdı. Sebepler
+farklı ve ikisi de öğretici.**
+
+**PQA — doğru veriyi ters okudu:**
+
+> *"Raporumda 'eski yer temizlenmiş (git rename olarak görmüş, **içerik değişmemiş**)'
+> yazdım. **O cümlenin ikinci yarısı bulgunun ta kendisiydi ve ben onu GÜVENCE olarak
+> yazdım.** Oysa 'içerik değişmemiş' tam olarak 'içindeki yollar da değişmemiş'
+> demekti."*
+
+**Ve alt-sınıf ayrımını kendisi kurdu:** önceki dört vakada **araç yanlış cevap
+veriyordu**; burada **araç doğru cevap verdi, çıkarım tersti.**
+
+**İkincisi daha tehlikeli** — birincide ölçüm bozuk olduğu için sonuç şüpheli
+görünebiliyor (benim üç yanlış alarmımda öyle oldu, kontrol ettim). İkincide **ölçüm
+doğru, sorgulanacak bir şey görünmüyor.** Yakalamak için verinin kendisine değil,
+ondan çıkarılan **sonuca** bakmak gerekiyor.
+
+**PAM — doğru soruyu yanlış yönde sordu:**
+
+> *"B17'yi devrederken atıf konusunu düşündüm, hatta `YT-STATE-INTENT`'i de ekledim.
+> Ama **dışarıdan içeriye** bakan atıfları düşündüm: 'script'e nereden atıf veriliyor'.
+> **İçeriden dışarıya** bakanı hiç sormadım: 'script kendi içinde neye atıf veriyor'.
+> Bu bir dikkat eksiği değil, **eksen seçimi.**"*
+
+### Ve dördüncü iz: koruma mesajı kullanıcıyı yanlış yere yolluyor
+
+PQA bir iz daha buldu — koruma mesajı yalnız yolu değil **komutu** da yanlış veriyor.
+**Koşturdum:** `No such file or directory`.
+
+**Yani koruma doğru duruyor ama düzeltme talimatı yanlış** — kullanıcıyı bir hatadan
+çıkarıp **başka bir hataya** yolluyor.
+
+### Bulguyu yakalayan şey ikinci bir göz değil, İKİNCİ BİR KOŞUM
+
+**Ben de PQA'nın raporunu okurken *"içerik değişmemiş"* cümlesini güvence olarak okudum
+ve geçtim.** Kendi kontrolümü yapmasam **üçümüz de aynı yöne okumuş olacaktık.**
+
+Ayrımı yapan şey farklı bir bakış açısı değil, **script'i elle çalıştırmak** oldu.
+
+**Boşluk tarifi:** *"Bir ölçüm sonucu iki zıt yöne okunabiliyorsa, hangi yöne okunduğu
+yazılır. 'İçerik değişmemiş' hem 'taşıma temiz' hem 'içindeki yollar da eski' demek
+olabilir; cümle tek başına hangisi olduğunu söylemiyor."*
