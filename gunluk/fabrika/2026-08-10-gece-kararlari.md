@@ -598,3 +598,86 @@ ve bu iyi bir davranış, ama ölçmek istediğim şeyi ölçtürmüyor.
 
 **Kural hâlâ ölçülmemiş** ve kapatılmış sayılmıyor. Tur 2'de, kusursuz bir
 gereksinimle tekrar sınanacak.
+
+---
+
+## KARAR 15 (08:01) — Devir bölümü behavior'dan çıkıyor: KARAR 13'ü geri alıyorum
+
+**PQA'nın B9 bulgusu ağır ve kendim doğruladım.**
+
+**Ölçüm:** `behavior` **32.499 karakter**, compaction'da skill başına sınır 5.000 token
+(~16.000 karakter). Kesme noktası tam **"Sessiz kırılmalar"** bölümünün başına düşüyor.
+**55 BHV geçişinin 24'ü içeride, 31'i dışarıda.**
+
+Düşen bölümler: Memory · Devir · İş sonu raporu · Kullanıcının cümlesini okumak · Ton.
+
+**En ağır kısım zamanlama:** devir bloğu **işin sonunda** yazılır — yani uzun bir
+oturumun tam compaction olmuş anında. Kural o an context'te olmayacak.
+
+Ve `BHV-HANDOFF-BLOCK-FORMAT`'ın varlık sebebi ölçülmüştü: *"kural metinden 66 satır
+uzaktayken dört devirde sıfır kez yazıldı."* **Şimdi şablonun kendisi düşüyor.** Çözüm
+olarak konan şey aynı arızanın kurbanı oluyor.
+
+**Kararım: Devir bölümü behavior'dan çıkarılacak, ayrı skill olacak, PRELOAD'A
+GİRMEYECEK** — omurga haritasından çağrılacak, tetiği *"iş bitti, devir yazılacak."*
+
+**Bu KARAR 13'ü geri almak demek.** Handoff'u behavior'a koymayı ben kararlaştırmıştım;
+gerekçem *"dokuz rolde aynı format, ayrı skill çağrılmıyor"* idi. **Compaction ölçümü o
+gerekçeyi çürüttü:** behavior'da olması onu kurtarmıyor, tam tersine **kesilen yere**
+koyuyor.
+
+**Ve Mert'in kendi ölçütü zaten bunu söylüyordu:** *"preload'a giren şey her turda lazım
+olanla sınırlıdır."* Devir her turda değil, **iş biterken** lazım. Yani zaten preload'a
+ait değildi — benim koyma kararım o ölçütü ihlal ediyordu.
+
+**Preload iki kalıyor** (behavior + rol omurgası), 5. madde korunuyor.
+
+**Risk işaretlendi:** çağrılan bir skill açılmayabilir — OY'nin bugünkü yarası tam bu.
+Ama iki fark var: `BE-MISSING-TOOL-IS-A-FINDING` artık var, ve tetiği belirsiz değil
+(*"iş bitti"* tek ve net bir an). Alternatifi daha kötü: behavior'da kalırsa
+**garantili** düşüyor.
+
+**Memory bölümü kalıyor** (3.538 karakter) — iş sırasında da lazım. Devir çıkınca toplam
+~27.400'e iniyor. **Yeniden ölçülecek**, hâlâ aşıyorsa tekrar bakılacak.
+
+**B10 ve B11 kabul:** KURULUM.md 21 alet skill'inin eksikliğini kullanıcıya söyleyecek
+(emsal pakette var — kanal boşluğu *"bu sürümün bilinen sınırı"* diye yazılı) · dizine
+`id_kalibi` alanı eklenecek.
+
+---
+
+## BULGU 11 (08:02) — Bayatlama tek sınıf değil: iki ayrı arıza
+
+**PQA benim BULGU 9'umu böldü ve haklı.** Dört vaka aynı sınıf değildi:
+
+**Sınıf A — ölçümün zamanı eskidi:** benim *"626 satır"*, PQA'nın ClickUp iddiası,
+PAM'in iki açık kalemi. **Çözümü: tarih yazmak.**
+
+**Sınıf B — yöntem sapıyor:** benim description ölçümüm (~16 fazla, tırnak/girinti
+sayılıyor). **Tarih yazmak bunu çözmez** — yanlış yöntem her ölçümde aynı sapmayı
+üretir.
+
+**Ve beşinci vaka bu gece PQA'nın kendisinde çıktı:** manifest ölçümünde yol
+birleştirmesini yanlış yapmış, agent dosyası *"YOK"* çıkmış, ikinci yöntemle teyit
+edince varmış. **Kendi raporuna yazdı.**
+
+Yani **beş vaka, üç taraf** — ve hiçbirinde sayı uydurulmadı. Ölçüm dürüsttü, **ölçümün
+kendisi kırılgandı.**
+
+**Gereksinime iki ayrı kalem olarak yazılacak.**
+
+---
+
+## BULGU 12 (08:02) — "Dosyada doğru" ile "sahada tutuyor" ayrı iki sonuç
+
+PQA `BE-MISSING-TOOL-IS-A-FINDING` için net bir ayrım koydu:
+
+> *"Kuralın **yazılışını** ölçtüm: metni doğru, gerekçesi var, iki katmanlı (kural +
+> alet çantası girişindeki çerçeve cümlesi). Senin ölçemediğin şey kuralın **işleyip
+> işlemediği.** O benim kapımda değil, sende ve PAD'de."*
+
+**Ders:** bir kural için üç ayrı sonuç var ve karıştırılmamalı — **yazıldı** (üretici) ·
+**doğru yazıldı** (denetçi) · **sahada tutuyor** (davranış ölçümü). Üçü ayrı kapı,
+biri diğerinin yerine geçmez.
+
+İkincisi verildi, **üçüncüsü hâlâ açık.**
