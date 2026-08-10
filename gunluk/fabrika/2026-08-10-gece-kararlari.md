@@ -1277,3 +1277,45 @@ Bu gecenin tekrarlayan hatası artık dört vakada ve **dördüncüsü farklı b
 
 İlk üçü **ne ölçüldüğü** ekseninde; dördüncüsü **kimin bulduğu** ekseninde. Ama
 mekanik aynı: **bir isim, başka bir ismin yerine geçti.**
+
+---
+
+## BULGU 24 (08:44) — Askıda kalan iş sessizdir: karar ile devir arasında özne yok
+
+**PAM 17 dakikalık bir askı bildirdi.** Ölçtüm: **devir taşınmıştı** — PAD'in
+inbox'unda 08:41:16'da duruyor, relay yakalamış. Yani bildirdiği askı **o mesajı
+yazarken kapanmıştı** (bu gecenin beşinci bayat bildirimi).
+
+**Ama tespiti doğru ve bir hata değil — bir öznesizlik:**
+
+Kararlar 08:27–08:36 arasında verildi, devir 08:41'de yazıldı. Aradaki on yedi
+dakikada *"kararı devre çevirme"* adımının **öznesi yoktu.** Ben karar veriyorum, PAM
+devir yazıyor — ama *"karar verildi, şimdi devir yazılacak"* **geçişini** kimse
+üstlenmemişti.
+
+**Ve PAM sordu, cevap gelmedi — bu benim gözümden kaçtı.** Sonra beklemeyip **yazdı.**
+Doğru davranış: askıda iş bırakmaktansa özneyi üstlenmek.
+
+### PAM'in daha değerli tespiti: iki ayrı arıza
+
+> *"Aynı sınıf `ISD-RETURN-TO-PLANNER`'da ölçülmüştü: **özne eklenince ihlal
+> tekrarlandı**, yani özneli yazmak yetmiyor. Burada özne **hiç yoktu.**"*
+
+**(a)** Özne yazılı ama tutmuyor · **(b)** Özne hiç yok.
+
+İkincisi daha ucuz çözülüyor **ama önce fark edilmeli** — ve fark edilmesi zor çünkü
+**askıda kalan iş sessizdir.** Kimse hata yapmıyor, iş sadece ilerlemiyor.
+
+### Boşluk tarifi (hüküm metni yazılmadı — PAM'in bu sabah çizdiği sınır)
+
+> *"Karar ile devir arasındaki geçişin öznesi tanımlı değil. Karar veren tarafın devri
+> de tetikleyip tetiklemediği yazılı değil; iki taraf da bekleyebiliyor ve iş sessizce
+> askıda kalıyor."*
+
+Kalem `uretim-refleksi`'ne düşecek, hüküm metni PAD'in işi.
+
+### Ve kendi düzeltmem
+
+**Bundan sonra kapsam kararı verdiğimde devrin kimde olduğunu açıkça yazacağım.** Bu
+gece **üç kez** karar verip *"sıradaki adım"* demeden bırakmışım — üçünde de PAM
+üstlendi.

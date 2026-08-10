@@ -11,3 +11,5 @@ B9 closed: confirmed core sections exceed 5k token limit; delivered 9-skill, 15-
 3rd inspection complete: pkg validated, 20 decisions/findings logged, B12 (doc gap) and B13 (rule breakage) identified.
 ## 08:36 | main
 Linked B13 (40 broken IDs) to B11 (missing `id_kalibi` field); updated agent-sinama skill w/ 2 lessons; validated independent validator self-corrects.
+## 08:44 | main
+Corrected B13 attribution error (was in PQA report already, not newly extracted), clarified hüküm-write boundary (PAM notes it's PAD's role), documented 4 'isim kayması' instances & silent decision-transfer gaps, verified 3-item fix pipeline active.
