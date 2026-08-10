@@ -18,6 +18,7 @@
 
 ## Nasıl konuşulur, nasıl yazılır
 
+- [Seçenek sunma — YASAK](feedback_secenek_sunma.md) — problemi getir, kararı Mert versin; şık listesi sessizce çerçeve dayatıyor
 - [Cevap uzunluğu ve karar alma](feedback_cevap_uzunlugu.md) — bir bulgu/üç paragraf/tek soru; izin sorulmaz, yazılır ve bildirilir
 - [ARGE iş emri değil](feedback_arge_is_emri_degil.md) — "nasıl yapılır" sorusuna cevap ver ve DUR; fiil yoksa emir yoktur
 - [Günlük kayıt düzeni](feedback_gunluk_kayit.md) — bulgu `gunluk/{tarih}.md`'ye; ayrı dosya yalnız karar/fikir/referans için
