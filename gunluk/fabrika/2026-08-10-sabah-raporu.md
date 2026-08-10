@@ -45,7 +45,24 @@ buradan bir sorun çıktı, aşağıda.
 
 ## Senin kararına bırakılan iki şey
 
-### 1. Çekirdek kanon compaction eşiğine sığmıyor
+### 1. Çekirdek kanon compaction eşiğine sığmıyor — KARAR VERİLDİ (2026-08-10 11:45)
+
+**Mert'in kararı: mevcut hâli kabul, böyle kalacak.** Aşağıdaki üç seçenekten hiçbiri
+uygulanmıyor; `behavior` 6 kimliği compaction'da kaybediyor ve bu **bilinçli olarak**
+kabul edilmiş bir maliyet.
+
+**Bu kalem kapalıdır** — sonraki oturum yeniden açmaz. Değişecekse gerekçesi yazılır.
+
+**Kabul edilen sınır:** oturum başında kanonun tamamı okunuyor; uzun oturumda son
+bölümler (Kullanıcının cümlesini okumak, Ton) düşüyor. İkisi de *"geri dönüşü olmayan
+zarar üretmiyor"* diye ölçüldü — düşme sırası doğru.
+
+**Ölçülmemiş kalan:** gerçek bir compaction'da ne olduğu. Sınamada taklit edildi
+(*"behavior düştü"* denilerek), gerçek uzun oturumda görülmedi.
+
+---
+
+#### Kararın dayandığı ölçüm (kayıt için)
 
 **Ölçüm:** `behavior` 20.032 karakter (~6.260 token), eşik 5.000. Aşım ~1.260.
 

@@ -7,6 +7,12 @@ metadata:
 
 # PAM'e iletilecek iş listesi
 
+## 🔴 ÖNCELİKLİ — güvenlik (2026-08-10)
+
+0. **`relay.sh` komut enjeksiyonu** — kanal relay betiği mesajın `to`/`from`
+   alanını doğrulamadan kabuğa gömüyor. Devir bloğu HAZIR, kopyala-taşı:
+   `fikirler/agent-iletisim-kanali/relay-guvenlik-bulgusu.md`
+
 ## Fabrikaya gidecek gereksinim adayları (N8N oturumundan, 2026-08-09)
 
 1. **`validate && commit` yasağı** — `claude plugin validate` başarısızlıkta
