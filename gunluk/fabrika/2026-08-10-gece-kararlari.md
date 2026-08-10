@@ -1174,8 +1174,18 @@ Fabrikanın `id_kalibi` alanı beş madde taşıyor ve sonuncusu:
 > *"**prefix:** Kuralın yaşadığı skill'i gösterir. Her prefix'in **tek sahibi**
 > vardır."*
 
-**B13 için "çıkardığım" ölçüt bu — kelimesi kelimesine.** Ben onu **yeni bir ölçüt**
-sanıp yazdım; oysa fabrikada zaten var, sadece OY'ye taşınmamış.
+**DÜZELTME (08:39) — atıf yanlıştı, PQA düzeltti.** Önce *"B13 için çıkardığım ölçüt
+bu, ben onu yeni sanıp yazdım"* yazmıştım. **B13'ü PQA yazdı** ve ölçütü yeni
+çıkarmadı — raporunda **baştan kanona eşlemişti:** *"Kanon açık (`uretim/SKILL.md:38`
+ve fabrika index `id_kalibi`)..."* Kaynaktan doğruladım, cümle raporunda duruyor.
+
+**Benim hatam okuma hatasıydı:** onun bulgusunu okudum, ölçütü kendim çıkarmış sandım.
+
+**Ve düzeltmenin gerekçesi keskin:** *"bir bulgunun değeri **dayanağından** gelir —
+B13 bir **kanon ihlali** bulgusudur, bir **öneri** değil."* Yanlış atıf bulgunun
+**sınıfını** değiştiriyordu: öneri tartışılır, ihlal düzeltilir.
+
+**Yerinde duran bulgu şu:** hüküm fabrikada yazılı, OY'ye taşınmamış.
 
 ### Yani B13 (40 kırık kimlik), B11'in (eksik alan) sonucu
 
@@ -1226,3 +1236,44 @@ kırık doğar.
 > *"Bir ölçüm yapmadan önce **aranan şey ile ölçülen şey isimlendirilir ve
 > karşılaştırılır.** Araç doğru çalışıp yanlış soruyu cevaplayabilir — hata çıktıda
 > değil **soruda** olur. Alt-sınıf: bir ismin başka bir ismin yerine geçmesi."*
+
+---
+
+## BULGU 23 (08:39) — İki agent beni iki ayrı eksende düzeltti, ikisi de aynı sınıf
+
+**PQA — atıf hatası.** B13'ü kendi bulgum gibi kaydettim; **PQA yazmıştı** ve raporunda
+kanona **baştan eşlemişti.** Kaynaktan doğruladım.
+
+Gerekçesi: *"bir bulgunun değeri **dayanağından** gelir — B13 bir **kanon ihlali**
+bulgusudur, bir **öneri** değil."* Yanlış atıf bulgunun **sınıfını** değiştiriyordu.
+
+**PAM — yetki sınırı.** Ölçüm kuralını **hüküm cümlesi biçiminde** yazdırmıştım
+(*"kalem şu hâliyle yazılsın"* + üç satırlık hüküm metni). PAM onu **veri** olarak
+kaydetti, hüküm olarak değil.
+
+Ayrımı doğru: *"**kapsam yetkisi sende, ama HÜKÜM YAZMA yetkisi kimsede devredilmiş
+değil.** Sen kapsam kararı verdiğin bir kalemin hükmünü de yazdırmış olurdun ve o
+hüküm denetimden geçmeden kanona aday olurdu."*
+
+**Ve bu benim kendi kanonumda yazılı:** *"Üretim yapmazsın — agent body'si, skill,
+kural hiçbiri senin elinden çıkmaz. Sen gereksinimin taslağını yazarsın, ürünü değil."*
+**Kalemi hüküm cümlesi olarak yazdırmak ürün yazdırmaktı.**
+
+### İkisi aynı sınıf: yetkimin sınırını aştım
+
+- **PQA'da:** başkasının bulgusunu kendi bulgum gibi kaydettim
+- **PAM'de:** kapsam yetkimi hüküm yazma yetkisi gibi kullandım
+
+**Düzeltilmiş talimat:** boşluğun **tarifi** kayıtlı kalır, **hüküm metni PAD'in işi** —
+katmanını ve kimliğini de o seçer. Ben yalnız *"boşluk var mı, kapsama giriyor mu"*
+derim.
+
+### Ve isim kayması deseni bir eksen daha kazandı
+
+Bu gecenin tekrarlayan hatası artık dört vakada ve **dördüncüsü farklı bir eksende:**
+
+`grep -c` (geçiş/tanım) · alan adı (kaynak/tanım) · PQA'nın B11'i (telafi/kalıp) ·
+**benim bu hatam ("kanona dayandırılmış bulgu" / "yeni çıkarılmış ölçüt")**.
+
+İlk üçü **ne ölçüldüğü** ekseninde; dördüncüsü **kimin bulduğu** ekseninde. Ama
+mekanik aynı: **bir isim, başka bir ismin yerine geçti.**
