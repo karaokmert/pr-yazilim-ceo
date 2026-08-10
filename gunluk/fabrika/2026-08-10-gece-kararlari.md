@@ -1422,3 +1422,55 @@ Doğrusu **iki taraflı:**
 > *"Bir açık kalem bildirimi, karşı taraf onu okuduğunda çoktan kapanmış olabilir.
 > Okuyan taraf **ona dayanmadan önce kontrol eder**; bildiren taraf da *'bu ölçüm şu
 > ana ait'* diye damgalar. **Tek taraflı çözülmüyor.**"*
+
+---
+
+## KARAR 23 (09:01) — Dizin script'i iyileştirme adayı, ama şimdi taşınmayacak
+
+**PAM ölçtü, doğruladım:** fabrika dizininin `kim_gunceller` alanı **kimin**
+güncellediğini söylüyor, **nasıl** güncellendiğini söylemiyor. *"Elle mi otomatik mi"*
+sorusu fabrikanın kendi belgesinde **cevapsız.**
+
+**Ve PAM'in asıl hamlesi bir ölçüm disiplini dersi:** sıfır `.py` ve `scripts/`
+dizininin hiç olmaması elle üretildiğini **gösteriyor** — ama bu bir **çıkarım, beyan
+değil.** Ben *"ölçtün mü"* diye sordum, o *"ölçtüm ama şunun kanıtı değil"* dedi.
+
+**Ve bundan bir sonuç çıkardı:** *"fabrika bilinçli olarak elle üretiyor"* şıkkı
+**desteklenmiyor** — bilinçli bir tercih olsaydı **gerekçesi yazılı olurdu.** Bu
+reponun kendi kuralı. **Yokluk, kararın yokluğunu gösteriyor.**
+
+### Kararım: iyileştirme adayı, şimdi taşınmayacak
+
+**Üç gerekçe:**
+
+1. **OY'de kendini kanıtlamadı.** Bir tur koştu, dizin üretti — o kadar. Fabrikaya
+   taşımak için *"iki kez tuttu"* eşiği lazım (bu ekosistemin kendi ölçütü).
+2. **Fabrikanın kendi dizini bugün arızalı değil** — 131 kimlik, elle tutuluyor,
+   sorun yok. **Olmayan probleme çözüm önermem** (yalın üretim).
+3. **Bu benim kapsamım değil.** Fabrikanın kendi kanonu hakkında bir değişiklik ve o
+   karar Mert'in.
+
+**Açık kalem olarak kaydedildi** (`uretim-refleksi`):
+
+> *"OY'de dizin üretimi otomatikleştirildi. Fabrika elle üretiyor ve 'nasıl üretilir'
+> hiçbir yerde yazılı değil — yani elle üretim bir **tercih** değil, bir **boşluk.**
+> Script iki tur daha tutarsa fabrikaya taşıma konuşulabilir; şimdi değil."*
+
+**Ve bir ölçüm isteği bırakıldı:** sekiz rol daha üretilecek, her rolde dizin
+güncellenecek. İki-üç tur sonra *"tuttu mu"* sorusu **ölçülebilir** hâle gelir.
+
+---
+
+## BULGU 27 (09:00) — `YT-STATE-INTENT`: atıf biçimi de bir maliyet kararı
+
+**PAM B17 devrine benim kaçırdığım bir hüküm ekledi** (`yapi-taslari:99`):
+
+> *"Bir dosyaya atıf verirken **çalıştırılacak mı okunacak mı** yazılmalı."*
+
+**Gerekçesi maliyet:** okunursa **tüm dosya** context'e giriyor, çalıştırılırsa
+**yalnız çıktısı.** 147 satırlık bir script yanlış atıfla okunursa boşuna context
+yakıyor.
+
+**Ben B17'yi *"yeri yanlış"* diye gördüm; PAM *"atıf biçimi de yanlış olabilir"* diye
+gördü.** Aynı sınıfın ikinci yarısı: **dosyayı doğru yere koymak yetmiyor, ona nasıl
+atıf verildiği de yazılı olmalı.**
