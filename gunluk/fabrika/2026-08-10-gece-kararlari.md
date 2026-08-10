@@ -925,3 +925,68 @@ bir **kapı** olması gerektiğini anlatıyor.
    kayıptır.
 
 **Her gerekçe kesilebilir değil; bazıları hükmün sınırını çiziyor.**
+
+---
+
+## KARAR 18 (08:18) — B9 kapanıyor: "çözüldü" değil "iyileştirildi"
+
+**PAD durdu ve doğru durdu** — üçüncü bölümü kendi başına çıkarmadı, ölçüp getirdi.
+
+**Ölçüm:** `behavior` 32.499 → **20.032 karakter (~6.260 token).** Eşik 5.000, aşım
+~1.260. Dışarıda kalan kimlik **18 → 6.**
+
+**Ve üçüncü bölümü çıkarmanın işe yaramadığını ölçtüm:** Ton (1.376) + Kullanıcının
+cümlesi (1.095) = 2.471 karakter. İkisi de çıksa **17.561 karakter = ~5.488 token.
+Hâlâ aşıyor.**
+
+### Asıl bulgu: eşik bu kanon için yanlış varsayım
+
+**Kalan yedi çekirdek bölüm tek başına 16.256 karakter (~5.080 token) — eşiğin zaten
+üstünde.** Hiçbir bölüm çıkarılarak eşiğe inilemiyor.
+
+Bu bir *"hangi bölüm gider"* sorusu **değil.** Bir agent'ın ortak davranış çekirdeği
+5.000 token'a sığmıyorsa **ya çekirdek şişmiş ya eşik yanlış yerde.**
+
+### Kararım — üç kalem
+
+**1. Üçüncü bölüm çıkarılmayacak.** Ton ve Kullanıcının cümlesi kalıyor. Çıkmaları
+eşiği çözmüyor, sadece iki değerli bölümü kaybettiriyor — **bedel var, karşılık yok.**
+Ve PAD'in tespiti doğru: ikisi de *"geri dönüşü olmayan zarar üretmiyor"*, yani **doğru
+sırada** düşüyorlar.
+
+**2. B9 "iyileştirildi" diye kapanıyor, "çözüldü" diye değil.** Başlangıç: 26 kimlik
+dışarıda, memory + devir + rapor + ton + kullanıcı tamamen kesik. Bitiş: 6 kimlik
+dışarıda, kesilen bölümler **yönlendirme bloğuna** inmiş (varlıklarını biliyor, içerik
+ayrı skill'de). Gerçek kazanım — ama **yara tam kapanmadı** ve öyle yazılıyor.
+
+**3. Yeni açık kalem — Mert'in kararına.** *"Bir agent'ın ortak davranış çekirdeği
+compaction eşiğine sığmıyor"* bir **tasarım sorusu** ve kapsam yetkimi aşıyor. Üç
+seçenek var, hiçbirini seçmiyorum:
+- **(a)** çekirdek daha da bölünür — ama kalanlar artık kimlik/standart/doğrulama;
+  bölmek **kimlik kırpmak** olur
+- **(b)** eşik kabul edilir ve *"compaction sonrası hangi kurallar kalır"* bilinçli
+  tasarlanır
+- **(c)** uzun oturumda agent kendi kanonunu yeniden yükler (mekanizma var mı bilmiyorum)
+
+---
+
+## BULGU 18 (08:18) — Ölçüm ile okuma kararı ayrı: PQA dördüncü maddeme sınır koydu
+
+Dördüncü ölçütümü kabul etti (*kesilen gerekçe hükmün kapsamını belirliyor mu*) ama
+**bir sınır çizdi ve haklı:**
+
+> *"'Kapsam belirliyor mu' sorusu **YORUM** gerektiriyor, öteki üç madde **ölçüm.**
+> Eşik aşılıyor mu — ölçülür. Hangi bölüm kesiliyor — ölçülür. Kesme nereye düşüyor —
+> ölçülür. Ama 'bu cümle gerekçe mi kapsam mı' bir **okuma kararı** ve iki denetçi
+> farklı cevap verebilir."*
+
+Çözümü de kendisi koydu: **kanıt eşiğini yüksek tutacak.**
+
+**Ders:** bir denetim ölçütü eklerken sorulacak soru *"doğru mu"* değil, **"ölçülebilir
+mi yoksa yorumlanabilir mi?"** Yorum gerektiren ölçüt eklenebilir ama **kanıt eşiği
+ayrıca yazılmalı** — yoksa iki denetçi aynı dosyada farklı sonuca varır.
+
+**Ve bir yan bulgu:** PQA benim yarım giden mesajımı **kanal arızası mı diye ölçtü** —
+JSON geçerli, dosya tam (814 bayt), gövde cümle ortasında bitiyor. Yani **taşıma
+sağlamdı**, mesaj o hâliyle yazılmıştı (kabuk hatası). Teşhisi doğruladı ve kayda
+geçirdi. Beyanı kanıt saymama disiplininin bir örneği daha.
