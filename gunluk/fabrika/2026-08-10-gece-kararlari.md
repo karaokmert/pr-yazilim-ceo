@@ -1109,3 +1109,56 @@ basıyor.
 
 **Ve tur 1 bulgularının ikisi kapandı:** B11 (`id_kalibi`) kapandı, B9 kısmen (26 → 6
 kimlik).
+
+---
+
+## BULGU 21 (08:33) — "Araç doğru çalıştı, soru yanlıştı": üç tarafta da görüldü
+
+**PQA kendi hükmünü geri aldı.** Rapor 3'te *"B11 (id_kalibi) KAPANDI"* yazmıştı;
+yeniden ölçüp yanlış olduğunu buldu.
+
+**Doğruladım:** fabrika dizininde `id_kalibi` alanı var, **OY dizininde yok.** Eklenen
+şey `not` + `ana_dosya` alanları — bunlar **prefix kırığını telafi ediyor, kalıbı
+tanımlamıyor.**
+
+**Ve hatanın sınıfını kendisi koydu:**
+
+> *"Doğru komutu koştum, **YANLIŞ SORUYU cevapladım.** Aradığım şey 'telafi var mı'
+> değil 'kalıp tanımlı mı' olmalıydı."*
+
+### Bu gecenin tekrarlayan deseni — artık üç tarafta
+
+- **Benim `grep -c` hatam:** geçiş saydım, tanım sandım (55 vs 52)
+- **Benim alan adı hatam:** `kaynak` aradım, alan `tanim`'dı (58 "sorunlu" çıktı)
+- **PQA'nın bu hatası:** telafi aradı, kalıp sandı
+
+**Ortak imza: araç doğru çalıştı, soru yanlıştı.** Kimse yanlış komut yazmadı, kimse
+sayı uydurmadı.
+
+**Kural adayı — gereksinime yazılacak:**
+*"Bir ölçüm yapmadan önce sorulacak: aradığım şey ile ÖLÇTÜĞÜM şey aynı mı? Araç doğru
+çalışıp yanlış soruyu cevaplayabilir; hata çıktıda değil, SORUDA olur."*
+
+### Ve bu düzeltme döngü/kapı tartışmasının pratik kanıtı
+
+**Bağımsız bir denetçi kendi hükmünü geri alabildi.** Döngü olsaydı bu düzeltme
+gelmezdi — kendi bulgusunu savunan bir taraf onu geri almaz.
+
+BULGU 15'te bu ayrım **kanondan** savunulmuştu; şimdi **sahadan** kanıtlandı.
+
+---
+
+## KARAR 20 (08:33) — `id_kalibi` eklenecek
+
+**Gerekçe PQA'nın ilk raporundan:** *"OY dizini kalıbı taşımadığı için %30'luk sapma
+bir tercih mi kayma mı ayırt edilemiyor. Sonraki rol üretilirken kalıbı okuyacak yer
+yok."*
+
+**Sekiz rol daha üretilecek.** Kalıp yazılı olmazsa her rol kendi yorumunu üretir.
+
+**Telafi alanları (`not` + `ana_dosya`) kalıyor** — prefix kırığını görünür kılıyorlar.
+Ama prefix düzeltmesi bitince gözden geçirilmeli: kırık kalmayınca telafi de
+gereksizleşir. **Şimdi karara bağlamadım**, prefix işi bitince ölçülecek.
+
+**Üç kalem tek turda:** B12 (KURULUM.md) + B13 (prefix) + B11 (`id_kalibi`).
+`ISD-CASCADE-IN-ONE-TURN`.
