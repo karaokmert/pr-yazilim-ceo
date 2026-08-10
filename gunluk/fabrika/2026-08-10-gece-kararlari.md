@@ -510,7 +510,22 @@ demek. Sonuç aynı görünüyor ama kanonda *"body muaftır"* satırı kalırd�
 
 ---
 
-## BULGU 7 (07:50) — Ölçüm YÖNTEMİM sapıyor: sistematik +16
+## BULGU 7 — TEŞHİSİ YANLIŞTI, 12:13'te düzeltildi (aşağıda)
+
+> **DÜZELTME (PQA, 12:13 — doğruladım):** bu bulgunun teşhisi **yanlış.** *"Yöntemim
+> sapıyor, tırnak/girinti sayıyorum"* dedim — **öyle değil.** Ben **bayt** ölçüyordum,
+> PQA **karakter.** İkisi de doğruydu; **birim yazılmamıştı.**
+>
+> Ölçüldü: body description **375 karakter / 407 bayt** — fark 32, hepsi Türkçe
+> çoklu-bayt karakter.
+>
+> **Sınıfı değişiyor:** *"yöntem sapması"* değil, **"birim yazılmamış".** Birincisi bir
+> hata, ikincisi bir eksiklik — ve çözümleri farklı: hata düzeltilir, eksiklik
+> **yazılır.**
+>
+> **Ve kendime olmayan bir hata atfetmişim.** Aşağıdaki metin kayıt için duruyor.
+
+## BULGU 7 (07:50) — Ölçüm YÖNTEMİM sapıyor: sistematik +16 [TEŞHİS YANLIŞ]
 
 PQA kendi ölçümünü yaptı: **body 375** (benim dediğim 407 değil), **backend 238**
 (254 değil), **behavior 235** (251 değil).
