@@ -14,10 +14,13 @@
 - [Mert ile tabirler](user_mert_tabirler.md) — kendi tabirlerinin sözlüğü; "VS Code kısa yol" = terminal profilleri
 - [Mert — ürün ölçütleri](user_mert_urun_olcutleri.md) — **tekrar sorulmayacak uyarılar**: önce ürün · hız kısıttır · kapasite sorgulanır · isim piyasada olmalı
 - [Mert — yalın üretim](user_mert_yalin_uretim.md) — ihtiyaç doğmadan kapasite kurulmaz; önce ölçüm sonra adam
+- [Mert — etki analizi ölçütü](user_mert_etki_analizi_olcutu.md) — her task'ta değil; belirsizlik/risk varsa · "karar gereken her yerde durun"
 - [Mert — karar düzeni](user_mert_karar_duzeni.md) — **"Mert olsa ne yapardı"**; sunulan seçenekleri reddedip sorunun kendisini yeniden kurar
 
 ## Nasıl konuşulur, nasıl yazılır
 
+- [Akışı bloklamayın](feedback_akisi_bloklamayin.md) — her adımı onaya bağlama; ölçümle çözülen agent'ın, tercihe bağlı olan Mert'in
+- [Sessizlik yoklaması](feedback_sessizlik_yoklamasi.md) — 5 dk'dan fazla sessizlik varsa yokla; gözetimsiz çalışmada zorunlu
 - [Seçenek sunma — YASAK](feedback_secenek_sunma.md) — problemi getir, kararı Mert versin; şık listesi sessizce çerçeve dayatıyor
 - [Cevap uzunluğu ve karar alma](feedback_cevap_uzunlugu.md) — bir bulgu/üç paragraf/tek soru; izin sorulmaz, yazılır ve bildirilir
 - [ARGE iş emri değil](feedback_arge_is_emri_degil.md) — "nasıl yapılır" sorusuna cevap ver ve DUR; fiil yoksa emir yoktur
