@@ -853,3 +853,38 @@ mu, ikinci kaynak üretti mi, cascade tam mı, gerekçesi yazılı mı.
 
 **Bu ayrım benim körlüğümü kapatıyor:** kararlarım denetim dışı değil — **ürünleri
 üzerinden** denetleniyor.
+
+---
+
+## BULGU 17 (08:14) — "Bölüm ortasından kesilme": kanonda karşılığı olmayan bir sınıf
+
+**PQA bir birim karışıklığı yakaladı ve durum benim dediğimden kötü çıktı.**
+
+Aynı cümlede *"7.862 token"* ile *"@16.000"* yazmıştım — ikisi farklı birim ve yan yana
+konunca **sanki bol yer varmış gibi** okunuyor. Yokmuş.
+
+**Ölçtüm:** `Sessiz kırılmalar` bölümü @13.815–@16.284 (2.469 karakter), kesme @16.000.
+**Bölüm ORTASINDAN kesiliyor** — ilk 2.185 karakter içeride, **son 284 karakter
+dışarıda.** Beş kimlik içeride kalıyor ama bölümün sonu kayboluyor.
+
+*"Kıl payı içeride"* demiştim — **yanlış. Kıl payı dışarıda.** Bölüm zaten kesilmiş
+durumda.
+
+### Ve bu yeni bir bulgu sınıfı
+
+**Bölüm ortasından kesilme özellikle sinsi:** başlık içeride, hüküm dışarıda kalabiliyor
+— agent bölümün **var olduğunu görür, içeriğini görmez.** Ne "bu kural yok" der ne de
+kuralı uygular; **eksik bir bölümü tam sanır.**
+
+Kanonda bu sınıfın karşılığı yok. Compaction hükümleri *"şu kadar token"* diyor, ama
+**kesmenin nereye düştüğü** ölçülmüyor.
+
+### Kararım sertleşti — "yukarı taşı" yetmez
+
+Sıralama ile kurtarılamaz, çünkü sorun **dizilim değil taşkın.** Üç sıra yukarı alsak
+başka bir bölüm kesilir. Önceki talimatımın *"yukarı taşı"* kısmı hâlâ geçerli ama
+**tek başına yetmez** — asıl çözüm iki bölümün çıkması (memory + iş sonu raporu).
+
+**Ölçüm isteği PQA'ya:** iki bölüm çıktıktan sonra dosya hâlâ aşıyorsa, hangi bölümün
+kesildiğini **ve bölüm ortasından mı kesildiğini** ölçsün. Bu bir bulgu sınıfı ve
+kanona girmesi gerekebilir — karar bende, ölçüm onda.
