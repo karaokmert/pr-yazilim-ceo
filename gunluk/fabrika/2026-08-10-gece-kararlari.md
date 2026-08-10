@@ -1010,3 +1010,46 @@ başına eşiğin üstünde.
 **Ders: doğru hamlelerin toplamı doğru sonuç vermeyebiliyor.** Bir optimizasyon
 zincirinde ara sıra durup *"tabanda ne var"* diye sormak gerekiyor — yoksa doğru
 adımlarla yanlış yere varılıyor.
+
+---
+
+## BULGU 20 (08:26) — Gerekçeli kural, kapsamadığı durumda da doğru davranış üretiyor
+
+**PAD üçüncü sınamadan iki tespit çıkardı ve ikisi de kayda değer.**
+
+### Metodolojik: senaryo değişti, kural değil
+
+> *"Önceki iki koşumda kural tetiklenemedi çünkü agent daha erken durdu. Sen bu kez
+> **engeli kaldırdın** — gereksinimi kusursuz verdin ve compaction'ı taklit ettin.
+> Yani **ölçülemeyen şeyi ölçmek için senaryoyu değiştirdin, kuralı değil.**"*
+
+Bu ayrım önemli: iki kez ölçemediğimde **kuralı gevşetmedim**, senaryonun kusurunu
+düzelttim. Ölçülemeyen bir kural karşısında kolay yol kuralı basitleştirmektir — ve o
+yol ölçümü değil **ölçütü** bozar.
+
+### Asıl bulgu: kural yazmadığı davranışı üretti
+
+`BE-MISSING-TOOL-IS-A-FINDING` *"dur ve bildir"* diyor. Agent bir adım öteye gitti ve
+devir bloğunun başına **kendi güvenilirlik şerhini** koydu:
+
+> *"Blok tamsa şans eseri tamdır."*
+
+**Bunu kural yazmıyor — agent gerekçeden türetti.**
+
+PAD'in tespiti: *"`URT-GIVE-REASON`'ın işlediği an: **gerekçeli kural, kapsamadığı
+durumda da doğru davranış üretiyor.**"*
+
+**Bu, gerekçe yazmanın ölçülmüş getirisi.** Kural yalnız hükmü taşısaydı agent durur ve
+bildirir, orada kalırdı. Gerekçeyi taşıdığı için — *"harita bir vaat, tutmuyorsa elinde
+kanon yok demektir"* — agent o mantığı **yeni bir duruma** taşıdı: ürettiği çıktının
+güvenilirliğine şerh koydu.
+
+### Ve yönlendirme blokları kendini kanıtladı
+
+PAD'in kendi payı: agent `devir` ve `memory`'nin **yokluğunu** fark edebildi çünkü
+**varlıklarını biliyordu.** Blok konmasaydı o skill'lerden haberi olmazdı ve eksikliği
+hiç göremezdi.
+
+**Yani B9 çözümünün iki yarısı var ve ikisi de gerekli:** bölümü çıkarmak (yük azalır)
++ yerine yönlendirme bırakmak (varlık bilinir). Yalnız birincisi yapılsaydı kural
+sessizce kaybolurdu — yaranın yeri değişirdi, kendisi değil.
