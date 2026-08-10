@@ -990,3 +990,23 @@ ayrıca yazılmalı** — yoksa iki denetçi aynı dosyada farklı sonuca varır
 JSON geçerli, dosya tam (814 bayt), gövde cümle ortasında bitiyor. Yani **taşıma
 sağlamdı**, mesaj o hâliyle yazılmıştı (kabuk hatası). Teşhisi doğruladı ve kayda
 geçirdi. Beyanı kanıt saymama disiplininin bir örneği daha.
+
+---
+
+## BULGU 19 (08:21) — "Bir sonraki ne çıkar" ile "hepsi çıksa ne kalır" farkı
+
+**PAD kendi körlüğünü açıkladı ve tespiti öğretici:**
+
+> *"Ben her adımda 'bir sonraki ne çıkar' diye baktım, sen 'hepsi çıksa ne kalır' diye
+> baktın. **İkinci soru birinciyi geçersiz kıldı.**"*
+
+Bu, **adım adım optimizasyon** ile **taban ölçümü** arasındaki fark. PAD her turda
+doğru hamleyi yaptı — devir çıktı, memory çıktı, rapor taşındı — ama her seferinde
+**yerel** bir soruya cevap veriyordu.
+
+Tabana bakınca hamlelerin toplamının yetmediği çıktı: kalan yedi çekirdek bölüm tek
+başına eşiğin üstünde.
+
+**Ders: doğru hamlelerin toplamı doğru sonuç vermeyebiliyor.** Bir optimizasyon
+zincirinde ara sıra durup *"tabanda ne var"* diye sormak gerekiyor — yoksa doğru
+adımlarla yanlış yere varılıyor.
