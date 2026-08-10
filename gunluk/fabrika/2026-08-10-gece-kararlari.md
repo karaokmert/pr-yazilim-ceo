@@ -746,3 +746,43 @@ sınama geçer ama hiçbir şey kanıtlamaz.
 
 **Bu, bugün ölçülemeyecek bir şey** ve kapatılmış sayılmayacak. Açık kalem olarak
 duruyor.
+
+---
+
+## BULGU 15 (08:08) — Döngü/kapı ayrımı kanıtlandı: benim hatam üzerinden
+
+Sorduğum soru — *"denetçi kendi bulgusunun uygulanmasını denetleyecek, bu kapı mı döngü
+mü?"* — PQA tarafından **kanondan** cevaplandı: **kapı.**
+
+**Ayrımın özü:** *"Bağımsızlığım 'ürettiğimi denetlemiyorum'dan geliyor, 'bulgum
+hakkında konuşmuyorum'dan değil."*
+
+Mekaniği: bulguyu PQA yazdı, düzeltmeyi PAM kurdu, ve PQA çözüm önermediği için
+(`PQA-NO-PROPOSE-FIX`) **düzeltmenin gerekçesini bilmiyor.** Elinde yine yalnız dosya
+var. Döngü olacağı hâl `PQA-NO-FILE-EDIT`: düzeltmeyi kendisi yazsaydı.
+
+**"Bulgu yazmak yazarlık değil."**
+
+**Ve teorik değil — bu gece fiilen kanıtlandı, benim hatam üzerinden:**
+
+> *"Clara benim B2 bulgumu doğru anladı ama **YANLIŞ bir hüküm yazdı** (eşik muafiyeti),
+> ben okuyup yakaladım ve geri alındı (`b9446a3`). İşte o an döngü değil kapıydı; döngü
+> olsaydı o hatayı göremezdim."*
+
+---
+
+## AÇIK KALEM (08:08) — "Son commit'te bulgu çıkarsa" kanonda ölçülmemiş
+
+PQA bir boşluk bildirdi ve **kanonun kendisi bunu yazmış** (`is-duzeni:168-169`):
+
+> *"Koşmayan şey **bulgulu bir kapanış**: PQA son commit'te bulgu bulursa döngünün
+> nasıl işleyeceği ölçülmedi."*
+
+**Şu an ilk kez o duruma yaklaşıyoruz** — tur 2 ürünü + B9 düzeltmesi + beş belge
+commit'i tek pakette denetime gidiyor. Denetim bulgu çıkarırsa, düzeltme yeni bir
+commit doğuracak ve o commit de denetlenmesi gereken bir şey olacak.
+
+**PQA bunu bulgu değil VERİ olarak bildirdi** — kanon değişikliği gerektirip
+gerektirmediği kullanıcının kararı. Kendi cümlesi: *"Ben kapsam çizmiyorum."*
+
+**Mert'in kararına taşınacak.** Aday adres: `docs/fabrika/uretim-refleksi/`.
