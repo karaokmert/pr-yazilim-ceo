@@ -1053,3 +1053,59 @@ hiç göremezdi.
 **Yani B9 çözümünün iki yarısı var ve ikisi de gerekli:** bölümü çıkarmak (yük azalır)
 + yerine yönlendirme bırakmak (varlık bilinir). Yalnız birincisi yapılsaydı kural
 sessizce kaybolurdu — yaranın yeri değişirdi, kendisi değil.
+
+---
+
+## KARAR 19 (08:27) — Prefix kırığı düzeltilecek: iki seri, iki farklı kök
+
+**Denetim 3'te iki bulgu çıktı. PQA'nın sayılarını birebir doğruladım:**
+
+`AUTH` 11 temiz · **`BE` 27 KIRIK** (19 module-development, 8 backend) · **`BHV` 53
+KIRIK** (32 behavior, 14 devir, 7 memory) · `DB` 21 temiz · `ENUM` 6 temiz · `RESP` 13
+temiz. **Toplam kırık 40 kimlik** — PAD 21 bildirmişti, PQA ikinci seriyi buldu.
+
+Kanon açık: *"Prefix kuralın yaşadığı skill'i gösterir ve her prefix'in TEK SAHİBİ
+vardır."*
+
+### Kararım: düzeltilecek — ve gerekçem PAD'in kendi ölçümü
+
+PAD demişti: *"bugün neredeyse bedava, sahaya çıktıktan sonra cascade."* Ölçüm doğru
+ve **tam da bu yüzden şimdi yapılmalı** — paket kapalı, dış atıf yok, sekiz rol daha
+üretilmedi. Yarın bu iş yirmi kat pahalı.
+
+### İki serinin kökü farklı, düzeltmesi de farklı
+
+**`BHV` (21 kırık) — benim kararımın sonucu.** Devir ve memory bölümlerini ben
+ayırttım, kimlikler onlarla taşındı. Üretim hatası değil, **taşıma artığı.**
+→ Taşınan kimlikler yeni sahiplerinin prefix'ini alır: `DEV-`, `MEM-`.
+
+**`BE` (19 kırık) — baştan böyle üretilmiş.** `module-development`'taki kimlikler
+`BE-` ile doğmuş.
+→ O 19 kimlik `MOD-` alır; omurgadaki 8 kimlik `BE-` kalır.
+
+### Ve bir ölçüt çıktı — gereksinime yazılacak
+
+**"Bir kimliğin prefix'i, kuralın YAŞADIĞI dosyayı gösterir — rolün adını değil."**
+
+`BE-` prefix'i *"backend rolü"* değil *"backend omurga skill'i"* demek. Bu ayrım
+yapılmazsa **her rol kendi adıyla bir prefix açar ve alt skill'ler sahipsiz kalır** —
+tam şu anki durum. Sekiz rol daha üretilecekken bu ölçütün yazılması kritik.
+
+### B12 — KURULUM.md ikinci kez bildirildi, kapanacak
+
+16 alet skill'inin yokluğu kullanıcıya söylenmiyor. Emsal **aynı dosyada** var (kanal
+boşluğu *"bu sürümün bilinen sınırı"* diye yazılı). Tur 1'de bildirilmiş, kapanmamış.
+
+### Temiz çıkan eksenler — işin çekirdeği sağlam
+
+**Dizin iki yönde tam:** 131 kimlik, 131'i kaynakta tanımlı, dizinde olmayan sıfır.
+**Çift tanım sıfır.** Atıf listeleri iki yönde doğru (yanlış 0, eksik 0).
+
+**Cascade temiz:** devir ve memory ayrıldı, **ikinci kaynak üretilmemiş** — devir'deki
+14 kimliğin 0'ı, memory'deki 7'nin 0'ı behavior'da tekrar tanımlı değil.
+
+**Description 9/9 eşik altında** (206–276). **Validate temiz.** Hook iki skill'i doğru
+basıyor.
+
+**Ve tur 1 bulgularının ikisi kapandı:** B11 (`id_kalibi`) kapandı, B9 kısmen (26 → 6
+kimlik).
