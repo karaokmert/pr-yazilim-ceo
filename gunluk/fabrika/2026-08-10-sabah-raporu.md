@@ -198,3 +198,27 @@ değil, **iş akış hızına** bağlı."* İki taraf paralel çalışırken dak
 üretiyor; bildirim yazıldığı anda geçmiş olabiliyor.
 
 İkisi de kanona aday olarak fabrikanın kuyruğunda.
+
+---
+
+## Maliyet ölçümü — dürüstlük payı
+
+**Üretilen ürün:** 16 dosya, **3.357 satır** (`team/ozel-yazilim/`)
+**Süreç dokümanı:** 9 dosya, **2.705 satır** (`docs/ozel-yazilim/`)
+**Benim kaydım:** **2.623 satır** (karar defteri + sınama sonuçları + rapor)
+**Commit:** fabrikada 25, bu repoda 34
+
+**Yani her 1 satır ürün için ~1,6 satır süreç ve kayıt yazıldı.**
+
+**Kıyas — n8n:** 2.500 satır ürün / 2.753 satır süreç ≈ **1,1** — ama orada **ilk 5,5
+saat sıfır çıktı** vardı ve sen kesmiştin.
+
+**Bu turda ürün ilk saatte çıktı** (00:42 iş verildi, 07:24 ilk skill dosyaları). Ama
+oran hâlâ yüksek ve bunu saklamıyorum.
+
+**Savunmam ve sınırı:** bu gece **altı denetim turu** koştu ve **on bulgu** çıktı;
+dördü iş değiştirici. Kayıtların çoğu o bulguların gerekçesi. Ama *"gerekçe yazdım"*
+bir savunma değil — **ölçüt şu: bu kayıtların kaçı bir sonraki rolde okunacak?**
+
+Cevabı bugün bilmiyorum. **Sekiz rol daha üretilecek** ve o zaman ölçülebilir:
+karar defterine dönülüyor mu, yoksa bir kez yazılıp kapanıyor mu.
