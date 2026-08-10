@@ -137,6 +137,57 @@ işe yaradı.
 
 ---
 
+## PAD'in kendi testi benim eksenimi tamamladı — KURAL ÇAKIŞMASI
+
+**PAD tur 1'i bitirdikten sonra kendi anlaşılırlık testini koştu ve dört bulgu çıktı.
+Biri benim altı eksenimin hiç sormadığı soruydu.**
+
+**Benim sınamam:** *"agent doğru davranıyor mu?"*
+**PAD'in testi:** *"aynı durumda iki kural çelişiyor mu?"*
+
+İkisi ayrı soru ve ikincisini hiç sormamıştım.
+
+**En ağır bulgusu:** *"kapsam dışı bir sorunu senin değişikliğin büyütüyorsa ne olur"*
+**tanımsızdı.** Üç kural üç ayrı cevap veriyordu — *kapsam dışına çıkma* / *çalışmayanı
+commit'leme* / *regresyon senin sorumluluğun* — ve **öncelik hiçbir yerde yazılı
+değildi.**
+
+Yardımcı somut örnekle gösterdi: filtre ekliyorsun, handler'da zaten duran bir N+1
+sorunu senin filtrenle **on kat sıklaşıyor.** Kapsam dışında ama sen büyüttün.
+
+**Sonuç: `BHV-STOP-IF-YOU-MAKE-IT-WORSE` yazıldı.**
+
+**Ders — kendi sınama planıma eklenecek:** davranış sınaması bir agent'ın **doğru
+davrandığını** ölçer; kural çakışması sınaması **kanonun kendi içinde tutarlı olduğunu**
+ölçer. İkincisi olmadan, agent doğru davranır ama **hangi kuralı seçeceği belirsiz**
+kalır — ve o belirsizlik sahada rastgele çözülür.
+
+---
+
+## Ölü hedef sorunu kurala çevrildi — ve ölçülecek
+
+**Ölçtüm (07:50):** harita **22 skill adı anıyor, 2'si var.** Yirmi hedef ölü.
+
+**PAD bunu silmedi ya da gizlemedi — kurala çevirdi:**
+
+**`BE-MISSING-TOOL-IS-A-FINDING` — Haritanın gönderdiği skill yoksa varsayımla devam
+etme; dur ve bildir.**
+
+> *"Harita bir vaat: 'o alanın kuralı şurada yazılı.' Vaat tutmuyorsa elinde kanon yok
+> demektir ve o alanda hafızandan çalışırsın."*
+
+**Ve gerekçesini benim sınamamdan aldı:** *"Bu ölçüldü ve fark edilmedi: bir sınamada
+rol üç alet skill'ini açacağını söyledi, üçü de henüz üretilmemişti, ve rol bunu hiç
+sorun etmedi."*
+
+Ayrıca alet çantasının başına şunu yazdı: *"Aşağıdaki her satır bir söz veriyor. Bir
+sözün tutmadığını görürsen yukarıdaki kural devreye girer."*
+
+**Bu kural ölçülecek** — çünkü tam da sessizce başarısız olan sınıftan. Ayrı bir koşum
+açıldı (07:52).
+
+---
+
 ## Açık kalan — dürüstlük payı
 
 **Bu bir davranış beyanı, koşum değil.** Agent *"ne yapardım"* dedi; gerçek bir kod
