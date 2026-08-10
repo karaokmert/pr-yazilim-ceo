@@ -13,6 +13,15 @@ metadata:
    alanını doğrulamadan kabuğa gömüyor. Devir bloğu HAZIR, kopyala-taşı:
    `fikirler/agent-iletisim-kanali/relay-guvenlik-bulgusu.md`
 
+## Kanal kalemleri (2026-08-10 imleç arızasından)
+
+- **Okuma iki yoldan yapılabiliyor, biri imleci ilerletmiyor.** `kanal.md` üçüncü
+  okuma yolunu (monitör bildirimi / oturum kaydı) tanımlamıyor. **Sebep kaldırılmadı**
+  — Mert'in kararı bekliyor. Kanıt: `gunluk/fabrika/2026-08-10-kapanis.md`
+- **B19: sayı paylaşılırken kapsam yazılmıyor.** İki commit aynı vakaya 14 ve 46
+  dedi, ikisi de "kimin kutusu" demedi. Türkçe ölçüm tuzağının kardeşi — orada
+  **birim**, burada **kapsam** eksikti.
+
 ## Fabrikaya gidecek gereksinim adayları (N8N oturumundan, 2026-08-09)
 
 1. **`validate && commit` yasağı** — `claude plugin validate` başarısızlıkta

@@ -34,8 +34,8 @@ turundan geçti, **sıradaki iş kalan sekiz rol.**
 Fabrika ekibi **kapatıldı** (2026-08-10 13:28-13:40, dördü de temiz arşivlendi) —
 yeniden açılacak.
 
-**Push durumu:** 32 commit push edildi (`65496b0`, 13:05). Sonra **üç commit daha**
-eklendi (kapanış kayıtları, imleç arızası) — durumu kapanış dokümanında.
+**Push: TEMİZ, bekleyen yok.** `a1c5506` (13:36) — yerel = uzak, ileride 0 commit.
+Doğrulandı (`git fetch` + `rev-parse`), beyana dayanılmadı.
 
 ## Bu oturumda öğrenilen — kanona girmiş olanlar
 
@@ -50,6 +50,15 @@ Gerekçe: `kararlar/2026-08-10-agent-sinama-iki-ders.md`
 **Compact öncesi devir hook'u** (Mert, 08-10): agent compaction'a girdiğinde devir
 dokümanına geçecek. **Üretilmedi**, üç ölçüm bekliyor.
 Gerekçe: `kararlar/2026-08-10-compact-oncesi-devir-hooku.md`
+
+**İki yol, tek kayıt** (13:20-13:36 oturumu): bir iş iki yoldan yapılabiliyorsa ve
+yalnız biri kaydı tutuyorsa arıza **sessizdir** — sonuç doğru çıkar, kayıt bozulur.
+Kayıt: `feedback_iki_yol_bir_kayit.md`
+
+**`SendMessage` / `ListAgents` var ve çalışıyor** — cross-session mesajlaşma
+**v2.1.224**'te geldi (CHANGELOG; aynı makinede soket üzerinden, Anthropic sunucusuna
+uğramıyor). Kanal ölü/kapalıyken agent'lara **bu yolla** ulaşıldı, ikisi de teslim oldu.
+Sınırı: düz metin, kalıcı kayıt yok, oturum kapanınca gidiyor.
 
 ## Açık kalemler — Mert'in kararı bekleyenler
 
