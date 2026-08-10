@@ -7,67 +7,62 @@ metadata:
 
 # Durum
 
-> **`gunluk/` artık proje bazlı** (2026-08-09): `gunluk/ev/` (Clara's own) · `gunluk/fabrika/` (factory/agent-project) · `gunluk/{proje}/` (managed projects).
-> Açılış hook'u her projenin son kapanışını ayrı listeler — **yalnız kendi modunun
-> kapanışı okunur**, başka projeninki özetlenmez. 07-08 dosyaları `gunluk/fabrika/`e taşındı.
+> **`gunluk/` proje bazlı:** `gunluk/ev/` (Clara'nın kendi işi) · `gunluk/fabrika/`
+> (agent-project) · `gunluk/{proje}/`. Açılış hook'u her projenin son kapanışını ayrı
+> listeler — **yalnız kendi modunun kapanışı okunur.**
 
-**Son kapanış (ev):** `gunluk/ev/2026-08-09-kapanis-3.md` (bu oturum: hook + dosya düzeni)
-**Ondan önceki:** `gunluk/ev/2026-08-09-kapanis-2.md` (pencere ölçümü) ve `gunluk/ev/2026-08-09-kapanis.md` (roller + sınama)
+## Son kapanış — FABRİKA hattı
 
-> **Push kapandı.** Aşağıdaki *"İlk hareket: PUSH"* satırı artık geçersiz — ölçüldü,
-> `origin/main..HEAD` boştu. Bekleyen sıra (A bölümü) aynen duruyor.
+**`gunluk/fabrika/2026-08-10-kapanis.md`** ← **bunu oku, çalışmaya oradan başla.**
 
-> Aynı gün **iki ayrı oturum** çalıştı ve ikisi de bu kaydı yazdı. Aşağıda ikisi de var —
-> biri fabrika/N8N hattı, diğeri Clara'nın kendi kanonu. Karışmıyorlar.
+**Tek cümle:** OY takımının **pilot rolü (backend-developer) üretildi**, sekiz denetim
+turundan geçti, **sıradaki iş kalan sekiz rol.**
 
-## A — Fabrika hattı (N8N oturumu)
+**Destek belgeleri (gerekirse):**
+- `gunluk/fabrika/2026-08-10-sabah-raporu.md` — Mert'in altı maddesinin karşılığı,
+  maliyet ölçümü
+- `gunluk/fabrika/2026-08-10-gece-kararlari.md` — 23 karar + 29 bulgu, hepsi gerekçeli
+- `incelemeler/oy-v8-yeniden-uretim/` — beş ölçüm dosyası
 
-**N8N işi KAPANDI.** Fabrikanın ilk gerçek ürünü `n8n-otomasyon` v0.1.0 push'landı
-(`a948fd5`, 21 commit): 3 rol, 7 skill, 82 kural — beş kanıt katmanından geçti.
-Ayrıntı: `gunluk/2026-08-09.md` → *"N8N İŞİ KAPANDI — 07:28"*
+## Son kapanış — EV hattı
 
-**Bekleyenler, sırayla:**
-
-1. **OY plan kararı** — PQA denetiminden geçti, **Mert'in kalem kararı bekleniyor**
-   (5 kalem + ertelenen kalem-5; `agent-project/docs/ozel-yazilim/takim-analizi/rapor-analiz-plan.md`)
-2. **Kanal asseti taşıma** — PAD'de onaylı+dondurulmuş plan, tek komutla başlar
-3. **Filo taraması** — ilk takım sahada, `docs/filo/durum.md` doldurulacak
-4. **N8N ilk gerçek iş** — saha kanıtı; kurulum katman-2'yi ölçecek
-5. **N8N erişim ucu** — Mert'ten API bilgisi gelince dal sabitlenir
-
-## B — Clara'nın kendi kanonu (bu oturum)
-
-**Rol tanımı düzeltildi ve sınama yöntemi kuruldu.**
-
-**Roller artık ALTI:** proje-yonetimi · saha-monitorluk · sprint-yonetimi ·
-kanal-kurulumu · agent-sinama · oturum-duzeni.
-**Davranışlar rol değil:** arama-disiplini · hafiza-duzeni · onay-brief · clickup-duzeni.
-
-**Birincil kural kondu — `CLA-FIX-THE-CAUSE`:** *bozuk olan yamayla düzeltilmez, sebebi
-ortadan kaldırılır.* Kapsam **yönetilen tüm işler.** Kritik kuralların birincisi.
-
-**Anlam sınaması kanona girdi:** ayıran test *"bu sorunun cevabı kanonda yazılı mı"* —
-yazılıysa okuma sorusudur. Ve üç ek: **tek tur ölçmez (üstüne gidilir)** · **çelişki
-koymadan doğrulama refleksi ölçülmez** · **itiraz sınanmadan sınama tamam değil.**
-
-**Sahada sınandı:** yeni Clara kanaldan 19 soruyla sınandı, onbir davranış tuttu.
+`gunluk/ev/2026-08-09-kapanis-3.md` (açılış hook'u + `gunluk/` dosya düzeni)
 
 ## İlk hareket
 
-**PUSH** — bekleyen commit'ler var. Kontroller (hassas bilgi + uzak çakışma) yapılıp
-`git push origin main`.
+**Fabrika modundaysan:** devir dokümanını oku, sonra kalan sekiz rolün üretimini başlat.
+Fabrika ekibi kapatıldı — **yeniden açılacak.**
 
-## Açık iki konu
+**Push bekliyor:** `agent-project`'te 27 commit, denetlenmiş. **Onay Mert'in,
+devredilemez.**
 
-**Ortak hafıza** — graph npx önbelleğinde (silinebilir), yedek `~/.pr-memory/`.
-Yapılandırmaya dokunulmadı, Mert erteledi.
+## Bu oturumda öğrenilen — kanona girmiş olanlar
 
-**Sınama skill'inin yeni sürümü sınanmadı** — üstüne gitme / çelişki / itiraz eklendi ama
-gerçek bir turla ölçülmedi.
+**Seçenek sunma yasağı** (Mert, 08-10): problemi ve ölçümü getir, kararı o versin.
+Ayıran test: *cevabın listede olmak zorunda mı?* Zorundaysa liste yanlış.
+Kayıt: `feedback_secenek_sunma.md`
 
-## Kalıcı dersler (bugün)
+**`agent-sinama`'ya iki ders:** ölçemediysen kuralı değil **senaryoyu** düzelt ·
+gerekçeli kural kapsamadığı durumda da davranış üretiyor.
+Gerekçe: `kararlar/2026-08-10-agent-sinama-iki-ders.md`
 
-Dört sessizlik türü (`arge/agent-oturum-modu/`) · push kapsamı push anında ölçülür ·
-**beyan başlama değildir** · standart devralınır · **ayarın varlığı uygulandığının kanıtı
-değil** (model `fable` yazılıydı, opus koşuyordu) · kanal ayrımı **izinle değil adresle**
-sağlanıyor.
+**Compact öncesi devir hook'u** (Mert, 08-10): agent compaction'a girdiğinde devir
+dokümanına geçecek. **Üretilmedi**, üç ölçüm bekliyor.
+Gerekçe: `kararlar/2026-08-10-compact-oncesi-devir-hooku.md`
+
+## Açık kalemler
+
+**Push** (27 commit, Mert'te) · **`dizin-uret.py` hook'suz** (çalıştırılması hatırlamaya
+bağlı) · **"son commit'te bulgu çıkarsa"** kanonda ölçülmemiş · **dizin script'i
+fabrikaya taşınsın mı** (iki tur daha tutarsa)
+
+## Kalıcı ders — bu oturumun en pahalısı
+
+**Tek bir ölçüm hatası sınıfı altı kez tekrarlandı, üç tarafta da: araç doğru çalıştı,
+soru yanlıştı.** Kimse yanlış komut yazmadı, kimse sayı uydurmadı.
+
+**Refleks:** bir ölçümü raporlamadan önce sor — *aradığım şey ile ölçtüğüm şey aynı mı?*
+
+**Ve ikinci ders:** *"ikinci göz"* bir **iddiayı** denetler, *"ikinci koşum"* bir
+**dosyayı** yeniden açar. **Göz yanlış iddiayı bulur, koşum eksik kapsamı.** Sekiz
+denetim *"geçti"* dedikten sonra script'i elle koşturunca dört ölü yol çıktı.
