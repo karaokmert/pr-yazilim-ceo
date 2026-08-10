@@ -171,24 +171,44 @@ sınıf: benim *"626 satır"* dediğim gereksinim 649'du, PAM'in ClickUp iddias�
 **Ders:** hızlı akan bir üretimde ölçüm ile rapor arasındaki dakikalar bile fark
 üretiyor. Ölçümün **zamanı** yazılmalı, sayısı kadar önemli.
 
-### Ama yeni bir bulgu çıktı — body description'ı 407 karakter
+### KARAR 14 GERİ ALINDI (07:50) — muafiyet yazmak, olmayan kuralı teyit etmek
 
-Skill'ler eşiği tutuyor, **body tutmuyor.** Ve bu bir kapsam sorusu, ihlal değil.
+**Önce şöyle karar vermiştim:** *"body 407 karakter, eşiği aşıyor, o hâlde body'yi
+muaf tutalım."*
 
-**Kararım: 300 karakter eşiği SKILL description'ları için geçerli; agent body'si
-için değil.**
+**PQA çürüttü ve haklı. Kaynağı kendim açtım** (`agent-project/.claude/skills/
+yapi-taslari/SKILL.md:497-499`):
 
-**Gerekçe:** ikisi farklı iş yapıyor. Skill description'ı *"bu skill ne zaman
-açılır"* der — kısa olmalı, çünkü agent onu **iş anında tarar.** Body description'ı
-ise *"bu personel ne zaman çağrılır"* der ve içinde Mert'in 2. maddesinin gereği olan
-**tipik Türkçe tetikler** yaşar (*"endpoint ekle, handler yaz, tablo aç, migration"*).
+> **Belgelenmemiş:** agent `description` karakter sınırı · agent body satır sınırı ·
+> toplam skill sayısı tavanı · reference dosya boyut tavanı. **Bunlar için bir sayı
+> uydurma — yoksa yok.**
 
-O tetikler yer kaplıyor ama **tam da istenen şey.** 300'e sıkıştırmak tetikleri
-kesmek olur — yani eşiği tutturmak için asıl işlevi bozmak.
+Ve 300 rakamının geldiği yer (`uretim/SKILL.md:226`) **skill** description'ını
+anlatıyor: *"Limit 1024 karakter ama hedef 300 civarı."*
 
-**Sınırı yine de var:** body description'ı da içerik özeti yapmaz, yalnız çağrılma
-anını ve tetikleri söyler. Bugünkü 407 karakter bu ölçüte uyuyor (okudum: *"şu anlarda
-çağrılır"* + tetikler + kapsam dışı, tek satır içerik özeti yok).
+**Yani ortada muafiyet gerektiren bir çakışma yoktu. Eşik body'ye zaten
+uygulanmıyordu.**
 
-**Bu karar gereksinime ve `sinama-plani.md`'ye işlenecek** — aksi hâlde bir sonraki
-rol üretilirken aynı soru yeniden sorulur.
+**Hatamın sınıfı — `CLA-FIX-THE-CAUSE`:** var olmayan bir ihlali çözmek için **yeni
+bir hüküm yazdım.** Ve muafiyet yazmak, olmayan bir kuralın varlığını **teyit etmek**
+demek. Sonuç aynı görünüyor ama kanonda artık *"body muaftır"* diye bir satır olurdu
+ve o satır bir gün *"demek ki bir eşik vardı"* diye okunacaktı.
+
+**Doğrusu:** agent body description'ı için **sayısal bir eşik yok** — kanon bunu
+açıkça *belgelenmemiş* diye işaretlemiş. Geçerli olan tek ölçüt **nitel**: description
+içerik özeti yapmaz, çağrılma anını ve tetikleri söyler. Bugünkü body bu ölçüte uyuyor.
+
+**Skill description'ları için 300 eşiği aynen geçerli** (`backend` ve `behavior`
+tutuyor).
+
+### Sayı düzeltmesi — ölçüm yöntemim sapıyor
+
+PQA kendi ölçümünü yaptı: **body 375** (benim dediğim 407 değil), **backend 238**
+(254 değil), **behavior 235** (251 değil).
+
+**Fark sistematik ve hep aynı yönde — benimkiler ~16 fazla.** Tırnak ve girinti
+sayılıyor olmalı.
+
+**Ve bu bir sınıf değişikliği:** bu gece dördüncü ölçüm hatam ama öncekilerden farklı.
+İlk üçünde **ölçümün zamanı** eskiydi; bunda **yöntem sapıyor.** İkincisi
+tekrarlanabilir bir hata — düzeltilmezse her ölçümde aynı sapmayı üretir.

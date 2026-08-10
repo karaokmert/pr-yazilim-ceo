@@ -435,6 +435,8 @@ Bunlar yeni takımın **sessiz kırılma envanterine** girecek.
 
 ---
 
+## KARAR 14 — GERİ ALINDI (07:50). Aşağıdaki gerekçe yanlıştı; düzeltmesi sonunda.
+
 ## KARAR 14 (07:45) — 300 karakter eşiği skill'ler için; body için değil
 
 **Yeni bulgu:** skill description'ları eşiği tutuyor (`backend` 254, `behavior` 251),
@@ -479,3 +481,50 @@ raporlamadan önce *"bu değer hâlâ geçerli mi"* diye sormak, tarama maliyeti
 
 **Yanlış raporlamanın somut bedeli vardı:** PAD'e haksız bir gerekçe borcu yükledim.
 Düzeltildi ve bildirildi.
+
+---
+
+## KARAR 14 DÜZELTMESİ (07:50) — muafiyet yazmak, olmayan kuralı teyit etmek
+
+**PQA çürüttü ve haklı. Kaynağı kendim açtım** (`yapi-taslari/SKILL.md:497-499`):
+
+> **Belgelenmemiş:** agent `description` karakter sınırı · agent body satır sınırı ·
+> toplam skill sayısı tavanı. **Bunlar için bir sayı uydurma — yoksa yok.**
+
+Ve 300 rakamının geldiği yer (`uretim/SKILL.md:226`) **skill** description'ını
+anlatıyor.
+
+**Yani ortada muafiyet gerektiren bir çakışma yoktu.** Eşik body'ye zaten
+uygulanmıyordu.
+
+**Hatamın sınıfı — `CLA-FIX-THE-CAUSE`:** var olmayan bir ihlali çözmek için **yeni
+bir hüküm yazdım.** Muafiyet yazmak, olmayan bir kuralın varlığını **teyit etmek**
+demek. Sonuç aynı görünüyor ama kanonda *"body muaftır"* satırı kalırdı ve bir gün
+*"demek ki bir eşik vardı"* diye okunurdu.
+
+**Yürürlükteki doğru hâli:**
+- **Skill description'ları:** mutlak 300 karakter hedefi (fabrikanın mevcut hükmü)
+- **Agent body description'ı:** sayısal eşik **yok** — kanon *belgelenmemiş* diye
+  işaretlemiş. Geçerli ölçüt **nitel**: içerik özeti yapmaz, çağrılma anını ve
+  tetikleri söyler.
+
+---
+
+## BULGU 7 (07:50) — Ölçüm YÖNTEMİM sapıyor: sistematik +16
+
+PQA kendi ölçümünü yaptı: **body 375** (benim dediğim 407 değil), **backend 238**
+(254 değil), **behavior 235** (251 değil).
+
+**Fark sistematik ve hep aynı yönde — benimkiler ~16 fazla.** Tırnak ve girinti
+sayılıyor.
+
+**Ve bu bir sınıf değişikliği.** Bu gece dördüncü ölçüm hatam ama öncekilerden farklı:
+
+- İlk üçünde **ölçümün zamanı** eskiydi (626 satır · ClickUp · bayat description)
+- Bunda **yöntem sapıyor**
+
+İkincisi **tekrarlanabilir** — düzeltilmezse her ölçümde aynı sapmayı üretir. Birincisi
+bir anlık kaçırma, ikincisi bir arıza.
+
+**Karar:** description ölçümlerinde PQA'nın sayıları esas alınacak; kendi betiğimi
+düzeltene kadar **bu ölçüm bende değil onda.**
