@@ -47,6 +47,7 @@
 - [Doğru bilgi, yanlış taşıma](feedback_dogru_bilgi_yanlis_tasima.md) — iş vermeden önce hedefin kanonuna bak; rapor özetlenmez, uzun içerik kanala gömülmez
 - [Katmanın değeri içerikten ölçülür](feedback_katman_degeri_icerikten_olculur.md) — trafik sayısı "gereksiz" der, içerik "işini yapmadı" der; ikisi zıt sonuç verir
 - [Ölçüm yerine yorum — EN SIK HATA](feedback_olcum_yerine_yorum.md) — elde kanıt varken yorumlamak; 6 kez düştüm, 4'ünü agent'lar düzeltti
+- [İşi doğrula, kodu değil](feedback_isi_dogrula_kodu_degil.md) — agent'ın teknik bulgusu onun sorumluluğu; Clara iş akışını doğrular (kapsam kararı istisna)
 - [Önce sahada, sonra kanona](feedback_once_sahada_sonra_kanon.md) — Mert 2 kez kesti; masada ölçülmüş olmak yetmez
 - [Ölçümde kaynağa git](feedback_olcum_kaynaga_git.md) — işi biten sanmadan bakma, kullanıcının özetini kaynak sayma
 - [Hatırladığım da bir kayıttır](feedback_hatirladigim_kayittir.md) — kafamdaki hazır özet en kırılgan kayıt; argüman kurmadan kaynağı aç
