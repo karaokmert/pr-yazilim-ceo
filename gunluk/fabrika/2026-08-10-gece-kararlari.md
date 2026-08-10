@@ -1474,3 +1474,44 @@ yakıyor.
 **Ben B17'yi *"yeri yanlış"* diye gördüm; PAM *"atıf biçimi de yanlış olabilir"* diye
 gördü.** Aynı sınıfın ikinci yarısı: **dosyayı doğru yere koymak yetmiyor, ona nasıl
 atıf verildiği de yazılı olmalı.**
+
+---
+
+## BULGU 28 (09:06) — Ölü atıfı BİZ ürettik: taşıma cascade'i eksik kaldı
+
+**Denetim 7 bulgusuz geçti (14/14 bulgu kapalı) ama ben kontrol ederken yeni bir bulgu
+çıktı — ve ikisi de kaçırmıştı.**
+
+`dizin-uret.py` doğru yere taşındı, koşuyor, kök koruması çalışıyor. **Ama kendi
+içindeki üç atıf eski yolu gösteriyor:**
+
+- **satır 12** — `KULLANIM: python3 .claude/dizin-uret.py`
+- **satır 81** — koruma mesajı: `Doğrusu: cd team/ozel-yazilim && python3
+  .claude/dizin-uret.py`
+- **satır 134** — **dizine YAZDIĞI** `kim_gunceller` metni: *"...script ile: python3
+  `.claude/dizin-uret.py`"*
+
+Üçü de artık **olmayan** bir yolu gösteriyor.
+
+### Üçüncüsü en ağırı: script kendi ürettiği dosyaya ölü yol basıyor
+
+O metin **dizine yazılıyor.** Yani her koşumda 132 kimliğin dizinine **ölü bir talimat**
+düşüyor — ve sekiz rol daha üretilecekken her seferinde tekrar yazılacak.
+
+### Sınıfı tam olarak bu işin temizlemek için açıldığı şey
+
+Üç ölü MCP adresi · `uretim-standardi` + `omurga-cache-dogrula.py` · **şimdi bu.**
+
+**Ve bu sefer ölü atıfı BİZ ürettik** — taşıma sırasında.
+
+**Cascade eksik kalmış:** dosya taşındı, **ona atıf verenler** taşınmadı.
+`ISD-CASCADE-IN-ONE-TURN` *"bağlı yerleri aynı turda güncelle"* diyor; burada bağlı yer
+**dosyanın kendi içi** ve dizine yazdığı metin.
+
+### Denetim neden kaçırdı — ve sınıfı yine aynı
+
+PQA raporunda *"eski yer temizlenmiş (git rename olarak görmüş)"* yazmış. **Git rename
+gördü, doğru** — ama **dosyanın içindeki yol metinleri rename ile değişmez.**
+
+**Araç doğru çalıştı, soru yanlıştı.** Bu gecenin **altıncı** vakası ve bu sefer
+**denetimde.**
