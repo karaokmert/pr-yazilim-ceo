@@ -786,3 +786,70 @@ commit doğuracak ve o commit de denetlenmesi gereken bir şey olacak.
 gerektirmediği kullanıcının kararı. Kendi cümlesi: *"Ben kapsam çizmiyorum."*
 
 **Mert'in kararına taşınacak.** Aday adres: `docs/fabrika/uretim-refleksi/`.
+
+---
+
+## KARAR 17 (08:10) — B9 kısmen çözüldü: iki bölüm daha çıkıyor
+
+**Ölçtüm:** `behavior` 32.499 → **25.161 karakter (~7.862 token).** Eşik 5.000 —
+**hâlâ 2.862 token aşıyor.** Dışarıda kalan kimlik 26 → 18. İlerleme gerçek, **yetmedi.**
+
+**Kesme @16.000 karakter:**
+- **İçeride:** kimlik · standart · ekip · varsayma-doğrula · devralma · doğrulama ·
+  **Sessiz kırılmalar (@13.815 — kıl payı)**
+- **Düşüyor:** Memory (3.538 kar, 8 kimlik) · Devir özeti (637) · İş sonu raporu
+  (2.211, 5 kimlik) · Kullanıcının cümlesini okumak (1.095) · Ton (1.376)
+
+### Kararım — iki bölüm daha çıkacak
+
+**1. Memory → ayrı skill, preload'a girmeyecek.** 3.538 karakter, 8 kimlik — tek
+başına en büyük bölüm. Tetiği net: *"bir şey öğrenildi, kaydedilecek."*
+
+**Ve bu, kendi gerekçemi çürütmek demek.** KARAR 15'te *"memory iş sırasında da lazım"*
+diyerek onu tutmuştum. O gerekçe zayıfmış: *"iş sırasında lazım olabilir"* ile *"her
+turda lazım"* aynı şey değil — ve Mert'in ölçütü **ikincisi.**
+
+**2. İş sonu raporu → devir skill'ine taşınacak**, ayrı skill açılmayacak. 2.211
+karakter, 5 kimlik. **Devirle aynı anda lazım** — iş bitiyor, rapor yazılıyor, devir
+yazılıyor. İki ayrı skill açmak **bir anı ikiye bölmek** olur.
+
+**3. Kullanıcının cümlesini okumak + Ton kalıyor** (2.471 karakter). İkisi de **her
+turda** lazım — nasıl konuşulacağı ve kullanıcının ne demek istediği her mesajda
+devrede. Preload ölçütüne tam uyuyorlar.
+
+### Ve bir sınır çizdim: üçüncü bölümü kendi başına çıkarmayacak
+
+Beklenen sonuç ~19.400 karakter (~6.070 token) — **hâlâ aşıyor.** PAD'e talimat:
+ölç, bildir, **kendi başına üçüncü bölümü çıkarma.**
+
+**Gerekçe:** kalan bölümler artık çekirdek — kimlik, standart, ekip, varsayma-doğrula,
+devralma, doğrulama, sessiz kırılmalar. Bunlardan birini çıkarmak *"karakter kalmasın"*
+diye **kimlik kırpmak** olur. Yama.
+
+### "Sessiz kırılmalar" yukarı taşınacak
+
+@13.815'te, kesme @16.000 — **kıl payı içeride, bir cümle eklense düşer.** Bu bölüm bu
+gecenin en değerli katmanı (memory taramasından geldi, kanonda hiç yoktu). Üç-dört sıra
+yukarı alınırsa kesme riskinden **tamamen** çıkar. `YT-CRITICAL-FIRST` zaten bunu
+emrediyor.
+
+---
+
+## BULGU 16 (08:10) — Karar bağlayıcı, kararın ürünü denetlenir
+
+Sorduğum ikinci soru — *"benim kapsam kararlarım denetimi bağlayan mı, denetlenen mi?"*
+— PQA tarafından **ikiye ayrıldı:**
+
+**Kararın kendisi bağlayıcı.** *"Kapsamı sen çizersin, ben genişletmem"* — body'sinde
+yazılı: *"Denetlemediğin bir alanda gördüğün tutarsızlığı bildirir, dokunmazsın."*
+
+**Kararın ürünü denetlenir.** Karar bir dosyaya döndüğü anda ekseninde: kanona uyuyor
+mu, ikinci kaynak üretti mi, cascade tam mı, gerekçesi yazılı mı.
+
+**İki örneği bu gece var:**
+- **KARAR 14** (eşik muafiyeti): kararı tartmadı, **ürününü** ölçtü ve kanonla
+  çeliştiğini buldu. Bulguyu yazdı, ben geri aldım.
+- **KARAR 16** (tek paket): kararı tartmadı, uygulamasını denetleyecek.
+
+**Bu ayrım benim körlüğümü kapatıyor:** kararlarım denetim dışı değil — **ürünleri
+üzerinden** denetleniyor.
