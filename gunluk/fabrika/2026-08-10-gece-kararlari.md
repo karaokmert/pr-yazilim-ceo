@@ -681,3 +681,68 @@ PQA `BE-MISSING-TOOL-IS-A-FINDING` için net bir ayrım koydu:
 biri diğerinin yerine geçmez.
 
 İkincisi verildi, **üçüncüsü hâlâ açık.**
+
+---
+
+## BULGU 13 (08:05) — Kanon kendi üreticisinin ölçüm hatasını tarif ediyor
+
+Kimlik sayımımı yanlış yaptım: **55** dedim, doğrusu **52**. Sebep — `grep -c` **geçiş**
+sayar, **tanım** saymaz; üç kimlik metinde iki kez anılıyor. Üç bağımsız kaynak 52
+diyor (satır başı tanım · tekil kimlik · dizin kaydı).
+
+**PQA'nın bağlantısı asıl bulgu:**
+
+> *"Bu tam olarak kanonunuzdaki `BHV-TOOL-CAN-LIE`'ın tarif ettiği sınıf — araç hata
+> döndürmedi, doğru çalıştı, **YANLIŞ SORUYU cevapladı.** Ve o kural şu an sizin
+> behavior dosyanızda yazılı, yani **kanon kendi ölçüm hatanızı zaten tarif
+> ediyormuş.**"*
+
+Bu gece ürettiğimiz kanon, **üreticisinin hatasını** tarif ediyor. Kuralın gerçek bir
+yaradan geldiğinin en iyi kanıtı bu.
+
+---
+
+## KARAR 16 (08:05) — Beş denetlenmemiş commit tek pakette denetlenecek
+
+**PAM kendi ihlalini bildirdi:** `origin/main..HEAD` **yedi commit**, ikisi denetlendi
+(`a206f0b` gereksinim, `2139939` ürün), **beşi hiç iletilmedi.** `ISD-RETURN-TO-PLANNER`
+her düzeltme commit'inin denetime iletilmesini emrediyor.
+
+**Doğruladım.** Ama içeriklerine baktım: beşi de **ürün değil, belge düzeltmesi** — ve
+üçü doğrudan PQA'nın ya da benim bulgumun uygulanması.
+
+**Kararım: beş commit TEK PAKET halinde, tur 2 ürünüyle birlikte denetlenecek.**
+
+**Gerekçe — kuralın amacı:** `ISD-RETURN-TO-PLANNER`'ın gerekçesi *"işin başındaki hata
+düzelmiyor"* idi. Yani kapının amacı **düzeltmenin doğru yapıldığını** doğrulamak. Beş
+ayrı tur açmak o amaca hizmet etmez, yalnız aynı dosyayı beş kez okutur.
+
+**Ve parçalı denetimin somut zararı bu gece görüldü:** PQA'nın *"behavior'ın yarısı
+düşüyor"* bulgusu, dokuz dosyayı **birlikte** okuduğu için çıktı. Parça parça baksaydı
+her dosya kendi içinde temiz görünürdü.
+
+**Bir soruyu PQA'ya devrettim** çünkü cevabı bende değil: o beş commit'in üçü **PQA'nın
+kendi bulgusunun** uygulanması. Denetçi kendi bulgusunun uygulanmasını denetleyecek —
+**bu bir kapı mı, döngü mü?** Aynı soru bana da geliyor: sınama sonuçlarım üç commit'e
+girdi.
+
+---
+
+## BULGU 14 (08:05) — B9 ancak COMPACTION OLMUŞ bir oturumda ölçülebilir
+
+PQA'nın sınır çizimi kayda değer ve iş bölümünü netleştiriyor:
+
+**PQA ölçer (dosyadan, beyan gerektirmez):** kural var mı · doğru yerde mi · description
+tetikliyor mu · haritada satırı var mı · dizinde kayıtlı mı.
+
+**Clara ölçer (davranış):** kural sahada tetikleniyor mu.
+
+**Ve kritik uyarı:** *"yazılış geçip davranış geçmezse sorun kuralda değil **yerinde**;
+davranış geçip yazılış geçmezse kural o turda **tesadüfen** tutmuş olabilir."*
+
+**En sert sınır ise şu: B9'un gerçekten çözülüp çözülmediği ancak COMPACTION OLMUŞ bir
+oturumda ölçülebilir.** Kısa bir sınamada devir kuralı zaten context'te olur — yani
+sınama geçer ama hiçbir şey kanıtlamaz.
+
+**Bu, bugün ölçülemeyecek bir şey** ve kapatılmış sayılmayacak. Açık kalem olarak
+duruyor.
