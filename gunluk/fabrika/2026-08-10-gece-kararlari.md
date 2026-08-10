@@ -1162,3 +1162,67 @@ gereksizleşir. **Şimdi karara bağlamadım**, prefix işi bitince ölçülecek
 
 **Üç kalem tek turda:** B12 (KURULUM.md) + B13 (prefix) + B11 (`id_kalibi`).
 `ISD-CASCADE-IN-ONE-TURN`.
+
+---
+
+## BULGU 22 (08:36) — B13, B11'in SONUCU: kendi kuralımı kaçırdım
+
+**PAM nedensel bir bağ buldu ve kaynaktan doğruladım.**
+
+Fabrikanın `id_kalibi` alanı beş madde taşıyor ve sonuncusu:
+
+> *"**prefix:** Kuralın yaşadığı skill'i gösterir. Her prefix'in **tek sahibi**
+> vardır."*
+
+**B13 için "çıkardığım" ölçüt bu — kelimesi kelimesine.** Ben onu **yeni bir ölçüt**
+sanıp yazdım; oysa fabrikada zaten var, sadece OY'ye taşınmamış.
+
+### Yani B13 (40 kırık kimlik), B11'in (eksik alan) sonucu
+
+Kalıp taşınmadığı için kırık doğmuş. İkisinin aynı cascade'de olması tesadüf değil.
+
+**Ve bu `CLA-FIX-THE-CAUSE`'un ta kendisi — kendi birinci kuralımı kaçırdım:**
+
+40 kimliği tek tek düzeltmek **yama** olurdu. Sebep **kalıbın yokluğu.** Kalıbı taşı →
+kırık bir daha **doğmaz.** Yalnız düzelt → bu 40'ı çözer, **sonrakini çözmez.**
+
+Sekiz rol daha üretilecekken bu fark belirleyici.
+
+### Sıra düzeltildi
+
+1. **Önce** `id_kalibi` taşınsın — fabrikadan, **sıfırdan yazılmasın** (PAM haklı,
+   ölçülmüş hâli var)
+2. **Sonra** 40 kimlik o kalıbı **uygulayarak** düzeltilsin
+
+Tersi sırayla yapılırsa düzeltmenin **dayanağı yazılı olmaz** ve sonraki rolde aynı
+kırık doğar.
+
+---
+
+## KARAR 21 (08:36) — Ölçüm kuralı kardeş hüküm olarak yazılacak
+
+**PQA kural adayımı üç mevcut hükümle karşılaştırdı ve ayrımı doğru kurdu:**
+
+- **`BHV-DATE-THE-MEASUREMENT`** — ölçümün **tarihi/kapsamı.** PQA'nın B11 hatasında
+  ikisi de doğruydu.
+- **`BHV-DONT-AIM-AT-LAST-MISS`** — eksenin **geçmişe göre** seçilmesi. Üçümüz de
+  geçmişe göre seçmedik.
+- **`BHV-TOOL-CAN-LIE`** — aracın **bozuk** çalışması. Üçümüzde de araç doğru çalıştı.
+
+**Ortak boşluk:** üçü de **aracı** ya da **kapsamı** işaret ediyor, hiçbiri **soruyu.**
+
+**Kardeş hüküm, aynı hüküm değil** — `URT-NO-DUPLICATE-ID` riski yok.
+
+### PQA'nın alt-sınıf tespiti kalemi daralttı
+
+*"Ölçülen şey ile aranan şey arasında bir **isim kayması**"*:
+`grep -c` (geçiş/tanım) · alan adı (kaynak/tanım) · PQA'nın B11'i (telafi/kalıp).
+
+**Üçünde de bir isim, başka bir ismin yerine geçmiş.**
+
+**Kalem şu hâliyle yazılacak** — ve `uretim-refleksi`'ne, OY gereksinimine **değil**
+(bu fabrikanın kanonu hakkında):
+
+> *"Bir ölçüm yapmadan önce **aranan şey ile ölçülen şey isimlendirilir ve
+> karşılaştırılır.** Araç doğru çalışıp yanlış soruyu cevaplayabilir — hata çıktıda
+> değil **soruda** olur. Alt-sınıf: bir ismin başka bir ismin yerine geçmesi."*
