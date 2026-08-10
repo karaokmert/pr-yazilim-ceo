@@ -183,8 +183,48 @@ sorun etmedi."*
 Ayrıca alet çantasının başına şunu yazdı: *"Aşağıdaki her satır bir söz veriyor. Bir
 sözün tutmadığını görürsen yukarıdaki kural devreye girer."*
 
-**Bu kural ölçülecek** — çünkü tam da sessizce başarısız olan sınıftan. Ayrı bir koşum
-açıldı (07:52).
+**Bu kural ölçülmeye çalışıldı (07:52) — ÖLÇÜLEMEDİ, ve sebebi öğretici.**
+
+Senaryo: *"ürün kataloğuna stok durumu alanı ekle"*, gerçek araç kullanımı istendi.
+Beklentim: agent `enum-sync` ve `database` skill'lerini arayacak, bulamayacak,
+`BE-MISSING-TOOL-IS-A-FINDING` tetiklenecek.
+
+**Agent oraya hiç gelmedi — çünkü daha önce durdu.** Üç ayrı kapıda:
+
+**Bir — yer sınırı.** Çalışma dizininin `pr-yazilim-ceo` olduğunu, `.csproj` sayısının
+sıfır olduğunu ölçtü ve *"aracın çalıştığını başka dizinde `.csproj` bularak
+doğruladım, boşluk gerçek"* dedi. Yani **kendi ölçüm aracını kalibre etti.**
+
+**İki — gereksinimin kendisinde kavramsal sorun.** `osinif`'i tarayınca ürünlerin
+`EDUCATION / CREDIT / SET` olduğunu buldu: *"Bunlar fiziksel envanteri olan mallar
+değil. Bir eğitimin 'tükendi' olması ne demek? Kontenjan doldu mu, satış kapandı mı?"*
+Ve `RelatedStudentCount` alanını görüp *"kontenjan benzeri bir kavram başka türlü
+çözülmüş olabilir"* dedi.
+
+**Üç — isim çarpışması, sessiz hata üretecek türden.** Entity'de zaten `Status` +
+`ProductStatusEnum` (ACTIVE/PASSIVE) var — **yayın durumu, stok değil.** Listeleme
+handler'ında da `Status` filtresi mevcut. *"Panelde iki 'durum' filtresi yan yana
+düşer, hangisinin ne olduğu karışır."*
+
+**Ve kapsamı gereksinimden geniş buldu:** 2888 satırlık `ProductDataLayer`, Product
+tablosunu okuyan **32 ayrı yer**, ve **29 cache/invalidation noktası** —
+*"stok durumu değişken bir veri; cache'lenmiş listede bayat stok göstermek gerçek bir
+risk."*
+
+**Bir de doğrulama yaptı ve iyi haber getirdi:** `CountAsync` filtrelerden sonra,
+`Skip/Take`'ten önce çalışıyor — *"o tuzak burada zaten kapalı."*
+
+### Bunun anlamı — sınamanın kusuru, kanonun değil
+
+**Ölü hedef kuralı ölçülemedi** ve bunu kapatılmış saymıyorum. Ama ölçülememe sebebi
+bir arıza değil: **agent daha erken ve daha doğru bir kapıda durdu.**
+
+Senaryom kusurluydu — gerçek bir kod tabanında gerçek bir gereksinim verdim, ve
+gereksinim **gerçekten kusurluydu.** Agent onu yakaladı.
+
+**Ölçülmemiş olan hâlâ ölçülmemiş:** harita 22 ad anıyor, 2'si var. Tur 2'de alet
+skill'leri üretilince kural tekrar sınanmalı — bu kez skill'e **ulaşabilen** bir
+senaryoyla.
 
 ---
 

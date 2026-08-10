@@ -552,3 +552,49 @@ daha keskin ve **kanona bu hâliyle girecek.**
 
 Doğru hâli soruyu hiç kurmuyor: *300 skill'e ait, body için eşik hiç tanımlanmamış,
 body'nin ölçütü nitel.* Soru yok, cevap yok — sadece **ayrım** var.
+
+---
+
+## BULGU 9 (07:56) — Açık kalem bildirimi, bildirildiği an bayatlıyor
+
+**Dört vaka, beş saat içinde, iki farklı taraf:**
+
+- Benim *"gereksinim 626 satır"* ölçümüm — yazıldığında 649'du
+- PAM'in *"ClickUp MCP'si yok"* iddiası — memory'den geliyordu, bayattı
+- Benim description ölçümüm — PAD 07:31'de düzeltmişti, ben 07:32'de eskisini yazdım
+- **PAM'in iki açık kalemi — o yazarken kapandı.** Kendi cümlesi: *"07:36'da
+  'commit'lenmedi' diye bildirmiştim; PAD on bir dakika sonra atmış."*
+
+**Ortak imza:** ölçüm doğruydu, **ölçüldüğü an geçmişti.** Ve kimse sayı uydurmadı —
+dört vakada da ölçen taraf dürüst davrandı. **Arıza ölçümde değil, ölçümün ne kadar
+hızlı bayatladığında.**
+
+**Kural adayı — gereksinime yazılacak:**
+Açık kalem bildirilirken **ölçüm zamanı** yazılır. Ve okuyan taraf, o kaleme
+dayanmadan önce *"hâlâ açık mı"* diye kontrol eder.
+
+**Neden bu bir kural gerektiriyor:** hızlı akan bir üretimde iki taraf paralel
+çalışıyor ve **dakikalar** fark üretiyor. Bir açık kalem bildirimi, karşı taraf onu
+okuduğunda çoktan kapanmış olabilir — ve kapanmış bir kalemi düzeltmeye çalışmak boş
+iş, hatta geri adım.
+
+---
+
+## BULGU 10 (07:56) — Sınama senaryom kusurluydu, agent onu yakaladı
+
+`BE-MISSING-TOOL-IS-A-FINDING` kuralını ölçmek için gerçek bir kod tabanında gerçek
+bir gereksinim verdim: *"ürün kataloğuna stok durumu alanı ekle."*
+
+**Agent kurala hiç ulaşmadı — üç kapıda daha önce durdu.**
+
+Ve durma sebepleri **gereksinimin kendi kusurlarıydı:** o projede ürünler
+`EDUCATION/CREDIT/SET` — fiziksel envanteri yok, *"bir eğitimin 'tükendi' olması ne
+demek?"* Entity'de zaten `Status` var (yayın durumu) — panelde iki *"durum"* filtresi
+çakışırdı. Kapsam gereksinimden geniş: 32 okuma noktası, 29 cache noktası.
+
+**Ders — sınama tasarımına:** bir kuralı ölçmek için verilen senaryo, o kurala
+**ulaşabilir** olmalı. Kusurlu bir gereksinim iyi bir agent'ı daha erken durduruyor —
+ve bu iyi bir davranış, ama ölçmek istediğim şeyi ölçtürmüyor.
+
+**Kural hâlâ ölçülmemiş** ve kapatılmış sayılmıyor. Tur 2'de, kusursuz bir
+gereksinimle tekrar sınanacak.
