@@ -348,3 +348,87 @@ oysa kabul ölçütü *"sahada açıldı."*
 
 **Risk kabul edildi:** ortak katmanda bir hata varsa pilot rolle birlikte düzeltilecek,
 yani iki iş birden. Ama tek rol üzerinde — dokuz değil.
+
+---
+
+## KARAR 11 (07:18) — Üretim iki tura bölündü: önce preload katmanı
+
+**PAD'in önerisi kabul edildi.** Backend hattının alet skill'leri 21 skill / ~3800
+satır; buna behavior birleşimi, omurga, body ve paketleme ekleniyor. Emsal: n8n
+**3 rol / 7 skill için ~15 saat** aldı.
+
+**Tur 1:** birleşik behavior + backend omurgası ve skill haritası + body + paketleme
+iskeleti + davranış testi. Yani **preload katmanı tam.**
+**Tur 2:** alet skill'leri (backend için ilk halka: `module-development`, `database`,
+`response-request`, `auth`, `enum-sync`).
+
+**Gerekçe — benim kendi ölçütümle aynı:** harita çalışmazsa yara **büyür**. Önce
+haritayı üretip ölçmek, 21 skill üretip sonra haritanın tutmadığını görmekten ucuz.
+Ve tur 1 tam olarak kabul ölçütümü ölçülebilir kılıyor — *"preload'un tamamı açılmalı"*
+ancak preload katmanı tamken sınanır.
+
+**PAD'in bir ince hamlesi:** saha ölçümündeki en çok konuşulan konular (`docker-k8s`
+76 oturum, `dev-environment` 67) **DO'nun aletleri**, backend'in değil. Sıraya onları
+yazmadı. Ben pilot rolü seçerken bu ikisine komşuluk üzerinden gerekçe kurmuştum —
+gerekçem zayıfmış, PAD düzeltti.
+
+---
+
+## KARAR 12 (07:18) — Devir taşıyıcısı: kullanıcı taşır, kanal değil
+
+**PAD gerçek bir boşluk buldu:** gereksinim katman kararlarını sayıyor ama **devir
+taşıyıcısını hiç söylemiyor.** Üç seçenek vardı: (a) kullanıcı taşır — OY'nin bugünkü
+mekaniği, (b) kanal taşır — fabrikanın öğrendiği, (c) şimdilik (a), kanal işi bitince
+(b).
+
+**Kararım: (c).** OY'nin mevcut mekaniği korunur, metne *"taşıyıcı değişirse burası
+değişir"* şerhi konur.
+
+**Gerekçe — bu gecenin kendi ölçümü:** kanal mekaniği **dört rolde bile iki kez
+tıkandı.** Bir kez `send.py` mesajı yanlış yere yazdı (exit 0, sessiz), bir kez benim
+relay betiğim mesajı 4,5 saat bekletti. **Dokuz rollü bir kanal hiç ölçülmedi** ve
+betikler git'te değil.
+
+**Ve bu bir yalın üretim kararı:** kanal ihtiyacı bugün **yok** — OY sahada kullanıcı
+taşımasıyla çalışıyor. İhtiyaç doğmadan altyapı kurmak israf. Ölçülmemiş bir
+mekanizmayı dokuz role dayatmak, çalışanı bozmak olur.
+
+**Şerh metne konacak** ki geçiş geldiğinde nereye dokunulacağı belli olsun.
+
+---
+
+## KARAR 13 (07:18) — Omurgada kural kopyası taşınmayacak
+
+**PAD yeni bir ölü atıf buldu — bizim hiçbir listemizde yoktu.** Dört omurga skill'i
+(`code-auditor:49`, `devops:89`, `frontend:63`, `quality:102`) aynı bloğu taşıyor:
+*"Bu blok CACHE'tir, kaynak değil (`uretim-standardi` `STD-SPINE-CACHE`) — kural kendi
+skilinde değişir, sonra blok senkronlanır (`omurga-cache-dogrula.py` ölçer)."*
+
+**İkisi de pakette yok.** Kaynaktan doğruladım.
+
+**Bu vaka diğer ölü atıflardan ağır:** agent'a bir **doğrulama betiği** çalıştırması ima
+ediliyor. Yani agent bir senkronizasyon disiplinine güveniyor, **disiplinin denetleyicisi
+ortada yok.** Üreticide var, tüketicide yok.
+
+**Karar: yeni omurgada kural kopyası taşınmayacak.** PAD'in gerekçesi benimkinden güçlü:
+*kopyanın doğruluğu var olmayan bir script'e bağlanmış* — yani desen zaten çalışmıyor,
+kaldırmakla bir şey kaybetmiyoruz. Harita *"hangi iş → hangi skill"* der, kuralın
+gövdesini alt skill taşır.
+
+**OY'nin mevcut deseninden sapma olduğu `status.md`'ye gerekçesiyle yazılacak.**
+
+---
+
+## BULGU 5 (07:18) — Üretim, ölçümden daha iyi ölçüyor
+
+**PAD'in bulduğu ölü atıf, gece boyunca yaptığımız hiçbir taramada çıkmadı.**
+
+Sebep: biz **tarayarak** baktık, PAD **yeniden yazmak için okudu.** Ve aynı arıza
+2026-07-31 ölçümünde de var — o ölçüm *"0 kırık atıf"* demişti çünkü **dosya
+atıflarını** taradı; **skill adlarını ve script adlarını taramadı.**
+
+**Ders:** bir kanonu gerçekten ölçmenin yolu onu yeniden yazmaya kalkışmak. Tarama
+neyi aradığını bilir; yazma neyin eksik olduğunu gösterir.
+
+PAD'e talimat verildi: okurken çarptığı her boşluğu yazsın, küçük görünse bile.
+Bunlar yeni takımın **sessiz kırılma envanterine** girecek.
