@@ -45,8 +45,10 @@ kaldırılan paragraf *kayıt* mıydı yoksa hükmün gerekçesi de gitti mi ·
 
 ## Mert'in kararını bekleyen
 
-1. **Push** — `skill-project` 20 commit. Fabrikada commit onayı var, **push onayı
-   ayrı ve alınmadı.**
+1. **Push** — `skill-project` **24 commit**. ⚠️ PQA'nın CLOSE'u *"push onayım
+   yok"* diyor ama **13 saniyelik yarış**: PQA 21:30:59'da kapandı, PAD'in E3+K9'u
+   kapatan commit'i (`2ab62db`) 21:31:12'de düştü. Clara ölçtü, ikisi de kapalı.
+   **Eksik olan onay değil denetim** — push'tan önce PQA'ya `2ab62db` denetletilir.
 2. **Yürürlükteki gerilim** — `PQA-NO-FILE-EDIT` (*"istisnasız"*) ↔
    `dagitim/SKILL.md:116` `DAG-BUMP-BY-AUDITOR` (*"tek istisnası budur"*). İkisi de
    yürürlükte. İşaretlendi, ayrı işe.
