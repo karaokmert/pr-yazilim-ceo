@@ -20,6 +20,8 @@
 ## Nasıl konuşulur, nasıl yazılır
 
 - [Akışı bloklamayın](feedback_akisi_bloklamayin.md) — her adımı onaya bağlama; ölçümle çözülen agent'ın, tercihe bağlı olan Mert'in
+- [Bulgu taşıma ölçütü](feedback_bulgu_yukari_tasima_olcutu.md) — **"bu ŞU ANKİ işi bloke ediyor mu?"**; hayırsa kaydet ve DEVAM; 7 yan karar getirdim, Mert kesti
+- [Zemin değişti mi](feedback_zemin_degisti_mi.md) — cevabı elimde olan şey soru değil BAĞLAM; agent'ın kendi bulgusu ona geri sorulmaz
 - [Kapsam sorusu PA'ya](feedback_kapsam_sorusu_pa_ya.md) — **ölçüm sorusu Clara'nın, KAPSAM sorusu PA'nın**; ölçüm riski verir, kapsamın sınırını vermez
 - [Sessizlik yoklaması](feedback_sessizlik_yoklamasi.md) — 5 dk'dan fazla sessizlik varsa yokla; gözetimsiz çalışmada zorunlu
 - [Seçenek sunma — YASAK](feedback_secenek_sunma.md) — problemi getir, kararı Mert versin; şık listesi sessizce çerçeve dayatıyor
@@ -30,6 +32,7 @@
 - [Gece kapanışı ve hafıza düzeni](feedback_gece_kapanisi_ve_hafiza_duzeni.md) — uzun oturum kapanış dokümanıyla biter; `project` kayıtları iş bitince silinir
 - [İndeks emir taşır](feedback_indeks_emir_tasir.md) — MEMORY.md otomatik yüklenir; buraya kural değil yalnız pointer yazılır
 - [Handoff dili](feedback_handoff_dili.md) — "handoff verelim" = sen yaz ben taşıyayım
+- [Handoff TAM METİN taşınır](feedback_handoff_tam_metin_tasinir.md) — ekrana basılır dosyaya yazılmaz; adres vermek geçersiz, BE bir tur kaybetti
 - [Bulgu task değil, not](feedback_bulgu_task_degil_not.md) — bulgu iş kalemine çevrilmez, günlüğe yazılır
 - [Görev listesi disiplini](feedback_gorev_listesi_disiplini.md) — her mesajda/her iş bitişinde güncelle; elimde ne var · kimden ne bekliyorum · kime ne vereceğim
 - [Raporu kim okumalı](feedback_rapor_kime_gider.md) — başlığa değil içeriğe bak; içinde başkasının sorusunun cevabı varsa ona da ilet
@@ -46,6 +49,8 @@
 
 - [Çakışan sinyal doğrulama değildir](feedback_cakisan_sinyal_dogrulama_degil.md) — N sinyal aynı şeyi diyorsa tek gerçeğin yansıması olabilir; doğruyu yanlış nedenle veren ölçüt de bozuktur
 - ["Boş" bir ölçüm değil](feedback_bos_olcum_degil.md) — okunmamış bir kutunun görünümü; yokluk iddiası kayıtsız verilmez
+- [Yokluk veri değil](feedback_yokluk_veri_degil.md) — kayıtta görünmeyen iş "yapılmamış" değil; sessizlikten insan hakkında hüküm çıkarılmaz
+- [Aracın ne ölçtüğü](feedback_aracin_ne_olctugu.md) — **4 vaka aynı gün**: `ps` kabuğu saydı · 200 ölü pod'dan geldi · `sed` büyük harfi ıskaladı; doğru ölçüt VARLIK KANITI
 - [Üçüncü düzeltmede alanı sorgula](feedback_ucuncu_duzeltmede_alani_sorgula.md) — üç kez düzeltilip işe yaramayan alan kaldırılır, daha iyi doldurulmaz
 - [Maliyet tahmini ölçüm değildir](feedback_maliyet_tahmini_olcum_degil.md) — "pahalı/ucuz" sayı gibi konuşulan tahminler; aynı yöntem için iki gün iki zıt tahmin, gerçek 204 bin token
 - [Kapsamını yaz — neye BAKMADIĞINI da](feedback_kapsamini_yaz.md) — dar kapsam yanlış değil, yazılmamış kapsam yanlış; 3 kez ölçüldü, 2 yeni bulgu çıkardı
@@ -55,6 +60,8 @@
 - [Ekip dışı sanma](feedback_ekip_disi_sanma.md) — envanterde çıkan isim/branch için rol UYDURULMAZ, sorulur; "sprint dışı" etiketi teslim edilmiş işi görünmez yaptı
 - [Yazmanın boyutu ölçülür](feedback_yazmanin_boyutu_olculur.md) — `rc=0` iş yapıldı demiyor; send.py gövdeyi yuttu, 61 karakter yazdı, çıkış kodu 0 döndü
 - [İddiayı taşımadan ölç](feedback_iddiayi_tasima_olc.md) — "düzelttim" beyanı taşınınca ÖLÇÜM gibi okunur; BE 2 catch dedi, 8'i duruyordu, QA yakaladı
+- [Niyet değil kanıt](feedback_niyet_degil_kanit.md) — "kapanışa geçiyorum" durum DEĞİL; her durumun kanıtı önceden belli olsun (CLOSE+not+index+arşiv)
+- [Çerçeve ölçümden belirleyici](feedback_cerceve_olcumden_belirleyici.md) — doğru ölçüm yanlış kutuya girer; kod okumayan taraf çerçeve dayatmaz (5 kez ölçüldü)
 - [İşi doğrula, kodu değil](feedback_isi_dogrula_kodu_degil.md) — agent'ın teknik bulgusu onun sorumluluğu; Clara iş akışını doğrular (kapsam kararı istisna)
 - [Önce sahada, sonra kanona](feedback_once_sahada_sonra_kanon.md) — Mert 2 kez kesti; masada ölçülmüş olmak yetmez
 - [Ölçümde kaynağa git](feedback_olcum_kaynaga_git.md) — işi biten sanmadan bakma, kullanıcının özetini kaynak sayma
