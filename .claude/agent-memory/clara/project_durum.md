@@ -11,26 +11,35 @@ metadata:
 > (fabrika hattı) · `gunluk/{proje}/`. Açılış hook'u her projenin son kapanışını ayrı
 > listeler — **yalnız kendi modunun kapanışı okunur.**
 
-## EV — son kapanış (2026-08-11 18:22)
+## EV — son kapanış (2026-08-11 21:20)
 
-`gunluk/ev/2026-08-11-kapanis-2.md` — **Clara'nın proje rolü tanımlandı.**
+`gunluk/ev/2026-08-11-kapanis-3.md` — **Clara'nın OY yönetim yetkileri tanımlandı.**
 
-**Üç kök kapatıldı** (dünkü 17 düzeltmenin kaynağı) ve üçü tek yere bakıyormuş:
-Mert'in cümlesi — *"beni proje takibinden kopartırsa Clara devre dışı kalır."*
-· Kök 1 sınır → rol tanımsızdı, tanımlandı (**yönetim temsilcisi / PMO Assistant**)
-· Kök 2 sunum → kural yanlıştı (%92 haklı ihlal), iki tur tipine ayrıldı
-· Kök 3 takip → liste güncellenmiyor değil **hiç açılmıyordu** (`CLA-TRACK-WHAT-YOU-SEND`)
+Mert `mert/` klasörünü açtı ve proje yöneticiliğini kendi kelimeleriyle yazmaya
+başladı (**başlangıç metni, devamı gelecek**). Altı soru soruldu, altısı cevaplandı:
 
-**Beş karar dosyası** yazıldı, kanona işlendi (`proje-yonetimi` 246→377 satır).
-**Merkez yayın kanalı** kuruldu: `tools/clara-yayin.py` (yalnız Clara kutuları,
-teslim doğrulamalı).
+· **kabul kriteri bizim (ClickUp), test dokümanı PA'nın**
+· **kanon bekçiliği artık bir KAPI** — *"aç, kontrol et"* deme yetkisi var
+· **commit onayı Clara'da, PUSH onayı MERT'te**, push işlemini QA yapar
+· **sahada ölçüm YOK** (evde var — moda bağlı)
+· **Mert yokken karar Clara'nın**, rapora girer
+· **soru süzme dört kademeli**, Mert'e özet gider
 
-**Mert'i bekleyen:** Goat push kuyruğu **14 commit** (CA denetimi 17:50'de başladı,
-sonuç gelmedi) · fabrikaya **iki devir bloğu** (send.py inbox kontrolü + PA gereksinim
-kası) · EV push kuyruğu 8 commit.
+**Skill birleşti ve OY'a özelleşti:** `proje-yonetimi` 377→447, kadro ayrı
+reference'a çıktı (`references/oy-ekibi.md`, 206 satır, kaynak v8 kanıtlandı).
+**WS için ayrı skill yazılacak — yazılmadı.**
 
-**Sonraki adım:** fabrika turu — devir blokları hazır, ve listedeki üçüncü durak
-(fabrika + OY v8 ekibi) hiç açılmadı.
+**Kanal düzeni değişti:** agent artık **merkezin inbox'ına** yazıyor; Clara her
+açılışta eskisini arşivleyip yenisini kuruyor. İki dosya: `setup.py` (fabrika) +
+`kanal-acilis.py` (hook).
+
+**EV push kuyruğu BOŞ** — 12 commit gitti (`4f823ed..45acdd2`).
+
+**Mert'i bekleyen:** fabrika kuyruğu **20 commit** (Clara push etmez) · fabrikaya
+**üç devir bloğu** (send.py · PA gereksinim kası · setup.py değişikliği) · Goat
+kuyruğu **14 commit**.
+
+**Sonraki adım:** fabrika turu.
 
 ## ⚠️ FABRİKA ADRESİ DEĞİŞTİ (2026-08-11)
 
@@ -52,10 +61,6 @@ bloğu kapanış dokümanında hazır.
 - `gunluk/fabrika/2026-08-11-kapanis.md` — sekiz rol turunun kapanışı
 - `kararlar/2026-08-11-fabrika-skill-projecte-tasindi.md` — taşınmanın gerekçesi
 
-## Son kapanış — EV hattı
-
-`gunluk/ev/2026-08-10-kapanis.md`
-
 ## İlk hareket
 
 **Fabrika modundaysan:** kapanış dokümanındaki **devir bloğunu** Mert'e ver (harita
@@ -65,8 +70,8 @@ yapacağımız iş olsun."*
 **Yeni iş açma.** Kalan dört kalem: paylaşılan skill description dili (3) ·
 `ui-designer` omurgası + dokuz iddia (5) · yıldız topoloji bağımsızlığı (6) · push (7).
 
-**Push bekliyor:** `skill-project` 15 · `agent-project` 1 · `pr-yazilim-ceo` 59+.
-Commit onayı var, **push onayı ayrı ve alınmadı.**
+**Push bekliyor:** `skill-project` **20** · `pr-yazilim-ceo` **0** (21:20'de push edildi).
+Fabrikada commit onayı var, **push onayı ayrı ve alınmadı.**
 
 **Fabrika ekibi AÇIK ama durdu** — dört kutu + iki BE, arşivlenmedi.
 **Monitör oturumla ölür**, yeniden kurulur. Yeni kanal:

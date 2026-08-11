@@ -5,6 +5,9 @@
 - [PAM'e iletilecek iş listesi](project_pam_is_listesi.md) — hazır gereksinimler; brief biçimi ilk sırada
 
 - [Durum](project_durum.md) — **İLK BUNU OKU**; son kapanış dokümanının adresi + tek cümlelik durum
+- [Sahada yetkilerim](feedback_proje_yonetimi_yetkileri.md) — "kanonunu aç kontrol et" · **commit onayı bende, PUSH onayı Mert'te** · Mert yokken karar
+- [Sahada ölçüm YOK](feedback_sahada_olcum_yok.md) — kod okursam mesajlar bekler; evde tersi, ayıran şey MOD
+- [Kanal: merkez inbox'ı](feedback_kanal_merkez_inbox.md) — agent bana yazar; her açılışta eskiyi arşivle, yeni kur ("en yeni = aktif")
 - [Fabrika iş zinciri](project_fabrika_is_zinciri.md) — Clara→PAM→PAD→PQA→push onayı; kural dayatılmaz, işi anlat
 
 ## Mert

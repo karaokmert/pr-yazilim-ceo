@@ -9,3 +9,11 @@ Measured Clara mailbox arch (no central inbox currently; send.py writes own outb
 Implemented center finder in setup.py + kanal-acilis.py, fixed Py3.9 compatibility (removed `|` union type syntax), tested 4 scenarios (Clara/agent × mailbox present/absent) — all passing.
 ## 21:06 | main
 Archived 6 sessions (FE/BE/TE/CA/PA/QA) w/ closure docs & 3 project insights, committed (64d209f), updated HARITA.md; reopened PA/FE/QA to validate PRY-17454 discovery & complete remaining tasks — in progress.
+## 21:11 | main
+Synced PA/FE/QA/BE channels w/ Monitor, expanded PRY-17454 scope: orphaned-pages detection (exist in main, unreachable), removed BE-wait constraint; awaiting PA discovery validation — in progress.
+## 21:15 | main
+PA completed PRY-17454 discovery validation: identified provider modal data-source mismatch (SystemParameter vs Provider table), missing FreeSpinBetAmount field, subscription-card array, prototype-marker vetting, source-branch clarification; awaiting mert decision on modal data source—in progress.
+## 21:21 | main
+PRY-17454: enum-copy hazard caught (PA measured Enums.ts+6 would silently delete in direct copy); FE/BE/PA/QA tasked; web_site audited (RedirectUrl/CI broken); FreeSpinBetAmount missing from branch; awaiting modal data-source, field production & passive-sponsor decisions—in progress.
+## 21:23 | main
+Security review on tools/clara-yayin.py & goat-nabiz.sh performed; findings not yet reported.
