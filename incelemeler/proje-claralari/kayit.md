@@ -618,6 +618,71 @@ tahminden gelir, PA'nınki koddan.
 → **Ve Clara doğru davrandı:** *"BE doğru yerde durdu, muhatabı sensin"* diyerek
 taşıdı, kendi cevaplamadı. Düzeltme 3 saat içinde davranışa dönmüş.
 
+### Y51 — "Uç ile ilerleyelim — 3'ü de gelecekte farklı iş yapabilir" (06:30)
+
+> **Mert [06:30]:** *"**Uç ile ilerlememizi tercih ediyorum.** Listede beklenen
+> veriler **mock'a uygun olmalı**, çünkü **3'ü de farklı iş yapan listeler olabilir
+> gelecekte.** PA **mock üzerinden kapsama baksın**, discovery yazsın, işi BE'ye
+> ve[rsin]"*
+
+**Karar:** üç liste tek ortak uçtan değil, **ayrı uçlardan** beslensin.
+
+→ **Gerekçe bugüne değil geleceğe bakıyor:** bugün üçü aynı veriyi istiyor olabilir,
+ama *"gelecekte farklı iş yapan listeler olabilir."* Birleştirmek bugün ucuz,
+ayrıştırmak sonra pahalı.
+
+→ **Ve bu Y22 ile GERİLİM içinde** (*"bugün olmayan probleme çözüm kurma"*).
+Çelişki değil, **ayrım maliyetin yönünde:**
+> Y22'de reddedilen: bugün olmayan bir sorun için **ekstra mekanizma** kurmak
+> Y51'de kabul edilen: **ayrı tutmak** — ki bu ek maliyet değil, birleştirmemek
+
+Yani yalın üretim *"az yap"* demiyor, **"geri dönüşü pahalı olanı erken kilitleme"**
+diyor. Birleştirme geri dönüşü pahalı bir karar; ayrı bırakmak değil.
+
+→ **Ve mock'un rolü tanımlandı:** *"PA mock üzerinden kapsama baksın"* — mock burada
+sadece görsel değil, **kapsam ölçütü.** Beklenen veri mock'tan okunuyor.
+
+### Y50 — "Fabrikada bir agent açıyorum, SEN ölçümü söyle" (06:36) ⭐
+
+> **Mert [06:36]:** *"fabrikada bir agent açıyorum, **sen ölçümü söyle**"*
+
+Mert ortamı kuruyor, **ölçütü Clara'dan istiyor.** Yani:
+> Mert → **koşulu sağlar** (agent'ı açar)
+> Clara → **neye bakılacağını söyler** (ölçüm tanımı)
+
+→ **Ve sıra kritik: ölçüt ÖNCE söyleniyor.** Agent açıldıktan sonra *"bakalım ne
+oldu"* denmiyor — bakılacak şey baştan tanımlanıyor. Bu, sonucu görüp ona göre
+ölçüt uydurma tuzağını kapatıyor.
+
+→ Bu Y17'nin (koşul eşitliği) doğal devamı: orada Mert **bozuk zemini** yakalamıştı,
+burada zemini **baştan doğru kurduruyor.**
+
+→ **Ders (aracı katman için):** *"ölçümü söyle"* denildiğinde verilecek şey bir
+liste değil **ayırt edici tek soru** — bu agent şunu yaparsa X, yapmazsa Y.
+Ölçüt ayırt etmiyorsa ölçüm değil gözlemdir.
+
+**Yeni konu açıldı [06:01]:** *"kanal sisteminin düzenini kuralım artık ilk olarak"*
+— kanal protokolünün agent kanonunda olmaması (bkz. 🔴 BULGU, dördüncü tekrar)
+nihayet gündeme alınıyor.
+
+### Y49 — "Bu skill-project'e geçince yapılacak iş olsun, burayı kapatıyoruz" (05:50)
+
+> **Mert [05:50]:** *"bu **skill-project'e geçince yapacağımız iş** olsun.
+> **Burayı artık kapatacağız**, devir dokümanına al."*
+
+Bir iş kalemi çıktı ama Mert onu **şimdi yapmadı** — sıradaki ortama devretti.
+
+→ **Ders — kapanış kararı bir SINIR kararıdır:** bir ortam kapanıyorsa, oradaki
+her yeni iş kalemi *"şimdi mi, devir mi"* sorusundan geçer. Kapanmakta olan bir
+yerde iş başlatmak, bitmeyecek iş başlatmaktır.
+
+→ **Ve devir dokümanı bunun taşıyıcısı:** *"devir dokümanına al"* — kalem
+kaybolmuyor, taşınıyor. Bu Y31'in (*"commit en sonda"*) kardeşi: **iş ertelenmiyor,
+doğru sıraya konuyor.**
+
+→ Bağlam: fabrika 2026-08-10'da `skill-project`'e taşındı (bkz. ✅ TAŞIMA KAPANDI).
+`agent-project` artık tarihçe — orada açılan oturum da kapanıyor.
+
 ### Y47 — "CLAUDE.md'ye sayısal şey yazılmaz" (03:38, fabrika oturumu)
 
 > **Mert [03:38]:** *"CLAUDE.md **bir projenin tarifi ve çalışma kuralıdır.** Bu
@@ -673,6 +738,28 @@ diye sormadı. Amaç bilinmeyince kapsam da yanlış çıkıyor.
 → Bu D6'nın (*"anlamadım, daha mantıklı açıkla"*) tersi: orada Clara anlatamadı,
 burada **anlamadı.** İkisi de aynı boşluktan — **amaç dili konuşulmadan
 mekaniğe geçmek.**
+
+### D17 — "Kanala yolla işte, onunla ölçmek istediklerini" (06:39) — İKİNCİ KEZ
+
+> **Mert [06:39]:** *"**kanala yolla işte** onunla ölçmek istediklerini?"*
+
+Clara ölçüm sorularını hazırlamış ama **ekranda tutmuş** — kanala yollamamış.
+
+→ **D10'un tekrarı** (2026-08-10, 15:44): *"bunları neden kanala yazmıyorsun?
+ben neden taşıyorum?"* Aynı hata, farklı oturum, **19 saat sonra.**
+
+→ **Ve o zaman kök sebep bulunmuştu:** kanal kanonu *"ekrana bas → onay al →
+kanala yaz"* diyor; Clara ikinci ve üçüncü adımı birleştirip *"Mert taşısın"* diye
+okuyor. Teşhis doğruydu ama **davranışa dönmedi.**
+
+→ **`CLA-FIX-THE-CAUSE` açısından kritik gözlem:** teşhis konuldu, sebep bulundu,
+yine tekrarladı. Demek ki eksik olan şey **teşhis değil mekanizma** — kural
+"ekrana bas"la başladığı için ilk adım yapılıyor, ikincisi unutuluyor.
+
+Ayıran soru şu olmalı: **bu metin kimin okuması için yazıldı?**
+> Mert onaylayacaksa → ekrana
+> Agent uygulayacaksa → **kanala**
+> İkisi de → ekrana bas, **onay alınca kanala yaz** (iki ayrı hamle)
 
 ### D16 — "Hayır anlamadın" → ve PA Clara'nın kesimini ÖLÇÜMLE düzeltti (05:30) ⭐
 

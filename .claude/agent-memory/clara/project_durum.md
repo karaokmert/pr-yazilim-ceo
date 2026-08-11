@@ -11,6 +11,18 @@ metadata:
 > (fabrika hattı) · `gunluk/{proje}/`. Açılış hook'u her projenin son kapanışını ayrı
 > listeler — **yalnız kendi modunun kapanışı okunur.**
 
+## EV — son kapanış (2026-08-11 10:00)
+
+`gunluk/ev/2026-08-11-kapanis.md` — **19 saatlik saha izleme oturumu.**
+Mert'in yönetimi kaydedildi (referans örnek): 15 düzeltme · 51 hamle · 16 kural
+→ `incelemeler/proje-claralari/kayit.md`
+
+**Üç karar Mert'te:** (1) proje yönetimi Clara'da mı PA'da mı — ölçüldü,
+düzeltmelerin 11/12'si proje yürütme · (2) SCRUB: agent'lar `default` modda,
+`auto`'ya geçmiyor · (3) kanal protokolü skill'de yok ama **memory'de var.**
+
+**Sonraki adım:** analiz + planlama oturumu.
+
 ## ⚠️ FABRİKA ADRESİ DEĞİŞTİ (2026-08-11)
 
 **Fabrika `/Users/karaok/p/ozel-yazilim/skill-project`'te.**

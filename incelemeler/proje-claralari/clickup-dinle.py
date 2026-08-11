@@ -73,6 +73,7 @@ def cek(tok, limit=10):
 WS = os.environ.get('CLICKUP_WORKSPACE', '24450758')
 
 tok = token()
+ardarda_hata = 0
 gorulen = set()
 ilk = True
 
@@ -103,9 +104,19 @@ while True:
             icerik = str(m.get('content') or '').replace('\n', ' ')[:300]
             print(f"CLICKUP | {kim} | {saat} | {icerik}", flush=True)
         ilk = False
+        ardarda_hata = 0          # basarili tur — sayaci sifirla
         time.sleep(POLL)
     except KeyboardInterrupt:
         break
     except Exception as e:
-        print(f"ERROR| clickup-dinle: {e}", flush=True)
+        # Gecici ag hatasi (DNS, timeout) SESSIZ yutulur — her turda bagirmak
+        # gurultu. Ama ISRAR ederse haber verilir: 3 ust uste hata = gercek
+        # ariza. (Olculdu 2026-08-11: tek DNS hatasi iki kez bagirildi,
+        #  o sirada API zaten calisiyordu.)
+        ardarda_hata += 1
+        if ardarda_hata == 3:
+            print(f"ERROR| clickup-dinle: 3 tur ust uste hata — {e}", flush=True)
+        elif ardarda_hata % 20 == 0:
+            print(f"ERROR| clickup-dinle: {ardarda_hata} turdur hatali — {e}",
+                  flush=True)
         time.sleep(POLL)

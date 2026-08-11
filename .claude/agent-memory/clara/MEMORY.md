@@ -54,6 +54,7 @@
 - [Ölçüm yerine yorum — EN SIK HATA](feedback_olcum_yerine_yorum.md) — elde kanıt varken yorumlamak; 6 kez düştüm, 4'ünü agent'lar düzeltti
 - [Ekip dışı sanma](feedback_ekip_disi_sanma.md) — envanterde çıkan isim/branch için rol UYDURULMAZ, sorulur; "sprint dışı" etiketi teslim edilmiş işi görünmez yaptı
 - [Yazmanın boyutu ölçülür](feedback_yazmanin_boyutu_olculur.md) — `rc=0` iş yapıldı demiyor; send.py gövdeyi yuttu, 61 karakter yazdı, çıkış kodu 0 döndü
+- [İddiayı taşımadan ölç](feedback_iddiayi_tasima_olc.md) — "düzelttim" beyanı taşınınca ÖLÇÜM gibi okunur; BE 2 catch dedi, 8'i duruyordu, QA yakaladı
 - [İşi doğrula, kodu değil](feedback_isi_dogrula_kodu_degil.md) — agent'ın teknik bulgusu onun sorumluluğu; Clara iş akışını doğrular (kapsam kararı istisna)
 - [Önce sahada, sonra kanona](feedback_once_sahada_sonra_kanon.md) — Mert 2 kez kesti; masada ölçülmüş olmak yetmez
 - [Ölçümde kaynağa git](feedback_olcum_kaynaga_git.md) — işi biten sanmadan bakma, kullanıcının özetini kaynak sayma
