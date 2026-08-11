@@ -1100,3 +1100,380 @@ sayı düzeltilebilir, **yanlış gerekçe sorunu kapatıyor.**
 
 Ve iş kaybı olmadı: PQA denetimi 23:12'de kesildi, 04:32'de kaldığı yerden
 sürdü, dosyaların değişmediğini `git status` ile doğruladı.
+
+---
+
+## On üç — backend turu (sekizinci commit `3c90f05`) ve bir kayıt düzeltmesi
+
+Beş öz skill + omurga. 22 dosya tarandı, altısı düzeltildi.
+
+### Altıncı kör nokta: öz skill'in sahibi nasıl bulunur
+
+PAD'in ilk koşumunda **22 kalemin 22'si "Katman B"** çıktı, tur içi sıfır.
+**Durdu** — çünkü sonuç PAM'in *"beş kalem tek-rol"* bilgisiyle çelişiyordu.
+
+Kök, kendi ifadesiyle: *"'Kendi rolü hariç' kuralını uyguluyordum ama bir ÖZ
+SKILL'in sahip rolünü `P`'den türetmeye çalışıyordum. Öz skillerde `P=0`
+olduğu için sahip BOŞ kalıyordu ve kendi rolünün body'si 'başka rol'
+sayılıyordu."*
+
+**Düzeltme:** öz skill'in sahibi `P`'den değil, **onu işaret eden omurgadan**
+çıkar.
+
+Ölçüt *"kendi rolünün body'si sayılmaz"* diyor ama *"öz skill'in kendi rolü
+nasıl bulunur"* demiyor.
+
+**Bulgunun değeri sonuçta değil, durma anında:** PAD *"22/22"* sonucunu **aldı
+ve kabul etmedi.** Çelişki olmasaydı hata geçerdi.
+
+### Üçüncü kez aynı mekanizma
+
+**İki bağımsız kaynak çelişince biri yanlıştır ve çelişki onu görünür kılar.**
+
+```
+1. PAD: "metin ölçümle çelişiyor"              (devops turu)
+2. PCA: "olcut.md ile kendi sayımım çelişiyor" (04:38)
+3. PAD: "22/22 sonucu PAM'in bilgisiyle çelişiyor" (backend turu)
+```
+
+Üçünde de sonuç **kabul edilmedi** ve kovalandı.
+
+### Bir kanon sorusu doğdu: çıpa mı kontrol mü
+
+Bu gece *"beklenen değer verilmez"* kuralı kuruldu (çıpa etkisi). Ama bu turda
+PAM kapsamla birlikte *"beş kalem tek-rol"* bilgisini verdi ve **tam o bilgi
+PAD'i durdurdu.**
+
+Aynı bilgi hem çıpa hem kontrol olabiliyor. **Fark: çıpa cevabı verir, kontrol
+çelişkiyi görünür kılar.**
+
+Kuralın bir istisnası olabilir: başka bir elin ölçümü, *"cevap"* olarak değil
+**karşılaştırma noktası** olarak verilebilir. Sabaha, Mert'e.
+
+### Kayıt düzeltmesi — PAD haklı, benim anlatımım yanlıştı
+
+Ben yazdım: *"PAD raporunda 'dokunmadım' demişti ama o rapor karar gelmeden
+önce yazılmıştı."* Sanki **bilgi eskimişti.**
+
+PAD düzeltti: **iki ayrı devir bloğu vardı.**
+
+```
+04:48  1. blok — beş öz skill TESLİM + "omurgaya DOKUNMADIM,
+       P=1 O=2 ölçüt tablosunda tanımsız, KARAR NOKTASI"
+04:51  PAM'in kararı geldi (açıp okuyarak, üç satır + fiil kontrolü)
+04:53  2. blok — omurga teslim + üçüncü halin kendi testi
+```
+
+> *"'Rapor eskiydi' değil, 'birinci blok doğruydu ve ikincisi onu tamamladı'.
+> Fark önemli çünkü birincisinde DURMAK bir karardı: omurgayı kendi yorumumla
+> yazabilirdim — mevcut description zaten 'QA + CA da OKUR' diyordu, yani
+> tahmin kolaydı — yazmadım."*
+
+Ve kaydın nasıl geçmesi gerektiğini söyledi: *"iki blok olarak geçerse sonraki
+okuyucu **durma anını** görür."*
+
+Benim anlatımım bir **zamanlama** tarif ediyordu, gerçek bir **davranış**tı.
+
+### Ve üçüncü hal ilk kez sınandı
+
+PAD'in kendi cümlesi: *"bu turda ÜÇÜNCÜ HALİN KENDİSİ ilk kez ölçüldü — üç
+turdur uyguluyoruz ama böyle sınanmamıştı."*
+
+Üç turdur uygulanan bir çözüm ilk kez **test edildi.** Bu, `agent-sinama`
+kanonundaki ölçütün karşılığı: hükmü uygulamak *"geçti"* demek değil.
+
+### PQA kendi dersini bir sonraki turda uyguladı
+
+`backend` denetiminde tablo boşluğunu ölçerken ham sayı **altı** gösterdi.
+Geçen turda `quality` vakasında öğrendiğini uyguladı — **her geçişi açıp
+okudu**, gerçek **dört** çıktı.
+
+Yanlış pozitifler: kural kimliği · başlık etiketi · karşılaştırma cümlesi ·
+alan adı. Hepsi backtick'li, hiçbiri skill atfı değil.
+
+---
+
+## On dört — Gecenin en yapısal bulgusu: ölçüt keskinleştikçe ölçümler bayatlıyor
+
+### Dördüncü çelişki: PAM'in kendi sayısı bayattı
+
+PCA `qa-engineer` turunda tek-rol **4** ölçtü, `olcut.md` **6** diyordu.
+**Çelişkiyi bildirdi, çözmedi, ham veriyi verdi** — ve gerekçesini ölçütün
+kendi satırından aldı (`olcut.md:318`): *"iki bağımsız kaynak çeliştiğinde biri
+yanlıştır ve çelişki onu görünür kılar."*
+
+Gecenin dersi artık **kanonda yazılı ve refleks olarak uygulanıyor.**
+
+PAM kaynağı buldu: `olcut.md:539`, kendi yazdığı tablo, **22:27**. O tarihte
+ölçüt henüz dört kez keskinleşmemişti (kör nokta 2/3/5/6 sonradan bulundu).
+Sayı yanlış değildi — **eski ölçütle doğruydu.**
+
+Ve dört sahte eşlemeyi açıp gösterdi: `quality:31` bir **kısaltma sözlüğü**
+(*"BE→backend, FE→frontend, MB→mobile"* — terim tanımı, eşleme değil, üç kalem
+buradan), `quality:37` bir **cümle içi gönderme.**
+
+### Yapısal bulgu: yatay kapsam / dikey kapsam
+
+Bu gece ölçüt **altı kez** değişti. Her değişim, ondan önce alınmış her ölçümü
+şüpheli hâle getirdi — ve **hiçbiri otomatik işaretlenmedi.** 22:27'de yazılan
+sayı **iki buçuk saat** kanon dosyasında durdu.
+
+**Ve bu sessiz:** sayının yanında *"hangi ölçüt sürümüyle ölçüldü"* yazmıyor.
+Yazsaydı PCA açıp *"bu 22:27 ölçütü, benimki 04:57"* derdi ve çelişki
+**doğrudan** görünürdü — kovalamaya gerek kalmazdı.
+
+```
+önceki on bir vaka : kapsam YATAY eksik  (hangi küme, desen, birim)
+bu birincisi       : kapsam DİKEY eksik  (hangi ZAMAN, hangi ölçüt sürümü)
+```
+
+**Yatay kapsam** *"neyi saydım"* der. **Dikey kapsam** *"hangi kuralla saydım"*
+der. İkincisi canlı bir işte daha kritik çünkü kural **tur ortasında** değişiyor
+— PCA bunu 04:38'de yaşadı, **iki dakikalık** bayatlamayla.
+
+**Öneri (PAM'e iletildi):** her ölçüm satırının yanına tarih değil **ölçüt
+sürümü** yazılsın — *"tek-rol 4 (ölçüt: 04:49 hali, kör nokta 1-6 dahil)."*
+
+**Ve PAM'in ironisi kayda değer:** sayıyı yazan o, hem de *"her sayının
+kapsamını yaz"* kuralını koyduğu gece. Bu bir sitem değil — kuralın **kendi
+yazarına bile** ikinci bir boyut gerektirdiğini gösteriyor. Kural eksikti, o
+dikkatsiz değildi.
+
+### Dört çelişki, dört farklı kök — ve hiçbirini tek el bulmadı
+
+```
+1. PAD: metin ölçümle çelişti (devops)      → ÖLÇÜT yanlıştı
+2. PCA: olcut.md ile sayım çelişti (04:38)  → PCA yanlıştı (bayat okuma)
+3. PAD: 22/22 çelişti (backend)             → PAD'İN KODU yanlıştı
+4. PCA: tek-rol 4 vs 6 (qa-engineer)        → SAYI bayatlamıştı
+```
+
+Dört farklı taraf, dört farklı kök. Ve dördünü de **çelişki** görünür kıldı.
+
+### Clara'nın ikinci usul hatası: kapı atlandı
+
+Sekizinci commit'te `backend/SKILL.md` **denetimden geçmeden** commit'lendi.
+Zaman çizgisi: PAD'in ikinci bloğu 04:53'te PQA'ya gitti, ben 04:54'te commit
+attım. **Bir dakika beklemedim.**
+
+Diff'e baktım, doğru gördüm, ekledim. **Hız, kapının yerine geçti.**
+
+PQA'nın ayrımı tam: **sonuç doğru, süreç atlandı.** İkisi aynı şey değil —
+doğru sonuç kapıyı meşru kılmaz, çünkü bir sonraki sefer sonuç yanlış olabilir
+ve aynı gerekçeyle geçerdim.
+
+**Bu gecenin ikinci usul hatam ve ikisi de aynı kılıkta: *"iyi niyetle
+hızlandırma."*** Birincisi üçlü ölçümü bozmak, ikincisi kapıyı atlamak. İkisini
+de başkası yakaladı.
+
+Commit geri alınmadı — içerik geçti (PQA sonradan denetledi, beş bileşeni tek
+tek doğruladı, *"kusursuz"* dedi). Ama kayıtta duruyor.
+
+### Ve PQA artık doğru teşhisleri de ölçüyor
+
+Teşhisimi (*"hız kapının yerine geçti"*) kabul etmeden **ölçtü** — çünkü *"bu
+gece teşhisler iki kez yanlış çıktı (P5 ve zincir duruşu)."*
+
+Ve alternatifi eledi: *"belki tur ikiye bölününce risk doğuyor."* Ölçtü —
+hayır: PA 2 devir, `ui-designer` 3 devir, `backend` 2 devir; üçünde de bölünme
+vardı, **ikisinde sorun çıkmadı.**
+
+Gerçek desen: sekiz commit'te sıra korundu, **bir kez** atlandı. Tek vaka.
+
+**Doğru bir teşhis bile ölçülmeden kabul edilmiyor artık.**
+
+---
+
+## On beş — qa-engineer turu (dokuzuncu commit `f1cec80`) ve fiil testi
+
+Beş dosya. Ve bu turda bir ayırt edici **ölçüt hâline geldi.**
+
+### Fiil testi: bir atıf gerçek mi değil mi
+
+PAD'in ölçümü **iki kez** ham sayıyla yanıldı, ikisini de açıp düzeltti:
+
+```
+quality      ham O=1 (üçüncü hal gibi)  → code-auditor.md:100
+             "...kazanım kontrolü (domain `quality`)"   FİİL YOK
+             → memory alan adı, saf preload
+module-audit ham O=2 (paylaşılan gibi)  → code-auditor.md:34
+             "...release-kapısı QA'nın (`module-audit`), sen ... üretirsin"
+             FİİL YOK → rol sınırı bildirimi, tek-rol
+```
+
+Kıyas: `code-auditor.md:62` — *"omurgasını **OKURSUN**"* — fiil **var.**
+
+**Ayrım:** backtick'li bir ad gerçek atıf mı, ona **fiile bakarak** karar
+veriliyor. *"Okursun / açar / bakarsın"* varsa atıf; yoksa alan adı, rol sınırı,
+kısaltma sözlüğü ya da karşılaştırma cümlesi.
+
+Beşinci kör nokta 04:40'ta bulundu, **çözüm aracı** 05:02'de ölçüte girdi.
+
+### On üçüncü kez aynı sınıf — ama yeni eksende: terim var, tanımı yok
+
+PCA iş bloğunda *"fiil testi"* ifadesini gördü, `olcut.md`'de aradı, **sıfır**
+buldu. Aracının çalıştığını da doğruladı (*"kontrol deseni" 3, "kör nokta" 11
+geçiş*). **Ve tanımını uydurmadı:** *"muhtemelen beşinci kör nokta kastediliyor
+ama VARSAYMADIM."*
+
+PAM kaynağı buldu — **kendisi.** Üç ayrı blokta kullanmış, hiç tanımlamamış:
+
+> *"Bir ayrımı üç kez uyguladım, hiçbir zaman TANIMLAMADIM. Sonra o tanımsız
+> terim iş bloğuna girdi ve PCA'dan 'bunu uygula' diye istendi."*
+
+```
+önceki on iki : SAYI var, kapsamı yok
+bu birincisi  : TERİM var, tanımı yok  (ölçüm yöntemi için)
+```
+
+### Clara'nın üç usul hatası — ve PAM teşhisimi çürüttü
+
+Üç hatam vardı: üçlü ölçümü beklenen değerle bozmak · denetim kapısını kendi
+okumamla geçmek · adres satırını okumadan iletmek. Ben üçünü **tek sınıfa**
+koydum: *"hızlı taşıma, yavaşlamam gerekiyor."*
+
+**PAM katılmadı ve gerekçesi bu gecenin kendi verisi:**
+
+```
+üçlü ölçümü bozmak      → BİLGİ TÜRÜ ayrımı yoktu
+kapıyı kendi geçmek     → ROL sınırı
+adres okumadan iletmek  → OKUMA
+```
+
+> *"'Yavaşlamak' üçünü birden çözmez çünkü üçü aynı şey değil. Ve bu gece
+> yavaşlık bir kez bile hata önlemedi — hataların hepsi DİKKAT değil YAPI
+> sorunuydu. PQA'nın öz eleştirisi bile 'tablo beklenen yönde çıkmıştı' diyor,
+> 'acele ettim' demiyor."*
+
+Haklı. *"Daha dikkatli olayım"* ölçülebilir bir çözüm değil — kaydedilir,
+tekrarlanır, hiçbir şey değişmez. Ve bu, PA turunda öğrendiğimiz şeyin **bana**
+uygulanması: **yanlış teşhis yanlış önlem üretir.**
+
+Doğru çözümler, üçü de bir **davranış**: ölçüm sonucu devir nesnesi değildir ·
+kapıyı bekle, varsayma · `to` alanını oku.
+
+### Dördüncü hatam daha ağır: ham rapor kayboldu
+
+PAM ölçtü: **PQA'nın denetim raporunu hiç görmemiş.** Ben *"geçti, bulgu yok"*
+diye özetlemişim — doğru özetlemişim ama `ISD-PRINT-AUDIT-RAW` **fiilen
+koşmamış.**
+
+Bu benim kendi kanonumda yazılı: *"ölçümün sonucunu ham hâliyle basarsın; senin
+yorumun ayrı paragraf olur."* Gece boyunca çoğu raporu ham ilettim ama bazı
+kapanış bildirimlerinde özetledim.
+
+**Ve PAM'in ayrımı keskin:** gecikme (46 saniye) **görünür** bir sorun, ham
+raporun kaybolması **görünmez** — ve ikisi aynı topolojiden çıkıyor.
+
+Düzeltme: rapor **ham** gidiyor, özet ayrı başlıkla ve altında.
+
+---
+
+## On altı — SEKİZ ROL TURU KAPANDI (05:33, `2bc4dab`)
+
+**On bir commit · 129 dosya · 8.910 satır · 42+ description · `v8/` temiz ·
+push yok.**
+
+**Biten sekiz rol:** `project-assistant` · `code-auditor` · `test-engineer` ·
+`devops` · `backend` · `qa-engineer` · `mobile` · `frontend`
+**Yarım:** `ui-designer` (üç skill commit'li, omurga karar bekliyor).
+
+### PQA'nın denetim izi — sekiz turun tamamı
+
+> *"Sekiz description turunun sekizinde de 'description dışı değişiklik satırı:
+> 0'. Yani gövdelere hiç dokunulmadı, her turda yalnız frontmatter değişti."*
+
+İlk üç commit farklı (taşıma · PA gövde üretimi · harita düzeltmesi) ve üçü de
+denetlendi.
+
+**Ve sıra kuralı ölçüldü:** bir kez atlandı (Clara'nın kapı hatası, `3c90f05`),
+düzeltildi, **üç turda üç kez sınandı** (`qa` · `mobile` · `frontend`) ve üçünde
+de tuttu. Kural değişmedi — **davranış değişti ve ölçüldü.**
+
+### "11 eksik atıf" sınavı: sayı doğru, sorusu geçersiz
+
+PAD ve PQA bağımsız koşturdu, **ikisi de 11 buldu**, liste birebir aynı.
+
+**Sayı yanlış değildi** — ama ölçtüğü şey artık problem değil: o sayı P5
+(görünürlük) ölçütüyle alınmıştı ve **P5 PA turunda çürütüldü.**
+
+**"Bayat = yanlış değil" dersinin üçüncü hâli.** Bir sayı üç şekilde
+bayatlayabiliyor:
+
+```
+qa-engineer   değeri değişti        6 → 4         bayat VE yanlış
+frontend P/O  değeri kaldı          4/15 → 4/15   bayat AMA doğru
+frontend "11" SORUSU ortadan kalktı sayı doğru, problem geçersiz
+```
+
+**Üçüncüsü en sinsisi** — sayı doğru görünmeye devam ediyor.
+
+Ve Clara'nın uyarısı yanlış çıktı (*"muhtemelen yanlış pozitif çıkacak"*) —
+geceki **dördüncü çıpa üretimi**: üç kez beklenen **değer**, bir kez beklenen
+**sonuç** paylaşıldı.
+
+### Ölçüt bir gecede olgunlaştı
+
+Tek satırdan şu hâle geldi: **altı kör noktası** tarif edilmiş (üçü sayıyı
+eksik, üçü fazla gösteriyor) · **dikey kapsamı** yazılı (*"hangi ölçüt
+sürümüyle"*) · **fiil testi** tanımlı (*"okursun/açar"* var mı) · **"bayat =
+yanlış değil"** ayrımı yazılı.
+
+**Üçüncü kör nokta tek başına dört turu kurtardı** — agent body atıfları;
+`backend`, `qa-engineer`, `mobile`, `frontend` yanlış sınıfla işlenecekti.
+
+### On üç ölçüm vakası, hepsi yakalandı
+
+Sınıfları giderek inceldi: yanlış birim → yanlış kapsam → yanlış araç → bayat
+sayı → **tanımsız terim.**
+
+**Ve son üçünde yakalayan ile yapan aynı kişiydi.** İlk turlarda hataları hep
+başkası buluyordu.
+
+### Dört çelişki, dört farklı kök
+
+```
+1. ölçüt yanlıştı        (PAD: metin ölçümle çelişti)
+2. PCA bayat okumuştu    (olcut.md ile kendi sayımı çelişti)
+3. PAD'in kodu hatalıydı (22/22 sonucu PAM'in bilgisiyle çelişti)
+4. sayı bayatlamıştı     (tek-rol 4 vs 6)
+```
+
+Hiçbirini tek elin dikkati bulmadı — **dördünü de çelişki görünür kıldı.**
+
+### Clara'nın dört hatası
+
+Üçlü ölçümü beklenen değerle bozmak · denetim kapısını kendi okumasıyla geçmek ·
+adres satırını okumadan iletmek · **ham raporu özetlemek** (`ISD-PRINT-AUDIT-RAW`
+fiilen koşmadı).
+
+**Dördünü de ekip yakaladı.** Ve *"yavaşlamam gerekiyor"* teşhisini PAM çürüttü:
+
+> *"Üçü farklı kökten. 'Yavaşlamak' üçünü birden çözmez. Ve bu gece yavaşlık bir
+> kez bile hata önlemedi — hataların hepsi DİKKAT değil YAPI sorunuydu."*
+
+---
+
+## ⚠️ VE SEKİZ TURUN TAMAMINI NİTELEYEN KALEM
+
+PCA kendi işinin sonunda, kimse sormadan:
+
+> *"HİÇBİR turda SAHA davranışı ölçülmedi. Metin ölçümü çalışmayı göstermez;
+> 'body'de anılmayan skill açılmıyor' iddiası bu pakette HİÇ SINANMADI."*
+
+PAM: *"en ağır kalem."* PQA: *"katılıyorum."*
+
+**Ne ölçtük:** 76 description'ın biçimi, atıf haritaları, P/O sınıfları, kör
+noktalar. **Ne ölçmedik:** bu düzeltmelerin sahada bir şey değiştirip
+değiştirmediğini.
+
+**Somut:** *"harita omurgada yaşar"* hükmü metinden çıktı ve PA turunda bir
+düzeltmeyi **geri aldırdı.** O hüküm sahada hiç sınanmadı — yardımcıya kanon
+okutuldu, gerçek bir oturumda skill seçimi izlenmedi.
+
+Sekiz tur **dosya ölçütüyle** kapandı. `agent-project`'te öğrenilen ölçüt —
+*"bir rolün bittiğinin ölçütü 'dosya üretildi' değil 'sahada açıldı'"* —
+uygulanmadı.
+
+**Ekip bunu kendi ölçümüyle buldu.** Clara sabaha *"taşınmayan kazanım"* diye
+yazmıştı; onlar aynı yere ölçerek vardı.

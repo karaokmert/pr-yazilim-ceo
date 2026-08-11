@@ -728,6 +728,26 @@ kaynaklı.
 → Nabza eklenecek: bir projedeki uçların **hepsi** birden ○ olduysa, bunu
 *"toplu sessizlik — muhtemelen oturum limiti"* diye ayrı işaretle.
 
+### Y41 — "Bana TEK bir make komutu vermeli, sonrası koşum onda" (01:51)
+
+> **Mert [01:51]:** *"bana **tek bir make komutu** vermeli, ben çalıştıracağım,
+> **sonrası koşum onda**"*
+
+**İş bölümü net:** Mert'in yapacağı şey **tek komut**; onun ötesindeki koşum,
+doğrulama, sonuç okuma agent'ta.
+
+→ **Ders:** insan-in-the-loop adımı **atomik** olmalı. Beş komutluk bir liste
+vermek onu operatör yapar; tek komut vermek **kapı bekçisi** yapar. İkisi farklı
+rol — kapı bekçisi onaylar, operatör iş yapar.
+
+→ Y27 ile birlikte okunur (*"silmeyi ben elle mi yapacağım?"*): orada fail
+yazılmamıştı, burada **failin yükü** tarif ediliyor. İkisi aynı eksende — insana
+düşen iş **görünür ve minimal** olmalı.
+
+→ **Ve bu Mert'in genel tarzı:** telepresence'ta da aynısını istedi (*"toplu API
+listesini versin, ben token hazırlayayım"* — Y25). Engeli kaldırmayı üstleniyor,
+ama **hazırlığı agent'tan** bekliyor.
+
 ### Y40 — Dördüncü sorudan sonra MERT kendisi otomatikleştirdi (19:39) ⭐
 
 Aynı soru dört kez sorulduktan sonra (15:30 · 16:30 · 18:54 · 19:32) Mert

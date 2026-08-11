@@ -9,23 +9,31 @@ Bu dosya **okuyup çalışmaya başlamak için** yazıldı. Ayrıntı yukarıdak
 
 ## Şu an ne oluyor
 
-**Yedi commit atıldı, push yok** (onayın öyleydi: *"commit onayım var, push yok"*).
+**On commit atıldı, push yok** (onayın öyleydi: *"commit onayım var, push yok"*).
 
 ```
-3688886  devops turu: altı description — ve ÖLÇÜTÜN KENDİSİ YANLIŞ ÇIKTI
-3f55323  ui-designer turu (üç öz skill) — omurga KARAR BEKLİYOR
-f38cd5d  test-engineer turu: dört description + ölçütün kör noktası
-c243526  code-auditor turu: üç description — omurga/öz skill ayrımıyla
-3c4413a  PA body: kısaltılmış harita geri konuldu (yanlış ölçümle alınmıştı)
-a820cff  OY v8 PA turu: iki düzeltildi, biri çürütüldü, biri temiz
-25e1bf3  Fabrika ekibi skill-project'e taşındı
+4aa817a 05:19  mobile turu: altı description — DOKUZ İDDİA TEK TABLODA
+f1cec80 05:07  qa-engineer turu: beş description — FİİL TESTİ ölçüt oldu
+3c90f05 04:54  backend turu: beş öz skill + omurga — ALTINCI kör nokta
+3688886 04:35  devops turu: altı description — ÖLÇÜTÜN KENDİSİ YANLIŞ ÇIKTI
+3f55323 22:58  ui-designer turu (üç öz skill) — omurga KARAR BEKLİYOR
+f38cd5d 22:42  test-engineer turu: dört description + ölçütün kör noktası
+c243526 22:30  code-auditor turu: üç description — omurga/öz skill ayrımıyla
+3c4413a 22:19  PA body: kısaltılmış harita geri konuldu (yanlış ölçümle alınmıştı)
+a820cff 21:58  OY v8 PA turu: iki düzeltildi, biri çürütüldü, biri temiz
+25e1bf3 21:52  Fabrika ekibi skill-project'e taşındı
 ```
 
-`origin/main` = `3c54b57`, yedi commit ileride. `v8/` çalışma ağacı temiz.
+**SEKİZ ROL TURU KAPANDI.** On birinci commit: `2bc4dab` (frontend).
 
-**Dört rol bitti** (`project-assistant`, `code-auditor`, `test-engineer`,
-`devops`), **`ui-designer` yarım** (üç skill commit'li, omurga karar bekliyor),
-**`backend` yürüyor**, üç kaldı: `qa-engineer` · `mobile` · `frontend`.
+**129 dosya, 8.910 satır. 42+ description düzeltildi.**
+`origin/main` = `3c54b57`, **on bir commit** ileride. `v8/` temiz.
+**Sekiz turun sekizi de PQA denetiminden geçti.**
+
+**Biten sekiz rol:** `project-assistant` · `code-auditor` · `test-engineer` ·
+`devops` · `backend` · `qa-engineer` · `mobile` · `frontend`
+
+**`ui-designer` yarım** — üç skill commit'li, omurga karar bekliyor (5. kalem).
 
 **Zincir 23:08–04:30 arası durdu** — sebep **beş saatlik oturum limiti** (sen
 söyledin). Benim ilk teşhisim yanlıştı, düzeltildi. İş kaybı olmadı: PQA
@@ -33,6 +41,33 @@ denetimi kaldığı yerden sürdü ve dosyaların değişmediğini doğruladı. 
 tekrar olabilir** — olursa yine kaldığımız yerden devam ederiz.
 
 ---
+
+## ⚠️ ÖNCE BUNU OKU — sekiz turun tamamını niteleyen kalem
+
+PCA gecenin sonunda bir şerh koydu ve PAM *"en ağır kalem"* dedi. Haklılar:
+
+> *"HİÇBİR turda SAHA davranışı ölçülmedi. Metin ölçümü çalışmayı göstermez;
+> 'body'de anılmayan skill açılmıyor' iddiası bu pakette HİÇ SINANMADI. Sekiz
+> rol bitiyor ama bu soru hâlâ açık."*
+
+**Ne ölçtük:** 76 description'ın biçimini, atıf haritalarını, P/O sınıflarını,
+kör noktaları. Titiz ölçüldü — on üç ölçüm vakası çıktı ve hepsi yakalandı.
+
+**Ne ölçmedik:** bu düzeltmelerin **sahada** bir şey değiştirip değiştirmediğini.
+
+Ve bu, aşağıdaki 2. kalemin üçüncü maddesiyle **aynı şey**: *"bir rolün
+bittiğinin ölçütü 'dosya üretildi' değil 'sahada açıldı'."* Sekiz tur **dosya
+ölçütüyle** kapandı.
+
+**Somut örnek:** *"harita omurgada yaşar, preload'da yüklü geliyor"* hükmü
+metinden çıktı ve PA turunda bir düzeltmeyi geri aldırdı. O hüküm sahada hiç
+sınanmadı — yardımcıya kanon okutuldu, gerçek bir oturumda skill seçimi
+izlenmedi.
+
+**Zaten açık bir kalem var:** P4 saha doğrulaması (dün 22:00'de açıldı, *"sekiz
+rol bitince tüm paket tek testte"*). PCA'nın şerhi onu **genişletiyor** — yalnız
+P4 değil, P5'in çürütülmesi de, üçüncü hal kararları da, hepsi metin ölçümüne
+dayanıyor.
 
 ## Kararını bekleyen beş kalem
 
