@@ -100,6 +100,7 @@ davranışlar sayılıyor — ölçüldü 2026-08-09.
 - **Clara'nın kanon yetkisi** — kanona yazma yasağı kaldırıldı; kural içeride/gerekçe dışarıda, üç dokunulmaz, şişme freni · 2026-08-03 · `kararlar/2026-08-03-clara-kanon-yetkisi.md` · kapalı
 - **Yazma sınırı değişti** — `CLA-WRITE-HERE-ONLY` kaldırıldı, yerine `CLA-ASK-BEFORE-WRITING-OUT`: başka repoya yazılır ama metni gösterip onay alınır; izin kuralı hâlâ yasak · 2026-08-03 · `kararlar/2026-08-03-clara-yazma-sinirinin-degismesi.md` · kapalı
 - **Çok proje yönetim düzeni** — kanal (Clara taşır, çağırmaz) + oturum belleği (agent detayı yazar, Clara özeti tutar) + kural agent kanonunda (`pause` skill'i); 11 açık oturum/4 PA ölçüldü, bir iş 4 durak geziyor; Mert düzeltmiyor besliyor (21 mesajda 2 düzeltme) · 2026-08-04 · `kararlar/2026-08-04-cok-proje-yonetim-duzeni.md` · yarım (AG'ye 3 üretim kalemi gitmedi; 3 açık soru)
+- **Kanal açılış hook'u + her projede ayrı Clara** — OY/Web kanonunda kanal SIFIR (ölçüldü); talimat kullanıcı seviyesindeki hook'a alındı, plugin'e YAZILMADI (Clara plugin'e girmiyor, merkez olmadan "çalıştığı sanılan monitör" doğar). Merkez kapısı YOK: üç ölçüt çürütüldü (`STATE: OPEN` canlılık değil · `ps` projeyi vermiyor · zaman eşiği uydurma) ve asıl soru çıktı — kanal ASENKRON, mesaj okunmasa da kaybolmaz. Tek Clara tüm projeleri yönetmez: bağlam karışıyor (9 Ağu ölçümü), yük tek izleyicide körlüğe dönüyor, müdahale imkânı kalmıyor · 2026-08-11 · `kararlar/2026-08-11-kanal-acilis-hooku.md` · kapalı ama **sahada ölçülmedi** (gerçek açılışta koşması izlenecek)
 
 ## İncelemeler
 
