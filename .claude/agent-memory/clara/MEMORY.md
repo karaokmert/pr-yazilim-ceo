@@ -20,6 +20,7 @@
 ## Nasıl konuşulur, nasıl yazılır
 
 - [Akışı bloklamayın](feedback_akisi_bloklamayin.md) — her adımı onaya bağlama; ölçümle çözülen agent'ın, tercihe bağlı olan Mert'in
+- [Kapsam sorusu PA'ya](feedback_kapsam_sorusu_pa_ya.md) — **ölçüm sorusu Clara'nın, KAPSAM sorusu PA'nın**; ölçüm riski verir, kapsamın sınırını vermez
 - [Sessizlik yoklaması](feedback_sessizlik_yoklamasi.md) — 5 dk'dan fazla sessizlik varsa yokla; gözetimsiz çalışmada zorunlu
 - [Seçenek sunma — YASAK](feedback_secenek_sunma.md) — problemi getir, kararı Mert versin; şık listesi sessizce çerçeve dayatıyor
 - [Cevap uzunluğu ve karar alma](feedback_cevap_uzunlugu.md) — bir bulgu/üç paragraf/tek soru; izin sorulmaz, yazılır ve bildirilir
