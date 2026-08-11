@@ -260,6 +260,46 @@ geçti ve **okunmamış bir işe cevap yazıldı.**
 
 **`--force` bile sıfır dönmez** — bilinçli atlama bilinçli kalmalı.
 
+## MERKEZ YAYIN — proje Clara'larına toplu mesaj
+
+Araç: **`pr-yazilim-ceo/tools/clara-yayin.py`** (Clara'nın kendi tezgahı,
+`skill-project`'in kanal betiklerinden ayrı).
+
+```
+clara-yayin.py --liste                          # kim canlı, kim izliyor
+clara-yayin.py --tip INFO --stdin               # tüm canlı Clara'lara
+clara-yayin.py --tip TASK --hedef goat --stdin  # tek projeye
+clara-yayin.py --tip INFO --stdin --kuru        # yazmadan dene
+```
+
+**YALNIZ Clara kutularına yazar** — agent kutularına asla (`CLA-NO-CALL-TEAMS`).
+Hedef seçimi ölçümle: izleyicisi **VAR** + kutu **bugünün** olmalı. Ölü kutu
+otomatik elenir (ölçüldü: goat'ta iki eski Clara kutusu duruyordu).
+
+### Teslim doğrulanır — `rc=0` YETMEZ
+
+Yazdığı her dosyayı **geri okur** ve gövde uzunluğunu karşılaştırır. `rc=0` yalnız
+**hepsi** teslim edilmişse döner.
+
+Bu zorunlu, çünkü ölçüldü (2026-08-11, iki bağımsız vaka): `send.py`'ye `<box>`
+argümanı olarak **ajan dizini** verildiğinde (`.../inbox` yerine) betik dosyayı o
+dizine yazıyor, `written` basıyor ve **`rc=0`** dönüyor — mesaj teslim edilmiyor.
+`send.py` kutunun VAR olup olmadığına bakıyor, **türüne bakmıyor.**
+
+⚠️ **Aynı `rc=0` arızası bir günde üç yerde bağımsız yakalandı:** `send.py` gövde
+yutması (sabah) · `npm run build` 10 hata verip exit 0 dönmesi (15:15) · `send.py`
+yanlış dizine yazması (15:53). **`rc=0` bir iddiadır, sonucun kendisi değil.**
+
+### Alma tarafı da kurulur — asimetrik doğrulama tuzağı
+
+Ölçüldü aynı gün: yayın kanalı kurulurken **gönderme iki kez doğrulandı, alma hiç
+doğrulanmadı.** `ceo/Clara-*/inbox` kutusunda **sıfır izleyici** vardı; Goat'ın iki
+cevabı görülmedi. Karşı taraf fark etti (*"almamış olabilirsin, tekrar ediyorum"*),
+merkez fark etmedi.
+
+**Kural: yayın kurulduğunda kendi kutunun izleyicisi de kurulur.** Tek yönlü kanal
+kanal değildir.
+
 ## Kapanış İKİ TARAFLI
 
 Agent kendi kutusunu **tek başına kapatamaz**: outbox'ta okunmamış mesaj varsa
