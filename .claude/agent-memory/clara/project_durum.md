@@ -11,17 +11,26 @@ metadata:
 > (fabrika hattı) · `gunluk/{proje}/`. Açılış hook'u her projenin son kapanışını ayrı
 > listeler — **yalnız kendi modunun kapanışı okunur.**
 
-## EV — son kapanış (2026-08-11 10:00)
+## EV — son kapanış (2026-08-11 18:22)
 
-`gunluk/ev/2026-08-11-kapanis.md` — **19 saatlik saha izleme oturumu.**
-Mert'in yönetimi kaydedildi (referans örnek): 15 düzeltme · 51 hamle · 16 kural
-→ `incelemeler/proje-claralari/kayit.md`
+`gunluk/ev/2026-08-11-kapanis-2.md` — **Clara'nın proje rolü tanımlandı.**
 
-**Üç karar Mert'te:** (1) proje yönetimi Clara'da mı PA'da mı — ölçüldü,
-düzeltmelerin 11/12'si proje yürütme · (2) SCRUB: agent'lar `default` modda,
-`auto`'ya geçmiyor · (3) kanal protokolü skill'de yok ama **memory'de var.**
+**Üç kök kapatıldı** (dünkü 17 düzeltmenin kaynağı) ve üçü tek yere bakıyormuş:
+Mert'in cümlesi — *"beni proje takibinden kopartırsa Clara devre dışı kalır."*
+· Kök 1 sınır → rol tanımsızdı, tanımlandı (**yönetim temsilcisi / PMO Assistant**)
+· Kök 2 sunum → kural yanlıştı (%92 haklı ihlal), iki tur tipine ayrıldı
+· Kök 3 takip → liste güncellenmiyor değil **hiç açılmıyordu** (`CLA-TRACK-WHAT-YOU-SEND`)
 
-**Sonraki adım:** analiz + planlama oturumu.
+**Beş karar dosyası** yazıldı, kanona işlendi (`proje-yonetimi` 246→377 satır).
+**Merkez yayın kanalı** kuruldu: `tools/clara-yayin.py` (yalnız Clara kutuları,
+teslim doğrulamalı).
+
+**Mert'i bekleyen:** Goat push kuyruğu **14 commit** (CA denetimi 17:50'de başladı,
+sonuç gelmedi) · fabrikaya **iki devir bloğu** (send.py inbox kontrolü + PA gereksinim
+kası) · EV push kuyruğu 8 commit.
+
+**Sonraki adım:** fabrika turu — devir blokları hazır, ve listedeki üçüncü durak
+(fabrika + OY v8 ekibi) hiç açılmadı.
 
 ## ⚠️ FABRİKA ADRESİ DEĞİŞTİ (2026-08-11)
 
