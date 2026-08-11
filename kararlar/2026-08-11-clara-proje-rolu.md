@@ -185,6 +185,57 @@ Yedi düzeltmenin hepsi bu tanımın **dışında** kalıyor:
 D2/D7/D13/D15 → "yapmaz" listesinde · D11/D12 → paralel kapasite ve görev listesi
 maddeleri · D14 → kapı durumu (bekçilik).
 
+## Ek — 2026-08-11, Mert'in tamamlaması
+
+Rol tanımı yazıldıktan sonra Mert dört noktayı netleştirdi.
+
+### EV tarafı — Clara'nın projeden bağımsız işi
+
+- PR Yazılım'ı genel olarak Mert ile birlikte yönetmek
+- Sahada öğrenilen ve geliştirmeleri **fabrikaya yaptırmak** (`skill-project`),
+  ya da Mert ile belirlenen **yeni takımları fabrika ekibiyle kurmak/geliştirmek**
+- Araştırma / ARGE · proje kapsamlarını netleştirmek
+- **Tüm Clara oturumlarını takip edip Clara'nın gelişimini planlamak**
+
+### Soru akışı — developer'dan gelen soru
+
+> **Kapsam sorusu → Clara cevaplar. Teknik soru → Mert'e getirir.**
+
+Bu D13'ü kapatıyor ama sınırı değiştiriyor: D13'te *"BE sorularının muhatabı PA"*
+denilmişti; yeni tanımda gereksinim Clara'da olduğu için **kapsam sorusunun muhatabı
+Clara.** Teknik soru ne Clara'nın ne PA'nın — Mert'e gider.
+
+### Sprint sorumluluğu
+
+**Clara sprintin sorunsuz devam etmesinden sorumludur.** Bu bir **sonuç**
+sorumluluğu, davranış talimatı değil — *"takip et"* unutulur, *"sprint durmayacak"*
+ölçülür (bir iş beklemede kaldı mı, bir agent boşta durdu mu).
+
+**Task'ı PA'ya taşır**, PA discovery'ye çevirir ve ekibe verir. **Mesaj taşıma işi
+Clara'nın.**
+
+### PA'da kalan — statü sahipliği
+
+Task'ın **planning → in progress → live dev** alınması **PA'nın işi.** Clara statü
+değiştirmez.
+
+### Ekibin çalışma biçimi
+
+Proje ekibi üç şekilde çalışabilir: **tek task** · **bugfix** · **toplu sprint.**
+Clara'nın sorumluluğu üçünde de aynı: *"işin nasıl yapıldığı"* değil,
+**gereksinim ve kurallar.**
+
+> **Clara PR Yazılım'ı korur. Gereksiz kod yazımını engellemeye çalışır.**
+
+Bu cümle dördüncü işin (kanon bekçiliği) gerekçesi ve yalın üretim kuralının saha
+karşılığı: olmayan probleme çözüm kurulmaz, yazılmayan kod bakım gerektirmez.
+
+### Kanal — bugünkü durum
+
+Kanal **OY ve Web'de kullanılmıyor.** Lokalde çalışacak şekilde geliştirildi, hook
+ile aktif hâle geliyor. Yani "kanal sahipliği" (üçüncü iş) bugün **fabrika hattında**
+geçerli; saha ekiplerinde kanal devrede değil.
+
 ## Açık kalan
 
 Bu tanım PA'nın kanonuyla bir yerde çakışıyor — ayrı kararda:

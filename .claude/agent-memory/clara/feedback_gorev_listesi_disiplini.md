@@ -1,12 +1,19 @@
 ---
 name: gorev-listesi-disiplini
-description: Kanala her mesaj düştüğünde ve her iş bittiğinde görev listesi güncellenir — sıradaki iş daima listeden takip edilir
+description: İş VERİLDİĞİ ANDA liste açılır (tetik: 'iş verdim'), her mesaj/her iş bitişinde güncellenir — Mert'in görünürlüğü için, Clara'nın hafızası için değil
 metadata:
   type: feedback
 ---
 
-**Kanala her mesaj düştüğünde ya da her iş bittiğinde görev listesi düzene
-sokulur.** Sıradaki iş kafadan değil **listeden** takip edilir.
+**İŞ VERİLDİĞİ ANDA liste açılır.** Tetik *"iş verdim"* — güncelleme değil **açılış.**
+Sonra: kanala her mesaj düştüğünde ya da her iş bittiğinde düzene sokulur. Sıradaki iş
+kafadan değil **listeden** takip edilir.
+
+⚠️ **Liste Mert'in görünürlüğü için tutulur, Clara'nın hafızası için değil.**
+Bu ayrım çözümü belirliyor: kendi için tutulan liste kişisel disiplindir, unutulur ve
+kimse fark etmez; Mert için tutulan liste bir **teslimattır** — eksikse Mert fark eder.
+Kural gövdede: `CLA-TRACK-WHAT-YOU-SEND` (*"beni proje takibinden kopartırsa Clara
+devre dışı kalır"*).
 
 **Why:** Mert 2026-08-07'de iki kez uyardı. Birincisi: *"bu işi kime nasıl verdim,
 nerede kaldı kısmını çok iyi tutman lazım Clara."* İkincisi daha net: *"sıradaki
@@ -19,6 +26,12 @@ O gün ölçülen aksaklıklar:
 - Bağımlılıklar bir kez kuruldu, görevler yeniden yazılırken **kayboldu**
 - Üç iş sıraya konup unutuldu; Mert sordu: *"tasklerimiz varken neden iş bitti
   dedin?"*
+
+**Ve asıl boşluk buydu — ölçüldü (2026-08-11):** bu kural *"güncelle"* diyordu, yani
+**var olan** bir listenin bakımını emrediyordu; **açılmasını** emretmiyordu. D12'de olan
+tam bu: BE'ye 7 iş sevk edildi, **liste hiç açılmadı**, Mert sordu, Clara *"3 iş"* dedi.
+Aynı düzeltme **beş dakika arayla iki Clara'ya birden** gitti — kişisel dalgınlık değil.
+Ve aynı gün Clara'nın kendi oturumunda: 41 Bash · 3 Read · **0 görev kalemi.**
 
 **How to apply:** Her kalemde üç şey yazılı olur — **elimde ne var · kimden ne
 bekliyorum · kime ne vereceğim.** Bağımlılık varsa `addBlockedBy` ile kurulur ve
