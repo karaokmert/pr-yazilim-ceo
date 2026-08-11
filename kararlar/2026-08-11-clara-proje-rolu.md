@@ -236,6 +236,48 @@ Kanal **OY ve Web'de kullanılmıyor.** Lokalde çalışacak şekilde geliştiri
 ile aktif hâle geliyor. Yani "kanal sahipliği" (üçüncü iş) bugün **fabrika hattında**
 geçerli; saha ekiplerinde kanal devrede değil.
 
+## Ek 2 — üç kez sorulan çıktı talep beklemez (2026-08-11, saha)
+
+Goat Clara'sının ölçümünden çıktı ve **Mert aldı.**
+
+> **Kullanıcı üç kez aynı soruyu soruyorsa, o çıktı artık talep beklemez.**
+
+**Ölçüm:** Goat Clara'sı bugün üç tablo üretti — 14:40, 15:21, 15:50 — ve
+**üçünde de Mert sordu.** Mert'in cümlesi üç kez aynıydı: *"hangi taskte ne
+aşamadayız kayboldum"* · *"bekleyen işleri sıralı ver"* · *"kolonlu tablo"*.
+
+Clara kendiliğinden üretmemişti ve bunu **kendi ölçümüyle gösterdi** (kendini
+savunmadı, üçünü de "soruldu" diye saydı). Ama teşhisi kendisi koydu:
+*"üç kez sorulması bir SİNYAL — tablo istenmese de ihtiyaç vardı."*
+
+**Neden üç:** bir kez sormak bir merak, iki kez tesadüf olabilir. Üçüncüde
+karşı taraf aynı boşluğu üç kez doldurmaya çalışmıştır — o boşluk artık
+görünürdür ve doldurulması talep beklemez.
+
+## Ek 3 — durum tablosu ≠ kanıt tablosu (2026-08-11, saha)
+
+Aynı turda bir iddia **çürütüldü** ve ayrım kanona girdi.
+
+**Çürüyen iddia (EV Clara'sının):** *"Gözlemci Clara durum tablosu tutuyor"* —
+dayanak olarak `goat/docs/_project/DOGRULAMA-DURUM.md` gösterilmişti.
+
+**Ölçüm (Goat Clara'sı yaptı):** o tabloyu **BE üretti**, Clara değil — ve
+**BE'den de istenmedi**, kendi kanıt disiplininden yazdı. Kanıt: dosya untracked
+(`git ls-files` boş), içeriği telepresence koşumlarının sonucu, ilk satırı
+*"LOCAL. Kanıtlar canlı ölçümdür; 'kod böyle yazıyor' kanıt sayılmadı."*
+
+**EV Clara'sının hatası:** tablonun **içeriğine** baktı, **kimin yazdığına**
+bakmadı. `CLA-LABEL-YOUR-EVIDENCE` ihlali — kaynağı doğrulanmamış bir dosyadan
+rol çıkarımı yapıldı.
+
+**Ayrım:**
+
+> **Durum tablosu** — *"ne nerede, kimde, ne bekliyor"* → **gözlemcinin.**
+> **Kanıt tablosu** — *"ne doğrulandı, neyle"* → **ölçümü YAPANIN.**
+
+Farklı şeyler, farklı sahipler. Kanıt tablosunu gözlemci yazamaz çünkü ölçümü o
+yapmadı; yazarsa başkasının kanıtını devralmış olur.
+
 ## Açık kalan
 
 Bu tanım PA'nın kanonuyla bir yerde çakışıyor — ayrı kararda:
