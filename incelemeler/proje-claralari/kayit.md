@@ -618,6 +618,97 @@ tahminden gelir, PA'nınki koddan.
 → **Ve Clara doğru davrandı:** *"BE doğru yerde durdu, muhatabı sensin"* diyerek
 taşıdı, kendi cevaplamadı. Düzeltme 3 saat içinde davranışa dönmüş.
 
+### Y47 — "CLAUDE.md'ye sayısal şey yazılmaz" (03:38, fabrika oturumu)
+
+> **Mert [03:38]:** *"CLAUDE.md **bir projenin tarifi ve çalışma kuralıdır.** Bu
+> nedenle **sayısal şeyler içinde olmaz** — agent zaten repoyu tarayıp
+> görebileceği şeyleri CLAUDE.md'ye yazmayız. Buraya **proje bilgisi, çalışma
+> kuralları, riskli nokta**[lar yazılır]."*
+
+→ **Ayıran ölçüt: agent bunu kendisi bulabilir mi?**
+> Bulabilir (dosya sayısı, satır sayısı, modül listesi) → **yazılmaz**, bayatlar
+> Bulamaz (neden böyle kurduk, hangi tuzak var, ne yasak) → **yazılır**
+
+→ Bu Clara'nın kendi kanonundaki kuralın aynısı: *"bu satır olmasa ne yanlış
+yapardım?"* Sayı yanlış davranış üretmez, **bayatlayınca yanlış bilgi üretir.**
+
+→ Ve `CLA-FIX-THE-CAUSE` ile bağlantılı: bir sayıyı dokümana yazmak, o sayının
+değişeceğini bilerek bir **bakım borcu** yaratmak demek. Kaynağa işaret etmek
+borç yaratmıyor.
+
+### Y48 — "PCA toplu ölçüm ve test yapar, tüm geliştirmeler bitince" (05:49)
+
+> **Mert [05:49]:** *"PCA **toplu ölçüm ve test** yapar, **tüm geliştirmeler
+> bitince.**"*
+
+Rol ve **zamanlama** birlikte tanımlandı: PCA'nın işi parça parça değil, **bütün
+bitince tek seferde.**
+
+→ **Y11/Y29/Y31 ile aynı kalıp — dördüncü kez:** Mert ölçüm/doğrulama işlerini
+**sona topluyor.**
+> Y11: parça parça test → tek seferde · Y29: iki indeks → hepsi
+> Y31: önce commit → sonda · Y48: PCA ölçümü → tüm geliştirmeler bitince
+
+**Ortak gerekçe:** ara durumda yapılan ölçüm, **bitmemiş bir şeyi** ölçüyor —
+sonuç ya tekrarlanacak ya yanıltacak.
+
+### Y46 — İş akışını Mert tarif etti: "ikinci göz" kontrolü (05:33)
+
+İkinci *"hayır"* — Clara akışı hâlâ yanlış kurmuş. Mert zinciri tek tek yazdı:
+
+> *"**Hayır.** PA o branch'i working tree'ye çeker. **Grup grup FE'ye inceletir.**
+> FE düzenlemelerini yapar (varsa); yoksa commit'ler QA inceler. **Bu Buse'nin
+> yaptığı işi 2. göz olarak incelememiz anlamına gelir.**"*
+
+**Zincir:** Buse teslim eder → PA branch'i çeker + gruplar → FE grup grup inceler
+→ (düzeltme varsa yapar) → QA commit'leri inceler → main.
+
+→ **Amaç cümlesi kritik:** *"2. göz olarak incelememiz."* Yani bu bir **yeniden
+üretim değil, kalite kapısı.** Dışarıdan gelen iş kanona uygun mu, ona bakılıyor.
+
+→ **Ders (aracı katman için):** Clara iki kez akışı yanlış kurdu çünkü **işin
+amacını** sormadı. *"Bu commit'ler ne"* diye ölçtü ama *"bunlarla ne yapacağız"*
+diye sormadı. Amaç bilinmeyince kapsam da yanlış çıkıyor.
+
+→ Bu D6'nın (*"anlamadım, daha mantıklı açıkla"*) tersi: orada Clara anlatamadı,
+burada **anlamadı.** İkisi de aynı boşluktan — **amaç dili konuşulmadan
+mekaniğe geçmek.**
+
+### D16 — "Hayır anlamadın" → ve PA Clara'nın kesimini ÖLÇÜMLE düzeltti (05:30) ⭐
+
+> **Mert [05:30]:** *"**Hayır anlamadın.** Goat projesinde 2 kişi çalışıyoruz.
+> FE işlerinin bir bölümünü **Buse** yapıyor. Buse işlerini bitirdi ve bana yolladı.
+> Ben onun işlerini **kontrol ettirip main'e almam** gerekiyor."*
+
+Clara işin yapısını yanlış kurmuştu — Buse'nin commit'lerini *"kapsam dışı gürültü"*
+sanmış; oysa onlar **teslim edilmiş iş**, kontrol edilip main'e alınacak.
+
+**Sonra PA aynı hatanın ikinci katmanını düzeltti** (Clara'nın kendi kaydı):
+
+> *"PA işini iyi yaptı — ve **benim listemi iki yerden düzeltti.** PA'nın yaptığı
+> şey benim ölçmediğim bir şeyi ölçtü: *'backend'le ilgisi var mı'* sorusunu
+> **API çağrısı sayarak** cevapladı. Ben grupları **commit mesajlarına** bakarak
+> kesmiştim — 'dropdown viewport' saf UI gibi *görünüyor*... PA saydı:
+> **Sağlayıcı modalı → 3 API çağrısı** · **BOOST → mock(6)+mock(12)+'gerçek BE'ye
+> bağla'(1+14)** — yani canlı servise bağlı."*
+
+→ **Clara'nın kendi teşhisi (kayda değer):** *"Bugünün en pahalı hatası benimdi ve
+mekaniği öğretici: **envanterde bir isim gördüm, ona rol atadım, sonra o rolün
+üstüne bir kapsam kararı kurdum.**"*
+
+**Üç katmanlı ders:**
+
+**(1) İsimden rol çıkarma.** *"Buse'nin commit'leri"* → *"başkasının işi"* →
+*"kapsam dışı"*. Üç adımın hiçbiri ölçülmedi. Bu hafızadaki
+`feedback_ekip_disi_sanma`'nın tekrarı.
+
+**(2) Commit mesajı ölçüm değildir.** *"Dropdown viewport"* saf UI **görünüyor**;
+API çağrısı sayınca öyle çıkmıyor. Metin görünüşü ile kod gerçeği farklı.
+
+**(3) Ve bu D15'in bedeli:** Clara PA'ya kapsam vermişti (04:53'te Mert kesmişti).
+Kapsam **yanlıştı** — PA kendi ölçümüyle düzeltti. Yani *"kapsamı PA çıkarsın"*
+kuralının değeri burada somutlaştı: **PA ölçüyor, Clara görüyor.**
+
 ### D15 — "PA'ya kapsam vermene gerek yok, 'biten işler bunlar' demen yeterli" (04:53)
 
 > **Mert [04:53]:** *"PA'ya **kapsam vermene gerek yok** ki, **'biten işler bunlar'

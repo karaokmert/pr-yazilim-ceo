@@ -7,6 +7,19 @@ metadata:
 
 # PAM'e iletilecek iş listesi
 
+## ⏭️ SIRADAKİ — tek tur, iki kalem (2026-08-11)
+
+**Devir bloğu HAZIR:** `gunluk/fabrika/2026-08-11-kapanis-2.md` → "DEVİR BLOĞU"
+
+1. **Harita üçüncü sütunu** — dokuz omurgadan yalnız birinde var
+   (`backend/SKILL.md:20-28`: hangi alet · ne zaman açılır · **açmazsan ne olur**).
+   Ölçüldü: `grep "açmazsan ne olur"` → tek dosya.
+2. **Bitiş ölçütü** — kanonda hiç yok. Mert'in kararı: *"PCA toplu ölçüm ve test
+   yapar, tüm geliştirmeler bitince."* Rol turu dosya ölçütüyle kapanır, saha
+   ölçümü paketin sonunda PCA'da.
+
+Mert: *"skill project'e geçince yapacağımız iş olsun."* **Adres: `skill-project`.**
+
 ## 🔴 ÖNCELİKLİ — güvenlik (2026-08-10)
 
 0. **`relay.sh` komut enjeksiyonu** — kanal relay betiği mesajın `to`/`from`
