@@ -1,14 +1,14 @@
-# Panelin çalışma çıktısı — süreç üretiyor, kayıt değil
-panel/topla.log
-panel/durum.json
 
-# MCP yapılandırması — içinde Qdrant API key'i düz duruyor, git'e girmez.
-# Şablonu: .mcp.json.example
-.mcp.json
-
-# Tek seferlik çıktılar — bir kez üretilir, bir kez bakılır, kayıt değildir.
-# Bulgu kalıcıysa `gunluk/` altına YAZILIR; ham çıktı repoda tutulmaz
 # (1,1 MB birikmişti — 2026-08-07'de temizlendi).
-session-report-*.html
+# Bulgu kalıcıysa `gunluk/` altına YAZILIR; ham çıktı repoda tutulmaz
+# MCP yapılandırması — içinde Qdrant API key'i düz duruyor, git'e girmez.
+# Panelin çalışma çıktısı — süreç üretiyor, kayıt değil
+# Tek seferlik çıktılar — bir kez üretilir, bir kez bakılır, kayıt değildir.
+# Şablonu: .mcp.json.example
 *-kanal.png
+.DS_Store
+.mcp.json
 ekran-*.png
+panel/durum.json
+panel/topla.log
+session-report-*.html

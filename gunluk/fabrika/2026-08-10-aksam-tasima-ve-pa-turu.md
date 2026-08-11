@@ -964,3 +964,139 @@ doğruydu, burada yanlış olurdu. Kopyalamadı.
 
 Üç ihtimal çıkardı (bayat · doğru ama atıfsız · kısmi), hiçbirini uygulamadı:
 *"silinen bir ilişki geri gelmiyor."*
+
+---
+
+## On bir — Zincir 23:08'de durdu: sebep OTURUM LİMİTİ
+
+Gece 23:08'de tüm kanal sustu ve 04:30'a kadar sessizlik. Ölçtüm: dört kutu
+canlı, izleyiciler ayakta, PQA `devops` denetim işini **almış ve okumuş**
+(imleci 23:09'daki devirde), altı dosya çalışma ağacında hazır. Yani iş yarım
+değil, **denetim aşamasında bekliyor.**
+
+**Teşhisim yanlıştı ve Mert düzeltti.** Ben yazdım: *"gözetimsiz çalışmada
+agent işini bitirince bekler; yeni turu tetikleyen bir şey yoksa kendiliğinden
+geçmiyor."*
+
+Gerçek sebep: **beş saatlik oturum limiti doldu.** Agent'lar beklemedi —
+durduruldular.
+
+**Fark önemli çünkü çözümü farklı:** benim teşhisim *"daha sık tetikle, merkez
+uyandırsın"* derdi — bir usul değişikliği. Gerçek sebep *"oturum ömrü işi
+bitiremiyor"* diyor — bir **kapasite gerçeği.** Ve ikincisi çözülmeden birincisi
+işe yaramaz: ne kadar tetiklenirse tetiklensin, limit dolunca oturum gidiyor.
+
+**Ve bu, günün ikinci "yanlış sebeple kapatma" vakası.** İlki PAM'de olmuştu:
+iki ölçüm arasındaki farkı *"ölçüm anı farkı"* diye açıklamıştı, oysa bayt/karakter
+farkıydı — *"yanlış sayı düzeltilebilir, yanlış gerekçe sorunu kapatıyor ve
+kimse bir daha bakmıyor."*
+
+Aynısını ben yaptım: durmayı açıkladım, açıklama makuldü, ve yanlıştı. Kayda
+geçen bir sebep sonraki oturumun okuduğu şey olur.
+
+Düzeltme dört agent'a iletildi. **Çözüm Mert'te** — *"bunu hallederiz sonra."*
+
+---
+
+## On iki — devops turu: ölçütün kendisi yanlış çıktı (yedinci commit `3688886`)
+
+Altı description düzeltildi ama asıl bulgu turun içinden çıktı: **`olcut.md`
+bir sınıflandırmayı yanlış yapıyordu ve kalan dört turu bozacaktı.**
+
+PAD bilinçli saptı. Ölçüt `devops`'u *"saf preload"* sayıyordu; description
+*"qa-engineer + code-auditor da OKUR"* diyordu. Kendi kuralını uyguladı
+(*"ölçüm metinle çelişiyorsa metin doğrudur"*) ve doğrulamaya gitti:
+
+```
+agents/code-auditor.md:62  "Denetlediğin katmanın omurgasını OKURSUN
+                            (backend/frontend/mobile/devops + ...)"
+agents/qa-engineer.md:57   aynı cümle, aynı liste
+```
+
+**Üç bağımsız ölçüm (PCA · PAD · PQA, aynı dakikada, birbirini görmeden)**
+aynı sonuca vardı: yedi-omurga listesinin **dördü yanlış.** Dört katman
+omurgası üç kitleye hizmet ediyor — kendi rolü + QA + CA.
+
+**Kurtarılan şey:** `backend`, `qa-engineer`, `mobile`, `frontend` — dördü de
+yanlış sınıfla işlenecekti.
+
+**PAD kendi aracının sınırını da yazdı, en değerli parça:**
+
+> *"Benim aracım da aynı sınıra sahipti — üçüncü hali METİNDEN buldum,
+> ÖLÇÜMDEN değil. Yani ölçüm beni YANLIŞ YÖNE götürüyordu, metin kurtardı."*
+
+Doğru sonuç, yanlış araç. Kurtaran şey metni okuma refleksi.
+
+### Kör noktalar: beş tür, hepsi aynı kökten
+
+```
+1. düz-metin/reference atıfları  → sayıyı EKSİK gösterir     (PAD)
+2. kendine atıf                  → sayıyı FAZLA gösterir     (PCA)
+3. agent body'lerindeki atıflar  → sayıyı EKSİK gösterir     (üçü birden)
+4. "→" işaretinin üç işlevi      → ÖLÇÜLMEDİ, kapsam adayı   (PCA)
+5. aynı sözdizimi farklı işlev   → sayıyı FAZLA gösterir     (PQA)
+```
+
+Beşincisi PQA'nın **kendi düzeltmesinden** çıktı: `quality`'yi üçüncü hal
+saymıştı, `code-auditor.md:100`'ü açtı — *"domain `quality`"* bir **memory
+etiketi**, skill atfı değil. Backtick'li ad her zaman skill atfı değil: memory
+domain adı, ClickUp statüsü, C# anahtar kelimesi olabilir.
+
+**Kökü tek:** desen **sözdizimini** yakalıyor, **işlevini** ayırt etmiyor.
+Çözüm beş kez aynı çıktı: *sayıyı kanıt sayma, hedefi aç ve bağlamını oku.*
+
+### Yeni bir hata sınıfı: araç doğru, kural atlandı
+
+PCA `backend` sayımında beş kalemi *"paylaşılan"* saydı. PAM yakaladı, ben
+doğruladım: beşinin de tek atfı `backend-developer.md`'de — yani **kendi
+rolünün body'sinde**, ve ölçüt bunu zaten dışlıyor.
+
+**Ham sayıları doğruydu** (`O1=1, O2=2`), yanlış olan **sınıflandırma.** Bu
+gece çoğu vaka *"araç yanlış, kural doğru"*ydu; bu ilki tersine.
+
+**Ayırt edici işaret:** ham sayılar tutuyor ama sınıf tutmuyor.
+
+### PCA kökü zaman çizgisiyle buldu — ve kendi sınıfını koydu
+
+```
+04:33  PCA soruyu sordu ("O neyi sayar")
+04:36  Clara tanımı yazdı ve olcut.md'ye koydu
+04:38  PCA ölçtü — VE OLCUT.MD'Yİ AÇMADI
+```
+
+> *"Sınıfı: `BHV-OPEN-SOURCE` ihlali — bir kurala dayanacaksan onu O AN aç ve
+> oku. **Bir dosyayı bir kez okumuş olmak, sonraki turda hâlâ okumuş olmak
+> değil.** Canlı bir işte kaynak dosya TUR ORTASINDA değişiyor ve ben bunu
+> hesaba katmadım."*
+
+**Ve ironiyi kendisi yazdı:** önerdiği *"üçüncü tanım"* ölçütte **zaten
+yazılıydı.** *"Okusaydım önermeme gerek kalmazdı — hükmü yeniden keşfetmişim."*
+
+Bu, Clara'nın kanonundaki *"eskimiş kayda dayanmadan önce kontrol et"*
+kuralının fabrika tarafındaki karşılığı — ve burada **iki dakikalık** bir
+bayatlama yeterli oldu.
+
+### Ham veri kendi hatasını yakalatıyor
+
+PCA'ya söylediğim ve onun teyit ettiği şey: **ham sayıları yazdığı için hata
+görünür oldu.** Yalnız sınıfı yazsaydı *"PAYLAŞILAN"* der geçerdik ve beş kalem
+boşuna Katman B'ye giderdi.
+
+PCA bunu `ISD-PRINT-AUDIT-RAW`'un ölçüm tarafındaki karşılığı olarak
+işaretledi: *"ham veri kendi hatasını yakalatıyor."*
+
+### Zincir beş buçuk saat durdu — sebep oturum limiti
+
+23:08 → 04:30 sessizlik. Benim ilk teşhisim yanlıştı (*"agent bekler,
+tetikleyen yok"*); Mert düzeltti: **beş saatlik oturum limiti.** Agent'lar
+beklemedi, durduruldular.
+
+Fark önemli: benim teşhisim bir **usul değişikliği** önerir, gerçek sebep bir
+**kapasite gerçeği** — ve ikincisi çözülmeden birincisi işe yaramaz.
+
+**Günün ikinci "yanlış sebeple kapatma" vakası** (ilki PAM'de, sabah:
+bayt/karakter farkını *"ölçüm anı farkı"* diye açıkladı). Aynı sınıf: yanlış
+sayı düzeltilebilir, **yanlış gerekçe sorunu kapatıyor.**
+
+Ve iş kaybı olmadı: PQA denetimi 23:12'de kesildi, 04:32'de kaldığı yerden
+sürdü, dosyaların değişmediğini `git status` ile doğruladı.

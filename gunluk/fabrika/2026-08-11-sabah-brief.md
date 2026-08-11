@@ -9,18 +9,28 @@ Bu dosya **okuyup çalışmaya başlamak için** yazıldı. Ayrıntı yukarıdak
 
 ## Şu an ne oluyor
 
-**Dört commit atıldı, push yok** (onayın öyleydi: *"commit onayım var, push yok"*).
+**Yedi commit atıldı, push yok** (onayın öyleydi: *"commit onayım var, push yok"*).
 
 ```
-c243526  code-auditor turu: üç description tetik tarzına
+3688886  devops turu: altı description — ve ÖLÇÜTÜN KENDİSİ YANLIŞ ÇIKTI
+3f55323  ui-designer turu (üç öz skill) — omurga KARAR BEKLİYOR
+f38cd5d  test-engineer turu: dört description + ölçütün kör noktası
+c243526  code-auditor turu: üç description — omurga/öz skill ayrımıyla
 3c4413a  PA body: kısaltılmış harita geri konuldu (yanlış ölçümle alınmıştı)
 a820cff  OY v8 PA turu: iki düzeltildi, biri çürütüldü, biri temiz
 25e1bf3  Fabrika ekibi skill-project'e taşındı
 ```
 
-**94 dosya, 8.875 satır** değişti. `origin/main` = `3c54b57`, dört commit ileride.
+`origin/main` = `3c54b57`, yedi commit ileride. `v8/` çalışma ağacı temiz.
 
-**İki rol bitti** (`project-assistant`, `code-auditor`), **`test-engineer` denetimde**, altı rol kaldı: `ui-designer` · `devops` · `backend` · `qa-engineer` · `mobile` · `frontend`.
+**Dört rol bitti** (`project-assistant`, `code-auditor`, `test-engineer`,
+`devops`), **`ui-designer` yarım** (üç skill commit'li, omurga karar bekliyor),
+**`backend` yürüyor**, üç kaldı: `qa-engineer` · `mobile` · `frontend`.
+
+**Zincir 23:08–04:30 arası durdu** — sebep **beş saatlik oturum limiti** (sen
+söyledin). Benim ilk teşhisim yanlıştı, düzeltildi. İş kaybı olmadı: PQA
+denetimi kaldığı yerden sürdü ve dosyaların değişmediğini doğruladı. **Aynı şey
+tekrar olabilir** — olursa yine kaldığımız yerden devam ederiz.
 
 ---
 
@@ -98,6 +108,48 @@ temizledim) ama kanona geçmesi senin kararın.
 **7. Push.** Altı commit bekliyor.
 
 ---
+
+## Ölçütün beş kör noktası — hepsi bu gece bulundu, hepsi aynı kökten
+
+```
+1. düz-metin/reference atıfları  → sayıyı EKSİK gösterir     (PAD)
+2. kendine atıf                  → sayıyı FAZLA gösterir     (PCA)
+3. agent body'lerindeki atıflar  → sayıyı EKSİK gösterir     (PCA+PAD+PQA)
+4. "→" işaretinin üç işlevi      → ÖLÇÜLMEDİ, kapsam adayı   (PCA)
+5. aynı sözdizimi farklı işlev   → sayıyı FAZLA gösterir     (PQA)
+```
+
+**Kökü tek:** desen **sözdizimini** yakalıyor, **işlevini** ayırt etmiyor.
+Backtick'li bir ad her zaman skill atfı değil — memory domain adı, ClickUp
+statüsü, C# anahtar kelimesi olabilir. Ok işareti her zaman harita kalemi
+değil — kural atfı, cümle içi gönderme olabilir.
+
+**Çözüm beş kez aynı çıktı:** *sayıyı kanıt sayma, hedefi aç ve bağlamını oku.*
+
+**Üçüncüsü kalan dört turu kurtardı:** ölçüt `backend`/`frontend`/`mobile`/`devops`
+omurgalarını *"saf preload"* sayıyordu; oysa `code-auditor.md:62` ve
+`qa-engineer.md:57` ikisi de o omurgaları okuduğunu yazıyor. Dört tur da yanlış
+sınıfla işlenecekti.
+
+**Dördüncüsü hâlâ açık** ve PCA doğru davrandı: ölçmedi, çünkü ölçerse önceki
+turların sayıları değişir ve geçmişe dönmek gerekir.
+
+## Üç ölçüm dersi — kanona aday
+
+**Bir — doğru sonuç yanlış araçtan da çıkabilir.** PAD `devops` turunda üçüncü
+hali **metinden** buldu, ölçümden değil: *"ölçüm beni yanlış yöne götürüyordu,
+metin kurtardı."* Sonucun doğru olması aracın doğru olduğunu göstermiyor.
+
+**İki — ham veri kendi hatasını yakalatıyor.** PCA `backend` sayımında beş
+kalemi yanlış sınıflandırdı ama **ham sayılarını yazdığı için** hata görünür
+oldu. Yalnız sınıfı yazsaydı kimse fark etmezdi. (`ISD-PRINT-AUDIT-RAW`'un ölçüm
+tarafındaki karşılığı.)
+
+**Üç — bir dosyayı bir kez okumuş olmak, sonraki turda hâlâ okumuş olmak
+değil.** PCA zaman çizgisiyle buldu: ölçüt 04:36'da güncellendi, o 04:38'de
+ölçtü ve dosyayı açmadı — **iki dakikalık** bayatlama yetti. Sınıfını kendisi
+koydu: `BHV-OPEN-SOURCE` ihlali. Ve ironiyi de yazdı: önerdiği tanım ölçütte
+zaten yazılıydı.
 
 ## Gecenin asıl sonucu — ölçüm disiplini davranışa döndü
 
