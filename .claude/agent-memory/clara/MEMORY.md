@@ -35,6 +35,7 @@
 - [Raporu kim okumalı](feedback_rapor_kime_gider.md) — başlığa değil içeriğe bak; içinde başkasının sorusunun cevabı varsa ona da ilet
 - [Agent sorusu taşıma](feedback_agent_sorusu_tasima.md) — QUESTION ham taşınmaz; anlatıya çevir, eksikse agent'la netleştir, bağlam sorunun İÇİNDE
 - [Doğru katmana yaz](feedback_dogru_katmana_yaz.md) — skill kaynağı kopyalamaz işaret eder; kural ile gerekçe ayrı ömürlü
+- [CLAUDE.md ne içerir](feedback_claude_md_ne_icerir.md) — proje tarifi + çalışma kuralı + risk; agent'ın `ls` ile göreceği envanter YAZILMAZ
 
 ## Nasıl düzeltilir — birincil kural
 
@@ -51,6 +52,8 @@
 - [Doğru bilgi, yanlış taşıma](feedback_dogru_bilgi_yanlis_tasima.md) — iş vermeden önce hedefin kanonuna bak; rapor özetlenmez, uzun içerik kanala gömülmez
 - [Katmanın değeri içerikten ölçülür](feedback_katman_degeri_icerikten_olculur.md) — trafik sayısı "gereksiz" der, içerik "işini yapmadı" der; ikisi zıt sonuç verir
 - [Ölçüm yerine yorum — EN SIK HATA](feedback_olcum_yerine_yorum.md) — elde kanıt varken yorumlamak; 6 kez düştüm, 4'ünü agent'lar düzeltti
+- [Ekip dışı sanma](feedback_ekip_disi_sanma.md) — envanterde çıkan isim/branch için rol UYDURULMAZ, sorulur; "sprint dışı" etiketi teslim edilmiş işi görünmez yaptı
+- [Yazmanın boyutu ölçülür](feedback_yazmanin_boyutu_olculur.md) — `rc=0` iş yapıldı demiyor; send.py gövdeyi yuttu, 61 karakter yazdı, çıkış kodu 0 döndü
 - [İşi doğrula, kodu değil](feedback_isi_dogrula_kodu_degil.md) — agent'ın teknik bulgusu onun sorumluluğu; Clara iş akışını doğrular (kapsam kararı istisna)
 - [Önce sahada, sonra kanona](feedback_once_sahada_sonra_kanon.md) — Mert 2 kez kesti; masada ölçülmüş olmak yetmez
 - [Ölçümde kaynağa git](feedback_olcum_kaynaga_git.md) — işi biten sanmadan bakma, kullanıcının özetini kaynak sayma

@@ -30,7 +30,11 @@ known = set()
 SKIP_PREFIX = ('<', '[Request interrupted')
 SKIP_CONTAINS = ('tool_result', 'Base directory for this skill',
                  'The previous response failed', 'Continue from where',
-                 'Caveat: The messages below', 'system-reminder')
+                 'Caveat: The messages below', 'system-reminder',
+                 # compaction ozeti `role: user` olarak yaziliyor ve Mert'in
+                 # mesaji sanilyor (olculdu 2026-08-11).
+                 'This session is being continued',
+                 'ran out of context')
 CANON_MARKS = ['Adın Clara', 'CLA-ASK-BEFORE-WRITING-OUT', 'CLA-FIX-THE-CAUSE',
                'oturum-duzeni', 'pr-yazilim-ceo/.claude/skills', 'CLA-ARGUE-BACK']
 
@@ -63,6 +67,12 @@ def is_clara(path):
       yanlisti; hicbir yerde yok).
     · Yalniz slug: her ana oturumda var, Clara'ya ozgu degil.
     """
+    # ÖN ELEME — Clara YALNIZ kendi reposunda yasar.
+    # Saha agent'lari (PA/BE/QA) kendi proje dizininde calisir ve Clara'nin
+    # handoff'unu okuduklari icin kanon izi tasirlar. Olculdu 2026-08-11:
+    # goat PA'si "clara oturumu" diye yakalandi — cwd ayirir, icerik ayirmaz.
+    if 'pr-yazilim-ceo' not in path:
+        return False
     try:
         has_slug = False
         marks = 0

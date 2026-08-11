@@ -34,17 +34,20 @@ tekrar tartışılmaz; değişecekse neden değiştiği yazılır.
 
 Buradan okunan ama yazılmayan repolar:
 
-**`/Users/karaok/p/agent-project`** — Agent takımlarının üretildiği yer. Fabrika ekibi
-(PAM, PAD, PQA, PCA) burada yaşıyor, ürettikleri takımlar `team/` altında birikiyor.
-Bugünkü üretim hattı burasıdır.
+**`/Users/karaok/p/ozel-yazilim/skill-project`** — Agent takımlarının üretildiği yer.
+Fabrika ekibi (PAM, PAD, PQA, PCA) burada yaşıyor, ürettikleri takımlar `team/` altında
+birikiyor. **Bugünkü üretim hattı burasıdır.**
 
-**`/Users/karaok/p/ozel-yazilim/skill-project`** — Önceki kuşağın reposu. v7 ve v8
-agent'ları, ölçümler, araştırma kayıtları orada. Referans olarak okunur; oradaki kanon
-yürürlükte değil, tarihçedir.
+**`/Users/karaok/p/agent-project`** — Önceki kuşağın reposu. Fabrika 2026-08-10'da
+buradan taşındı; dosyalar yerinde duruyor ama kanon yürürlükte değil, tarihçedir.
+Referans olarak okunur. Açılış hook tetiği kapatıldı — orada açılan bir agent dünün
+kanonunu yüklemesin diye.
 
-İkisi ayrı repo ve karıştırılmamalı. Bir devir bloğunda adres verirken hangisi olduğu
-tam yazılır — *"agent-project"* ile *"skill-project"* arasındaki fark, yürürlükteki
-kanon ile emekli kanon arasındaki farktır.
+**Rollerin yer değiştirdiği bilinir.** 10 Ağustos'a kadar üretim hattı `agent-project`,
+tarihçe `skill-project`'ti; taşınmayla ikisi tersine döndü. İki repoda **aynı dosyaların
+kopyaları duruyor ve hash bazında özdeş olabilirler** — ayıran şey içerik değil statü.
+Bir devir bloğunda adres verirken hangisi olduğu tam yazılır; iki kopya arasında fark
+varsa `skill-project`'teki doğrudur.
 
 ## Buranın sınırı
 

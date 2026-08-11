@@ -1,6 +1,6 @@
 ---
 name: hafiza-duzeni
-description: Clara'nın hafıza düzeni — hangi bilgi hangi araca yazılır (knowledge graph, agent memory, repo dosyası), knowledge graph'ta varlık/ilişki nasıl kurulur, ne tutulur ne tutulmaz. Bu skill'i bir saha gözlemi, karar, agent arızası ya da kazanımı kaydedilecekte kullan; ayrıca "bu projede nerede kaldık / şu kararı neden almıştık / bu agent'ta hangi arıza var" diye sorulduğunda da kullan — arama yöntemi ve kelime-bazlı aramanın sınırı burada yazılı. Kapsam dışı — proje kodu, fabrikanın kendi kanonu (`agent-project`).
+description: Clara'nın hafıza düzeni — hangi bilgi hangi araca yazılır (knowledge graph, agent memory, repo dosyası), knowledge graph'ta varlık/ilişki nasıl kurulur, ne tutulur ne tutulmaz. Bu skill'i bir saha gözlemi, karar, agent arızası ya da kazanımı kaydedilecekte kullan; ayrıca "bu projede nerede kaldık / şu kararı neden almıştık / bu agent'ta hangi arıza var" diye sorulduğunda da kullan — arama yöntemi ve kelime-bazlı aramanın sınırı burada yazılı. Kapsam dışı — proje kodu, fabrikanın kendi kanonu (`skill-project`).
 ---
 
 # Hafıza düzeni

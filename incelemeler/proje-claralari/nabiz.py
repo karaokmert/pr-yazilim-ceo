@@ -82,6 +82,7 @@ if not WATCH:
 
 # --watch: yalniz DURUM DEGISINCE bagir (her turda degil — gurultu olur)
 onceki = {}
+duyurulan_toplu = set()   # toplu sessizligi proje basina BIR kez bagir
 while True:
     try:
         for yas, proje, ad, n in nabiz():
@@ -90,6 +91,25 @@ while True:
             durum = isaret(yas)
             anahtar = f'{proje}/{ad}'
             eski = onceki.get(anahtar)
+            # Ayni projedeki uclar sirayla susuyorsa bu DORT olay degil BIR olay:
+            # "o ekip isini bitirdi". Dorduncu kez bagirmak gurultu.
+            # (Olculdu 2026-08-11: fabrikanin dort rolu 34-46 dk arasinda
+            #  sirayla sustu, nabiz dordunu ayri ayri bagirdi.)
+            proje_durum = [isaret(y) for y, p, a, n in nabiz()
+                           if p == proje and y <= ESIK_OLU]
+            toplu = len(proje_durum) >= 3 and all(d == '○' for d in proje_durum)
+            if toplu and proje in duyurulan_toplu:
+                onceki[anahtar] = durum
+                continue
+            if toplu:
+                duyurulan_toplu.add(proje)
+                print(f"NABIZ | {proje} | TOPLU SESSIZLIK — {len(proje_durum)} "
+                      f"ucun hepsi sustu | is bitti ya da oturum limiti",
+                      flush=True)
+                onceki[anahtar] = durum
+                continue
+            if not toplu:
+                duyurulan_toplu.discard(proje)
             if eski != durum:
                 # YALNIZ KOTULESME bagirilir. Iyilesme (◐→●) haber degil:
                 # uc zaten calisiyor demektir. Ve "◐" tek basina ariza degil —

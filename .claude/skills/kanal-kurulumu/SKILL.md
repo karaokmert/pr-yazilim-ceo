@@ -1,6 +1,6 @@
 ---
 name: kanal-kurulumu
-description: Clara'nın agent kanalı kurma ve yönetme yöntemi — yıldız topoloji, yönetici merkezde, her agent'ın inbox/outbox kutusu, JSON düzeni ve beş Python betiği. Bu skill'i "kanal kur / N agent için kanal oluştur / kanalı başlat / bu projede kanal düzenini kur" denen her durumda kullan. Ayrıca bir kanal arızası araştırılırken de kullan — mesaj gelmiyor, monitör sessiz, kanal çalışmıyor gibi durumların sebepleri ve ayırt edici testleri burada. Kapsam dışı — fabrikanın kendi kanonu (`agent-project`, PAD'in işi), proje kodu.
+description: Clara'nın agent kanalı kurma ve yönetme yöntemi — yıldız topoloji, yönetici merkezde, her agent'ın inbox/outbox kutusu, JSON düzeni ve beş Python betiği. Bu skill'i "kanal kur / N agent için kanal oluştur / kanalı başlat / bu projede kanal düzenini kur" denen her durumda kullan. Ayrıca bir kanal arızası araştırılırken de kullan — mesaj gelmiyor, monitör sessiz, kanal çalışmıyor gibi durumların sebepleri ve ayırt edici testleri burada. Kapsam dışı — fabrikanın kendi kanonu (`skill-project`, PAD'in işi), proje kodu.
 ---
 
 # Kanal kurulumu
@@ -98,12 +98,21 @@ sessiz kalabilir; mesajlar elden taşınır ve kimse fark etmez.
 
 ## `--project` bayrağı ZORUNLU
 
-`setup.py --project` verilmezse varsayılan **`agent-project`.** Yani başka bir proje için
-kanal kuran agent bayrağı atlarsa kutusu **fabrikanın dizinine** düşer, `rc=0` alır ve
-**fark etmez.**
-
-**Kural: `--project` her zaman yazılır**, `agent-project` olsa bile. Açıkça yazılmış
+**Kural: `--project` her zaman yazılır**, varsayılanla aynı olsa bile. Açıkça yazılmış
 varsayılan bir karardır; atlanmış varsayılan bir boşluktur.
+
+Verilmezse betik `skill-project` kullanır **ve `stderr`'e uyarı basar** (2026-08-11).
+Yani atlanan bayrak artık sessiz değil — ama uyarı ekranda kaybolabilir, o yüzden kural
+duruyor.
+
+Arızanın şekli bilinir: varsayılan **doğru olduğu sürece görünmez.** Ölçüldü
+(`references/olcumler.md`) — dört uç bayrak eksiğini bulmadı, çünkü dördü de varsayılan
+projedeydi. Başka bir projede çalışan agent bayrağı atlarsa kutusu fabrikanın dizinine
+düşer, `rc=0` alır; uyarıyı okumazsa fark etmez.
+
+**Betiklerin tek kaynağı:** `skill-project/tools/kanal/`. `~/.pr-kanal/{proje}/tools/`
+altındakiler oradan üretilen kopyalardır — bir düzeltme **önce kaynağa** yazılır, sonra
+kopyalara. Tersi yapılırsa bir sonraki kanal eski kopyadan üretilir ve arıza geri gelir.
 
 ## Dizin yapısı
 
@@ -342,8 +351,9 @@ NE: Kendi kanalını kur, izleyicini aç, sonra bekle.
      A=~/.pr-kanal/{PROJE}/tools
      python3 $A/setup.py {ROL} --task "{TEK SATIR İŞ}" --project {PROJE}
 
-     `--project` ZORUNLU. Atlanırsa varsayılan `agent-project` olur, kutun
-     yanlış projeye düşer, rc=0 alırsın ve FARK ETMEZSİN.
+     `--project` ZORUNLU. Atlanırsa varsayılan `skill-project` olur ve
+     stderr'e uyarı düşer — ama kutun yanlış projeye kurulmuş olur ve
+     uyarıyı okumazsan rc=0 alıp FARK ETMEZSİN.
 
      setup.py kalan komutları mutlak yollarla ekrana basar — onları kullan.
 

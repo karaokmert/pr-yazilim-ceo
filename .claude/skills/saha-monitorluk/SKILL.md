@@ -1,6 +1,6 @@
 ---
 name: saha-monitorluk
-description: Clara'nın saha monitörlüğü — açık agent oturumlarını izleme, Mert'in agent uyarılarını biriktirme, takılan işi yakalama ve düzeltmelerin tutup tutmadığını ölçme. Bu skill'i "monitör et / aktif oturumları izle / agentları takip et / kim ne bekliyor / sahada ne oluyor" denen her durumda kullan. Ayrıca izlemeyi kurarken de kullan — panel ve takip mekaniği, ölçülmüş dört tuzak ve haber verme biçimleri burada yazılı. Kapsam dışı — arıza teşhisi ve kanon taraması (fabrikanın işi, `agent-project`), kayıt mekaniği (`hafiza-duzeni` skill'i), ve bir davranışın sebebini ölçmek için test kurmak (`agent-sinama`) — monitörlük sahada OLANI kaydeder, sınama bir test KURAR.
+description: Clara'nın saha monitörlüğü — açık agent oturumlarını izleme, Mert'in agent uyarılarını biriktirme, takılan işi yakalama ve düzeltmelerin tutup tutmadığını ölçme. Bu skill'i "monitör et / aktif oturumları izle / agentları takip et / kim ne bekliyor / sahada ne oluyor" denen her durumda kullan. Ayrıca izlemeyi kurarken de kullan — panel ve takip mekaniği, ölçülmüş dört tuzak ve haber verme biçimleri burada yazılı. Kapsam dışı — arıza teşhisi ve kanon taraması (fabrikanın işi, `skill-project`), kayıt mekaniği (`hafiza-duzeni` skill'i), ve bir davranışın sebebini ölçmek için test kurmak (`agent-sinama`) — monitörlük sahada OLANI kaydeder, sınama bir test KURAR.
 ---
 
 # Saha monitörlüğü

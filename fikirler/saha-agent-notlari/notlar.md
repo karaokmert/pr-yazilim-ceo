@@ -99,15 +99,53 @@ Bu ayrım ölçülebilir ve otomatik denetlenebilir.
 **İkinci cümlesi (13:07):**
 > "Pluginlerde bunu yapamıyoruz bunu sen araştırıp bulmuştun"
 
-### Ölçüm — KISMEN YAPILDI
+### Ölçüm — İLK CEVAP YANLIŞTI, DÜZELTİLDİ (2026-08-11)
 
-`~/.claude/settings.json` okundu:
-- `permissions.defaultMode` = **`auto`** — zaten auto
-- `hooks` blokları: SessionStart, PostCompact, Notification, Stop
+**İlk ölçüm (2026-08-10):** `~/.claude/settings.json` → `permissions.defaultMode`
+= `auto`. Sonuç: *"global zaten auto, hook'a gerek yok, notun zemini yanlış."*
 
-→ **Global varsayılan zaten auto.** Yeni açılan oturum auto başlıyor; hook'la
-çevirmeye gerek yok. Bu, notun zeminini değiştiriyor: istek bir arızadan doğmuş
-olmalı, ama arıza varsayılan mod DEĞİL.
+**⚠️ BU CEVAP YANLIŞTI.** Ayar dosyasını okumak, sahadaki davranışı ölçmek değil.
+
+**İkinci ölçüm (2026-08-11, Mert *"agent'lar hep default mode'da açılıyor ama"*
+dedikten sonra)** — canlı oturumların transcript'lerindeki `permissionMode` alanı:
+
+```
+2919d16b  default     ← goat agent
+fd73df88  default     ← Clara (profil üzerinden)
+889bd436  default
+de921937  default
+d163aa0e  default
+fff17836  auto        ← YALNIZ BU (izleyen Clara, doğrudan açılmış)
+```
+
+**Altı oturumun beşi `default`.** Global ayar `auto` diyor ama **sahaya geçmiyor.**
+
+### Sebep — SCRUB, ve üç şey birbirine bağlıymış
+
+`settings.json` → `env: {"CLAUDE_CODE_SUBPROCESS_ENV_SCRUB": "1"}`
+
+SCRUB alt süreçlere geçen ortamı temizliyor (kimlik sızıntısına karşı gerçek bir
+koruma — `SSH_AUTH_SOCK`, `GEMINI_CLI_IDE_AUTH_TOKEN` gibi değerler bu ortamda
+duruyor). **Ama permission modu da o temizliğe takılıyor.**
+
+- VS Code profilleri agent'ı `zsh -c` ile açıyor → **alt süreç** → mod varsayılana düşüyor
+- Doğrudan açılan oturum (izleyen Clara) → `auto` alıyor
+- `--permission-mode auto` bayrağı eklendi (2026-08-11) → **SCRUB ezdi**, uyarı bastı:
+  *"Permission mode forced to default — CLAUDE_CODE_SUBPROCESS_ENV_SCRUB is set"*
+
+Anthropic'in kendi kaydında bilinen hata: **issue #51258** — *"SCRUB permission
+mode'u ezmemeli, ikisi bağımsız konular."*
+
+### Mert'in notu HAKLIYDI
+
+Not şuydu: *"agent'ların açılışında çalışan hook permission modu auto'ya
+çevirmeli."* İlk cevap *"gerek yok, zaten auto"* oldu — **ölçülmeden reddedildi.**
+
+→ **Ders (`feedback_olcum_yerine_yorum`'un tam vakası):** ayar dosyasını okumak
+davranışı ölçmek değil. *"Yapılandırmada şu yazıyor"* ile *"sahada şu oluyor"*
+farklı iki iddia; ikincisi ölçülmeden birincisiyle cevap verilmez.
+
+→ Ve `CLA-LABEL-YOUR-EVIDENCE` ihlali: *"okudum"* ile *"ölçtüm"* karıştırıldı.
 
 ### Plugin sınırı — DOĞRULANMADI
 

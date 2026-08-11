@@ -63,6 +63,25 @@ Kendi başına transcript taraması yapılmaz; tarama yalnız **ilk kurulumda** 
 → Bu bir betik arızası değil, **yönetenin disiplin arızası** — iki kaynağı birden
 taşımak.
 
+### Dördüncü tuzak — compaction "Mert'in mesajı" gibi görünüyor
+
+Bir oturum context sınırına dayanıp **compaction** geçirdiğinde, özet metni
+transcript'e **`role: user`** olarak yazılıyor:
+
+> *"This session is being continued from a previous conversation that ran out of
+> context. The summary below covers the earlier portion..."*
+
+→ İzleyici bunu **Mert'in mesajı** sanıyor. Ölçüldü 2026-08-11 (CLARA-A'nın halefi,
+05:18).
+
+→ **Ders:** `role: user` olan her şey kullanıcıdan gelmiyor. Sistem enjeksiyonları
+(compaction özeti, task bildirimleri, skill gövdeleri) aynı rolü taşıyor.
+Filtrelenmesi gereken bir sınıf daha.
+
+→ Bu izleme düzeninin **kör noktası** ayrıca: compaction geçen bir oturum bağlamının
+bir kısmını kaybeder — yani o Clara'nın sabahki düzeltmeleri (D1, D14, D15) artık
+elinde olmayabilir. **Aynı hatanın tekrarlanması beklenir.**
+
 ### Üçüncü tuzak — "çift basma" sanılan şey
 
 Monitör bir mesajı bastığında zaten kayıtta görünüyorsa ilk düşünce *"imleç bozuk,
@@ -599,6 +618,66 @@ tahminden gelir, PA'nınki koddan.
 → **Ve Clara doğru davrandı:** *"BE doğru yerde durdu, muhatabı sensin"* diyerek
 taşıdı, kendi cevaplamadı. Düzeltme 3 saat içinde davranışa dönmüş.
 
+### D15 — "PA'ya kapsam vermene gerek yok, 'biten işler bunlar' demen yeterli" (04:53)
+
+> **Mert [04:53]:** *"PA'ya **kapsam vermene gerek yok** ki, **'biten işler bunlar'
+> demen yeterli**"*
+
+Clara PA'ya iş devrederken FE kapsamını da yazmış. Mert kesti: Clara'nın işi
+**durumu bildirmek**, kapsamı çıkarmak **PA'nın işi.**
+
+→ **Bu D13'ün ("gereksinim kararı PA'nın") kardeşi ve daha ince hâli.** Orada
+Clara *karar* veriyordu; burada *kapsam öneriyor* — ikisi de PA'nın alanına giriyor.
+
+→ **Ayıran sınır netleşiyor:**
+> Clara → **ne oldu** (biten işler, geçen kapılar, açık kalemler)
+> PA → **ne yapılacak** (kapsam, gereksinim, öncelik)
+
+→ **Ve devir bloğu kuralının aynısı** (kanonda yazılı): *"hedefe ne yapacağını
+yazmazsın, ne bulunduğunu yazarsın. Hedef kıdemlidir ve kendi kanonunu uygular."*
+Kural var, sahada tutmuyor — **üçüncü kez** (D1, D13, D15 aynı aile).
+
+→ **Neden zararlı:** Clara'nın verdiği kapsam PA'nın çerçevesini önceden
+şekillendiriyor. PA o kapsamı **değerlendirmek** yerine **doğrulamaya** başlıyor —
+yani bağımsız bir bakış kaybediliyor.
+
+### D14 — "Working tree'de iş varken neden push onayı verdin?" (04:42) ⚠️
+
+> **Mert [04:42]:** *"şu an bekleyen **working tree'de işler var hâlâ**, neden
+> push onayı verdin ki?"*
+
+Clara push'a onay vermiş; oysa çalışma ağacında commit'lenmemiş değişiklikler
+duruyordu. Yani **push edilen şey işin tamamı değildi.**
+
+→ **Sessiz arıza sınıfı:** push başarılı görünür, CI geçer, kimse hata almaz —
+ama repoda eksik bir sürüm yayınlanmıştır. Eksik olan şey ancak biri o dosyayı
+aradığında ortaya çıkar.
+
+→ **Ders — bir kapıyı açmadan önce kapının ARKASINA bak:** *"commit'ler hazır"*
+ile *"çalışma ağacı temiz"* farklı iki şey. Push onayı ikincisini de gerektirir.
+
+**Ayıran ölçüm tek satır:** `git status --porcelain` boş mu?
+Boş değilse onay verilmez — ya commit'lenir ya bilinçli bırakıldığı söylenir.
+
+→ Bu Y24'ün (*"telepresence ve kural kontrolü yaptı mı?"*) kardeşi: orada da Mert
+**kapının geçilip geçilmediğini** sormak zorunda kalmıştı. İki kez aynı eksen —
+**Clara kapı durumunu sorulmadan getirmiyor.**
+
+→ Ve izleyen Clara aynı hataya bu sabah düştü: 58 commit push edilirken
+`git status` bakıldı ama **`.DS_Store` ve ham dosya artıkları** son anda fark
+edildi. Aynı sınıf, farklı yer.
+
+**Altı dakika sonra Mert dosyayı da göstermek zorunda kaldı [04:48]:**
+> *"BE working tree'yi incelesin, **hâlâ dosyalar var. promotion.cs vs orada
+> duruyor.**"*
+
+→ **İki adımlı düzeltme, ve ikisi de Mert'ten geldi:** önce *"neden onay verdin"*,
+sonra *"şu dosya duruyor"*. Aracı katman ne push edildiğini de, **ne kaldığını da**
+getirmemiş.
+
+→ **Ders keskinleşiyor:** kapı raporu iki listeyi birden taşımalı — **giden** ve
+**kalan.** Yalnız gideni söylemek *"tamamlandı"* izlenimi veriyor.
+
 ### D13 — "BE sorularına kendi başına karar verme, muhatabı PA" (19:19) ⚠️
 
 > **Mert [19:19]:** *"**BE sorularına kendi başına karar verme, PA ile konuş** —
@@ -727,6 +806,92 @@ kaynaklı.
 
 → Nabza eklenecek: bir projedeki uçların **hepsi** birden ○ olduysa, bunu
 *"toplu sessizlik — muhtemelen oturum limiti"* diye ayrı işaretle.
+
+### Y45 — "Branch'i önce locale indirsin ki neler yapılmış görsün" (05:22)
+
+> **Mert [05:22]:** *"PA'ya şunu söyle: Buse'nin main'inde **bizim BE işimizle
+> ilgisi olmayan commit'ler de var.** Onları da FE'ye kontrol olarak iletmesi için
+> **branch'i önce locale indirmesi lazım ki neler yapılmış görsün.**"*
+
+İki şey birden:
+
+**(1) Kapsam dışı değişiklik uyarısı.** Aynı branch'te başkasının (Buse'nin UI)
+commit'leri var. FE'ye iş verilirken *"sadece bizim yaptığımız"* sanılırsa, o
+commit'lerin etkisi gözden kaçar.
+
+**(2) Yöntem: rapordan değil KAYNAKTAN oku.** PA'nın ClickUp'tan ya da özet
+mesajdan öğrenmesi yetmiyor — **branch locale indirilecek**, commit'ler fiilen
+görülecek.
+
+→ **Kural 9'un aynısı** (*"brief yazmadan önce kaynağa git"*) ama bu kez **PA için**
+söylendi. Aynı ilke zincirin her halkasında geçerli: **özet girdidir, kaynak
+dayanaktır.**
+
+→ **Ve Y17'nin kardeşi:** orada Mert *"ikisi aynı koşulda mı"* diye sormuştu; burada
+*"ortamda başka ne var"* diye soruyor. İkisi de **kapsamın gerçekte ne olduğunu**
+sorgulama hamlesi.
+
+### Y44 — "Neden kararsız kaldık, detaylandırın" (05:14) ⭐
+
+BE bekleyen kalemleri listelemiş, ikisinde karar istemiş. Mert:
+
+> *"**1** commit'siz kalacak. **2.** **neden kararsız kaldık, detaylandırın** —
+> onu da yapalım"*
+
+Birinci karar sıradan. **İkincisi değil:** Mert kararı vermek yerine **kararsızlığın
+sebebini** istedi.
+
+→ **Ders:** bir karar noktasında takılan ekip, çoğu zaman **eksik bilgiyle**
+takılmıştır — karar zor olduğu için değil. *"Neden kararsız kaldık"* sorusu o
+eksiği görünür kılıyor; cevap verilince karar çoğu zaman kendiliğinden çıkıyor.
+
+→ Bu Y3'ün (emsal araştırtma) kardeşi: orada *"kim önerdi, gerçek örnek var mı"*
+diye sordu, burada *"neyi bilmiyoruz ki karar veremiyoruz"* diye soruyor. İkisi de
+**karara değil karar zeminine** bakıyor.
+
+→ **Ve `CLA-FIX-THE-CAUSE` ile aynı refleks:** kararsızlığı çözmek (karar vermek)
+yerine kararsızlığın **sebebini** kaldırmak.
+
+### Y43 — Kapı kapandı, iki iş PARALEL başlatıldı (04:52)
+
+> **Mert [04:52]:** *"push işlemi geçmiş, **PA'ya haber ver, FE için gereksinimi
+> belirlesin.** Bu arada **sende FE için kanal kurulum handoff'unu hazırla.**"*
+
+BE turu kapandı (push geçti), sıra FE'ye geldi. Mert iki işi **aynı anda** başlattı:
+- **PA** → gereksinim üretimi (içerik işi)
+- **Clara** → kanal kurulum handoff'u (altyapı işi)
+
+→ **D11'in ("her görevi bloklama") canlı uygulanışı:** Clara PA'nın gereksinimini
+**beklemeden** kendi hazırlığını yapıyor. İki iş birbirine bağlı değil — kanal
+kurulumu gereksinimden bağımsız.
+
+→ **Ve Y5 ile aynı desen** (*"paralel iş, sıralı kapı"*): paralellik hazırlıkta,
+sıra kapıda. FE üretime PA'nın gereksinimi gelmeden başlamayacak; ama kanalı
+şimdiden kurulu olacak.
+
+→ **Ders (aracı katman için):** bir tur kapandığında sıradaki turun **altyapısı**
+hemen kurulabilir. Beklenecek tek şey **içerik**, kurulum değil.
+
+### Y42 — "Karar kalemlerini SIRA İLE getir" (02:50)
+
+> **Mert [02:50]:** *"karar kalemlerini sıra ile getir bana"*
+
+Fabrika OY v8 analizini bitirdi, ortada bir yığın bulgu var. Mert **toplu döküm
+değil, sıralı sunum** istiyor.
+
+→ **Y13 ile aynı eksen** (*"soru soru gidelim, liste üzerinden gitmeyelim"*) ve
+**Kural 0**'ın kardeşi. Üç kez aynı şey söylendi:
+> Y13 (15:11): sınama soruları **tek tek**
+> D8 (15:20): mesajlar **tek bulgu**
+> Y42 (02:50): kararlar **sıra ile**
+
+**Ama Y26 ile çelişmiyor** (*"altı maddeye tek mesajda cevap"*) — orada Mert
+**cevap veriyordu**, burada **karar verecek.** Ayrım net:
+> Clara **sunarken** → tek tek (karar odaklanma ister)
+> Mert **cevaplarken** → toplu (altı cevap tek mesajda)
+
+→ **Ders:** yığın hâlinde sunulan karar seti, karar verilemeyen karar setidir.
+Sıralı sunum her kaleme ayrı dikkat ayırmayı mümkün kılıyor.
 
 ### Y41 — "Bana TEK bir make komutu vermeli, sonrası koşum onda" (01:51)
 
