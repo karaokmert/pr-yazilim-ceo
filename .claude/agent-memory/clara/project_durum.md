@@ -11,68 +11,67 @@ metadata:
 > (fabrika hattı) · `gunluk/{proje}/`. Açılış hook'u her projenin son kapanışını ayrı
 > listeler — **yalnız kendi modunun kapanışı okunur.**
 
-## EV — son kapanış (2026-08-11 21:20)
+## ⚠️ FABRİKA ADRESİ: `/Users/karaok/p/ozel-yazilim/skill-project`
 
-`gunluk/ev/2026-08-11-kapanis-3.md` — **Clara'nın OY yönetim yetkileri tanımlandı.**
-
-Mert `mert/` klasörünü açtı ve proje yöneticiliğini kendi kelimeleriyle yazmaya
-başladı (**başlangıç metni, devamı gelecek**). Altı soru soruldu, altısı cevaplandı:
-
-· **kabul kriteri bizim (ClickUp), test dokümanı PA'nın**
-· **kanon bekçiliği artık bir KAPI** — *"aç, kontrol et"* deme yetkisi var
-· **commit onayı Clara'da, PUSH onayı MERT'te**, push işlemini QA yapar
-· **sahada ölçüm YOK** (evde var — moda bağlı)
-· **Mert yokken karar Clara'nın**, rapora girer
-· **soru süzme dört kademeli**, Mert'e özet gider
-
-**Skill birleşti ve OY'a özelleşti:** `proje-yonetimi` 377→447, kadro ayrı
-reference'a çıktı (`references/oy-ekibi.md`, 206 satır, kaynak v8 kanıtlandı).
-**WS için ayrı skill yazılacak — yazılmadı.**
-
-**Kanal düzeni değişti:** agent artık **merkezin inbox'ına** yazıyor; Clara her
-açılışta eskisini arşivleyip yenisini kuruyor. İki dosya: `setup.py` (fabrika) +
-`kanal-acilis.py` (hook).
-
-**EV push kuyruğu BOŞ** — 12 commit gitti (`4f823ed..45acdd2`).
-
-**Mert'i bekleyen:** fabrika kuyruğu **20 commit** (Clara push etmez) · fabrikaya
-**üç devir bloğu** (send.py · PA gereksinim kası · setup.py değişikliği) · Goat
-kuyruğu **14 commit**.
-
-**Sonraki adım:** fabrika turu.
-
-## ⚠️ FABRİKA ADRESİ DEĞİŞTİ (2026-08-11)
-
-**Fabrika `/Users/karaok/p/ozel-yazilim/skill-project`'te.**
 `agent-project` kapatıldı — referans, açılış hook tetiği kaldırıldı.
+Fabrika oturumu **`skill-project` penceresinden** açılır.
 
-**Fabrika oturumu `skill-project` penceresinden açılır.**
+---
 
-## Son kapanış — FABRİKA hattı
+## FABRİKA — son kapanış (2026-08-11 21:30)
 
-**`gunluk/fabrika/2026-08-11-kapanis-2.md`** ← **bunu oku, çalışmaya oradan başla.**
+**`gunluk/fabrika/2026-08-11-kapanis-3.md`** ← **bunu oku, oradan başla.**
+Günlük: `gunluk/fabrika/2026-08-11.md`
 
-**Tek cümle:** Repo taşınması kapatıldı (141 dosya kurtarıldı, adresler düzeltildi,
-kanal varsayılanı + tek kaynak) — sıradaki iş **PAM'e tek tur, iki kalem**; devir
-bloğu kapanış dokümanında hazır.
+**Tek cümle:** Kanal açılış hook'u kuruldu (sahada iki kez doğrulandı) ve dört
+turluk bir push denetimi koştu — dört engelleyici kapatıldı, PAD son düzeltmeyi
+yaparken oturum kapandı.
 
-**Destek belgeleri (gerekirse):**
-- `gunluk/fabrika/2026-08-11-sabah-brief.md` — kalan **dört kararın** tam metni
-- `gunluk/fabrika/2026-08-11-kapanis.md` — sekiz rol turunun kapanışı
-- `kararlar/2026-08-11-fabrika-skill-projecte-tasindi.md` — taşınmanın gerekçesi
+**İlk hareket:** `~/.pr-kanal/skill-project/` altındaki **beş kutuyu oku
+(`read.py`) → arşivle (`archive.py`)** → yeni kanal kur. Kapanış iki taraflı;
+okunmamış mesaj varsa `archive.py` reddeder (rc=2), o imleç merkezin.
 
-## İlk hareket
+**Sonra:** push kararını Mert'e getir — kuyruk **20 commit**, 5 Ağustos'tan beri.
 
-**Fabrika modundaysan:** kapanış dokümanındaki **devir bloğunu** Mert'e ver (harita
-üçüncü sütunu + bitiş ölçütü, tek tur). Mert'in kararı: *"skill project'e geçince
-yapacağımız iş olsun."*
+## Yarım kalan
 
-**Yeni iş açma.** Kalan dört kalem: paylaşılan skill description dili (3) ·
-`ui-designer` omurgası + dokuz iddia (5) · yıldız topoloji bağımsızlığı (6) · push (7).
+**PAD** — E3'ün kalan cümlesi (`plugin-dagitim/references/surum-karari.md:96`,
+`QA-EDIT-VERSION-ONLY`) + dört kırık atıf. **Çalışma ağacında duruyor**, commit
+edilmedi.
 
-**Push bekliyor:** `skill-project` **20** · `pr-yazilim-ceo` **0** (21:20'de push edildi).
-Fabrikada commit onayı var, **push onayı ayrı ve alınmadı.**
+**PQA** — PAM'in K10 commit'inin (`0f7e9e2`) denetimi. PAM iki soru sordu:
+kaldırılan paragraf *kayıt* mıydı yoksa hükmün gerekçesi de gitti mi ·
+`CLAUDE.md` ürün tarafında, `PAM-WRITE-DOCS-ONLY` sınırı.
 
-**Fabrika ekibi AÇIK ama durdu** — dört kutu + iki BE, arşivlenmedi.
-**Monitör oturumla ölür**, yeniden kurulur. Yeni kanal:
-`--project skill-project` (varsayılan o ama bayrak yine yazılır).
+## Mert'in kararını bekleyen
+
+1. **Push** — `skill-project` 20 commit. Fabrikada commit onayı var, **push onayı
+   ayrı ve alınmadı.**
+2. **Yürürlükteki gerilim** — `PQA-NO-FILE-EDIT` (*"istisnasız"*) ↔
+   `dagitim/SKILL.md:116` `DAG-BUMP-BY-AUDITOR` (*"tek istisnası budur"*). İkisi de
+   yürürlükte. İşaretlendi, ayrı işe.
+3. **16 kalem "eksik bırakıyor"** — PCA'nın 19 kaleminden üçü kapatıldı; kalanlar:
+   47 kimlik `rules-index.json`'da yok · sekiz skill symlink · tekrar eden
+   description'lar.
+4. **Sprint yapısı işi — BAŞLANMADI.** Mert 16:00'da istedi: *"Goat, Egeli, Osinif
+   sprint yapısını oku, fabrika ekibiyle incele, skill hâline getirmeye çalış."*
+   İlk ölçüm: üç proje üç farklı yapı; **Osinif'te bir sprint düzeni çöpe atılmış**
+   (`docs/trash/_sprint-2026-08`) — en değerli girdi o olabilir.
+   **Açık soru:** inceleme Clara'da mı, PAM'e mi verilecek?
+
+## EV hattı — son kapanış (2026-08-11 21:20)
+
+`gunluk/ev/2026-08-11-kapanis-3.md` — Clara'nın OY yönetim yetkileri tanımlandı.
+**EV push kuyruğu BOŞ.** Goat kuyruğu 14 commit.
+
+Altı karar: kabul kriteri bizim/test dokümanı PA'nın · kanon bekçiliği bir KAPI ·
+**commit onayı Clara'da, PUSH onayı Mert'te** · sahada ölçüm yok · Mert yokken
+karar Clara'nın · soru süzme dört kademeli.
+
+## Kanal
+
+**Beş kutu açık, hiçbiri arşivlenmedi** (clara merkez + PAM/PQA/PAD/PCA).
+**Monitör oturumla ölür.** Yeni kanal `--project skill-project`.
+
+Agent artık **merkezin inbox'ına** yazıyor; Clara her açılışta eskisini arşivleyip
+yenisini kuruyor (`setup.py` + `~/.claude/hooks/kanal-acilis.py`).

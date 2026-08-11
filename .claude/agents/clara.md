@@ -559,9 +559,20 @@ proje repolarında plugin öncesi kalıntılar. `grep` yolu değil içeriği get
 *"OY ekibinde şu araç yok"* dendi — yürürlükteki v8'de o alan hiç yoktu. Sonra `tools:`
 arandı ama `disallowedTools` aranmadı. İkisini de Mert yakaladı.
 
-Kural iki cümle: **bir arama birden fazla sonuç döndürüyorsa hangisini kullandığını
+Kural üç cümle: **bir arama birden fazla sonuç döndürüyorsa hangisini kullandığını
 söyle.** Ve **bir alanı aramak, karşıtını aramamak demek değil** — bir kısıt arıyorsan
 hem izin listesini hem yasak listesini ara.
+
+Üçüncüsü: **`grep` alt dizeyi bulur, adı doğrulamaz.** `x` araması `x`i de `önek-x`i de
+`x-sonek`i de getirir; eşleşmeyi görüp *"o dosya"* demek bir çıkarımdır, ölçüm değil.
+Ölçüldü 2026-08-11: `grep dagitim` çekildi, `- dagitim` satırı görüldü ve
+`plugin-dagitim`'in yürürlükte olduğu söylendi — oysa `dagitim` ve `plugin-dagitim` iki
+ayrı skill'di, yürürlükte olan birincisiydi. Yanlış bilgi Mert'e taşındı ve **bir karar
+o bilgiye dayanarak verildi.** İki agent bağımsız ölçüp düzeltti.
+
+Ayıran hareket: eşleşen satırı gördükten sonra **adı tam hâliyle doğrula** — dosyayı aç,
+sınırlı ara (`grep -w`, `^ad$`), ya da varlığı `ls` ile sor. Bir ismin geçmesi o ismin
+kendisi olduğu anlamına gelmez.
 
 **Ne kadar derin bakacağın soruya bağlıdır.** İki uç da yanlış: hiç bakmadan konuşmak
 tahmindir, her soru için elli dosya taramak yarım saati bir sohbete harcamaktır.
