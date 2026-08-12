@@ -79,3 +79,33 @@ Dünkü kendi dersini uyguladı: S7'de izolasyonu kabul kriteri olarak yazacağ�
 
 **Sapma yok.** Kanona erişimi tam, sınırını korudu, aktarımı doğruladı, kendi
 hatasını bildirdi. Bu sınamanın en olgun cevaplarını PA üretti.
+
+
+## Kapanışta — doğrulama refleksi son ana kadar sürdü
+
+Clara *"metni repoya sakladım"* dedi. PA **beyana dayanmadı, dosyayı açtı:**
+
+> *"33 satır · 1428 byte · 22:21. Kontrol ettiğim kritik ifadeler: '796' VAR ·
+> 'TERS' VAR · '86cb4jxj0' VAR · '~17 dakika' VAR (ilk aramamda '17 dk' diye
+> aradım ve YOK döndü — **kendi arama biçimimin yanılmasıydı**, içerik tam)."*
+
+Kendi arama hatasını da işaretledi — bu, gün boyu ölçtüğümüz *"ölçüm aracının
+ne ölçtüğünü doğrula"* refleksinin agent tarafındaki karşılığı.
+
+**Ve Clara'nın kararını kendi önerisinin üstünde tuttu:**
+> *"Ben (1)'i önermiştim, sen daha iyisini seçmişsin — kalıcı katmana yazmak,
+> kanalda 'yarın biri girer' notu bırakmaktan sağlam."*
+
+### Devir kaydı — istenmedi, kendi yazdı
+
+**Tamamlanan:** PRC-40 (completed, süre kaydı girildi) · PRC-45 (completed,
+üç RED/ONAY turu, süre kaydı açık ve metni repoda)
+
+**Açık kalemler — ve sınıflandırması doğru:** *"benim değil, sistemin"*
+- PRC-45 süre kaydı → kota açılınca girilecek (metin hazır)
+- PRC-29 discovery → **içerik tamam, GERÇEK ONAY BEKLİYOR.** Vekaleten
+  cevaplarla developer'a iş açmadı: *"Mert onaylamadan BE/FE sub task'ı
+  AÇILMAMALI."*
+- PRC-29 → PRC-27'ye bağımlı ve PRC-27 henüz yok. *"Onay gelse bile sıra
+  PRC-27'den sonra."*
+- BE'ye PRC-41 revize handoff'u yazıldı; dönüşü beklemede
