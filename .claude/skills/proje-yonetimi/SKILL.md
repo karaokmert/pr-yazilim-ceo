@@ -77,6 +77,13 @@ boşta agent bırakmazsın. **Sıra vermezsin** — o PA'nın.
 
 Her turda sor: **boşta kim var?**
 
+⚠️ **Bu soru PA'yı da kapsar.** Ölçüldü (2026-08-12): developer'ların boşta kalması
+sayıldı, PA sayılmadı — çünkü PA zihinde *"iş veren"* tarafta duruyor, *"iş bekleyen"*
+tarafta değil. Oysa PA'nın da sub task'ları var ve o da boşta kalır. Mert yakaladı:
+*"PA'ya neden ClickUp'ta duran sıradaki işin discovery'sini yazdırmıyorsun?"*
+
+PA boştaysa **sıradaki işi ona sorarsın** — iş vermezsin, **seçtirirsin.**
+
 **3. Kanal sahipliği** — kanal ayakta mı, kim kime yazmış, mesaj düştü mü.
 Merkez kutusu **senin** — agent'lar oraya yazar (aşağıda).
 
@@ -110,6 +117,14 @@ başka işe başlamış oluyor. **İki iş de yarım.**
 verilirken olur), ve öncelik taşır. **Hiçbir agent yeni sub task açmaz.**
 
 **Agent yürütür** — kendi sub task'ının statüsünü kendi çeker.
+
+⚠️ **Sınır kesindir ve fabrika kararıdır** (2026-08-12): agent **YALNIZ kendi sub
+task'ının** statüsünü çevirir. Ana task · başkasının sub task'ı · `Closed` · task
+silme → **mutlak yasak.**
+
+Kararın mantığı: sınır **talimatla** değil **sahiplikle** çiziliyor. Testte agent'ları
+sınırlayan şey bir talimattı — ve talimat bir oturumun içinde yaşar, mekanizma yaşamaz.
+Gerekçe: `kararlar/2026-08-12-clickup-yazma-yetkisi-kapsam-daraltma.md`.
 
 **Clara okur** — statü değiştirmez, iş açmaz. Durumu okur, sapmayı gösterir.
 
@@ -182,6 +197,17 @@ raporu** bittiyse rapor dosya yolu + ölçüm sayısı · **canlıya çıktıysa
 *"yok, uydurmuş"* sanır.
 
 ### Süre — completed sonrası, kayıttan kayda
+
+**Ölçülen tek şey `in progress`.** `Open` süresi ölçülmez, raporlanmaz, kapanış notuna
+yazılmaz.
+
+*Mert'in kuralı, 2026-08-12: "Open süresiyle ilgilenmiyorum, sadece in progress
+istiyorum. Zincirde bir agent'ın uzun süre beklemesi başka işte olabilir, ben tercih
+etmişimdir. **Agent'ın boşta beklemesi verimsizlik olarak okunamaz.**"*
+
+⚠️ Bu bir çerçeve hatasıydı ve Clara yaptı: oturum boyunca `Open` süreleri ölçülüp
+*"BE 108 dakikadır boşta"* diye raporlandı — **sorun gibi sunuldu.** Sıra Mert'in ve
+PA'nındır; bekleme bir karardır. Doğru ölçüm yanlış kutuya girdi.
 
 Agent `completed` çektikten **sonra** kendi `in progress` süresini ClickUp'tan çekip
 tracked time'a yazar.
@@ -262,7 +288,8 @@ değil **devrin hızı**.
 
 ### Clara'nın ölçtüğü üç şey
 
-**Tıkanma** — bir sub task ne kadardır aynı statüde.
+**Tıkanma** — bir sub task ne kadardır `in progress` ya da `test` statüsünde. (`Open`
+sayılmaz — orada bekleyen iş henüz başlamamıştır ve bu bir karardır, arıza değil.)
 **Kapasite** — bir agent'ta kaç açık sub task var.
 **Darboğaz** — havuzda kaç iş bekliyor. *Personel kararı bu sayıyla verilir, sezgiyle
 değil.*
@@ -284,9 +311,23 @@ Tek repoda birden çok agent çalışır (PA `docs/`, UID/FE kod, BE `api/`). `g
 çeken taraf **diğerinin yarım dosyalarını kendi commit'ine katar** — ve o an "kimin ne
 yaptığı" kaybolur, yani çözülmek istenen şeyin tam tersi olur.
 
-**Herkes yalnız kendi yolunu stage'ler** · commit öncesi `git status` · commit sonrası
-`git show --stat` ile doğrula · build artıkları (`obj/`, `bin/`, `*.tsbuildinfo`)
-`.gitignore`'a.
+⚠️ **`git add .` kullanmamak YETMİYOR — stage ORTAK bir alandır.** `git add <kendi
+yolun>` bile **mevcut stage'in üstüne** ekler; başkası dosyalarını stage'leyip henüz
+commit atmadıysa onlar da senin commit'ine girer.
+
+Ölçüldü: PA kurala tam uydu (`git add docs`), stage'i kontrol etti ve içinde FE'nin
+**24 dosyası** çıktı. Commit atsaydı FE'nin yarım işini götürecekti.
+
+**Üç adım, atlanmaz:**
+`git add <kendi yolun>` → `git diff --cached --name-only` ile **doğrula** → yabancı
+dosya varsa `git reset` + kendi dosyalarını tek tek ekle → commit → `git show --stat`.
+
+⚠️ **`git reset` başkasını etkiler:** stage'i tamamen boşaltır, diğerlerinin
+stage'lediği dosyalar da düşer (içerik kaybolmaz, yeniden stage'lenmeli). **Çektiysen
+kanala haber ver** — sessiz yapma.
+
+Build artıkları (`obj/`, `bin/`, `*.tsbuildinfo`) `.gitignore`'a — yol bağımsız
+kalıpla (`obj/`, `api/**/obj/` değil).
 
 ⚠️ **Bu kural OY kanonunda YOK** — *"developer yalnız KOD commit'ler"* var, *"yalnız
 KENDİ yolunu stage'ler"* yok. Yeni bir projede **iş vermeden önce hatırlatılır.**
