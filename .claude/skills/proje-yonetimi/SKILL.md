@@ -1,6 +1,6 @@
 ---
 name: proje-yonetimi
-description: Clara'nın Özel Yazılım (OY) projelerinde agent ekibini yönetme işi — dokuz rollük kadro (PA/BE/FE/MB/DO/QA/TE/CA/UID), sprint planlama zinciri, iş bitti sorgusu, commit onayı, bekleyenler listesi, kanal sahipliği, handoff taşıma, dört sessizlik türü, işi kapatma. Bu skill'i bir OY projesinde agent'lara iş verilecekte, yürüyen bir iş izlenecekte ya da kapatılacakta aç: "şu işi ekibe ver", "şuna ilet", "iş nerede kaldı", "denetim ne durumda", "bu işi kapatalım", "ekibi yönet", "handoff yaz", "sprint planlamaya başlayalım" denen her durumda. Ayrıca bir zincir tıkandığında, bir agent "iş bitti" dediğinde ya da Mert yokken karar gerektiğinde de aç. Kapsam dışı — kanal mekaniği (`kanal-kurulumu`), oturum açılış/kapanış (`oturum-duzeni`), haftalık planın kendisi (`sprint-yonetimi`), Websitesi ekibi (ayrı skill yazılacak).
+description: Clara'nın Özel Yazılım (OY) projelerinde agent ekibini yönetme işi — dokuz rollük kadro (PA/BE/FE/MB/DO/QA/TE/CA/UID), ClickUp task takip düzeni (sub task açılışı, statü akışı, kanıt zorunluluğu, süre kaydı, sabah dökümü), sprint planlama zinciri, iş bitti sorgusu, commit onayı, bekleyenler listesi, kanal sahipliği, handoff taşıma, dört sessizlik türü, işi kapatma. Bu skill'i bir OY projesinde agent'lara iş verilecekte, yürüyen bir iş izlenecekte ya da kapatılacakta aç: "şu işi ekibe ver", "şuna ilet", "iş nerede kaldı", "denetim ne durumda", "bu işi kapatalım", "ekibi yönet", "handoff yaz", "sprint planlamaya başlayalım", "task nerede", "sub task aç", "durum ne", "kim ne yapıyor" denen her durumda. Ayrıca bir zincir tıkandığında, bir agent "iş bitti" dediğinde ya da Mert yokken karar gerektiğinde de aç. Kapsam dışı — kanal mekaniği (`kanal-kurulumu`), oturum açılış/kapanış (`oturum-duzeni`), haftalık planın kendisi (`sprint-yonetimi`), Websitesi ekibi (ayrı skill yazılacak).
 ---
 
 # Proje yönetimi — Özel Yazılım
@@ -85,6 +85,211 @@ Merkez kutusu **senin** — agent'lar oraya yazar (aşağıda).
 **5. Fabrikaya besleme** — sahada görülen kural boşluğu fabrikaya taşınır.
 **Düzeltmezsin, taşırsın.** ⚠️ Taşımadan önce **kanonu oku** (D10: *"kanon eksik"*
 denildi, kural vardı).
+
+## ClickUp task takibi — işin kaydı
+
+**Tetik: bir işe başlanıyor.** Bu bölüm bir seçenek değil, sahanın omurgası —
+bozulduğunda kimin hangi işi bitirdiği belirsizleşir ve işler yarım kalır.
+
+*Mert'in teşhisi, 2026-08-12: "Projelerde akışlar birbirine girdi, kimin hangi işi
+bitirdiği belli olmadan diğer işe gidildi, bu nedenle her task yarım kaldı."*
+
+### Neden ClickUp tek başına çözmüyordu
+
+Araç zaten vardı. Arıza aracın yokluğu değil, **kimin yazdığıydı**: kanona göre
+ClickUp'a yalnız PA yazıyor (`CLICKUP-PA-ONLY-WRITE`), gerçek iş agent'ta ilerliyor,
+araya Clara giriyor. Üç katman, tek gerçek — ve kayıt gerçeğin bir tur gerisinde.
+
+Asıl kırılma daha derinde: ***"bitti" bir beyandır, kayıt değildir.*** Beyan üstüne
+akış ilerliyor, sonra denetim *"eksik"* diyor ve iş geri geliyor — ama o arada agent
+başka işe başlamış oluyor. **İki iş de yarım.**
+
+### Üç fiil, çakışma yok
+
+**PA açar** — discovery bitince katman sub task'larını **sahipsiz** açar (atama iş
+verilirken olur), ve öncelik taşır. **Hiçbir agent yeni sub task açmaz.**
+
+**Agent yürütür** — kendi sub task'ının statüsünü kendi çeker.
+
+**Clara okur** — statü değiştirmez, iş açmaz. Durumu okur, sapmayı gösterir.
+
+### Ana task altında BEŞ sub task
+
+```
+PRC-26  Randevu Takvimi              [in progress]
+  └ PA   Discovery                    ← PA'nın kendi işi de görünür
+  └ UID  Mock
+  └ BE   Contract
+  └ FE   Ekran
+  └ PA   Kapanış                      ← baştan Open durur
+```
+
+**PA'nın iki sub task'ı olmasının sebebi ölçüldü:** ilk turda PA 78 dakika çalıştı
+(discovery, üç soru turu, sub task açılışı, yorumlar) ve ClickUp'ta **tek izi yoktu.**
+*"PA ne yapıyor"* sorusunun cevabı yalnız kanal kutusundaydı.
+
+**Kapanış sub task'ı baştan açılır, sonda değil.** Gerekçesi PA'nın kendi cümlesi:
+*"sahada en sık kaybolan iş **bitmiş ama kapanmamış** iştir; kapanış kutusu Open
+dururken kimse 'bitti' diyemez. Bu bir görünürlük kaydı değil, bir **kapı**."*
+
+### Sıra
+
+```
+PA işi alır → ana task 'in progress' + kendi discovery sub task'ı 'in progress'
+  ↓
+Discovery biter → discovery 'completed' (kanıt: doküman yolu + commit)
+                + AYNI ANDA katman sub task'ları (sahipsiz) + kapanış sub task'ı açılır
+  ↓
+Katmanlar yürür → her agent kendi sub task'ında
+  ↓
+Hepsi 'completed' → PA kapanışı 'in progress' alır → konsolide eder
+                  → ana task 'live - dev' + kapanış notu → kapanış 'completed'
+```
+
+**Katman sub task'ları discovery'den SONRA açılır** — hangi katmanların gireceği
+discovery'den çıkar, önce açılamaz.
+
+### Statü akışı ve kapatma yetkisi
+
+```
+Open → in progress → test (QA'ya devrederken, agent çeker)
+     → QA onayı → completed (yine AGENT çeker)
+RED gelirse → revise → düzeltilir → tekrar test
+```
+
+**Kapatma yetkisi QA'da, kaydın eli sahibinde.** QA statüye **dokunmaz**, onay
+handoff'u verir; `completed`'ı developer kendi çeker.
+
+Bu ayrım `HANDOFF-QA-CLOSES-DEV` ile çelişmiyor — o kural **session** kapanışını
+düzenliyor, ClickUp statüsünü değil (CA beş dosyada doğruladı).
+
+⚠️ **Ayrı bir QA sub task'ı AÇILMAZ.** Katman denetimi o katmanın sub task'ında biter;
+ayrı kutu aynı denetimi iki yerde gösterir — biri gerçek, biri türev, ve *"hangisi
+doğru"* sorusu doğar. **"QA şu an ne bekliyor" sorusunun cevabı: `test` statüsündeki
+sub task'lar.** QA'nın kendi sub task'ı yalnız tek başına duran bir iş için açılır
+(push öncesi toplu değerlendirme, production audit).
+
+### Kanıt zorunlu — statünün dayanağı
+
+Kanıtı olmayan statü geçişi yapılmaz. Böylece *"bitti"* beyan olmaktan çıkıp **kayıt**
+olur, ve kayıt yalan söylemez.
+
+**Kod** bittiyse commit hash · **denetim** bittiyse QA'nın onay handoff'u · **CA
+raporu** bittiyse rapor dosya yolu + ölçüm sayısı · **canlıya çıktıysa** push hash.
+
+**Local commit uzak repoda görünmez** — BE/FE/MB local commit'ler, push QA'da. Kanıt
+`commit 9a3f2c1 (local, push bekliyor)` diye **işaretlenir**, yoksa doğrulayan taraf
+*"yok, uydurmuş"* sanır.
+
+### Süre — completed sonrası, kayıttan kayda
+
+Agent `completed` çektikten **sonra** kendi `in progress` süresini ClickUp'tan çekip
+tracked time'a yazar.
+
+```
+clickup_get_task_time_in_status(task_id)
+  → status_history içinde status=='in progress' satırının total_time_minutes
+  → clickup_add_time_entry(task_id, start, duration)
+```
+
+⚠️ **Üç ölçülmüş tuzak:**
+
+**`current_status.total_time_minutes` DEĞİL** — aynı isim iki yerde var ve farklı şey
+söylüyor (`current_status` = "şu ana kadar geçen", `status_history` = "o statüde
+toplam"). Ölçüldü: aynı task'ta 69'a karşı 68, ve fark büyüyor. Yanlış alanı okumak
+**patlamaz, sessizce yanlış sayı yazar.**
+
+**`since` başlangıç DEĞİL** — "o statüye **en son** geçiş anı". Revize turu yaşanmışsa
+son turu gösterir, toplam süre ise bütün turları toplar. `start`ı toplam süreden geri
+sayarak üret.
+
+**Timer kullanılmaz.** ClickUp'ta aynı anda **tek timer** çalışıyor ve timer
+**kullanıcıya** bağlı, task'a değil — bütün agent'lar aynı hesaptan yazıyor. Paralel
+agent'larda ikincisi hata alır. `time_estimate` de kullanılmaz (o "tahmin" demek).
+
+**Sayı hesaplanmaz, çekilir.** Elle hesaplanan süre ile kayıttaki ayrışırsa *"hangisi
+doğru"* sorusu doğar.
+
+### Bağlam taşıma — kapsam açıklamada, DAYANAK yorumda
+
+**Sub task açmakla iş bitmez, dayanağı da gitmeli.** Ölçüldü: PA discovery'yi yazdı,
+sub task'ları açtı, ama discovery hiçbir yere bağlanmadı — UID işi alınca *"kapsam
+var, gerekçe yok"* dedi ve haklıydı.
+
+**Açıklama = KAPSAM** (ne yapılacak) · **Yorum = DAYANAK** (neden böyle). İkisi ayrı
+ömürlü: dayanak değişirse yeni yorum düşer, kapsam sabit kalır.
+
+PA her sub task'a **o katmanı ilgilendiren** risk kararlarını yorum olarak düşer —
+kopya değil, katmana özel. Ve discovery kalıcı bir eve yazılır (`docs/` altına,
+commit'lenir) — `/tmp` kalıcı değildir, zincirin ilk halkası uçar.
+
+**Bu mekanizmanın çalıştığı ölçüldü:** UID, PA'nın yorumundaki bir nottan (*"farklı
+süreli slotlar yan yana görünebilir"*) kendi planında olmayan bir gereksinim çıkardı
+ve ızgarayı ona göre kurdu.
+
+### Sabah dökümü — hatırlanmaz, okunur
+
+Mesai bitiminde **ana task'lar `pause`**, sub task'lar olduğu gibi kalır. Ertesi sabah
+durum ClickUp'tan okunur.
+
+Dökümü Clara basar, **sana ve PA'ya** gider — agent'lara değil. **Sıra PA'nındır.**
+
+```
+Dün kaldığımız yer
+  PRC-26 [pause]  └ FE  form validasyonu   [in progress]  dün 16:40
+  PRC-27 [pause]  └ BE  sorgu              [test]         QA'da, dün 17:00'dan beri
+  PRC-28 [pause]  └ —   sub task yok       PA henüz iş vermemiş
+```
+
+Üçüncü satır kritik: **sub task'ı olmayan ana task, hiç başlamamış iş demektir.**
+
+⚠️ *"Kaldığın yerden devam et"* bir **hatırlatma**, iş emri değil — ama agent için
+ikisi aynı görünür. Önce döküm basılır, **sonra PA sıra verir**, sonra agent hareket
+eder. Ve agent oturumları gece kapandığı için hatırlatmaya **sub task + ana task ID**
+eklenir; bellek ClickUp'ta, agent'ta değil.
+
+### İş bitince — "sıradaki ne" PA'ya sorulur
+
+Agent sub task'ını `completed` yapar, **PA'ya sorar** *"bittim, sıradaki ne"*. PA açık
+sub task'lara bakar (yeni açmaz), önceliğe göre **atar**, agent `in progress` alır.
+
+**Agent havuzdan kendi iş ALMAZ** — sıra PA'nındır.
+
+Bunun yan faydası: *"işim bitti"* artık bir **olay**. Havuzdan kendi alsaydı sessizce
+devam ederdi ve boşta çıktığı an hiç görünmezdi. Clara iki şeyi ölçer: **soru PA'ya
+ulaştı mı** (taşımazsa agent bekler) ve **cevap ne kadar gecikti** — bu agent'ın hızı
+değil **devrin hızı**.
+
+### Clara'nın ölçtüğü üç şey
+
+**Tıkanma** — bir sub task ne kadardır aynı statüde.
+**Kapasite** — bir agent'ta kaç açık sub task var.
+**Darboğaz** — havuzda kaç iş bekliyor. *Personel kararı bu sayıyla verilir, sezgiyle
+değil.*
+
+Üçü de **ölçülebilir**, Clara'nın hatırlamasına bağlı değil.
+
+### Sessiz arıza — yazma çağrısının dönüşü ölçüm değildir
+
+İki vaka, aynı kök: sub task açılırken dönen yanıtta `description` boş göründü
+(doluydu), başka bir açılışta `custom_id` null geldi (atanmıştı). **Özet ve create
+yanıtları eksik alan döndürebiliyor.**
+
+**Sonucu okuyarak doğrula.** PA iki kez de düzeltmeye koşmadan önce okudu, ikisi de
+yanlış alarmdı — düzeltseydi var olan açıklamaların üstüne yazacaktı.
+
+### Paylaşılan çalışma ağacı — `git add .` YASAK
+
+Tek repoda birden çok agent çalışır (PA `docs/`, UID/FE kod, BE `api/`). `git add .`
+çeken taraf **diğerinin yarım dosyalarını kendi commit'ine katar** — ve o an "kimin ne
+yaptığı" kaybolur, yani çözülmek istenen şeyin tam tersi olur.
+
+**Herkes yalnız kendi yolunu stage'ler** · commit öncesi `git status` · commit sonrası
+`git show --stat` ile doğrula · build artıkları (`obj/`, `bin/`, `*.tsbuildinfo`)
+`.gitignore`'a.
+
+⚠️ **Bu kural OY kanonunda YOK** — *"developer yalnız KOD commit'ler"* var, *"yalnız
+KENDİ yolunu stage'ler"* yok. Yeni bir projede **iş vermeden önce hatırlatılır.**
 
 ## Kanon bekçiliği — iş bitti dendiğinde
 
