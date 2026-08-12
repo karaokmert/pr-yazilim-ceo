@@ -104,6 +104,17 @@ buldu ve kendi hükmünü çürüttü** — ikisi de "yok" diyebilirdi:
 `agent-PA.md` · `agent-BE.md` · `agent-FE.md` · `agent-QA.md` · `agent-CA.md`
 (UID açılmadı — dokümanı yok)
 
+## Test kısıtının bedeli — FE'nin notu
+
+> *"MEMORY'YE HİÇBİR ŞEY YAZMADIM — ilk talimatına sadık kaldım. Bugün normalde
+> memory'ye gidecek **en az iki kazanım** vardı (skill açmadan hüküm verme
+> hatası; kanıt-çıkarım ayrımından düşmem). Bunları YAZMADIM. **Bilinçli bir
+> kayıp.** Gerçek bir oturum olsaydı ikisi de yazılırdı."*
+
+Aynı şeyi CA ve QA da bildirdi. Yani bu sınamada agent'lar **öğrendiklerini
+kaydedemediler** — test kısıtı gereği. Bir sonraki oturumda bu kazanımlar
+sıfırdan üretilmek zorunda.
+
 Ham kanıtlar: `kanit/` — T1 (kanon) · T2 (sınır) · T3 (Goat) · T4 (sapma avı) ·
 T5 (öz-denetim) · T6 (QA denetimi) + dünkü QA raporu
 

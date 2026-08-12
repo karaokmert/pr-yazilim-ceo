@@ -64,6 +64,31 @@ Clara'nın kanonunda *"karar Mert'indir"* yazıyor.
 alternatifi (bekletmek) bunu ölçemezdi. **Ama karar benimdi ve riski bende.**
 Mert bu kararı geçersiz sayarsa PRC-40 discovery'si yeniden yazılmalı.
 
+## H8 — Kapanışa geçerken PA'nın açık kalemini atladım
+
+PA süre kaydı için karar sormuştu: *"(a) yarın girilsin mi, (b) girilmez ama
+gerekçesi kayda geçsin mi — tek kelime yeter."*
+
+Kapanış mesajını yazdım ve **soruyu görmedim** — kendi raporumu toparlamaya
+odaklanmıştım.
+
+**PA doğru davrandı:** kapatmadı, sordu, bekledi ve şunu yazdı — *"cevap
+gelmezse GİRMEM ve açık bırakırım; kendi kararımla kapatmam."*
+
+**Kök:** kapanışa geçerken *"benim işim bitti"* moduna girdim ve karşı tarafın
+bekleyen kalemini kontrol etmedim. Kendi kanonumda bunun karşılığı var —
+*"bir karar bekliyorsa o zincir durmuştur ve durduğu sürece hatırlatılır"* —
+ama bu kez hatırlatan **ben değil PA** oldu.
+
+## H9 — İki ayrı bulguyu tek başlıkta birleştirdim (PA düzeltti)
+
+Özette S7'yi *"PA'nın bulgusu"* diye tek kalem yazdım. PA düzeltti:
+
+> *"BEN İKİ AYRI ŞEY buldum ve ikincisi daha ağır."* (S5 şişirme / S7 eksiltme)
+
+Raporda ikisi ayrı duruyordu ama **özet cümlesi** birleştirmişti — ve özet
+çoğu zaman tek okunan yer. Düzeltildi.
+
 ## Ölçülmeyen: Clara'nın kendi hook arızası
 
 Sabah bulundu, düzeltilmedi: Clara açılış hook'u kanalı hiç göremiyor

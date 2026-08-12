@@ -12,6 +12,13 @@
 
 **Üç agent bağımsız buldu** (BE · QA · CA) ve üçü de bugün fiilen çarptı.
 
+**CA'nın kendi kanonundan eşik ayrımı:**
+> *"T4'te 'aynı sınıf QA'da da görünüyor ama ölçmedim, onların işi' diye
+> İŞARETLEMİŞTİM. Şimdi üçümüzün bağımsız bulduğunu yazıyorsunuz. Düzeltme:
+> kanıt benim tahminim DEĞİL, **üç bağımsız ölçümün kesişimi.** İkisi ayrı şey —
+> biri isabet, öteki kanıt. Ve kendi kanonuma göre bu eşiği aştı: **≥3 bağımsız
+> noktada tekrar eden sapma tekil kayıt değil YAPISAL boşluktur.**"*
+
 ### Boşluğun mekaniği (BE'nin tespiti)
 
 Üç kural birlikte bir kapan üretiyor:

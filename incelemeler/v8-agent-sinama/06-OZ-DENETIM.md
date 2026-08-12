@@ -45,6 +45,17 @@ Hata sınıfı: **örneklemden genelleme.** 19 handler'lık bir örneklemde bulu
 şey için *"hiç yok"* hükmü kuruldu; kapsam `src/api-sponsor/handlers/` ile
 sınırlıydı ama hüküm tüm projeye yazıldı.
 
+**BE'nin kendi düzeltmesi — asıl değer burada, ve ilk özette kaybolmuştu:**
+
+> *"Yanlış hüküm: 'kural sahaya HİÇ inmemiş' → tedavi: **kural YAZ.**
+> Doğru hüküm: 'kural VAR, 65 liste handler'ının 1'inde uygulanmış (~%1.5)'
+> → tedavi: **kural yazmak İŞE YARAMAZ**, zaten yazılı ve emsal projenin
+> İÇİNDE duruyor; sorun YAYILMAMA."*
+
+İki hüküm **iki ayrı tedavi** ister: biri *eksik kanon* teşhisi, öteki
+*yayılmama* teşhisi. Yanlış teşhis, doğru görünen ama işe yaramayan bir
+düzeltme üretirdi — kanona zaten yazılı bir kuralı ikinci kez yazmak.
+
 ## Üçü de Clara'nın hatalarını buldu
 
 **BE — üç hata:**
