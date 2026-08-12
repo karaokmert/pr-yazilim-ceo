@@ -142,6 +142,76 @@ CA bunu T1'de de işaretlemişti, bugün fiilen çarptı.
 
 ---
 
+## K6 — "Modül geçmişini oku" KURAL değil, yalnız akış adımı (PA ölçtü)
+
+**Mert'in sorusu üzerine ölçüldü:** *"PA bir gereksinim aldığında docs/ altındaki
+ilgili modülü arayıp daha önce ne yapılmış bakıyor mu? Böyle bir kanonu var mı?"*
+
+### PA'nın cevabı: KURAL KODU YOK, akış adımı VAR
+
+PA önce hafızadan cevapladı, sonra açıp doğruladı ve ayırdı:
+
+**VAR olan** — `discovery` skill'i, akış adımı 1:
+> *"**Bağlam oku** — `MODUL-INDEX` (modül haritası) + ilgili modül varsa
+> `MODUL-BILGI` (kalıcı hafıza) + gereksinim dokümanları."*
+
+**YOK olan** — kural kodu. PA 14 `PA-DISC-*` kuralını tek tek listeledi;
+**hiçbiri bağlam/geçmiş okumayı düzenlemiyor.**
+
+**Clara doğruladı:** `PA-DISC-*` sayısı **14** ✅ · *"Bağlam oku"* yalnız
+`discovery:18`'de, adım olarak ✅ · *"önce oku/geçmişini oku"* emreden kural →
+**0 sonuç** ✅
+
+**En yakın kural başka şeyi düzenliyor** (`behavior`): *"Üretmeden önce var olanı
+tara — duplicate açma."* Bu **kod** taraması, doküman geçmişi değil.
+
+### PA'nın kendi teşhisi — K1'in aynası
+
+> *"CA'nın bugün bulduğu **K1 ile AYNI SINIF**: 'kural var ama adım değil, adım
+> olsaydı atlanamazdı' — burada **tersi**: adım var ama kural değil.
+> **İkisi de aynı zaafı üretiyor: atlanabilir.**"*
+
+### Bugün fiilen ne yaptı — ve neden yaptı
+
+PA baktı: `docs/moduls/` ağacı · PRC-26 discovery'si **baştan sona (197 satır)** ·
+iki `status.md` · `git log` + iki commit'in tam mesajı.
+
+**Ama kural gereği değil:**
+> *"KENDİ KARARIM. Kural olmadığı için kural gereği olamazdı. Beni tetikleyen şey
+> KURAL değil, İŞİN KENDİSİ: soru zaten komşu modülü işaret ediyordu."*
+>
+> *"⚠️ VE TAM DA BURASI ZAAF: soru komşu modülü İŞARET ETMESEYDİ bakar mıydım?
+> **Dürüst cevap: BELKİ.** Kural olmadığı için garanti yok."*
+
+### Bakmasaydı ne kaçıracaktı — somut
+
+PRC-26 discovery'sinin sonunda **iki düzeltme notu** vardı:
+- *"bir risk cevabı KURAL üretiyorsa, o kuralın EKRANDA ne demek olduğu AYRI bir
+  maddedir"*
+- *"bir gereksinim cümlesi AKTÖR + YETKİ içeriyorsa, o aktörün bunu FİİLEN
+  yapabilmek için neye ihtiyaç duyduğu AYRI bir maddedir"*
+
+**Bu iki ders sayesinde PRC-40'ta T1/T2/T3'ü sordu.** T2 tam bu dersten çıktı:
+*"2 saat kuralı HANGİ EKRANDA çalışır?"* → cevap *"hasta arayüzü yok"* → kural
+kâğıt üstünde kalıyor → **tasarım düzeltildi** (sekreter seçimi kaldırıldı).
+
+> *"Bakmasaydım T2'yi sormazdım. Discovery'de '2 saat kuralı var' diye yazılı
+> kalırdı, BE onu kodlardı, ve **çalışmayan bir kural üretilirdi.**"*
+
+### PA kendi eksiğini de buldu
+
+> *"⚠️ MODUL-BILGI.md'leri AÇMADIM ve bunu bu ölçüm sırasında fark ettim. Kanona
+> göre 'neden böyle' kararlarının evi ORASI. **Bugün şanslıydım** — discovery'ler
+> zengindi. **Kural olsaydı MODUL-BILGI de listede olurdu ve atlamazdım.**"*
+
+### Etkisi
+
+> *"Atlanabilir ve atlandığı **FARK EDİLMEZ.** Discovery yine dolu görünür;
+> eksik olan şey GEÇMİŞTEKİ DERS'tir ve o görünmez. Bakmayan bir PA aynı
+> discovery'yi 'tam' diye kapatırdı."*
+
+---
+
 # Fabrikaya özet — öncelik sırasıyla
 
 1. **K1** — çıktının kalıcı evi yok. Sahada iki kez zarar verdi. **Akış adımı
