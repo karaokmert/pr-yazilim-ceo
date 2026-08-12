@@ -120,3 +120,23 @@ Kalıcı olup olmayacağı testin çıktısına göre ayrıca karara bağlanacak
 - `PRC-37` (PA discovery) **geriye dönük** `completed` açıldı — sahada bu sub task ilk
   açılacak ve `in progress` başlayacak. Testte görülen sıra sahadaki sıra değildir.
 - Test listesi ve repo, test bitince silinecek (Mert'in kararı).
+
+---
+
+## Fabrikaya giden / gidecek
+
+**1. CLICKUP-PA-ONLY-WRITE kural değişimi — devir bloğu YAZILDI, Mert taşıyacak.**
+Blok 15:42'de ekrana basıldı: kurulan iş akışının tamamı + çakışma + kuralın üç
+gerekçesinden birinin çürüdüğü ölçüm + iki yol (a: kural gevşer, b: kural kalır,
+ev tarafı düzeltilir). Karar fabrikanın, gerekçesiyle dönecek.
+
+**2. Paylaşılan çalışma ağacında stage disiplini — BLOK HENÜZ YAZILMADI.**
+Mert: *"bunu bi yazalım sonra"* (15:44). Bulgu §"Fabrikaya gidecek üç bulgu"
+altında duruyor: kanonda *"developer yalnız KOD commit'ler"* var, *"yalnız KENDİ
+yolunu stage'ler"* yok. Bugün üç agent'ta (PA, UID, BE) uygulandı ve tuttu.
+
+**3. Risk cevabı → ekran karşılığı ayrımı — BLOK HENÜZ YAZILMADI.**
+Discovery kanonuna girecek. PA'nın öz eleştirisinden doğdu.
+
+**4. Yazma çağrısının dönüşü ölçüm değildir — BLOK HENÜZ YAZILMADI.**
+İki yanlış alarm vakası; `clickup-duzeni` ve OY clickup skill'ini ilgilendirir.
