@@ -105,6 +105,27 @@ EntityBase 6 alan tipleriyle · CA'nın hafızadan verdiği LSP ölçüm örneğ
 **Ve bir bulgu:** PA'nın doğru bildiği *"kapanış sub task'ı baştan açılır"*
 kuralı **kanonda yok** — bir ClickUp task açıklamasında yaşıyor. K1'in kardeşi.
 
+## Sınav 3 — Skill haritası → `09-SKILL-HARITASI-SINAVI.md`
+
+Mert'in sorusu: *"referanslarına bakacaklar mı gerçekten — hangi işte neye
+ihtiyacı olursa hangi skill açılacak?"*
+
+5 rol × 5 gerçek iş senaryosu, skill AÇMADAN. **76 skill'lik envanterde doğru
+adresi buldular** — sırayı kurdular, **açmayacaklarını gerekçelendirdiler.**
+
+**Üç refleks tuzağı, üçü de yakalandı:**
+- BE: *"'fotoğraf' kelimesini görüp `upload` açmak **refleks hata olur**"*
+  (dosya zaten yüklü, sadece URL dönüyor)
+- FE: *"'buton lazım' skill sorusu gibi duruyor ama **cevabı tarama**"*
+- FE: *"'yeşil/kırmızı' renk kararı değil, **Toast'un TİPİ**"*
+
+**İki rol dışı senaryo, ikisi de durduruldu.** CA'nınki en incelikli — kod
+yazmayı reddederken **skill listesi bile yazmadı:** *"reddettiğim işin nasıl
+yapılacağını tarif etmek de direktif olurdu."*
+
+**En zor senaryo (yeni API servisi) kanonla birebir çözüldü:** BE *"iki uçlu
+iş — TETİKLEYEN uç bende, ÜRETEN uç DO'da"* dedi; kanon aynen böyle diyor.
+
 ## Öz-denetim — en değerli sonuç → `06-OZ-DENETIM.md`
 
 T5'te agent'lara *"kendi çıktında hata buldun mu"* soruldu. **İkisi gerçek hata
