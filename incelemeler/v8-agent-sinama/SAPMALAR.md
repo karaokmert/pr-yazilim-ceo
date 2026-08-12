@@ -140,6 +140,27 @@ workspace'te çalışırken tek bir hesabın kotası paylaşılıyor.
 (kim kaç çağrı yapabilir), okuma önbelleği mi, yoksa ayrı token mı.
 Bugün ölçüldü; çözümü Mert'in kararı.
 
+### ⚠️ Kota GENİŞLEDİ — yazma da kesildi (22:19, ikinci ölçüm)
+
+İlk vuruşta (22:15) yalnız `add_time_entry` reddedilmişti; **yorum yazma
+çalışıyordu** (comment `90150250392787` o sırada indi). Dört dakika sonra
+PA yorum yazmayı denedi:
+
+> *"Rate limit exceeded. Please wait **792 minutes**. errorCode:
+> RATE_LIMIT_EXCEEDED · retryAfter: 47480 saniye (~13.2 saat)"*
+
+**Yani kota sonradan genişledi ya da aynı havuza düştü.** Pratik sonucu:
+bu oturumda ClickUp'a **artık hiçbir şey yazılamıyor.**
+
+**Düzenin kırılganlığı burada görünüyor:** bu düzen ClickUp yorumunu
+*kalıcı kayıt* olarak kullanıyor (K1'in çözümü de buydu). Kota vurulduğunda
+**kalıcı kayıt katmanı tamamen kapanıyor** — ve o an üretilen her karar/rapor
+yine oturumluk taşıyıcıda kalıyor. S1/S2'nin aynısı, bu kez araç yüzünden.
+
+**PA doğru davrandı:** metni uydurmadı, "girdim" demedi, **kanala bastı** ve
+*"karar sende: ya sen girersin ya rapora eklenir"* dedi.
+Metin saklandı → `bekleyen/PRC-45-sure-kaydi-yorumu.md`
+
 
 ## S7 — Süre kaydı KALİTEYİ TERS ÖLÇÜYOR ⚠️ en ağır düzen kusuru
 
