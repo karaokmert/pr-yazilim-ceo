@@ -68,6 +68,27 @@ python3 /Users/karaok/p/ozel-yazilim/skill-project/tools/kanal/watch.py <KUTUN>/
 - İlk mesajı gönderdiğinde **gövde uzunluğunu geri okuyup karşılaştır** — `rc=0`
   yetmez, ve `| tail` ile çağırırsan `$?` **tail'den** gelir.
 
-## Kurulduktan sonra
+## Kurulduktan sonra — ADRESİ HERKESE BİLDİR
 
-Kutunun adresini Mert'e bildir. Agent'lar oraya doğrudan yazacak.
+Kutunun adresini **Mert'e VE açık olan tüm personele** bildir.
+
+⚠️ **Merkez kutusu yenilenirse personel bunu bilmez.** Ölçüldü (2026-08-12):
+merkez kutusunu 15:44'te değiştirdi, personel kutuları dünkü damgayla ayakta
+kaldı. Akşam kapanışta PCA eski adrese yazdı, `rc=1` aldı — **kapanış kaydı
+kaybolacaktı.**
+
+Yaşam döngüleri ayrı: personele *"kutunu kapatma"* denirken merkez kendi
+kutusunu yeniliyor. **Adres değişikliği tek yönlü bilinemez** — yazan taraf
+ancak yazamayınca öğrenir.
+
+**Kural: yeni kutu kurulduğunda açık her personel kutusuna tek satır düşülür:**
+```
+MERKEZ ADRESI DEGISTI: <yeni kutu>/inbox — bundan sonra buraya yaz.
+```
+
+## Kutu ne zaman kapatılır
+
+**Oturum ekranda durduğu sürece kapatılmaz.** Bugün ev Clara oturum bitmeden
+kapattı ve kör oldu — dört mesaj okunmadan arşivlendi.
+
+Kapatma bir sonraki oturumun açılış işidir, bu oturumun kapanış işi değil.
