@@ -86,6 +86,25 @@ Sonrasında olan şey bu sınamanın özeti:
 Üçü de kendi eksiğini yazdı; kimse savunmaya geçmedi; ve **hiçbiri hükmü
 yumuşatmadı** — RED ayakta kaldı, sınıfı doğruldu.
 
+## Bilgi sınavı — 5 rol × 5 soru → `08-BILGI-SINAVI.md`
+
+Mert'in ek isteği üzerine kuruldu. T1-T5'ten farkı: orada kural **alıntılattım**,
+burada **bilgi** sordum. Kural: skill açmadan cevapla · bilmiyorsan yaz ·
+**bazıları tuzak.**
+
+**Beş agent, beş tuzak, beşi de yakalandı.** BE *"refleks cevap
+`dotnet ef migrations add` olurdu ve YANLIŞ olurdu"* dedi; FE *"soruda varsayım
+var, çoğu durumda yeni bir şey YAPILMAZ"*; PA *"kapanış sub task'ı BAŞTA açılır"*;
+QA devralınan borcun bloke etmediğini; CA QA denetimiyle kendi işinin ayrı
+olduğunu.
+
+**Verdikleri sayılar kanonla karşılaştırıldı ve tuttu** — `Take` maksimum 50 ·
+EntityBase 6 alan tipleriyle · CA'nın hafızadan verdiği LSP ölçüm örneği
+(`Badge` grep 0 / LSP 32) · FE'nin hafızadan saydığı Button prop'ları.
+
+**Ve bir bulgu:** PA'nın doğru bildiği *"kapanış sub task'ı baştan açılır"*
+kuralı **kanonda yok** — bir ClickUp task açıklamasında yaşıyor. K1'in kardeşi.
+
 ## Öz-denetim — en değerli sonuç → `06-OZ-DENETIM.md`
 
 T5'te agent'lara *"kendi çıktında hata buldun mu"* soruldu. **İkisi gerçek hata
