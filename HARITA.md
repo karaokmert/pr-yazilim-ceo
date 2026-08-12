@@ -28,6 +28,7 @@ girer.
 
 ## Projeler
 
+- **ClickUp task takip düzeni — PRAG canlı testi** — düzen kuruldu ve 4 saat sahada koşturuldu (3 modül, 6 agent): üç fiil (PA açar/agent yürütür/Clara okur), ana task altında beş sub task (PA'nın discovery ve kapanış işi de görünür), statü akışı + kanıt zorunluluğu, süre kaydı (yalnız `in progress`). **4 QA RED'i, ikisi güvenlik açığı** (doktor izolasyonu, klinik izolasyonu). Altı fabrika bulgusu + beş Clara hatası kayıtlı. ⚠️ Yeni oturum açılırken agent'lar bu düzeni BİLMİYOR — hazır brief kapanış dosyasında · 2026-08-12 · `gunluk/prag/2026-08-12-kapanis.md` + `gunluk/ev/2026-08-12-clickup-task-takip-testi.md` · **yarım** (test sürüyor, modül kapanmadı)
 - **Agent dağıtım yapısı** — hangi kopya yürürlükte: plugin v8 + fabrika repoda; 20 v7 symlink'i ve 27 proje içi kalıntı duruyor (Mert: şimdilik kalsın) · 2026-08-03 · `projeler/agent-dagitim-yapisi.md` · **referans** (okuma öncesi yol doğrulaması)
 - **Proje envanteri** — 16 + 8 klasör tarandı: kendi ürün WupDoc (+ BalkanBee belirsiz), 8 aktif müşteri projesi, 4 yarı yolda, 3 git dışı, 1 şifre sızıntısı · 2026-08-03 · `projeler/envanter.md` · **referans** (durum değişince güncellenir)
 
