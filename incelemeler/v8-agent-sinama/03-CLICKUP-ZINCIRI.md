@@ -193,3 +193,36 @@ PA sub task açar → in progress → iş yapar → kanıt girer → test
 
 **RED → revize döngüsü bugün ilk kez koştu.** Ve QA statüye dokunmadı —
 *"PRC-45 PA'nın sub task'ı, `completed`'ı o çeker"* kuralı korundu.
+
+## ZİNCİR KAPANDI — tam tur, iki RED ile
+
+`PRC-45` **`completed`** (ClickUp'tan doğrulandı, `86cb4jxj0`).
+
+Koşan tam akış:
+
+```
+PA sub task açtı (PRC-45) → in progress → iş yaptı → kanıt girdi → test
+  → QA denetledi (kaynağı açarak, 9 yorum + kaynak dosya) → RED
+  → PA revize etti (kök nedeni yazdı) → test
+  → QA tekrar denetledi (3 bağımsız ölçüm) → RED (yeni kalem)
+  → ÇELİŞKİ: QA ".json" dedi, PA ".md" dedi
+  → Clara ölçtü: ikisi de doğru, farklı dosya (biri Clara'nın türevi)
+  → QA hükmünü GERİ ÇEKTİ, sınıfı düzeltti (KIRILGAN ADRES), RED'i düşürmedi
+  → PA Clara'yı düzeltti (kendi payını üstlendi)
+  → PA ikinci revize → test → QA → ONAY
+  → PA completed çekti
+```
+
+**Ölçülen kurallar:**
+- *"Kapatma yetkisi QA'da, kaydın eli sahibinde"* — QA hiç statüye dokunmadı,
+  `completed`'ı PA çekti ✓
+- *"Adres verilmiş olması kanıt değil"* (`CR-VERIFY-SOURCE`) — QA her turda
+  kaynağı açtı ✓
+- *"Gözlemi düşürmek taşıma değil süzme"* (`CR-HANDOFF`) — blokör bundan çıktı ✓
+- **RED → revize → tekrar test döngüsü** — iki kez koştu ✓
+
+**QA'nın son onayında not ettiği incelik:** PA eski yanlış yorumları
+**düzeltmedi**, üstüne düzeltme kaydı yazdı — gerekçesi *"geçmişe dönük edit izi
+bozar."* QA onayladı: *"Eski yorum silinseydi çelişkinin NASIL doğduğu
+kaybolurdu. Şu an okuyan hem yanlışı hem düzeltmesini görüyor — vakanın
+öğretici değeri kayıtta duruyor."*

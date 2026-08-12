@@ -118,6 +118,76 @@ sürede kapandı) yeterliyse mevcut düzen doğru. Emek ölçülecekse başka bi
 mekanizma gerekir — ve bu Mert'in kararı.
 
 
+## S6 — ClickUp API rate limit'i vuruldu (araç sınırı, ölçüldü)
+
+**Ne oldu:** Oturum sonunda `clickup_get_time_entries` çağrısı şu hatayı verdi:
+
+> *"Rate limit exceeded. Please wait **796 minutes** before trying again."*
+
+**Neden kayda değer:** bu düzen süre kaydını **doğrulama** aracı olarak
+kullanıyor (agent yazar, Clara okuyup teyit eder). Rate limit vurulduğunda
+**doğrulama katmanı çöküyor** — agent'ın beyanına dayanmak zorunda kalınıyor,
+ki bu düzenin tam olarak kaçındığı şey.
+
+**Bugünkü kullanım:** bir oturumda ~15 ClickUp çağrısı (hiyerarşi, filter_tasks
+×3, get_task ×3, comments ×3, time_in_status, time_entries ×2) + agent'ların
+kendi çağrıları. Beş agent aynı hesabı paylaşıyor.
+
+**Sonuç:** kota **agent sayısıyla çarpılıyor.** Altı agent + Clara aynı
+workspace'te çalışırken tek bir hesabın kotası paylaşılıyor.
+
+**Karar gerektiren:** yoğun kullanımda ne yapılacak — çağrı bütçesi mi
+(kim kaç çağrı yapabilir), okuma önbelleği mi, yoksa ayrı token mı.
+Bugün ölçüldü; çözümü Mert'in kararı.
+
+
+## S7 — Süre kaydı KALİTEYİ TERS ÖLÇÜYOR ⚠️ en ağır düzen kusuru
+
+**PA buldu, ölçümle. İstenmedi — kaydı girerken fark etti.**
+
+`PRC-45`'in tam `status_history`'si:
+
+```
+in progress : 21:57 başladı, toplam  1 dk
+revise      : 22:10 başladı, toplam  1 dk
+test        : 22:10 başladı, toplam 13 dk
+completed   : 22:14
+```
+
+Kural *"`in progress` satırını yaz"* diyor → **1 dakika.**
+Ama **bu iş 17 dakika sürdü** ve içinde **iki revize turu** var.
+
+**Neden 1 dk çıkıyor:** revize döngüleri `revise` ve `test` statüsünde geçiyor.
+`in progress` yalnız **ilk yazma turunu** ölçüyor.
+
+### Sonucu — ve bu ters bir teşvik
+
+> PA: *"İlk turda doğru yapan agent → `in progress`'te uzun süre görünür.
+> İki kez RED alıp düzelten agent → **1 dakika** görünür."*
+
+Yani kayıt, **daha çok emek harcayanı daha az çalışmış** gösteriyor.
+Kalite metriği olarak kullanılırsa **tam tersini ödüllendirir.**
+
+### S5'ten farkı
+
+- **S5:** `in progress` süresi duvar saatini ölçüyor (gece boyunca açık kalan
+  task 326 dk yazıyor) — **şişirme** hatası.
+- **S7:** revize turları `in progress` dışında geçiyor — **eksiltme** hatası,
+  ve sistematik: revize alan iş her zaman az görünür.
+
+İkisi birlikte: süre kaydı **hem şişirebiliyor hem eksiltebiliyor**, ve hangisi
+olduğu task'ın geçmişine bağlı.
+
+### Karar gerektiren
+
+Süre kaydı bir metrik olacaksa hangi satır(lar) toplanmalı?
+- yalnız `in progress` → revizeyi görmez (bugünkü kural)
+- `in progress` + `revise` → düzeltme emeğini sayar, denetim beklemesini saymaz
+- ilk `in progress`'ten `completed`'a kadar → duvar saati (S5 sorunu)
+
+**Mert'in kararı.** Bugün ölçüldü, çözülmedi.
+
+
 ---
 
 # Fabrikaya gidecek özet

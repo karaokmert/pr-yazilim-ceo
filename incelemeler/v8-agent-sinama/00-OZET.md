@@ -117,12 +117,25 @@ koydurdum, PA da kendi kapısını kapattı (*"vekaleten cevap developer'a iş
 açmaz"*). **Bunları geçersiz sayarsan PRC-40 discovery'si yeniden yazılmalı.**
 Kararı senin; gerekçem `05-CLARA-HATALARI.md` H6'da.
 
-**2. Süre kaydı ne için tutuluyor?** PA ölçtü: kayıtlı 326 dk, fiilî çalışma
-~12 dk — **27 kat fark.** `status_history` duvar saatini ölçüyor, emeği değil
-(gece boyunca `in progress`te kalmış). Duvar saati yeterliyse mevcut düzen doğru;
-emek ölçülecekse başka mekanizma gerekir. → `SAPMALAR.md` S5
+**2. Süre kaydı ne ölçüyor? — İKİ AYRI KUSUR, ikisini de PA buldu**
 
-**3. Clara açılış hook'u kanalı göremiyor.** `DURUM.md`/`ACIK` arıyor, `setup.py`
+- **S5 (şişirme):** `PRC-40`'ta 326 dk kayıtlı, fiilî çalışma ~12 dk — **27 kat.**
+  Task gece boyunca `in progress`te kalmış; kayıt **duvar saatini** ölçüyor.
+- **S7 (eksiltme, daha ağır):** `PRC-45` **17 dakika** sürdü, içinde iki revize
+  turu vardı — kural gereği yazılan sayı **1 dakika.** Çünkü revize turları
+  `revise`/`test` statüsünde geçiyor, `in progress` yalnız ilk turu ölçüyor.
+  > PA: *"İlk turda doğru yapan agent uzun görünür; iki kez RED alıp düzelten
+  > agent 1 dakika görünür."*
+
+Yani kayıt **hem şişirebiliyor hem eksiltebiliyor** — ve kalite metriği olarak
+kullanılırsa **tersini ödüllendiriyor.** Hangi satır(lar) toplanmalı: senin kararın.
+
+**3. ClickUp API rate limit'i vuruldu** (S6) — *"796 dakika bekleyin."* Altı agent
++ Clara tek hesabın kotasını paylaşıyor ve doğrulama katmanı bu yüzden çöktü
+(PRC-45'in süre kaydı **girilemedi**, PA uydurmadı ve girilmediğini yazdı).
+Çağrı bütçesi mi, ayrı token mı — senin kararın.
+
+**4. Clara açılış hook'u kanalı göremiyor.** `DURUM.md`/`ACIK` arıyor, `setup.py`
 artık `STATUS.md`/`STATE: OPEN` yazıyor. Bu oturum *"açık kanal yok"* diye açıldı,
 oysa yedi kutu açıktı. Tek satırlık düzeltme, kendi repomda — sınama sürerken
 ürünü ilerletmediği için dokunmadım.
