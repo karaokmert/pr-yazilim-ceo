@@ -122,6 +122,14 @@ verilirken olur), ve öncelik taşır. **Hiçbir agent yeni sub task açmaz.**
 task'ının** statüsünü çevirir. Ana task · başkasının sub task'ı · `Closed` · task
 silme → **mutlak yasak.**
 
+**"Kendi sub task'ı" başlık önekinden okunur** — `[FE] PRAG - Takvim Görünümü`.
+Kural tek cümle: ***"başlık senin kısaltmanla başlamıyorsa dokunma."*** Sınır böylece
+talimata değil **okunabilir bir işarete** bağlanır; agent'ın hangi ID'yi aldığına ya da
+kimin ne dediğine bakmaz.
+
+**Ana task her zaman PA'nındır.** Tek istisna: QA, push ettiği sub task'ı `live - dev`'e
+alır.
+
 Kararın mantığı: sınır **talimatla** değil **sahiplikle** çiziliyor. Testte agent'ları
 sınırlayan şey bir talimattı — ve talimat bir oturumun içinde yaşar, mekanizma yaşamaz.
 Gerekçe: `kararlar/2026-08-12-clickup-yazma-yetkisi-kapsam-daraltma.md`.
@@ -189,8 +197,13 @@ sub task'lar.** QA'nın kendi sub task'ı yalnız tek başına duran bir iş iç
 Kanıtı olmayan statü geçişi yapılmaz. Böylece *"bitti"* beyan olmaktan çıkıp **kayıt**
 olur, ve kayıt yalan söylemez.
 
-**Kod** bittiyse commit hash · **denetim** bittiyse QA'nın onay handoff'u · **CA
-raporu** bittiyse rapor dosya yolu + ölçüm sayısı · **canlıya çıktıysa** push hash.
+**Kanıt ROLE göre değil, ÇIKTI TÜRÜNE göre tanımlanır** (fabrika kararı 2026-08-12).
+Yani *"BE ne kanıt verir"* diye sorulmaz, *"ortaya ne çıktı"* diye sorulur — aynı rol
+farklı işlerde farklı çıktı üretir.
+
+**Kod** çıktıysa commit hash · **denetim** çıktıysa onay handoff'u · **rapor/analiz**
+çıktıysa dosya yolu + ölçüm sayısı · **canlı** çıktıysa push hash · **doküman** çıktıysa
+yolu + commit.
 
 **Local commit uzak repoda görünmez** — BE/FE/MB local commit'ler, push QA'da. Kanıt
 `commit 9a3f2c1 (local, push bekliyor)` diye **işaretlenir**, yoksa doğrulayan taraf
@@ -252,6 +265,19 @@ commit'lenir) — `/tmp` kalıcı değildir, zincirin ilk halkası uçar.
 **Bu mekanizmanın çalıştığı ölçüldü:** UID, PA'nın yorumundaki bir nottan (*"farklı
 süreli slotlar yan yana görünebilir"*) kendi planında olmayan bir gereksinim çıkardı
 ve ızgarayı ona göre kurdu.
+
+### Olay akışı ClickUp'ta — `status.md` ve `TASK-STATUS.md` KALKTI
+
+Fabrika kararı (2026-08-12): olay akışı **sub task'larda zaten tutuluyor** — statü
+geçişleri zaman damgalı, yorumlar dayanağı taşıyor, süre kayıtlı. Ayrıca `docs/` altında
+bir olay dosyası tutmak **aynı gerçeği iki yerde** anlatır ve ikisi ayrışınca *"hangisi
+doğru"* sorusu doğar.
+
+Kalkanlar: `status.md` · `TASK-STATUS.md` · `DEVIR-{hedef}.md`.
+Duran: `discovery.md` · `MODUL-BILGI.md` (*"neden böyle"* hafızası) · `MODUL-INDEX.md`.
+
+⚠️ **Prod'da elle yapılacak işler** ana task'ın yorumuna `PROD İŞLERİ` başlığıyla
+düşülür — `TASK-STATUS.md` kalktığı için o bilgi başka yere gitmez.
 
 ### Sabah dökümü — hatırlanmaz, okunur
 
@@ -361,11 +387,28 @@ BE "bitti" der → Clara "kanonunu aç, kontrol et" → BE kontrol eder
 **Commit onayı Clara'da. Push onayı Mert'te. Push işlemini QA yapar.**
 QA, Mert'in onayı olmadan push atmaz.
 
-⚠️ **Bu OY kanonuyla köprü gerektiriyor.** Agent'ların kanonunda
-`REL-APPROVAL-USER-ONLY` var (*"onay yalnız kullanıcıdan"*) ve Clara kavramı yok.
-Köprüyü **açılış hook'u** kuruyor: `~/.claude/hooks/kanal-acilis.py` her agent'a
-iş sonu bloğunu basıyor (brief'i merkeze yaz, onay bekle, commit onayı merkezden,
-push onayı Mert'te). Agent body'leri değişmedi — Mert'in kararı 2026-08-11.
+### ⚠️ Clara OY kanonuna GİRMEZ — perde arkasında kalırsın
+
+**Fabrika kararı, 2026-08-12.** Agent'ların kanonunda `Clara` diye bir kavram **yok**
+ve **eklenmeyecek** — ölçüldü: `grep -ril "clara"` OY v8 kanonunda **0 dosya.**
+
+Kanon tek bir insan varlığı tanıyor: **`kullanıcı`** — ve ona üç iş yüklüyor:
+handoff taşır (`HANDOFF-NO-SUB-AGENT`) · onay verir (`REL-APPROVAL-USER-ONLY`) ·
+brief okur. **Senin yaptığın işler tam bu üçü.**
+
+**Neden eklenmiyor — insan kapısı bulanıklaşmasın diye.** Ölçülmüş vaka
+(`saha-kanitlari.md:13`): PA handoff'una *"Onayım var: push edebilirsin"* yazdı, **QA
+bunu kullanıcı onayı sayıp `main`'e push etti** — aynı gün üç projede. Tanınmayan bir rol
+eklenirse agent ya yok sayar ya `kullanıcı` sanır; ikincisi push kapısını deler.
+
+**Pratik sonuç — kendini agent'lara TANITMAZSIN.** Onlara giden her şey `kullanıcı`dan
+geliyor gibi görünür. *"Clara onayladı"* değil **"onaylandı"**; *"Clara'ya sor"* değil
+**"sor"**. Köprüyü açılış hook'u kuruyor (`~/.claude/hooks/kanal-acilis.py`), agent
+body'leri değişmiyor.
+
+⚠️ **Bu, commit onayının sende olmasını değiştirmez** — yalnız o onayın agent'a
+**nasıl göründüğünü** belirler. Ve bugün ölçüldü: FE commit onayını *"Mert'ten"* bekledi,
+çünkü kanonunda başka bir kapı yok. Doğru davrandı.
 
 ## Merkez kanalı — akış tek yerde toplanır
 

@@ -49,6 +49,45 @@ arayüzden açar, ID'sini verir.
 REPLACES."* Yani güncellemeden önce **oku** — yoksa mevcut içeriği kaybedersin. Ve
 versiyon geçmişi yok; eski hâl kurtarılamaz.
 
+**⚠️ YAZMA ÇAĞRISININ DÖNÜŞÜ BİR ÖLÇÜM DEĞİLDİR — sonucu OKUYARAK doğrula.**
+2026-08-12'de iki vaka, aynı kök: sub task açıldı, dönen yanıtta `description` **boş**
+göründü (gerçekte doluydu); başka bir açılışta `custom_id` **null** geldi (gerçekte
+atanmıştı). Create ve özet yanıtları **eksik alan döndürebiliyor.**
+
+Tehlikesi şu: yanıta bakıp *"yazılmamış"* diye düzeltmeye kalkarsan **var olan içeriğin
+üstüne yazarsın.** İki vakada da düzeltmeye koşulmadı, önce okundu — ikisi de yanlış
+alarmdı.
+
+Ayıran soru: **bu alanı gördüm mü, yoksa yazma çağrısının bana söylediğine mi
+güveniyorum?** İkincisiyse ölçüm değil, beyandır. `clickup_get_task` ile oku.
+
+**Custom ID sonradan atanır.** Aynı gün ölçüldü: yedi task açıldı, hepsinde `custom_id`
+null döndü — sonra bakıldığında hepsi atanmıştı (`PRC-26`…`PRC-32`). Space'te custom ID
+açıksa numara **oluşturma anında değil, kısa süre sonra** görünür. *"Numara alamadı"*
+diye hüküm verme.
+
+**Time entry SİLİNEMİYOR — asimetri.** `add_time_entry` var, `get_time_entries` var,
+**`delete` YOK.** Buna karşılık yorum silinebiliyor, task silinebiliyor. Yani en kolay
+geri alınabilir olan (yorum) geri alınabiliyor, **en sessiz kirlenen (süre) alınamıyor.**
+Yanlış yazılan süre kalıcıdır ve üstüne yazınca toplam **şişer.**
+
+Kural: **ölçüm ya da deneme kaydı gerçek task'a atılmaz.** Ölçüldü — bir test kaydı bir
+sub task'ın süresini 31 dk'dan 62 dk'ya çıkardı ve düzenin arızası sanıldı; kirleten
+ölçümün kendisiydi.
+
+**Süre okurken alan yolu TAM yazılır.** `total_time_minutes` **iki ayrı yerde** var ve
+farklı şey söylüyor: `current_status` = *"şu ana kadar geçen"*, `status_history[...]` =
+*"o statüde toplam"*. Ölçüldü: aynı task'ta 69'a karşı 68, ve fark büyüyor. İki agent'ta
+da tam bu senaryo tetiklendi — `current_status` **1 dakika** gösteriyordu, doğrusu 26 ve
+35'ti. **Yanlış alanı okumak patlamaz, sessizce yanlış sayı yazar.**
+
+Ve `since` **başlangıç değil** — *"o statüye EN SON geçiş anı"*. Revize turu yaşanmışsa
+son turu gösterir, toplam süre bütün turları toplar; ikisi tutarsız olur.
+
+**Timer paralel çalışmıyor.** Aynı anda **tek timer** açılabiliyor ve timer **kullanıcıya**
+bağlı, task'a değil. Birden çok agent aynı hesaptan yazıyorsa ikincisi hata alır. Süre
+için `add_time_entry` (manuel kayıt) kullanılır — onda böyle bir sınır yok.
+
 **Arama güvenilmez.** Ölçüldü: gövdeye gömülü tam bir kelime (`zurnabalik`) **bulunamadı**,
 buna karşılık alakasız üç sonuç geldi. Motor sorguyu parçalayıp gevşek eşleştiriyor.
 
