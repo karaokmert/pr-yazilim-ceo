@@ -19,7 +19,6 @@ set -uo pipefail
 [ "${CLAUDE_CODE_AGENT:-}" = "clara" ] || exit 0
 
 CLARA_KOK="/Users/karaok/p/pr-yazilim-ceo"
-KANAL_KOK="$HOME/.pr-kanal"
 
 printf '## Clara açılışı — sinyaller\n\n'
 
@@ -47,27 +46,6 @@ if [ -n "${GEMINI_CLI_IDE_WORKSPACE_PATH:-}" ]; then
     printf '**IDE penceresi:** ev (`pr-yazilim-ceo`)\n\n'
   else
     printf '**IDE penceresi:** `%s` — BAŞKA PROJE, YÖNETİM sinyali.\n\n' "$GEMINI_CLI_IDE_WORKSPACE_PATH"
-  fi
-fi
-
-# 3 — Açık kanal kutuları (yalnız DURUM'u ACIK olanlar — test artıkları gürültü yapmasın)
-if [ -d "$KANAL_KOK" ]; then
-  toplam=$(find "$KANAL_KOK" -mindepth 1 -maxdepth 1 -type d 2>/dev/null | wc -l | tr -d ' ')
-  acik=""
-  for d in "$KANAL_KOK"/*/; do
-    [ -d "$d" ] || continue
-    durum_eslesme=$(find "$d" -maxdepth 2 -name DURUM.md -exec grep -l "ACIK" {} + 2>/dev/null | head -1)
-    if [ -n "$durum_eslesme" ]; then
-      kutu=$(find "$d" -mindepth 1 -maxdepth 1 -type d 2>/dev/null | wc -l | tr -d ' ')
-      acik="${acik}- $(basename "$d") (${kutu} kutu)\n"
-    fi
-  done
-  if [ -n "$acik" ]; then
-    printf '**Açık kanal kutuları** (~/.pr-kanal — %s dizinden ACIK olanlar):\n' "$toplam"
-    printf '%b' "$acik"
-    printf 'Monitörler oturum kapanınca ölmüştür — kanal kullanılacaksa yeniden kur.\n\n'
-  else
-    printf '**Açık kanal yok** (~/.pr-kanal: %s dizin, hiçbiri ACIK değil).\n\n' "$toplam"
   fi
 fi
 

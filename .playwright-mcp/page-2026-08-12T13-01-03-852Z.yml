@@ -1,0 +1,105 @@
+- generic [ref=e1]:
+  - generic [ref=e2]:
+    - banner [ref=e3]:
+      - generic [ref=e4]:
+        - generic [ref=e5]: PRAG
+        - navigation [ref=e9]:
+          - link "Müsaitlik Takvimi" [ref=e10] [cursor=pointer]:
+            - /url: /musaitlik-takvimi
+          - link "Haftalık Şablon" [ref=e11] [cursor=pointer]:
+            - /url: /musaitlik-takvimi/sablon
+          - link "İstisna Günler" [ref=e12] [cursor=pointer]:
+            - /url: /musaitlik-takvimi/istisna-gunler
+          - generic [ref=e13]:
+            - text: Randevular
+            - generic [ref=e14]: Yakında
+          - generic [ref=e15]:
+            - text: Klinik Ayarları
+            - generic [ref=e16]: Yakında
+    - main [ref=e17]:
+      - generic [ref=e18]:
+        - generic [ref=e19]:
+          - generic [ref=e20]:
+            - heading "Müsaitlik Takvimi" [level=1] [ref=e21]
+            - paragraph [ref=e22]: Haftalık çalışma saatleri, dolu ve kapalı slotlar
+          - generic [ref=e23]:
+            - link [ref=e24] [cursor=pointer]:
+              - /url: /musaitlik-takvimi/sablon
+              - button "Haftalık şablon" [ref=e25]
+            - link [ref=e29] [cursor=pointer]:
+              - /url: /musaitlik-takvimi/istisna-gunler
+              - button "İstisna günler" [ref=e30]
+        - generic [ref=e33]:
+          - generic [ref=e35]:
+            - button "Önceki" [ref=e36] [cursor=pointer]
+            - generic [ref=e39]: 10.08.2026 – 16.08.2026
+            - button "Sonraki" [ref=e40] [cursor=pointer]
+          - generic [ref=e43]:
+            - generic [ref=e44]:
+              - generic [ref=e46]: Müsait
+              - generic [ref=e47]: · Randevu alınabilir
+            - generic [ref=e48]:
+              - generic [ref=e50]: Dolu
+              - generic [ref=e51]: · Randevu var
+            - generic [ref=e52]:
+              - generic [ref=e54]: Kapalı
+              - generic [ref=e55]: · Geçmiş saat, kayıt tamponu veya çalışma saati dışı
+            - generic [ref=e56]:
+              - generic [ref=e58]: İstisna gün
+              - generic [ref=e59]: · İzin / kongre
+        - generic [ref=e242]: Bu slot az once doldu.
+        - generic [ref=e61]:
+          - generic [ref=e62]:
+            - generic [ref=e67]:
+              - generic [ref=e68]: Pzt
+              - generic [ref=e69]: "10"
+            - generic [ref=e70]:
+              - generic [ref=e71]: Sal
+              - generic [ref=e72]: "11"
+            - generic [ref=e73]:
+              - generic [ref=e74]: Çar
+              - generic [ref=e75]: "12"
+            - generic [ref=e76]:
+              - generic [ref=e77]: Per
+              - generic [ref=e78]: "13"
+            - generic [ref=e79]:
+              - generic [ref=e80]: Cum
+              - generic [ref=e81]: "14"
+            - generic [ref=e82]:
+              - generic [ref=e83]: Cmt
+              - generic [ref=e84]: "15"
+            - generic [ref=e85]:
+              - generic [ref=e86]: Paz
+              - generic [ref=e87]: "16"
+          - generic [ref=e88]:
+            - generic [ref=e89]: 08:00
+            - generic [ref=e99]: 09:00
+            - generic [ref=e109]: 10:00
+            - generic [ref=e119]: 11:00
+            - generic [ref=e129]:
+              - generic [ref=e130]: 12:00
+              - button "12:00" [active] [ref=e136] [cursor=pointer]
+            - generic [ref=e143]:
+              - generic [ref=e144]: 13:00
+              - button "13:00 Murat Tan" [ref=e150] [cursor=pointer]:
+                - generic [ref=e151]: 13:00
+                - generic [ref=e153]: Murat Tan
+            - generic [ref=e158]:
+              - generic [ref=e159]: 14:00
+              - button "14:00 Geçmiş saat" [disabled] [ref=e165]:
+                - generic [ref=e166]: 14:00
+                - generic [ref=e171]: Geçmiş saat
+            - generic [ref=e176]:
+              - generic [ref=e177]: 15:00
+              - button "15:00 İstisna gün" [disabled] [ref=e183]:
+                - generic [ref=e184]: 15:00
+                - generic [ref=e189]: İstisna gün
+            - generic [ref=e194]:
+              - generic [ref=e195]: 16:00
+              - button "16:00 Randevu penceresi dışı" [disabled] [ref=e201]:
+                - generic [ref=e202]: 16:00
+                - generic [ref=e207]: Randevu penceresi dışı
+            - generic [ref=e212]: 17:00
+            - generic [ref=e222]: 18:00
+  - button "Open Next.js Dev Tools" [ref=e238] [cursor=pointer]
+  - alert [ref=e232]

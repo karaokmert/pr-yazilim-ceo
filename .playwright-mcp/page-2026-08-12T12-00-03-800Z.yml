@@ -1,0 +1,131 @@
+- generic [active] [ref=f2e1]:
+  - generic [ref=f2e2]:
+    - banner [ref=f2e3]:
+      - generic [ref=f2e4]:
+        - generic [ref=f2e5]: PRAG
+        - navigation [ref=f2e9]:
+          - link "Müsaitlik Takvimi" [ref=f2e10] [cursor=pointer]:
+            - /url: /musaitlik-takvimi
+          - link "Haftalık Şablon" [ref=f2e11] [cursor=pointer]:
+            - /url: /musaitlik-takvimi/sablon
+          - link "İstisna Günler" [ref=f2e12] [cursor=pointer]:
+            - /url: /musaitlik-takvimi/istisna-gunler
+          - generic [ref=f2e13]:
+            - text: Randevular
+            - generic [ref=f2e14]: Yakında
+          - generic [ref=f2e15]:
+            - text: Klinik Ayarları
+            - generic [ref=f2e16]: Yakında
+    - main [ref=f2e17]:
+      - generic [ref=f2e18]:
+        - generic [ref=f2e19]:
+          - generic [ref=f2e20]:
+            - heading "Haftalık Şablon" [level=1] [ref=f2e21]
+            - paragraph [ref=f2e22]: Çalışma günleri, saat aralıkları ve slot süresi
+          - generic [ref=f2e23]:
+            - link [ref=f2e24] [cursor=pointer]:
+              - /url: /musaitlik-takvimi
+              - button "Takvime dön" [ref=f2e25]
+            - button "Kaydet" [ref=f2e28] [cursor=pointer]
+        - generic [ref=f2e33]:
+          - heading "Doktor ve slot süresi" [level=2] [ref=f2e35]
+          - generic [ref=f2e36]:
+            - generic [ref=f2e37]:
+              - generic [ref=f2e38]: Doktor
+              - combobox [ref=f2e39]:
+                - option "Dr. Ayşe Yılmaz — Kardiyoloji" [selected]
+                - option "Dr. Mehmet Demir — Dahiliye"
+                - option "Dr. Zeynep Kaya — Çocuk Sağlığı"
+                - option "Dr. Emre Şahin — Ortopedi"
+            - generic [ref=f2e40]:
+              - generic [ref=f2e41]: Slot süresi
+              - combobox [ref=f2e42]:
+                - option "10 dakika"
+                - option "15 dakika"
+                - option "20 dakika" [selected]
+                - option "30 dakika"
+                - option "45 dakika"
+                - option "60 dakika"
+            - generic [ref=f2e43]: 6 çalışma günü
+          - paragraph [ref=f2e45]: Slot süresi değiştiğinde alınmış randevular kendi süresiyle korunur; yalnızca ileri tarihli boş slotlar yeni süreye göre yeniden üretilir.
+        - generic [ref=f2e46]:
+          - heading "Haftalık çalışma saatleri" [level=2] [ref=f2e48]
+          - generic [ref=f2e49]:
+            - generic [ref=f2e50]:
+              - generic [ref=f2e51]:
+                - switch [checked] [ref=f2e52] [cursor=pointer]
+                - generic [ref=f2e54]: Pazartesi
+              - generic [ref=f2e55]:
+                - generic [ref=f2e56]:
+                  - generic [ref=f2e57]: Başlangıç
+                  - textbox [ref=f2e58]: 09:00
+                - generic [ref=f2e59]:
+                  - generic [ref=f2e60]: Bitiş
+                  - textbox [ref=f2e61]: 17:00
+                - generic [ref=f2e62]: 09:00 – 17:00 · 24 slot
+            - generic [ref=f2e63]:
+              - generic [ref=f2e64]:
+                - switch [checked] [ref=f2e65] [cursor=pointer]
+                - generic [ref=f2e67]: Salı
+              - generic [ref=f2e68]:
+                - generic [ref=f2e69]:
+                  - generic [ref=f2e70]: Başlangıç
+                  - textbox [ref=f2e71]: 09:00
+                - generic [ref=f2e72]:
+                  - generic [ref=f2e73]: Bitiş
+                  - textbox [ref=f2e74]: 17:00
+                - generic [ref=f2e75]: 09:00 – 17:00 · 24 slot
+            - generic [ref=f2e76]:
+              - generic [ref=f2e77]:
+                - switch [checked] [ref=f2e78] [cursor=pointer]
+                - generic [ref=f2e80]: Çarşamba
+              - generic [ref=f2e81]:
+                - generic [ref=f2e82]:
+                  - generic [ref=f2e83]: Başlangıç
+                  - textbox [ref=f2e84]: 09:00
+                - generic [ref=f2e85]:
+                  - generic [ref=f2e86]: Bitiş
+                  - textbox [ref=f2e87]: 17:00
+                - generic [ref=f2e88]: 09:00 – 17:00 · 24 slot
+            - generic [ref=f2e89]:
+              - generic [ref=f2e90]:
+                - switch [checked] [ref=f2e91] [cursor=pointer]
+                - generic [ref=f2e93]: Perşembe
+              - generic [ref=f2e94]:
+                - generic [ref=f2e95]:
+                  - generic [ref=f2e96]: Başlangıç
+                  - textbox [ref=f2e97]: 09:00
+                - generic [ref=f2e98]:
+                  - generic [ref=f2e99]: Bitiş
+                  - textbox [ref=f2e100]: 17:00
+                - generic [ref=f2e101]: 09:00 – 17:00 · 24 slot
+            - generic [ref=f2e102]:
+              - generic [ref=f2e103]:
+                - switch [checked] [ref=f2e104] [cursor=pointer]
+                - generic [ref=f2e106]: Cuma
+              - generic [ref=f2e107]:
+                - generic [ref=f2e108]:
+                  - generic [ref=f2e109]: Başlangıç
+                  - textbox [ref=f2e110]: 09:00
+                - generic [ref=f2e111]:
+                  - generic [ref=f2e112]: Bitiş
+                  - textbox [ref=f2e113]: 17:00
+                - generic [ref=f2e114]: 09:00 – 17:00 · 24 slot
+            - generic [ref=f2e115]:
+              - generic [ref=f2e116]:
+                - switch [checked] [ref=f2e117] [cursor=pointer]
+                - generic [ref=f2e119]: Cumartesi
+              - generic [ref=f2e120]:
+                - generic [ref=f2e121]:
+                  - generic [ref=f2e122]: Başlangıç
+                  - textbox [ref=f2e123]: 09:00
+                - generic [ref=f2e124]:
+                  - generic [ref=f2e125]: Bitiş
+                  - textbox [ref=f2e126]: 13:00
+                - generic [ref=f2e127]: 09:00 – 13:00 · 12 slot
+            - generic [ref=f2e128]:
+              - generic [ref=f2e129]:
+                - switch [ref=f2e130] [cursor=pointer]
+                - generic [ref=f2e132]: Pazar
+              - generic [ref=f2e133]: Çalışılmıyor
+  - alert [ref=f2e134]

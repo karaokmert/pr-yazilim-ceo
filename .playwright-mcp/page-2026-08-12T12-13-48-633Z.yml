@@ -1,0 +1,469 @@
+- generic [active] [ref=f3e1]:
+  - generic [ref=f3e2]:
+    - banner [ref=f3e3]:
+      - generic [ref=f3e4]:
+        - generic [ref=f3e5]: PRAG
+        - navigation [ref=f3e9]:
+          - link "Müsaitlik Takvimi" [ref=f3e10] [cursor=pointer]:
+            - /url: /musaitlik-takvimi
+          - link "Haftalık Şablon" [ref=f3e11] [cursor=pointer]:
+            - /url: /musaitlik-takvimi/sablon
+          - link "İstisna Günler" [ref=f3e12] [cursor=pointer]:
+            - /url: /musaitlik-takvimi/istisna-gunler
+          - generic [ref=f3e13]:
+            - text: Randevular
+            - generic [ref=f3e14]: Yakında
+          - generic [ref=f3e15]:
+            - text: Klinik Ayarları
+            - generic [ref=f3e16]: Yakında
+    - main [ref=f3e17]:
+      - generic [ref=f3e18]:
+        - generic [ref=f3e19]:
+          - generic [ref=f3e20]:
+            - heading "Müsaitlik Takvimi" [level=1] [ref=f3e21]
+            - paragraph [ref=f3e22]: Haftalık çalışma saatleri, dolu ve kapalı slotlar
+          - generic [ref=f3e23]:
+            - link [ref=f3e24] [cursor=pointer]:
+              - /url: /musaitlik-takvimi/sablon
+              - button "Haftalık şablon" [ref=f3e25]
+            - link [ref=f3e29] [cursor=pointer]:
+              - /url: /musaitlik-takvimi/istisna-gunler
+              - button "İstisna günler" [ref=f3e30]
+        - generic [ref=f3e33]:
+          - generic [ref=f3e34]: Demo aracı — gerçek uygulamada yoktur
+          - paragraph [ref=f3e38]: Rol gerçekte oturumdan gelir. Bu seçici yalnızca üç rol görünümünü demoda karşılaştırabilmek için eklendi.
+          - generic [ref=f3e39]:
+            - generic [ref=f3e40]:
+              - button "Doktor" [ref=f3e41] [cursor=pointer]
+              - button "Klinik admin" [ref=f3e42] [cursor=pointer]
+              - button "Sekreter" [ref=f3e43] [cursor=pointer]
+            - generic [ref=f3e44]: Kendi takvimini düzenler.
+        - generic [ref=f3e45]:
+          - generic [ref=f3e46]:
+            - generic [ref=f3e47]:
+              - generic [ref=f3e48]:
+                - generic [ref=f3e49]: Doktor
+                - generic [ref=f3e50]: Dr. Ayşe Yılmaz
+              - generic [ref=f3e51]: Slot süresi 20 dk
+            - generic [ref=f3e53]:
+              - button "Önceki" [ref=f3e54] [cursor=pointer]
+              - generic [ref=f3e57]: 10.08.2026 – 16.08.2026
+              - button "Sonraki" [ref=f3e58] [cursor=pointer]
+          - generic [ref=f3e59]:
+            - generic [ref=f3e60]:
+              - generic [ref=f3e62]: Müsait
+              - generic [ref=f3e63]: · Randevu alınabilir
+            - generic [ref=f3e64]:
+              - generic [ref=f3e66]: Dolu
+              - generic [ref=f3e67]: · Randevu var
+            - generic [ref=f3e68]:
+              - generic [ref=f3e70]: Kapalı
+              - generic [ref=f3e71]: · Geçmiş saat, kayıt tamponu veya çalışma saati dışı
+            - generic [ref=f3e72]:
+              - generic [ref=f3e74]: İstisna gün
+              - generic [ref=f3e75]: · İzin / kongre
+        - generic [ref=f3e77]:
+          - generic [ref=f3e78]:
+            - generic [ref=f3e83]:
+              - generic [ref=f3e84]: Pzt
+              - generic [ref=f3e85]: "10"
+            - generic [ref=f3e86]:
+              - generic [ref=f3e87]: Sal
+              - generic [ref=f3e88]: "11"
+            - generic [ref=f3e89]:
+              - generic [ref=f3e90]: Çar
+              - generic [ref=f3e91]: "12"
+            - generic [ref=f3e92]:
+              - generic [ref=f3e93]: Per
+              - generic [ref=f3e94]: "13"
+            - generic [ref=f3e95]:
+              - generic [ref=f3e96]: Cum
+              - generic [ref=f3e97]: "14"
+            - generic [ref=f3e98]:
+              - generic [ref=f3e99]: Cmt
+              - generic [ref=f3e100]: "15"
+            - generic [ref=f3e101]:
+              - generic [ref=f3e102]: Paz
+              - generic [ref=f3e103]: "16"
+          - generic [ref=f3e104]:
+            - generic [ref=f3e105]:
+              - generic [ref=f3e106]: 08:00
+              - generic [ref=f3e110]:
+                - button "08:00 Çalışma saati dışı" [disabled] [ref=f3e112]:
+                  - generic [ref=f3e113]: 08:00
+                  - generic: Çalışma saati dışı
+                - button "08:20 Çalışma saati dışı" [disabled] [ref=f3e119]:
+                  - generic [ref=f3e120]: 08:20
+                  - generic: Çalışma saati dışı
+                - button "08:40 Çalışma saati dışı" [disabled] [ref=f3e126]:
+                  - generic [ref=f3e127]: 08:40
+                  - generic: Çalışma saati dışı
+            - generic [ref=f3e136]:
+              - generic [ref=f3e137]: 09:00
+              - generic [ref=f3e139]:
+                - button "09:00 Murat Tan" [ref=f3e141] [cursor=pointer]:
+                  - generic [ref=f3e142]: 09:00
+                  - generic: Murat Tan
+                - button "09:20 Geçmiş saat" [disabled] [ref=f3e145]:
+                  - generic [ref=f3e146]: 09:20
+                  - generic: Geçmiş saat
+                - button "09:40 Geçmiş saat" [disabled] [ref=f3e152]:
+                  - generic [ref=f3e153]: 09:40
+                  - generic: Geçmiş saat
+              - generic [ref=f3e158]:
+                - button "09:00 Geçmiş saat" [disabled] [ref=f3e160]:
+                  - generic [ref=f3e161]: 09:00
+                  - generic: Geçmiş saat
+                - button "09:20 Geçmiş saat" [disabled] [ref=f3e167]:
+                  - generic [ref=f3e168]: 09:20
+                  - generic: Geçmiş saat
+                - button "09:40 Selin Bay" [ref=f3e174] [cursor=pointer]:
+                  - generic [ref=f3e175]: 09:40
+                  - generic: Selin Bay
+              - generic [ref=f3e177]:
+                - button "09:00 Geçmiş saat" [disabled] [ref=f3e179]:
+                  - generic [ref=f3e180]: 09:00
+                  - generic: Geçmiş saat
+                - button "09:20 Geçmiş saat" [disabled] [ref=f3e186]:
+                  - generic [ref=f3e187]: 09:20
+                  - generic: Geçmiş saat
+                - button "09:40 Geçmiş saat" [disabled] [ref=f3e193]:
+                  - generic [ref=f3e194]: 09:40
+                  - generic: Geçmiş saat
+              - generic [ref=f3e199]:
+                - button "09:00" [ref=f3e201] [cursor=pointer]
+                - button "09:20 Fatma Öz" [ref=f3e205] [cursor=pointer]:
+                  - generic [ref=f3e206]: 09:20
+                  - generic: Fatma Öz
+                - button "09:40" [ref=f3e209] [cursor=pointer]
+              - generic [ref=f3e212]:
+                - button "09:00 İstisna gün" [disabled] [ref=f3e214]:
+                  - generic [ref=f3e215]: 09:00
+                  - generic: İstisna gün
+                - button "09:20 İstisna gün" [disabled] [ref=f3e221]:
+                  - generic [ref=f3e222]: 09:20
+                  - generic: İstisna gün
+                - button "09:40 İstisna gün" [disabled] [ref=f3e228]:
+                  - generic [ref=f3e229]: 09:40
+                  - generic: İstisna gün
+            - generic [ref=f3e236]:
+              - generic [ref=f3e237]: 10:00
+              - generic [ref=f3e239]:
+                - button "10:00 Geçmiş saat" [disabled] [ref=f3e241]:
+                  - generic [ref=f3e242]: 10:00
+                  - generic: Geçmiş saat
+                - button "10:20 Ayla Kurt" [ref=f3e248] [cursor=pointer]:
+                  - generic [ref=f3e249]: 10:20
+                  - generic: Ayla Kurt
+                - button "10:40 Geçmiş saat" [disabled] [ref=f3e252]:
+                  - generic [ref=f3e253]: 10:40
+                  - generic: Geçmiş saat
+              - generic [ref=f3e258]:
+                - button "10:00 Geçmiş saat" [disabled] [ref=f3e260]:
+                  - generic [ref=f3e261]: 10:00
+                  - generic: Geçmiş saat
+                - button "10:20 Geçmiş saat" [disabled] [ref=f3e267]:
+                  - generic [ref=f3e268]: 10:20
+                  - generic: Geçmiş saat
+                - button "10:40 Geçmiş saat" [disabled] [ref=f3e274]:
+                  - generic [ref=f3e275]: 10:40
+                  - generic: Geçmiş saat
+              - generic [ref=f3e280]:
+                - button "10:00 Okan Sel" [ref=f3e282] [cursor=pointer]:
+                  - generic [ref=f3e283]: 10:00
+                  - generic: Okan Sel
+                - button "10:20 Geçmiş saat" [disabled] [ref=f3e286]:
+                  - generic [ref=f3e287]: 10:20
+                  - generic: Geçmiş saat
+                - button "10:40 Geçmiş saat" [disabled] [ref=f3e293]:
+                  - generic [ref=f3e294]: 10:40
+                  - generic: Geçmiş saat
+              - generic [ref=f3e299]:
+                - button "10:00" [ref=f3e301] [cursor=pointer]
+                - button "10:20" [ref=f3e305] [cursor=pointer]
+                - button "10:40" [ref=f3e309] [cursor=pointer]
+              - generic [ref=f3e312]:
+                - button "10:00 İstisna gün" [disabled] [ref=f3e314]:
+                  - generic [ref=f3e315]: 10:00
+                  - generic: İstisna gün
+                - button "10:20 İstisna gün" [disabled] [ref=f3e321]:
+                  - generic [ref=f3e322]: 10:20
+                  - generic: İstisna gün
+                - button "10:40 Elif Çelik" [ref=f3e328] [cursor=pointer]:
+                  - generic [ref=f3e329]: 10:40
+                  - generic: Elif Çelik
+            - generic [ref=f3e333]:
+              - generic [ref=f3e334]: 11:00
+              - generic [ref=f3e336]:
+                - button "11:00 Geçmiş saat" [disabled] [ref=f3e338]:
+                  - generic [ref=f3e339]: 11:00
+                  - generic: Geçmiş saat
+                - button "11:20 Geçmiş saat" [disabled] [ref=f3e345]:
+                  - generic [ref=f3e346]: 11:20
+                  - generic: Geçmiş saat
+                - button "11:40 Geçmiş saat" [disabled] [ref=f3e352]:
+                  - generic [ref=f3e353]: 11:40
+                  - generic: Geçmiş saat
+              - generic [ref=f3e358]:
+                - button "11:00 Kemal Ün" [ref=f3e360] [cursor=pointer]:
+                  - generic [ref=f3e361]: 11:00
+                  - generic: Kemal Ün
+                - button "11:20 Geçmiş saat" [disabled] [ref=f3e364]:
+                  - generic [ref=f3e365]: 11:20
+                  - generic: Geçmiş saat
+                - button "11:40 Geçmiş saat" [disabled] [ref=f3e371]:
+                  - generic [ref=f3e372]: 11:40
+                  - generic: Geçmiş saat
+              - generic [ref=f3e377]:
+                - button "11:00 Geçmiş saat" [disabled] [ref=f3e379]:
+                  - generic [ref=f3e380]: 11:00
+                  - generic: Geçmiş saat
+                - button "11:20 Geçmiş saat" [disabled] [ref=f3e386]:
+                  - generic [ref=f3e387]: 11:20
+                  - generic: Geçmiş saat
+                - button "11:40 Geçmiş saat" [disabled] [ref=f3e393]:
+                  - generic [ref=f3e394]: 11:40
+                  - generic: Geçmiş saat
+              - generic [ref=f3e399]:
+                - button "11:00" [ref=f3e401] [cursor=pointer]
+                - button "11:20" [ref=f3e405] [cursor=pointer]
+                - button "11:40" [ref=f3e409] [cursor=pointer]
+              - generic [ref=f3e412]:
+                - button "11:00 İstisna gün" [disabled] [ref=f3e414]:
+                  - generic [ref=f3e415]: 11:00
+                  - generic: İstisna gün
+                - button "11:20 İstisna gün" [disabled] [ref=f3e421]:
+                  - generic [ref=f3e422]: 11:20
+                  - generic: İstisna gün
+                - button "11:40 İstisna gün" [disabled] [ref=f3e428]:
+                  - generic [ref=f3e429]: 11:40
+                  - generic: İstisna gün
+            - generic [ref=f3e436]:
+              - generic [ref=f3e437]: 12:00
+              - generic [ref=f3e439]:
+                - button "12:00 Geçmiş saat" [disabled] [ref=f3e441]:
+                  - generic [ref=f3e442]: 12:00
+                  - generic: Geçmiş saat
+                - button "12:20 Geçmiş saat" [disabled] [ref=f3e448]:
+                  - generic [ref=f3e449]: 12:20
+                  - generic: Geçmiş saat
+                - button "12:40 Geçmiş saat" [disabled] [ref=f3e455]:
+                  - generic [ref=f3e456]: 12:40
+                  - generic: Geçmiş saat
+              - generic [ref=f3e461]:
+                - button "12:00 Geçmiş saat" [disabled] [ref=f3e463]:
+                  - generic [ref=f3e464]: 12:00
+                  - generic: Geçmiş saat
+                - button "12:20 Geçmiş saat" [disabled] [ref=f3e470]:
+                  - generic [ref=f3e471]: 12:20
+                  - generic: Geçmiş saat
+                - button "12:40 Geçmiş saat" [disabled] [ref=f3e477]:
+                  - generic [ref=f3e478]: 12:40
+                  - generic: Geçmiş saat
+              - generic [ref=f3e483]:
+                - button "12:00 Geçmiş saat" [disabled] [ref=f3e485]:
+                  - generic [ref=f3e486]: 12:00
+                  - generic: Geçmiş saat
+                - button "12:20 Geçmiş saat" [disabled] [ref=f3e492]:
+                  - generic [ref=f3e493]: 12:20
+                  - generic: Geçmiş saat
+                - button "12:40 Geçmiş saat" [disabled] [ref=f3e499]:
+                  - generic [ref=f3e500]: 12:40
+                  - generic: Geçmiş saat
+              - generic [ref=f3e505]:
+                - button "12:00" [ref=f3e507] [cursor=pointer]
+                - button "12:20" [ref=f3e511] [cursor=pointer]
+                - button "12:40" [ref=f3e515] [cursor=pointer]
+              - generic [ref=f3e518]:
+                - button "12:00 İstisna gün" [disabled] [ref=f3e520]:
+                  - generic [ref=f3e521]: 12:00
+                  - generic: İstisna gün
+                - button "12:20 İstisna gün" [disabled] [ref=f3e527]:
+                  - generic [ref=f3e528]: 12:20
+                  - generic: İstisna gün
+                - button "12:40 İstisna gün" [disabled] [ref=f3e534]:
+                  - generic [ref=f3e535]: 12:40
+                  - generic: İstisna gün
+            - generic [ref=f3e542]:
+              - generic [ref=f3e543]: 13:00
+              - generic [ref=f3e545]:
+                - button "13:00 Geçmiş saat" [disabled] [ref=f3e547]:
+                  - generic [ref=f3e548]: 13:00
+                  - generic: Geçmiş saat
+                - button "13:20 Geçmiş saat" [disabled] [ref=f3e554]:
+                  - generic [ref=f3e555]: 13:20
+                  - generic: Geçmiş saat
+                - button "13:40 Geçmiş saat" [disabled] [ref=f3e561]:
+                  - generic [ref=f3e562]: 13:40
+                  - generic: Geçmiş saat
+              - generic [ref=f3e567]:
+                - button "13:00 Geçmiş saat" [disabled] [ref=f3e569]:
+                  - generic [ref=f3e570]: 13:00
+                  - generic: Geçmiş saat
+                - button "13:20 Geçmiş saat" [disabled] [ref=f3e576]:
+                  - generic [ref=f3e577]: 13:20
+                  - generic: Geçmiş saat
+                - button "13:40 Geçmiş saat" [disabled] [ref=f3e583]:
+                  - generic [ref=f3e584]: 13:40
+                  - generic: Geçmiş saat
+              - generic [ref=f3e589]:
+                - button "13:00 Geçmiş saat" [disabled] [ref=f3e591]:
+                  - generic [ref=f3e592]: 13:00
+                  - generic: Geçmiş saat
+                - button "13:20 Geçmiş saat" [disabled] [ref=f3e598]:
+                  - generic [ref=f3e599]: 13:20
+                  - generic: Geçmiş saat
+                - button "13:40 Pınar Ege" [ref=f3e605] [cursor=pointer]:
+                  - generic [ref=f3e606]: 13:40
+                  - generic: Pınar Ege
+              - generic [ref=f3e608]:
+                - button "13:00" [ref=f3e610] [cursor=pointer]
+                - button "13:20" [ref=f3e614] [cursor=pointer]
+                - button "13:40" [ref=f3e618] [cursor=pointer]
+              - generic [ref=f3e621]:
+                - button "13:00 İstisna gün" [disabled] [ref=f3e623]:
+                  - generic [ref=f3e624]: 13:00
+                  - generic: İstisna gün
+                - button "13:20 İstisna gün" [disabled] [ref=f3e630]:
+                  - generic [ref=f3e631]: 13:20
+                  - generic: İstisna gün
+                - button "13:40 İstisna gün" [disabled] [ref=f3e637]:
+                  - generic [ref=f3e638]: 13:40
+                  - generic: İstisna gün
+            - generic [ref=f3e645]:
+              - generic [ref=f3e646]: 14:00
+              - generic [ref=f3e648]:
+                - button "14:00 Deniz Arı" [ref=f3e650] [cursor=pointer]:
+                  - generic [ref=f3e651]: 14:00
+                  - generic: Deniz Arı
+                - button "14:20 Geçmiş saat" [disabled] [ref=f3e654]:
+                  - generic [ref=f3e655]: 14:20
+                  - generic: Geçmiş saat
+                - button "14:40 Geçmiş saat" [disabled] [ref=f3e661]:
+                  - generic [ref=f3e662]: 14:40
+                  - generic: Geçmiş saat
+              - generic [ref=f3e667]:
+                - button "14:00 Geçmiş saat" [disabled] [ref=f3e669]:
+                  - generic [ref=f3e670]: 14:00
+                  - generic: Geçmiş saat
+                - button "14:20 Geçmiş saat" [disabled] [ref=f3e676]:
+                  - generic [ref=f3e677]: 14:20
+                  - generic: Geçmiş saat
+                - button "14:40 Geçmiş saat" [disabled] [ref=f3e683]:
+                  - generic [ref=f3e684]: 14:40
+                  - generic: Geçmiş saat
+              - generic [ref=f3e689]:
+                - button "14:00 Kayıt tamponu (15 dk)" [disabled] [ref=f3e691]:
+                  - generic [ref=f3e692]: 14:00
+                  - generic: Kayıt tamponu (15 dk)
+                - button "14:20" [ref=f3e698] [cursor=pointer]
+                - button "14:40" [ref=f3e702] [cursor=pointer]
+              - generic [ref=f3e705]:
+                - button "14:00" [ref=f3e707] [cursor=pointer]
+                - button "14:20" [ref=f3e711] [cursor=pointer]
+                - button "14:40 Hasan Ak" [ref=f3e715] [cursor=pointer]:
+                  - generic [ref=f3e716]: 14:40
+                  - generic: Hasan Ak
+              - generic [ref=f3e718]:
+                - button "14:00 İstisna gün" [disabled] [ref=f3e720]:
+                  - generic [ref=f3e721]: 14:00
+                  - generic: İstisna gün
+                - button "14:20 İstisna gün" [disabled] [ref=f3e727]:
+                  - generic [ref=f3e728]: 14:20
+                  - generic: İstisna gün
+                - button "14:40 İstisna gün" [disabled] [ref=f3e734]:
+                  - generic [ref=f3e735]: 14:40
+                  - generic: İstisna gün
+            - generic [ref=f3e742]:
+              - generic [ref=f3e743]: 15:00
+              - generic [ref=f3e745]:
+                - button "15:00 Geçmiş saat" [disabled] [ref=f3e747]:
+                  - generic [ref=f3e748]: 15:00
+                  - generic: Geçmiş saat
+                - button "15:20 Geçmiş saat" [disabled] [ref=f3e754]:
+                  - generic [ref=f3e755]: 15:20
+                  - generic: Geçmiş saat
+                - button "15:40 Geçmiş saat" [disabled] [ref=f3e761]:
+                  - generic [ref=f3e762]: 15:40
+                  - generic: Geçmiş saat
+              - generic [ref=f3e767]:
+                - button "15:00 Geçmiş saat" [disabled] [ref=f3e769]:
+                  - generic [ref=f3e770]: 15:00
+                  - generic: Geçmiş saat
+                - button "15:20 Nur Ateş" [ref=f3e776] [cursor=pointer]:
+                  - generic [ref=f3e777]: 15:20
+                  - generic: Nur Ateş
+                - button "15:40 Geçmiş saat" [disabled] [ref=f3e780]:
+                  - generic [ref=f3e781]: 15:40
+                  - generic: Geçmiş saat
+              - generic [ref=f3e786]:
+                - button "15:00" [ref=f3e788] [cursor=pointer]
+                - button "15:20" [ref=f3e792] [cursor=pointer]
+                - button "15:40" [ref=f3e796] [cursor=pointer]
+              - generic [ref=f3e799]:
+                - button "15:00" [ref=f3e801] [cursor=pointer]
+                - button "15:20" [ref=f3e805] [cursor=pointer]
+                - button "15:40" [ref=f3e809] [cursor=pointer]
+              - generic [ref=f3e812]:
+                - button "15:00 Murat Tan" [ref=f3e814] [cursor=pointer]:
+                  - generic [ref=f3e815]: 15:00
+                  - generic: Murat Tan
+                - button "15:20 İstisna gün" [disabled] [ref=f3e818]:
+                  - generic [ref=f3e819]: 15:20
+                  - generic: İstisna gün
+                - button "15:40 İstisna gün" [disabled] [ref=f3e825]:
+                  - generic [ref=f3e826]: 15:40
+                  - generic: İstisna gün
+            - generic [ref=f3e833]:
+              - generic [ref=f3e834]: 16:00
+              - generic [ref=f3e836]:
+                - button "16:00 Geçmiş saat" [disabled] [ref=f3e838]:
+                  - generic [ref=f3e839]: 16:00
+                  - generic: Geçmiş saat
+                - button "16:20 Geçmiş saat" [disabled] [ref=f3e845]:
+                  - generic [ref=f3e846]: 16:20
+                  - generic: Geçmiş saat
+                - button "16:40 Geçmiş saat" [disabled] [ref=f3e852]:
+                  - generic [ref=f3e853]: 16:40
+                  - generic: Geçmiş saat
+              - generic [ref=f3e858]:
+                - button "16:00 Geçmiş saat" [disabled] [ref=f3e860]:
+                  - generic [ref=f3e861]: 16:00
+                  - generic: Geçmiş saat
+                - button "16:20 Geçmiş saat" [disabled] [ref=f3e867]:
+                  - generic [ref=f3e868]: 16:20
+                  - generic: Geçmiş saat
+                - button "16:40 Geçmiş saat" [disabled] [ref=f3e874]:
+                  - generic [ref=f3e875]: 16:40
+                  - generic: Geçmiş saat
+              - generic [ref=f3e880]:
+                - button "16:00 Ali Vural" [ref=f3e882] [cursor=pointer]:
+                  - generic [ref=f3e883]: 16:00
+                  - generic: Ali Vural
+                - button "16:20" [ref=f3e886] [cursor=pointer]
+                - button "16:40" [ref=f3e890] [cursor=pointer]
+              - generic [ref=f3e893]:
+                - button "16:00" [ref=f3e895] [cursor=pointer]
+                - button "16:20" [ref=f3e899] [cursor=pointer]
+                - button "16:40" [ref=f3e903] [cursor=pointer]
+              - generic [ref=f3e906]:
+                - button "16:00 İstisna gün" [disabled] [ref=f3e908]:
+                  - generic [ref=f3e909]: 16:00
+                  - generic: İstisna gün
+                - button "16:20 Ayla Kurt" [ref=f3e915] [cursor=pointer]:
+                  - generic [ref=f3e916]: 16:20
+                  - generic: Ayla Kurt
+                - button "16:40 İstisna gün" [disabled] [ref=f3e919]:
+                  - generic [ref=f3e920]: 16:40
+                  - generic: İstisna gün
+            - generic [ref=f3e927]:
+              - generic [ref=f3e928]: 17:00
+              - generic [ref=f3e932]:
+                - button "17:00 Çalışma saati dışı" [disabled] [ref=f3e934]:
+                  - generic [ref=f3e935]: 17:00
+                  - generic [ref=f3e940]: Çalışma saati dışı
+                - button "17:20 Çalışma saati dışı" [disabled] [ref=f3e942]:
+                  - generic [ref=f3e943]: 17:20
+                  - generic [ref=f3e948]: Çalışma saati dışı
+            - generic [ref=f3e953]: 18:00
+  - alert [ref=f3e963]

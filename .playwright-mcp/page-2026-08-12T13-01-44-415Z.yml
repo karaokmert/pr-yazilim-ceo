@@ -1,0 +1,43 @@
+- generic [active] [ref=f2e1]:
+  - generic [ref=f2e2]:
+    - banner [ref=f2e3]:
+      - generic [ref=f2e4]:
+        - generic [ref=f2e5]: PRAG
+        - navigation [ref=f2e9]:
+          - link "Müsaitlik Takvimi" [ref=f2e10] [cursor=pointer]:
+            - /url: /musaitlik-takvimi
+          - link "Haftalık Şablon" [ref=f2e11] [cursor=pointer]:
+            - /url: /musaitlik-takvimi/sablon
+          - link "İstisna Günler" [ref=f2e12] [cursor=pointer]:
+            - /url: /musaitlik-takvimi/istisna-gunler
+          - generic [ref=f2e13]:
+            - text: Randevular
+            - generic [ref=f2e14]: Yakında
+          - generic [ref=f2e15]:
+            - text: Klinik Ayarları
+            - generic [ref=f2e16]: Yakında
+    - main [ref=f2e17]:
+      - generic [ref=f2e18]:
+        - generic [ref=f2e19]:
+          - generic [ref=f2e20]:
+            - heading "İstisna Günler" [level=1] [ref=f2e21]
+            - paragraph [ref=f2e22]: İzin, kongre gibi çalışılmayan günler
+          - generic [ref=f2e23]:
+            - link [ref=f2e24] [cursor=pointer]:
+              - /url: /musaitlik-takvimi
+              - button "Takvime dön" [ref=f2e25]
+            - button "İstisna gün ekle" [ref=f2e28] [cursor=pointer]
+        - table [ref=f2e31]:
+          - rowgroup [ref=f2e32]:
+            - row [ref=f2e33]:
+              - columnheader "Tarih" [ref=f2e34]
+              - columnheader "Tür" [ref=f2e35]
+              - columnheader "Açıklama" [ref=f2e36]
+              - columnheader "Etkilenen randevu" [ref=f2e37]
+          - rowgroup [ref=f2e38]:
+            - row [ref=f2e39]:
+              - cell "15.08.2026" [ref=f2e40]
+              - cell "İzin" [ref=f2e47]
+              - cell "Yıllık izin" [ref=f2e49]
+              - cell "2 randevu" [ref=f2e50]
+  - alert [ref=f2e52]

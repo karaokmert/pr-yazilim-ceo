@@ -1,0 +1,140 @@
+- generic [active] [ref=f4e1]:
+  - generic [ref=f4e2]:
+    - banner [ref=f4e3]:
+      - generic [ref=f4e4]:
+        - generic [ref=f4e5]: PRAG
+        - navigation [ref=f4e9]:
+          - link "Müsaitlik Takvimi" [ref=f4e10] [cursor=pointer]:
+            - /url: /musaitlik-takvimi
+          - link "Haftalık Şablon" [ref=f4e11] [cursor=pointer]:
+            - /url: /musaitlik-takvimi/sablon
+          - link "İstisna Günler" [ref=f4e12] [cursor=pointer]:
+            - /url: /musaitlik-takvimi/istisna-gunler
+          - generic [ref=f4e13]:
+            - text: Randevular
+            - generic [ref=f4e14]: Yakında
+          - generic [ref=f4e15]:
+            - text: Klinik Ayarları
+            - generic [ref=f4e16]: Yakında
+    - main [ref=f4e17]:
+      - generic [ref=f4e18]:
+        - generic [ref=f4e19]:
+          - generic [ref=f4e20]:
+            - heading "Haftalık Şablon" [level=1] [ref=f4e21]
+            - paragraph [ref=f4e22]: Çalışma günleri, saat aralıkları ve slot süresi
+          - generic [ref=f4e23]:
+            - link [ref=f4e24] [cursor=pointer]:
+              - /url: /musaitlik-takvimi
+              - button "Takvime dön" [ref=f4e25]
+            - button "Kaydet" [ref=f4e28] [cursor=pointer]
+        - generic [ref=f4e33]:
+          - generic [ref=f4e34]: Demo aracı — gerçek uygulamada yoktur
+          - paragraph [ref=f4e38]: Rol gerçekte oturumdan gelir. Bu seçici yalnızca üç rol görünümünü demoda karşılaştırabilmek için eklendi.
+          - generic [ref=f4e39]:
+            - generic [ref=f4e40]:
+              - button "Doktor" [ref=f4e41] [cursor=pointer]
+              - button "Klinik admin" [ref=f4e42] [cursor=pointer]
+              - button "Sekreter" [ref=f4e43] [cursor=pointer]
+            - generic [ref=f4e44]: Kendi takvimini düzenler.
+        - generic [ref=f4e45]:
+          - heading "Doktor ve slot süresi" [level=2] [ref=f4e47]
+          - generic [ref=f4e48]:
+            - generic [ref=f4e49]:
+              - generic [ref=f4e50]: Doktor
+              - combobox [ref=f4e51]:
+                - option "Dr. Ayşe Yılmaz — Kardiyoloji" [selected]
+                - option "Dr. Mehmet Demir — Dahiliye"
+                - option "Dr. Zeynep Kaya — Çocuk Sağlığı"
+                - option "Dr. Emre Şahin — Ortopedi"
+            - generic [ref=f4e52]:
+              - generic [ref=f4e53]: Slot süresi
+              - combobox [ref=f4e54]:
+                - option "10 dakika"
+                - option "15 dakika"
+                - option "20 dakika" [selected]
+                - option "30 dakika"
+                - option "45 dakika"
+                - option "60 dakika"
+            - generic [ref=f4e55]: 6 çalışma günü
+          - paragraph [ref=f4e57]: Slot süresi değiştiğinde alınmış randevular kendi süresiyle korunur; yalnızca ileri tarihli boş slotlar yeni süreye göre yeniden üretilir.
+        - generic [ref=f4e58]:
+          - heading "Haftalık çalışma saatleri" [level=2] [ref=f4e60]
+          - generic [ref=f4e61]:
+            - generic [ref=f4e62]:
+              - generic [ref=f4e63]:
+                - switch [checked] [ref=f4e64] [cursor=pointer]
+                - generic [ref=f4e66]: Pazartesi
+              - generic [ref=f4e67]:
+                - generic [ref=f4e68]:
+                  - generic [ref=f4e69]: Başlangıç
+                  - textbox [ref=f4e70]: 09:00
+                - generic [ref=f4e71]:
+                  - generic [ref=f4e72]: Bitiş
+                  - textbox [ref=f4e73]: 17:00
+                - generic [ref=f4e74]: 09:00 – 17:00 · 24 slot
+            - generic [ref=f4e75]:
+              - generic [ref=f4e76]:
+                - switch [checked] [ref=f4e77] [cursor=pointer]
+                - generic [ref=f4e79]: Salı
+              - generic [ref=f4e80]:
+                - generic [ref=f4e81]:
+                  - generic [ref=f4e82]: Başlangıç
+                  - textbox [ref=f4e83]: 09:00
+                - generic [ref=f4e84]:
+                  - generic [ref=f4e85]: Bitiş
+                  - textbox [ref=f4e86]: 17:00
+                - generic [ref=f4e87]: 09:00 – 17:00 · 24 slot
+            - generic [ref=f4e88]:
+              - generic [ref=f4e89]:
+                - switch [checked] [ref=f4e90] [cursor=pointer]
+                - generic [ref=f4e92]: Çarşamba
+              - generic [ref=f4e93]:
+                - generic [ref=f4e94]:
+                  - generic [ref=f4e95]: Başlangıç
+                  - textbox [ref=f4e96]: 09:00
+                - generic [ref=f4e97]:
+                  - generic [ref=f4e98]: Bitiş
+                  - textbox [ref=f4e99]: 17:00
+                - generic [ref=f4e100]: 09:00 – 17:00 · 24 slot
+            - generic [ref=f4e101]:
+              - generic [ref=f4e102]:
+                - switch [checked] [ref=f4e103] [cursor=pointer]
+                - generic [ref=f4e105]: Perşembe
+              - generic [ref=f4e106]:
+                - generic [ref=f4e107]:
+                  - generic [ref=f4e108]: Başlangıç
+                  - textbox [ref=f4e109]: 09:00
+                - generic [ref=f4e110]:
+                  - generic [ref=f4e111]: Bitiş
+                  - textbox [ref=f4e112]: 17:00
+                - generic [ref=f4e113]: 09:00 – 17:00 · 24 slot
+            - generic [ref=f4e114]:
+              - generic [ref=f4e115]:
+                - switch [checked] [ref=f4e116] [cursor=pointer]
+                - generic [ref=f4e118]: Cuma
+              - generic [ref=f4e119]:
+                - generic [ref=f4e120]:
+                  - generic [ref=f4e121]: Başlangıç
+                  - textbox [ref=f4e122]: 09:00
+                - generic [ref=f4e123]:
+                  - generic [ref=f4e124]: Bitiş
+                  - textbox [ref=f4e125]: 17:00
+                - generic [ref=f4e126]: 09:00 – 17:00 · 24 slot
+            - generic [ref=f4e127]:
+              - generic [ref=f4e128]:
+                - switch [checked] [ref=f4e129] [cursor=pointer]
+                - generic [ref=f4e131]: Cumartesi
+              - generic [ref=f4e132]:
+                - generic [ref=f4e133]:
+                  - generic [ref=f4e134]: Başlangıç
+                  - textbox [ref=f4e135]: 09:00
+                - generic [ref=f4e136]:
+                  - generic [ref=f4e137]: Bitiş
+                  - textbox [ref=f4e138]: 13:00
+                - generic [ref=f4e139]: 09:00 – 13:00 · 12 slot
+            - generic [ref=f4e140]:
+              - generic [ref=f4e141]:
+                - switch [ref=f4e142] [cursor=pointer]
+                - generic [ref=f4e144]: Pazar
+              - generic [ref=f4e145]: Çalışılmıyor
+  - alert [ref=f4e146]

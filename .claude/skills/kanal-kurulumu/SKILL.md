@@ -1,6 +1,6 @@
 ---
 name: kanal-kurulumu
-description: Clara'nın agent kanalı kurma ve yönetme yöntemi — yıldız topoloji, yönetici merkezde, her agent'ın inbox/outbox kutusu, JSON düzeni ve beş Python betiği. Bu skill'i "kanal kur / N agent için kanal oluştur / kanalı başlat / bu projede kanal düzenini kur" denen her durumda kullan. Ayrıca bir kanal arızası araştırılırken de kullan — mesaj gelmiyor, monitör sessiz, kanal çalışmıyor gibi durumların sebepleri ve ayırt edici testleri burada. Kapsam dışı — fabrikanın kendi kanonu (`skill-project`, PAD'in işi), proje kodu.
+description: "Kanal kurulumu ve yönetimi — YALNIZ `/kanal` komutuyla açılır, kendiliğinden tetiklenmez. Yıldız topoloji, merkez inbox düzeni, beş Python betiği, ölçülmüş arıza tarifleri. Kanal her oturumda gerekmiyor; gerektiğinde Mert `/kanal` der."
 ---
 
 # Kanal kurulumu
@@ -260,6 +260,29 @@ geçti ve **okunmamış bir işe cevap yazıldı.**
 
 **`--force` bile sıfır dönmez** — bilinçli atlama bilinçli kalmalı.
 
+### ⚠️ BORU HATTI ÇIKIŞ KODUNU YUTAR — ölçüldü 2026-08-12
+
+`$?` **son komuttan** gelir, betiğin kendisinden değil:
+
+```
+python3 send.py <olmayan-kutu> ... ; echo $?        → 1   ✅ doğru
+python3 send.py <olmayan-kutu> ... | tail -3 ; echo $?  → 0   ← tail'in kodu
+```
+
+**Vaka:** Clara `| tail -3` ile çağırdı, `rc=0` gördü, *"`send.py` çıkış kodu
+tutarsız"* diye **fabrikaya bulgu göndermek üzereydi.** Ev Clara ve PAD ikisi de
+`rc=1` almıştı; üç ölçümden ikisi doğruydu, yanlış olan Clara'nınkiydi.
+
+Ev Clara yakaladı: *"üç ihtimal var ve hangisi olduğunu ölçmedin — çağırma
+biçimini yaz."* Yazınca sebep göründü.
+
+**Kural: çıkış kodu ölçülecekse boru hattı OLMAYACAK.** Ya doğrudan çağır, ya
+`${PIPESTATUS[0]}` kullan (bash; zsh'de `$pipestatus[1]`).
+
+**Sınıfı:** ölçüm aracının kendisini doğrulamamak. Bu, `rc=0 yetmez` kuralının
+ikinci yüzü — birincisi *"betik yalan söyleyebilir"*, bu *"kabuk yalan
+söyleyebilir"*.
+
 ## MERKEZ YAYIN — proje Clara'larına toplu mesaj
 
 Araç: **`pr-yazilim-ceo/tools/clara-yayin.py`** (Clara'nın kendi tezgahı,
@@ -320,6 +343,48 @@ yazdı. Artık arıza sessiz değil (izleyici bağırıyor) ama **gürültü de 
 
 **Silme yasak** — silinen mesaj sessizce gidiyor; izleyici ölmüyor ama silindiğini de
 söylemiyor.
+
+### ⚠️ `--force` ARAÇ UYARIRKEN VERİLMEZ — ölçüldü 2026-08-12
+
+`archive.py` okunmamış mesaj varsa **reddeder** ve şunu yazar:
+*"the loss is SILENT"*. Bu bir öneri değil, kapıdır.
+
+**Vaka:** ev Clara kutusunu `--force` ile arşivledi. `HANDOVER.json` kanıtı:
+`"forced": true` · `inbox: 132` · `inbox_cursor: ""` (boş).
+**132 mesaj okunmadan gitti** ve dördü merkezin bekleyen sorularıydı — mekanizma
+sorusu, iki skill işi, hatırlatma. Merkez cevap bekledi, ev Clara *"soru
+gelmedi"* sandı.
+
+Kendi tespiti: ***"'görmedim' ile 'gelmedi' aynı şey değil."***
+
+**Kural: `--force` yalnız okunmuş bir kutuda kullanılır.** Okunmadıysa önce
+`read.py` — ve okunacak vakit yoksa **kutu açık bırakılır.** Açık kutu bir
+maliyet değil; kayıp mesaj maliyet.
+
+**İkinci kural: oturum ekranda dururken kanal kapatılmaz.** Ev Clara kapanışı bir
+adım olarak uyguladı, oysa oturum sürüyordu — kapatınca **kör oldu.**
+
+### ⚠️ `.cursor` BOŞ KALIYOR — "okundu" izi YOK
+
+Kutularda `.cursor` dosyası var ama **boş.** Yani:
+
+```
+ulaştı mı?   → ÖLÇÜLEBİLİR (dosya inbox'ta duruyor)
+okundu mu?   → ÖLÇÜLEMEZ
+```
+
+**Bunun bedeli iki kez ödendi.** 2026-08-11 gecesi: iki agent cevaplarını yanlış
+kutuya yazdı, ikisi *"cevap verdim"* sandı, merkez *"cevap gelmedi"* sandı —
+**1 saat 50 dakika.** 2026-08-12: merkez kutuyu ölçtü, *"mesajım orada duruyor,
+ulaştı"* dedi — doğruydu ama **okunmamıştı.**
+
+**Davranış kuralı (mekanizma yokluğunun yaması):** iş verildiğinde **okunduğu
+bildirilir.** Cevap uzun sürecekse *"aldım, işleniyor"* demek yeter — o tek satır
+*"ulaşmadı mı / işleniyor mu"* ayrımını kapatır.
+
+⚠️ Bu bir **yama** ve öyle olduğu biliniyor: bildiren bildirir, bildirmeyen
+bildirmez, fark yine görünmez. Asıl çözüm `read.py`'nin cursor'a yazması —
+fabrikaya gidecek bulgu.
 
 ---
 

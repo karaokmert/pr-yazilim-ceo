@@ -56,7 +56,7 @@
 - [Aracın ne ölçtüğü](feedback_aracin_ne_olctugu.md) — **4 vaka aynı gün**: `ps` kabuğu saydı · 200 ölü pod'dan geldi · `sed` büyük harfi ıskaladı; doğru ölçüt VARLIK KANITI
 - [Üçüncü düzeltmede alanı sorgula](feedback_ucuncu_duzeltmede_alani_sorgula.md) — üç kez düzeltilip işe yaramayan alan kaldırılır, daha iyi doldurulmaz
 - [Maliyet tahmini ölçüm değildir](feedback_maliyet_tahmini_olcum_degil.md) — "pahalı/ucuz" sayı gibi konuşulan tahminler; aynı yöntem için iki gün iki zıt tahmin, gerçek 204 bin token
-- [Kapsamını yaz — neye BAKMADIĞINI da](feedback_kapsamini_yaz.md) — dar kapsam yanlış değil, yazılmamış kapsam yanlış; 3 kez ölçüldü, 2 yeni bulgu çıkardı
+- [Kapsamını yaz — neye BAKMADIĞINI da](feedback_kapsamini_yaz.md) — **4 kez ölçüldü, dördüncüsünde kural elimdeyken ihlal edildi**; kapsamsız ölçüm SONRAKİ ölçümcüyü kör bırakır
 - [Doğru bilgi, yanlış taşıma](feedback_dogru_bilgi_yanlis_tasima.md) — iş vermeden önce hedefin kanonuna bak; rapor özetlenmez, uzun içerik kanala gömülmez
 - [Katmanın değeri içerikten ölçülür](feedback_katman_degeri_icerikten_olculur.md) — trafik sayısı "gereksiz" der, içerik "işini yapmadı" der; ikisi zıt sonuç verir
 - [Ölçüm yerine yorum — EN SIK HATA](feedback_olcum_yerine_yorum.md) — elde kanıt varken yorumlamak; 6 kez düştüm, 4'ünü agent'lar düzeltti

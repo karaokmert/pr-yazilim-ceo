@@ -1,0 +1,82 @@
+- generic [ref=f4e1]:
+  - generic [ref=f4e2]:
+    - banner [ref=f4e3]:
+      - generic [ref=f4e4]:
+        - generic [ref=f4e5]: PRAG
+        - navigation [ref=f4e9]:
+          - link "Müsaitlik Takvimi" [ref=f4e10] [cursor=pointer]:
+            - /url: /musaitlik-takvimi
+          - link "Haftalık Şablon" [ref=f4e11] [cursor=pointer]:
+            - /url: /musaitlik-takvimi/sablon
+          - link "İstisna Günler" [active] [ref=f4e12] [cursor=pointer]:
+            - /url: /musaitlik-takvimi/istisna-gunler
+          - generic [ref=f4e13]:
+            - text: Randevular
+            - generic [ref=f4e14]: Yakında
+          - generic [ref=f4e15]:
+            - text: Klinik Ayarları
+            - generic [ref=f4e16]: Yakında
+    - main [ref=f4e17]:
+      - generic [ref=f4e154]:
+        - generic [ref=f4e155]:
+          - generic [ref=f4e156]:
+            - heading "İstisna Günler" [level=1] [ref=f4e157]
+            - paragraph [ref=f4e158]: İzin, kongre gibi çalışılmayan günler
+          - link [ref=f4e160] [cursor=pointer]:
+            - /url: /musaitlik-takvimi
+            - button "Takvime dön" [ref=f4e161]
+        - generic [ref=f4e164]:
+          - generic [ref=f4e165]: Demo aracı — gerçek uygulamada yoktur
+          - paragraph [ref=f4e169]: Rol gerçekte oturumdan gelir. Bu seçici yalnızca üç rol görünümünü demoda karşılaştırabilmek için eklendi.
+          - generic [ref=f4e170]:
+            - generic [ref=f4e171]:
+              - button "Doktor" [ref=f4e172] [cursor=pointer]
+              - button "Klinik admin" [ref=f4e173] [cursor=pointer]
+              - button "Sekreter" [ref=f4e174] [cursor=pointer]
+            - generic [ref=f4e175]: Takvimi görür, müsaitlik düzenleyemez.
+        - table [ref=f4e177]:
+          - rowgroup [ref=f4e178]:
+            - row [ref=f4e179]:
+              - columnheader "Tarih" [ref=f4e180]
+              - columnheader "Doktor" [ref=f4e181]
+              - columnheader "Tür" [ref=f4e182]
+              - columnheader "Açıklama" [ref=f4e183]
+              - columnheader "Etkilenen randevu" [ref=f4e184]
+          - rowgroup [ref=f4e185]:
+            - row [ref=f4e186]:
+              - cell "14.08.2026" [ref=f4e187]
+              - cell "Dr. Ayşe Yılmaz" [ref=f4e194]
+              - cell "Kongre" [ref=f4e195]
+              - cell "Kardiyoloji kongresi" [ref=f4e197]
+              - cell "3 randevu" [ref=f4e198]
+            - row [ref=f4e200]:
+              - cell "27.08.2026" [ref=f4e201]
+              - cell "Dr. Ayşe Yılmaz" [ref=f4e208]
+              - cell "İzin" [ref=f4e209]
+              - cell "Yıllık izin" [ref=f4e211]
+              - cell "5 randevu" [ref=f4e212]
+            - row [ref=f4e214]:
+              - cell "18.08.2026" [ref=f4e215]
+              - cell "Dr. Mehmet Demir" [ref=f4e222]
+              - cell "İzin" [ref=f4e223]
+              - cell "İzin" [ref=f4e225]
+              - cell "2 randevu" [ref=f4e226]
+            - row [ref=f4e228]:
+              - cell "21.08.2026" [ref=f4e229]
+              - cell "Dr. Zeynep Kaya" [ref=f4e236]
+              - cell "Kongre" [ref=f4e237]
+              - cell "Pediatri sempozyumu" [ref=f4e239]
+              - cell "4 randevu" [ref=f4e240]
+            - row [ref=f4e242]:
+              - cell "04.09.2026" [ref=f4e243]
+              - cell "Dr. Emre Şahin" [ref=f4e250]
+              - cell "Diğer" [ref=f4e251]
+              - cell "İdari görev" [ref=f4e253]
+              - cell "Yok" [ref=f4e254]
+            - row [ref=f4e255]:
+              - cell "11.09.2026" [ref=f4e256]
+              - cell "Dr. Mehmet Demir" [ref=f4e263]
+              - cell "İzin" [ref=f4e264]
+              - cell "Yıllık izin" [ref=f4e266]
+              - cell "1 randevu" [ref=f4e267]
+  - alert [ref=f4e146]: İstisna Günler
