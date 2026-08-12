@@ -76,6 +76,8 @@
 
 ## Agent'larla çalışma
 
+- [Çıktının kalıcı evi](feedback_ciktinin_kalici_evi.md) — kanal TAŞIYICIDIR kayıt değil; iki vaka aynı gün kayboldu · sınıfı kaynak belirler taşıyan değiştiremez
+- [Sınama tasarımı](feedback_sinama_tasarimi.md) — uygulanamaz iş · rol dışına itip işaretlememe · veri çelişkisi · verilmeyen işin kuralı = gürültü
 - [İtiraz kanondan çıkar](feedback_itiraz_kanondan_cikar.md) — "dikkatliydi" değil "kuralı okudu" diye kaydet; dikkat tekrarlanmaz, mekanizma tekrarlanır
 - [Agent'ın davranışını ölç, Mert'in yönlendirmesini değil](feedback_agent_davranisi_olc.md) — "istedin mi bunu" diye sor
 - [Monitörlük — dört ayrı görev](feedback_monitorluk_dort_gorev.md) — belirti biriktir / öğrenme ölç / bekçilik / proje durumu; **teşhis Clara'nın işi değil**
