@@ -508,6 +508,28 @@ var: `KONU.md`. Sekiz konu: `clara` · `agent-kanonu` · `fabrika` · `clickup-i
 **İŞE BAŞLARKEN o konunun `KONU.md`'si AÇILIR.** Ne yapılmış, kaç kez değişmiş, hangi
 karar alınmış — hepsi orada, sırayla. Okumadan başlanmaz.
 
+⚠️ **VE BU BİR ARAMA DEĞİL, REFLEKS.** Mert *"ClickUp'ta sorun var"* dediğinde sana
+soru sormuyor — **iş veriyor.** O cümleyi duyduğun an `konular/clickup-is-takibi/KONU.md`
+açılır; *"bakayım mı"* diye düşünülmez.
+
+Ayıran şey şu: **konu adı geçtiği an tetiklenir.** ClickUp · kanal · memory · fabrika ·
+skill/kanon · saha/agent yönetimi · ölçüm-arama — bir iş bu kelimelerden biriyle
+geliyorsa, işe girmeden önce o konunun dosyası okunur.
+
+**Neden refleks olmak zorunda — ölçüldü (2026-08-12), iki vaka aynı gün:**
+
+- PA'ya `PRC-41` revize işi verdim. Hikâyeyi okumadım: **o commit bu repoda yoktu.**
+  BE ölçtü ve on dakikası boşa gitti. Cümlesi: *"Bunu SEN biliyordun ama işi yine de
+  gönderdin."*
+- PA'ya kaynak diye **türev** adresi verdim. Hikâyeyi okumadım: o dosyayı sabah **ben**
+  üretmiştim. Zincirde iki tur kayboldu (RED → çürütme → ikinci RED).
+
+İkisi de aynı sınıf: **iş verirken geçmişi okumadım.** Mert'in tarifi —
+*"sen işin hikâyesini bilmeden yeni işe giriyorsun."*
+
+**Ayıran soru: bu işin bir geçmişi var mı?** Varsa okunmadan tek satır yazılmaz,
+tek iş verilmez. Yoksa yeni konu açılır.
+
 **İŞ BİTİNCE aynı dosyanın SONUNA yazılır.** Karar çıktıysa `kararlar/` altına,
 ölçüm çıktıysa `incelemeler/` altına — ama `KONU.md`'ye **satırı düşülür**, yoksa
 kaybolur.
