@@ -5,24 +5,25 @@ metadata:
   type: project
 ---
 
-**Son iş: `/kanal` komutu canlı testi (egelisaglik, 2026-08-13 19:00–20:02).**
+**Son iş: hook'a Question başlığı + tanımlayıcı kuralı (EV, 2026-08-13 22:58–23:11).**
 
-Kapanış: `gunluk/egelisaglik/2026-08-13-kapanis-kanal-testi.md`
-Ölçüm: `konular/kanal-iletisim/incelemeler/2026-08-13-kanal-komutu-canli-test.md`
+Kapanış: `gunluk/ev/2026-08-13-kapanis-hook-question.md`
+Karar: `konular/clara/kararlar/2026-08-13-question-baslik-ve-tanimlayici.md`
 
-**Test GEÇTİ** — dört adım da çalıştı (merkez yokken durdu, varken kurdu,
-namespace korundu, iş çift yönlü aktı). **Beş arıza bulundu, beşi düzeltildi.**
+`~/.claude/hooks/sessiz-mod.sh`'e iki kural yazıldı, çalıştığı ölçüldü:
+`★ Question` kutusu **zorunlu başlıkla** açılır (konu adı, soru değil) ve
+**tanımlayıcı tek başına basılmaz** (task ID/commit/branch → yanına başlık).
+Hook global — tüm agent'lara gidiyor, Mert bilerek onayladı.
+⚠️ Hook agent body'sinde iz bırakmaz; kalıcılık isteniyorsa fabrikaya gitmeli.
 
-⚠️ **Egelisaglik'te kanal ŞU AN YOK** — defter `[]`, yedi terminal kanalsız.
-Yeniden kurulacaksa **önce Clara'ya `/kanal`**.
+**Mert'in kararını bekleyen — dördü de dünden devrediyor, dokunulmadı:**
+- **`setup.py` PID düzeltmesi** (EN ACİL, iki oturumdur bekliyor) — kutu adı
+  dakika bazlı, aynı dakikada açılan iki agent aynı adı üretiyor, ikincisi
+  var olan kutuyu SAHİPLENİYOR. Metin hazır: `f"{ROL}-{SESSION}-{os.getpid()}"`.
+  Fabrika betiği = onay gerek.
+- **Beş agent'a `clickup` atıfı** — blok hazır, taşınmadı.
+- **"Tutarlı yazacaklar mı" ölçümü** — 12 Ağustos karar dosyası bekliyor.
+- **Dünden:** fabrika betiklerine yazma izni · üç fabrika bulgusu · kayıp mesajlar.
 
-**Mert'in kararını bekleyen üç şey:**
-- **Fabrika betiklerine yazma izni** — `archive.py`'ye onay metni göstermeden
-  yazıldı (`CLA-ASK-BEFORE-WRITING-OUT` ihlali). Kalıcı izin mi, her seferinde
-  gösterim mi? Yedek: `/tmp/archive.py.yedek`
-- **Üç fabrika bulgusu** devir bloğu bekliyor (`setup.py` arayüzü ·
-  `STATUS.md` ölü `STATE` alanı · `read.py` imleç sahipliği kontrolü yok)
-- **Kayıp mesajlar** — ikinci Clara altı mesajı okudu, imleç ilerledi; arşivde.
-
-Ayrıca 12–13 Ağustos'un sekiz karar bekleyen maddesi hâlâ açık
-(1028 yetim memory · "önkoşul dalı" taraması · K1-K6 fabrikaya).
+**Ölçüm borcu (tek taramada çıkar, 200+ mesaj gerekiyor):** sessizlik hook'unun
+ara-blok etkisi · Question kutularında başlık oranı · task ID'lerinde başlık oranı.
