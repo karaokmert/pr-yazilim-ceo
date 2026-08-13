@@ -1,7 +1,16 @@
 # ⚠️ SİSTEM BULGUSU — v7 memory mirası sessizce düştü (9/9 agent)
 
-> **Bulan:** UID (ui-designer), *"memory'n neden boş"* sorusu üzerine.
-> **Doğrulayan:** Clara, dokuz agent üzerinde ölçtü.
+> **Kopukluğu bulan:** UID (ui-designer), *"memory'n neden boş"* sorusu üzerine —
+> kendi dizininde v7/v8 ayrımını ve içindeki kanon çelişkisini ölçtü.
+> **1028 sayısını ölçen: Clara** (dokuz v7 dizinindeki `.md` dosyaları).
+> ⚠️ **UID bu atfı düzeltti** ve haklıydı: *"BU ÖLÇÜM BENİM DEĞİL. Ben yalnız
+> kendi dizinimde yetim kontrolü yaptım (sonuç 0) ve v7 mirasında 19 dosya
+> saydım. Mert'e 'UID ölçtü' diye giderse dayanaksız kalır."*
+>
+> **İki farklı "yetim" tanımı var, ikisi de geçerli:**
+> - **Clara:** v7 dizininde kalmış, v8 agent'ı oraya bakmıyor → **1028**
+> - **UID:** index'ten bağlanmamış üst-dizin dosyası → **284**
+> Aynı kelime, farklı ölçüt. Karışmasın diye ikisi de yazıldı.
 > **Tarih:** 2026-08-13 00:52
 
 ## Ne oldu
