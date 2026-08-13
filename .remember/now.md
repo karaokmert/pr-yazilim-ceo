@@ -1,5 +1,5 @@
 
-## 15:40 | main
-Audited 6 ideas in pr-yazilim-ceo, found prod tagging contradiction (agent-kanonu 0.7.0 conflicts Aug 5 decision), restructured docs (KONU.md→BILINMESI-GEREKENLER.md), agreed completed work keeps result doc only (impl. pending).
-## 15:57 | main
-Implemented docs consolidation (results-only, 4-section reasoning, reversible .trash/), consolidated ClickUp (1584→85L) and Kanal-İletişim (301→57L), unified topic structure across konular/, beginning systematic application to remaining topics (clara 24 decisions to audit).
+## 17:34 | main
+Diagnosed 2 kanal bugs (timestamp-based box naming creates duplicates, multi-box selection ambiguous), measured active state (6 PA + 4 QA instances open), refined design w/ user (capacity decisions user-owned, registry needed), investigating hook Python files—fixes pending.
+## 17:41 | main
+Removed kanal (channel) initialization hook from `~/.claude/settings.json` SessionStart — agents and user no longer auto-configure channels on session open; deferred to implement via different mechanism.
