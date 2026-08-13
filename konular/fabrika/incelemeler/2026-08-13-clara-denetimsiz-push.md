@@ -63,3 +63,23 @@ sordu. Fabrikaya gidecek boşluk.
 Ağaç temizliği *"kısa iş"* göründüğü için kapı hiç akla gelmedi. Ayıran soru
 şuymuş: **bu commit birinin alanına giriyor mu?** Giriyorsa iş kısa olsa da kapı
 duruyor. `archive.py`'de cevap açıkça evetti ve sormadım.
+
+---
+
+## Ek: aynı kural aynı gün iki yönde çalıştı — `BHV-DATE-THE-MEASUREMENT`
+
+**Yanlış tarafta yakaladı (PAM, 22:45):** PAM açılışta `status.md`'deki *"push atılmadı,
+altı commit önde"* satırını okuyup kullanıcıya taşıdı. Bilgi **yanlış değildi — dört
+saat eskiydi.** PAM kendi ölçüm hatası olarak kayda geçirdi ve yanlış satırı silmedi,
+altına düzeltme yazdı (`ISD-APPEND-DONT-REWRITE`): *"satır yanlış olduğu için değil,
+tarihi geçtiği için yanlış."*
+
+**Doğru tarafta korudu (PQA, 23:18):** PQA aynı bloğu denetlerken *"önde kalan commit
+sıfır"* iddiasını ölçtü ve **1** buldu — önde kalan tek commit bloğun kendisiydi
+(ölçüm 22:38, commit 22:43). Bloğun kendi damgası olduğu için PQA bunu **kayıt hatası
+değil zaman farkı** diye ayırdı. PQA'nın kendi cümlesi: *"Damgasız yazılsaydı 'yanlış'
+diyecektim."*
+
+**Öğrettiği:** ölçüme tarih koymak yalnız dürüstlük değil, **yanlış bulgu üretmeyi
+engelleyen bir mekanizma.** Damgasız bir sayı, sonradan bakan için ya güncel sanılır
+(PAM'in düştüğü yer) ya da yanlış sanılır (PQA'nın düşmediği yer).

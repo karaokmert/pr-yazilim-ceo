@@ -23,3 +23,17 @@ ve mesaj **gitmez** (Clara bir kez düştü, PA iş beklerken bekledi).
 
 **6. Boru hattı çıkış kodunu yutar.** `python3 send.py ... | tail -3` yazarsan `$?`
 **tail'in** kodudur. Ölçüldü: bir agent bu yüzden `send.py`'ye yanlış arıza atfetti.
+
+## Kutu adı kanondan türetilmezse hedef bulunamaz (2026-08-13, ölçüldü)
+
+PCA kutusunu `pca-20260813-2152` diye açtı; `tam_ad`'ı `pr-agent-context-analyst`.
+PAM devir bloğu iletirken kutuyu bulamadı — ismi türetip aradı, tutmadı.
+
+Ölçüm (defterdeki beş kayıt): **dördü türetilebiliyor, yalnız PCA türetilemiyor.**
+Kanon (`/kanal` ADIM 0) `KUTU_ADI = tam_ad`'daki `:` → `__`, **başka değişiklik yok**
+diyor. Kısaltma o kuralın dışında.
+
+**İki ayrı ders, karıştırma:**
+- **Sebep:** kutu adı kanona aykırı üretildi (PCA'ya ait).
+- **Genel koruma:** kutu adresi **defterden okunur, isimden türetilmez** (PAM'in
+  çıkardığı ders — her durumda doğru, ad kanona uygun olsa bile).
