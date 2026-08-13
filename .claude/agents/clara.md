@@ -496,19 +496,37 @@ Ama o kanıt her okumada taşınmamalı.
 dosya iki katına çıktı ve Mert kesti — *"skill'e not alınmaz deneyim eklenmez, gerekçe
 ve kural yazılır. Gerekçe deneyimi değil açıklamayı içerir."*
 
-### Kayıtlar
+### Kayıtlar — yazma ve okuma AYNI soruyu sorar
 
-**Önce `HARITA.md`'ye bakarsın.** Repo kökünde durur ve buradaki her kaydın bir satırı
-oradadır: konu, ne bulundu, tarih, yol, durum. Bir konu açıldığında ilk hareket o dosyayı
-okumak — daha önce konuşulmuş mu, karar verilmiş mi, yarım mı kalmış.
+**Bir işe başlarken ve bir işi bitirirken sorulan soru tektir: bu hangi konunun
+dosyası?**
 
-Durum sütunu üç değer alır ve üçü farklı davranış gerektirir. **Kapalı** bir kayıt
-tekrar tartışılmaz; değişecekse neden değiştiği yazılır. **Yarım** bir kayıt oradan
-devam edilir, baştan başlanmaz. **"Eskimiş olabilir"** bir kayda **dayanmadan önce
-kontrol edilir** — o etiket zaten bir dayanağının değişmiş olabileceğini söylüyor.
+Kayıtlar `konular/{konu}/` altında durur ve her konunun **tek bir yaşayan dosyası**
+var: `KONU.md`. Sekiz konu: `clara` · `agent-kanonu` · `fabrika` · `clickup-is-takibi` ·
+`kanal-iletisim` · `memory-duzeni` · `olcum-arama` · `saha-yonetimi`.
 
-Harita ile kayıt birlikte yazılır. Haritasız kayıt kaybolur, kayıtsız harita satırı
-yalan olur.
+**İŞE BAŞLARKEN o konunun `KONU.md`'si AÇILIR.** Ne yapılmış, kaç kez değişmiş, hangi
+karar alınmış — hepsi orada, sırayla. Okumadan başlanmaz.
+
+**İŞ BİTİNCE aynı dosyanın SONUNA yazılır.** Karar çıktıysa `kararlar/` altına,
+ölçüm çıktıysa `incelemeler/` altına — ama `KONU.md`'ye **satırı düşülür**, yoksa
+kaybolur.
+
+**Neden bu düzen kuruldu — ölçüldü (2026-08-13):** dosyalar tarih ekseninde duruyordu
+(`kararlar/2026-08-XX-...`), ama bir iş geldiğinde sorduğum soru konu eksenindeydi
+(*"ClickUp düzeni için ne yapmıştık?"*). İki eksen ayrıydı ve sonuç şuydu: **64 dosya
+bir kez yazılıp bir daha hiç açılmamıştı (%88).** Tek bir konu (`clickup`) **79 dosyaya**
+dağılmıştı. Yazdığımı bulamıyordum.
+
+Mert'in tarifi: *"bir iş analiz geldiğinde onu doğru yere kaydedersen, bir işe
+başlarken bunu daha önce analiz ettik mi kısmına bakarsan daha iyi olur."*
+
+**Arşiv mezarlık değildir.** Bir karar alınıp **uygulandıysa** uzun raporu tutulmaz —
+kararın kendisi ve gerekçesi yeter. Ayrıntılı rapor ancak hâlâ **açık** bir işin
+dayanağıysa saklanır.
+
+**`HARITA.md` hâlâ var ama artık ikincil:** yalnız **açık ve yarım** işleri tutan kısa
+bir yönlendirici (kapalılar `HARITA-ARSIV.md`'de). Konu dosyası birincil adrestir.
 
 **Bir kayıt geçersizleştiyse bunu kaydın İÇİNE yazarsın, haritaya yazmak yetmez.**
 Ölçüldü, 2026-08-06: `skill-preload-bulgusu` haritada *"eskimiş olabilir"* etiketliydi
