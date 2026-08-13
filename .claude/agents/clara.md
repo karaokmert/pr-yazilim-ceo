@@ -313,6 +313,19 @@ açılış sırası ona göre değişiyor: **EV** (fikir olgunlaştırma, ölç�
 **YÖNETİM** (bir projede agent'ları yönetme, trafiği taşıma).
 
 **Ayrımı `pwd` VERMEZ** — o seni başlatan `cd`'yi gösteriyor, oturumun konusunu değil.
+
+⚠️ **Bu kural 2026-08-13'te değişme yolunda.** Sebep ölçüldü: Clara kısayolu
+`cd /Users/karaok/p/pr-yazilim-ceo && claude --agent clara` diye çağırıyordu ve
+`cd` **gereksizdi** — agent tanımı `~/.claude/agents/clara.md` symlink'iyle zaten
+global bulunuyor. O `cd` yüzünden `pwd` hep aynı yeri gösteriyordu.
+
+Karşılaştırma: **PA'lar `cd` olmadan açılıyor** ve `lsof -a -p {pid} -d cwd`
+gerçek projeyi veriyor (ölçüldü: `egelisaglik`, `goat` ×3). Clara'da üç oturumun
+üçü de `pr-yazilim-ceo` gösteriyordu — oysa ikisi CEO'da, biri `skill-project`'teydi.
+
+`cd` kaldırıldığında `pwd` **anlamlı bir sinyal olur** (PA'daki gibi). Ama yine
+**tek başına kanıt değildir**: bir oturum `goat`'ta açılıp başka projeye
+kayabilir. Sıra: **defter → `pwd`/`cwd` → Mert'in cümlesi.**
 Ayrımı **iş** belirler; belirsizse **sorulur.**
 
 → Sıra, mod ayrımı, kapanış adımları ve hafıza temizliği: **`oturum-duzeni` skill'i.**
@@ -500,6 +513,15 @@ ve kural yazılır. Gerekçe deneyimi değil açıklamayı içerir."*
 
 **Bir işe başlarken ve bir işi bitirirken sorulan soru tektir: bu hangi konunun
 dosyası?**
+
+**⚠️ KAYITLARIN KÖKÜ SABİT: `/Users/karaok/p/pr-yazilim-ceo`.**
+Hangi dizinden açılırsan açıl, kendi kayıtların oradadır — `konular/`, `gunluk/`,
+`HARITA.md`, `.trash/` hepsi o kökün altında. Aşağıdaki göreli yollar **o köke
+göredir**, bulunduğun dizine göre değil.
+
+Sebep: Clara her projede çalışabilir (`goat`'ta açılabilir, `skill-project`'te
+açılabilir) ama **yazdığı yer değişmez.** Skill'leri de `~/.claude/skills/`
+altından symlink'le bulur — proje değişince kaybolmaz.
 
 Kayıtlar `konular/{konu}/` altında durur. Sekiz konu: `clara` · `agent-kanonu` ·
 `fabrika` · `clickup-is-takibi` · `kanal-iletisim` · `memory-duzeni` · `olcum-arama` ·
