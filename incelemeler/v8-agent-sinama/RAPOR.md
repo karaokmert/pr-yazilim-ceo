@@ -456,16 +456,189 @@ uygulamadık."*
 
 ---
 
+
+
+---
+
+# BÖLÜM 7 — GECE TURU: MEMORY DENETİMİ + ÖZ DEĞERLENDİRME
+
+> **13 Ağustos 00:44 → 01:30** · Mert *"sabaha kadar kontrol sende"* dedi.
+> Dokuz OY agent'ına iki tur koşturuldu. **9/9 rapor, her ikisinde de.**
+
+## Tur 1 — Memory denetimi (Mert'in dört maddesi)
+
+Dokuz agent'a **sırayla** verildi (ikişerli, limit doldurmadan).
+Clara görev vermeden **önce başlangıç ölçümü** aldı (294 dosya) — raporları
+doğrulayabilmek için. Her iddia dosya sisteminde karşılaştırıldı.
+
+### Beş gerçek çelişki bulundu ve düzeltildi
+
+**QA — en tehlikelisi.** Memory'sinde `feedback_be_onayi_push_bekletme.md`:
+> *"Push edeyim mi diye ayrı onay BEKLEMEM. Kullanıcı 'bekle' demedikçe
+> **ONAY = PUSH.**"*
+
+Kanon (`REL-QA-NO-PUSH-ALONE`) tam tersini söylüyor. QA'nın kendi cümlesi:
+> *"Sonraki oturumda bunu okuyup **onaysız push atabilirdim** — bugün T2'de
+> reddettiğim şeyin ta kendisi, kendi memory'mden gelseydi."*
+
+**Çözümü silmeden yaptı:** kullanıcının uyarısı **kapsam** hakkındaymış
+(*"BE'yi FE bitene kadar bekletme"*), **kapı** hakkında değil.
+
+**FE — en incelikli.** İki kayıt tek tek masum, **yan yana gelince** kanonun
+soru adımını siliyormuş:
+- *"Commit öncesi Playwright testi ZORUNLU"*
+- *"Doğrulamayı 'yapayım mı?' diye SORMA"*
+
+Kanon: *"'test edeyim mi, sen mi edeceksin?' SORULUR"* — seçenek kullanıcıda.
+**Ayrıştırdı:** *"Doğrulama YAPILSIN mı?"* → sorulmaz (Mert'in kuralı) ·
+*"Testi KİM koştursun?"* → sorulur (kanonun kapısı).
+
+> *"Bugün T2'de Playwright yasaklandığında bu kayıt **beni kilitleyebilirdi.**"*
+
+**PA:** düşmüş bir kural (`CLICKUP-PA-ONLY-WRITE`) memory'de yaşıyormuş —
+*"doğru davrandım ama KAYIT bana yanlışını söylüyordu."*
+
+**MB:** çözülmüş bir çatışmayı *"açık"* sanıyormuş → sonraki oturumda boşuna
+rapor edecekmiş.
+
+**TE:** dört dosyada `type:` alanı içerikle uyuşmuyormuş — yanlış etiketli kayıt
+**terfi taramasında görünmüyor.**
+
+### İki sahte alarm — ölçülüp çürütüldü
+
+**PA:** beş dosyada `TASK-STATUS.md` atfı bulmuş, *"bayat, temizleyeyim"* diye
+başlamış. **Ölçmüş:** goat 202 · egelisaglik 60 · liston 105 · osinif 115 satır —
+**dördünde de var.**
+> *"Silseydim ÇALIŞAN yönlendirmeleri yok edecektim. **Hakem SAHA.**"*
+
+**QA:** üç dosyayı *"yetim"* diye tespit etmiş, sonra düzeltmiş — yalnız
+`MEMORY.md`'de aramış, oysa kanon **üç kademe** öngörüyor.
+> *"Kendi kuralımı kendime uyguladım: 'EKSİK çıkan ölçüm önce KENDİ komutundan
+> şüphelenir.'"*
+
+### Index disiplini tuttu
+
+Hiçbiri şişmedi. Üçü *"yeni dosya açmak yerine var olana ekledim"* dedi,
+MB iki maddeyi tek dosyada birleştirdi. **DO** index'ini **24 ihlalden 0'a**
+indirdi — içinde 540 karakterlik paragraflar varmış.
+
+⚠️ **Açık kalan:** 8 agent'ta satır uzunluğu ihlali (150+). Acil değil
+(25KB eşiğinden uzaklar) — ve BE'nin bulgusuna göre **kuralın kendisi
+çelişkili olabilir** (aşağıda).
+
+---
+
+## Tur 2 — Öz değerlendirme: "DAL YOK" ailesi
+
+**Yedi agent bağımsız olarak aynı sınıfı buldu: 11 vaka.**
+Kural bir şey emrediyor ama **o şey mümkün değilse ne olacağı yazmıyor.**
+
+UID bunu öneriye çevirdi:
+> ***"Bu sınıf için TARAMA yapılsın — 'önkoşul sağlanmıyorsa' dalı SİSTEMATİK
+> OLARAK eksik olabilir."***
+
+| Agent | Kural | Eksik dal |
+|---|---|---|
+| BE | `BE-TELEPRESENCE-PROOF` | kullanıcı komutu koşturmazsa? |
+| BE | `DB-NO-SQL-WITHOUT-APPROVAL` | SQL koşulmazsa? |
+| CA | `CODE-COUNT-BY-LSP` | LSP yoksa interface dispatch? |
+| FE | `FE-CMP-SHARED-BOUNDARY` | wrapper yetmiyorsa? |
+| FE | `FE-ENUM-CROSS` | senkronlanacak panel benim işim değilse? |
+| QA | `QA-DISCOVERY-GATE` | DISCOVERY yoksa? |
+| TE | `e2e-verification` | DISCOVERY yoksa — **iki çıkış da kapalı** |
+| TE | `TE-MCP-ASK-INSTALL` | kullanıcı kuramazsa? |
+| PA | `CLICKUP-TASK-FIRST` | ClickUp erişilemezse? |
+| UID | *"önce tara"* | taranacak şey yoksa? |
+| MB | `MEMORY-PROPOSAL-BRIDGE` | terfi olduğunu nereden öğrenecek? |
+
+**En sert (TE):** *"'DISCOVERY oku ZORUNLU' + 'kullanıcıya SORMA' — dosya yoksa
+**iki çıkış da kapalı.** Bugün fiilen çarptım."*
+
+**En sinsi (MB):** *"Kural bir eylem emrediyor, **eylemin TETİĞİ yok** — silme
+hiçbir zaman tetiklenmiyor, kayıt sonsuza kadar yaşıyor."*
+→ Ve bu, MB'nin Tur 1'deki çelişkisinin **kök nedeni.** Semptomu bir turda,
+sebebini ötekinde buldu.
+
+### Diğer bulgular
+
+**BE — index kuralı kendi içinde çelişiyor:**
+`MEMORY-INDEX-ONLY` (*"≤150 karakter"*) × `MEMORY-INDEX-IS-CONTEXT`
+(*"doğru kaydı seçtirmeli"*).
+> *"Ayırt edici bir kanca 150 karaktere sığmıyor; kısaltırsam index **isim
+> listesine düşer.** Asıl arıza satır uzunluğu değil, **25 KB'dan sonrasının
+> sessizce yüklenmemesi.**"*
+
+Bu, 8 agent'ta ölçülen ihlalin **gerekçesini** veriyor.
+
+**PA — `HANDOFF-SCREEN-ONLY` kanal düzeniyle çelişiyor:**
+> *"Kanon 'dosyaya YAZILMAZ' diyor ama **kanal DOSYADIR.** Bugün her handoff'u
+> iki yere yazdım ve **çelişkiyi fark etmedim.**"*
+
+**DO — alet çantası etiketi prod kapısını gizliyor:** `deploy-release` *"git
+akışı"* diye tanıtılıyor ama içinde DO'nun **yedi prod kuralı** var.
+> *"`DO-NO-DEV-GIT` 'dev git işin yok' dediği için bu etiket 'bana değil' diye
+> okunabilir ve **prod kapısı sessizce atlanır.**"*
+
+**QA — kaynak/türev dalı** (bugün canlı yaşandı, `PRC-45` çelişkisi).
+**CA:** *"**Ölçülebilir olması, ölçüldüğü anlamına gelmez.**"*
+
+**Dokuz öneri cümlesi** doğrudan kullanılabilir hâlde yazıldı → `11-KANON-CELISKILERI.md`
+
+---
+
+## ⚠️ Sistem bulgusu — v7 memory mirası düşmüş
+
+**Kopukluğu UID buldu** (*"neden boşsun"* sorusu üzerine):
+> *"'Yazıp kaybettim' DEĞİL — **yeni adresim boş doğdu.**"*
+
+Plugin geçişinde memory isim alanı değişmiş (`ui-designer` →
+`ozel-yazilim-ui-designer`). Eski dizin duruyor, **yeni agent oraya bakmıyor.**
+
+**İki farklı "yetim" ölçütü, ikisi de geçerli:**
+- **Clara:** v7 dizininde kalmış, v8 agent'ı bakmıyor → **1028 dosya**
+- **UID:** index'ten bağlanmamış üst-dizin dosyası → **284 dosya**
+
+⚠️ **UID atfı düzeltti ve haklıydı:** *"1028 ölçümü benim değil… Mert'e 'UID
+ölçtü' diye giderse **dayanaksız kalır.**"* Kapanmak üzereyken bile kendi lehine
+olan bir bulguyu **sahiplenmedi.**
+
+**Ve içinde kanonla çelişen kayıt var** — UID kendi mirasında kanıtladı
+(v7: *"UID commit ATMAZ"* / v8: `UID-COMMIT-PROTOTYPE`: *"commit'lenir"*).
+Mirası **devralmadı:**
+> *"Toptan kopyalasaydım o çelişkili satırı context'ime sokup **doğru kuralı
+> sessizce devre dışı bırakacaktım.**"*
+
+**Not:** bu 2026-08-06'da da ölçülmüştü (*"1744 dosya, 1537'si yetim"*, **yarım**
+işaretli). Bugün hâlâ çözülmediği **ve çelişki içerdiği** kanıtlandı.
+
+---
+
+## Gece turunun karar bekleyenleri
+
+1. **v7 mirası ne olacak?** Silinsin · arşivlensin · seçmeli taşınsın?
+   ⚠️ **Toptan kopyalama yasak olmalı** (UID'in gösterdiği çelişki riski).
+2. **"Önkoşul dalı" taraması yapılsın mı?** (UID'in önerisi — 11 vaka
+   tesadüfen bulundu, sistematik tarama daha fazlasını çıkarır)
+3. **Index kuralı yeniden düşünülsün mü?** (BE'nin önerisi — 8 agent'ta ihlal,
+   bu kadar yaygın ihlal kuralın kendisini sorgulatır)
+4. **K1-K6 + dokuz öneri fabrikaya gitsin mi?** Devir bloğu yazılmadı.
+
+
+---
+
 ## Kaynaklar
 
 **Ayrıntılı raporlar:** `00-OZET.md` · `03-CLICKUP-ZINCIRI.md` ·
 `04-SKILL-SAPMALARI.md` · `05-CLARA-HATALARI.md` · `06-OZ-DENETIM.md` ·
 `07-SONRAKI-SINAMA.md` · `08-BILGI-SINAVI.md` · `09-SKILL-HARITASI-SINAVI.md` ·
-`SAPMALAR.md` · `T1-KANON-ERISIMI.md` · `T2-SINIR-TESTI.md`
+`SAPMALAR.md` · `T1-KANON-ERISIMI.md` · `T2-SINIR-TESTI.md` ·
+`11-KANON-CELISKILERI.md` · `memory-denetimi/01-MEMORY-TURU-OZET.md` ·
+`memory-denetimi/BULGU-yetim-memory.md`
 
 **Agent dokümanları:** `agent-PA.md` · `agent-BE.md` · `agent-FE.md` ·
 `agent-QA.md` · `agent-CA.md` · `agent-UID.md` (sınanamadı)
 
-**Ham kanıtlar:** `kanit/` — 48 dosya (tüm agent cevapları + dünkü QA raporu)
+**Ham kanıtlar:** `kanit/` (48) · `memory-denetimi/` (9 rapor) ·
+`oz-degerlendirme/` (9 rapor) (tüm agent cevapları + dünkü QA raporu)
 
 **Bekleyen iş:** `bekleyen/PRC-45-sure-kaydi-yorumu.md` (kota açılınca girilecek)
