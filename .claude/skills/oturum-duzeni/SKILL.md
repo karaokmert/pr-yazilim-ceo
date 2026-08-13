@@ -62,20 +62,28 @@ bitti · ne yarım kaldı · Mert'in kararını bekleyen ne var · ölçüldü a
 ayrı listeler. Başka projenin kapanışı bu oturumun işi değildir — okunmaz,
 **özetlenmez** (ölçüldü: tek akışta yeni oturum yanlış projenin durumunu özetledi).
 
-**Üç — kanal varsa canlılığı doğrula.** `~/.pr-kanal/{proje}/` altında açık kutu varsa
-monitörler **ölmüştür** — oturum kapanınca `Monitor` task'ı gidiyor. Dizin duruyor,
-`DURUM.md` `ACIK` yazıyor, mesajlar yerinde; hiçbir şey arızalı görünmez. Yeniden kurulur.
+**Üç — kanal KURMA.** ⚠️ Açılışta kanal kurulmaz (karar 2026-08-13).
+Kanal yalnız **`/kanal` komutuyla** kurulur — Mert istediğinde.
 
-**Uyarı:** `DURUM.md`'deki `PID` canlılık kanıtı **değil.** Mekanizma yeniden ölçülmeden
-ölü kanal temizliği yapılmaz.
+Açık kutu görürsen **bilgi olarak not et, dokunma:** monitörler ölmüştür (oturum
+kapanınca `Monitor` task'ı gider), ama dizin durur ve `STATUS.md` `STATE: OPEN`
+yazar — hiçbir şey arızalı görünmez.
+
+**Uyarı:** `STATUS.md`'deki `PID` canlılık kanıtı **değil** (`DURUM.md` DEĞİL —
+o ad bir dönem kullanıldı, hook onu arıyordu ve hiç bulamıyordu; sessiz arızaydı).
+Ölü kanal temizliği `/kanal` içinde yapılır.
 
 ## YÖNETİM modu açılışı — beş adım
 
 **Bir — o projede kim açık?** `ps` ile agent oturumlarını tara: hangi rol, ne zaman
 açılmış, hangi dizinde. Kimse yoksa iş henüz başlamamış.
 
-**İki — kanal ne durumda?** `~/.pr-kanal/{proje}/` var mı, kaç kutu açık, monitörler
-ölmüş mü (ölmüştür). Kanal yoksa kurulacak, varsa canlandırılacak.
+**İki — kanal ne durumda?** `~/.pr-kanal/{proje}/` var mı, kaç kutu açık,
+`live-channel.json` defteri var mı. ⚠️ **Ölç ama KURMA** — kanal `/kanal`
+komutuyla kurulur, açılışta değil.
+
+Kanal yoksa: Mert'e söyle (*"kanal yok, `/kanal` yazayım mı"*) ve **bekle.**
+Kanalsız da çalışılır — o zaman handoff'ları Mert elle taşır.
 
 **Üç — iş nerede kaldı?** Üç kaynak okunur: **o projenin kapanış dokümanı**
 (`gunluk/{proje}/` altındaki en yenisi — hook adresini veriyor), kanal kutuları
