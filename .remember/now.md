@@ -1,8 +1,7 @@
 
-## 18:33 | main
-
-Fixed 6 missing Clara skill symlinks (11/11 correct), updated clara.md (canonical root + pwd rule), removed hard-coded cd from VS Code Clara terminal profile (user applied); testing from goat project pending.
-## 18:40 | main
-Fixed `oturum-duzeni` skill scope contradiction (disabled auto-channel creation), archived 3156 old channel messages to trash, auditing Clara canon for stale refs (audit incomplete).
-## 18:47 | main
-Completed Clara canon audit: fixed 14 dead refs & 3 stale rules in clara.md, identified `oturum-duzeni` pwd/mod rule outdated (investigating).
+## 19:38 | main
+egelisaglik 2nd Clara test: lock unreachable (startup flow bypasses /kanal command where lock lives), shared .cursor causes read conflicts between agents — fixes pending.
+## 19:48 | main
+egelisaglik 2nd Clara test: diagnosed 3 causes (lock placement, conflicting oturum-duzeni rules, no PID in STATUS.md), attempted oturum-duzeni fixes via debunked `kill -0` check; core unresolved (no person-ID to distinguish duplicate ROLE instances, no READ-time ownership validation) — fixes incomplete.
+## 19:59 | main
+Deployed 3 defter cleanup fixes (archive.py auto-delete before sys.exit, /kanal dual-liveness+prompt, oturum-duzeni shutdown check); DO self-archived confirming auto-cleanup works, but orphaning bug exposed (PID 55676 alive/channelless) — fixes active, blocker identified.

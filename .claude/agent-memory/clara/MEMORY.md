@@ -53,6 +53,7 @@
 - [Çakışan sinyal doğrulama değildir](feedback_cakisan_sinyal_dogrulama_degil.md) — N sinyal aynı şeyi diyorsa tek gerçeğin yansıması olabilir; doğruyu yanlış nedenle veren ölçüt de bozuktur
 - ["Boş" bir ölçüm değil](feedback_bos_olcum_degil.md) — okunmamış bir kutunun görünümü; yokluk iddiası kayıtsız verilmez
 - [Yokluk veri değil](feedback_yokluk_veri_degil.md) — kayıtta görünmeyen iş "yapılmamış" değil; sessizlikten insan hakkında hüküm çıkarılmaz
+- [Karşılaştırma aynı biçimde](feedback_karsilastirma_ayni_bicimde.md) — `basename` **ad** verir yol değil; kısaltılmış ölçümü tam değerle karşılaştırmak tahmini ölçüm sanmaktır
 - [Aracın ne ölçtüğü](feedback_aracin_ne_olctugu.md) — **4 vaka aynı gün**: `ps` kabuğu saydı · 200 ölü pod'dan geldi · `sed` büyük harfi ıskaladı; doğru ölçüt VARLIK KANITI
 - [Üçüncü düzeltmede alanı sorgula](feedback_ucuncu_duzeltmede_alani_sorgula.md) — üç kez düzeltilip işe yaramayan alan kaldırılır, daha iyi doldurulmaz
 - [Maliyet tahmini ölçüm değildir](feedback_maliyet_tahmini_olcum_degil.md) — "pahalı/ucuz" sayı gibi konuşulan tahminler; aynı yöntem için iki gün iki zıt tahmin, gerçek 204 bin token
