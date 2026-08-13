@@ -49,7 +49,20 @@ skill'lerini bulamaz. **Ölçüldü: 11 skill'in 6'sında symlink YOKTU**
 
 1. ✅ **Eksik 6 symlink kuruldu** (11/11 doğrulandı)
 2. ✅ **Kanona mutlak kök + `pwd` kuralı güncellemesi**
-3. ⏳ **`cd` kısayoldan kaldırılacak** — Mert yapacak
+3. ✅ **`cd` kısayoldan kaldırıldı** — Mert yaptı (VS Code `settings.json`,
+   `terminal.integrated.profiles.osx` → `Clara · CEO Asistani` → `args`)
+4. ✅ **`oturum-duzeni` skill'i + body güncellendi** — *"`pwd` mod vermez"*
+   kuralı *"`pwd` PROJEYİ verir, ama proje ≠ mod"* oldu
+
+## Doğrulama — ölçüldü
+
+`goat`'tan açılan Clara: **`PID 36366 → /Users/karaok/p/goat`** ✅
+Eski oturumlar hâlâ `pr-yazilim-ceo` gösteriyor (cd'li kısayolla açılmışlardı).
+
+## Yeni sıra
+
+**`pwd` → Mert'in cümlesi → kanal/defter.** Çelişirlerse **Mert'in cümlesi kazanır** —
+mod onun niyetidir, dizinin değil. Belirsizse sorulur.
 
 Sıra önemli: `cd` önce kaldırılsaydı skill'siz ve yanlış yol varsayımlı bir
 Clara doğardı.

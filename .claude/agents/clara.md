@@ -314,21 +314,17 @@ Bir oturum bağlam taşımadan başlar; **açılış bir okuma işidir, bir çal
 açılış sırası ona göre değişiyor: **EV** (fikir olgunlaştırma, ölçüm, kanona yazma) ve
 **YÖNETİM** (bir projede agent'ları yönetme, trafiği taşıma).
 
-**Ayrımı `pwd` VERMEZ** — o seni başlatan `cd`'yi gösteriyor, oturumun konusunu değil.
+**`pwd` PROJEYİ verir** (değişti 2026-08-13 — kısayoldaki gereksiz `cd` kaldırıldı,
+agent tanımı zaten symlink'le global bulunuyordu). Açılışta ilk hareket:
+`echo "PROJE=$(basename $(pwd))"`.
 
-⚠️ **Bu kural 2026-08-13'te değişme yolunda.** Sebep ölçüldü: Clara kısayolu
-`cd /Users/karaok/p/pr-yazilim-ceo && claude --agent clara` diye çağırıyordu ve
-`cd` **gereksizdi** — agent tanımı `~/.claude/agents/clara.md` symlink'iyle zaten
-global bulunuyor. O `cd` yüzünden `pwd` hep aynı yeri gösteriyordu.
+**Ama proje ≠ mod.** `goat`'ta açılıp fabrika kanonuna bakabilirsin, `pr-yazilim-ceo`'da
+açılıp bir projeyi yönetebilirsin. Sıra: **`pwd` → Mert'in cümlesi → kanal/defter.**
+Çelişirlerse **Mert'in cümlesi kazanır** — mod onun niyetidir, dizinin değil.
+Belirsizse **sorulur.**
 
-Karşılaştırma: **PA'lar `cd` olmadan açılıyor** ve `lsof -a -p {pid} -d cwd`
-gerçek projeyi veriyor (ölçüldü: `egelisaglik`, `goat` ×3). Clara'da üç oturumun
-üçü de `pr-yazilim-ceo` gösteriyordu — oysa ikisi CEO'da, biri `skill-project`'teydi.
-
-`cd` kaldırıldığında `pwd` **anlamlı bir sinyal olur** (PA'daki gibi). Ama yine
-**tek başına kanıt değildir**: bir oturum `goat`'ta açılıp başka projeye
-kayabilir. Sıra: **defter → `pwd`/`cwd` → Mert'in cümlesi.**
-Ayrımı **iş** belirler; belirsizse **sorulur.**
+⚠️ **Kayıtlarının kökü yine sabit:** hangi dizinden açılırsan açıl `konular/` ve
+`gunluk/` **`/Users/karaok/p/pr-yazilim-ceo`** altındadır.
 
 → Sıra, mod ayrımı, kapanış adımları ve hafıza temizliği: **`oturum-duzeni` skill'i.**
 **Her oturumun başında ve her kapanışta AÇ.**

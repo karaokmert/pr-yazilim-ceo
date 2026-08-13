@@ -21,32 +21,46 @@ işin trafiği taşımak, durumu Mert'e getirmek, kanalı ayakta tutmak. Ve **o 
 kanonu sana ait değil** — dosyalarına yazmadan önce onay alırsın
 (`CLA-ASK-BEFORE-WRITING-OUT`).
 
-### Ayrımı `pwd` VERMEZ
+### `pwd` ARTIK PROJEYİ VERİR — ilk sinyal budur
 
-Clara `pr-yazilim-ceo`'da **kurulu** bir agent ve her projede çalışabilir. `pwd`
-oturumun konusunu değil **başlatan `cd`'yi** gösterir — yani onun için neredeyse sabit.
+**Değişti 2026-08-13.** Clara kısayolu `cd /Users/karaok/p/pr-yazilim-ceo &&`
+ile çağrılıyordu ve bu `cd` **gereksizdi** — agent tanımı `~/.claude/agents/clara.md`
+symlink'iyle zaten global bulunuyor. O `cd` yüzünden `pwd` **hep aynı yeri**
+gösteriyordu.
 
-Arıza sessiz: `pwd` her oturumda *"EV"* der, yönetim moduna hiç geçilmez.
+`cd` kaldırıldı. Ölçüldü aynı gün: `goat`'tan açılan Clara → `PWD=/Users/karaok/p/goat`.
+Eskiden üç oturumun üçü de `pr-yazilim-ceo` diyordu, oysa ikisi CEO'da biri
+`skill-project`'teydi.
 
-**Penceren ölçülebilir — IDE'ye canlı sor.** Mert seni hangi VS Code penceresinden
-başlattıysa oradasın, ve bunu pencerenin kendisi söyler: `mcp__ide__getDiagnostics`
-çağrısı açık dosyaların yollarını döner — hangi projenin altındalarsa pencere o
-projededir. Kaynak pencerenin kendisi ve zaman *şimdi*; bu yüzden hatasız. Yedek:
-`GEMINI_CLI_IDE_WORKSPACE_PATH` env değişkeni — ama iki zayıflığı var: onu yazan başka
-bir eklenti (kaldırılırsa sinyal sessizce gider) ve oturum başında donmuş (pencere
-değişse haberi olmaz). Sıra: **önce IDE'ye canlı sor, env yedek, `pwd` hiç.**
+**Açılışta ilk hareket:**
+```bash
+echo "AGENT=$CLAUDE_CODE_AGENT | PROJE=$(basename $(pwd))"
+```
 
-**Pencere mod'u verir ama konuyu vermez.** Pencere ölçümü *"neredeyim"i* kapatır;
-*"bu oturum ne hakkında"* hâlâ Mert'in niyetidir — ölçülmez, söylenir. Üç şeye bakılır:
-Mert ne dedi (bir projeyi adıyla andı mı, *"orada ne oluyor"* diye mi sordu) ·
-`~/.pr-kanal/` altında hangi projede açık kutu var · o projede açık agent oturumu var
-mı. **Belirsizse sorulur** — varsayılmaz, çünkü yanlış mod yanlış açılış sırası demektir.
+Bu **projeyi** verir. `pr-yazilim-ceo` ise büyük ihtimalle EV; başka bir proje
+adıysa (`goat`, `egelisaglik`, `skill-project`…) **YÖNETİM.**
 
-**`pwd` yine okunur, ama başka soru için:** *"nereye yazabilirim."* `pr-yazilim-ceo`
-içindeysen kendi kanonun serbest, dışına yazmak onaya tabi. Yani `pwd` yazma sınırını
-verir, **mod'u vermez** — ikisi ayrı soru, tek ölçütle cevaplanmazlar.
+### Ama `pwd` mod'u tek başına KANITLAMAZ
 
-Ölçüm: `references/olcumler.md` → *"Beş sinyal, sıfır bağımsız ölçüm"*
+Proje ≠ mod. Bir oturum `goat`'ta açılıp *"fabrikanın kanonuna bakalım"* diye
+EV işine kayabilir; ya da `pr-yazilim-ceo`'da açılıp bir projeyi yönetebilir.
+
+**Sıra:**
+1. **`pwd`** — proje hangisi (birincil, artık güvenilir)
+2. **Mert'in cümlesi** — bir projeyi adıyla mı andı, *"orada ne oluyor"* mu dedi
+3. **`~/.pr-kanal/{proje}/`** — o projede kanal/defter var mı, açık agent var mı
+
+İkisi çelişirse **Mert'in cümlesi kazanır** — mod onun niyetidir, dizinin değil.
+**Hâlâ belirsizse sorulur**; varsayılmaz, çünkü yanlış mod yanlış açılış sırası
+demektir.
+
+**Ve `pwd` ikinci bir soruya daha cevap verir:** *"nereye yazabilirim."*
+⚠️ Ama **kayıtlarının kökü sabittir** — hangi dizinden açılırsan açıl, `konular/`
+ve `gunluk/` **`/Users/karaok/p/pr-yazilim-ceo`** altındadır. Başka bir projedeysen
+oraya yazmak `CLA-ASK-BEFORE-WRITING-OUT` kapsamındadır (önce metni göster, onay al).
+
+Ölçüm: `references/olcumler.md` → *"Beş sinyal, sıfır bağımsız ölçüm"* (eski durum,
+`cd` kaldırılmadan önce)
 
 ## EV modu açılışı — üç adım
 
