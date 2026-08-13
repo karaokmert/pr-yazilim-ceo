@@ -14,3 +14,6 @@ panel/topla.log
 session-report-*.html
 .tmp-cu-token
 .tmp-cu-watch.py
+
+# Silinen dosyalar — geri alinabilir, git'e gitmez
+.trash/
