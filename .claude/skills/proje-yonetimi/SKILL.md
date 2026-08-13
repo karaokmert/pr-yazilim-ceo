@@ -132,7 +132,7 @@ alır.
 
 Kararın mantığı: sınır **talimatla** değil **sahiplikle** çiziliyor. Testte agent'ları
 sınırlayan şey bir talimattı — ve talimat bir oturumun içinde yaşar, mekanizma yaşamaz.
-Gerekçe: `kararlar/2026-08-12-clickup-yazma-yetkisi-kapsam-daraltma.md`.
+Gerekçe: `konular/clickup-is-takibi/uygulananlar/2026-08-12-clickup-task-takip-duzeni.md`.
 
 **Clara okur** — statü değiştirmez, iş açmaz. Durumu okur, sapmayı gösterir.
 
@@ -583,7 +583,7 @@ karşı taraf aynı boşluğu üç kez doldurmaya çalışmıştır.
 **Durum tablosu ≠ kanıt tablosu.** *"Ne nerede, kimde, ne bekliyor"* → gözlemcinin.
 *"Ne doğrulandı, neyle"* → ölçümü YAPANIN.
 
-Tam gerekçe: `kararlar/2026-08-11-clara-proje-rolu.md`
+Tam gerekçe: `konular/clara/uygulananlar/2026-08-02_13-clara-kanonu-kuruldu.md`
 
 ## Değişmeyen üç şey
 

@@ -85,4 +85,4 @@ kapı tık olmadan geçmiyor.
 ---
 
 **Kalıbın nasıl bulunduğu, tutmayan üç deneme ve Mert'in ham cümleleri:**
-`incelemeler/pa-davranis-senaryolari/onay-brief-kalibi.md`
+`konular/saha-yonetimi/incelemeler/pa-davranis-senaryolari/RAPOR.md`

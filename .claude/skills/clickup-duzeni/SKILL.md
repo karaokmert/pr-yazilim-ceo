@@ -184,6 +184,6 @@ birincisi kullanılıyor.
 
 ## Kaynak
 
-Ölçümlerin tamamı: `gunluk/2026-08-05.md` — "21:29" (arama), "22:09" (yapı + yazma
+Ölçümlerin tamamı: — "21:29" (arama), "22:09" (yapı + yazma
 güvenilmezliği) başlıkları. Yapı kararı:
-`kararlar/2026-08-05-sprint-planlama-kararlari.md`.
+`konular/clickup-is-takibi/uygulananlar/2026-08-05_11-sprint-ve-planlama-duzeni.md`.

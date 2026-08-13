@@ -186,4 +186,4 @@ Qdrant koleksiyonları silinmedi, duruyor. *"Eski bir kararı kelimesini
 hatırlamadan ara"* ihtiyacı doğarsa ikinci katman olarak eklenebilir — şimdilik
 ihtiyaç doğmadı, kapasite kurulmuyor.
 
-Gerekçenin tamamı: `kararlar/2026-08-07-saha-kaydi-knowledge-graph.md`
+Gerekçenin tamamı: `konular/memory-duzeni/uygulananlar/2026-08-07-saha-kaydi-knowledge-graph.md`

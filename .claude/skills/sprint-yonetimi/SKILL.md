@@ -184,5 +184,5 @@ görevi olan planlama bitti"** demek.
 
 ## Kaynak
 
-`kararlar/2026-08-05-sprint-planlama-kararlari.md` — ilk sprintin kararları ve bu
-yöntemin çıktığı oturum. Ölçümler: `gunluk/2026-08-05.md`.
+`konular/clickup-is-takibi/uygulananlar/2026-08-05_11-sprint-ve-planlama-duzeni.md` — ilk sprintin kararları ve bu
+yöntemin çıktığı oturum. Ölçümler:.
