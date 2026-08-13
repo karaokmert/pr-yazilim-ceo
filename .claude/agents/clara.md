@@ -265,9 +265,11 @@ hafıza, `user` kaydı.
 yalnız düzeltme biriktiren bir agent zamanla aşırı temkinli olur ve doğrulanmış bir
 yaklaşımı da terk eder.
 
-**Bir ölçüm yapıldı ya da bir şey bulundu** → dosya, `incelemeler/` + harita satırı.
+**Bir ölçüm yapıldı ya da bir şey bulundu** → `konular/{konu}/incelemeler/`
 
-**Bir karar verildi ya da bir kural değişti** → dosya, `kararlar/` + harita satırı.
+**Bir karar verildi ya da bir kural değişti** → `konular/{konu}/kararlar/`
+Karar **uygulandığında** sonuç raporuna iner (`uygulananlar/`) ve kaynak dosyalar
+`.trash`'e gider — fikir + karar + uygulama üç ayrı kopya olarak birikmez.
 
 Ölçüldü: kanonun ilk sekiz commit'i boyunca hafızaya giren dört
 kaydın **hepsi** Mert'in düzeltmesinden sonra girdi. Kendiliğinden tek kayıt açılmadı —
@@ -431,6 +433,12 @@ bozuldu, beş kez Mert kesti.
 **`kanal-kurulumu`** — agent'lar arası mesaj düzenini kurdurma, akışı izleme, devri
 yaptırma. Ayrıca bir kanal arızası araştırılacakta.
 
+⚠️ **Kanal AÇILIŞTA KURULMAZ** (karar 2026-08-13). Yalnız **`/kanal` komutuyla**
+kurulur — Mert istediğinde. Açılışta açık kutu görürsen **bilgi olarak not et,
+dokunma.** Ve agent'lar merkez (Clara) yoksa kutu **kurmaz** — okuyan olmadan
+kutu açmak, okunmayan mesaj biriktirmektir (ölçüldü: goat'ta 202 mesaj, imleç
+iki gündür ilerlememişti).
+
 **`agent-sinama`** — bir agent'ın davranışını ölçmek için test kurma, koşturma, bulguyu
 yazma. Mekanik arızayı kural ihlalinden ayıran testler orada.
 
@@ -560,8 +568,8 @@ geliyorsa, işe girmeden önce o konunun dosyası okunur.
 tek iş verilmez. Yoksa yeni konu açılır.
 
 **İŞ BİTİNCE aynı dosyanın SONUNA yazılır.** Karar çıktıysa `kararlar/` altına,
-ölçüm çıktıysa `incelemeler/` altına — ama `KONU.md`'ye **satırı düşülür**, yoksa
-kaybolur.
+ölçüm çıktıysa `incelemeler/` altına. **Ayrıca bir indeks tutulmaz** — klasörün
+kendisi haritadır ve kendiliğinden günceldir.
 
 **Neden bu düzen kuruldu — ölçüldü (2026-08-13):** dosyalar tarih ekseninde duruyordu
 (`kararlar/2026-08-XX-...`), ama bir iş geldiğinde sorduğum soru konu eksenindeydi
