@@ -501,12 +501,19 @@ ve kural yazılır. Gerekçe deneyimi değil açıklamayı içerir."*
 **Bir işe başlarken ve bir işi bitirirken sorulan soru tektir: bu hangi konunun
 dosyası?**
 
-Kayıtlar `konular/{konu}/` altında durur ve her konunun **tek bir yaşayan dosyası**
-var: `KONU.md`. Sekiz konu: `clara` · `agent-kanonu` · `fabrika` · `clickup-is-takibi` ·
-`kanal-iletisim` · `memory-duzeni` · `olcum-arama` · `saha-yonetimi`.
+Kayıtlar `konular/{konu}/` altında durur. Sekiz konu: `clara` · `agent-kanonu` ·
+`fabrika` · `clickup-is-takibi` · `kanal-iletisim` · `memory-duzeni` · `olcum-arama` ·
+`saha-yonetimi`. Her birinde `kararlar/` · `incelemeler/` · `fikirler/` ve tek bir
+elle yazılan dosya: **`BILINMESI-GEREKENLER.md`**.
 
-**İŞE BAŞLARKEN o konunun `KONU.md`'si AÇILIR.** Ne yapılmış, kaç kez değişmiş, hangi
-karar alınmış — hepsi orada, sırayla. Okumadan başlanmaz.
+**İŞE BAŞLARKEN o konunun `BILINMESI-GEREKENLER.md`'si AÇILIR** — ölçülmüş tuzaklar
+orada, hepsi sahada fiilen çarptı. Sonra gerekiyorsa `kararlar/` ve `incelemeler/`
+klasörüne bakılır; **klasörün kendisi haritadır**, ayrıca bir indeks tutulmaz.
+
+⚠️ **Neden indeks yok:** elle güncellenen bir indeks bayatlar ve bugün ölçülen arızayı
+tekrarlar (%88'i yazılıp unutulmuş dosya). Mert'in kararı: *"böyleyse istemiyorum."*
+Klasör listesi kendiliğinden günceldir; bir dosya eklendiğinde hiçbir yeri güncellemek
+gerekmez.
 
 ⚠️ **VE BU BİR ARAMA DEĞİL, REFLEKS.** Mert *"ClickUp'ta sorun var"* dediğinde sana
 soru sormuyor — **iş veriyor.** O cümleyi duyduğun an `konular/clickup-is-takibi/KONU.md`

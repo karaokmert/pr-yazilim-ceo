@@ -1,14 +1,7 @@
-# Memory düzeni
+# Memory düzeni — bilinmesi gerekenler
 
-> Hangi bilgi nereye yazılır, index disiplini, kaydın ömrü, agent memory envanteri.
-
-> **Bu dosya bu konunun TEK adresidir.** Bir iş başlarken burası açılır;
-> ne yapıldı, kaç kez değişti, hangi karar alındı — hepsi aşağıda sırayla.
-> Yeni bir şey olduğunda buranın SONUNA yazılır.
-
----
-
-## ⚠️ ÖNCE BUNLARI BİL — ölçülmüş tuzaklar
+> Bu konuda bir iş geldiğinde **önce bu dosya okunur.**
+> Hepsi sahada fiilen çarptı; hiçbiri tahmin değil.
 
 **1. İndeks EMİR taşır, dosya taşımaz.** `MEMORY.md` context'e **otomatik** girer —
 agent hiçbir tool çağırmadan onu görür ve uygular. Dosyalar `Read` gerektirir.
@@ -29,16 +22,3 @@ index = en değerli kaydın görünmez olması.
 
 **5. İki kayıt tek tek masum, yan yana kuralı silebilir.** FE bunu buldu: iki tercih
 kaydı birleşince kanonun bir adımını örtüyordu.
-
----
-
-## Kararlar (1)
-
-**2026-08-07 — Saha kaydı knowledge graph'a yazılır**
-Tarih: 2026-08-07 Karar veren: Mert Durum: Yürürlükte (şimdilik — Qdrant ölçüldü, elendi)
-→ `konular/memory-duzeni/kararlar/2026-08-07-saha-kaydi-knowledge-graph.md`
-
-
-## İncelemeler (1)
-
-- **Agent memory envanteri — 1537 dosya yetim, ortak konu SIFIR** (154 satır) → `konular/memory-duzeni/incelemeler/agent-memory-envanteri/RAPOR.md`

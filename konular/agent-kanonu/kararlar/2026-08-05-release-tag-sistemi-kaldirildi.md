@@ -1,3 +1,10 @@
+> ⚠️ **BU KARAR SAHADA TUTMAMIŞ — ölçüldü 2026-08-13.**
+> Kanon (`deploy-release`, plugin 0.7.0) hâlâ `REL-DO-PRODUCTION-TAG` diyor:
+> *"Prod deploy sonrası versiyon TAG'i (`v{x.y.z}`) + not ZORUNLU; atlamak YASAK."*
+> Yani karar ya uygulanmamış ya geri alınmış — **hiçbir yerde yazmıyor.**
+> DO bugün prod'a çıksa kanona uyup tag atar.
+> **Karar Mert'te:** kanon mu düzeltilecek, karar mı geri alınacak?
+
 # Karar — release tag sistemi kaldırılıyor
 
 **Tarih:** 2026-08-05
