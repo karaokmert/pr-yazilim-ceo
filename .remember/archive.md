@@ -14,3 +14,6 @@ Factory validation completed: 131 rules, 4 agents, 27 commits merged (40 files, 
 
 ## Week of 2026-08-10
 Completed feature prod (40 ID renames, 626-line spec) and PRY task phases; fixed routing bugs and UTF-8 measurements. Migrated factory to skill-project (4 roles/5 skills), restructured CLAUDE.md (2→4 roles), shipped 5+ commits (94 files, 8.9k lines). Established multi-agent governance with night watch and tri-agent measurement validation discipline.
+
+## Week of 2026-08-11
+Shipped 51+ commits with 2FA data-loss fix (admin/sponsor + FE missing field), PA audit (5 missing promo fields, 54-file review), and kanal-acilis.py Clara mailbox. Sealed factory nightly pipeline (PAM/PAD/PQA/PCA roles, 30+ queue) and resolved working-tree coordination gaps. PRY-17576 approved; 5 staging tasks ready, API routing pending.
