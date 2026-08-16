@@ -48,6 +48,11 @@
 - [Yama değil, sebep](feedback_yama_degil_sebep.md) — **`CLA-FIX-THE-CAUSE`**: hatanın zıttını kurala eklemek çözüm değil; karıştıran şey duruyorsa "karıştırma" kuralı yamadır
 - [İki yol, tek kayıt](feedback_iki_yol_bir_kayit.md) — bir iş iki yoldan yapılıp yalnız biri kaydı tutuyorsa arıza sessiz; sonuç doğru çıkar, kayıt bozulur
 
+## Arama — nasıl aranır
+
+- [grep -l değil, SATIR göster](feedback_grep_satir_goster.md) — `-l` dosya adı verir cevap vermez; aynı soru `-l` ile 11 dosya adı, `-h` ile 47 satır + **çelişki** · Qdrant KAPALI
+- [Dosya değil, sorgu](feedback_dosya_degil_sorgu.md) — erişim problemine YENİ DOSYA önerme; 485 md var, Mert *"dosyalama sisteminden sıkıldım"*
+
 ## Ölçüm disiplini — en çok hata buradan çıkıyor
 
 - [Çakışan sinyal doğrulama değildir](feedback_cakisan_sinyal_dogrulama_degil.md) — N sinyal aynı şeyi diyorsa tek gerçeğin yansıması olabilir; doğruyu yanlış nedenle veren ölçüt de bozuktur

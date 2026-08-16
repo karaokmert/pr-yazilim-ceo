@@ -5,25 +5,41 @@ metadata:
   type: project
 ---
 
-**Son iş: hook'a Question başlığı + tanımlayıcı kuralı (EV, 2026-08-13 22:58–23:11).**
+**Son iş: arama disiplini düzeltildi + SendMessage çelişkisi çözüldü
+(EV, 2026-08-16 13:01–17:55).**
 
-Kapanış: `gunluk/ev/2026-08-13-kapanis-hook-question.md`
-Karar: `konular/clara/kararlar/2026-08-13-question-baslik-ve-tanimlayici.md`
+Kapanış: `gunluk/ev/2026-08-16-kapanis-arama-disiplini.md`
+Karar: `konular/olcum-arama/kararlar/2026-08-16-vektor-cikti-grep-disiplini-girdi.md`
 
-`~/.claude/hooks/sessiz-mod.sh`'e iki kural yazıldı, çalıştığı ölçüldü:
-`★ Question` kutusu **zorunlu başlıkla** açılır (konu adı, soru değil) ve
-**tanımlayıcı tek başına basılmaz** (task ID/commit/branch → yanına başlık).
-Hook global — tüm agent'lara gidiyor, Mert bilerek onayladı.
-⚠️ Hook agent body'sinde iz bırakmaz; kalıcılık isteniyorsa fabrikaya gitmeli.
+⚠️ **İKİ ŞEYİ BİLMEDEN İŞE BAŞLAMA:**
 
-**Mert'in kararını bekleyen — dördü de dünden devrediyor, dokunulmadı:**
-- **`setup.py` PID düzeltmesi** (EN ACİL, iki oturumdur bekliyor) — kutu adı
-  dakika bazlı, aynı dakikada açılan iki agent aynı adı üretiyor, ikincisi
-  var olan kutuyu SAHİPLENİYOR. Metin hazır: `f"{ROL}-{SESSION}-{os.getpid()}"`.
-  Fabrika betiği = onay gerek.
-- **Beş agent'a `clickup` atıfı** — blok hazır, taşınmadı.
-- **"Tutarlı yazacaklar mı" ölçümü** — 12 Ağustos karar dosyası bekliyor.
-- **Dünden:** fabrika betiklerine yazma izni · üç fabrika bulgusu · kayıp mesajlar.
+**1. Qdrant KAPALI.** Mert kapattı (*"mantıklı bulmadık, kullanmadık"*). Vektör
+arama kanondan çıkarıldı — `arama-disiplini` artık grep + `ls` diyor.
 
-**Ölçüm borcu (tek taramada çıkar, 200+ mesaj gerekiyor):** sessizlik hook'unun
-ara-blok etkisi · Question kutularında başlık oranı · task ID'lerinde başlık oranı.
+**2. `grep -l` KULLANMA, satır göster.** `-l` dosya adı verir, cevap vermez.
+Ölçüldü: aynı soru `-l` ile 11 dosya adı, `-h` ile 47 satır → cevap **ve bir
+çelişki** hiçbir dosya açılmadan göründü. Mert'in *"grep riskli, sürekli farklı
+bulgu çıkıyor"* şikayetinin sebebi buydu.
+
+**Açık konu — OTURUMLAR ARASI GÖRÜNÜRLÜK (bugünün ana işi, karar bekliyor).**
+Mert: *"birçok session açıyorum, bunların diğer sessionlarda haberi olmuyor."*
+⚠️ Çözüm **YENİ DOSYA DEĞİL** — Clara defter önerdi, Mert reddetti:
+*"sürekli yazılan, okuması zahmetli dosyalama sisteminden sıkıldım"* (485 md dosyası).
+Doğru teşhis: **sorgu problemi.** Var olan kapanış dokümanlarını Clara okusun.
+Engel teknik değil — kanonda *"başka projenin kapanışını okuma"* yasağı var,
+CEO ofisi için kaldırılmalı.
+
+**Bulgu: bu problem ile gecenin SendMessage görünürlük zaafı AYNI problem**
+(`konular/kanal-iletisim/incelemeler/2026-08-16-sendmessage-celiskisi-cozuldu.md`).
+
+**Obsidian ölçüldü — pencere olabilir, beyin olamaz.** Backlink/Dataview/arama
+Obsidian sürecinde yaşıyor, dosyada durmuyor, agent'a kapalı. En popüler MCP
+Obsidian'ın açık olmasını şart koşuyor. Kazanç Mert'in bakma penceresi olması.
+
+**Mert'in kararını bekleyen — altısı da devrediyor, dokunulmadı:**
+`/sendmessage` repoya taşınsın mı · `sendmessage-akisi` fabrikaya gitsin mi ·
+`setup.py` PID düzeltmesi (kutu adı dakika bazlı, aynı dakikada açılan iki agent
+aynı adı üretiyor) · beş agent'a `clickup` atıfı · "tutarlı yazacaklar mı"
+ikinci ölçümü · fabrika betiklerine yazma izni
+
+**Push durumu:** kuyruk SIFIR, ağaç temiz (`b35284d` push edildi 2026-08-16).
