@@ -17,3 +17,6 @@ Completed feature prod (40 ID renames, 626-line spec) and PRY task phases; fixed
 
 ## Week of 2026-08-11
 Shipped 51+ commits with 2FA data-loss fix (admin/sponsor + FE missing field), PA audit (5 missing promo fields, 54-file review), and kanal-acilis.py Clara mailbox. Sealed factory nightly pipeline (PAM/PAD/PQA/PCA roles, 30+ queue) and resolved working-tree coordination gaps. PRY-17576 approved; 5 staging tasks ready, API routing pending.
+
+## Week of 2026-08-12
+Shipped v0.7.0 with factory-automation ClickUp scaling (9 agents) and pre-release testing framework (4 roles). Completed SearchIndex/T3 audit and skill-map scenario tests; initiated OY memory audit.
