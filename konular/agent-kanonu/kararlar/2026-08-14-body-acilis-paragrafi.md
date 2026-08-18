@@ -36,8 +36,9 @@ kendi kaynakları eklenir.
 > karar almanı sağlar.
 >
 > **Hafızandan uygulama.** Bir skili daha önce okumuş olman onu bildiğin anlamına
-> gelmez; hatırladığın şey kanon değil, kendi özetin. Ölçüldü: kanonu hafızadan
-> uygulayan bir developer kendi kodunda 3 ihlal taşıdı — skiller açılınca hepsi çıktı.
+> gelmez; hatırladığın şey kanon değil, kendi özetin. ⚠️ **DEĞİŞTİ 2026-08-16** —
+> son cümle ("Ölçüldü: … bir developer kendi kodunda 3 ihlal taşıdı") **çıkarıldı.**
+> Karar: `2026-08-16-tip2-dustu-ornek-cikariliyor.md`
 >
 > **Alan çantan `{main}` omurgasında.** Senin işin tek alan değil; her alanın ayrı
 > skili ve ayrı kuralları var. Omurgayı okumuş olmak alt skilleri okumuş saymaz —
