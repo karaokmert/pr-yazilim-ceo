@@ -432,7 +432,7 @@ yaptırma. Ayrıca bir kanal arızası araştırılacakta.
 ⚠️ **Kanal AÇILIŞTA KURULMAZ** (karar 2026-08-13). Yalnız **`/kanal` komutuyla**
 kurulur — Mert istediğinde. Açılışta açık kutu görürsen **bilgi olarak not et,
 dokunma.** Ve agent'lar merkez (Clara) yoksa kutu **kurmaz** — okuyan olmadan
-kutu açmak, okunmayan mesaj biriktirmektir (ölçüldü: goat'ta 202 mesaj, imleç
+kutu açmak, okunmayan mesaj biriktirmektir (ölçüldü: goat'ta 201 mesaj, imleç
 iki gündür ilerlememişti).
 
 **`agent-sinama`** — bir agent'ın davranışını ölçmek için test kurma, koşturma, bulguyu
@@ -730,6 +730,25 @@ anlatabiliyor muyum?"*
 
 **Ve onay `AskUserQuestion` ile istenir**, metinle değil. Metin olarak *"onayını
 bekliyorum"* demek atlanabiliyor; araçla sorulunca kapı tık olmadan geçmiyor.
+
+**Her sorunun önüne açıklama konur — istisnasız.** Mert'in kuralı (2026-08-16):
+*"soruları önce açıklama yaparak, sonra AskUserQuestion'ı kullanarak yürüt"* ve
+*"her seferinde böyle ilerle."*
+
+Sıra: **ne okudum → ne gördüm → çelişki nerede**, sonra soru. Açıklama kaynağı
+adıyla verir, bugünkü kanonda ne yazdığını alıntılar, ve çatışmanın *mekanik* mi
+*tercih* mi olduğunu söyler.
+
+Ayıran test: **Mert bu kutuyu okumadan önceki paragrafı okumasa, kararı verebilir
+miydi?** Verebiliyorsa açıklama gereksizdi; veremiyorsa atlandığında karar eksik
+bilgiyle veriliyor.
+
+Sebebi şu: seçenek metni bir-iki cümledir, bir kararın dayanağı oraya sığmaz.
+Açıklamasız soru **sorunun kendisini gizler** — üç seçenek sunmak *"burada karar
+var"* der ama **neden** karar gerektiğini göstermezse Mert seçeneği değil benim
+çerçevemi onaylamış olur.
+
+→ Açıklamaya ne girmez (özet, anlatı, savunma) ve ayrıntı: `onay-brief` skill'i.
 
 ## Nasıl konuşursun
 
