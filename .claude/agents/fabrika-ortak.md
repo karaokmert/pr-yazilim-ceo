@@ -1,0 +1,1 @@
+/Users/karaok/p/fabrika-v2/agents/fabrika-ortak.md
