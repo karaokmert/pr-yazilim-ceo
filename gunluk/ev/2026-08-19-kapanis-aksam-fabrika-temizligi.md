@@ -1,7 +1,8 @@
 # Kapanış — 2026-08-19 akşam · Fabrika skill temizliği + Clara'nın iletim yetkisi
 
 **Mod:** EV · **Süre:** 17:02 → 19:05 · **Repo:** `skill-project`
-**Ekip:** PAM · PAD · PCA kapanışa alındı; **PQA açık** (push işi sürüyor)
+**Ekip:** dördü de kapanışa alındı (PAM · PAD · PQA · PCA)
+**Push:** ✅ ATILDI — Mert kendisi attı 19:03:45, `origin/main` = `371a0c9`, kuyruk sıfır
 
 > Bu günün İKİNCİ kapanışı. Birincisi (`-gece-nobeti-ve-ogrenme-dongusu.md`)
 > 18 Ağustos 20:13 → 19 Ağustos 16:50 arasını kapsıyor. Bu dosya 17:02'den
@@ -128,18 +129,34 @@ aparatı, PAM komutu iki kez. `yarim-olcum-deseni` kaydının 3., 4. ve 5. vakas
 
 | Ne | Kimde | Ne bekliyor |
 |---|---|---|
-| **Push** | PQA | 7 commit `origin/main` önünde. Denetim + **Mert'in onayı**. |
-| **RED-2 katman kararı** | PAD | `docs/fabrika/red2-sinir-isaretleri/gereksinim.md` — iki çıkarımın nereye yazılacağı |
-| **PQA kapanışı** | Clara | Push bitince kapanış verilecek |
+| **`aaf937e` denetimi** | PQA | RED-2 kanon işi **denetimsiz push edildi** — PQA'nın kararı: şimdi mi, sonraki tura mı |
+| **Makefile kanonunun sahaya taşınması** | DO | 8/9 projede uygulanmamış; DO oturumu açıktı, bildirim ulaşmadı (PAM'in kapanışından) |
+| **41 değişikliğin bağımsız denetim yolu** | — | Nasıl BAĞIMSIZ kurulacağı kararsız; bu oturumda ilerlemedi (PAM'in kapanışından) |
+
+### ✅ Bu oturumda kapandı — RED-2 katman kararı
+PAD üretti: `aaf937e` (18:44) — `uretim/SKILL.md` + `yapi-taslari/SKILL.md`, 37 satır.
+Okundu ve sağlam: şerh kuralı çürütmüyor, *"bastırma gözlenmedi ≠ bastırma yok"*
+ayrımını ve *"aparat asıl soruyu soramadı"* sınırını taşıyor.
+
+⚠️ **Ama zincir kendiliğinden kapanmadı:** PAD işi bitirdi, commit'ledi, **PAM'e
+dönüş bloğu YAZMADI.** PAM bittiğini `git log` ölçerken fark etti ve PQA'ya
+ilettiği TEST satırını commit mesajından çıkarmak zorunda kaldı — `ISD-SHOW-TEST-SCOPE`
+o satırın devir bloğunda olmasını istiyor.
+Sınıfı: **iş yapıldı, kayıt tutuldu, İLETİM atlandı** — `ISD-DELIVER-DONT-DISPLAY`'in
+kardeşi. PAM'in hükmü: tek vaka, desen değil. İkinci vaka görülürse gereksinim olur.
 
 ---
 
 ## 5. MERT'İN KARARINI BEKLEYEN
 
-**Push onayı** — 7 commit hazır, PQA denetimde. Neden onun: canlıya çıkan iş.
+**Açık kalem defteri — 30+ kalem, en riskli A1** (PAM'in kapanışından). A1: üç ayrı
+merkez tanımı, komut dosyaları repo dışında. ⚠️ **Bugün A1'in canlı hâli yaşandı:**
+Clara PAM'e doğrudan yazdı, PAM PAD/PQA'ya yazdı, çalıştı — **ama yazılı değil.**
+Bugünkü karar (`handoff-sendmessage-ile-iletilir`) bunun bir parçasını kapattı;
+kalanı açık.
 
-**`URT-NO-CONTENT-IN-DESCRIPTION` şerhi** — PAD'in katman kararı geldiğinde kuralın
-gövdesine ölçüm şerhi düşülecek. Neden onun: kanon değişikliği.
+**`CLAUDE.md` §3 borç bloğunun silinmesi** — blok kendisi *"emekli aile temizlendiğinde
+silinir"* diyor, emekli aile bugün temizlendi. Neden onun: kanon değişikliği.
 
 ---
 
@@ -160,5 +177,5 @@ bugün temizlendi, blok duruyor. Kimse görevlendirilmedi.
 
 ## 7. BİR SONRAKİ HAREKET
 
-PQA'nın push'u bitince kapanışını ver; sonra `CLAUDE.md` §3 borç bloğunun
-silinmesi için gereksinim yaz.
+`CLAUDE.md` §3 borç bloğunun silinmesi için gereksinim yaz (emekli aile temizlendi,
+blok geçersiz kaldı). Ve PQA'nın `aaf937e` kararını bekle.

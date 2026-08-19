@@ -36,11 +36,20 @@ sessizce düşer** — `-- <yol>` yalnız takip edilen dosyayı alır.
 
 ## AÇIK — devam eden
 
-**PUSH BEKLİYOR:** `skill-project` 7 commit `origin/main` önünde (`26c1148` başta).
-PQA denetimde, **onay Mert'te**. Bitince PQA'nın kapanışı verilecek.
+**PUSH TEMİZ.** `origin/main` = `371a0c9` (Mert attı 19:03), kuyruk sıfır, ağaç temiz.
 
-**RED-2 katman kararı PAD'de:** `docs/fabrika/red2-sinir-isaretleri/gereksinim.md`
-— iki çıkarımın (URT-NO-CONTENT şerhi + agent listesi tazelenmesi) nereye yazılacağı.
+⚠️ **`aaf937e` DENETİMSİZ push edildi** — PAD'in RED-2 kanon işi (`uretim` +
+`yapi-taslari`, 37 satır) PQA kapısına gelmeden canlıya çıktı. Kapı ihlali DEĞİL
+(push Mert'te) ama denetim kaydı yok. PQA'nın kararı bekleniyor: şimdi mi denetlenecek,
+sonraki tura mı.
+
+**RED-2 katman kararı KAPANDI** — PAD üretti (`aaf937e`), şerh `uretim/SKILL.md`'ye ve
+`yapi-taslari`'na girdi. *"Bastırma gözlenmedi ≠ bastırma yok"* ayrımı korunmuş.
+⚠️ Ama PAD **dönüş bloğu yazmadı**; PAM işin bittiğini `git log`'dan öğrendi.
+Sınıf: iş yapıldı, iletim atlandı. Tek vaka — ikincisi görülürse gereksinim.
+
+**Makefile kanonu sahaya taşınmadı** — 8/9 projede uygulanmamış, DO'ya bildirim
+ulaşmadı (PAM'in kapanışından).
 
 **`CLAUDE.md` §3 borç bloğu geçersiz** — "iki skill ailesi yan yana" diyor ama emekli
 aile bugün temizlendi. Blok kendisi "temizlenince silinir" yazıyor; kimse
