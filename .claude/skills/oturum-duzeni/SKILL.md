@@ -100,13 +100,9 @@ komutuyla kurulur, açılışta değil.
 `clara` kaydı varsa o kutu **senin değil** — kaydın varlığı yeter, canlılığını
 sen ölçmezsin.
 
-⚠️ **`kill -0` KULLANMA.** Kanonda iki kez çürütüldü (`kanal-kurulumu` →
-*"Canlılık — üç sinyal"*): `STATUS.md` PID'i agent'ın değil onu doğuran
-kabuğunki olabiliyor, ve o kabuk her `Bash` çağrısında yeniden doğuyor.
-Canlıyı **ölü** gösterir — yani sahiplenme yasağını tam ters yönde deler:
-canlı Clara'yı ölü sanıp kutusunu devralırsın. Tek geçerli sinyal **kutunun
-kendi son yazım zamanı**, ama burada onu da ölçmene gerek yok: **kayıt varsa
-dokunma, Mert'e sor.**
+⚠️ **`kill -0` KULLANMA** — iki kez çürütüldü, gerekçesi `kanal-kurulumu` →
+*"Canlılık — üç sinyal"*. Burada zaten ölçmene gerek yok: **kayıt varsa dokunma,
+Mert'e sor.** Canlılık ölçmeye kalkışmak bu adımın kendisini deler.
 Mesajlarını okuma: imleç (`.cursor`) tektir, sen okursan **gerçek sahip o
 mesajı bir daha görmez** — ve kaybettiğini bilmez.
 
@@ -162,7 +158,7 @@ Bu doküman **sonraki oturum için** yazılır, Mert için değil. Mert konuşma
 sonraki oturum hatırlamıyor.
 
 **Üç — hafıza temizlenir.** Biten işin `project` kaydı **silinir**, `MEMORY.md` satırı
-kaldırılır. Yerine kalan: günlük + `HARITA.md` satırı + (varsa) `kararlar/` dosyası.
+kaldırılır. Yerine kalan: günlük + (varsa) `konular/{konu}/kararlar/` dosyası.
 
 Ayrım tipe göre: **`user` ve `feedback` kalıcı** (Mert'in nasıl çalıştığı, düzeltilmesi
 gereken bir davranış — iş bitince değer kaybetmez). **`project` geçici.**
@@ -207,8 +203,8 @@ görmüyorsan defter satırı elle temizlenir, yoksa **defter yalan söyler.**
 `clara` kaydı *"merkez var"* dedirtir, sonraki agent'lar **okuyanı olmayan** kutu
 kurar. Kanonun *"en kötü durum"* dediği hâl budur: çalıştığı sanılan monitör.
 
-⚠️ **`--force` kullanma.** Okunmamış mesajı sessizce atlar; içinde bekleyen iş
-olabilir. Önce oku, sonra arşivle.
+⚠️ **`--force` kullanma.** Okunmamış mesajı sessizce atlar. Kural ve ölçülmüş
+vakası `kanal-kurulumu`'nda: yalnız okunmuş bir kutuda kullanılır.
 
 **Altı — commit atılır.** Çalışma ağacı temiz bırakılır. Mert commit'ten inceliyor;
 dağınık bir ağaç incelenemez.

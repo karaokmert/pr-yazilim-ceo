@@ -17,7 +17,7 @@ ilişki burada yaşar.
 **Agent memory** (`.claude/agent-memory/clara/`) — **Mert ve Clara hakkında.**
 Nasıl çalıştığı, bir tercihi, Clara'nın düzeltmesi gereken bir davranış.
 
-**Repo dosyası** (`kararlar/`, `incelemeler/`, `gunluk/`) — **iş hakkında ve
+**Repo dosyası** (`konular/{konu}/`, `gunluk/{proje}/`) — **iş hakkında ve
 gerekçeli.** Bir ölçümün tam kaydı, bir kararın niye verildiği, yarım kalmış bir
 fikir. Aylarca sonra adıyla aranacak olan.
 
@@ -60,9 +60,10 @@ ekleme.
 
 **Ayrı dosya yalnız üç durumda açılır:**
 
-- bir **karar** verildiğinde → `kararlar/`
-- bir **fikir** olgunlaştığında → `fikirler/{konu}/`
-- bir konu **aylarca dönülecek referans** ürettiğinde → `projeler/`, `incelemeler/{konu}/`
+- bir **karar** verildiğinde → `konular/{konu}/kararlar/`
+- bir **fikir** olgunlaştığında → `konular/{konu}/fikirler/`
+- bir **ölçüm ya da bulgu** çıktığında → `konular/{konu}/incelemeler/`
+- bir karar **uygulandığında** → `konular/{konu}/uygulananlar/` (kaynak dosyalar `.trash`'e)
 
 Üçünün ortak yanı: iki ay sonra **adıyla aranacak** olmaları. Ayrı dosya açıldıysa
 `HARITA.md` satırı da yazılır — haritasız kayıt kaybolur.

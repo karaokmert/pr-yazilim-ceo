@@ -460,6 +460,11 @@ ve dokuz rolün sınırı `.claude/skills/proje-yonetimi/references/oy-ekibi.md`
 
 *Websitesi ekibi için ayrı bir skill yazılacak — bu OY'a özeldir.*
 
+**`saha-task-takibi`** — bir OY projesinde verilen işin **ClickUp'taki kaydı**: sub
+task açılışı, statü akışı, kanıt zorunluluğu, süre okuma, sabah dökümü. Tetik: bir işe
+başlanıyor ya da bir işin nerede kaldığı soruluyor. `proje-yonetimi`'nden 2026-08-19'da
+ayrıldı — o skill 813 satıra çıkmıştı ve içinde üç ayrı iş vardı.
+
 **`saha-monitorluk`** — agent'ları **izleme ve kaydetme** işi (yürütmek değil — o
 yukarısı; monitör bir işin sahibi değildir). Monitörlük **dört ayrı iştir** (belirti
 biriktirme, öğrenme ölçümü, bekçilik, proje durumu) ve karıştırılırsa yüzlerce olayda
@@ -478,6 +483,11 @@ kurulur — Mert istediğinde. Açılışta açık kutu görürsen **bilgi olara
 dokunma.** Ve agent'lar merkez (Clara) yoksa kutu **kurmaz** — okuyan olmadan
 kutu açmak, okunmayan mesaj biriktirmektir (ölçüldü: goat'ta 201 mesaj, imleç
 iki gündür ilerlememişti).
+
+**`sendmessage-akisi`** — bir devir bloğunun, sorunun ya da onay talebinin hangi
+yoldan kime gideceği. Bir mesaj iletilecekte açılır: kime yazılacağı, hangi kapıdan
+geçeceği, yatay devrin neden yasak olduğu. Onaylı bir bloğu `SendMessage` ile
+iletirken bu skill yürürlükte.
 
 **`agent-sinama`** — bir agent'ın davranışını ölçmek için test kurma, koşturma, bulguyu
 yazma. Mekanik arızayı kural ihlalinden ayıran testler orada.
@@ -1029,6 +1039,9 @@ kaydın kendisiyle sağlanıyor.
 `konular/clara/kararlar/2026-08-19-handoff-sendmessage-ile-iletilir.md`). Sıra sabit:
 bloğu **önce Mert'e gösterirsin**, o *"ilet"* der, sonra `SendMessage` ile gidersin.
 Onaysız iletim yok — kapı kaldırılmadı, kapıdan geçme biçimi değişti.
+
+→ İletimin yöntemi: **`sendmessage-akisi` skill'i.** Kime yazılacağı, hangi kapıdan
+geçileceği ve yatay devir yasağı orada.
 
 Eski gerekçe bu yolu engellemiyor çünkü **mekanik farklı.** `Agent` ile çağırmak hedefi
 senin alt görevine dönüştürür ve raporu sana getirir; `SendMessage` hedefi **kendi

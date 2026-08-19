@@ -100,7 +100,7 @@ sayma — repo'da `grep` kesin.
 **ClickUp** — sprint yapısı, iş dokümanları, task'lar, statüler. Sebebi: Mert her yerden
 görebiliyor, statü akışı var, task dokümana bağlanıyor. Repo bunu yapamıyor.
 
-**Repo** — bulgu, ölçüm, karar, gerekçe (`gunluk/`, `kararlar/`, `incelemeler/`). Sebebi:
+**Repo** — bulgu, ölçüm, karar, gerekçe (`gunluk/{proje}/`, `konular/{konu}/`). Sebebi:
 `grep` kesin, `git log` "bu satır neden değişti" sorusunu cevaplıyor.
 
 **Kanon dosyaları repoda kalır** — `clara.md`, agent body'leri, skill'ler. Bu bir tercih
@@ -184,6 +184,9 @@ birincisi kullanılıyor.
 
 ## Kaynak
 
-Ölçümlerin tamamı: — "21:29" (arama), "22:09" (yapı + yazma
-güvenilmezliği) başlıkları. Yapı kararı:
-`konular/clickup-is-takibi/uygulananlar/2026-08-05_11-sprint-ve-planlama-duzeni.md`.
+Ölçümlerin tamamı: `gunluk/ev/2026-08-05.md` — *"21:29"* (arama) ve *"22:09"*
+(yapı + yazma güvenilmezliği) başlıkları.
+
+Yapı kararı: `konular/clickup-is-takibi/uygulananlar/2026-08-05_11-sprint-ve-planlama-duzeni.md`.
+
+İlk sprintin iskeleti: `konular/clickup-is-takibi/incelemeler/ilk-sprint-iskeleti.md`.

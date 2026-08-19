@@ -19,4 +19,6 @@ Completed feature prod (40 ID renames, 626-line spec) and PRY task phases; fixed
 Shipped 51+ commits with 2FA data-loss fix (admin/sponsor + FE missing field), PA audit (5 missing promo fields, 54-file review), and kanal-acilis.py Clara mailbox. Sealed factory nightly pipeline (PAM/PAD/PQA/PCA roles, 30+ queue) and resolved working-tree coordination gaps. PRY-17576 approved; 5 staging tasks ready, API routing pending.
 
 ## Week of 2026-08-12
-Shipped v0.7.0 with factory-automation ClickUp scaling (9 agents) and pre-release testing framework (4 roles). Completed SearchIndex/T3 audit and skill-map scenario tests; initiated OY memory audit.
+Shipped v0.7.0 factory-automation (9 agents, ClickUp scaling); audited 9 agents (294 files, factory compliance) and Goat BE (5+ bugs: schema, data loss, coin). Restructured docs (183→8 topics, 113KB→16KB), deployed kanal Clara startup, fixed credential leak and agent namespace collision. Cleaned proje-yonetimi skill (6 contradictions), implemented SendMessage (178L), validated ClickUp (5/5 canon), diagnosed 9 dead channels. Diagnosed Clara visibility gap; proposed live ledger (rejected: write overhead).
+
+## What to do

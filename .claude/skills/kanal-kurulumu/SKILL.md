@@ -14,14 +14,23 @@ ekleme), `tail -F` ile izleme ve elle kurulum **bırakıldı.** Üçü de ölç�
 ## Üç kaynak — hangisi neyi söyler
 
 ```
-~/.pr-kanal/{proje}/SABLON-JSON.md   NEDEN böyle · kuralların ölçüm gerekçesi
-~/.pr-kanal/{proje}/tools/           NASIL yapılır · betikler kendi kullanımını basar
-bu skill                             KİM ne yapar · yöneticinin disiplini
-references/olcumler.md               KANIT · hangi kural hangi ölçümden çıktı
+skill-project/tools/kanal/   NASIL yapılır · betikler kendi kullanımını basar
+bu skill                     KİM ne yapar · yöneticinin disiplini
+references/olcumler.md       KANIT · hangi kural hangi ölçümden çıktı
 ```
 
-**Şablon burada tekrar edilmez.** Bir kuralın ölçüm ayrıntısı gerektiğinde şablon açılır;
-buraya kopyalanırsa iki kaynak ayrışır ve hangisinin yürürlükte olduğu belirsizleşir.
+⚠️ **Betiklerin TEK yolu `/Users/karaok/p/ozel-yazilim/skill-project/tools/kanal/`.**
+Beş dosya: `setup.py` · `send.py` · `read.py` · `watch.py` · `archive.py`.
+
+Bir dönem `~/.pr-kanal/{proje}/tools/` altında kopyaları vardı ve bir de
+`SABLON-JSON.md` diye ayrı bir düzen dosyası. **İkisi de artık yok** — ölçüldü
+2026-08-19: dört projenin hiçbirinde `tools/` yok, `SABLON-JSON.md` araması sıfır
+sonuç. Bu skill onların silinmesini kendi içinde öngörmüştü (*"git'te değil, dizin
+silinirse yeniden üretme tarifi yok"*) ve öngörü gerçekleşti.
+
+**Sonuç:** kopya yol yazılmaz, mutlak kaynak yazılır. Bir düzeltme kaynağa yazılır ve
+kopya üretilmez — kopya üretilirse bir sonraki kanal eski kopyadan doğar ve arıza geri
+gelir.
 
 ---
 
@@ -110,9 +119,8 @@ Arızanın şekli bilinir: varsayılan **doğru olduğu sürece görünmez.** Ö
 projedeydi. Başka bir projede çalışan agent bayrağı atlarsa kutusu fabrikanın dizinine
 düşer, `rc=0` alır; uyarıyı okumazsa fark etmez.
 
-**Betiklerin tek kaynağı:** `skill-project/tools/kanal/`. `~/.pr-kanal/{proje}/tools/`
-altındakiler oradan üretilen kopyalardır — bir düzeltme **önce kaynağa** yazılır, sonra
-kopyalara. Tersi yapılırsa bir sonraki kanal eski kopyadan üretilir ve arıza geri gelir.
+**Betiklerin tek kaynağı** yukarıda yazılı: `skill-project/tools/kanal/`. Kopya
+üretilmez; agent'a verilen handoff o mutlak yolu taşır.
 
 ## Dizin yapısı
 
@@ -228,8 +236,8 @@ kayboldu.
 `TASK` · `INFO` · `QUESTION` · `CLOSE`. `send.py` başkasını `rc=1` ile reddediyor —
 kapanış mesajı da **`CLOSE`** ile yazılır.
 
-> ⚠️ `SABLON-JSON.md` kapanış örneğinde `KAPANIS` yazıyor ve o komut **çalışmaz.**
-> Şablon hatası, PAD'e bildirildi. Doğrusu `CLOSE`.
+> ⚠️ Bir dönem dolaşan `KAPANIS` değeri **çalışmaz** — `send.py` onu `rc=1` ile
+> reddeder. Doğrusu `CLOSE`.
 
 ## İmleç kaybında DURUR
 
@@ -285,7 +293,7 @@ söyleyebilir"*.
 
 ## MERKEZ YAYIN — proje Clara'larına toplu mesaj
 
-Araç: **`pr-yazilim-ceo/tools/clara-yayin.py`** (Clara'nın kendi tezgahı,
+Araç: **`pr-yazilim-ceo/araclar/tools/clara-yayin.py`** (Clara'nın kendi tezgahı,
 `skill-project`'in kanal betiklerinden ayrı).
 
 ```
@@ -448,12 +456,11 @@ TÜR: İŞ — kanal kurulumu · üretim işi DEĞİL
 
 NE: Kendi kanalını kur, izleyicini aç, sonra bekle.
 
-  ARAÇLAR: ~/.pr-kanal/{PROJE}/tools/
-  DÜZEN  : ~/.pr-kanal/{PROJE}/SABLON-JSON.md   ← neden böyle olduğu burada
+  ARAÇLAR: /Users/karaok/p/ozel-yazilim/skill-project/tools/kanal/
 
   1. KUTUNU KUR — elle mkdir YOK:
 
-     A=~/.pr-kanal/{PROJE}/tools
+     A=/Users/karaok/p/ozel-yazilim/skill-project/tools/kanal
      python3 $A/setup.py {ROL} --task "{TEK SATIR İŞ}" --project {PROJE}
 
      `--project` ZORUNLU. Atlanırsa varsayılan `skill-project` olur ve

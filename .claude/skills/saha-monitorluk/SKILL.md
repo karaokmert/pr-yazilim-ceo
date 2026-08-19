@@ -122,21 +122,34 @@ okunur, ezberden değil.
 
 ## İzleme nasıl kurulur
 
-**Panel** (`panel/topla.py`) — 10 sn'de bir `~/.claude/projects/*/*.jsonl` tarar,
-`panel/durum.json` yazar. `panel/index.html` onu `file://` ile çizer.
-Koşuyor mu: `ps aux | grep topla.py`.
+⚠️ **Betiklerin tabanı `pr-yazilim-ceo/araclar/panel/`** — göreli `panel/` yazılmaz.
+Repo kökünden `panel/topla.py` çalıştırmak hata verir; ölçüldü 2026-08-19, o yol yok.
+
+**En hızlı yol: `~/bin/agentlar`.** Açık oturumları proje bazlı basar, betik
+koşturmak gerekmez. Bir bakış yetiyorsa panel kurulmaz — panel yalnız **sürekli**
+izleme gerektiğinde kurulur.
+
+**Panel** (`araclar/panel/topla.py`) — 10 sn'de bir `~/.claude/projects/*/*.jsonl`
+tarar, `araclar/panel/durum.json` yazar. `araclar/panel/index.html` onu `file://`
+ile çizer. Koşuyor mu: `ps aux | grep topla.py`.
 
 `durum.json` şeması: `{guncelleme, acik_surec, proje_sayisi, oturumlar[]}`, her
 oturum `{proje, oturum, rol, baslik, son_hareket, son_hareket_sn, son_kim,
 son_mesaj, bekleme, bekleme_ne, skiller[], canli}`.
 
-**Canlı takip** (`panel/takip.py`) — 15 sn'de bir yeni satırları okur; Mert
+**Canlı takip** (`araclar/panel/takip.py`) — 15 sn'de bir yeni satırları okur; Mert
 mesajı, agent sorusu, handoff, izin beklemesi basar. `nohup` ile başlat, oturuma
 bağlama (`Bash run_in_background` oturum kesilince ölür — ölçüldü).
 
-**Monitor bağla** — `Monitor(command: "tail -f -n 0 /tmp/clara-takip.log",
-persistent: true)`. Bu olmadan log'a bakman gerekir, yani "anlık" değil "sen
-baktığında" olur.
+**Monitor bağla** — `takip.py`'nin yazdığı log dosyasına bağlanır. Ama sıra
+bağlayıcı: **log dosyası yoksa monitör sessizce boş bağlanır** ve hiçbir şey
+basmaz, arıza görünmez. Ölçüldü 2026-08-19: kanonda `/tmp/clara-takip.log` yazılıydı
+ve o dosya yoktu.
+
+Yani önce `takip.py` başlatılır, dosyanın **oluştuğu doğrulanır** (`ls -la`), sonra
+`Monitor(command: "tail -f -n 0 <log yolu>", persistent: true)` kurulur. Log yolunu
+`takip.py`'nin kendi çıktısından oku — kanona sabit yol yazılmaz, çünkü sabit yol
+bir gün değişir ve değiştiğinde monitör sessizce ölür.
 
 **Rol tespiti:** oturum kaydının başındaki `agent-setting` / `agent-name` /
 `custom-title` satırlarından okunur. Süreç listesiyle eşleştirme denendi, roller

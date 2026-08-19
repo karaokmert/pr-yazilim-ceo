@@ -78,6 +78,10 @@ Yani kanal sağlıklı görünüyor ve mesaj gelmiyor. Arıza sessiz — bu yüz
 agent'ı (PQA) ölü gösterdi — o sırada rapor yazıyordu. Mekanizma yeniden ölçülmeden
 ölü kanal temizliği yapılmaz.
 
+> ⚠️ **Ad değişti:** bu vakada `DURUM.md` yazıyor çünkü o tarihte dosyanın adı buydu.
+> Yürürlükteki ad **`STATUS.md`** ve `PID` alanı ondan tamamen kaldırıldı
+> (`kanal-kurulumu` → *"Canlılık — üç sinyal"*). Vaka aynen duruyor; adres eskidir.
+
 ---
 
 ## Pencere ölçümü: üç yöntem yarıştı

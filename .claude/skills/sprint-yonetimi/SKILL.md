@@ -53,7 +53,7 @@ Sonra sıradaki işe geçilir. **Yedi iş varsa bu döngü yedi kez döner.**
 
 2026-08-05 planlama oturumunda bu sıra **beş kez** bozuldu ve Mert beş kez kesti:
 
-- Fabrika ölçütü sıfırdan kurulmaya kalkışıldı — oysa `incelemeler/fabrika-olcutu/`
+- Fabrika ölçütü sıfırdan kurulmaya kalkışıldı — oysa `konular/fabrika/incelemeler/`
   altında Mert'in kendi cümleleriyle yazılıydı
 - Bir işin amacı Mert söylemeden uyduruldu (*"bu işten ne bekliyorsun"* sorulmuşken)
 - 3. işin düğümü sırası gelmeden çözülmeye başlandı
@@ -83,7 +83,7 @@ iş anlaşılmamıştır, doküman yazılmaz.
 Bir işin dokümanı yazılmadan önce **zaten yazılmış olanı ara.** Ölçüt çoğu zaman var;
 eksik olan senin bulmamış olmandır.
 
-Aranacak yerler: `HARITA.md` (her kaydın bir satırı orada), `incelemeler/`, `kararlar/`,
+Aranacak yerler: ilgili konunun `BILINMESI-GEREKENLER.md`'si, `konular/{konu}/`,
 `gunluk/`, ilgili repo.
 
 2026-08-05'te bu iki kez atlandı: fabrika ölçütü sıfırdan kurulmaya kalkıştı (yazılıydı),
@@ -144,7 +144,7 @@ sorusunun cevabı orada.
 ## Kararların iki yere yazılması
 
 **ClickUp** — kararın kendisi, iş sayfasında.
-**Repo** (`kararlar/`) — kararın gerekçesi, ayrı dosyada.
+**Repo** (`konular/{konu}/kararlar/`) — kararın gerekçesi, ayrı dosyada.
 
 Çift kayıt gibi görünür, değil: biri *ne* karar verildiği, diğeri *neden.* ClickUp'ta
 arama güvenilmez ve versiyon geçmişi yok (`clickup-duzeni` skill'inde ölçüldü), o yüzden
@@ -184,5 +184,8 @@ görevi olan planlama bitti"** demek.
 
 ## Kaynak
 
-`konular/clickup-is-takibi/uygulananlar/2026-08-05_11-sprint-ve-planlama-duzeni.md` — ilk sprintin kararları ve bu
-yöntemin çıktığı oturum. Ölçümler:.
+`konular/clickup-is-takibi/uygulananlar/2026-08-05_11-sprint-ve-planlama-duzeni.md` — ilk
+sprintin kararları ve bu yöntemin çıktığı oturum.
+
+Ölçümler: `gunluk/ev/2026-08-05.md` (planlama sırasının beş kez bozulduğu oturum) ve
+`konular/clickup-is-takibi/incelemeler/ilk-sprint-iskeleti.md` (sprint iskeleti).
