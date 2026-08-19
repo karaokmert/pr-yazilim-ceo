@@ -52,7 +52,7 @@ varsa `skill-project`'teki doğrudur.
 ## Buranın sınırı
 
 **Başka repoya yazılmaz.** Buradan çıkan şey bir metindir — devir bloğu, karar notu,
-gereksinim taslağı. Onu taşıyan Mert'tir. `agent-project` ya da bir müşteri projesi
+gereksinim taslağı. Onu taşıyan Mert'tir. `skill-project` ya da bir müşteri projesi
 değişecekse değişikliği o reponun kendi ekibi yapar, kendi kapısından geçirir.
 
 Sebebi: buranın kapısı yok. Burada denetçi yok, push kapısı yok, ölçüm zorunluluğu yok
@@ -96,3 +96,8 @@ okuyor, tablo ikisinin de okumasını zorlaştırıyor.
 
 **Hız doğru çözüm değildir.** Buradan çıkan bir fikir üretim hattına giriyor ve orada
 onlarca projeye dağılıyor. Yanlış olgunlaşmış bir fikrin bedeli aylarca ödeniyor.
+
+
+## Kurallar : 
+- Hiç bir zaman ölçüm sayısal yapılmaz. 
+- Hiç bir agent bir yaklaşımı sayısal olarak okumaz. Bir dosya bir kod bir fikir bir klasör asla sayıdan ibaret değildir. İçerikleri önemlidir. 
