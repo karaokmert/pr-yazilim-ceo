@@ -1,6 +1,6 @@
 ---
 name: oturum-duzeni
-description: Clara'nın oturum açılış ve kapanış düzeni — iki mod (EV / YÖNETİM), hangi modda hangi sırayla ne okunur, iş biterken ne yazılır ve hafızadan ne silinir. Bu skill'i her oturumun BAŞINDA aç — "nerede kaldık", "devam edelim", "ne yapıyorduk", "bugün ne var", "şu projede ne oluyor" denen her durumda, ve Mert bir projeyi adıyla andığında. Ayrıca oturum ya da bir iş kapanırken de aç — "kapatıyorum", "bu iş bitti", "günü kapatalım", "kapanış yapalım" denen durumlarda. Kapsam dışı — kanal kurma mekaniği (`kanal-kurulumu`), hangi bilginin nereye yazılacağı (`hafiza-duzeni`).
+description: Clara'nın oturum açılış ve kapanış düzeni — iki mod (EV / YÖNETİM), hangi modda hangi sırayla ne okunur, iş biterken ne yazılır ve hafızadan ne silinir. Bu skill'i her oturumun BAŞINDA aç — "nerede kaldık", "devam edelim", "ne yapıyorduk", "bugün ne var", "şu projede ne oluyor" denen her durumda, ve Mert bir projeyi adıyla andığında. Ayrıca oturum ya da bir iş kapanırken de aç — "kapatıyorum", "bu iş bitti", "günü kapatalım", "kapanış yapalım" denen durumlarda. Kapsam dışı — mesaj iletimi (`sendmessage-akisi`), hangi bilginin nereye yazılacağı (`hafiza-duzeni`).
 ---
 
 # Oturum düzeni
@@ -48,7 +48,7 @@ EV işine kayabilir; ya da `pr-yazilim-ceo`'da açılıp bir projeyi yönetebili
 **Sıra:**
 1. **`pwd`** — proje hangisi (birincil, artık güvenilir)
 2. **Mert'in cümlesi** — bir projeyi adıyla mı andı, *"orada ne oluyor"* mu dedi
-3. **`~/.pr-kanal/{proje}/`** — o projede kanal/defter var mı, açık agent var mı
+3. **`ps`** — o projede açık agent oturumu var mı (varsa iş yürüyor demektir)
 
 İkisi çelişirse **Mert'in cümlesi kazanır** — mod onun niyetidir, dizinin değil.
 **Hâlâ belirsizse sorulur**; varsayılmaz, çünkü yanlış mod yanlış açılış sırası
@@ -76,45 +76,25 @@ bitti · ne yarım kaldı · Mert'in kararını bekleyen ne var · ölçüldü a
 ayrı listeler. Başka projenin kapanışı bu oturumun işi değildir — okunmaz,
 **özetlenmez** (ölçüldü: tek akışta yeni oturum yanlış projenin durumunu özetledi).
 
-**Üç — kanal KURMA.** ⚠️ Açılışta kanal kurulmaz (karar 2026-08-13).
-Kanal yalnız **`/kanal` komutuyla** kurulur — Mert istediğinde.
+**Üç — kanal YOK.** ⚠️ Dosya tabanlı kanal sistemi **emekli** (karar 2026-08-19).
+Yerine `SendMessage` geçti — yöntemi `sendmessage-akisi` skill'inde.
 
-Açık kutu görürsen **bilgi olarak not et, dokunma:** monitörler ölmüştür (oturum
-kapanınca `Monitor` task'ı gider), ama dizin durur ve `STATUS.md` `STATE: OPEN`
-yazar — hiçbir şey arızalı görünmez.
-
-**Uyarı:** `STATUS.md`'deki `PID` canlılık kanıtı **değil** (`DURUM.md` DEĞİL —
-o ad bir dönem kullanıldı, hook onu arıyordu ve hiç bulamıyordu; sessiz arızaydı).
-Ölü kanal temizliği `/kanal` içinde yapılır.
+`~/.pr-kanal/` altında eski kutu görürsen **dokunma:** o bir kalıntı, iş taşımıyor.
 
 ## YÖNETİM modu açılışı — beş adım
 
 **Bir — o projede kim açık?** `ps` ile agent oturumlarını tara: hangi rol, ne zaman
 açılmış, hangi dizinde. Kimse yoksa iş henüz başlamamış.
 
-**İki — kanal ne durumda?** `~/.pr-kanal/{proje}/` var mı, kaç kutu açık,
-`live-channel.json` defteri var mı. ⚠️ **Ölç ama KURMA** — kanal `/kanal`
-komutuyla kurulur, açılışta değil.
+**İki — başka bir Clara açık mı?** `ps` çıktısında ikinci bir `clara` oturumu
+varsa **DUR ve Mert'e sor:**
+> *"Bu projede zaten canlı bir Clara var (PID {pid}, {saat}). Ben devralayım mı,
+> o mu kapansın?"*
 
-⚠️⚠️ **VE BAŞKASININ KUTUSUNU SAHİPLENME — okuma bile.** Defterde başka bir
-`clara` kaydı varsa o kutu **senin değil** — kaydın varlığı yeter, canlılığını
-sen ölçmezsin.
-
-⚠️ **`kill -0` KULLANMA** — iki kez çürütüldü, gerekçesi `kanal-kurulumu` →
-*"Canlılık — üç sinyal"*. Burada zaten ölçmene gerek yok: **kayıt varsa dokunma,
-Mert'e sor.** Canlılık ölçmeye kalkışmak bu adımın kendisini deler.
-Mesajlarını okuma: imleç (`.cursor`) tektir, sen okursan **gerçek sahip o
-mesajı bir daha görmez** — ve kaybettiğini bilmez.
-
-Bu durumda **DUR ve Mert'e sor:**
-> *"Bu projede zaten canlı bir Clara var (PID {pid}, {saat}). Ben devralayım
-> mı, o mu kapansın? Kutusuna dokunmuyorum."*
-
-Ölçüldü 2026-08-13: ikinci Clara açıldı, ADIM 3'e uyup kutuyu okudu, imleci
-DO'nun mesajına ilerletti — birinci Clara beş mesajı kaybetti.
-
-Kanal yoksa: Mert'e söyle (*"kanal yok, `/kanal` yazayım mı"*) ve **bekle.**
-Kanalsız da çalışılır — o zaman handoff'ları Mert elle taşır.
+Sebebi ölçüldü 2026-08-13: iki Clara aynı projede çalıştı ve biri diğerinin
+mesajlarını tüketti — beş mesaj kayboldu. Kanal emekli oldu ama çakışma riski
+durmuyor: `SendMessage` hedefi **ada** göre bulur, iki aynı adlı oturum varsa
+mesaj hangisine gider belirsiz.
 
 **Üç — iş nerede kaldı?** Üç kaynak okunur: **o projenin kapanış dokümanı**
 (`gunluk/{proje}/` altındaki en yenisi — hook adresini veriyor), **KENDİ**
@@ -184,27 +164,17 @@ agent'ın altısı sağır oldu, defterde tek `clara` kaldı.
 **Ayıran soru: bu terminal kapanıyor mu?** Kapanmıyorsa kutu durur.
 Kapanış dokümanı yazılır, iş kapatılır, **kanal açık kalır.**
 
-**Ve merkez olarak sen bir agent'a *"kapanışa geç"* derken bunu ayır:**
-*"işi kapat, kanalda kal"* mi, *"terminali kapatıyorum"* mu — belirsiz bırakırsan
-agent kutusunu arşivler.
+**Ve bir agent'a *"kapanışa geç"* derken bunu ayır:** *"işi kapat, açık kal"* mı,
+*"terminali kapatıyorum"* mu. Belirsiz bırakırsan agent hangisini anladığını sana
+söylemez ve sen canlı sandığın bir oturumla konuşmaya devam edersin.
 
-Süreç gerçekten kapanıyorsa sıra:
+Ölçüldü 2026-08-13: iki agent *"kapanışa geç"* mesajını **kutularını arşivleme**
+emri sandı; ikisi de canlı kaldı ama iletişimsiz oldu — yedi agent'ın altısı sağır
+oldu. Kanal emekli oldu, **belirsizlik durmuyor**: cümle net kurulmazsa aynı sınıf
+arıza `SendMessage`'da da çıkar.
 
-```bash
-python3 .../read.py {KUTU}/inbox     # once OKU — okunmamis mesaj varsa arsiv REDDEDER
-python3 .../archive.py {KUTU}        # arsivle (defter satirini KENDISI siler)
-```
-
-`archive.py` `live-channel.json`'dan kendi satırını **otomatik siliyor**
-(2026-08-13'te eklendi). Çıktıda `live-channel.json: 1 kayit silindi` görmelisin —
-görmüyorsan defter satırı elle temizlenir, yoksa **defter yalan söyler.**
-
-**Neden bu adım atlanamaz:** silinmeyen kayıt `/kanal` ADIM 1'i bozar — ölü bir
-`clara` kaydı *"merkez var"* dedirtir, sonraki agent'lar **okuyanı olmayan** kutu
-kurar. Kanonun *"en kötü durum"* dediği hâl budur: çalıştığı sanılan monitör.
-
-⚠️ **`--force` kullanma.** Okunmamış mesajı sessizce atlar. Kural ve ölçülmüş
-vakası `kanal-kurulumu`'nda: yalnız okunmuş bir kutuda kullanılır.
+(Kanal arşivleme adımı kalktı — dosya tabanlı kutu sistemi 2026-08-19'da emekli
+oldu, `SendMessage` mesaj biriktirmiyor.)
 
 **Altı — commit atılır.** Çalışma ağacı temiz bırakılır. Mert commit'ten inceliyor;
 dağınık bir ağaç incelenemez.

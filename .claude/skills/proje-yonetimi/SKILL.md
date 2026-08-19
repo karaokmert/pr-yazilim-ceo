@@ -1,6 +1,6 @@
 ---
 name: proje-yonetimi
-description: Clara'nın Özel Yazılım (OY) projelerinde agent ekibini yönetme işi — dokuz rollük kadro (PA/BE/FE/MB/DO/QA/TE/CA/UID), sprint planlama zinciri, iş bitti sorgusu, commit onayı, bekleyenler listesi, kanal sahipliği, handoff taşıma, dört sessizlik türü, işi kapatma. Bu skill'i bir OY projesinde agent'lara iş verilecekte, yürüyen bir iş izlenecekte ya da kapatılacakta aç: "şu işi ekibe ver", "şuna ilet", "iş nerede kaldı", "denetim ne durumda", "bu işi kapatalım", "ekibi yönet", "handoff yaz", "sprint planlamaya başlayalım", "durum ne", "kim ne yapıyor" denen her durumda. Ayrıca bir zincir tıkandığında, bir agent "iş bitti" dediğinde ya da Mert yokken karar gerektiğinde de aç. Kapsam dışı — işin ClickUp'taki kaydı (`saha-task-takibi`), kanal mekaniği (`kanal-kurulumu`), oturum açılış/kapanış (`oturum-duzeni`), haftalık planın kendisi (`sprint-yonetimi`), Websitesi ekibi (ayrı skill yazılacak).
+description: Clara'nın Özel Yazılım (OY) projelerinde agent ekibini yönetme işi — dokuz rollük kadro (PA/BE/FE/MB/DO/QA/TE/CA/UID), sprint planlama zinciri, iş bitti sorgusu, commit onayı, bekleyenler listesi, handoff taşıma, dört sessizlik türü, işi kapatma. Bu skill'i bir OY projesinde agent'lara iş verilecekte, yürüyen bir iş izlenecekte ya da kapatılacakta aç: "şu işi ekibe ver", "şuna ilet", "iş nerede kaldı", "denetim ne durumda", "bu işi kapatalım", "ekibi yönet", "handoff yaz", "sprint planlamaya başlayalım", "durum ne", "kim ne yapıyor" denen her durumda. Ayrıca bir zincir tıkandığında, bir agent "iş bitti" dediğinde ya da Mert yokken karar gerektiğinde de aç. Kapsam dışı — işin ClickUp'taki kaydı (`saha-task-takibi`), mesaj iletimi (`sendmessage-akisi`), oturum açılış/kapanış (`oturum-duzeni`), haftalık planın kendisi (`sprint-yonetimi`), Websitesi ekibi (ayrı skill yazılacak).
 ---
 
 # Proje yönetimi — Özel Yazılım
@@ -168,34 +168,30 @@ eklenirse agent ya yok sayar ya `kullanıcı` sanır; ikincisi push kapısını 
 
 **Pratik sonuç — kendini agent'lara TANITMAZSIN.** Onlara giden her şey `kullanıcı`dan
 geliyor gibi görünür. *"Clara onayladı"* değil **"onaylandı"**; *"Clara'ya sor"* değil
-**"sor"**. Köprüyü açılış hook'u kuruyor (`~/.claude/hooks/kanal-acilis.py`), agent
-body'leri değişmiyor.
+**"sor"**. Agent body'leri değişmiyor — bu bir konuşma disiplini, mekanik bir
+kısıt değil.
 
 ⚠️ **Bu, commit onayının sende olmasını değiştirmez** — yalnız o onayın agent'a
 **nasıl göründüğünü** belirler. Ve bugün ölçüldü: FE commit onayını *"Mert'ten"* bekledi,
 çünkü kanonunda başka bir kapı yok. Doğru davrandı.
 
-## Merkez kanalı — akış tek yerde toplanır
+## İletim — `SendMessage`
 
-**Agent'lar merkezin inbox'ına yazar**, kendi outbox'larına değil. Sebep: N kutuyu
-tek tek taramak zorunda kalırsan bir kutuyu atlaman **sessiz** olur.
+⚠️ **Dosya tabanlı kanal sistemi emekli** (karar 2026-08-19). Kutu, inbox/outbox,
+imleç, arşivleme — hiçbiri yok. Mesaj `SendMessage` ile hedefin **kendi oturumuna**
+gidiyor.
 
-*Mert'in cümlesi: "kanala yazılmayan mesajlar Mert'e düşmez. Tek ekranda kanal
-üzerinden takip ediliyor tüm agentlar."*
+Neden değişti: kutu düzeninde okuyan yoksa mesaj birikiyordu ve **kimse fark
+etmiyordu.** `SendMessage`'da imleç yok — mesaj ya gidiyor ya hata dönüyor.
 
-**Açılış düzeni:**
-- **Clara açılır** → eski `clara-*` kutularını **arşivler** → kendi yeni kutusunu kurar
-- **Agent açılır** → en yeni açık `clara-*` kutusunu bulur → *"açıldım"* yazar
+Ama Mert'in kuralı yerinde duruyor: *"kanala yazılmayan mesajlar Mert'e düşmez."*
+Yeni karşılığı şu — **ilettiğin her mesaj ve dönen her cevap Mert'e görünür olur.**
+Dönen cevabı ham hâliyle ekrana basarsın; özetlenmiş bir agent cevabı denetlenemez.
 
-**Eskiyi kapatmak zorunlu.** *"Aktif kutu hangisi"* sorusunun ölçülebilir cevabı yok
-(üç ölçüt denendi, üçü de çürüdü). Belirsizliği **ölçümle değil düzenle** kaldırıyoruz:
-her açılışta eski kapanırsa **en yeni = aktif** olur. `setup.py` bu garantiye dayanıyor.
+⚠️ **Bir risk kaldı:** `SendMessage` hedefi **ada** göre bulur. Aynı adlı iki oturum
+açıksa mesaj hangisine gider belirsiz. Açılışta `ps` ile çakışma kontrol edilir.
 
-⚠️ `archive.py` **okunmamış mesaj varsa arşivlemeyi reddeder** — önce okursun.
-`--force` bir "son çare" değil, **koşullu**: yalnız okunmuş bir kutuda kullanılır.
-Okunmamış kutuda verilirse mesajlar sessizce gider (ölçülmüş vaka `kanal-kurulumu`'nda).
-
-Mekanik: `kanal-kurulumu` skill'i.
+Yöntem: `sendmessage-akisi` skill'i.
 
 ## Sen yokken — Mert erişilemezken
 
@@ -418,8 +414,8 @@ bölümünde beş adım olarak yazılı; buraya kopyalanmaz. Bu skill o beş ad�
 
 ## Kanalı SEN kurmuyorsun — merkez hariç
 
-**Senin işin:** merkez kutunu kurmak, handoff yazmak, akışı izlemek, sapmayı yakalamak.
-**Agent'ın işi:** kendi kutusunu açmak (`setup.py`, `STATUS.md`'yi o üretir), monitörünü kurmak.
+**Senin işin:** handoff yazmak, iletmek, akışı izlemek, sapmayı yakalamak.
+**Agent'ın işi:** kendi işini yapmak ve sonucu sana bildirmek.
 
 Neden: kurulumu yapan taraf protokolü **öğrenir.** İkinci sebep daha sert: **onun
 ortamına dokunmak senin alanın değil.**
@@ -534,6 +530,6 @@ hüküm denetçinin; *"bitti mi"* diye sormak Clara'nın.
 
 ---
 
-**İlgili:** ekip kadrosu `references/oy-ekibi.md` · kanal mekaniği `kanal-kurulumu` ·
+**İlgili:** ekip kadrosu `references/oy-ekibi.md` · iletim `sendmessage-akisi` ·
 brief biçimi `onay-brief` · oturum açılış/kapanış `oturum-duzeni` · haftalık plan
 `sprint-yonetimi` · ClickUp `clickup-duzeni`

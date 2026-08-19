@@ -1,6 +1,6 @@
 ---
 name: sendmessage-akisi
-description: Agent'lar arası iletişimin SendMessage üzerinden nasıl yürüdüğü — PA merkez, kullanıcı onay kapısı, yatay devir yasağı. Bu skill'i bir handoff gönderilecekte, bir soru sorulacakta, bir revize ya da onay istenecekte aç: "şunu ilet", "handoff yaz", "QA'ya gönder", "BE'ye dön", "onaya sun", "soru sor", "kime yazacağım" denen her durumda. Ayrıca bir mesajın nereye gideceği belirsizleştiğinde ve bir agent'a doğrudan yazma isteği doğduğunda da aç. Kapsam dışı — kanal kutusu düzeni (`kanal-kurulumu`, artık kullanılmıyor), ClickUp kaydı (`clickup` skill'i).
+description: Agent'lar arası iletişimin SendMessage üzerinden nasıl yürüdüğü — PA merkez, kullanıcı onay kapısı, yatay devir yasağı. Bu skill'i bir handoff gönderilecekte, bir soru sorulacakta, bir revize ya da onay istenecekte aç: "şunu ilet", "handoff yaz", "QA'ya gönder", "BE'ye dön", "onaya sun", "soru sor", "kime yazacağım" denen her durumda. Ayrıca bir mesajın nereye gideceği belirsizleştiğinde ve bir agent'a doğrudan yazma isteği doğduğunda da aç. Kapsam dışı — ClickUp kaydı (`clickup-duzeni`), ekip yönetimi (`proje-yonetimi`).
 ---
 
 # SendMessage akışı — herkes için
