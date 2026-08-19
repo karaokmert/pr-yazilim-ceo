@@ -1,0 +1,18 @@
+{
+  "name": "vscode-eklenti",
+  "version": "0.1.0",
+  "description": "VS Code extension development team: three agents (architect, developer, qa-publisher) plus six skills covering scaffolding, the package.json manifest, Extension API patterns, testing/packaging/release, the shared working standard, and handoff workflow.",
+  "author": {
+    "name": "Mert Karaok",
+    "email": "mert@pryazilim.com"
+  },
+  "repository": "https://github.com/karaokmert/pr-yazilim-ceo",
+  "keywords": [
+    "vscode",
+    "vscode-extension",
+    "typescript",
+    "scaffolding",
+    "packaging",
+    "publishing"
+  ]
+}

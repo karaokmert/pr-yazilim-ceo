@@ -1,0 +1,13 @@
+# Varsayilan: her seyi disla, sonra gonderilecekleri geri al.
+**
+
+# Calisma zamaninda gerekenler
+!dist/extension.js
+!resources/**
+!package.json
+!README.md
+!CHANGELOG.md
+!LICENSE
+
+# dist icindeki sourcemap'ler production'da gonderilmez
+dist/**/*.map

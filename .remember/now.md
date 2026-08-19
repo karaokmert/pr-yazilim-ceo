@@ -1,7 +1,3 @@
 
-## 17:43 | gemini-donusum
-Identified grep search bug—`-l` flag hides matching lines—started testing improved approach via SendMessage example before skill update; confirmed Qdrant intentionally disabled.
-## 17:50 | gemini-donusum
-Confirmed improved grep approach, resolved SendMessage tool/command confusion, recorded findings to 3 files, identified visibility gap mirrors session-isolation problem, switching to main per user request.
-## 17:53 | main
-Committed 3 files (SendMessage fix, grep discipline, arama-disiplini skill; d43b49e) to main, pushed 6 commits to origin/main.
+## 21:10 | main
+Analyzed VS Code eklenti (3 agents, 6 skills, 5.804 satır) vs fabrika üretim standardı via two agent reports; found critical gaps: zero skill binding (agents don't name/load skills; factory compensates missing `skills:` frontmatter with hook, measures %91 canon loss), zero rule IDs (`URT-ID-ONLY-BEHAVIOR` required), zero rationale (`URT-GIVE-REASON` mandated), 119 tables (vs `URT-NO-TABLE` rule), 71% reference weight (factory: makes optional); framed three paths: A) submit to factory queue (slow/proper), B) quick skill-bind fix only (works today/incomplete), C) git+wait; awaiting decision.

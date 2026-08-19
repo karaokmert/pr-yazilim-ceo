@@ -5,41 +5,56 @@ metadata:
   type: project
 ---
 
-**Son iş: arama disiplini düzeltildi + SendMessage çelişkisi çözüldü
-(EV, 2026-08-16 13:01–17:55).**
+**Son iş: fabrika skill temizliği + Clara'nın iletim yetkisi
+(EV, `skill-project`, 2026-08-19 17:02–19:05).**
 
-Kapanış: `gunluk/ev/2026-08-16-kapanis-arama-disiplini.md`
-Karar: `konular/olcum-arama/kararlar/2026-08-16-vektor-cikti-grep-disiplini-girdi.md`
+Kapanış: `gunluk/ev/2026-08-19-kapanis-aksam-fabrika-temizligi.md`
+⚠️ Aynı günün İKİNCİ kapanışı — birincisi
+`gunluk/ev/2026-08-19-kapanis-gece-nobeti-ve-ogrenme-dongusu.md` (16:50'ye kadar).
 
-⚠️ **İKİ ŞEYİ BİLMEDEN İŞE BAŞLAMA:**
+## BİLMEDEN İŞE BAŞLAMA
 
-**1. Qdrant KAPALI.** Mert kapattı (*"mantıklı bulmadık, kullanmadık"*). Vektör
-arama kanondan çıkarıldı — `arama-disiplini` artık grep + `ls` diyor.
+**1. Clara artık devir bloğunu KENDİ iletiyor** — Mert'in onayıyla, `SendMessage` ile.
+`CLA-NO-CALL-TEAMS` değişti (karar:
+`konular/clara/kararlar/2026-08-19-handoff-sendmessage-ile-iletilir.md`).
+Sıra sabit: bloğu **önce Mert'e göster**, o "ilet" der, sonra git. Onaysız iletim yok.
+⚠️ Ayrım: **saha ağında (OY/WS) hâlâ izleyicisin** — orada merkez PA. Yalnız
+**fabrika ağında (PAM/PAD/PQA/PCA)** taşıyıcısın.
 
-**2. `grep -l` KULLANMA, satır göster.** `-l` dosya adı verir, cevap vermez.
-Ölçüldü: aynı soru `-l` ile 11 dosya adı, `-h` ile 47 satır → cevap **ve bir
-çelişki** hiçbir dosya açılmadan göründü. Mert'in *"grep riskli, sürekli farklı
-bulgu çıkıyor"* şikayetinin sebebi buydu.
+**2. Fabrika skill listesi 26 → 5.** Yalnız `behavior`, `is-duzeni`, `uretim`,
+`yapi-taslari`, `dagitim` yürürlükte. Kalan 21 `trash/2026-08-19_1754-emekli-fabrika-skilleri/`
+altında. Emekli bir skill adı görürsen (`uretim-standardi`, `cascade`, `kanon-sagligi`…)
+o artık yok.
 
-**Açık konu — OTURUMLAR ARASI GÖRÜNÜRLÜK (bugünün ana işi, karar bekliyor).**
-Mert: *"birçok session açıyorum, bunların diğer sessionlarda haberi olmuyor."*
-⚠️ Çözüm **YENİ DOSYA DEĞİL** — Clara defter önerdi, Mert reddetti:
-*"sürekli yazılan, okuması zahmetli dosyalama sisteminden sıkıldım"* (485 md dosyası).
-Doğru teşhis: **sorgu problemi.** Var olan kapanış dokümanlarını Clara okusun.
-Engel teknik değil — kanonda *"başka projenin kapanışını okuma"* yasağı var,
-CEO ofisi için kaldırılmalı.
+**3. Eşzamanlı commit — komut biçimi.** Birden çok agent aynı repoda commit'lerken
+İKİ ADIM: `git add <klasör>` sonra `git commit -m "mesaj" -- <klasör>`.
+`-m` ÖNCE, `--` SONRA (ters yazılırsa hata verir). Ve `add` atlanırsa **yeni dosya
+sessizce düşer** — `-- <yol>` yalnız takip edilen dosyayı alır.
 
-**Bulgu: bu problem ile gecenin SendMessage görünürlük zaafı AYNI problem**
-(`konular/kanal-iletisim/incelemeler/2026-08-16-sendmessage-celiskisi-cozuldu.md`).
+**4. Qdrant KAPALI** (2026-08-16, Mert kapattı). Vektör arama kanondan çıktı.
+**`grep -l` kullanma**, satır göster (`-h`) — `-l` dosya adı verir, cevap vermez.
 
-**Obsidian ölçüldü — pencere olabilir, beyin olamaz.** Backlink/Dataview/arama
-Obsidian sürecinde yaşıyor, dosyada durmuyor, agent'a kapalı. En popüler MCP
-Obsidian'ın açık olmasını şart koşuyor. Kazanç Mert'in bakma penceresi olması.
+## AÇIK — devam eden
 
-**Mert'in kararını bekleyen — altısı da devrediyor, dokunulmadı:**
-`/sendmessage` repoya taşınsın mı · `sendmessage-akisi` fabrikaya gitsin mi ·
-`setup.py` PID düzeltmesi (kutu adı dakika bazlı, aynı dakikada açılan iki agent
-aynı adı üretiyor) · beş agent'a `clickup` atıfı · "tutarlı yazacaklar mı"
-ikinci ölçümü · fabrika betiklerine yazma izni
+**PUSH BEKLİYOR:** `skill-project` 7 commit `origin/main` önünde (`26c1148` başta).
+PQA denetimde, **onay Mert'te**. Bitince PQA'nın kapanışı verilecek.
 
-**Push durumu:** kuyruk SIFIR, ağaç temiz (`b35284d` push edildi 2026-08-16).
+**RED-2 katman kararı PAD'de:** `docs/fabrika/red2-sinir-isaretleri/gereksinim.md`
+— iki çıkarımın (URT-NO-CONTENT şerhi + agent listesi tazelenmesi) nereye yazılacağı.
+
+**`CLAUDE.md` §3 borç bloğu geçersiz** — "iki skill ailesi yan yana" diyor ama emekli
+aile bugün temizlendi. Blok kendisi "temizlenince silinir" yazıyor; kimse
+görevlendirilmedi.
+
+**`rules-index.json` bakımsız** — bugün 4 kırık atıf temizlendi, sabahki ölçüm 138
+eksik referans saymıştı.
+
+## MERT'İN KARARINI BEKLEYEN (16 Ağustos'tan devreden, dokunulmadı)
+
+`/sendmessage` repoya taşınsın mı · `setup.py` PID düzeltmesi (kutu adı dakika
+bazlı, aynı dakikada iki agent aynı adı üretiyor) · beş agent'a `clickup` atıfı ·
+"tutarlı yazacaklar mı" ikinci ölçümü · fabrika betiklerine yazma izni
+
+**Oturumlar arası görünürlük** — Mert: *"birçok session açıyorum, haberi olmuyor."*
+⚠️ Çözüm YENİ DOSYA DEĞİL (Mert defter önerisini reddetti: *"dosyalama sisteminden
+sıkıldım"*). Doğru teşhis: **sorgu problemi** — var olan kapanışlar okunsun.

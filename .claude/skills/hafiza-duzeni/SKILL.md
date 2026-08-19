@@ -24,6 +24,34 @@ fikir. Aylarca sonra adıyla aranacak olan.
 Ayrım şu: graph **ilişki** tutar (bu karar hangi task'a bağlı), agent memory
 **davranış** tutar, dosya **gerekçe** tutar.
 
+## Memory kısa hafızadır — terfi eşiği TARAMA
+
+**Agent memory her zaman kısa hafızadır.** Olası bir karar, henüz kural olmamış
+bir çıkarım, skill'e **aday** olan bir öğrenme — hepsi önce oraya yazılır.
+
+Ve yazarken kaydedilen şey sonucun kendisi değil, **sebebi:** *"bunu böyle
+yapmama sebep olan şey neydi?"* Sonuç eskir, sebep eskimez.
+
+⚠️ **Kalıcı katmana (body ya da skill) geçiş eşiği TARAMADIR.** Bir çıkarım
+ancak tarandığında — birden fazla vakada görüldüğünde ya da ölçümle
+doğrulandığında — kanona yazılır. **Tek vakadan çıkan bir kural kanona girmez;
+memory'de bekler.**
+
+Sebebi mekanik: kanona giren bir satır bir sonraki turda *"doğru"* olarak değil
+**"ben"** olarak taşınır ve sorgulanamaz. Memory'deki satır ise okunur ve
+sorgulanabilir. Adayı sorgulanabilir yerde tutmak erken kesinleşmeyi önler.
+
+**Üç eşik, üç yer:**
+
+| Durum | Nereye | Ölçüt |
+|---|---|---|
+| Bir aday çıkarım, tek vaka | agent memory | sebebiyle yazılır, bekler |
+| Gerekçe, ölçüm kaydı, karar | `konular/{konu}/` | aylarca sonra adıyla aranacak |
+| Taranmış, tekrar eden davranış | body ya da skill | tek vaka yetmez |
+
+Ayıran soru: **bu çıkarım kaç vakada görüldü?** Bir ise memory. Birden fazla
+ise ya da ölçümle doğrulandıysa kanona adaydır.
+
 ## Repo dosyası — günlük mü, ayrı dosya mı
 
 **Varsayılan yer `gunluk/{tarih}.md`.** Her bulgu bir başlık, aynı gün aynı dosyaya

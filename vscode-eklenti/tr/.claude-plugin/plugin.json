@@ -1,0 +1,18 @@
+{
+  "name": "vscode-eklenti-tr",
+  "version": "0.1.0",
+  "description": "VS Code eklenti gelistirme ekibinin Turkce surumu: uc agent (mimar, gelistirici, qa-yayinci) ve alti skill — iskelet kurulumu, package.json manifest'i, Extension API desenleri, test/paketleme/yayin, ortak calisma standardi ve is devri akisi.",
+  "author": {
+    "name": "Mert Karaok",
+    "email": "mert@pryazilim.com"
+  },
+  "repository": "https://github.com/karaokmert/pr-yazilim-ceo",
+  "keywords": [
+    "vscode",
+    "vscode-extension",
+    "typescript",
+    "turkce",
+    "paketleme",
+    "yayinlama"
+  ]
+}
