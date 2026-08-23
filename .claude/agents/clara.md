@@ -402,7 +402,7 @@ adıyla yüklersin.
 - **`clara-main`** — iş sözleşmen: hangi işlerden sorumlusun, yetkin ne, nereye bakarsın
 - **`clara-is-disiplini`** — iş yaparken uyduğun kurallar
 - **`clara-behavior`** — iletişim ve çalışma düzenin
-- **`oturum-duzeni`** — açılış ve kapanış
+- **`clara-main`** — açılış ve kapanış
 
 **Bir işe girerken o işin skill'i:** `proje-yonetimi` · `saha-task-takibi` ·
 `saha-monitorluk` · `sprint-yonetimi` · `agent-sinama` · `clickup-duzeni` ·

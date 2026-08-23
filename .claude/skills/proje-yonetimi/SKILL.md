@@ -1,6 +1,6 @@
 ---
 name: proje-yonetimi
-description: Clara'nın Özel Yazılım (OY) projelerinde agent ekibini yönetme işi — dokuz rollük kadro (PA/BE/FE/MB/DO/QA/TE/CA/UID), sprint planlama zinciri, iş bitti sorgusu, commit onayı, bekleyenler listesi, handoff taşıma, dört sessizlik türü, işi kapatma. Bu skill'i bir OY projesinde agent'lara iş verilecekte, yürüyen bir iş izlenecekte ya da kapatılacakta aç: "şu işi ekibe ver", "şuna ilet", "iş nerede kaldı", "denetim ne durumda", "bu işi kapatalım", "ekibi yönet", "handoff yaz", "sprint planlamaya başlayalım", "durum ne", "kim ne yapıyor" denen her durumda. Ayrıca bir zincir tıkandığında, bir agent "iş bitti" dediğinde ya da Mert yokken karar gerektiğinde de aç. Kapsam dışı — işin ClickUp'taki kaydı (`saha-task-takibi`), mesaj iletimi (`clara-behavior`), oturum açılış/kapanış (`oturum-duzeni`), haftalık planın kendisi (`sprint-yonetimi`), Websitesi ekibi (ayrı skill yazılacak).
+description: Clara'nın Özel Yazılım (OY) projelerinde agent ekibini yönetme işi — dokuz rollük kadro (PA/BE/FE/MB/DO/QA/TE/CA/UID), sprint planlama zinciri, iş bitti sorgusu, commit onayı, bekleyenler listesi, handoff taşıma, dört sessizlik türü, işi kapatma. Bu skill'i bir OY projesinde agent'lara iş verilecekte, yürüyen bir iş izlenecekte ya da kapatılacakta aç: "şu işi ekibe ver", "şuna ilet", "iş nerede kaldı", "denetim ne durumda", "bu işi kapatalım", "ekibi yönet", "handoff yaz", "sprint planlamaya başlayalım", "durum ne", "kim ne yapıyor" denen her durumda. Ayrıca bir zincir tıkandığında, bir agent "iş bitti" dediğinde ya da Mert yokken karar gerektiğinde de aç. Kapsam dışı — işin ClickUp'taki kaydı (`saha-task-takibi`), mesaj iletimi (`clara-behavior`), oturum açılış/kapanış (`clara-main`), haftalık planın kendisi (`sprint-yonetimi`), Websitesi ekibi (ayrı skill yazılacak).
 ---
 
 # Proje yönetimi — Özel Yazılım
@@ -408,7 +408,7 @@ söylemiyorsun, **bakmasını** söylüyorsun.
 **Dört — Mert'e brief ver.** `clara-behavior` biçiminde. **Karar getir, rapor değil.**
 **Beş — sonra bekle.** İş sıralaması Mert'le birlikte.
 
-**Yeni iş başlıyorsa** açılış zinciri `oturum-duzeni` → *"YÖNETİM modu açılışı"*
+**Yeni iş başlıyorsa** açılış zinciri `clara-main` → *"YÖNETİM modu açılışı"*
 bölümünde beş adım olarak yazılı; buraya kopyalanmaz. Bu skill o beş adımın
 **sonrasını** taşır: iş verildikten sonra ne olur.
 
@@ -531,5 +531,5 @@ hüküm denetçinin; *"bitti mi"* diye sormak Clara'nın.
 ---
 
 **İlgili:** ekip kadrosu `references/oy-ekibi.md` · iletim `clara-behavior` ·
-brief biçimi `clara-behavior` · oturum açılış/kapanış `oturum-duzeni` · haftalık plan
+brief biçimi `clara-behavior` · oturum açılış/kapanış `clara-main` · haftalık plan
 `sprint-yonetimi` · ClickUp `clickup-duzeni`
