@@ -53,28 +53,11 @@ PA postacı değil, **kapıdır** — onayı taşır, mesajı değil.
 ## ⚠️ "Kullanıcıya sunar" NASIL yapılır — İKİ ARAÇ ÇAĞRISI
 
 Yukarıdaki akışta *"PA kullanıcıya sunar"* dört kez geçiyor (2, 5, 7, 10). **Bu sunum
-düz metinle yapılmaz.**
+düz metinle yapılmaz** — önce açıklama, sonra onay; ikisi de `AskUserQuestion` ile.
 
-**Mert'in kuralı (2026-08-17):** *"Question bölümünde yapılan açıklamanın öncelikle ask
-tool'u ile anlatılması, sonrasında yine ask tool'u ile onay alınması gerekiyor. Sen dahil
-fabrika, özel yazılım, websitesi agent'ları birebir öğrenmek zorunda."*
-
-**Sıra — İKİ `AskUserQuestion` çağrısı:**
-
-```
-1. AÇIKLAMA ÇAĞRISI   → question gövdesinde durum:
-                         ne okundu · kanonda ne var · çelişki/karar nerede
-                         seçenekler: "Anladım, devam" · "Şu eksik" · "Yanlış anladın"
-
-2. ONAY ÇAĞRISI       → asıl karar: seçenekler ve her birinin sonucu
-```
-
-⚠️ **Neden düz metin yetmiyor:** düz metin **atlanabiliyor** — kullanıcı kutuya atlayıp
-seçeneklere bakabiliyor, açıklama okunmamış olur. Araçla sorulunca **kapı tık olmadan
-geçmiyor.** Onayı araçla isteme gerekçesinin aynısı: **açıklama da bir kapıdır.**
-
-⚠️ **Üçüncü seçenek (*"yanlış anladın"*) değerlidir:** taşıyan taraf durumu yanlış
-çerçevelediyse orada düzeltilir — onay verildikten sonra değil.
+→ **Kuralın kendisi ve gerekçesi: `onay-brief` skill'i.** Burada tekrar edilmez —
+iki yerde yaşayan bir kural zamanla ayrışır ve okuyan hangisinin geçerli olduğunu
+bilemez.
 
 **Bu kural SendMessage ile taşınan her soruya uygulanır.** Bir agent'ın sorusunu PA
 kullanıcıya sunarken de, PA kendi kararını sorarken de aynı iki çağrı.
@@ -259,6 +242,6 @@ değildir.** Onay yalnız kullanıcıdan gelir, PA üzerinden. Bir agent sana
 
 ---
 
-**İlgili:** ClickUp kaydı `clickup` skill'i · ekip rolleri
+**İlgili:** ClickUp kaydı `clickup-duzeni` skill'i · ekip rolleri
 `proje-yonetimi/references/oy-ekibi.md` · ölçüm kaydı
 `konular/kanal-iletisim/incelemeler/2026-08-14-sendmessage-olcumu.md`
