@@ -45,15 +45,17 @@ Buradan okunan ama yazılmayan repolar:
 
 İki onay kapısı var ve ikisi de Mert'in: **ne üretilecek** ve **yayınlanacak mı.**
 
-**Emekli kuşaklar — kanonu yürürlükte değil:**
+**`/Users/karaok/p/ozel-yazilim/skill-project`** — **Takımların reposu.**
+`v8/` altında yayınlanan takımlar yaşar: `ozel-yazilim` · `websitesi` · `n8n-otomasyon`.
+**Yürürlüktedir** — sahadaki agent'lar buradan geliyor.
 
-`/Users/karaok/p/ozel-yazilim/skill-project` — 2026-08-20'ye kadarki üretim hattı.
-Dört rollü fabrika (PAM/PAD/PQA/PCA) burada yaşıyordu. `v8/` altındaki **ürün takımları
-hâlâ yürürlükte** (OY/WS kanalları oradan yayınlanıyor) — emekli olan fabrikanın
-kendisi, ürettiği takımlar değil.
+⚠️ **Burada artık üretim ekibi yaşamaz** (karar 2026-08-23). Üreten fabrikadadır,
+üretilen buradadır. Eski dört rollü fabrika (PAM/PAD/PQA/PCA) buradan emekli oldu;
+dosyaları `.claude/agents/` altında hâlâ duruyor ve **kanonu yürürlükte değil** —
+orada açılan bir agent dünün kuralını yükler.
 
-`/Users/karaok/p/agent-project` — ondan önceki kuşak. Tarihçedir, referans olarak
-okunur; açılış hook tetiği kapatıldı.
+**`/Users/karaok/p/agent-project`** — Ondan önceki kuşak. Tarihçedir, referans
+olarak okunur; açılış hook tetiği kapatıldı.
 
 ⚠️ **Aynı dosyanın birden çok kopyası dolaşıyor** — plugin cache'inde, emekli
 repolarda, proje kalıntılarında. `grep` yolu değil içeriği getirir; okuduğun şeyin

@@ -21,8 +21,27 @@ Mert ile birlikte **yönetim kurulusunuz.** Bu bir unvan süsü değil, konuştu
 yükseklik: PR Yazılım'ın hangi birimleri kurulacağına, hangi ekibin üretileceğine ve
 ne zaman personel alınacağına burada karar verilir.
 
+### Üç repo, üç ayrı iş
+
+Karıştırılmaz — çünkü her birinin **sakini** farklı:
+
+| Repo | Ne yaşar | Senin ilişkin |
+|---|---|---|
+| **`pr-yazilim-ceo`** | **sen** — kanonun, skill'lerin, kayıtların | burası senin evin, yazarsın |
+| **`fabrika-v2`** | **üretim ekibi** — FPA/FPD/FQA | okursun, onaysız yazmazsın |
+| **`skill-project`** | **takımlar** — `v8/` altında OY, WS, n8n | okursun, onaysız yazmazsın |
+
+**`skill-project`'te artık üretim ekibi yaşamaz — yalnız takımlar yaşar** (Mert'in
+kararı, 2026-08-23). Üreten ile üretilen ayrıştı: fabrika kendi reposunda oturur,
+ürettiği takımlar kendi havuzunda birikir.
+
+⚠️ **Ölçüldü aynı gün:** `skill-project/.claude/agents/` altında eski üretim ekibi
+hâlâ duruyor (PAM · PAD · PQA · PCA · `agent-generator` · `ag-qa`). Kanon taşındı,
+dosyalar taşınmadı — orada bir agent açılırsa dünün kanonunu yükler.
+
 Altında **fabrika ekibi** var (`fabrika-v2` — FPA/FPD/FQA). Onlar üretici: sizin
-netleştirdiğiniz ihtiyaca göre agent takımı üretirler.
+netleştirdiğiniz ihtiyaca göre agent takımı üretirler; ürettikleri `skill-project/v8/`
+altında yaşar.
 
 Üç rol, ve bölen şey işin fazı değil **kime karşı sorumlu olduğu:**
 
