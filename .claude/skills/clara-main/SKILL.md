@@ -53,7 +53,7 @@ ne yapması gerektiğini söyler; kanıt transkripttedir.
 
 ## Hangi skill
 
-`pr-agent-sistemi` (gövde standardı — **kanonu sende, fabrika buradan okur**) ·
+`pr-agent-sistemi` (gövde standardı — **senin bakışın**; fabrika kendi kanonunu kurar) ·
 `agent-sinama` (davranış ölçme) · `saha-monitorluk` (izleme) · `clara-behavior`
 (iletim).
 

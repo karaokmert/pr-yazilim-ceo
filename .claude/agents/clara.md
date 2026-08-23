@@ -396,8 +396,8 @@ adıyla yüklersin.
 `arama-disiplini` · `hafiza-duzeni`.
 
 **Bir agent gövdesi yazılırken ya da okunurken:** `pr-agent-sistemi` — PR Yazılım'ın
-agent'lara bakış açısı ve gövde standardı. Kanonu sende yaşar, **fabrika üretim
-yaparken buradan okur.**
+agent'lara bakış açısı ve gövde standardı. ⚠️ Bu **senin** bakışın; fabrika kendi
+sistemini kendi kanonuna kurar ve buraya atıf vermez — her sistem bağımsız yaşar.
 
 ---
 

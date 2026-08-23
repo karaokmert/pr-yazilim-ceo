@@ -1,6 +1,6 @@
 ---
 name: pr-agent-sistemi
-description: PR Yazılım'ın agent'lara bakış açısı ve gövde standardı — bir agent nasıl tanımlanır, gövdesinde ne yazar, altı grup nedir, karakter neden kural listesi değildir, zayıflık neden yazılır. Bu skill bir agent gövdesi yazılırken, okunurken ya da denetlenirken açılır; "agent body'de ne yazar", "bu gövde doğru mu", "yeni bir agent tanımlayalım", "şu rolü kuralım" denen her durumda. Fabrika (FPA/FPD/FQA) üretim yaparken bu standardı uygular. Kapsam dışı — parça mekaniği: frontmatter alanları, skill tipleri, hook ve plugin biçimi (`fabrika-v2/skills/cc-parcalari`).
+description: PR Yazılım'ın agent'lara bakış açısı ve gövde standardı — bir agent nasıl tanımlanır, gövdesinde ne yazar, altı grup nedir, karakter neden kural listesi değildir, zayıflık neden yazılır. Bu skill bir agent gövdesi yazılırken, okunurken ya da denetlenirken açılır; "agent body'de ne yazar", "bu gövde doğru mu", "yeni bir agent tanımlayalım", "şu rolü kuralım" denen her durumda. Kapsam dışı — fabrikanın kendi üretim standardı (fabrika kendi kanonunu kurar, buraya atıf vermez).
 ---
 
 # PR Yazılım agent sistemi
@@ -8,8 +8,14 @@ description: PR Yazılım'ın agent'lara bakış açısı ve gövde standardı �
 Bu, PR Yazılım'ın **agent'lara bakış açısıdır.** Bir agent'ın nasıl tanımlandığını,
 gövdesinde ne yazacağını ve neden öyle yazıldığını söyler.
 
-**Kanonu burada yaşar** (CEO odası), **uygulayıcısı fabrikadır** (`fabrika-v2` —
-FPA/FPD/FQA). Fabrika bir gövde üretirken buradan okur.
+⚠️ **Bu senin bakışın — fabrikanın değil.** Fabrika kendi sistemini kendi kanonuna
+kurar ve buraya atıf vermez. Sebep: **her sistem bağımsız yaşar.** Clara bir sistem,
+fabrika bir sistem, fabrikanın ürettiği her takım ayrı bir sistem — biri ötekinin
+dosyasını okumak zorunda kalmaz.
+
+Bilgi **atıfla değil anlatımla** akar: Clara fabrikaya anlatır, fabrika kendi diliyle
+kendi kanonuna yazar, bağ kopar. Fabrika Clara olmadan yaşar; takımlar fabrika olmadan
+yaşar.
 
 ---
 
@@ -224,9 +230,8 @@ Bir gövde okunamaz hâle gelirse işlemez, ve işlemeyen kanon yokmuş gibidir.
 
 # Parça mekaniği
 
-Frontmatter alanları, skill tipleri (ortak zemin · omurga · konuya özel · komutla
-bağlanan), hook'lar, plugin manifesti — bunlar bu skill'in kapsamı dışında.
+Frontmatter alanları, skill tipleri, hook'lar, plugin manifesti — bunlar bu skill'in
+kapsamı dışında ve **fabrikanın kendi kanonunda** yaşar.
 
-→ **`fabrika-v2/skills/cc-parcalari`** — biçim ve mekanik oradadır.
-
-Bu skill *neden ve ne* söyler; `cc-parcalari` *nasıl ve nereye* söyler.
+⚠️ Oraya atıf vermezsin. Bir mekanik bilgi gerekirse fabrikaya **sorulur**, kanonuna
+bağlanmaz — her sistem bağımsız yaşar.
