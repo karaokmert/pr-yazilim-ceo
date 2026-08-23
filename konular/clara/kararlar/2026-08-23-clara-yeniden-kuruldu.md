@@ -124,3 +124,31 @@ olmasında.
 
 ⚠️ **Bu bir açık kalem değil, verilmiş bir karar.** Tekrar gündeme getirilmez —
 Mert durumu bilerek kabul etti. Değişirse o söyler.
+
+---
+
+## Açılış hook'u — skill'ler artık tetikleniyor
+
+**Bulgu (ölçüldü 2026-08-23, iki oturum):** skill'ler preload edilmiyor ve
+description'a *"HER OTURUMDA açılır"* yazmak onları açtırmıyor. O bir **niyet
+beyanı**, bir tetikleyici değil.
+
+- Bu oturum: 157 Bash çağrısı, **1 skill** (`oturum-duzeni`)
+- `CLARA - Fabrika IMPROVMENT`: açılışta **sıfır skill**; ancak bir sınama sorusu
+  gelince üçünü birden açtı
+
+**Ve katman ayrımının maliyeti görüldü.** Sınamada yedi sorunun yedisi **gövdeden**
+doğru cevaplandı; tek bilinmeyen soru **skill'e taşınmış** bilgiydi (gövde standardının
+altı grubu). Yeni Clara'nın kendi cümlesi: *"cevapların çoğu gövdemden geliyor,
+skill'lerden değil."*
+
+**Çözüm — sebebi kaldıran, üstüne kural koymayan:**
+`~/.claude/hooks/clara-acilis.sh` yazıldı, `settings.json`'daki `SessionStart`'a
+bağlandı (Mert'in onayıyla). `CLAUDE_CODE_AGENT=clara` kontrolü yapıyor — yalnız Clara
+oturumlarında tetikleniyor, fabrika ve takımlar etkilenmiyor.
+
+Direktif: açılışta dört skill açılır — `clara-main` · `clara-is-disiplini` ·
+`clara-behavior` · `oturum-duzeni`.
+
+**Ve gövdeye bir ayıran soru girdi:** *bu bilgi olmadan yanlış bir şey yapar mısın,
+yoksa sadece bir işi mi eksik yaparsın?* Yanlış yaparsan gövdede olmalı.
