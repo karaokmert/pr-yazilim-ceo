@@ -60,6 +60,62 @@ ekleme.
 
 **Ayrı dosya yalnız üç durumda açılır:**
 
+## Konu klasörü — yazma ve okuma AYNI soruyu sorar
+
+**Bir işe başlarken ve bir işi bitirirken sorulan soru tektir: bu hangi konunun
+dosyası?**
+
+Kayıtlar `konular/{konu}/` altında durur. Sekiz konu: `clara` · `agent-kanonu` ·
+`fabrika` · `clickup-is-takibi` · `kanal-iletisim` · `memory-duzeni` · `olcum-arama` ·
+`saha-yonetimi`. Her birinde `kararlar/` · `incelemeler/` · `fikirler/` ve tek bir
+elle yazılan dosya: **`BILINMESI-GEREKENLER.md`**.
+
+**İŞE BAŞLARKEN o konunun `BILINMESI-GEREKENLER.md`'si AÇILIR** — ölçülmüş tuzaklar
+orada, hepsi sahada fiilen çarptı. Sonra gerekiyorsa `kararlar/` ve `incelemeler/`
+klasörüne bakılır; **klasörün kendisi haritadır**, ayrıca bir indeks tutulmaz.
+
+⚠️ **Neden indeks yok:** elle güncellenen bir indeks bayatlar. Ölçüldü: bir indeksin
+%88'i yazılıp bir daha açılmamış dosyayı gösteriyordu. Klasör listesi kendiliğinden
+günceldir.
+
+**Neden bu düzen kuruldu — ölçüldü (2026-08-13):** dosyalar tarih ekseninde duruyordu
+(`kararlar/2026-08-XX-...`), ama bir iş geldiğinde sorulan soru konu eksenindeydi
+(*"ClickUp düzeni için ne yapmıştık?"*). İki eksen ayrıydı ve sonuç: **64 dosya bir kez
+yazılıp bir daha hiç açılmadı (%88)**, tek bir konu 79 dosyaya dağılmıştı.
+
+**Arşiv mezarlık değildir.** Bir karar alınıp **uygulandıysa** uzun raporu tutulmaz —
+kararın kendisi ve gerekçesi yeter. Ayrıntılı rapor ancak hâlâ **açık** bir işin
+dayanağıysa saklanır.
+
+**Bir kayıt geçersizleştiyse bunu kaydın İÇİNE yazarsın**, haritaya yazmak yetmez.
+Ölçüldü: eskimiş bir kayıt haritada *"eskimiş olabilir"* etiketliydi ve vektör aramada
+**birinci sırada** geldi; çözümü taşıyan taze kayıt ikinci kaldı. Etiket haritadaydı,
+kaydın metninde değildi — arama onu hiç görmedi. Sebebi yapısal: **benzerlik anlamı
+ölçer, doğruluğu ölçmez.**
+
+## Ne zaman YAZMAZSIN — ve ne zaman silersin
+
+Yazma tetikleri bir dosya açar; hiçbiri kapatmaz. **Yalnız yazma tetiği olan bir düzen
+şişer.**
+
+**Ham girdi işlendikten sonra SİLİNİR.** Bir deneyin ham çıktısı, bir taramanın dökümü
+— bunlar **girdi**, kayıt değil. Bulgusu çıkarılıp kayda geçtiğinde ham hâli gider.
+Ayıran soru: **bunu iki ay sonra biri açarsa, çıkarılmış bulgudan fazlasını öğrenir
+mi?** Öğrenmiyorsa artık.
+
+**Aynı olay iki yere yazılmaz.** `.remember` her turda otomatik özet tutuyor — olay
+anlatısı oraya zaten giriyor. Günlüğe yazılacak şey olayın kendisi değil, **bulgusu.**
+
+**Bir günde ikinci dosya açılmaz.** Aynı günün ikinci, üçüncü dosyası açılacaksa dur —
+o gün için zaten bir günlük var, başlık ekle. Ayrı dosya yalnız üç şey için:
+**karar** · **fikir** · **aylarca dönülecek referans**.
+
+**Kapanışta ölçülür.** Bir iş biterken: bu iş kaç dosya açtı, kaçı hâlâ gerekli?
+Gereksiz olan aynı anda silinir — sonraya bırakılan temizlik yapılmıyor.
+
+Ölçüldü (2026-08-07): bir günde **90 dosyaya yazıldı, 10 dosya okundu**; iki deneyin
+ham dökümü (**4.571 satır**) bulgusu üç ayrı yere işlendiği hâlde duruyordu.
+
 - bir **karar** verildiğinde → `konular/{konu}/kararlar/`
 - bir **fikir** olgunlaştığında → `konular/{konu}/fikirler/`
 - bir **ölçüm ya da bulgu** çıktığında → `konular/{konu}/incelemeler/`

@@ -112,6 +112,43 @@ başlatılmaz.
 kapatma — ayrı bir görevdir: **`proje-yonetimi` skill'i.** Orada zincirin sırası,
 handoff taşıma ve *"kural dayatılmaz, iş anlatılır"* kuralı var.
 
+## Bir işe girerken — önce plan, sonra görev listesi, sonra koşum
+
+Bir iş birden fazla adım gerektiriyorsa sırayla şu üçü yapılır: **plan çıkarılır,
+görev listesine çevrilir, sonra koşulur.** Sıra atlanmaz — özellikle ortası.
+
+Mert'in kuralı (2026-08-06): *"yöntemleri farklı farklı şekillerde dene, önce plan yap
+task listesi oluştur sonra tasklerini koş — bu agent'ların en önemli kuralı olacak."*
+
+**Neden görev listesi zorunlu:** plan kafada kalırsa iş sırası kaybolur ve her adımda
+*"şimdi ne yapayım"* diye Mert'e dönülür. Yazılı liste iki şey verir — bağımlılık
+görünür olur (hangi ölçüm hangisinin girdisi) ve yarım kalan iş kaybolmaz. Ölçüldü
+aynı gün: dört göreve bölünen bir işte #2'nin sonucu #4'ün gerekçesini geçersizleştirdi;
+liste olmasaydı #4 boşa koşulmuş olacaktı.
+
+**Bir görev bittiğinde sonucu diğerlerinin gerekçesini değiştirebilir.** O zaman liste
+güncellenir, körlemesine devam edilmez — ölçüm planı değiştirmek için yapılır.
+
+**Mert'e ara adım sorulmaz.** *"Hangisini önce ölçelim"* diye sormak yükü ona atmaktır;
+sıra ölçümün mantığından çıkar. Sorulacak tek şey kararın kendisidir.
+
+⚠️ **Listeye yalnız YAPILACAK iş girer, ÇIKAN bulgu girmez.** Bu ayrım listenin işe
+yaramasının şartı: liste *"şu an ne yapıyorum"* sorusunun cevabıdır. İçine bulgu
+konursa o cevap kaybolur — açık görünen kalemlerin hangisi iş hangisi not, bakan kişi
+ayırt edemez.
+
+Ayıran soru: **bu satır bu oturumda koşulacak mı?** Koşulacaksa görevdir. Bir ölçüm
+sonucu, bir eksik, sonraki işe devredilecek bir kalem ise **bulgudur** — dosyaya
+yazılır, listeye değil.
+
+Ölçüldü (2026-08-06): beş görev açıldı, ikisi gerçek ölçümdü, **üçü bulguydu**. İki
+ölçüm kapandı, üç bulgu *"açık görev"* gibi durdu ve Mert sordu: *"3 açık task
+gözüküyor, bunlar ne olacak?"* Soru haklıydı — liste artık iş sırasını değil karışık
+bir yığını gösteriyordu.
+
+**Liste oturum-yereldir** — başka oturumdan boş döner (ölçüldü 2026-08-05). Sprintin
+taşıyıcısı değil, o oturumun tezgâhıdır; sprint ClickUp'ta yaşar.
+
 ## Açılışta yapılmayacak şey
 
 **İşe başlamak.** Kapanış dokümanı okunmadan alınan karar, önceki oturumun kararını
