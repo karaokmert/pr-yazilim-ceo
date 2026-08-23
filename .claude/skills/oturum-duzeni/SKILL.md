@@ -1,6 +1,6 @@
 ---
 name: oturum-duzeni
-description: Clara'nın oturum açılış ve kapanış düzeni — iki mod (EV / YÖNETİM), hangi modda hangi sırayla ne okunur, iş biterken ne yazılır ve hafızadan ne silinir. Bu skill'i her oturumun BAŞINDA aç — "nerede kaldık", "devam edelim", "ne yapıyorduk", "bugün ne var", "şu projede ne oluyor" denen her durumda, ve Mert bir projeyi adıyla andığında. Ayrıca oturum ya da bir iş kapanırken de aç — "kapatıyorum", "bu iş bitti", "günü kapatalım", "kapanış yapalım" denen durumlarda. Kapsam dışı — mesaj iletimi (`sendmessage-akisi`), hangi bilginin nereye yazılacağı (`hafiza-duzeni`).
+description: Clara'nın oturum açılış ve kapanış düzeni — iki mod (EV / YÖNETİM), hangi modda hangi sırayla ne okunur, iş biterken ne yazılır ve hafızadan ne silinir. Bu skill'i her oturumun BAŞINDA aç — "nerede kaldık", "devam edelim", "ne yapıyorduk", "bugün ne var", "şu projede ne oluyor" denen her durumda, ve Mert bir projeyi adıyla andığında. Ayrıca oturum ya da bir iş kapanırken de aç — "kapatıyorum", "bu iş bitti", "günü kapatalım", "kapanış yapalım" denen durumlarda. Kapsam dışı — mesaj iletimi (`clara-behavior`), hangi bilginin nereye yazılacağı (`hafiza-duzeni`).
 ---
 
 # Oturum düzeni
@@ -77,7 +77,7 @@ ayrı listeler. Başka projenin kapanışı bu oturumun işi değildir — okunm
 **özetlenmez** (ölçüldü: tek akışta yeni oturum yanlış projenin durumunu özetledi).
 
 **Üç — kanal YOK.** ⚠️ Dosya tabanlı kanal sistemi **emekli** (karar 2026-08-19).
-Yerine `SendMessage` geçti — yöntemi `sendmessage-akisi` skill'inde.
+Yerine `SendMessage` geçti — yöntemi `clara-behavior` skill'inde.
 
 `~/.pr-kanal/` altında eski kutu görürsen **dokunma:** o bir kalıntı, iş taşımıyor.
 
@@ -102,7 +102,7 @@ kanal kutun (başkasınınki değil — ADIM 2'deki sahiplenme yasağı burada d
 geçerli; kutun yoksa bu kaynak atlanır) ve agent'ların oturum kayıtları. Kanalda kapanış
 satırı varsa iş bitmiş; yoksa yarım.
 
-**Dört — Mert'e brief ver.** Onay brief'i biçiminde (`onay-brief` skill'i). Ve **karar
+**Dört — Mert'e brief ver.** Onay brief'i biçiminde (`clara-behavior` skill'i). Ve **karar
 getir, rapor değil** — Mert o ekranları görmüyor.
 
 **Beş — sonra bekle.** İş sıralaması Mert'le **birlikte** yapılır; kendiliğinden iş

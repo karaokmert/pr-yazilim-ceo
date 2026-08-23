@@ -1,6 +1,6 @@
 ---
 name: proje-yonetimi
-description: Clara'nın Özel Yazılım (OY) projelerinde agent ekibini yönetme işi — dokuz rollük kadro (PA/BE/FE/MB/DO/QA/TE/CA/UID), sprint planlama zinciri, iş bitti sorgusu, commit onayı, bekleyenler listesi, handoff taşıma, dört sessizlik türü, işi kapatma. Bu skill'i bir OY projesinde agent'lara iş verilecekte, yürüyen bir iş izlenecekte ya da kapatılacakta aç: "şu işi ekibe ver", "şuna ilet", "iş nerede kaldı", "denetim ne durumda", "bu işi kapatalım", "ekibi yönet", "handoff yaz", "sprint planlamaya başlayalım", "durum ne", "kim ne yapıyor" denen her durumda. Ayrıca bir zincir tıkandığında, bir agent "iş bitti" dediğinde ya da Mert yokken karar gerektiğinde de aç. Kapsam dışı — işin ClickUp'taki kaydı (`saha-task-takibi`), mesaj iletimi (`sendmessage-akisi`), oturum açılış/kapanış (`oturum-duzeni`), haftalık planın kendisi (`sprint-yonetimi`), Websitesi ekibi (ayrı skill yazılacak).
+description: Clara'nın Özel Yazılım (OY) projelerinde agent ekibini yönetme işi — dokuz rollük kadro (PA/BE/FE/MB/DO/QA/TE/CA/UID), sprint planlama zinciri, iş bitti sorgusu, commit onayı, bekleyenler listesi, handoff taşıma, dört sessizlik türü, işi kapatma. Bu skill'i bir OY projesinde agent'lara iş verilecekte, yürüyen bir iş izlenecekte ya da kapatılacakta aç: "şu işi ekibe ver", "şuna ilet", "iş nerede kaldı", "denetim ne durumda", "bu işi kapatalım", "ekibi yönet", "handoff yaz", "sprint planlamaya başlayalım", "durum ne", "kim ne yapıyor" denen her durumda. Ayrıca bir zincir tıkandığında, bir agent "iş bitti" dediğinde ya da Mert yokken karar gerektiğinde de aç. Kapsam dışı — işin ClickUp'taki kaydı (`saha-task-takibi`), mesaj iletimi (`clara-behavior`), oturum açılış/kapanış (`oturum-duzeni`), haftalık planın kendisi (`sprint-yonetimi`), Websitesi ekibi (ayrı skill yazılacak).
 ---
 
 # Proje yönetimi — Özel Yazılım
@@ -191,7 +191,7 @@ Dönen cevabı ham hâliyle ekrana basarsın; özetlenmiş bir agent cevabı den
 ⚠️ **Bir risk kaldı:** `SendMessage` hedefi **ada** göre bulur. Aynı adlı iki oturum
 açıksa mesaj hangisine gider belirsiz. Açılışta `ps` ile çakışma kontrol edilir.
 
-Yöntem: `sendmessage-akisi` skill'i.
+Yöntem: `clara-behavior` skill'i.
 
 ## Sen yokken — Mert erişilemezken
 
@@ -405,7 +405,7 @@ söylemiyorsun, **bakmasını** söylüyorsun.
 **Bir — o projede kim açık?** `ps` ile tara.
 **İki — kanal ne durumda?** Monitörler **ölmüştür**. Merkez kutunu kur.
 **Üç — iş nerede kaldı?** Kanal kutuları + oturum kayıtları + kapanış dokümanı.
-**Dört — Mert'e brief ver.** `onay-brief` biçiminde. **Karar getir, rapor değil.**
+**Dört — Mert'e brief ver.** `clara-behavior` biçiminde. **Karar getir, rapor değil.**
 **Beş — sonra bekle.** İş sıralaması Mert'le birlikte.
 
 **Yeni iş başlıyorsa** açılış zinciri `oturum-duzeni` → *"YÖNETİM modu açılışı"*
@@ -530,6 +530,6 @@ hüküm denetçinin; *"bitti mi"* diye sormak Clara'nın.
 
 ---
 
-**İlgili:** ekip kadrosu `references/oy-ekibi.md` · iletim `sendmessage-akisi` ·
-brief biçimi `onay-brief` · oturum açılış/kapanış `oturum-duzeni` · haftalık plan
+**İlgili:** ekip kadrosu `references/oy-ekibi.md` · iletim `clara-behavior` ·
+brief biçimi `clara-behavior` · oturum açılış/kapanış `oturum-duzeni` · haftalık plan
 `sprint-yonetimi` · ClickUp `clickup-duzeni`
