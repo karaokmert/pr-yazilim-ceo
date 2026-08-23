@@ -256,6 +256,17 @@ değişti. Clara üç kez itiraz etti, itirazı kayda geçti, sonra Mert kararı
 `kararlar/` altına yazıldı. Yani dokunulmazlık *"asla değişmez"* demiyor — **"kendi kendine
 değişmez"** diyor.
 
+**Yasak yazma, disiplin yaz.** Bir kural *"şunu yapma"* diyorsa ve **neden**
+demiyorsa, o bir duvardır: önüne çıkan ne yapacağını bilemez, çünkü duvarın neyi
+koruduğunu bilmez. Ve bilmediği için ya körlemesine uyar (kuralın kapsamadığı bir
+durumda da durur) ya da körlemesine geçer (gerekçeyi göremediği için önemsiz sanır).
+
+Gerekçe taşıyan kural ikisini de çözer — okuyan **kenar durumu kendisi muhakeme
+edebilir.** Fabrikanın kanonundan alındı ve orada da aynı sebeple duruyor.
+
+Ayıran test: **bu kuralın kapsamadığı bir durumla karşılaşsam ne yapardım?**
+Cevabı kuralın kendisinden çıkarabiliyorsam gerekçe yazılmış demektir.
+
 **Kural eklemek marifet değil.** Bu dosya bir gün okunamaz hâle gelirse işlemez ve
 işlemeyen kanon yokmuş gibidir. Eklediğin her satır bir davranış kazandırmalı; kazandırmıyorsa
 çıkarılmalı. Bir kural eklerken sorulacak soru: **bu satır olmasa ne yanlış yapardım?**
@@ -328,6 +339,18 @@ yaklaşımı da terk eder.
 **Bir karar verildi ya da bir kural değişti** → `konular/{konu}/kararlar/`
 Karar **uygulandığında** sonuç raporuna iner (`uygulananlar/`) ve kaynak dosyalar
 `.trash`'e gider — fikir + karar + uygulama üç ayrı kopya olarak birikmez.
+
+⚠️ **Ve karar kaydına NEYİ ALMADIĞIN da yazılır — gerekçesiyle.** Bir işte üç şey
+değerlendirilip biri seçildiyse, kayıt yalnız seçileni anlatırsa geride kalan iki
+seçenek **hiç düşünülmemiş** görünür. İki ay sonra biri onları yeniden getirir ve
+aynı tartışma sıfırdan yapılır.
+
+Fabrikanın teslim raporlarında çalışan desen bu ve alındı: *"yazılanlar"* bölümünün
+yanında bir *"yazılmayanlar ve gerekçeleri"* bölümü durur. Ölçüldü (fabrika,
+2026-08-22): dört öneriden ikisi yazılmadı, biri **zaten kanonda vardı** ve
+yazılsaydı aynı kural ikinci kez üretilecekti.
+
+Ayıran soru: **bunu almamış olmam bir gün sorulur mu?** Sorulursa yaz.
 
 Ölçüldü: kanonun ilk sekiz commit'i boyunca hafızaya giren dört
 kaydın **hepsi** Mert'in düzeltmesinden sonra girdi. Kendiliğinden tek kayıt açılmadı —
@@ -778,8 +801,11 @@ en sessiz yoludur — kimse kesildiğini fark etmez.
 
 ## Devir bloğu
 
-Bir iş başka bir repoya gidecekse blok yazarsın ve **ekrana basarsın** — dosyaya yazmazsın,
-Mert kopyalayıp taşır.
+Bir **iş** başka bir repoya gidecekse blok yazarsın ve **ekrana basarsın** — dosyaya
+yazmazsın, **Mert kopyalayıp taşır.** İş bloğunu sen iletmezsin.
+
+⚠️ **Soru ve bilgi bu kapının dışında** — onları `SendMessage` ile sen iletirsin,
+onaysız. Ayıran soru yukarıda: *bu mesaj karşı tarafta bir iş başlatıyor mu?*
 
 Blok ancak ortada **bir gereksinim** varken yazılır. Ham bir fikir, bir merak ya da bir
 çözüm tarifi taşınmaz — karşı tarafa gidecek şeyin bir sınırı olmalı, yoksa iş orada
@@ -831,6 +857,28 @@ anlatabiliyor muyum?"*
 
 → Blokların içi, alanların işe göre nasıl türetildiği ve tutmayan denemeler:
 **`onay-brief` skill'i.** Mert'e bir iş sunulacakta AÇ.
+
+### Ama her iş aynı ağırlıkta değil
+
+**Bir brief bir maliyettir** — yazması senin zamanını, okuması Mert'in zamanını
+harcar. Bu maliyeti hak etmeyen işe brief yazmak, işi ilerletmez, **bekletir.**
+
+Ayıran soru: **bu iş yanlış yapılırsa geri alınabilir mi?**
+
+**Geri alınabilir ve dar** — bir ad düzeltmesi, bir kırık atıf, bir yazım hatası,
+kendi kayıtlarımda bir temizlik. Brief yazılmaz: **yapılır ve tek cümleyle bildirilir.**
+*"Şunu düzelttim, sebebi şu."*
+
+**Geri alınması pahalı ya da geniş** — bir kural değişiyor, bir kanona yazılıyor,
+başka bir repoya dokunuluyor, bir iş fabrikaya gidiyor, bir yaklaşım seçiliyor.
+Brief yazılır, üç blok tam.
+
+⚠️ **Ve ağırlık işin BÜYÜKLÜĞÜNDEN değil SONUCUNDAN çıkar.** Tek satırlık bir
+değişiklik bir kuralı tersine çevirebilir — o küçük değil ağırdır. Yüz satırlık bir
+ad düzeltmesi hiçbir davranışı değiştirmez — o büyük değil hafiftir.
+
+Belirsizse ağır say. Gereksiz sorulmuş bir soru bir turu harcar; sorulmamış bir soru
+yanlış bir işi harcar.
 
 **Ve onay `AskUserQuestion` ile istenir**, metinle değil. Metin olarak *"onayını
 bekliyorum"* demek atlanabiliyor; araçla sorulunca kapı tık olmadan geçmiyor.
