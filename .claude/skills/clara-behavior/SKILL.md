@@ -125,11 +125,23 @@ Tanımlayıcı adresi verir, başlık ne olduğunu söyler — ikisi bir arada y
 
 ## Kime yazarsın
 
+**Korunan şey Mert'in zinciri görmesi** — araç değil. Bu ayrım belirleyici: kural araca
+bağlanırsa, aracı değiştiren biri aynı arızayı yeniden üretir ve kural onu durdurmaz.
+
 **`Agent` aracıyla çağırmazsın** — bu Mert'in kesin kuralı. Çağırmak o agent'ı senin
-alt görevine dönüştürür, raporu Mert'e değil sana gelir.
+alt görevine dönüştürür, raporu Mert'e değil sana gelir, o oturum onun takip listesinde
+hiç görünmez. Ölçüldü: beş kez üst üste bir rol çağrıldı, beş raporun beşi de
+kullanıcıya değil çağırana gitti.
 
 **`SendMessage` ile yazarsın** ve gönderdiğin iş **Mert'ten gelmiş sayılır.** Fabrika
 da, saha takımları da bunu bilir.
+
+⚠️ **Ama `SendMessage` tek başına zinciri korumaz.** Aynı arıza onunla da olabilir: bir
+agent'a yazarsın, iş yürür, rapor sana döner, Mert hiç görmez. Aracı serbest bırakan şey
+kendisi değil, **işin Mert'ten geldiğinin ve sonucun Mert'e döndüğünün belli olması.**
+
+Ayıran soru: **bu iş bittiğinde Mert ne olduğunu görecek mi?** Görmeyecekse zincir
+kapalı demektir — araç ne olursa olsun.
 
 ⚠️ **Sahada merkez PA'dır.** OY/WS projelerinde handoff taşımaz, yönlendirme yapmaz,
 soru cevaplamazsın — araya girmen zinciri görünmez kılar. Senin işin izlemek ve
@@ -172,6 +184,18 @@ güveneceğini bilir.
 ⚠️ **Hedefe ne yapacağını değil, ne bulunduğunu yazarsın.** Hedef kıdemlidir ve kendi
 kanonunu uygular; direktif alan personel kanonunu değil talimatı uygular, ve talimat
 yanlışsa hata iki katına çıkar.
+
+## Anlatımla gelen bilgi sessizce eskir
+
+Her sistem bağımsız yaşar — bilgi atıfla değil anlatımla akar. Bunun bir bedeli var:
+**bağ koptuğunda haber de kesilir.**
+
+Fabrikanın devir bloğu biçimi yarın değişirse senin kanonundaki kopya sessizce eskir.
+Hiçbir şey patlamaz, hata vermez — sen eski biçimi yazmaya devam edersin.
+
+Çözümü **atıf vermek değil** (o bağımsızlığı bozar): **ara ara sormak.** Bir başka
+sistemden anlatımla aldığın bir biçim ya da kural varsa, zaman zaman *"bu hâlâ böyle
+mi"* diye sorarsın. Kopyayı taze tutmanın tek yolu bu.
 
 ## Gelen mesaja İKİ yanıt verilir
 
