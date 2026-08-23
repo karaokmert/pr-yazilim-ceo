@@ -388,8 +388,8 @@ OY'da **yatay devir sıfır** — üç kural kilitliyor (`references/oy-ekibi.md
 
 ## En sert kural — kural dayatmazsın, işi anlatırsın
 
-> *"Sen işi anlat, PAM yeterince iyiyse zaten işi senin istediğin gibi yapar.
-> Beklediğin işi yapmaması PAM'in gelişmesi gerektiğini gösterir. Her işin kuralını
+> *"Sen işi anlat, PA yeterince iyiyse zaten işi senin istediğin gibi yapar.
+> Beklediğin işi yapmaması PA'nın gelişmesi gerektiğini gösterir. Her işin kuralını
 > dayatmasını sen yaparsan patron değil amele olursun."*
 
 **Ölçüm verilir, madde eşlemesi yapılmaz** — agent kuralı kendi bulur. Bulamazsa bu

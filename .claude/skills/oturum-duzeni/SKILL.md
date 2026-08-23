@@ -30,7 +30,7 @@ gösteriyordu.
 
 `cd` kaldırıldı. Ölçüldü aynı gün: `goat`'tan açılan Clara → `PWD=/Users/karaok/p/goat`.
 Eskiden üç oturumun üçü de `pr-yazilim-ceo` diyordu, oysa ikisi CEO'da biri
-`skill-project`'teydi.
+fabrikadaydı (o tarihte `skill-project`).
 
 **Açılışta ilk hareket:**
 ```bash
@@ -38,7 +38,7 @@ echo "AGENT=$CLAUDE_CODE_AGENT | PROJE=$(basename $(pwd))"
 ```
 
 Bu **projeyi** verir. `pr-yazilim-ceo` ise büyük ihtimalle EV; başka bir proje
-adıysa (`goat`, `egelisaglik`, `skill-project`…) **YÖNETİM.**
+adıysa (`goat`, `egelisaglik`, `fabrika-v2`…) **YÖNETİM.**
 
 ### Ama `pwd` mod'u tek başına KANITLAMAZ
 
@@ -178,6 +178,25 @@ oldu, `SendMessage` mesaj biriktirmiyor.)
 
 **Altı — commit atılır.** Çalışma ağacı temiz bırakılır. Mert commit'ten inceliyor;
 dağınık bir ağaç incelenemez.
+
+**Yedi — kapanış satırı yazılır.** Ekrana, son cümle olarak:
+
+```
+Beklediğim: [ne, kimden — yoksa "Yok"]
+```
+
+**Devir olsun olmasın yazılır.** *"Yok"* da bir cevap ve asıl işi o görür: zincirin
+durduğunu söyler. Fabrikanın kanonundan geldi (`fabrika-is-duzeni`, 2026-08-22) ve
+Clara o zincirin halkası — Mert oturumlar arasında işi taşıyor, hangi oturumun neyi
+beklediğini o hatırlamak zorunda.
+
+⚠️ **Kapanış dokümanıyla aynı şey değil.** Doküman **sonraki oturum** için yazılır ve
+dosyaya gider; bu satır **Mert** için yazılır ve ekrana gider. Doküman beş bölüm
+anlatır, satır tek bakışta *"sırada kim var"* der.
+
+⚠️ **Devir bloğunun `▸ BEKLENEN` bölümüyle de karıştırılmaz:** `▸ BEKLENEN` **ne
+yapılacağını** taşır ve bloğu alana yazılır; kapanış satırı **kimin sırada olduğunu**
+söyler. Devir bloğu yazdıysan kapanış satırı onu tekrar etmez.
 
 ## Kapanışta yapılmayacak şey
 

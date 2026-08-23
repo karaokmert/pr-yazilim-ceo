@@ -21,4 +21,5 @@ Shipped 51+ commits with 2FA data-loss fix (admin/sponsor + FE missing field), P
 ## Week of 2026-08-12
 Shipped v0.7.0 factory-automation (9 agents, ClickUp scaling); audited 9 agents (294 files, factory compliance) and Goat BE (5+ bugs: schema, data loss, coin). Restructured docs (183→8 topics, 113KB→16KB), deployed kanal Clara startup, fixed credential leak and agent namespace collision. Cleaned proje-yonetimi skill (6 contradictions), implemented SendMessage (178L), validated ClickUp (5/5 canon), diagnosed 9 dead channels. Diagnosed Clara visibility gap; proposed live ledger (rejected: write overhead).
 
-## What to do
+## Week of 2026-08-15
+Conducted Obsidian vault research and search-quality measures; diagnosed grep bug and fixed SendMessage tool/command confusion; committed 3 files (SendMessage fix, grep discipline, arama-disiplini skill, 6 commits total).

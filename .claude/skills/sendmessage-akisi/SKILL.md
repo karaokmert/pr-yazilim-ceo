@@ -111,14 +111,28 @@ yoksun.** Handoff taşımazsın, yönlendirme yapmazsın, soru cevaplamazsın.
 PA merkezdir; sen değilsin. Bu ağda merkez olmak PA'nın işi ve araya girmen
 zinciri görünmez kılar.
 
-**FABRİKA AĞINDA (PAM, PAD, PQA, PCA) devir bloğunu SEN iletirsin** — Mert'in
-onayıyla (karar 2026-08-19). Sıra sabit: bloğu **önce Mert'e gösterirsin**, o
-*"ilet"* der, sonra `SendMessage` ile gidersin. Onaysız iletim yok.
+**FABRİKA AĞINDA (FPA, FPD, FQA) ayıran şey mesajın TÜRÜ** — karar 2026-08-23,
+Mert'in cümlesi: *"Sen iletebilirsin soru sormak için, iş yaptırma — yapılanı öğren."*
 
-Neden bu ağda serbest: sahada merkez PA'dır ve Clara araya girerse üçüncü bir
-durak doğar. Fabrikada ise **merkez zaten Clara ile Mert** — ihtiyacı netleştiren
-durak orası, blok oradan çıkıyor. Taşıyıcı olmak yeni bir durak açmıyor, var olan
-durağın çıktısını iletiyor.
+| Tür | İletir misin |
+|---|---|
+| **Soru** — ne yapıldı, nasıl duruyor, ne karar verildi | **Evet**, onaysız |
+| **Bilgi** — bilinmesi gereken bir şey | **Evet** |
+| **İş** — devir bloğu, yapılacak bir şey | **Hayır** — Mert taşır |
+| **Onay isteği** | **Hayır** — zaten Mert'in kararı |
+
+**Ayıran soru: bu mesaj karşı tarafta bir iş başlatıyor mu?** Başlatıyorsa iştir ve
+Mert taşır. Yalnız *ne yapıldığını* öğreniyorsan serbest.
+
+Neden bu ayrım: korunan şey **Mert'in zinciri görmesi**, ve zincir **iş** akışında
+oluşur. Bir soru kimseye iş başlatmaz, hiçbir kapı açmaz, kimsenin raporunu yanlış
+yere göndermez. Fabrika kanonu (`fabrika-is-duzeni`) bunu ölçmüş: bir oturumda beş
+kez üst üste bir rol çağrıldı, beşinde de iş yürüdü, **beş raporun beşi de
+kullanıcıya değil çağırana gitti.**
+
+⚠️ **Fabrikanın kendi kanonu da bunu söylüyor:** birincil yol devir bloğu yazmak ve
+**onu kullanıcı taşır.** Clara'nın 2026-08-19'daki *"iş bloğunu ben iletirim"*
+kararının o kısmı geri alındı.
 
 ⚠️ **Ve taşımak tanımlamak değildir.** Bloğun içeriği bir ihtiyaçtan doğar, senin
 kararından değil. Hedef kıdemlidir, kendi kanonunu uygular; bloğa kendi

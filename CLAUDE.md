@@ -34,25 +34,36 @@ tekrar tartışılmaz; değişecekse neden değiştiği yazılır.
 
 Buradan okunan ama yazılmayan repolar:
 
-**`/Users/karaok/p/ozel-yazilim/skill-project`** — Agent takımlarının üretildiği yer.
-Fabrika ekibi (PAM, PAD, PQA, PCA) burada yaşıyor, ürettikleri takımlar `team/` altında
-birikiyor. **Bugünkü üretim hattı burasıdır.**
+**`/Users/karaok/p/fabrika-v2`** — Agent takımlarının üretildiği yer.
+**Bugünkü üretim hattı burasıdır.** Fabrika ekibi üç rol:
 
-**`/Users/karaok/p/agent-project`** — Önceki kuşağın reposu. Fabrika 2026-08-10'da
-buradan taşındı; dosyalar yerinde duruyor ama kanon yürürlükte değil, tarihçedir.
-Referans olarak okunur. Açılış hook tetiği kapatıldı — orada açılan bir agent dünün
-kanonunu yüklemesin diye.
+| Rol | Kime karşı sorumlu | İşi |
+|---|---|---|
+| **FPA** | kullanıcıya | fikri ilerletir, iş emrini yazar, teslimi yazar |
+| **FPD** | ürüne | tek üretici; yazar, teknik kararı verir, bağlı yerleri kapatır |
+| **FQA** | sisteme | kör denetçi; yarım kalmış değişim arar, kendisi düzeltmez |
 
-**Rollerin yer değiştirdiği bilinir.** 10 Ağustos'a kadar üretim hattı `agent-project`,
-tarihçe `skill-project`'ti; taşınmayla ikisi tersine döndü. İki repoda **aynı dosyaların
-kopyaları duruyor ve hash bazında özdeş olabilirler** — ayıran şey içerik değil statü.
-Bir devir bloğunda adres verirken hangisi olduğu tam yazılır; iki kopya arasında fark
-varsa `skill-project`'teki doğrudur.
+İki onay kapısı var ve ikisi de Mert'in: **ne üretilecek** ve **yayınlanacak mı.**
+
+**Emekli kuşaklar — kanonu yürürlükte değil:**
+
+`/Users/karaok/p/ozel-yazilim/skill-project` — 2026-08-20'ye kadarki üretim hattı.
+Dört rollü fabrika (PAM/PAD/PQA/PCA) burada yaşıyordu. `v8/` altındaki **ürün takımları
+hâlâ yürürlükte** (OY/WS kanalları oradan yayınlanıyor) — emekli olan fabrikanın
+kendisi, ürettiği takımlar değil.
+
+`/Users/karaok/p/agent-project` — ondan önceki kuşak. Tarihçedir, referans olarak
+okunur; açılış hook tetiği kapatıldı.
+
+⚠️ **Aynı dosyanın birden çok kopyası dolaşıyor** — plugin cache'inde, emekli
+repolarda, proje kalıntılarında. `grep` yolu değil içeriği getirir; okuduğun şeyin
+yürürlükte olduğunu **sen** doğrularsın. Bir devir bloğunda adres verirken tam yol
+yazılır.
 
 ## Buranın sınırı
 
 **Başka repoya yazılmaz.** Buradan çıkan şey bir metindir — devir bloğu, karar notu,
-gereksinim taslağı. Onu taşıyan Mert'tir. `skill-project` ya da bir müşteri projesi
+gereksinim taslağı. Onu taşıyan Mert'tir. `fabrika-v2` ya da bir müşteri projesi
 değişecekse değişikliği o reponun kendi ekibi yapar, kendi kapısından geçirir.
 
 Sebebi: buranın kapısı yok. Burada denetçi yok, push kapısı yok, ölçüm zorunluluğu yok
