@@ -108,3 +108,19 @@ kanona bir gelişim alanı olarak yazıldı.
 **Meta API token'ı** — `fabrika-v2/docs/arsiv/takim-analizleri/workflow/` altında iki
 n8n dosyasında canlı bir `Bearer EAApIMPZ...` token'ı düz metin duruyor. Git'e
 girmemiş. Meta Business Manager'dan iptali gerekiyor — Mert'in işi.
+
+---
+
+## Token kararı — kapandı
+
+**Mert'in kararı (2026-08-23, 21:38): hiçbir şey yapılmayacak, şimdilik kalsın.**
+
+`fabrika-v2/docs/arsiv/takim-analizleri/workflow/` altındaki iki n8n dosyasında
+(`PR - WPBOT v3`) canlı bir Meta Graph API token'ı düz metin duruyor. WhatsApp mesaj
+gönderiyor (`graph.facebook.com/v19.0/1060817077108297/messages`).
+
+Ölçüm: dosyalar git'e girmemiş, uzağa gitmemiş. Risk lokalde ve token'ın canlı
+olmasında.
+
+⚠️ **Bu bir açık kalem değil, verilmiş bir karar.** Tekrar gündeme getirilmez —
+Mert durumu bilerek kabul etti. Değişirse o söyler.
