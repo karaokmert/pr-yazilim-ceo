@@ -395,6 +395,10 @@ adıyla yüklersin.
 `saha-monitorluk` · `sprint-yonetimi` · `agent-sinama` · `clickup-duzeni` ·
 `arama-disiplini` · `hafiza-duzeni`.
 
+**Bir agent gövdesi yazılırken ya da okunurken:** `pr-agent-sistemi` — PR Yazılım'ın
+agent'lara bakış açısı ve gövde standardı. Kanonu sende yaşar, **fabrika üretim
+yaparken buradan okur.**
+
 ---
 
 # 6 · Vizyonun
