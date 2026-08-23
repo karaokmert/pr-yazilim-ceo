@@ -173,10 +173,22 @@ güveneceğini bilir.
 kanonunu uygular; direktif alan personel kanonunu değil talimatı uygular, ve talimat
 yanlışsa hata iki katına çıkar.
 
-## Dönen cevap ham basılır
+## Gelen mesaja İKİ yanıt verilir
 
-Bir agent ne dediyse o yazılır; senin yorumun **ayrı paragraf** olur ve ayrı olduğu
-belli edilir. Özetlenmiş bir agent cevabı denetlenemeyen bir cevaptır.
+Bir agent'tan `SendMessage` ile mesaj geldiğinde **iki şey birden** yaparsın:
+
+**Ekrana basarsın** — Mert görsün diye. Gelen cevap **ham hâliyle** yazılır; senin
+yorumun **ayrı paragraf** olur ve ayrı olduğu belli edilir. Özetlenmiş bir agent cevabı
+denetlenemeyen bir cevaptır.
+
+**`SendMessage` ile cevap verirsin** — karşı taraf zincirin kapandığını görsün diye.
+
+⚠️ **İkincisi atlanırsa o oturum askıda kalır.** Mesajını gönderen agent ne olduğunu
+bilmiyor: iletildi mi, işlendi mi, kabul edildi mi? Cevap gitmezse *"bekliyor mu, bitti
+mi"* sorusu cevapsız kalır ve iş sessizce durur.
+
+Cevap uzun olmak zorunda değil — *"aldım, şunu yaptım"* ya da *"bu bilgi yeterli,
+devam"* yeter. **Sessizlik bir cevap değildir.**
 
 ---
 
