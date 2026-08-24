@@ -23,3 +23,6 @@ Shipped v0.7.0 factory-automation (9 agents, ClickUp scaling); audited 9 agents 
 
 ## Week of 2026-08-15
 Conducted Obsidian vault research and search-quality measures; diagnosed grep bug and fixed SendMessage tool/command confusion; committed 3 files (SendMessage fix, grep discipline, arama-disiplini skill, 6 commits total).
+
+## Week of 2026-08-18
+Rebuilt auth factory with 4 agents and analyzed VS Code ext (5.8k LOC) against standards, identifying critical gaps in skill binding/rule IDs (119 tables, 71% ref weight). Built fabrika-v2 (3-agent: ortak/yapici/korgoz, 9 skills); passed all tests (9/9 behavior, 72/72 mech) and audits (31 findings, 12 classes). Fixed layout/path issues, migrated ClickUp→saha-task-takibi, cleaned refs, committed 30f0248. Blocked on terminal-independent launch and SendMessage layer; numeric canon rule pending.
