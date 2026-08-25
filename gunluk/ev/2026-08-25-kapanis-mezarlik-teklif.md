@@ -126,3 +126,51 @@ teklifte "her kayıt kendi adresine sahip olacak" diye yazıldı.
 
 Mert dosyayı açıp inceleyecek. Ek hizmet fiyatlarını koyacak.
 Word'de içindekiler tablosu güncellenmeli (sağ tık → Alanı Güncelle).
+
+---
+
+## EK — Mert'in düzenlemesi (15:30)
+
+Mert dokümanı `~/Desktop/EMRE TELYAR.docx` olarak düzenleyip inceletti.
+**Nihai teklif dosyası budur.** Yaptığı altı değişiklik:
+
+**1 · Fiyatlar tek yere toplandı (iyileştirme).** Metnin içine dağılmış
+rakamlar çıkarıldı, Teklif bölümünde **dört tabloya** alındı: Proje Bedeli ·
+Sabit Ödemeler · Aylık Bakım · Ek Hizmetler. Metinde artık *"bedeli Teklif
+bölümünde belirtilmiştir"* deniyor. Teklif bölümü 4 alt başlıktan 8'e çıktı.
+⚠️ Şablonda tablo vardı zaten (T1/T2 stilleri) — Mert onu kullandı.
+CLAUDE.md'deki "tablo yazılmaz" kuralı **kendi kayıtlarımız için**, müşteri
+teklifi için değil.
+
+**2 · PayTR sağlayıcı olarak sabitlendi.** Ben "anlaşmalı bir ödeme
+sağlayıcısı" diye belirsiz bırakmıştım.
+
+**3 · PayTR harici sanal POS ek hizmete alındı** — yeni kalem. İyi bir sınır:
+müşteri sonradan banka POS'u isterse bedava iş olmuyor.
+
+**4 · Amaç bölümü kısaltıldı.** Benimki uzundu.
+
+**5 · Ek hizmetler "Talep hâlinde fiyatlandırılır"** olarak bırakıldı —
+müşteriyle konuşurken belirlenecek.
+
+**6 · SÜRE 6 AYDAN 3 AYA İNDİ.** Fazlar: dokümantasyon 2 · tasarım 2 ·
+geliştirme **7** · test 1 hafta. Ödeme planı da 3 taksite çekildi.
+
+### İtiraz ettim, Mert kabul etmedi — gerekçesiyle
+
+Süreye itiraz ettim: 7 haftada iki mobil uygulama + web + 10 modüllü admin +
+tekrarlayan ödeme + saha kanıt zinciri + konfigüratör teslim edilecek.
+Referans: VisViva 6 ay idi ve **mobil/abonelik/saha yoktu**.
+
+**Mert: *"3 ay kalsın ekibimiz kalabalık :) iş biter."***
+→ Kapasite onun bilgisi, benim değil. Kabul edildi.
+
+**Clara'nın düzeltmesi:** milestone cümlesi süreyle çelişiyordu
+("her üç haftada bir" → 12 haftada 4 milestone, ilki tasarım bitmeden gelir).
+İki yerde **"her iki haftada bir"** yapıldı.
+
+### Teknik not — tekrar edecek arıza
+
+Mert'in kaydettiği dosyada `word/webextensions` **yeniden oluştu** (Word
+Normal.dotm'dan taşıyor). Temizlendi + `xattr -c`.
+⚠️ **Word'de her kaydedişte tekrar edecek.** Salt okunur açılırsa sebebi bu.
