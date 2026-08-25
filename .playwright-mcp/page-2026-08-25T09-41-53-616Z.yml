@@ -1,0 +1,81 @@
+- generic [ref=f4e3]:
+  - navigation [ref=f4e6]:
+    - link "VefaApp" [ref=f4e7] [cursor=pointer]:
+      - /url: /
+    - generic [ref=f4e9]:
+      - link "Mezar Taşı Vitrini" [ref=f4e10] [cursor=pointer]:
+        - /url: /mezar-tasi-vitrini
+      - link "Bakım Vitrini" [ref=f4e11] [cursor=pointer]:
+        - /url: /bakim-vitrini
+      - link "Bölgelerimiz" [ref=f4e12] [cursor=pointer]:
+        - /url: /bolgelerimiz
+      - generic [ref=f4e16]:
+        - button "Hizmetlerimiz" [ref=f4e17] [cursor=pointer]
+        - generic:
+          - link "Hizmetler":
+            - /url: /hizmetler
+          - link "Süreç":
+            - /url: /surec
+          - link "Kurumsal":
+            - /url: /kurumsal
+    - generic [ref=f4e21]:
+      - button "Giriş" [ref=f4e22] [cursor=pointer]
+      - button "Kayıt Ol" [ref=f4e23] [cursor=pointer]
+  - generic [ref=f4e24]:
+    - generic [ref=f4e26]:
+      - generic [ref=f4e27]:
+        - generic [ref=f4e28]: Ustalarımızın Gerçek İşleri
+        - heading "Mezar Taşı Vitrini" [level=1] [ref=f4e29]
+        - paragraph [ref=f4e30]: Yeni kaybettiğiniz bir yakınınız için sıfırdan mezar taşı yaptırmak mı istiyorsunuz? Aşağıda, güvenilir saha ustalarımızın tamamladığı gerçek mezar taşı çalışmalarından örnekler yer alıyor. Beğendiğiniz bir işi seçerek, o ustayla sipariş sürecinizi başlatabilirsiniz.
+      - paragraph [ref=f4e33]: Çalışmalar yükleniyor...
+      - generic [ref=f4e34]:
+        - heading "Aradığınız Mezar Taşını Bulamadınız mı?" [level=3] [ref=f4e35]
+        - paragraph [ref=f4e36]: Vitrindeki örnekler aklınızdaki tasarımı karşılamıyorsa, doğrudan bize yazın; size en uygun ustayı ve tasarımı birlikte bulalım.
+        - link "WhatsApp İletişim Hattımız" [ref=f4e37] [cursor=pointer]:
+          - /url: https://wa.me/905331958649?text=Merhaba%2C%20vitrindeki%20mezar%20ta%C5%9F%C4%B1%20%C3%B6rnekleri%20aras%C4%B1nda%20arad%C4%B1%C4%9F%C4%B1m%C4%B1%20bulamad%C4%B1m%2C%20yard%C4%B1mc%C4%B1%20olabilir%20misiniz%3F
+      - generic [ref=f4e40]:
+        - heading "Mevcut Bir Mezarın Bakımını mı Planlıyorsunuz?" [level=3] [ref=f4e41]
+        - paragraph [ref=f4e42]: Ustalarımızın gerçek öncesi/sonrası çalışmalarını "Bakım Vitrini"nde inceleyin, hemen bir bakım planı oluşturun.
+        - button "Bakım Vitrinine Git" [ref=f4e43] [cursor=pointer]
+    - contentinfo [ref=f4e46]:
+      - generic [ref=f4e47]:
+        - generic [ref=f4e48]:
+          - generic [ref=f4e49]:
+            - img "VefaApp" [ref=f4e50]
+            - paragraph [ref=f4e51]: Mesafe ne olursa olsun, sevdiklerinizin istirahatgahı her zaman özenli, temiz ve bakımlı. Türkiye'nin ilk dijital kabir bakım platformu.
+            - generic [ref=f4e52]: "%100 Memnuniyet ve Güven"
+            - generic [ref=f4e57]:
+              - link "App Store'dan indirin" [ref=f4e58] [cursor=pointer]:
+                - /url: https://apps.apple.com/app/id6785254561
+                - img "App Store'dan indirin" [ref=f4e59]
+              - link "Google Play'den indirin" [ref=f4e60] [cursor=pointer]:
+                - /url: https://play.google.com/store/apps/details?id=com.vefaapp.mobile
+                - img "Google Play'den indirin" [ref=f4e61]
+          - generic [ref=f4e62]:
+            - heading "İletişim" [level=4] [ref=f4e63]
+            - list [ref=f4e64]:
+              - listitem [ref=f4e65]:
+                - generic [ref=f4e66]: "A:"
+                - generic [ref=f4e67]: Maslak, Büyükdere Cd. No:237, 34485 Sarıyer/İstanbulMaslak / İstanbul
+              - listitem [ref=f4e68]:
+                - generic [ref=f4e69]: "E:"
+                - link "destek@vefaapp.com" [ref=f4e70] [cursor=pointer]:
+                  - /url: mailto:destek@vefaapp.com
+              - listitem [ref=f4e71]:
+                - generic [ref=f4e72]: "T:"
+                - generic [ref=f4e73]: 0850 305 97 48
+          - generic [ref=f4e74]:
+            - heading "Portallar" [level=4] [ref=f4e75]
+            - generic [ref=f4e76]:
+              - button "Esnaf ve Zanaatkar Başvurusu" [ref=f4e77] [cursor=pointer]
+              - button "Saha Ekibi Girişi" [ref=f4e78] [cursor=pointer]
+              - button "Yönetici Paneli" [ref=f4e79] [cursor=pointer]
+        - generic [ref=f4e80]:
+          - paragraph [ref=f4e81]: © 2026 VEFA DİJİTAL. TÜM HAKLARI SAKLIDIR.
+          - generic [ref=f4e82]:
+            - button "KVKK Aydınlatma Metni" [ref=f4e83] [cursor=pointer]
+            - button "Gizlilik Politikası" [ref=f4e84] [cursor=pointer]
+            - button "Mesafeli Satış Sözleşmesi" [ref=f4e85] [cursor=pointer]
+          - generic [ref=f4e86]:
+            - generic [ref=f4e87]: "Ödeme:"
+            - generic [ref=f4e88]: Moka United

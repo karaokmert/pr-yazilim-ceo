@@ -1,0 +1,109 @@
+- generic [ref=f3e3]:
+  - navigation [ref=f3e6]:
+    - link "VefaApp" [ref=f3e7] [cursor=pointer]:
+      - /url: /
+    - generic [ref=f3e9]:
+      - link "Mezar Taşı Vitrini" [ref=f3e10] [cursor=pointer]:
+        - /url: /mezar-tasi-vitrini
+      - link "Bakım Vitrini" [ref=f3e11] [cursor=pointer]:
+        - /url: /bakim-vitrini
+      - link "Bölgelerimiz" [ref=f3e12] [cursor=pointer]:
+        - /url: /bolgelerimiz
+      - generic [ref=f3e16]:
+        - button "Hizmetlerimiz" [ref=f3e17] [cursor=pointer]
+        - generic:
+          - link "Hizmetler":
+            - /url: /hizmetler
+          - link "Süreç":
+            - /url: /surec
+          - link "Kurumsal":
+            - /url: /kurumsal
+    - generic [ref=f3e21]:
+      - button "Giriş" [ref=f3e22] [cursor=pointer]
+      - button "Kayıt Ol" [ref=f3e23] [cursor=pointer]
+  - generic [ref=f3e24]:
+    - generic [ref=f3e26]:
+      - generic [ref=f3e27]:
+        - paragraph [ref=f3e28]: Türkiye'nin İlk Dijital Mezar Bakım Platformu
+        - heading "Kurumsal Değerlerimiz" [level=1] [ref=f3e29]
+        - paragraph [ref=f3e31]: "\"Vefa, mesafeleri ortadan kaldırarak sevdiklerinizin istirahatgahlarına hak ettikleri özeni göstermek amacıyla kurulmuş, Türkiye'nin ilk şeffaf dijital mezar bakım platformudur.\""
+      - generic [ref=f3e32]:
+        - generic [ref=f3e33]:
+          - heading "Misyonumuz" [level=3] [ref=f3e39]
+          - paragraph [ref=f3e40]: Şehir dışında veya yurt dışında yaşayan vatandaşlarımızın "gözü arkada kalmadan" hizmet almasını sağlamak. Yaptığımız her işlemi öncesi ve sonrası fotoğraflarla raporlayarak sektörde daha önce olmayan bir güven standardı inşa ediyoruz.
+        - generic [ref=f3e41]:
+          - heading "Vizyonumuz" [level=3] [ref=f3e45]
+          - paragraph [ref=f3e46]: Türkiye'nin 81 ilinde, tüm ilçelere ulaşan standardize edilmiş ve denetlenebilir bir saha ağı kurmak; manevi değerlere saygı çerçevesinde teknolojiyi kullanarak bu kadim hizmeti modern çağa entegre etmektir.
+      - generic [ref=f3e47]:
+        - heading "Rakamlarla Vefa" [level=2] [ref=f3e49]
+        - generic [ref=f3e50]:
+          - generic [ref=f3e51]:
+            - generic [ref=f3e52]: "81"
+            - generic [ref=f3e53]: Aktif İl
+          - generic [ref=f3e57]:
+            - generic [ref=f3e58]: 973+
+            - generic [ref=f3e59]: Hizmet İlçesi
+          - generic [ref=f3e63]:
+            - generic [ref=f3e64]: 45+
+            - generic [ref=f3e65]: Doğrulanmış Esnaf
+          - generic [ref=f3e71]:
+            - generic [ref=f3e72]: "%99"
+            - generic [ref=f3e73]: Memnuniyet
+      - generic [ref=f3e77]:
+        - heading "Nasıl Çalışır?" [level=2] [ref=f3e78]
+        - generic [ref=f3e79]:
+          - generic [ref=f3e80]:
+            - generic [ref=f3e81]: "01"
+            - heading "Paket Seçin" [level=3] [ref=f3e87]
+            - paragraph [ref=f3e88]: Vefa, Huzur veya Hatıra paketlerinden sevdiklerinize uygun olanı seçin. Aylık veya yıllık plan farkı sizin.
+          - generic [ref=f3e89]:
+            - generic [ref=f3e90]: "02"
+            - heading "Esnaf Atanır" [level=3] [ref=f3e96]
+            - paragraph [ref=f3e97]: Sistememiz, mezarlığın bulunduğu bölgedeki doğrulanmış esnafı otomatik olarak siparişinize atar.
+          - generic [ref=f3e98]:
+            - generic [ref=f3e99]: "03"
+            - heading "Rapor Alın" [level=3] [ref=f3e105]
+            - paragraph [ref=f3e106]: Ziyaret sonrası öncesi/sonrası fotoğraflar ve videolar 24 saat içinde hesabınıza yüklenir.
+      - button "Hizmet Haritamızı Keşfet" [ref=f3e108] [cursor=pointer]
+    - contentinfo [ref=f3e112]:
+      - generic [ref=f3e113]:
+        - generic [ref=f3e114]:
+          - generic [ref=f3e115]:
+            - img "VefaApp" [ref=f3e116]
+            - paragraph [ref=f3e117]: Mesafe ne olursa olsun, sevdiklerinizin istirahatgahı her zaman özenli, temiz ve bakımlı. Türkiye'nin ilk dijital kabir bakım platformu.
+            - generic [ref=f3e118]: "%100 Memnuniyet ve Güven"
+            - generic [ref=f3e123]:
+              - link "App Store'dan indirin" [ref=f3e124] [cursor=pointer]:
+                - /url: https://apps.apple.com/app/id6785254561
+                - img "App Store'dan indirin" [ref=f3e125]
+              - link "Google Play'den indirin" [ref=f3e126] [cursor=pointer]:
+                - /url: https://play.google.com/store/apps/details?id=com.vefaapp.mobile
+                - img "Google Play'den indirin" [ref=f3e127]
+          - generic [ref=f3e128]:
+            - heading "İletişim" [level=4] [ref=f3e129]
+            - list [ref=f3e130]:
+              - listitem [ref=f3e131]:
+                - generic [ref=f3e132]: "A:"
+                - generic [ref=f3e133]: Maslak, Büyükdere Cd. No:237, 34485 Sarıyer/İstanbulMaslak / İstanbul
+              - listitem [ref=f3e134]:
+                - generic [ref=f3e135]: "E:"
+                - link "destek@vefaapp.com" [ref=f3e136] [cursor=pointer]:
+                  - /url: mailto:destek@vefaapp.com
+              - listitem [ref=f3e137]:
+                - generic [ref=f3e138]: "T:"
+                - generic [ref=f3e139]: 0850 305 97 48
+          - generic [ref=f3e140]:
+            - heading "Portallar" [level=4] [ref=f3e141]
+            - generic [ref=f3e142]:
+              - button "Esnaf ve Zanaatkar Başvurusu" [ref=f3e143] [cursor=pointer]
+              - button "Saha Ekibi Girişi" [ref=f3e144] [cursor=pointer]
+              - button "Yönetici Paneli" [ref=f3e145] [cursor=pointer]
+        - generic [ref=f3e146]:
+          - paragraph [ref=f3e147]: © 2026 VEFA DİJİTAL. TÜM HAKLARI SAKLIDIR.
+          - generic [ref=f3e148]:
+            - button "KVKK Aydınlatma Metni" [ref=f3e149] [cursor=pointer]
+            - button "Gizlilik Politikası" [ref=f3e150] [cursor=pointer]
+            - button "Mesafeli Satış Sözleşmesi" [ref=f3e151] [cursor=pointer]
+          - generic [ref=f3e152]:
+            - generic [ref=f3e153]: "Ödeme:"
+            - generic [ref=f3e154]: Moka United

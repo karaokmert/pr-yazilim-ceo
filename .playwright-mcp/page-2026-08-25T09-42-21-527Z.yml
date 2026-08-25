@@ -1,0 +1,160 @@
+- generic [ref=f6e3]:
+  - navigation [ref=f6e6]:
+    - link "VefaApp" [ref=f6e7] [cursor=pointer]:
+      - /url: /
+    - generic [ref=f6e9]:
+      - link "Mezar Taşı Vitrini" [ref=f6e10] [cursor=pointer]:
+        - /url: /mezar-tasi-vitrini
+      - link "Bakım Vitrini" [ref=f6e11] [cursor=pointer]:
+        - /url: /bakim-vitrini
+      - link "Bölgelerimiz" [ref=f6e12] [cursor=pointer]:
+        - /url: /bolgelerimiz
+      - generic [ref=f6e16]:
+        - button "Hizmetlerimiz" [ref=f6e17] [cursor=pointer]
+        - generic:
+          - link "Hizmetler":
+            - /url: /hizmetler
+          - link "Süreç":
+            - /url: /surec
+          - link "Kurumsal":
+            - /url: /kurumsal
+    - generic [ref=f6e21]:
+      - button "Giriş" [ref=f6e22] [cursor=pointer]
+      - button "Kayıt Ol" [ref=f6e23] [cursor=pointer]
+  - generic [ref=f6e25]:
+    - generic [ref=f6e28]:
+      - paragraph [ref=f6e29]: Türkiye genelinde 81 il, tüm ilçeler
+      - heading "Hizmet Bölgelerimiz" [level=1] [ref=f6e30]
+    - generic [ref=f6e31]:
+      - generic [ref=f6e32]:
+        - button "Şehir Seçin" [ref=f6e34] [cursor=pointer]
+        - generic [ref=f6e41]: Haritadan bir şehre tıklayın veya yukarıdan seçin
+      - generic [ref=f6e46]:
+        - generic:
+          - generic:
+            - button [ref=f6e47] [cursor=pointer]
+            - button [ref=f6e49] [cursor=pointer]
+            - button [ref=f6e51] [cursor=pointer]
+            - button [ref=f6e53] [cursor=pointer]
+            - button [ref=f6e55] [cursor=pointer]
+            - button [ref=f6e57] [cursor=pointer]
+            - button [ref=f6e59] [cursor=pointer]
+            - button [ref=f6e61] [cursor=pointer]
+            - button [ref=f6e63] [cursor=pointer]
+            - button [ref=f6e65] [cursor=pointer]
+            - button [ref=f6e67] [cursor=pointer]
+            - button [ref=f6e69] [cursor=pointer]
+            - button [ref=f6e71] [cursor=pointer]
+            - button [ref=f6e73] [cursor=pointer]
+            - button [ref=f6e75] [cursor=pointer]
+            - button [ref=f6e77] [cursor=pointer]
+            - button [ref=f6e79] [cursor=pointer]
+            - button [ref=f6e81] [cursor=pointer]
+            - button [ref=f6e83] [cursor=pointer]
+            - button [ref=f6e85] [cursor=pointer]
+            - button [ref=f6e87] [cursor=pointer]
+            - button [ref=f6e89] [cursor=pointer]
+            - button [ref=f6e91] [cursor=pointer]
+            - button [ref=f6e93] [cursor=pointer]
+            - button [ref=f6e95] [cursor=pointer]
+            - button [ref=f6e97] [cursor=pointer]
+            - button [ref=f6e99] [cursor=pointer]
+            - button [ref=f6e101] [cursor=pointer]
+            - button [ref=f6e103] [cursor=pointer]
+            - button [ref=f6e105] [cursor=pointer]
+            - button [ref=f6e107] [cursor=pointer]
+            - button [ref=f6e109] [cursor=pointer]
+            - button [ref=f6e111] [cursor=pointer]
+            - button [ref=f6e113] [cursor=pointer]
+            - button [ref=f6e115] [cursor=pointer]
+            - button [ref=f6e117] [cursor=pointer]
+            - button [ref=f6e119] [cursor=pointer]
+            - button [ref=f6e121] [cursor=pointer]
+            - button [ref=f6e123] [cursor=pointer]
+            - button [ref=f6e125] [cursor=pointer]
+            - button [ref=f6e127] [cursor=pointer]
+            - button [ref=f6e129] [cursor=pointer]
+            - button [ref=f6e131] [cursor=pointer]
+            - button [ref=f6e133] [cursor=pointer]
+            - button [ref=f6e135] [cursor=pointer]
+            - button [ref=f6e137] [cursor=pointer]
+            - button [ref=f6e139] [cursor=pointer]
+            - button [ref=f6e141] [cursor=pointer]
+            - button [ref=f6e143] [cursor=pointer]
+            - button [ref=f6e145] [cursor=pointer]
+            - button [ref=f6e147] [cursor=pointer]
+            - button [ref=f6e149] [cursor=pointer]
+            - button [ref=f6e151] [cursor=pointer]
+            - button [ref=f6e153] [cursor=pointer]
+            - button [ref=f6e155] [cursor=pointer]
+            - button [ref=f6e157] [cursor=pointer]
+            - button [ref=f6e159] [cursor=pointer]
+            - button [ref=f6e161] [cursor=pointer]
+            - button [ref=f6e163] [cursor=pointer]
+            - button [ref=f6e165] [cursor=pointer]
+            - button [ref=f6e167] [cursor=pointer]
+            - button [ref=f6e169] [cursor=pointer]
+            - button [ref=f6e171] [cursor=pointer]
+            - button [ref=f6e173] [cursor=pointer]
+            - button [ref=f6e175] [cursor=pointer]
+            - button [ref=f6e177] [cursor=pointer]
+            - button [ref=f6e179] [cursor=pointer]
+            - button [ref=f6e181] [cursor=pointer]
+            - button [ref=f6e183] [cursor=pointer]
+            - button [ref=f6e185] [cursor=pointer]
+            - button [ref=f6e187] [cursor=pointer]
+            - button [ref=f6e189] [cursor=pointer]
+            - button [ref=f6e191] [cursor=pointer]
+            - button [ref=f6e193] [cursor=pointer]
+            - button [ref=f6e195] [cursor=pointer]
+            - button [ref=f6e197] [cursor=pointer]
+            - button [ref=f6e199] [cursor=pointer]
+            - button [ref=f6e201] [cursor=pointer]
+            - button [ref=f6e203] [cursor=pointer]
+            - button [ref=f6e205] [cursor=pointer]
+            - button [ref=f6e207] [cursor=pointer]
+        - generic [ref=f6e209]:
+          - button "Zoom in" [ref=f6e210] [cursor=pointer]: +
+          - button "Zoom out" [ref=f6e211] [cursor=pointer]: −
+  - contentinfo [ref=f6e212]:
+    - generic [ref=f6e213]:
+      - generic [ref=f6e214]:
+        - generic [ref=f6e215]:
+          - img "VefaApp" [ref=f6e216]
+          - paragraph [ref=f6e217]: Mesafe ne olursa olsun, sevdiklerinizin istirahatgahı her zaman özenli, temiz ve bakımlı. Türkiye'nin ilk dijital kabir bakım platformu.
+          - generic [ref=f6e218]: "%100 Memnuniyet ve Güven"
+          - generic [ref=f6e223]:
+            - link "App Store'dan indirin" [ref=f6e224] [cursor=pointer]:
+              - /url: https://apps.apple.com/app/id6785254561
+              - img "App Store'dan indirin" [ref=f6e225]
+            - link "Google Play'den indirin" [ref=f6e226] [cursor=pointer]:
+              - /url: https://play.google.com/store/apps/details?id=com.vefaapp.mobile
+              - img "Google Play'den indirin" [ref=f6e227]
+        - generic [ref=f6e228]:
+          - heading "İletişim" [level=4] [ref=f6e229]
+          - list [ref=f6e230]:
+            - listitem [ref=f6e231]:
+              - generic [ref=f6e232]: "A:"
+              - generic [ref=f6e233]: Maslak, Büyükdere Cd. No:237, 34485 Sarıyer/İstanbulMaslak / İstanbul
+            - listitem [ref=f6e234]:
+              - generic [ref=f6e235]: "E:"
+              - link "destek@vefaapp.com" [ref=f6e236] [cursor=pointer]:
+                - /url: mailto:destek@vefaapp.com
+            - listitem [ref=f6e237]:
+              - generic [ref=f6e238]: "T:"
+              - generic [ref=f6e239]: 0850 305 97 48
+        - generic [ref=f6e240]:
+          - heading "Portallar" [level=4] [ref=f6e241]
+          - generic [ref=f6e242]:
+            - button "Esnaf ve Zanaatkar Başvurusu" [ref=f6e243] [cursor=pointer]
+            - button "Saha Ekibi Girişi" [ref=f6e244] [cursor=pointer]
+            - button "Yönetici Paneli" [ref=f6e245] [cursor=pointer]
+      - generic [ref=f6e246]:
+        - paragraph [ref=f6e247]: © 2026 VEFA DİJİTAL. TÜM HAKLARI SAKLIDIR.
+        - generic [ref=f6e248]:
+          - button "KVKK Aydınlatma Metni" [ref=f6e249] [cursor=pointer]
+          - button "Gizlilik Politikası" [ref=f6e250] [cursor=pointer]
+          - button "Mesafeli Satış Sözleşmesi" [ref=f6e251] [cursor=pointer]
+        - generic [ref=f6e252]:
+          - generic [ref=f6e253]: "Ödeme:"
+          - generic [ref=f6e254]: Moka United

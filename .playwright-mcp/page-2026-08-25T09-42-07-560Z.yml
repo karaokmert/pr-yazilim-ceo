@@ -1,0 +1,139 @@
+- generic [ref=f5e3]:
+  - navigation [ref=f5e6]:
+    - link "VefaApp" [ref=f5e7] [cursor=pointer]:
+      - /url: /
+    - generic [ref=f5e9]:
+      - link "Mezar Taşı Vitrini" [ref=f5e10] [cursor=pointer]:
+        - /url: /mezar-tasi-vitrini
+      - link "Bakım Vitrini" [ref=f5e11] [cursor=pointer]:
+        - /url: /bakim-vitrini
+      - link "Bölgelerimiz" [ref=f5e12] [cursor=pointer]:
+        - /url: /bolgelerimiz
+      - generic [ref=f5e16]:
+        - button "Hizmetlerimiz" [ref=f5e17] [cursor=pointer]
+        - generic:
+          - link "Hizmetler":
+            - /url: /hizmetler
+          - link "Süreç":
+            - /url: /surec
+          - link "Kurumsal":
+            - /url: /kurumsal
+    - generic [ref=f5e21]:
+      - button "Giriş" [ref=f5e22] [cursor=pointer]
+      - button "Kayıt Ol" [ref=f5e23] [cursor=pointer]
+  - generic [ref=f5e24]:
+    - generic [ref=f5e26]:
+      - generic [ref=f5e27]:
+        - generic [ref=f5e28]: Ustalarımızın Gerçek İşleri
+        - heading "Bakım Vitrini" [level=1] [ref=f5e29]
+        - paragraph [ref=f5e30]: Saha ekibimizin tamamladığı gerçek mezar bakım çalışmalarından fotoğraflar. Siz de sevdiklerinizin kabrinin her zaman özenli ve bakımlı kalması için hemen bir bakım planı oluşturabilirsiniz.
+        - button "Bakım Planla" [ref=f5e31] [cursor=pointer]
+      - generic [ref=f5e35]:
+        - button "Tadilat bakım temızleme peyzaj 2 görsel Tadilat bakım temızleme peyzaj" [ref=f5e36] [cursor=pointer]:
+          - generic [ref=f5e37]:
+            - img "Tadilat bakım temızleme peyzaj" [ref=f5e38]
+            - generic [ref=f5e39]: 2 görsel
+          - paragraph [ref=f5e41]: Tadilat bakım temızleme peyzaj
+        - button "Mezar temizlik ve çiçeklendirme 6 görsel Mezar temizlik ve çiçeklendirme" [ref=f5e42] [cursor=pointer]:
+          - generic [ref=f5e43]:
+            - img "Mezar temizlik ve çiçeklendirme" [ref=f5e44]
+            - generic [ref=f5e45]: 6 görsel
+          - paragraph [ref=f5e47]: Mezar temizlik ve çiçeklendirme
+        - button "Mezar bakımı 2 görsel Mezar bakımı" [ref=f5e48] [cursor=pointer]:
+          - generic [ref=f5e49]:
+            - img "Mezar bakımı" [ref=f5e50]
+            - generic [ref=f5e51]: 2 görsel
+          - paragraph [ref=f5e53]: Mezar bakımı
+        - button "Mezar Bakım Hizmeti 3 görsel Mezar Bakım Hizmeti" [ref=f5e54] [cursor=pointer]:
+          - generic [ref=f5e55]:
+            - img "Mezar Bakım Hizmeti" [ref=f5e56]
+            - generic [ref=f5e57]: 3 görsel
+          - paragraph [ref=f5e59]: Mezar Bakım Hizmeti
+        - button "Mezar taşları beyazlatma işlemi 6 görsel Mezar taşları beyazlatma işlemi" [ref=f5e60] [cursor=pointer]:
+          - generic [ref=f5e61]:
+            - img "Mezar taşları beyazlatma işlemi" [ref=f5e62]
+            - generic [ref=f5e63]: 6 görsel
+          - paragraph [ref=f5e65]: Mezar taşları beyazlatma işlemi
+        - button "Mezar bakımı işleri. 2 görsel Mezar bakımı işleri." [ref=f5e66] [cursor=pointer]:
+          - generic [ref=f5e67]:
+            - img "Mezar bakımı işleri." [ref=f5e68]
+            - generic [ref=f5e69]: 2 görsel
+          - paragraph [ref=f5e71]: Mezar bakımı işleri.
+        - button "Mezar Peyzaj 🌿🌷 2 görsel Mezar Peyzaj 🌿🌷" [ref=f5e72] [cursor=pointer]:
+          - generic [ref=f5e73]:
+            - img "Mezar Peyzaj 🌿🌷" [ref=f5e74]
+            - generic [ref=f5e75]: 2 görsel
+          - paragraph [ref=f5e77]: Mezar Peyzaj 🌿🌷
+        - button "Çift kisilik mezar bakımı genel temizlik 4 görsel Çift kisilik mezar bakımı genel temizlik" [ref=f5e78] [cursor=pointer]:
+          - generic [ref=f5e79]:
+            - img "Çift kisilik mezar bakımı genel temizlik" [ref=f5e80]
+            - generic [ref=f5e81]: 4 görsel
+          - paragraph [ref=f5e83]: Çift kisilik mezar bakımı genel temizlik
+        - button "Temizlik toprak ve çiçeklendirme çalışması. 4 görsel Temizlik toprak ve çiçeklendirme çalışması." [ref=f5e84] [cursor=pointer]:
+          - generic [ref=f5e85]:
+            - img "Temizlik toprak ve çiçeklendirme çalışması." [ref=f5e86]
+            - generic [ref=f5e87]: 4 görsel
+          - paragraph [ref=f5e89]: Temizlik toprak ve çiçeklendirme çalışması.
+        - button "Mezar bakımı 3 görsel Mezar bakımı" [ref=f5e90] [cursor=pointer]:
+          - generic [ref=f5e91]:
+            - img "Mezar bakımı" [ref=f5e92]
+            - generic [ref=f5e93]: 3 görsel
+          - paragraph [ref=f5e95]: Mezar bakımı
+        - button "Mezar bakımı 4 görsel Mezar bakımı" [ref=f5e96] [cursor=pointer]:
+          - generic [ref=f5e97]:
+            - img "Mezar bakımı" [ref=f5e98]
+            - generic [ref=f5e99]: 4 görsel
+          - paragraph [ref=f5e101]: Mezar bakımı
+        - button "Tek Kişilik Standart Bakım Paketi 3 görsel Tek Kişilik Standart Bakım Paketi" [ref=f5e102] [cursor=pointer]:
+          - generic [ref=f5e103]:
+            - img "Tek Kişilik Standart Bakım Paketi" [ref=f5e104]
+            - generic [ref=f5e105]: 3 görsel
+          - paragraph [ref=f5e107]: Tek Kişilik Standart Bakım Paketi
+        - button "Mezar bakımı 10 görsel Mezar bakımı" [ref=f5e108] [cursor=pointer]:
+          - generic [ref=f5e109]:
+            - img "Mezar bakımı" [ref=f5e110]
+            - generic [ref=f5e111]: 10 görsel
+          - paragraph [ref=f5e113]: Mezar bakımı
+      - button "Bakım Planla" [ref=f5e115] [cursor=pointer]
+    - contentinfo [ref=f5e119]:
+      - generic [ref=f5e120]:
+        - generic [ref=f5e121]:
+          - generic [ref=f5e122]:
+            - img "VefaApp" [ref=f5e123]
+            - paragraph [ref=f5e124]: Mesafe ne olursa olsun, sevdiklerinizin istirahatgahı her zaman özenli, temiz ve bakımlı. Türkiye'nin ilk dijital kabir bakım platformu.
+            - generic [ref=f5e125]: "%100 Memnuniyet ve Güven"
+            - generic [ref=f5e130]:
+              - link "App Store'dan indirin" [ref=f5e131] [cursor=pointer]:
+                - /url: https://apps.apple.com/app/id6785254561
+                - img "App Store'dan indirin" [ref=f5e132]
+              - link "Google Play'den indirin" [ref=f5e133] [cursor=pointer]:
+                - /url: https://play.google.com/store/apps/details?id=com.vefaapp.mobile
+                - img "Google Play'den indirin" [ref=f5e134]
+          - generic [ref=f5e135]:
+            - heading "İletişim" [level=4] [ref=f5e136]
+            - list [ref=f5e137]:
+              - listitem [ref=f5e138]:
+                - generic [ref=f5e139]: "A:"
+                - generic [ref=f5e140]: Maslak, Büyükdere Cd. No:237, 34485 Sarıyer/İstanbulMaslak / İstanbul
+              - listitem [ref=f5e141]:
+                - generic [ref=f5e142]: "E:"
+                - link "destek@vefaapp.com" [ref=f5e143] [cursor=pointer]:
+                  - /url: mailto:destek@vefaapp.com
+              - listitem [ref=f5e144]:
+                - generic [ref=f5e145]: "T:"
+                - generic [ref=f5e146]: 0850 305 97 48
+          - generic [ref=f5e147]:
+            - heading "Portallar" [level=4] [ref=f5e148]
+            - generic [ref=f5e149]:
+              - button "Esnaf ve Zanaatkar Başvurusu" [ref=f5e150] [cursor=pointer]
+              - button "Saha Ekibi Girişi" [ref=f5e151] [cursor=pointer]
+              - button "Yönetici Paneli" [ref=f5e152] [cursor=pointer]
+        - generic [ref=f5e153]:
+          - paragraph [ref=f5e154]: © 2026 VEFA DİJİTAL. TÜM HAKLARI SAKLIDIR.
+          - generic [ref=f5e155]:
+            - button "KVKK Aydınlatma Metni" [ref=f5e156] [cursor=pointer]
+            - button "Gizlilik Politikası" [ref=f5e157] [cursor=pointer]
+            - button "Mesafeli Satış Sözleşmesi" [ref=f5e158] [cursor=pointer]
+          - generic [ref=f5e159]:
+            - generic [ref=f5e160]: "Ödeme:"
+            - generic [ref=f5e161]: Moka United

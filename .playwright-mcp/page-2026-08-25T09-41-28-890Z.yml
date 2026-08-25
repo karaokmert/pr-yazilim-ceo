@@ -1,0 +1,141 @@
+- generic [ref=f2e3]:
+  - navigation [ref=f2e6]:
+    - link "VefaApp" [ref=f2e7] [cursor=pointer]:
+      - /url: /
+    - generic [ref=f2e9]:
+      - link "Mezar Taşı Vitrini" [ref=f2e10] [cursor=pointer]:
+        - /url: /mezar-tasi-vitrini
+      - link "Bakım Vitrini" [ref=f2e11] [cursor=pointer]:
+        - /url: /bakim-vitrini
+      - link "Bölgelerimiz" [ref=f2e12] [cursor=pointer]:
+        - /url: /bolgelerimiz
+      - generic [ref=f2e16]:
+        - button "Hizmetlerimiz" [ref=f2e17] [cursor=pointer]
+        - generic:
+          - link "Hizmetler":
+            - /url: /hizmetler
+          - link "Süreç":
+            - /url: /surec
+          - link "Kurumsal":
+            - /url: /kurumsal
+    - generic [ref=f2e21]:
+      - button "Giriş" [ref=f2e22] [cursor=pointer]
+      - button "Kayıt Ol" [ref=f2e23] [cursor=pointer]
+  - generic [ref=f2e24]:
+    - generic [ref=f2e26]:
+      - generic [ref=f2e27]:
+        - heading "İşleyiş ve Süreç" [level=1] [ref=f2e28]
+        - paragraph [ref=f2e30]: Sipariş anından teslimata kadar tamamen şeffaf, raporlanabilir ve profesyonel operasyon sürecimiz.
+      - generic [ref=f2e33]:
+        - generic [ref=f2e35]:
+          - heading "Sipariş & Planlama" [level=3] [ref=f2e36]
+          - paragraph [ref=f2e37]: Sistem üzerinden mezar konumu ve istenilen hizmet paketi seçilir. Seçiminiz anında bölgedeki en yetkin saha ekibimize iş emri olarak düşer.
+        - generic [ref=f2e47]:
+          - heading "Sahaya İntikal & Öncesi Raporu" [level=3] [ref=f2e48]
+          - paragraph [ref=f2e49]: Ekibimiz mezarlığa ulaştığında, işleme başlamadan önce mezarın o anki durumunu yüksek çözünürlüklü fotoğraflarla sisteme yükler.
+        - generic [ref=f2e51]:
+          - heading "Bakım & Temizlik İşlemleri" [level=3] [ref=f2e52]
+          - paragraph [ref=f2e53]: Seçilen pakete göre; yosun temizliği, mermer parlatma, toprak değişimi ve peyzaj ekimleri profesyonelce gerçekleştirilir.
+        - generic [ref=f2e66]:
+          - heading "Teslimat & PDF Rapor" [level=3] [ref=f2e67]
+          - paragraph [ref=f2e68]: İşlem bittiğinde "Sonrası" fotoğrafları çekilir. Sisteme onay düşer düşmez telefonunuza bildirim gelir ve PDF raporunuz panelinize eklenir.
+      - generic [ref=f2e69]:
+        - generic [ref=f2e70]:
+          - heading "Sıfırdan Mezar Taşı Sürecimiz" [level=2] [ref=f2e71]
+          - paragraph [ref=f2e72]: Yeni vefat eden bir yakınınız için mezar taşı yaptırmak isterseniz, "Mezar Taşı Vitrini"nden başlayan süreç şu şekilde işler.
+        - generic [ref=f2e75]:
+          - generic [ref=f2e77]:
+            - heading "Vitrin & Usta Seçimi" [level=3] [ref=f2e78]
+            - paragraph [ref=f2e79]: "\"Mezar Taşı Vitrini\"nde ustalarımızın tamamladığı gerçek çalışmaları inceleyin, beğendiğiniz tasarımı ve ustayı seçin."
+          - generic [ref=f2e89]:
+            - heading "Bilgi Girişi & Ödeme" [level=3] [ref=f2e90]
+            - paragraph [ref=f2e91]: Merhumunuzun ve mezarlığın bilgilerini girin, seçtiğiniz ustaya özel sabit fiyat üzerinden 3D Secure ile güvenli ödemenizi yapın.
+          - generic [ref=f2e93]:
+            - heading "Üretim & Kurulum" [level=3] [ref=f2e94]
+            - paragraph [ref=f2e95]: Seçtiğiniz usta mezar taşını üretir ve mezarlıkta özenle kurulumunu gerçekleştirir.
+          - generic [ref=f2e109]:
+            - heading "Teslimat & Fotoğraf Raporu" [level=3] [ref=f2e110]
+            - paragraph [ref=f2e111]: Kurulum tamamlandığında size bildirim gider ve tamamlanmış çalışmanın fotoğrafları panelinize eklenir.
+        - button "Mezar Taşı Vitrinini İncele" [ref=f2e113] [cursor=pointer]
+      - generic [ref=f2e116]:
+        - generic [ref=f2e117]:
+          - heading "Kendiniz Deneyimleyin" [level=2] [ref=f2e118]
+          - paragraph [ref=f2e119]: Uygulayacağımız mermer ve çiçek değişimlerini sanal olarak test edin.
+        - generic [ref=f2e120]:
+          - generic [ref=f2e121]:
+            - generic [ref=f2e122]: Kişiselleştirin
+            - heading "Vefa Tasarım Atölyesi" [level=2] [ref=f2e127]
+            - paragraph [ref=f2e128]: Mezar rengini ve hazır şablonları doğrudan mezar görseli üzerinden seçin, toprağa tıklayarak peyzajınızı oluşturun.
+          - generic [ref=f2e129]:
+            - generic [ref=f2e130]:
+              - generic [ref=f2e131]:
+                - generic [ref=f2e132]: Baştaşına Tıklayıp İsim Yazın
+                - generic [ref=f2e137]: Toprağa Tıklayıp Bitki Ekin
+              - generic [ref=f2e145]:
+                - img "Mezar Tasarımı" [ref=f2e146]
+                - generic [ref=f2e147]:
+                  - textbox "TIKLA & İSİM YAZ" [ref=f2e149]
+                  - textbox "1900 - 20XX" [ref=f2e151]
+                - button [ref=f2e153] [cursor=pointer]
+                - button "Şablonlar" [ref=f2e161] [cursor=pointer]
+                - generic [ref=f2e170]:
+                  - button "+" [ref=f2e171] [cursor=pointer]
+                  - button "+" [ref=f2e173] [cursor=pointer]
+                  - button "+" [ref=f2e175] [cursor=pointer]
+                  - button "+" [ref=f2e177] [cursor=pointer]
+                  - button "+" [ref=f2e179] [cursor=pointer]
+                  - button "+" [ref=f2e181] [cursor=pointer]
+                  - button "+" [ref=f2e183] [cursor=pointer]
+                  - button "+" [ref=f2e185] [cursor=pointer]
+            - generic [ref=f2e187]:
+              - generic [ref=f2e188]:
+                - heading "Peyzaj Fiyat Özeti" [level=3] [ref=f2e190]
+                - paragraph [ref=f2e194]: Toprak alanınız şu an boş. Eklediğiniz bitkiler burada fiyatlandırılacaktır.
+                - generic [ref=f2e195]:
+                  - generic [ref=f2e196]:
+                    - paragraph [ref=f2e197]: Toplam Peyzaj Bedeli
+                    - paragraph [ref=f2e198]: +0 ₺
+                  - paragraph [ref=f2e199]: Bu tutar, seçeceğiniz pakete eklenecektir.
+              - button "Paket Seçimine Devam Et" [ref=f2e200] [cursor=pointer]
+    - contentinfo [ref=f2e203]:
+      - generic [ref=f2e204]:
+        - generic [ref=f2e205]:
+          - generic [ref=f2e206]:
+            - img "VefaApp" [ref=f2e207]
+            - paragraph [ref=f2e208]: Mesafe ne olursa olsun, sevdiklerinizin istirahatgahı her zaman özenli, temiz ve bakımlı. Türkiye'nin ilk dijital kabir bakım platformu.
+            - generic [ref=f2e209]: "%100 Memnuniyet ve Güven"
+            - generic [ref=f2e214]:
+              - link "App Store'dan indirin" [ref=f2e215] [cursor=pointer]:
+                - /url: https://apps.apple.com/app/id6785254561
+                - img "App Store'dan indirin" [ref=f2e216]
+              - link "Google Play'den indirin" [ref=f2e217] [cursor=pointer]:
+                - /url: https://play.google.com/store/apps/details?id=com.vefaapp.mobile
+                - img "Google Play'den indirin" [ref=f2e218]
+          - generic [ref=f2e219]:
+            - heading "İletişim" [level=4] [ref=f2e220]
+            - list [ref=f2e221]:
+              - listitem [ref=f2e222]:
+                - generic [ref=f2e223]: "A:"
+                - generic [ref=f2e224]: Maslak, Büyükdere Cd. No:237, 34485 Sarıyer/İstanbulMaslak / İstanbul
+              - listitem [ref=f2e225]:
+                - generic [ref=f2e226]: "E:"
+                - link "destek@vefaapp.com" [ref=f2e227] [cursor=pointer]:
+                  - /url: mailto:destek@vefaapp.com
+              - listitem [ref=f2e228]:
+                - generic [ref=f2e229]: "T:"
+                - generic [ref=f2e230]: 0850 305 97 48
+          - generic [ref=f2e231]:
+            - heading "Portallar" [level=4] [ref=f2e232]
+            - generic [ref=f2e233]:
+              - button "Esnaf ve Zanaatkar Başvurusu" [ref=f2e234] [cursor=pointer]
+              - button "Saha Ekibi Girişi" [ref=f2e235] [cursor=pointer]
+              - button "Yönetici Paneli" [ref=f2e236] [cursor=pointer]
+        - generic [ref=f2e237]:
+          - paragraph [ref=f2e238]: © 2026 VEFA DİJİTAL. TÜM HAKLARI SAKLIDIR.
+          - generic [ref=f2e239]:
+            - button "KVKK Aydınlatma Metni" [ref=f2e240] [cursor=pointer]
+            - button "Gizlilik Politikası" [ref=f2e241] [cursor=pointer]
+            - button "Mesafeli Satış Sözleşmesi" [ref=f2e242] [cursor=pointer]
+          - generic [ref=f2e243]:
+            - generic [ref=f2e244]: "Ödeme:"
+            - generic [ref=f2e245]: Moka United
