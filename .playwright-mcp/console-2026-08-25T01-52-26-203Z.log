@@ -1,0 +1,9 @@
+[     479ms] [ERROR] Failed to load resource: the server responded with a status of 404 () @ https://cdn-a.raptor.digital/gtm-config/f05830f9-8bfe-4a59-892b-ac2b7876a825.js?cv=108:0
+[     619ms] [LOG] The script has been deactivated because the client is inactive. @ https://www.leaseweb.com/chunk-JWFJAG53.js:8
+[     758ms] [WARNING] [Meta Pixel] - Duplicate Pixel ID: 732786193571953. @ https://www.leaseweb.com/chunk-JWFJAG53.js:8
+[     798ms] [LOG] propensity function defined twice @ https://www.leaseweb.com/chunk-JWFJAG53.js:8
+[     798ms] [LOG] propensity customer code already used @ https://www.leaseweb.com/chunk-JWFJAG53.js:8
+[     885ms] [LOG] The script has been deactivated because the client is inactive. @ https://www.leaseweb.com/chunk-JWFJAG53.js:8
+[    1091ms] [ERROR] Failed to load resource: the server responded with a status of 400 () @ https://aplo-evnt.com/api/v1/intent_pixel/track_request?app_id=6631f1af49ed0703009671e2:0
+[    1186ms] [ERROR] Failed to load resource: the server responded with a status of 400 () @ https://shop-api.leaseweb.com/occ/v2/leaseweb-spa/products/DEDSER02_NEW_ORDER_PREMIUM_R7525-16SFF8NVME-7543-2xH100?fields=code,configurable,configuratorType,dc,DEFAULT&lang=en&curr=EUR:0
+[    1203ms] [LOG] Product with code 'DEDSER02_NEW_ORDER_PREMIUM_R7525-16SFF8NVME-7543-2xH100' not found! @ https://www.leaseweb.com/chunk-JWFJAG53.js:8

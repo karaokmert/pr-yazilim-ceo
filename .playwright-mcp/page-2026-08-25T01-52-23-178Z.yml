@@ -1,0 +1,211 @@
+- generic [active] [ref=f44e1]:
+  - generic [ref=f44e2]:
+    - generic [ref=f44e3]:
+      - generic [ref=f44e5]:
+        - button "Skip to Header" [ref=f44e6] [cursor=pointer]
+        - button "Skip to Main Content" [ref=f44e7] [cursor=pointer]
+        - button "Skip to Footer" [ref=f44e8] [cursor=pointer]
+      - banner [ref=f44e9]:
+        - generic [ref=f44e10]:
+          - paragraph [ref=f44e14]:
+            - 'link "Now Available: Public Cloud Free Trials. Get €200 to try it for free for up to 30 days " [ref=f44e15] [cursor=pointer]':
+              - /url: https://www.leaseweb.com/en/products-services/cloud/public-cloud
+          - generic [ref=f44e17]:
+            - generic [ref=f44e20]:
+              - link [ref=f44e21] [cursor=pointer]:
+                - /url: /en/
+              - img "undefined" [ref=f44e23]
+            - generic [ref=f44e24]:
+              - generic [ref=f44e27]:
+                - link "Blog" [ref=f44e30] [cursor=pointer]:
+                  - /url: https://blog.leaseweb.com/
+                - link "Knowledge Base" [ref=f44e33] [cursor=pointer]:
+                  - /url: https://kb.leaseweb.com/
+                - link "Developer API" [ref=f44e36] [cursor=pointer]:
+                  - /url: http://developer.leaseweb.com/
+                - link "Status" [ref=f44e39] [cursor=pointer]:
+                  - /url: https://www.leasewebstatus.com/
+                - link "Customer Portal" [ref=f44e42] [cursor=pointer]:
+                  - /url: https://secure.leaseweb.com/
+              - generic [ref=f44e44]:
+                - navigation [ref=f44e47]:
+                  - list [ref=f44e49]:
+                    - listitem [ref=f44e50]:
+                      - generic [ref=f44e51]: Why Leaseweb
+                    - listitem [ref=f44e52]:
+                      - generic [ref=f44e53]: Products
+                    - listitem [ref=f44e54]:
+                      - generic [ref=f44e55]: Solutions
+                    - listitem [ref=f44e56]:
+                      - generic [ref=f44e57]: Resources
+                    - listitem [ref=f44e58]:
+                      - generic [ref=f44e59]: About Us
+                    - listitem [ref=f44e60]:
+                      - link "Videos" [ref=f44e62] [cursor=pointer]:
+                        - /url: /en/resources/videos
+                    - listitem [ref=f44e63]:
+                      - link "Contact" [ref=f44e65] [cursor=pointer]:
+                        - /url: /en/contact
+                    - listitem [ref=f44e66]:
+                      - link "Promotions" [ref=f44e68] [cursor=pointer]:
+                        - /url: /en/promotions
+                - generic [ref=f44e69] [cursor=pointer]
+                - generic [ref=f44e75] [cursor=pointer]:
+                  - text: 
+                  - generic [ref=f44e76]: EN 
+                - link "Sign in" [ref=f44e79] [cursor=pointer]:
+                  - /url: "#"
+                - link "0 items currently in your cart" [ref=f44e82] [cursor=pointer]:
+                  - /url: /en/cart
+                  - generic [ref=f44e84]: "0"
+        - text:  
+      - main [ref=f44e85]:
+        - generic [ref=f44e86]:
+          - generic [ref=f44e92]:
+            - generic [ref=f44e96]:
+              - 'heading "Error Code: 404" [level=1] [ref=f44e97]'
+              - generic [ref=f44e98]: Oops! We can't seem to locate the page you're looking for. Visit our homepage or contact us to reach your destination.
+              - link "Visit our homepage" [ref=f44e103] [cursor=pointer]:
+                - /url: /en/
+            - img "The page cannot be found" [ref=f44e104]
+          - generic [ref=f44e109]:
+            - heading "Get started today!" [level=2] [ref=f44e110]
+            - paragraph [ref=f44e111]:
+              - button "Start Live Chat" [ref=f44e112] [cursor=pointer]
+              - button "Email Us" [ref=f44e113] [cursor=pointer]
+            - paragraph [ref=f44e114]:
+              - text: Or
+              - link [ref=f44e115] [cursor=pointer]:
+                - /url: /en/contact
+                - strong [ref=f44e116]: click here
+              - text: to see our full list of contact options.
+      - contentinfo [ref=f44e117]:
+        - generic [ref=f44e119]:
+          - generic [ref=f44e120]:
+            - navigation "Footer links" [ref=f44e125]:
+              - heading "Links" [level=4] [ref=f44e126]
+              - list "Links" [ref=f44e128]:
+                - listitem [ref=f44e129]:
+                  - link "Customer Portal. 1 of 6" [ref=f44e131] [cursor=pointer]:
+                    - /url: https://secure.leaseweb.com
+                    - text: Customer Portal
+                - listitem [ref=f44e132]:
+                  - link "Status. 2 of 6" [ref=f44e134] [cursor=pointer]:
+                    - /url: https://www.leasewebstatus.com/
+                    - text: Status
+                - listitem [ref=f44e135]:
+                  - link "Leaseweb Blog. 3 of 6" [ref=f44e137] [cursor=pointer]:
+                    - /url: http://blog.leaseweb.com/
+                    - text: Leaseweb Blog
+                - listitem [ref=f44e138]:
+                  - link "Knowledge Base. 4 of 6" [ref=f44e140] [cursor=pointer]:
+                    - /url: https://kb.leaseweb.com/
+                    - text: Knowledge Base
+                - listitem [ref=f44e141]:
+                  - link "API Documentation. 5 of 6" [ref=f44e143] [cursor=pointer]:
+                    - /url: http://developer.leaseweb.com/
+                    - text: API Documentation
+                - listitem [ref=f44e144]:
+                  - link "Leaseweb Labs. 6 of 6" [ref=f44e146] [cursor=pointer]:
+                    - /url: https://labs.leaseweb.com/
+                    - text: Leaseweb Labs
+              - heading "About Leaseweb" [level=4] [ref=f44e147]
+              - list "About Leaseweb" [ref=f44e149]:
+                - listitem [ref=f44e150]:
+                  - link "Our Story. 1 of 5" [ref=f44e152] [cursor=pointer]:
+                    - /url: /en/about-us
+                    - text: Our Story
+                - listitem [ref=f44e153]:
+                  - link "Careers. 2 of 5" [ref=f44e155] [cursor=pointer]:
+                    - /url: /en/about-us/career
+                    - text: Careers
+                - listitem [ref=f44e156]:
+                  - link "Press Releases. 3 of 5" [ref=f44e158] [cursor=pointer]:
+                    - /url: /en/press/releases
+                    - text: Press Releases
+                - listitem [ref=f44e159]:
+                  - link "Events. 4 of 5" [ref=f44e161] [cursor=pointer]:
+                    - /url: /en/about-us/events
+                    - text: Events
+                - listitem [ref=f44e162]:
+                  - link "Contact. 5 of 5" [ref=f44e164] [cursor=pointer]:
+                    - /url: /en/contact
+                    - text: Contact
+              - heading "Legal & Compliance" [level=4] [ref=f44e165]
+              - list "Legal & Compliance" [ref=f44e167]:
+                - listitem [ref=f44e168]:
+                  - link "General. 1 of 7" [ref=f44e170] [cursor=pointer]:
+                    - /url: /en/about-us/legal
+                    - text: General
+                - listitem [ref=f44e171]:
+                  - link "Sales Contract. 2 of 7" [ref=f44e173] [cursor=pointer]:
+                    - /url: /en/about-us/legal/sales-contract
+                    - text: Sales Contract
+                - listitem [ref=f44e174]:
+                  - link "Privacy and Personal Data Protection. 3 of 7" [ref=f44e176] [cursor=pointer]:
+                    - /url: /en/about-us/legal/personal-data-protection-acts
+                    - text: Privacy and Personal Data Protection
+                - listitem [ref=f44e177]:
+                  - link "Abuse Handling & Transparancy Reports. 4 of 7" [ref=f44e179] [cursor=pointer]:
+                    - /url: /en/about-us/legal/abuse-handling
+                    - text: Abuse Handling & Transparancy Reports
+                - listitem [ref=f44e180]:
+                  - link "KYC Customer Verification. 5 of 7" [ref=f44e182] [cursor=pointer]:
+                    - /url: /en/about-us/legal/know-your-customer
+                    - text: KYC Customer Verification
+                - listitem [ref=f44e183]:
+                  - link "Website Terms of Use & Cookie Statement. 6 of 7" [ref=f44e185] [cursor=pointer]:
+                    - /url: /en/about-us/legal/website-terms-of-use-cookie-statement
+                    - text: Website Terms of Use & Cookie Statement
+                - listitem [ref=f44e186]:
+                  - link "Impressum. 7 of 7" [ref=f44e188] [cursor=pointer]:
+                    - /url: /en/about-us/legal/impressum
+                    - text: Impressum
+            - paragraph [ref=f44e190]: ©2026 Leaseweb. All Rights Reserved.
+          - generic [ref=f44e194]:
+            - generic [ref=f44e195]:
+              - generic [ref=f44e196]: Sign up for our newsletter
+              - generic [ref=f44e197]:
+                - generic [ref=f44e198]: Stay up to date with the latest news about Leaseweb solutions, events, special offers and more by subscribing to our monthly newsletter.
+                - generic [ref=f44e200]:
+                  - group [ref=f44e201]:
+                    - generic [ref=f44e202]:
+                      - generic [ref=f44e203]: First name*
+                      - textbox "First name*" [ref=f44e205]:
+                        - /placeholder: ""
+                    - generic [ref=f44e206]:
+                      - generic [ref=f44e207]: Business Email Address*
+                      - textbox "Business Email Address*" [ref=f44e209]:
+                        - /placeholder: ""
+                  - group [ref=f44e210]:
+                    - list [ref=f44e216]:
+                      - listitem [ref=f44e217]:
+                        - generic [ref=f44e218]:
+                          - checkbox "Consent is given to receive marketing communications from Leaseweb, including offers and product updates. Unsubscribing is possible at any time.*" [ref=f44e219] [cursor=pointer]
+                          - generic [ref=f44e220]:
+                            - paragraph [ref=f44e221]: Consent is given to receive marketing communications from Leaseweb, including offers and product updates. Unsubscribing is possible at any time.
+                            - text: "*"
+                  - button "Submit" [ref=f44e224] [cursor=pointer]
+            - generic [ref=f44e225]:
+              - generic [ref=f44e226]: Visit/Follow us
+              - list [ref=f44e229]:
+                - listitem [ref=f44e230]:
+                  - link "Facebook" [ref=f44e231] [cursor=pointer]:
+                    - /url: http://www.facebook.com/leaseweb
+                - listitem [ref=f44e233]:
+                  - link "Twitter" [ref=f44e234] [cursor=pointer]:
+                    - /url: http://www.twitter.com/leaseweb
+                - listitem [ref=f44e236]:
+                  - link "LinkedIn" [ref=f44e237] [cursor=pointer]:
+                    - /url: http://www.linkedin.com/company/242620
+                - listitem [ref=f44e239]:
+                  - link "YouTube" [ref=f44e240] [cursor=pointer]:
+                    - /url: https://www.youtube.com/user/LeaseWeb
+    - generic: Scroll to top
+  - iframe [ref=f44e244]:
+    
+  - status [ref=f44e245]
+  - generic [ref=f44e246]:
+    - button "Live Chat" [ref=f44e247] [cursor=pointer]
+    - iframe [ref=f44e248]:
+      - img "Button" [ref=f53e4] [cursor=pointer]

@@ -1,0 +1,7 @@
+[     395ms] [ERROR] Failed to load resource: the server responded with a status of 404 () @ https://cdn-a.raptor.digital/gtm-config/f05830f9-8bfe-4a59-892b-ac2b7876a825.js?cv=108:0
+[     503ms] [LOG] The script has been deactivated because the client is inactive. @ https://www.leaseweb.com/chunk-JWFJAG53.js:8
+[     673ms] [WARNING] [Meta Pixel] - Duplicate Pixel ID: 732786193571953. @ https://www.leaseweb.com/chunk-JWFJAG53.js:8
+[     707ms] [LOG] propensity function defined twice @ https://www.leaseweb.com/chunk-JWFJAG53.js:8
+[     707ms] [LOG] propensity customer code already used @ https://www.leaseweb.com/chunk-JWFJAG53.js:8
+[     750ms] [LOG] The script has been deactivated because the client is inactive. @ https://www.leaseweb.com/chunk-JWFJAG53.js:8
+[    1213ms] [ERROR] Failed to load resource: the server responded with a status of 400 () @ https://aplo-evnt.com/api/v1/intent_pixel/track_request?app_id=6631f1af49ed0703009671e2:0

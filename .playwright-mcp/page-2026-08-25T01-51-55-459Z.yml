@@ -1,0 +1,586 @@
+- generic [active] [ref=f13e1]:
+  - generic [ref=f13e3]:
+    - heading "This website uses cookies" [level=3] [ref=f13e4]
+    - paragraph [ref=f13e5]: We use cookies to personalise content and ads, to provide social media features and to analyse our traffic. We also share information about your use of our site with our social media, advertising and analytics partners who may combine it with other information that you’ve provided to them or that they’ve collected from your use of their services. You consent to our cookies if you continue to use our website.
+    - paragraph [ref=f13e6]:
+      - generic [ref=f13e7] [cursor=pointer]: Allow all cookies
+      - generic [ref=f13e8] [cursor=pointer]:
+        - text: Settings
+        - generic [ref=f13e9]: ❯
+  - generic [ref=f13e10]:
+    - generic [ref=f13e11]:
+      - generic [ref=f13e13]:
+        - button "Skip to Header" [ref=f13e14] [cursor=pointer]
+        - button "Skip to Main Content" [ref=f13e15] [cursor=pointer]
+        - button "Skip to Footer" [ref=f13e16] [cursor=pointer]
+      - banner [ref=f13e17]:
+        - generic [ref=f13e18]:
+          - paragraph [ref=f13e22]:
+            - 'link "Now Available: Public Cloud Free Trials. Get €200 to try it for free for up to 30 days " [ref=f13e23] [cursor=pointer]':
+              - /url: https://www.leaseweb.com/en/products-services/cloud/public-cloud
+          - generic [ref=f13e25]:
+            - generic [ref=f13e28]:
+              - link [ref=f13e29] [cursor=pointer]:
+                - /url: /en/
+              - img "undefined" [ref=f13e31]
+            - generic [ref=f13e32]:
+              - generic [ref=f13e35]:
+                - link "Blog" [ref=f13e38] [cursor=pointer]:
+                  - /url: https://blog.leaseweb.com/
+                - link "Knowledge Base" [ref=f13e41] [cursor=pointer]:
+                  - /url: https://kb.leaseweb.com/
+                - link "Developer API" [ref=f13e44] [cursor=pointer]:
+                  - /url: http://developer.leaseweb.com/
+                - link "Status" [ref=f13e47] [cursor=pointer]:
+                  - /url: https://www.leasewebstatus.com/
+                - link "Customer Portal" [ref=f13e50] [cursor=pointer]:
+                  - /url: https://secure.leaseweb.com/
+              - generic [ref=f13e52]:
+                - navigation [ref=f13e55]:
+                  - list [ref=f13e57]:
+                    - listitem [ref=f13e58]:
+                      - generic [ref=f13e59]: Why Leaseweb
+                    - listitem [ref=f13e60]:
+                      - generic [ref=f13e61]: Products
+                    - listitem [ref=f13e62]:
+                      - generic [ref=f13e63]: Solutions
+                    - listitem [ref=f13e64]:
+                      - generic [ref=f13e65]: Resources
+                    - listitem [ref=f13e66]:
+                      - generic [ref=f13e67]: About Us
+                    - listitem [ref=f13e68]:
+                      - link "Videos" [ref=f13e70] [cursor=pointer]:
+                        - /url: /en/resources/videos
+                    - listitem [ref=f13e71]:
+                      - link "Contact" [ref=f13e73] [cursor=pointer]:
+                        - /url: /en/contact
+                    - listitem [ref=f13e74]:
+                      - link "Promotions" [ref=f13e76] [cursor=pointer]:
+                        - /url: /en/promotions
+                - generic [ref=f13e81] [cursor=pointer]:
+                  - textbox "Search" [ref=f13e82]
+                  - generic: When autocomplete results are available use up and down arrows to review and enter to select. Touch device users, explore by touch or with swipe gestures.
+                - generic [ref=f13e87] [cursor=pointer]:
+                  - text: 
+                  - generic [ref=f13e88]: EN 
+                - link "Sign in" [ref=f13e91] [cursor=pointer]:
+                  - /url: "#"
+                - link "0 items currently in your cart" [ref=f13e94] [cursor=pointer]:
+                  - /url: /en/cart
+                  - generic [ref=f13e96]: "0"
+        - text:  
+      - main [ref=f13e97]:
+        - generic [ref=f13e98]:
+          - generic [ref=f13e104]:
+            - generic [ref=f13e108]:
+              - heading "Leaseweb Dedicated Servers" [level=1] [ref=f13e109]
+              - list [ref=f13e111]:
+                - listitem [ref=f13e112]: Instantly Delivered Uncompromising Performance
+                - listitem [ref=f13e113]: Fully Customizable Configuration Options
+                - listitem [ref=f13e114]: Global Availability and Scale
+              - link "Get in touch" [ref=f13e119] [cursor=pointer]:
+                - /url: /en/contact/contact-sales
+            - img "leaseweb-dedicated-server-hosting-plans.webp" [ref=f13e120]
+          - navigation [ref=f13e125]:
+            - list [ref=f13e127]:
+              - listitem [ref=f13e128]:
+                - link "All Featured" [ref=f13e130] [cursor=pointer]:
+                  - /url: /en/products-services/dedicated-servers
+              - listitem [ref=f13e131]:
+                - link "High Performance Server" [ref=f13e133] [cursor=pointer]:
+                  - /url: /en/products-services/dedicated-servers/high-performance-server
+              - listitem [ref=f13e134]:
+                - link "GPU Server" [ref=f13e136] [cursor=pointer]:
+                  - /url: /en/products-services/dedicated-servers/gpu-server
+              - listitem [ref=f13e137]:
+                - link "High Bandwidth Server" [ref=f13e139] [cursor=pointer]:
+                  - /url: /en/products-services/dedicated-servers/high-bandwidth-server
+              - listitem [ref=f13e140]:
+                - link "Gaming Server" [ref=f13e142] [cursor=pointer]:
+                  - /url: /en/products-services/dedicated-servers/gaming-server
+              - listitem [ref=f13e143]:
+                - link "Storage Server" [ref=f13e145] [cursor=pointer]:
+                  - /url: /en/products-services/dedicated-servers/storage-server
+              - listitem [ref=f13e146]:
+                - link "AMD Server" [ref=f13e148] [cursor=pointer]:
+                  - /url: /en/products-services/dedicated-servers/amd-server
+              - listitem [ref=f13e149]:
+                - link "Ampere Server" [ref=f13e151] [cursor=pointer]:
+                  - /url: /en/products-services/dedicated-servers/ampere-server
+          - generic [ref=f13e152]:
+            - generic [ref=f13e154]:
+              - generic [ref=f13e161]:
+                - paragraph [ref=f13e162]:
+                  - strong [ref=f13e163]:
+                    - generic [ref=f13e164]: "Now available: New AMD EPYC 4584PX"
+                - paragraph [ref=f13e165]:
+                  - link "Ryzen Performance. EPYC Reliability. Learn more " [ref=f13e166] [cursor=pointer]:
+                    - /url: https://www.leaseweb.com/en/products-services/dedicated-servers/amd-server
+              - img "dark-blue-bg.webp" [ref=f13e167]
+            - generic [ref=f13e171]:
+              - heading "Best price performance for your Dedicated Server hosting" [level=2] [ref=f13e172]
+              - paragraph [ref=f13e178]: Hosting your application or services on one of our high-performing Dedicated Servers gives you the power to grow your business. Customize the configuration of your server to meet your specific resource needs, such as RAM, disks, and bandwidth. Upgrade your server model or scale up with additional servers to match your needs while benefiting from flexible monthly contracts
+          - generic [ref=f13e183]:
+            - tablist [ref=f13e184] [cursor=pointer]:
+              - tab "Featured servers" [selected] [ref=f13e185]
+              - tab "Australia" [ref=f13e186]
+              - tab "Canada" [ref=f13e187]
+              - tab "Germany" [ref=f13e188]
+              - tab "Hong Kong" [ref=f13e189]
+              - tab "Japan" [ref=f13e190]
+              - tab "Netherlands" [ref=f13e191]
+              - tab "Singapore" [ref=f13e192]
+              - tab "United Kingdom" [ref=f13e193]
+              - tab "United States" [ref=f13e194]
+            - tabpanel "Featured servers" [ref=f13e196]:
+              - paragraph [ref=f13e200]:
+                - link "See all servers" [ref=f13e202] [cursor=pointer]:
+                  - /url: /c/dedicated-server
+          - generic [ref=f13e207]:
+            - heading "Want to expand your IT infrastructure with Leaseweb Dedicated Servers?" [level=2] [ref=f13e208]
+            - link "Get in touch with our sales team" [ref=f13e215] [cursor=pointer]:
+              - /url: /en/contact/contact-sales
+          - generic [ref=f13e220]:
+            - heading "Key outcomes for your business" [level=2] [ref=f13e221]
+            - generic [ref=f13e222]:
+              - generic [ref=f13e225]:
+                - img "Dedicated-server-performance.png" [ref=f13e228]
+                - generic [ref=f13e229]:
+                  - heading "Uncompromising performance" [level=3] [ref=f13e230]
+                  - paragraph [ref=f13e231]:
+                    - text: No noisy neighbors. No hypervisor tax. Leaseweb dedicated server hosting gives you physical, single-tenant servers which are super powerful, and ready to crunch your numbers. We use top tier datacenter hardware and our servers are powered by high performance
+                    - link "Intel Scalable" [ref=f13e232] [cursor=pointer]:
+                      - /url: en/technology-partners
+                    - text: processors.
+              - generic [ref=f13e235]:
+                - img "Dedicated-server-customization.png" [ref=f13e238]
+                - generic [ref=f13e239]:
+                  - heading "Full customization options" [level=3] [ref=f13e240]
+                  - paragraph [ref=f13e241]: With Leaseweb dedicated server hosting you can customize the configuration of your server to meet your specific needs, including RAM, SSD hard drives, bandwidth options and more. We think you'll find our pricing to be highly competitive too.
+              - generic [ref=f13e244]:
+                - img "Dedicated-server-monthly-contracts.png" [ref=f13e247]
+                - generic [ref=f13e248]:
+                  - heading "Flexible monthly contracts" [level=3] [ref=f13e249]
+                  - paragraph [ref=f13e250]: In the online world, scalability is key. You need to act fast to meet changing conditions and rise to new opportunities. That’s why we offer month-to-month contracts for all our servers, so you only pay for what you need, when you need it.
+          - generic [ref=f13e255]:
+            - generic [ref=f13e256]:
+              - paragraph [ref=f13e257]:
+                - heading "Why Adjust Chooses Leaseweb services?" [level=2] [ref=f13e258]
+                - paragraph [ref=f13e259]: "\"The only reason we were able to grow so quickly was the flexible way Leaseweb designed and deployed our infrastructure. Going from 30 to 200 servers, from 200 clients to 2000: I can’t imagine how we could’ve done it without Leaseweb’s help.”"
+              - link "Read Customer Case " [ref=f13e262] [cursor=pointer]:
+                - /url: /en/customers/adjust
+            - img "youtube-video-thumbnail" [ref=f13e267] [cursor=pointer]
+          - generic [ref=f13e273]:
+            - heading "Why choose Leaseweb Dedicated Servers?" [level=2] [ref=f13e274]
+            - generic [ref=f13e275]:
+              - generic [ref=f13e278]:
+                - generic [ref=f13e279]:
+                  - generic:
+                    - img "secure-data-center-icon.svg"
+                - generic [ref=f13e280]:
+                  - heading "Secure housing" [level=3] [ref=f13e281]
+                  - paragraph [ref=f13e282]: Housed in one of our top-tier ISO certified, hyper-connected data centers, our dedicated servers have it all. Every detail of their environment – from power density and redundancy, to capacity and cooling, location and accessibility – has been carefully configured to guarantee the very best in security, resiliency, and efficiency.
+              - generic [ref=f13e285]:
+                - generic [ref=f13e286]:
+                  - generic:
+                    - img "global-network-icon.svg"
+                - generic [ref=f13e287]:
+                  - heading "State-of-the-art global network" [level=3] [ref=f13e288]
+                  - paragraph [ref=f13e289]: Get connected with greater bandwidth and speed, whenever and wherever you're working. One of the largest in the world, our network comprises 25 Internet Exchange peering points and 36 points of presence across Europe, the U.S. and Asia. Together with our combination of private peering and global transit provider arrangements we maintain an impressive core uptime of 99.999% and 5.5 Tbps available capacity.
+              - generic [ref=f13e292]:
+                - generic [ref=f13e293]:
+                  - generic:
+                    - img "command-control-icon.svg"
+                - generic [ref=f13e294]:
+                  - heading "Command and control" [level=3] [ref=f13e295]
+                  - paragraph [ref=f13e296]: Our easy-to-use customer portal and API lets you manage your entire hosting infrastructure from one single interface. You’ll have access to automated backend services and activities to carry out server reboots, OS reloads, rescue modes, IP management, null routing, private network, data traffic and bandwidth measurements.
+              - generic [ref=f13e299]:
+                - generic [ref=f13e300]:
+                  - generic:
+                    - img "private-networking.svg"
+                - generic [ref=f13e301]:
+                  - heading "Private Networking" [level=3] [ref=f13e302]
+                  - paragraph [ref=f13e303]: You can now connect your colocation rack to Dedicated Servers or your private cloud through our private networking feature. Through an easy implementation, you increase your connectivity internally without being connected to external networks or even the Internet. This is a hybrid setup that is both cost effective and secure.
+              - generic [ref=f13e306]:
+                - generic [ref=f13e307]:
+                  - generic:
+                    - img "supercharge-nvme-icon.svg"
+                - generic [ref=f13e308]:
+                  - heading "Supercharge with NVMe" [level=3] [ref=f13e309]
+                  - paragraph [ref=f13e310]: Leaseweb's premium server range can also be upgraded with state-of-the-art NVMe SSD hard drives. NVMe (Non-Volitile Memory express) SSD enables you to increase availability from the drive by overcoming bottlenecks experienced in SAS (serial-attached SCSI) and SATA interfaces. NVMe SSD reduces I/O (Input/Output) overhead and delivers various performance enhancements, including multiple, long command queues, and reduced latency.
+              - generic [ref=f13e313]:
+                - generic [ref=f13e314]:
+                  - generic:
+                    - img "technical-support-icon.svg"
+                - generic [ref=f13e315]:
+                  - heading "24/7 on-site technical support" [level=3] [ref=f13e316]
+                  - paragraph [ref=f13e317]: Our engineers are available round the clock – reachable by phone, email, or through our online chat facility in the Leaseweb Customer Portal. If you want to do your own troubleshooting, we have a fantastic online Knowledge Base to guide you to the answer.
+              - generic [ref=f13e320]:
+                - generic [ref=f13e321]:
+                  - generic:
+                    - img "gpu-accelerate-power-icon.svg"
+                - generic [ref=f13e322]:
+                  - heading "Accelerate your computing power with GPU" [level=3] [ref=f13e323]
+                  - paragraph [ref=f13e324]: Graphic Processing Unit (GPU) servers enable you to accelerate your computing power on intensive workloads and a large number of parallel processing tasks. Get maximum output by choosing dedicated GPU configured servers from Leaseweb for your applications to execute thousands of threads simultaneously.
+              - generic [ref=f13e327]:
+                - generic [ref=f13e328]:
+                  - generic:
+                    - img "high-availability-icon.svg"
+                - generic [ref=f13e329]:
+                  - heading "High Availability" [level=3] [ref=f13e330]
+                  - paragraph [ref=f13e331]: We have deployed Floating IPs to enable our customers to build high availability setups and assign hosting services to IP addresses in a flexible way.
+              - generic [ref=f13e334]:
+                - generic [ref=f13e335]:
+                  - generic:
+                    - img "monitoring-icon.svg"
+                - generic [ref=f13e336]:
+                  - heading "Monitoring" [level=3] [ref=f13e337]
+                  - paragraph [ref=f13e338]: Leaseweb Monitoring is a free add-on that gives you unprecedented insight into your infrastructure. Choose to be notified when failing checks occur, so you have less unexpected interruptions and more time to focus on growing your business. This add-on is enabled for all dedicated server customers in the Netherlands, Germany, UK, and US.
+          - generic [ref=f13e339]:
+            - generic [ref=f13e343]:
+              - heading "Dedicated Servers Across Our Regions" [level=2] [ref=f13e344]
+              - generic [ref=f13e345]: Learn about the unique benefits, characteristics and dedicated server offerings of each of our regions by clicking below.
+            - generic [ref=f13e354]:
+              - generic [ref=f13e357]:
+                - generic [ref=f13e359]:
+                  - img "NL-flag.png"
+                - link "Dedicated Servers in the Netherlands " [ref=f13e362] [cursor=pointer]:
+                  - /url: /en/products-services/dedicated-servers/netherlands
+              - generic [ref=f13e365]:
+                - generic [ref=f13e367]:
+                  - img "GER-flag.png"
+                - link "Dedicated Servers in Germany " [ref=f13e370] [cursor=pointer]:
+                  - /url: /en/products-services/dedicated-servers/germany
+              - generic [ref=f13e373]:
+                - generic [ref=f13e375]:
+                  - img "USA-flag.png"
+                - link "Dedicated Servers in the USA " [ref=f13e378] [cursor=pointer]:
+                  - /url: /en/products-services/dedicated-servers/usa
+              - generic [ref=f13e381]:
+                - generic [ref=f13e383]:
+                  - img "UK-flag.png"
+                - link "Dedicated Servers in the UK " [ref=f13e386] [cursor=pointer]:
+                  - /url: /en/products-services/dedicated-servers/uk
+              - generic [ref=f13e389]:
+                - generic [ref=f13e391]:
+                  - img "CAN-flag.png"
+                - link "Dedicated Servers in Canada " [ref=f13e394] [cursor=pointer]:
+                  - /url: /en/products-services/dedicated-servers/canada
+              - generic [ref=f13e397]:
+                - generic [ref=f13e399]:
+                  - img "SG-flag.png"
+                - link "Dedicated Servers in Singapore " [ref=f13e402] [cursor=pointer]:
+                  - /url: /en/products-services/dedicated-servers/singapore
+              - generic [ref=f13e405]:
+                - generic [ref=f13e407]:
+                  - img "JAP-flag.png"
+                - link "Dedicated Servers in Japan " [ref=f13e410] [cursor=pointer]:
+                  - /url: /en/products-services/dedicated-servers/japan
+              - generic [ref=f13e413]:
+                - generic [ref=f13e415]:
+                  - img "AUS-flag.png"
+                - link "Dedicated Servers in Australia " [ref=f13e418] [cursor=pointer]:
+                  - /url: /en/products-services/dedicated-servers/australia
+              - generic [ref=f13e421]:
+                - generic [ref=f13e423]:
+                  - img "HK-flag.png"
+                - link "Dedicated Servers in Hong Kong " [ref=f13e426] [cursor=pointer]:
+                  - /url: /en/products-services/dedicated-servers/hong-kong
+          - generic [ref=f13e427]:
+            - generic [ref=f13e430]:
+              - heading "Resources" [level=2] [ref=f13e431]
+              - generic [ref=f13e432]:
+                - generic [ref=f13e436]:
+                  - heading "Product Sheet" [level=5] [ref=f13e437]
+                  - heading "Dedicated Server" [level=4] [ref=f13e438]
+                  - paragraph [ref=f13e439]: General overview of Dedicated Servers. Specifications and benefits.
+                  - link "Download" [ref=f13e441] [cursor=pointer]:
+                    - /url: https://shop-api.leaseweb.com/medias/dedicated-server-product-sheet-leaseweb.pdf?context=bWFzdGVyfGltYWdlc3wxODQ4OTF8YXBwbGljYXRpb24vcGRmfGFETm1MMmc0WXk4NE9UY3pOVGN5T0RZMk1EYzRMMlJsWkdsallYUmxaQzF6WlhKMlpYSXRjSEp2WkhWamRDMXphR1ZsZEMxc1pXRnpaWGRsWWk1d1pHWXwzNTcxMDc5OTBmNDg0ZDVhNDE5YWQ3NTU4MjU5NGU2YmNkOGM2Yjc0NjVjZjc3NzFmNWI5NzFmODZjMDJlNDkx
+                - generic [ref=f13e446]:
+                  - heading "Webinar" [level=5] [ref=f13e447]
+                  - heading "Migrate your Infrastructure" [level=4] [ref=f13e448]
+                  - paragraph [ref=f13e449]:
+                    - paragraph [ref=f13e450]: Learn how you can easily and quickly migrate your website and infrastructure with our demo with WSM.
+                    - paragraph [ref=f13e451]:
+                      - link "Watch" [ref=f13e452] [cursor=pointer]:
+                        - /url: /en/resources/webinars/migrate-your-infrastructure
+            - generic [ref=f13e455]:
+              - heading "Featured Customers" [level=2] [ref=f13e456]
+              - generic [ref=f13e457]:
+                - link [ref=f13e461] [cursor=pointer]:
+                  - /url: /en/customers/adjust
+                  - generic [ref=f13e462]:
+                    - generic [ref=f13e463]:
+                      - img "adjust-customer-story-cover.jpg" [ref=f13e465]
+                      - heading "Adjust" [level=4] [ref=f13e468]
+                    - paragraph [ref=f13e470]: "\"Going from 30 to 200 servers, from 200 clients to 2000: I can’t imagine how we could’ve done it without Leaseweb’s help.\""
+                    - generic [ref=f13e472]:
+                      - img "Adjust logo"
+                - link [ref=f13e476] [cursor=pointer]:
+                  - /url: /en/customers/bidsopt
+                  - generic [ref=f13e477]:
+                    - generic [ref=f13e478]:
+                      - img "bidsopt-customercase.jpg" [ref=f13e480]
+                      - heading "Bidsopt" [level=4] [ref=f13e483]
+                    - paragraph [ref=f13e485]: “Leaseweb’s solution was more adaptable than AWS and provided us with that all-important backup and disaster recovery option, which is so vital to an organization, making global expansion an achievable reality."
+                    - generic [ref=f13e487]:
+                      - img "logo_0.png"
+                - link [ref=f13e491] [cursor=pointer]:
+                  - /url: /en/customers/crytek
+                  - generic [ref=f13e492]:
+                    - generic [ref=f13e493]:
+                      - img "Crytek-customer-story-banner.jpg" [ref=f13e495]
+                      - heading "Crytek" [level=4] [ref=f13e498]
+                    - paragraph [ref=f13e500]: "\"You feel like the customer value at Leaseweb is very high. Small problems can have a big impact on our games, so we need a partner like Leaseweb.”"
+                    - generic [ref=f13e502]:
+                      - img "CRYTEK_customer_case_logo.png"
+                - link [ref=f13e506] [cursor=pointer]:
+                  - /url: /en/customers/hardwell
+                  - generic [ref=f13e507]:
+                    - generic [ref=f13e508]:
+                      - img "hardwell_banner.jpg" [ref=f13e510]
+                      - heading "Hardwell" [level=4] [ref=f13e513]
+                    - paragraph [ref=f13e515]: "\"I think Leaseweb is one of the only providers we know that is so open-minded to our ideas and even if we come up with something that looks really impossible, we always find a solution and just go for it.”"
+                    - generic [ref=f13e517]:
+                      - img "Hardwell_Logo.png"
+            - generic [ref=f13e521]:
+              - heading "Frequently Asked Questions" [level=2] [ref=f13e523]
+              - generic [ref=f13e527] [cursor=pointer]:
+                - generic:
+                  - strong
+                - generic [ref=f13e528]: What is a dedicated server?
+              - generic [ref=f13e533] [cursor=pointer]:
+                - generic:
+                  - strong
+                - generic [ref=f13e534]: Why should I buy a dedicated server hosting plan from Leaseweb?
+              - generic [ref=f13e539] [cursor=pointer]:
+                - generic:
+                  - strong
+                - generic [ref=f13e540]: How do I choose the best dedicated server solution for my needs?
+              - generic [ref=f13e545] [cursor=pointer]:
+                - generic:
+                  - strong
+                - generic [ref=f13e546]: What are the top 5 dedicated server hosting use cases?
+              - generic [ref=f13e551] [cursor=pointer]:
+                - generic:
+                  - strong
+                - generic [ref=f13e552]: Are Leaseweb dedicated servers safe?
+            - generic [ref=f13e557]:
+              - heading "Useful Dedicated Server hosting Knowledge Base Articles" [level=2] [ref=f13e558]
+              - generic [ref=f13e559]:
+                - generic [ref=f13e562]:
+                  - heading "Available Dedicated Server APIs" [level=4] [ref=f13e564]
+                  - link "Read more " [ref=f13e567] [cursor=pointer]:
+                    - /url: https://developer.leaseweb.com/api-docs/dedicatedservers_v2.html
+                - generic [ref=f13e570]:
+                  - heading "Reinstalling Your Dedicated Server" [level=4] [ref=f13e572]
+                  - link "Read more " [ref=f13e575] [cursor=pointer]:
+                    - /url: https://kb.leaseweb.com/products/dedicated-server/reinstalling-your-dedicated-server
+                - generic [ref=f13e578]:
+                  - heading "Manage Your Dedicated Server Details" [level=4] [ref=f13e580]
+                  - link "Read more " [ref=f13e583] [cursor=pointer]:
+                    - /url: https://kb.leaseweb.com/products/dedicated-server/managing-your-dedicated-server-details
+                - generic [ref=f13e586]:
+                  - heading "Manage Dedicated Server Notifications" [level=4] [ref=f13e588]
+                  - link "Read more " [ref=f13e591] [cursor=pointer]:
+                    - /url: https://kb.leaseweb.com/products/dedicated-server/managing-dedicated-server-notifications
+            - generic [ref=f13e596]:
+              - heading "Dedicated Server Partners" [level=2] [ref=f13e598]
+              - generic [ref=f13e605] [cursor=pointer]:
+                - img "Leaseweb"
+              - generic [ref=f13e612] [cursor=pointer]:
+                - img "Leaseweb"
+              - generic [ref=f13e619] [cursor=pointer]:
+                - img "ampere_logo_®_primary_stacked_rgb.png"
+              - generic [ref=f13e626] [cursor=pointer]:
+                - img "Leaseweb"
+              - generic [ref=f13e633] [cursor=pointer]:
+                - img "Leaseweb"
+              - generic [ref=f13e640] [cursor=pointer]:
+                - img "Leaseweb"
+              - generic [ref=f13e647] [cursor=pointer]:
+                - img "Leaseweb"
+              - link "Learn more" [ref=f13e650] [cursor=pointer]:
+                - /url: /en/products-services/dedicated-servers/technology-partners
+            - generic [ref=f13e654]:
+              - 'heading "Our Certifications: Ensuring Quality and Security" [level=2] [ref=f13e655]'
+              - generic [ref=f13e656]:
+                - generic [ref=f13e659]:
+                  - generic [ref=f13e661]:
+                    - img "gaia-x-logo.png"
+                  - generic [ref=f13e662]: GAIA-X
+                - generic [ref=f13e665]:
+                  - generic [ref=f13e667]:
+                    - img "iso27001.webp"
+                  - generic [ref=f13e668]: ISO 27001
+                - generic [ref=f13e671]:
+                  - generic [ref=f13e673]:
+                    - img "soc1.webp"
+                  - generic [ref=f13e674]: SOC1
+                - generic [ref=f13e677]:
+                  - generic [ref=f13e679]:
+                    - img "soc2.webp"
+                  - generic [ref=f13e680]: SOC2
+                - generic [ref=f13e683]:
+                  - generic [ref=f13e685]:
+                    - img "pci-comm.webp"
+                  - generic [ref=f13e686]: PCI DSS
+                - generic [ref=f13e689]:
+                  - generic [ref=f13e691]:
+                    - img "hipaa-img.webp"
+                  - generic [ref=f13e692]: HIPAA
+                - generic [ref=f13e695]:
+                  - generic [ref=f13e697]:
+                    - img "nen7510-img.webp"
+                  - generic [ref=f13e698]: NEN 7510
+                - generic [ref=f13e701]:
+                  - generic [ref=f13e703]:
+                    - img "cispe-logo-img.webp"
+                  - generic [ref=f13e704]: CISPE
+                - generic [ref=f13e707]:
+                  - generic [ref=f13e709]:
+                    - img "ue-usa-logo.webp"
+                  - generic [ref=f13e710]: EU-US DPF
+            - link "Learn more" [ref=f13e721] [cursor=pointer]:
+              - /url: /en/about-us/security-certifications
+            - generic [ref=f13e725]:
+              - heading "Get started today!" [level=2] [ref=f13e726]
+              - paragraph [ref=f13e727]:
+                - button "Start Live Chat" [ref=f13e728] [cursor=pointer]
+                - button "Email Us" [ref=f13e729] [cursor=pointer]
+              - paragraph [ref=f13e730]:
+                - text: Or
+                - link [ref=f13e731] [cursor=pointer]:
+                  - /url: /en/contact
+                  - strong [ref=f13e732]: click here
+                - text: to see our full list of contact options.
+      - contentinfo [ref=f13e733]:
+        - generic [ref=f13e735]:
+          - generic [ref=f13e736]:
+            - navigation "Footer links" [ref=f13e741]:
+              - heading "Links" [level=4] [ref=f13e742]
+              - list "Links" [ref=f13e744]:
+                - listitem [ref=f13e745]:
+                  - link "Customer Portal. 1 of 6" [ref=f13e747] [cursor=pointer]:
+                    - /url: https://secure.leaseweb.com
+                    - text: Customer Portal
+                - listitem [ref=f13e748]:
+                  - link "Status. 2 of 6" [ref=f13e750] [cursor=pointer]:
+                    - /url: https://www.leasewebstatus.com/
+                    - text: Status
+                - listitem [ref=f13e751]:
+                  - link "Leaseweb Blog. 3 of 6" [ref=f13e753] [cursor=pointer]:
+                    - /url: http://blog.leaseweb.com/
+                    - text: Leaseweb Blog
+                - listitem [ref=f13e754]:
+                  - link "Knowledge Base. 4 of 6" [ref=f13e756] [cursor=pointer]:
+                    - /url: https://kb.leaseweb.com/
+                    - text: Knowledge Base
+                - listitem [ref=f13e757]:
+                  - link "API Documentation. 5 of 6" [ref=f13e759] [cursor=pointer]:
+                    - /url: http://developer.leaseweb.com/
+                    - text: API Documentation
+                - listitem [ref=f13e760]:
+                  - link "Leaseweb Labs. 6 of 6" [ref=f13e762] [cursor=pointer]:
+                    - /url: https://labs.leaseweb.com/
+                    - text: Leaseweb Labs
+              - heading "About Leaseweb" [level=4] [ref=f13e763]
+              - list "About Leaseweb" [ref=f13e765]:
+                - listitem [ref=f13e766]:
+                  - link "Our Story. 1 of 5" [ref=f13e768] [cursor=pointer]:
+                    - /url: /en/about-us
+                    - text: Our Story
+                - listitem [ref=f13e769]:
+                  - link "Careers. 2 of 5" [ref=f13e771] [cursor=pointer]:
+                    - /url: /en/about-us/career
+                    - text: Careers
+                - listitem [ref=f13e772]:
+                  - link "Press Releases. 3 of 5" [ref=f13e774] [cursor=pointer]:
+                    - /url: /en/press/releases
+                    - text: Press Releases
+                - listitem [ref=f13e775]:
+                  - link "Events. 4 of 5" [ref=f13e777] [cursor=pointer]:
+                    - /url: /en/about-us/events
+                    - text: Events
+                - listitem [ref=f13e778]:
+                  - link "Contact. 5 of 5" [ref=f13e780] [cursor=pointer]:
+                    - /url: /en/contact
+                    - text: Contact
+              - heading "Legal & Compliance" [level=4] [ref=f13e781]
+              - list "Legal & Compliance" [ref=f13e783]:
+                - listitem [ref=f13e784]:
+                  - link "General. 1 of 7" [ref=f13e786] [cursor=pointer]:
+                    - /url: /en/about-us/legal
+                    - text: General
+                - listitem [ref=f13e787]:
+                  - link "Sales Contract. 2 of 7" [ref=f13e789] [cursor=pointer]:
+                    - /url: /en/about-us/legal/sales-contract
+                    - text: Sales Contract
+                - listitem [ref=f13e790]:
+                  - link "Privacy and Personal Data Protection. 3 of 7" [ref=f13e792] [cursor=pointer]:
+                    - /url: /en/about-us/legal/personal-data-protection-acts
+                    - text: Privacy and Personal Data Protection
+                - listitem [ref=f13e793]:
+                  - link "Abuse Handling & Transparancy Reports. 4 of 7" [ref=f13e795] [cursor=pointer]:
+                    - /url: /en/about-us/legal/abuse-handling
+                    - text: Abuse Handling & Transparancy Reports
+                - listitem [ref=f13e796]:
+                  - link "KYC Customer Verification. 5 of 7" [ref=f13e798] [cursor=pointer]:
+                    - /url: /en/about-us/legal/know-your-customer
+                    - text: KYC Customer Verification
+                - listitem [ref=f13e799]:
+                  - link "Website Terms of Use & Cookie Statement. 6 of 7" [ref=f13e801] [cursor=pointer]:
+                    - /url: /en/about-us/legal/website-terms-of-use-cookie-statement
+                    - text: Website Terms of Use & Cookie Statement
+                - listitem [ref=f13e802]:
+                  - link "Impressum. 7 of 7" [ref=f13e804] [cursor=pointer]:
+                    - /url: /en/about-us/legal/impressum
+                    - text: Impressum
+            - paragraph [ref=f13e806]: ©2026 Leaseweb. All Rights Reserved.
+          - generic [ref=f13e810]:
+            - generic [ref=f13e811]:
+              - generic [ref=f13e812]: Sign up for our newsletter
+              - generic [ref=f13e813]:
+                - generic [ref=f13e814]: Stay up to date with the latest news about Leaseweb solutions, events, special offers and more by subscribing to our monthly newsletter.
+                - generic [ref=f13e816]:
+                  - group [ref=f13e817]:
+                    - generic [ref=f13e818]:
+                      - generic [ref=f13e819]: First name*
+                      - textbox "First name*" [ref=f13e821]:
+                        - /placeholder: ""
+                    - generic [ref=f13e822]:
+                      - generic [ref=f13e823]: Business Email Address*
+                      - textbox "Business Email Address*" [ref=f13e825]:
+                        - /placeholder: ""
+                  - group [ref=f13e826]:
+                    - list [ref=f13e832]:
+                      - listitem [ref=f13e833]:
+                        - generic [ref=f13e834]:
+                          - checkbox "Consent is given to receive marketing communications from Leaseweb, including offers and product updates. Unsubscribing is possible at any time.*" [ref=f13e835] [cursor=pointer]
+                          - generic [ref=f13e836]:
+                            - paragraph [ref=f13e837]: Consent is given to receive marketing communications from Leaseweb, including offers and product updates. Unsubscribing is possible at any time.
+                            - text: "*"
+                  - button "Submit" [ref=f13e840] [cursor=pointer]
+            - generic [ref=f13e841]:
+              - generic [ref=f13e842]: Visit/Follow us
+              - list [ref=f13e845]:
+                - listitem [ref=f13e846]:
+                  - link "Facebook" [ref=f13e847] [cursor=pointer]:
+                    - /url: http://www.facebook.com/leaseweb
+                - listitem [ref=f13e849]:
+                  - link "Twitter" [ref=f13e850] [cursor=pointer]:
+                    - /url: http://www.twitter.com/leaseweb
+                - listitem [ref=f13e852]:
+                  - link "LinkedIn" [ref=f13e853] [cursor=pointer]:
+                    - /url: http://www.linkedin.com/company/242620
+                - listitem [ref=f13e855]:
+                  - link "YouTube" [ref=f13e856] [cursor=pointer]:
+                    - /url: https://www.youtube.com/user/LeaseWeb
+    - generic: Scroll to top
+  - iframe [ref=f13e860]:
+    
+  - status [ref=f13e861]
+  - generic [ref=f13e862]:
+    - button "Live Chat" [ref=f13e863] [cursor=pointer]
+    - iframe [ref=f13e864]:
+      - img "Button" [ref=f23e4] [cursor=pointer]

@@ -1,0 +1,556 @@
+- generic [ref=f100e2]:
+  - complementary [ref=f100e3]:
+    - paragraph [ref=f100e7]:
+      - text: Host Your Own AI Agent with
+      - link "OpenClaw" [ref=f100e8] [cursor=pointer]:
+        - /url: https://contabo.com/en/openclaw-hosting/
+      - text: "- Free 1-Click Setup!"
+  - banner [ref=f100e9]:
+    - generic [ref=f100e11]:
+      - paragraph [ref=f100e12]: Cloud VPS and Bare Metal Servers for Less
+      - navigation [ref=f100e13]:
+        - button "Flag of TR € / EN" [ref=f100e15] [cursor=pointer]:
+          - img "Flag of TR" [ref=f100e17]
+          - generic [ref=f100e18]: €
+          - text: /
+          - generic [ref=f100e19]: EN
+        - generic [ref=f100e22]:
+          - link "Help" [ref=f100e23] [cursor=pointer]:
+            - /url: https://help.contabo.com/en/support/home
+          - link "Log In" [ref=f100e24] [cursor=pointer]:
+            - /url: https://my.contabo.com/account/login
+          - link "Sign Up" [ref=f100e25] [cursor=pointer]:
+            - /url: /en/register/email
+    - generic [ref=f100e27]:
+      - link "Home" [ref=f100e28] [cursor=pointer]:
+        - /url: /en/
+      - navigation [ref=f100e40]:
+        - list [ref=f100e41]:
+          - listitem [ref=f100e42]:
+            - generic [ref=f100e43] [cursor=pointer]:
+              - text: VPS
+              - img "Show more nav items" [ref=f100e44]
+          - listitem [ref=f100e46]:
+            - generic [ref=f100e47] [cursor=pointer]:
+              - text: Dedicated Servers
+              - img "Show more nav items" [ref=f100e48]
+          - listitem [ref=f100e50]:
+            - generic [ref=f100e51] [cursor=pointer]:
+              - text: Apps & Panels
+              - img "Show more nav items" [ref=f100e52]
+          - listitem [ref=f100e54]:
+            - generic [ref=f100e55] [cursor=pointer]:
+              - text: More
+              - img "Show more nav items" [ref=f100e56]
+          - listitem [ref=f100e58]:
+            - link "Pricing" [ref=f100e59] [cursor=pointer]:
+              - /url: /en/pricing/
+          - listitem [ref=f100e60]:
+            - generic [ref=f100e61] [cursor=pointer]:
+              - text: Company
+              - img "Show more nav items" [ref=f100e62]
+    - generic [ref=f100e66]:
+      - generic [ref=f100e68]:
+        - generic [ref=f100e69]: Affordable GPU Cloud
+        - generic [ref=f100e77]:
+          - heading "NVIDIA GPU Servers More Performance, Less Complexity" [level=1] [ref=f100e78]: NVIDIA GPU ServersMore Performance, Less Complexity
+          - heading "Powerful NVIDIA GPU Cloud for AI, data analytics, and demanding workloads" [level=3] [ref=f100e79]
+          - paragraph
+      - contentinfo
+  - main [ref=f100e80]:
+    - generic [ref=f100e82]:
+      - paragraph [ref=f100e88]: Whether you're training AI models, running large language models, or executing data-intensive applications, vshosting’s GPU Cloud delivers the performance required for the most demanding workloads. Modern NVIDIA GPUs, highly available infrastructure in European data centers, and 24/7 expert support ensure maximum performance, reliability, and scalability.Our NVIDIA GPU infrastructure is designed to maximize performance and efficiency while keeping costs transparent. With cutting-edge hardware, enterprise-grade data centers, and flexible options, you can scale exactly as your projects require – without compromise.
+      - generic [ref=f100e93]:
+        - generic [ref=f100e96]:
+          - heading "Dedicated NVIDIA L40S" [level=2] [ref=f100e97]
+          - heading "Offers breakthrough multi-workload acceleration for large language model (LLM) inference and training, as well as graphics and video applications, based on the latest Ada Lovelace architecture." [level=3] [ref=f100e98]
+          - generic [ref=f100e99]:
+            - generic [ref=f100e100]: GPU
+            - generic [ref=f100e102]: GPU RAM
+            - generic [ref=f100e104]: CPUs
+            - generic [ref=f100e106]: RAM
+            - generic [ref=f100e108]: Storage
+            - generic [ref=f100e110]: Bandwidth
+            - generic [ref=f100e112]:
+              - generic [ref=f100e113]: Price
+              - generic [ref=f100e114]: / month
+            - generic [ref=f100e116]: "1"
+            - generic [ref=f100e118]: 48 GB
+            - generic [ref=f100e120]: "32"
+            - generic [ref=f100e122]: 234 GB
+            - generic [ref=f100e124]: 1,75 TB
+            - generic [ref=f100e126]: 15 TB
+            - generic [ref=f100e128]: €690.00
+            - generic [ref=f100e130] [cursor=pointer]: Get Started
+        - generic [ref=f100e134]:
+          - heading "Cloud NVIDIA L40S" [level=2] [ref=f100e135]
+          - heading "Offers breakthrough multi-workload acceleration for large language model (LLM) inference and training, as well as graphics and video applications, based on the latest Ada Lovelace architecture." [level=3] [ref=f100e136]
+          - generic [ref=f100e137]:
+            - generic [ref=f100e138]: GPU
+            - generic [ref=f100e140]: GPU RAM
+            - generic [ref=f100e142]: CPUs
+            - generic [ref=f100e144]: RAM
+            - generic [ref=f100e146]: Storage
+            - generic [ref=f100e148]: Bandwidth
+            - generic [ref=f100e150]:
+              - generic [ref=f100e151]: Price
+              - generic [ref=f100e152]: / month
+            - generic [ref=f100e154]: "1"
+            - generic [ref=f100e156]: 48 GB
+            - generic [ref=f100e158]: "32"
+            - generic [ref=f100e160]: 234 GB
+            - generic [ref=f100e162]: 900 GB
+            - generic [ref=f100e164]: 15 TB
+            - generic [ref=f100e166]: €788.00
+            - generic [ref=f100e168] [cursor=pointer]: Get Started
+        - generic [ref=f100e172]:
+          - heading "Dedicated RTX PRO 5000" [level=2] [ref=f100e173]
+          - heading "Takes AI and visual computing projects to the next level with powerful Tensor Cores, accelerating demanding workloads such as machine learning, rendering, and simulation." [level=3] [ref=f100e174]
+          - generic [ref=f100e175]:
+            - generic [ref=f100e176]: GPU
+            - generic [ref=f100e178]: GPU RAM
+            - generic [ref=f100e180]: CPUs
+            - generic [ref=f100e182]: RAM
+            - generic [ref=f100e184]: Storage
+            - generic [ref=f100e186]: Bandwidth
+            - generic [ref=f100e188]:
+              - generic [ref=f100e189]: Price
+              - generic [ref=f100e190]: / month
+            - generic [ref=f100e192]: "1"
+            - generic [ref=f100e194]: 48 GB
+            - generic [ref=f100e196]: "32"
+            - generic [ref=f100e198]: 234 GB
+            - generic [ref=f100e200]: 1,75 TB
+            - generic [ref=f100e202]: 15 TB
+            - generic [ref=f100e204]: €690.00
+            - generic [ref=f100e206] [cursor=pointer]: Get Started
+        - generic [ref=f100e210]:
+          - heading "Cloud RTX PRO 5000" [level=2] [ref=f100e211]
+          - heading "Takes AI and visual computing projects to the next level with powerful Tensor Cores, accelerating demanding workloads such as machine learning, rendering, and simulation." [level=3] [ref=f100e212]
+          - generic [ref=f100e213]:
+            - generic [ref=f100e214]: GPU
+            - generic [ref=f100e216]: GPU RAM
+            - generic [ref=f100e218]: CPUs
+            - generic [ref=f100e220]: RAM
+            - generic [ref=f100e222]: Storage
+            - generic [ref=f100e224]: Bandwidth
+            - generic [ref=f100e226]:
+              - generic [ref=f100e227]: Price
+              - generic [ref=f100e228]: / month
+            - generic [ref=f100e230]: "1"
+            - generic [ref=f100e232]: 48 GB
+            - generic [ref=f100e234]: "32"
+            - generic [ref=f100e236]: 234 GB
+            - generic [ref=f100e238]: 900 GB
+            - generic [ref=f100e240]: 15 TB
+            - generic [ref=f100e242]: €788.00
+            - generic [ref=f100e244] [cursor=pointer]: Get Started
+        - generic [ref=f100e248]:
+          - heading "Dedicated RTX PRO 6000" [level=2] [ref=f100e249]
+          - heading "Takes AI, visual computing, and HPC workloads to the next level. With advanced Tensor Cores, high compute performance, and large memory, it accelerates machine learning, generative AI, rendering, simulations, and large-scale data processing." [level=3] [ref=f100e250]
+          - generic [ref=f100e251]:
+            - generic [ref=f100e252]: GPU
+            - generic [ref=f100e254]: GPU RAM
+            - generic [ref=f100e256]: CPUs
+            - generic [ref=f100e258]: RAM
+            - generic [ref=f100e260]: Storage
+            - generic [ref=f100e262]: Bandwidth
+            - generic [ref=f100e264]:
+              - generic [ref=f100e265]: Price
+              - generic [ref=f100e266]: / month
+            - generic [ref=f100e268]: "1"
+            - generic [ref=f100e270]: 96 GB
+            - generic [ref=f100e272]: "32"
+            - generic [ref=f100e274]: 234 GB
+            - generic [ref=f100e276]: 1,92 TB
+            - generic [ref=f100e278]: 15 TB
+            - generic [ref=f100e280]: €1,400.00
+            - generic [ref=f100e282] [cursor=pointer]: Get Started
+        - generic [ref=f100e286]:
+          - heading "Cloud RTX PRO 6000" [level=2] [ref=f100e287]
+          - heading "Takes AI, visual computing, and HPC workloads to the next level. With advanced Tensor Cores, high compute performance, and large memory, it accelerates machine learning, generative AI, rendering, simulations, and large-scale data processing." [level=3] [ref=f100e288]
+          - generic [ref=f100e289]:
+            - generic [ref=f100e290]: GPU
+            - generic [ref=f100e292]: GPU RAM
+            - generic [ref=f100e294]: CPUs
+            - generic [ref=f100e296]: RAM
+            - generic [ref=f100e298]: Storage
+            - generic [ref=f100e300]: Bandwidth
+            - generic [ref=f100e302]:
+              - generic [ref=f100e303]: Price
+              - generic [ref=f100e304]: / month
+            - generic [ref=f100e306]: "1"
+            - generic [ref=f100e308]: 96 GB
+            - generic [ref=f100e310]: "32"
+            - generic [ref=f100e312]: 234 GB
+            - generic [ref=f100e314]: 1,92 TB NVME
+            - generic [ref=f100e316]: 15 TB
+            - generic [ref=f100e318]: €1,500.00
+            - generic [ref=f100e320] [cursor=pointer]: Get Started
+        - generic [ref=f100e324]:
+          - heading "Dedicated NVIDIA H200" [level=2] [ref=f100e325]
+          - heading "Takes AI projects to the next level, boasting fourth-generation Tensor Cores that make advanced language models training up to 4x faster than before." [level=3] [ref=f100e326]
+          - generic [ref=f100e327]:
+            - generic [ref=f100e328]: GPU
+            - generic [ref=f100e330]: GPU RAM
+            - generic [ref=f100e332]: CPUs
+            - generic [ref=f100e334]: RAM
+            - generic [ref=f100e336]: Storage
+            - generic [ref=f100e338]: Bandwidth
+            - generic [ref=f100e340]:
+              - generic [ref=f100e341]: Price
+              - generic [ref=f100e342]: / month
+            - generic [ref=f100e344]: "1"
+            - generic [ref=f100e346]: 141 GB
+            - generic [ref=f100e348]: "32"
+            - generic [ref=f100e350]: 234 GB
+            - generic [ref=f100e352]: 1,9 TB
+            - generic [ref=f100e354]: 15 TB
+            - generic [ref=f100e356]: €1,838.00
+            - generic [ref=f100e358] [cursor=pointer]: Get Started
+        - generic [ref=f100e362]:
+          - heading "Cloud NVIDIA H200" [level=2] [ref=f100e363]
+          - heading "Takes AI projects to the next level, boasting fourth-generation Tensor Cores that make advanced language models training up to 4x faster than before." [level=3] [ref=f100e364]
+          - generic [ref=f100e365]:
+            - generic [ref=f100e366]: GPU
+            - generic [ref=f100e368]: GPU RAM
+            - generic [ref=f100e370]: CPUs
+            - generic [ref=f100e372]: RAM
+            - generic [ref=f100e374]: Storage
+            - generic [ref=f100e376]: Bandwidth
+            - generic [ref=f100e378]:
+              - generic [ref=f100e379]: Price
+              - generic [ref=f100e380]: / month
+            - generic [ref=f100e382]: "1"
+            - generic [ref=f100e384]: 141 GB
+            - generic [ref=f100e386]: "32"
+            - generic [ref=f100e388]: 234 GB
+            - generic [ref=f100e390]: 1,9 TB
+            - generic [ref=f100e392]: 15 TB
+            - generic [ref=f100e394]: €2,294.00
+            - generic [ref=f100e396] [cursor=pointer]: Get Started
+        - generic [ref=f100e400]:
+          - heading "Cloud NVIDIA 8x H200" [level=2] [ref=f100e401]
+          - heading "Takes AI projects to the next level, boasting fourth-generation Tensor Cores that make advanced language models training up to 4x faster than before." [level=3] [ref=f100e402]
+          - generic [ref=f100e403]:
+            - generic [ref=f100e404]: GPU
+            - generic [ref=f100e406]: GPU RAM
+            - generic [ref=f100e408]: CPUs
+            - generic [ref=f100e410]: RAM
+            - generic [ref=f100e412]: Storage
+            - generic [ref=f100e414]: Bandwidth
+            - generic [ref=f100e416]:
+              - generic [ref=f100e417]: Price
+              - generic [ref=f100e418]: / month
+            - generic [ref=f100e420]: "1"
+            - generic [ref=f100e422]: 1128 GB
+            - generic [ref=f100e424]: "192"
+            - generic [ref=f100e426]: 7,68 TB
+            - generic [ref=f100e428]: 1,9 TB
+            - generic [ref=f100e430]: 15 TB
+            - generic [ref=f100e432]: €16,000.00
+            - generic [ref=f100e434] [cursor=pointer]: Get Started
+      - generic [ref=f100e436]:
+        - generic [ref=f100e437]:
+          - heading "9 Regions, 11 Locations, Global Availability" [level=2] [ref=f100e439]
+          - generic [ref=f100e440]: From the USA to the UK, from Europe to Asia and Australia, choose your ideal hosting location for low latency worldwide
+        - link [ref=f100e442] [cursor=pointer]:
+          - /url: en/locations/
+          - generic [ref=f100e445]:
+            - img "A map of Contabo's Data Centers that have German Quality, high speed, and low-latency cloud infrastructure at low prices worldwide."
+      - generic [ref=f100e446]:
+        - heading "Operating Systems, Apps, and Deployment Options" [level=2] [ref=f100e449]
+        - generic [ref=f100e451]:
+          - tablist [ref=f100e452]:
+            - tab "Operating Systems" [ref=f100e454] [cursor=pointer]
+            - tab "Panels & Apps" [ref=f100e457] [cursor=pointer]
+            - tab "Custom Images" [ref=f100e460] [cursor=pointer]
+          - tabpanel [ref=f100e462]:
+            - generic [ref=f100e463]:
+              - generic [ref=f100e464]:
+                - generic:
+                  - generic:
+                    - generic:
+                      - img "ubuntu"
+                - generic [ref=f100e465]: Ubuntu
+              - generic [ref=f100e466]:
+                - generic:
+                  - generic:
+                    - generic:
+                      - img "windows"
+                - generic [ref=f100e467]: Windows
+              - generic [ref=f100e468]:
+                - generic:
+                  - generic:
+                    - generic:
+                      - img "centos"
+                - generic [ref=f100e469]: Centos
+              - generic [ref=f100e470]:
+                - generic:
+                  - generic:
+                    - generic:
+                      - img "freebsd"
+                - generic [ref=f100e471]: Freebsd
+              - generic [ref=f100e472]:
+                - generic:
+                  - generic:
+                    - generic:
+                      - img "debian"
+                - generic [ref=f100e473]: Debian
+              - generic [ref=f100e474]:
+                - generic:
+                  - generic:
+                    - generic:
+                      - img "opensuse"
+                - generic [ref=f100e475]: Opensuse
+              - generic [ref=f100e476]:
+                - generic:
+                  - generic:
+                    - generic:
+                      - img "almalinux"
+                - generic [ref=f100e477]: Almalinux
+              - generic [ref=f100e478]:
+                - generic:
+                  - generic:
+                    - generic:
+                      - img "rockylinux"
+                - generic [ref=f100e479]: Rockylinux
+      - generic [ref=f100e480]:
+        - heading "The Contabo Difference" [level=2] [ref=f100e483]
+        - generic [ref=f100e484]:
+          - generic [ref=f100e485]:
+            - generic:
+              - generic:
+                - generic:
+                  - img "Contabo has the best cloud server price-to-performance because of how we select hardware, get nice discounts on purchase prices, and manage our data centers efficiently."
+            - generic [ref=f100e486]:
+              - generic [ref=f100e487]: Top Performance at Fair Prices
+              - paragraph [ref=f100e491]: Our VPS hosting plans with modern CPUs, RAM, and NVMe deliver cheap VPS options without compromise. All VPS plans come with no setup fee.
+          - generic [ref=f100e492]:
+            - generic:
+              - generic:
+                - generic:
+                  - img "Contabo's 12 data centers in the EU, USA, Singapore, and the UK give you reliable service with minimal latency and SLA-backed server availability."
+            - generic [ref=f100e493]:
+              - generic [ref=f100e494]: Global Availability
+              - paragraph [ref=f100e498]:
+                - text: Get the most out of your server wherever you are. Twelve strategic
+                - link "Locations" [ref=f100e499] [cursor=pointer]:
+                  - /url: en/locations/
+                - text: in nine global regions ensure low latency and
+                - link "SLA-backed" [ref=f100e500] [cursor=pointer]:
+                  - /url: en/legal/terms-and-conditions/
+                - text: reliability.
+          - generic [ref=f100e501]:
+            - generic:
+              - generic:
+                - generic:
+                  - img "Contabo's award-winning customer support team always strives for continuous improvement and efficiency."
+            - generic [ref=f100e502]:
+              - generic [ref=f100e503]: Support That Never Sleeps
+              - paragraph [ref=f100e507]: Round-the-clock, award-winning, English-speaking support that’s just a call or click away - plus live chat, self-help resources, and tutorial videos.
+          - generic [ref=f100e508]:
+            - generic:
+              - generic:
+                - generic:
+                  - img "Contabo maintains the highest of security precautions for each of our customers with strict RBAC rules across the entire company."
+            - generic [ref=f100e509]:
+              - generic [ref=f100e510]: Security is Our Priority
+              - paragraph [ref=f100e514]:
+                - text: We protect your data like it’s our own with
+                - link "DDoS protection" [ref=f100e515] [cursor=pointer]:
+                  - /url: en/ddos-protection/
+                - text: and strict internal procedures. As our co-founder puts it, "we are obsessed with security."
+          - generic [ref=f100e516]:
+            - generic:
+              - generic:
+                - generic:
+                  - img "Contabo has been providing high quality cloud server hosting at a value for everyone since 2003."
+            - generic [ref=f100e517]:
+              - generic [ref=f100e518]: Quality That Delivers
+              - paragraph [ref=f100e522]: Over 20 years strong and always improving, we’re committed to cloud hosting that maximizes your value without compromising on quality.
+          - generic [ref=f100e523]:
+            - generic:
+              - generic:
+                - generic:
+                  - img "Hosting Advice and CHIP Online have repeatedly recognized Contabo's excellent customer service, great uptime, and data centers’ energy efficiency."
+            - generic [ref=f100e524]:
+              - generic [ref=f100e525]: Awards and Recognitions
+              - paragraph [ref=f100e529]:
+                - text: There's a reason many of our
+                - link "awards" [ref=f100e530] [cursor=pointer]:
+                  - /url: en/about-us/#awards-in-detail
+                - text: say "Top Choice". Our ratings for superior speed, helpful customer service, and great value speak for themselves.
+      - generic [ref=f100e532]:
+        - link [ref=f100e535] [cursor=pointer]:
+          - /url: /en/gpu-cloud/#cloud-gpu-faqs
+          - heading "Frequently Asked Questions about GPU Cloud from Contabo" [level=2] [ref=f100e536]
+        - generic [ref=f100e537]:
+          - link "What is a GPU?" [ref=f100e539] [cursor=pointer]:
+            - /url: /en/gpu-cloud/#what-is-a-gpu
+          - link "What are the typical use cases for GPU Cloud?" [ref=f100e543] [cursor=pointer]:
+            - /url: /en/gpu-cloud/#what-are-the-typical-use-cases-for-gpu-cloud
+          - link "What other AI / ML capable CPUs are out there?" [ref=f100e547] [cursor=pointer]:
+            - /url: /en/gpu-cloud/#what-other-ai-ml-capable-cpus-are-out-there
+          - link "What hidden costs can I expect when I host an AI instance with Contabo?" [ref=f100e551] [cursor=pointer]:
+            - /url: /en/gpu-cloud/#what-hidden-costs-can-i-expect-when-i-host-my-ai-instance-with-contabo
+  - contentinfo [ref=f100e554]:
+    - generic [ref=f100e557]:
+      - generic [ref=f100e558]:
+        - generic [ref=f100e559]:
+          - heading "Keep in touch" [level=2] [ref=f100e560]
+          - paragraph [ref=f100e563]: Latest News and Deals from us. No spam guarantee!
+        - generic [ref=f100e565]:
+          - generic [ref=f100e566]:
+            - generic [ref=f100e567]:
+              - text: Email
+              - textbox "Email" [ref=f100e568]
+            - button "Subscribe" [ref=f100e569] [cursor=pointer]
+          - paragraph [ref=f100e573]:
+            - text: The
+            - link "privacy statement" [ref=f100e574] [cursor=pointer]:
+              - /url: en/legal/privacy/
+            - text: holds information on the involved data processing and right to withdraw consent.
+      - generic [ref=f100e576]:
+        - generic [ref=f100e577]: Follow Us
+        - generic [ref=f100e578]:
+          - link "Facebook" [ref=f100e579] [cursor=pointer]:
+            - /url: https://www.facebook.com/ContaboCom/
+            - img "Facebook" [ref=f100e580]
+          - link "Linkedin" [ref=f100e582] [cursor=pointer]:
+            - /url: https://www.linkedin.com/company/contabo-gmbh
+            - img "Linkedin" [ref=f100e583]
+          - link "X" [ref=f100e585] [cursor=pointer]:
+            - /url: https://twitter.com/contabocom
+            - img "X" [ref=f100e586]
+          - link "YouTube" [ref=f100e588] [cursor=pointer]:
+            - /url: https://www.youtube.com/c/ContaboCom
+            - img "YouTube" [ref=f100e589]
+      - generic [ref=f100e591]:
+        - generic [ref=f100e592]:
+          - generic [ref=f100e593]: Products
+          - generic [ref=f100e594]:
+            - link "Cloud VPS" [ref=f100e595] [cursor=pointer]:
+              - /url: en/vps/
+            - link "Cloud VDS (Virtual Dedicated Server)" [ref=f100e596] [cursor=pointer]:
+              - /url: en/vds/
+            - link "Dedicated Servers" [ref=f100e597] [cursor=pointer]:
+              - /url: en/dedicated-servers/
+            - link "Server Deals" [ref=f100e598] [cursor=pointer]:
+              - /url: en/server-outlet/
+            - link "Storage VPS" [ref=f100e599] [cursor=pointer]:
+              - /url: en/storage-vps/
+            - link "Private Networking" [ref=f100e600] [cursor=pointer]:
+              - /url: en/private-networking/
+            - link "Contabo API" [ref=f100e601] [cursor=pointer]:
+              - /url: en/contabo-api/
+            - link "Contabo CLI" [ref=f100e602] [cursor=pointer]:
+              - /url: en/contabo-cli/
+            - link "Custom Images" [ref=f100e603] [cursor=pointer]:
+              - /url: en/custom-images/
+            - link "Cloud-init" [ref=f100e604] [cursor=pointer]:
+              - /url: en/cloud-init/
+            - link "Domains" [ref=f100e605] [cursor=pointer]:
+              - /url: en/domains/
+            - link "Windows VPS" [ref=f100e606] [cursor=pointer]:
+              - /url: en/windows-servers-vps/
+            - link "cPanel VPS" [ref=f100e607] [cursor=pointer]:
+              - /url: en/cpanel-vps-server/
+            - link "Forex VPS" [ref=f100e608] [cursor=pointer]:
+              - /url: en/forex-vps/
+            - link "GPU Servers" [ref=f100e609] [cursor=pointer]:
+              - /url: en/gpu-cloud/
+            - link "Pricing" [ref=f100e610] [cursor=pointer]:
+              - /url: en/pricing/
+        - generic [ref=f100e611]:
+          - generic [ref=f100e612]: Solutions
+          - generic [ref=f100e613]:
+            - link "Crypto Solutions" [ref=f100e614] [cursor=pointer]:
+              - /url: en/crypto/
+            - link "cPanel" [ref=f100e615] [cursor=pointer]:
+              - /url: en/cpanel-servers/
+            - link "Plesk" [ref=f100e616] [cursor=pointer]:
+              - /url: en/plesk-servers/
+            - link "Windows" [ref=f100e617] [cursor=pointer]:
+              - /url: en/windows-licenses/
+            - link "DDoS Protection" [ref=f100e618] [cursor=pointer]:
+              - /url: en/ddos-protection/
+            - link "CI/CD Pipelines" [ref=f100e619] [cursor=pointer]:
+              - /url: en/ci-cd-pipelines/
+            - link "Database Hosting" [ref=f100e620] [cursor=pointer]:
+              - /url: en/database-hosting/
+            - link "eCommerce Hosting" [ref=f100e621] [cursor=pointer]:
+              - /url: en/ecommerce-hosting/
+            - link "Nextcloud" [ref=f100e622] [cursor=pointer]:
+              - /url: en/nextcloud-hosting/
+            - link "Self-Hosted Mail" [ref=f100e623] [cursor=pointer]:
+              - /url: en/mail-server/
+        - generic [ref=f100e624]:
+          - generic [ref=f100e625]: Locations
+          - generic [ref=f100e626]:
+            - link "Location Overview" [ref=f100e627] [cursor=pointer]:
+              - /url: en/locations/
+            - link "Europe" [ref=f100e628] [cursor=pointer]:
+              - /url: en/locations/europe/
+            - link "United Kingdom" [ref=f100e629] [cursor=pointer]:
+              - /url: en/locations/united-kingdom/
+            - link "United States" [ref=f100e630] [cursor=pointer]:
+              - /url: en/locations/united-states/
+            - link "Singapore" [ref=f100e631] [cursor=pointer]:
+              - /url: en/locations/asia-singapore/
+            - link "Japan" [ref=f100e632] [cursor=pointer]:
+              - /url: en/locations/asia-japan/
+            - link "Australia" [ref=f100e633] [cursor=pointer]:
+              - /url: en/locations/australia/
+            - link "India" [ref=f100e634] [cursor=pointer]:
+              - /url: en/locations/india/
+        - generic [ref=f100e635]:
+          - generic [ref=f100e636]: Company
+          - generic [ref=f100e637]:
+            - link "About Us" [ref=f100e638] [cursor=pointer]:
+              - /url: en/about-us/
+            - link "Sustainability" [ref=f100e639] [cursor=pointer]:
+              - /url: en/sustainability/
+            - link "Location Overview" [ref=f100e640] [cursor=pointer]:
+              - /url: en/locations/
+            - link "Join our Team" [ref=f100e641] [cursor=pointer]:
+              - /url: en/careers/
+            - link "Terms & Conditions" [ref=f100e642] [cursor=pointer]:
+              - /url: en/legal/terms-and-conditions/
+            - link "Privacy" [ref=f100e643] [cursor=pointer]:
+              - /url: en/legal/privacy/
+            - link "Legal Notice" [ref=f100e644] [cursor=pointer]:
+              - /url: en/legal/impressum/
+            - link "Affiliate Program" [ref=f100e645] [cursor=pointer]:
+              - /url: en/affiliate-program/
+            - link "Blog" [ref=f100e646] [cursor=pointer]:
+              - /url: /blog/
+        - generic [ref=f100e647]:
+          - generic [ref=f100e648]: Contact & Help
+          - generic [ref=f100e649]:
+            - link "Support" [ref=f100e650] [cursor=pointer]:
+              - /url: https://help.contabo.com/support/home
+            - link "Sales" [ref=f100e651] [cursor=pointer]:
+              - /url: en/sales/
+            - link "Tutorials" [ref=f100e652] [cursor=pointer]:
+              - /url: /blog/tutorials/
+            - link "FAQ" [ref=f100e653] [cursor=pointer]:
+              - /url: https://help.contabo.com/en/support/home
+            - link "Sitemap" [ref=f100e654] [cursor=pointer]:
+              - /url: en/sitemap/
+            - link "Server Status" [ref=f100e655] [cursor=pointer]:
+              - /url: https://contabo-status.com
+            - link "Order Status" [ref=f100e656] [cursor=pointer]:
+              - /url: en/order-status/
+            - link "Abuse" [ref=f100e657] [cursor=pointer]:
+              - /url: en/abuse/
+      - generic [ref=f100e658]:
+        - generic [ref=f100e701]:
+          - paragraph [ref=f100e707]:
+            - generic [ref=f100e708]: Privacy
+            - text: Protected
+          - paragraph [ref=f100e714]:
+            - generic [ref=f100e715]: Secure
+            - text: Checkout
+        - generic [ref=f100e716]: Cloud VPS and Bare Metal Servers for Less
+        - generic [ref=f100e718]: © Contabo 2003-2026

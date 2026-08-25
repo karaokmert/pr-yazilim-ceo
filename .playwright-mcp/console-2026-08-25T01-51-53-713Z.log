@@ -1,0 +1,2 @@
+[     392ms] [ERROR] Failed to load resource: the server responded with a status of 404 () @ https://cdn-a.raptor.digital/gtm-config/f05830f9-8bfe-4a59-892b-ac2b7876a825.js?cv=108:0
+[    6010ms] [ERROR] Failed to load resource: the server responded with a status of 400 () @ https://aplo-evnt.com/api/v1/intent_pixel/track_request?app_id=6631f1af49ed0703009671e2:0

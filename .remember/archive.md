@@ -26,3 +26,6 @@ Conducted Obsidian vault research and search-quality measures; diagnosed grep bu
 
 ## Week of 2026-08-18
 Rebuilt auth factory with 4 agents and analyzed VS Code ext (5.8k LOC) against standards, identifying critical gaps in skill binding/rule IDs (119 tables, 71% ref weight). Built fabrika-v2 (3-agent: ortak/yapici/korgoz, 9 skills); passed all tests (9/9 behavior, 72/72 mech) and audits (31 findings, 12 classes). Fixed layout/path issues, migrated ClickUp→saha-task-takibi, cleaned refs, committed 30f0248. Blocked on terminal-independent launch and SendMessage layer; numeric canon rule pending.
+
+## Week of 2026-08-20
+Analyzed VS Code agent host architecture (Copilot Pro unnecessary, reverted apiKeyHelper). Uninstalled jcode TUI agent (incompatible). Assessed ZCode and VS fork as infeasible (2.1k commits/month, no Marketplace). Pivoting toward Anthropic ext with multi-session, open-source cockpit.

@@ -1,0 +1,518 @@
+- generic [active] [ref=f58e1]:
+  - generic [ref=f58e2]:
+    - generic [ref=f58e3]:
+      - generic [ref=f58e5]:
+        - button "Skip to Header" [ref=f58e6] [cursor=pointer]
+        - button "Skip to Main Content" [ref=f58e7] [cursor=pointer]
+        - button "Skip to Footer" [ref=f58e8] [cursor=pointer]
+      - banner [ref=f58e9]:
+        - generic [ref=f58e10]:
+          - paragraph [ref=f58e14]:
+            - 'link "Now Available: Public Cloud Free Trials. Get €200 to try it for free for up to 30 days " [ref=f58e15] [cursor=pointer]':
+              - /url: https://www.leaseweb.com/en/products-services/cloud/public-cloud
+          - generic [ref=f58e17]:
+            - generic [ref=f58e20]:
+              - link [ref=f58e21] [cursor=pointer]:
+                - /url: /en/
+              - img "undefined" [ref=f58e23]
+            - generic [ref=f58e24]:
+              - generic [ref=f58e27]:
+                - link "Blog" [ref=f58e30] [cursor=pointer]:
+                  - /url: https://blog.leaseweb.com/
+                - link "Knowledge Base" [ref=f58e33] [cursor=pointer]:
+                  - /url: https://kb.leaseweb.com/
+                - link "Developer API" [ref=f58e36] [cursor=pointer]:
+                  - /url: http://developer.leaseweb.com/
+                - link "Status" [ref=f58e39] [cursor=pointer]:
+                  - /url: https://www.leasewebstatus.com/
+                - link "Customer Portal" [ref=f58e42] [cursor=pointer]:
+                  - /url: https://secure.leaseweb.com/
+              - generic [ref=f58e44]:
+                - navigation [ref=f58e47]:
+                  - list [ref=f58e49]:
+                    - listitem [ref=f58e50]:
+                      - generic [ref=f58e51]: Why Leaseweb
+                    - listitem [ref=f58e52]:
+                      - generic [ref=f58e53]: Products
+                    - listitem [ref=f58e54]:
+                      - generic [ref=f58e55]: Solutions
+                    - listitem [ref=f58e56]:
+                      - generic [ref=f58e57]: Resources
+                    - listitem [ref=f58e58]:
+                      - generic [ref=f58e59]: About Us
+                    - listitem [ref=f58e60]:
+                      - link "Videos" [ref=f58e62] [cursor=pointer]:
+                        - /url: /en/resources/videos
+                    - listitem [ref=f58e63]:
+                      - link "Contact" [ref=f58e65] [cursor=pointer]:
+                        - /url: /en/contact
+                    - listitem [ref=f58e66]:
+                      - link "Promotions" [ref=f58e68] [cursor=pointer]:
+                        - /url: /en/promotions
+                - generic [ref=f58e69] [cursor=pointer]
+                - generic [ref=f58e75] [cursor=pointer]:
+                  - text: 
+                  - generic [ref=f58e76]: EN 
+                - link "Sign in" [ref=f58e79] [cursor=pointer]:
+                  - /url: "#"
+                - link "0 items currently in your cart" [ref=f58e82] [cursor=pointer]:
+                  - /url: /en/cart
+                  - generic [ref=f58e84]: "0"
+        - text:  
+      - main [ref=f58e85]:
+        - generic [ref=f58e86]:
+          - generic [ref=f58e92]:
+            - generic [ref=f58e96]:
+              - heading "GPU Dedicated Servers" [level=1] [ref=f58e97]
+              - paragraph [ref=f58e99]: Elevate your compute power and boost your server capacity with fully customizable high-performance GPU servers.
+              - generic [ref=f58e101]:
+                - link "Get in touch" [ref=f58e104] [cursor=pointer]:
+                  - /url: /en/contact/contact-sales
+                - link "View servers" [ref=f58e107] [cursor=pointer]:
+                  - /url: /en/products-services/dedicated-servers/gpu-server#cmsitem_00115009
+            - img "gpu-pre-order-new-server-banner.png" [ref=f58e108]
+          - navigation [ref=f58e113]:
+            - list [ref=f58e115]:
+              - listitem [ref=f58e116]:
+                - link "All Featured" [ref=f58e118] [cursor=pointer]:
+                  - /url: /en/products-services/dedicated-servers
+              - listitem [ref=f58e119]:
+                - link "High Performance Server" [ref=f58e121] [cursor=pointer]:
+                  - /url: /en/products-services/dedicated-servers/high-performance-server
+              - listitem [ref=f58e122]:
+                - link "GPU Server" [ref=f58e124] [cursor=pointer]:
+                  - /url: /en/products-services/dedicated-servers/gpu-server
+              - listitem [ref=f58e125]:
+                - link "High Bandwidth Server" [ref=f58e127] [cursor=pointer]:
+                  - /url: /en/products-services/dedicated-servers/high-bandwidth-server
+              - listitem [ref=f58e128]:
+                - link "Gaming Server" [ref=f58e130] [cursor=pointer]:
+                  - /url: /en/products-services/dedicated-servers/gaming-server
+              - listitem [ref=f58e131]:
+                - link "Storage Server" [ref=f58e133] [cursor=pointer]:
+                  - /url: /en/products-services/dedicated-servers/storage-server
+              - listitem [ref=f58e134]:
+                - link "AMD Server" [ref=f58e136] [cursor=pointer]:
+                  - /url: /en/products-services/dedicated-servers/amd-server
+              - listitem [ref=f58e137]:
+                - link "Ampere Server" [ref=f58e139] [cursor=pointer]:
+                  - /url: /en/products-services/dedicated-servers/ampere-server
+          - generic [ref=f58e140]:
+            - generic [ref=f58e142]:
+              - generic [ref=f58e148]:
+                - generic [ref=f58e149]: "New: 8x GPU Dedicated Server"
+                - generic [ref=f58e150]:
+                  - paragraph [ref=f58e151]: Up to 8x NVIDIA GPUs on a single bare-metal server.H100, H200 and RTX 6000 PRO GPU cards with NVLink interconnect capability available on selected NVIDIA cards, 192 AMD EPYC cores.EU datacenters, GDPR and NIS2 compliant.
+                  - paragraph [ref=f58e152]:
+                    - link "Talk to our Sales team" [ref=f58e153] [cursor=pointer]:
+                      - /url: https://www.leaseweb.com/en/contact
+              - img "dark-blue-bg.webp" [ref=f58e154]
+            - generic [ref=f58e158]:
+              - heading "Key Benefits" [level=2] [ref=f58e159]
+              - generic [ref=f58e164]:
+                - paragraph [ref=f58e165]: Leaseweb GPU servers provide you with the raw power you need to make resource-intensive applications fly. Fully customizable high performance supported with GPU acceleration capabilities, they are ideal for AI, graphics rendering, video transcoding, or other data intensive workloads.
+                - paragraph [ref=f58e166]: Now including AI frameworks like PyTorch, TensorFlow, Scikit-learn, XGboost as well as common model libraries drivers (Hugging face, Nvidia NGC) to support your AI work.
+            - generic [ref=f58e171]:
+              - generic [ref=f58e174]:
+                - img "Leaseweb" [ref=f58e177]
+                - generic [ref=f58e178]: GPU Server benefits
+                - list [ref=f58e180]:
+                  - listitem [ref=f58e181]: Different GPU cards supported to match your use case
+                  - listitem [ref=f58e182]: Value for money – great price performance ratio
+                  - listitem [ref=f58e183]: Flexible to configure for your performance needs
+                  - listitem [ref=f58e184]: GPU support to enhance your server performance for workloads (VDI, AI, Big Data analysis, HPC)
+              - generic [ref=f58e187]:
+                - img "products.png" [ref=f58e190]
+                - generic [ref=f58e191]: Leaseweb Dedicated Servers
+                - list [ref=f58e193]:
+                  - listitem [ref=f58e194]: Versatile cards – can fit multiple use cases and workload sizes
+                  - listitem [ref=f58e195]: Immediate availability to delivery
+                  - listitem [ref=f58e196]: Flexibility with monthly contract
+                  - listitem [ref=f58e197]: Competitive price
+                  - listitem [ref=f58e198]: Integrated security and compliance
+            - generic [ref=f58e202]:
+              - heading "Find optimal GPU server solution to empower your CPU" [level=2] [ref=f58e203]
+              - generic [ref=f58e204]:
+                - generic [ref=f58e207]:
+                  - generic [ref=f58e208]: RTX PRO 6000 BSE – AI Inference & Visuals
+                  - generic [ref=f58e209]:
+                    - paragraph [ref=f58e210]: The NVIDIA RTX PRO 6000 Blackwell Server Edition is built for companies running demanding AI and visual computing workloads at scale.
+                    - list [ref=f58e211]:
+                      - listitem [ref=f58e212]: 96GB GDDR7 memory and 1,597 GB/s bandwidth for low-latency inference with larger models
+                      - listitem [ref=f58e213]: 5x LLM inference performance vs. previous generation Tensor Cores
+                      - listitem [ref=f58e214]: Multi-Instance GPU (MIG) support for concurrent AI and graphics workloads
+                    - paragraph [ref=f58e215]:
+                      - link "Configure" [ref=f58e216] [cursor=pointer]:
+                        - /url: https://www.leaseweb.com/en/c/dedicated-server?query=:relevance:allCategories:dedicated-server:pciSlot01:NVID%20RTX%20PRO%206000%20GPU
+                - generic [ref=f58e219]:
+                  - generic [ref=f58e220]: NVIDIA H100 NVL – LLMs & AI Training
+                  - generic [ref=f58e221]:
+                    - paragraph [ref=f58e222]: The NVIDIA H100 NVL is ideal for teams running large language models, computer vision, retrieval-augmented generation (RAG), and conversational AI.
+                    - list [ref=f58e223]:
+                      - listitem [ref=f58e224]: 94GB HBM3 memory powered by the Hopper architecture
+                      - listitem [ref=f58e225]: Up to 5x higher Llama 2 70B throughput vs. A100 systems
+                      - listitem [ref=f58e226]: 9x faster AI training and 30x faster inference vs. previous generation
+                  - link "Configure" [ref=f58e229] [cursor=pointer]:
+                    - /url: /en/c/dedicated-server?query=:relevance:allCategories:dedicated-server:category:gpu-server:pciSlot01:NVID%20H100%20Tensor%20Core%20GPU
+                - generic [ref=f58e232]:
+                  - generic [ref=f58e233]: High-Performance GPU - Nvidia H200 NVL
+                  - paragraph [ref=f58e235]: The Nvidia H200 NVL, designed for high scale generative AI models and HPC workloads, H200 offers 1.3x higher memory bandwidth and 1.4x larger memory than H100. NVIDIA H200 is the first GPU to offer 141GB of HBM3e memory at 4.8 TB/s —delivering faster, more efficient training and inference capabilities at scale.
+                  - link "Configure" [ref=f58e238] [cursor=pointer]:
+                    - /url: /en/c/dedicated-server?query=:relevance:allCategories:dedicated-server:category:gpu-server:pciSlot01:NVID%20H200%20Tensor%20Core%20GPU
+                - generic [ref=f58e241]:
+                  - generic [ref=f58e242]: Multi-Purpose GPU - NVIDIA L40S
+                  - paragraph [ref=f58e244]: Used for ML and smaller language model (LLM) inference and training, HPC simulations, product design, video rendering, 3D content creation, and video applications. L40S enables up to 1.2x more generative AI inference performance and up to 1.7x training performance compared with the NVIDIA A100 Tensor Core GPU.
+                  - link "Configure" [ref=f58e247] [cursor=pointer]:
+                    - /url: /en/c/dedicated-server?query=:relevance:allCategories:dedicated-server:category:gpu-server:pciSlot01:NVID%20L40S%20Tensor%20Core%20GPU
+                - generic [ref=f58e250]:
+                  - generic [ref=f58e251]: Multi-Purpose GPU - NVIDIA L4
+                  - paragraph [ref=f58e253]: Energy-efficient GPU, used for video and image rendering, ML models processing, game streaming, visual computing, graphics, virtualization, and more. L4 is the successor of T4 and delivers up to 2.5X higher performance compared to the previous GPU generation, with 50% more memory capacity.
+                  - link "Configure" [ref=f58e256] [cursor=pointer]:
+                    - /url: /en/c/dedicated-server?query=:relevance:allCategories:dedicated-server:category:gpu-server:pciSlot01:Nvidia%20L4%20Tensor%20Core%20GPU
+                - generic [ref=f58e259]:
+                  - generic [ref=f58e260]: Multi-Purpose GPU - NVIDIA Tesla T4
+                  - paragraph [ref=f58e262]: This is a powerful, scalable multi-purpose GPU card. It can be used for both compute as well as graphical rendering use cases, such as VDI. It’s also ideal for running VDI workloads by day & compute workloads by night. This GPU card fits multiple server models due to its size and low power usage.
+                  - link "Configure" [ref=f58e265] [cursor=pointer]:
+                    - /url: /en/c/dedicated-server?query=:relevance:allCategories:dedicated-server:category:gpu-server:pciSlot01:Tesla%20T4%20GPU%20card
+                - generic [ref=f58e268]:
+                  - generic [ref=f58e269]: High Performance Compute, Deep Learning / AI GPUs - NVIDIA A30 or A100
+                  - paragraph [ref=f58e271]: Offered in a selected number of double-width GPU supporting servers, this option delivers the best performance for Deep Learning and High Performance Compute applications. It provides unmatched acceleration at all scales, maximizing compute power for the most demanding AI workloads.
+                  - generic [ref=f58e272]:
+                    - link "See A30" [ref=f58e275] [cursor=pointer]:
+                      - /url: /en/c/dedicated-server?query=:relevance:allCategories:dedicated-server:category:gpu-server:pciSlot01:Nvidia%20A30%20GPU%20card
+                    - link "See A100" [ref=f58e279] [cursor=pointer]:
+                      - /url: /en/c/dedicated-server?query=:relevance:allCategories:dedicated-server:category:gpu-server:pciSlot01:Nvidia%20A100%20GPU%20card
+                - generic [ref=f58e282]:
+                  - generic [ref=f58e283]: "Multi-purpose GPU: AMD Instinct MI210"
+                  - paragraph [ref=f58e285]: The AMD Instinct™ MI210 GPU is designed to accelerate AI inference, data analytics, HPC, or scientific workloads. MI210 features 64GB RAM and 1600 GB/s bandwidth with only 300W of power consumption. MI210 provides 2.3x higher FP64 performance over Nvidia A100 GPUs, making it ideal for scientific applications. MI210 is built for mid-range AI inference workloads, providing an expanded range of mixed-precision capabilities based on the AMD Matrix Core Technology, and delivers 181 teraflops peak theoretical FP16 performance.
+                  - link "Configure" [ref=f58e288] [cursor=pointer]:
+                    - /url: /en/c/dedicated-server?query=:relevance:allCategories:dedicated-server:category:gpu-server:pciSlot01:AMD%20MI210%20GPU%20Card
+                - generic [ref=f58e291]:
+                  - generic [ref=f58e292]: VDI, Graphics Rendering & Video Transcoding – NVIDIA A40
+                  - generic [ref=f58e293]: Supported in a selected number of double-width GPU supporting servers, and designed for processing graphics. The A40 is the highest performing GPU for all your video rendering or virtual reality projects.
+            - generic [ref=f58e295]:
+              - strong [ref=f58e303]: Most popular GPU cards are in stock for fast delivery. Specific models may have longer lead times depending on demand.
+              - img "GPU servers" [ref=f58e304]
+            - generic [ref=f58e308]:
+              - heading "Featured GPU Servers" [level=2] [ref=f58e309]
+              - generic [ref=f58e310]: You need fully customizable servers that can help you accelerate your compute performance for various use cases.
+            - generic [ref=f58e316]:
+              - generic [ref=f58e319]:
+                - link "HP DL385 G11 (8SFF) 2x AMD EPYC 9334 - 2x H200 Dual AMD EPYC 9334 - 32 cores - 2,7 GHz HP DL385 G11 (8SFF) NVID H200 Tensor Core GPU Starting from Ram 128 GB Disks 2x960GB SSD MU Traffic 30 TB Delivery 5 days CA$ 4,558.37PM Excl. VAT Configure" [ref=f58e321] [cursor=pointer]:
+                  - /url: /en/configure/vc/product/entityKey/DEDSER02_NEW_ORDER_PREMIUM_DL385G11-9334-2xH200
+                  - heading "HP DL385 G11 (8SFF) 2x AMD EPYC 9334 - 2x H200" [level=3] [ref=f58e322]
+                  - generic [ref=f58e323]:
+                    - generic [ref=f58e324]:
+                      - generic [ref=f58e325]: Dual AMD EPYC 9334 - 32 cores - 2,7 GHz
+                      - generic [ref=f58e326]: HP DL385 G11 (8SFF)
+                      - generic "NVID H200 Tensor Core GPU" [ref=f58e327]
+                    - generic [ref=f58e328]:
+                      - generic [ref=f58e329]: Starting from
+                      - generic [ref=f58e331]:
+                        - generic [ref=f58e332]: Ram
+                        - generic [ref=f58e333]: 128 GB
+                      - generic [ref=f58e334]:
+                        - generic [ref=f58e335]: Disks
+                        - generic [ref=f58e336]: 2x960GB SSD MU
+                      - generic [ref=f58e337]:
+                        - generic [ref=f58e338]: Traffic
+                        - generic [ref=f58e339]: 30 TB
+                      - generic [ref=f58e340]:
+                        - generic [ref=f58e341]: Delivery
+                        - generic [ref=f58e342]: 5 days
+                  - generic [ref=f58e344]:
+                    - text: CA$ 4,558.37PM
+                    - generic [ref=f58e345]: Excl. VAT
+                  - generic [ref=f58e346]: Configure
+                - link "HP DL385 G11 (8SFF) 2x AMD EPYC 9334 - H100 Dual AMD EPYC 9334 - 32 cores - 2,7 GHz HP DL385 G11 (8SFF) NVID H100 Tensor Core GPU Starting from Ram 128 GB Disks 2x960GB SSD MU Traffic 30 TB Delivery 5 days CA$ 2,294.59PM Excl. VAT Configure" [ref=f58e349] [cursor=pointer]:
+                  - /url: /en/configure/vc/product/entityKey/DEDSER02_NEW_ORDER_PREMIUM_DL385G11-9334-H100
+                  - heading "HP DL385 G11 (8SFF) 2x AMD EPYC 9334 - H100" [level=3] [ref=f58e350]
+                  - generic [ref=f58e351]:
+                    - generic [ref=f58e352]:
+                      - generic [ref=f58e353]: Dual AMD EPYC 9334 - 32 cores - 2,7 GHz
+                      - generic [ref=f58e354]: HP DL385 G11 (8SFF)
+                      - generic "NVID H100 Tensor Core GPU" [ref=f58e355]
+                    - generic [ref=f58e356]:
+                      - generic [ref=f58e357]: Starting from
+                      - generic [ref=f58e359]:
+                        - generic [ref=f58e360]: Ram
+                        - generic [ref=f58e361]: 128 GB
+                      - generic [ref=f58e362]:
+                        - generic [ref=f58e363]: Disks
+                        - generic [ref=f58e364]: 2x960GB SSD MU
+                      - generic [ref=f58e365]:
+                        - generic [ref=f58e366]: Traffic
+                        - generic [ref=f58e367]: 30 TB
+                      - generic [ref=f58e368]:
+                        - generic [ref=f58e369]: Delivery
+                        - generic [ref=f58e370]: 5 days
+                  - generic [ref=f58e372]:
+                    - text: CA$ 2,294.59PM
+                    - generic [ref=f58e373]: Excl. VAT
+                  - generic [ref=f58e374]: Configure
+                - link "Dell R7525 (16SFF+8NVMe) 2x AMD EPYC 7413 - L40S Dual AMD EPYC 7413 - 24 cores - 2,65 GHz Dell R7525 (16SFF+8NVMe) NVID L40S Tensor Core GPU Starting from Ram 128 GB Disks 2x960GB SSD MU Traffic 30 TB Delivery  1 hour * CA$ 758.70PM Excl. VAT Configure" [ref=f58e377] [cursor=pointer]:
+                  - /url: /en/configure/vc/product/entityKey/DEDSER02_NEW_ORDER_PREMIUM_R7525-16SFF8NVME-7413-L40S
+                  - heading "Dell R7525 (16SFF+8NVMe) 2x AMD EPYC 7413 - L40S" [level=3] [ref=f58e378]
+                  - generic [ref=f58e379]:
+                    - generic [ref=f58e380]:
+                      - generic [ref=f58e381]: Dual AMD EPYC 7413 - 24 cores - 2,65 GHz
+                      - generic [ref=f58e382]: Dell R7525 (16SFF+8NVMe)
+                      - generic "NVID L40S Tensor Core GPU" [ref=f58e383]
+                    - generic [ref=f58e384]:
+                      - generic [ref=f58e385]: Starting from
+                      - generic [ref=f58e387]:
+                        - generic [ref=f58e388]: Ram
+                        - generic [ref=f58e389]: 128 GB
+                      - generic [ref=f58e390]:
+                        - generic [ref=f58e391]: Disks
+                        - generic [ref=f58e392]: 2x960GB SSD MU
+                      - generic [ref=f58e393]:
+                        - generic [ref=f58e394]: Traffic
+                        - generic [ref=f58e395]: 30 TB
+                      - generic [ref=f58e396]:
+                        - generic [ref=f58e397]: Delivery
+                        - generic [ref=f58e398]:  1 hour *
+                  - generic [ref=f58e400]:
+                    - text: CA$ 758.70PM
+                    - generic [ref=f58e401]: Excl. VAT
+                  - generic [ref=f58e402]: Configure
+                - link "Dell R750 (16SFF+8NVMe) 2x Intel Xeon 5318Y - L4 Dual Intel Xeon 5318Y - 24 cores - 2,1 GHz Dell R750 (16SFF+8NVMe) Nvidia L4 Tensor Core GPU Starting from Ram 128 GB Disks 2x960GB SSD WI Traffic 30 TB Delivery  1 hour * € 396.01PM Excl. VAT Configure" [ref=f58e405] [cursor=pointer]:
+                  - /url: /en/configure/vc/product/entityKey/DEDSER02_NEW_ORDER_BUSINESS_R750-16SFF8NVME-5318Y-L4
+                  - heading "Dell R750 (16SFF+8NVMe) 2x Intel Xeon 5318Y - L4" [level=3] [ref=f58e406]
+                  - generic [ref=f58e407]:
+                    - generic [ref=f58e408]:
+                      - generic [ref=f58e409]: Dual Intel Xeon 5318Y - 24 cores - 2,1 GHz
+                      - generic [ref=f58e410]: Dell R750 (16SFF+8NVMe)
+                      - generic "Nvidia L4 Tensor Core GPU" [ref=f58e411]
+                    - generic [ref=f58e412]:
+                      - generic [ref=f58e413]: Starting from
+                      - generic [ref=f58e415]:
+                        - generic [ref=f58e416]: Ram
+                        - generic [ref=f58e417]: 128 GB
+                      - generic [ref=f58e418]:
+                        - generic [ref=f58e419]: Disks
+                        - generic [ref=f58e420]: 2x960GB SSD WI
+                      - generic [ref=f58e421]:
+                        - generic [ref=f58e422]: Traffic
+                        - generic [ref=f58e423]: 30 TB
+                      - generic [ref=f58e424]:
+                        - generic [ref=f58e425]: Delivery
+                        - generic [ref=f58e426]:  1 hour *
+                  - generic [ref=f58e428]:
+                    - text: € 396.01PM
+                    - generic [ref=f58e429]: Excl. VAT
+                  - generic [ref=f58e430]: Configure
+              - paragraph [ref=f58e434]:
+                - text: "*If this is your first order with this Leaseweb Sales Entity, your order may take longer due to the"
+                - link "KYC customer verification." [ref=f58e435] [cursor=pointer]:
+                  - /url: /about-us/legal/know-your-customer
+            - link "View all servers" [ref=f58e446] [cursor=pointer]:
+              - /url: https://www.leaseweb.com/en/c/dedicated-server?query=:relevance:allCategories:dedicated-server:category:gpu-server
+          - generic [ref=f58e451]:
+            - heading "Included in all GPU Servers" [level=2] [ref=f58e452]
+            - generic [ref=f58e453]:
+              - generic [ref=f58e456]:
+                - img "Leaseweb" [ref=f58e459]
+                - generic [ref=f58e460]:
+                  - heading "GPU Selection" [level=3] [ref=f58e461]
+                  - paragraph [ref=f58e462]: Select the right GPU for your use case and workload. Servers are configurable for your specific speed and size needs.
+              - generic [ref=f58e465]:
+                - generic [ref=f58e467]:
+                  - img "flexible config.png"
+                - generic [ref=f58e468]:
+                  - heading "Flexible Configuration" [level=3] [ref=f58e469]
+                  - paragraph [ref=f58e470]: Our Dedicated GPU servers are configurable to your specific needs.
+              - generic [ref=f58e473]:
+                - generic [ref=f58e475]:
+                  - img "Pricing_0.png"
+                - generic [ref=f58e476]:
+                  - heading "Best Buy GPU Servers" [level=3] [ref=f58e477]
+                  - paragraph [ref=f58e478]: High performance with GPU acceleration does not have to mean high price. We offer affordable options with a strong price/performance ratio.
+              - generic [ref=f58e481]:
+                - generic [ref=f58e483]:
+                  - img "Availability_2.png"
+                - generic [ref=f58e484]:
+                  - heading "High Availability" [level=3] [ref=f58e485]
+                  - paragraph [ref=f58e486]: High bandwidth connectivity options combined with a redundant low latency network results in high availability of your GPU processed data and graphics.
+          - generic [ref=f58e491]:
+            - heading "Ideal for usage in:" [level=2] [ref=f58e492]
+            - generic [ref=f58e493]:
+              - generic [ref=f58e496]:
+                - generic [ref=f58e498]:
+                  - img "artificial Intelligence.png"
+                - generic [ref=f58e499]: AI & Machine Learning (ML)
+                - paragraph [ref=f58e501]: Modern GPUs are built to handle the intensive computations required for AI and ML, making them perfect for tasks like natural language processing, recommendation systems, and predictive analytics. They significantly reduce model training times and accelerate real-time inference, allowing data scientists to work with complex models and achieve faster, more precise results, ultimately driving better decision-making.
+              - generic [ref=f58e504]:
+                - generic [ref=f58e506]:
+                  - img "VDI.png"
+                - generic [ref=f58e507]: Virtual Desktop Infrastructure (VDI)
+                - paragraph [ref=f58e509]: Empower Virtual Desktop Infrastructure by delivering the graphics and computational performance needed to run demanding applications remotely. With powerful graphics rendering and smooth, lag-free processing, these GPUs enable remote users to work with complex applications seamlessly, creating a high-performance experience that feels like working on a local machine.
+              - generic [ref=f58e512]:
+                - generic [ref=f58e514]:
+                  - img "Virtual Reality.png"
+                - generic [ref=f58e515]: Video Transcoding and Rendering
+                - paragraph [ref=f58e517]: Optimized for media workflows, GPUs excel at high-speed video transcoding and rendering, making them ideal for content creation, streaming, and real-time video applications. Their accelerated encoding and decoding capabilities ensure efficient processing of high-definition media, reducing latency and enabling smooth playback, even at high resolutions and frame rates.
+              - generic [ref=f58e520]:
+                - generic [ref=f58e522]:
+                  - img "Transcoding_0.png"
+                - generic [ref=f58e523]: Data Analytics
+                - paragraph [ref=f58e525]: Provide the computational power to process and analyze vast datasets quickly, revealing valuable insights in real time. The GPUs parallel processing capabilities are ideal for handling complex analytical workloads, enabling businesses to identify trends, optimize processes, and make data-driven decisions faster than ever.
+          - generic [ref=f58e531]:
+            - heading "Dedicated Server Partners" [level=2] [ref=f58e533]
+            - generic [ref=f58e540] [cursor=pointer]:
+              - img "Leaseweb"
+            - generic [ref=f58e547] [cursor=pointer]:
+              - img "Leaseweb"
+            - generic [ref=f58e554] [cursor=pointer]:
+              - img "ampere_logo_®_primary_stacked_rgb.png"
+            - generic [ref=f58e561] [cursor=pointer]:
+              - img "Leaseweb"
+            - generic [ref=f58e568] [cursor=pointer]:
+              - img "Leaseweb"
+            - generic [ref=f58e575] [cursor=pointer]:
+              - img "Leaseweb"
+            - generic [ref=f58e582] [cursor=pointer]:
+              - img "Leaseweb"
+            - link "Learn more" [ref=f58e585] [cursor=pointer]:
+              - /url: /en/products-services/dedicated-servers/technology-partners
+          - generic [ref=f58e590]:
+            - heading "Get started today!" [level=2] [ref=f58e591]
+            - paragraph [ref=f58e592]:
+              - button "Start Live Chat" [ref=f58e593] [cursor=pointer]
+              - button "Email Us" [ref=f58e594] [cursor=pointer]
+            - paragraph [ref=f58e595]:
+              - text: Or
+              - link [ref=f58e596] [cursor=pointer]:
+                - /url: /en/contact
+                - strong [ref=f58e597]: click here
+              - text: to see our full list of contact options.
+      - contentinfo [ref=f58e598]:
+        - generic [ref=f58e600]:
+          - generic [ref=f58e601]:
+            - navigation "Footer links" [ref=f58e606]:
+              - heading "Links" [level=4] [ref=f58e607]
+              - list "Links" [ref=f58e609]:
+                - listitem [ref=f58e610]:
+                  - link "Customer Portal. 1 of 6" [ref=f58e612] [cursor=pointer]:
+                    - /url: https://secure.leaseweb.com
+                    - text: Customer Portal
+                - listitem [ref=f58e613]:
+                  - link "Status. 2 of 6" [ref=f58e615] [cursor=pointer]:
+                    - /url: https://www.leasewebstatus.com/
+                    - text: Status
+                - listitem [ref=f58e616]:
+                  - link "Leaseweb Blog. 3 of 6" [ref=f58e618] [cursor=pointer]:
+                    - /url: http://blog.leaseweb.com/
+                    - text: Leaseweb Blog
+                - listitem [ref=f58e619]:
+                  - link "Knowledge Base. 4 of 6" [ref=f58e621] [cursor=pointer]:
+                    - /url: https://kb.leaseweb.com/
+                    - text: Knowledge Base
+                - listitem [ref=f58e622]:
+                  - link "API Documentation. 5 of 6" [ref=f58e624] [cursor=pointer]:
+                    - /url: http://developer.leaseweb.com/
+                    - text: API Documentation
+                - listitem [ref=f58e625]:
+                  - link "Leaseweb Labs. 6 of 6" [ref=f58e627] [cursor=pointer]:
+                    - /url: https://labs.leaseweb.com/
+                    - text: Leaseweb Labs
+              - heading "About Leaseweb" [level=4] [ref=f58e628]
+              - list "About Leaseweb" [ref=f58e630]:
+                - listitem [ref=f58e631]:
+                  - link "Our Story. 1 of 5" [ref=f58e633] [cursor=pointer]:
+                    - /url: /en/about-us
+                    - text: Our Story
+                - listitem [ref=f58e634]:
+                  - link "Careers. 2 of 5" [ref=f58e636] [cursor=pointer]:
+                    - /url: /en/about-us/career
+                    - text: Careers
+                - listitem [ref=f58e637]:
+                  - link "Press Releases. 3 of 5" [ref=f58e639] [cursor=pointer]:
+                    - /url: /en/press/releases
+                    - text: Press Releases
+                - listitem [ref=f58e640]:
+                  - link "Events. 4 of 5" [ref=f58e642] [cursor=pointer]:
+                    - /url: /en/about-us/events
+                    - text: Events
+                - listitem [ref=f58e643]:
+                  - link "Contact. 5 of 5" [ref=f58e645] [cursor=pointer]:
+                    - /url: /en/contact
+                    - text: Contact
+              - heading "Legal & Compliance" [level=4] [ref=f58e646]
+              - list "Legal & Compliance" [ref=f58e648]:
+                - listitem [ref=f58e649]:
+                  - link "General. 1 of 7" [ref=f58e651] [cursor=pointer]:
+                    - /url: /en/about-us/legal
+                    - text: General
+                - listitem [ref=f58e652]:
+                  - link "Sales Contract. 2 of 7" [ref=f58e654] [cursor=pointer]:
+                    - /url: /en/about-us/legal/sales-contract
+                    - text: Sales Contract
+                - listitem [ref=f58e655]:
+                  - link "Privacy and Personal Data Protection. 3 of 7" [ref=f58e657] [cursor=pointer]:
+                    - /url: /en/about-us/legal/personal-data-protection-acts
+                    - text: Privacy and Personal Data Protection
+                - listitem [ref=f58e658]:
+                  - link "Abuse Handling & Transparancy Reports. 4 of 7" [ref=f58e660] [cursor=pointer]:
+                    - /url: /en/about-us/legal/abuse-handling
+                    - text: Abuse Handling & Transparancy Reports
+                - listitem [ref=f58e661]:
+                  - link "KYC Customer Verification. 5 of 7" [ref=f58e663] [cursor=pointer]:
+                    - /url: /en/about-us/legal/know-your-customer
+                    - text: KYC Customer Verification
+                - listitem [ref=f58e664]:
+                  - link "Website Terms of Use & Cookie Statement. 6 of 7" [ref=f58e666] [cursor=pointer]:
+                    - /url: /en/about-us/legal/website-terms-of-use-cookie-statement
+                    - text: Website Terms of Use & Cookie Statement
+                - listitem [ref=f58e667]:
+                  - link "Impressum. 7 of 7" [ref=f58e669] [cursor=pointer]:
+                    - /url: /en/about-us/legal/impressum
+                    - text: Impressum
+            - paragraph [ref=f58e671]: ©2026 Leaseweb. All Rights Reserved.
+          - generic [ref=f58e675]:
+            - generic [ref=f58e676]:
+              - generic [ref=f58e677]: Sign up for our newsletter
+              - generic [ref=f58e678]:
+                - generic [ref=f58e679]: Stay up to date with the latest news about Leaseweb solutions, events, special offers and more by subscribing to our monthly newsletter.
+                - generic [ref=f58e681]:
+                  - group [ref=f58e682]:
+                    - generic [ref=f58e683]:
+                      - generic [ref=f58e684]: First name*
+                      - textbox "First name*" [ref=f58e686]:
+                        - /placeholder: ""
+                    - generic [ref=f58e687]:
+                      - generic [ref=f58e688]: Business Email Address*
+                      - textbox "Business Email Address*" [ref=f58e690]:
+                        - /placeholder: ""
+                  - group [ref=f58e691]:
+                    - list [ref=f58e697]:
+                      - listitem [ref=f58e698]:
+                        - generic [ref=f58e699]:
+                          - checkbox "Consent is given to receive marketing communications from Leaseweb, including offers and product updates. Unsubscribing is possible at any time.*" [ref=f58e700] [cursor=pointer]
+                          - generic [ref=f58e701]:
+                            - paragraph [ref=f58e702]: Consent is given to receive marketing communications from Leaseweb, including offers and product updates. Unsubscribing is possible at any time.
+                            - text: "*"
+                  - button "Submit" [ref=f58e705] [cursor=pointer]
+            - generic [ref=f58e706]:
+              - generic [ref=f58e707]: Visit/Follow us
+              - list [ref=f58e710]:
+                - listitem [ref=f58e711]:
+                  - link "Facebook" [ref=f58e712] [cursor=pointer]:
+                    - /url: http://www.facebook.com/leaseweb
+                - listitem [ref=f58e714]:
+                  - link "Twitter" [ref=f58e715] [cursor=pointer]:
+                    - /url: http://www.twitter.com/leaseweb
+                - listitem [ref=f58e717]:
+                  - link "LinkedIn" [ref=f58e718] [cursor=pointer]:
+                    - /url: http://www.linkedin.com/company/242620
+                - listitem [ref=f58e720]:
+                  - link "YouTube" [ref=f58e721] [cursor=pointer]:
+                    - /url: https://www.youtube.com/user/LeaseWeb
+    - generic: Scroll to top
+  - iframe [ref=f58e725]:
+    
+  - status [ref=f58e726]
+  - generic [ref=f58e727]:
+    - button "Live Chat" [ref=f58e728] [cursor=pointer]
+    - iframe [ref=f58e729]:
+      - img "Button" [ref=f67e4] [cursor=pointer]

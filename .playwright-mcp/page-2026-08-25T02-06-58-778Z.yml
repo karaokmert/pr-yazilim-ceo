@@ -1,0 +1,1272 @@
+- generic [active] [ref=f10e1]:
+  - link "Skip to main content" [ref=f10e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - generic [ref=f10e3]:
+    - generic [ref=f10e4]:
+      - generic [ref=f10e5]:
+        - banner [ref=f10e6]:
+          - navigation [ref=f10e7]:
+            - generic [ref=f10e8]:
+              - generic [ref=f10e9]:
+                - link [ref=f10e11] [cursor=pointer]:
+                  - /url: https://www.ovhcloud.com/en-ie/
+                - menubar [ref=f10e15]:
+                  - text: 
+                  - menuitem "My customer account" [ref=f10e16] [cursor=pointer]
+                  - menuitem "Contact Sales" [ref=f10e22] [cursor=pointer]
+                  - menuitem "Support" [ref=f10e24] [cursor=pointer]
+                  - listitem [ref=f10e26]:
+                    - button [ref=f10e28] [cursor=pointer]:
+                      - img "en-ie flag" [ref=f10e29]
+                - text: 
+              - text: 
+        - complementary [ref=f10e30]:
+          - generic [ref=f10e33]:
+            - text:  
+            - navigation "Main baremetal menu" [ref=f10e34]:
+              - tablist [ref=f10e36]:
+                - link "Home" [ref=f10e37] [cursor=pointer]:
+                  - /url: /en-ie/
+                  - generic [ref=f10e38]: 
+                - link "Dedicated servers" [ref=f10e41] [cursor=pointer]:
+                  - /url: https://www.ovhcloud.com/en-ie/bare-metal/prices/
+                - link "VPS" [ref=f10e43] [cursor=pointer]:
+                  - /url: https://www.ovhcloud.com/en-ie/vps/
+                - link "Storage & Backup" [ref=f10e45] [cursor=pointer]:
+                  - /url: https://www.ovhcloud.com/en-ie/storage-solutions/
+                - link "Network" [ref=f10e47] [cursor=pointer]:
+                  - /url: https://www.ovhcloud.com/en-ie/network/
+                - link "Security & Identity" [ref=f10e49] [cursor=pointer]:
+                  - /url: https://www.ovhcloud.com/en-ie/identity-security-operations/
+                - generic [ref=f10e51]: Operations
+            - text:                                                                  
+      - main [ref=f10e53]:
+        - generic [ref=f10e54]:
+          - generic [ref=f10e55]:
+            - article [ref=f10e57]:
+              - generic [ref=f10e58]:
+                - generic [ref=f10e61]:
+                  - generic [ref=f10e62]:
+                    - heading "OVHcloud Full Dedicated Server Range" [level=1] [ref=f10e64]
+                    - separator [ref=f10e66]
+                    - navigation [ref=f10e68]:
+                      - list [ref=f10e69]:
+                        - listitem [ref=f10e70]:
+                          - link "Homepage OVHcloud Ireland" [ref=f10e71] [cursor=pointer]:
+                            - /url: https://www.ovhcloud.com/en-ie/
+                            - text: 
+                        - listitem [ref=f10e72]:
+                          - link "Dedicated Servers" [ref=f10e73] [cursor=pointer]:
+                            - /url: https://www.ovhcloud.com/en-ie/bare-metal/
+                        - listitem [ref=f10e74]: OVHcloud Full Dedicated Server Range
+                  - generic [ref=f10e76]:
+                    - generic [ref=f10e78]:
+                      - heading "OVHcloud Full Dedicated Server Range" [level=2] [ref=f10e80]
+                      - paragraph [ref=f10e82]: Select the specifications you require and complete your server order in a few clicks.
+                    - img "ovhcloud_dedicated_server" [ref=f10e86]
+                - generic [ref=f10e91]:
+                  - generic [ref=f10e96]:
+                    - generic:
+                      - search:
+                        - generic:
+                          - generic:
+                            - button "Region"
+                          - generic:
+                            - button "Range"
+                          - generic:
+                            - button "Hardware"
+                          - generic:
+                            - button "Network"
+                          - generic:
+                            - button "Price"
+                          - generic:
+                            - button "Use Cases"
+                          - generic:
+                            - button "OS Available"
+                        - generic:
+                          - generic:
+                            - generic:
+                              - button ""
+                            - generic:
+                              - button ""
+                          - generic:
+                            - generic:
+                              - generic: Sort by
+                              - generic:
+                                - generic:
+                                  - combobox:
+                                    - option "Ascending price" [selected]
+                                    - option "Descending price"
+                                - generic:
+                                  - generic: Ascending price
+                                  - generic: 
+                                - textbox
+                  - generic [ref=f10e103]:
+                    - generic [ref=f10e104]:
+                      - columnheader "Name" [ref=f10e105]
+                      - columnheader "CPU" [ref=f10e107]
+                      - columnheader "RAM" [ref=f10e109]
+                      - columnheader "Storage" [ref=f10e111]
+                      - columnheader "Bandwidth" [ref=f10e113]
+                      - columnheader "Price ex. VAT/month (From)" [ref=f10e115]:
+                        - generic [ref=f10e116]: Price ex. VAT/month
+                        - generic [ref=f10e117]: (From)
+                      - columnheader "Compare" [ref=f10e118]
+                    - generic [ref=f10e120]:
+                      - generic [ref=f10e121]:
+                        - text: ": : : : : : : : : :"
+                        - row [ref=f10e122]:
+                          - generic [ref=f10e123]:
+                            - cell "Name RISE-S" [ref=f10e124] [cursor=pointer]:
+                              - generic [ref=f10e127]:
+                                - generic [ref=f10e128]: Name
+                                - generic [ref=f10e129]: RISE-S
+                            - 'cell "CPU CPU: AMD Ryzen 7 9700X 8 c / 16 t 3.8 GHz / 5.5 GHz" [ref=f10e132] [cursor=pointer]':
+                              - generic [ref=f10e133]: CPU
+                              - generic [ref=f10e134]:
+                                - generic [ref=f10e136]:
+                                  - text: "CPU:"
+                                  - strong [ref=f10e138]:
+                                    - generic [ref=f10e139]: AMD Ryzen 7 9700X 8 c / 16 t 3.8 GHz / 5.5 GHz
+                                - text: ":"
+                            - cell "RAM 64 GB" [ref=f10e140] [cursor=pointer]:
+                              - generic [ref=f10e141]: RAM
+                              - strong [ref=f10e145]:
+                                - generic [ref=f10e146]: 64 GB
+                            - cell "Storage 2 x 512 GB" [ref=f10e147] [cursor=pointer]:
+                              - generic [ref=f10e148]: Storage
+                              - strong [ref=f10e152]:
+                                - generic [ref=f10e153]: 2 x 512 GB
+                            - 'cell "Bandwidth Public: 1 Gbps" [ref=f10e154] [cursor=pointer]':
+                              - generic [ref=f10e155]: Bandwidth
+                              - generic [ref=f10e156]:
+                                - generic [ref=f10e158]:
+                                  - text: "Public:"
+                                  - strong [ref=f10e160]: 1 Gbps
+                                - text: ":"
+                                - generic:
+                                  - generic:
+                                    - generic:
+                                      - strong
+                            - 'cell "Price €64.99 Installation fees: €64.99" [ref=f10e161] [cursor=pointer]':
+                              - generic [ref=f10e162]: Price
+                              - generic [ref=f10e164]:
+                                - generic [ref=f10e165]: €64.99
+                                - generic [ref=f10e168]:
+                                  - text: "Installation fees:"
+                                  - generic [ref=f10e169]: €64.99
+                            - cell "Compare" [ref=f10e170]:
+                              - generic [ref=f10e173]:
+                                - checkbox
+                                - generic [ref=f10e174] [cursor=pointer]
+                            - cell [ref=f10e175]:
+                              - link "Configure" [ref=f10e178] [cursor=pointer]:
+                                - /url: https://eco.ovhcloud.com/en-ie/rise/rise-s/
+                      - generic [ref=f10e181]:
+                        - text: ": : : : : : : : : : : :"
+                        - row [ref=f10e182]:
+                          - generic [ref=f10e183]:
+                            - cell "Name RISE-M" [ref=f10e184] [cursor=pointer]:
+                              - generic [ref=f10e187]:
+                                - generic [ref=f10e188]: Name
+                                - generic [ref=f10e189]: RISE-M
+                            - 'cell "CPU CPU: AMD RYZEN 9 9900X 12 c / 24 t 4.4 GHz / 5.6 GHz" [ref=f10e192] [cursor=pointer]':
+                              - generic [ref=f10e193]: CPU
+                              - generic [ref=f10e194]:
+                                - generic [ref=f10e196]:
+                                  - text: "CPU:"
+                                  - strong [ref=f10e198]:
+                                    - generic [ref=f10e199]: AMD RYZEN 9 9900X 12 c / 24 t 4.4 GHz / 5.6 GHz
+                                - text: ":"
+                            - cell "RAM 64 GB" [ref=f10e200] [cursor=pointer]:
+                              - generic [ref=f10e201]: RAM
+                              - strong [ref=f10e205]:
+                                - generic [ref=f10e206]: 64 GB
+                            - cell "Storage 2 x 512 GB" [ref=f10e207] [cursor=pointer]:
+                              - generic [ref=f10e208]: Storage
+                              - strong [ref=f10e212]:
+                                - generic [ref=f10e213]: 2 x 512 GB
+                            - 'cell "Bandwidth Public: 1 Gbps Private: 1 Gbps" [ref=f10e214] [cursor=pointer]':
+                              - generic [ref=f10e215]: Bandwidth
+                              - generic [ref=f10e216]:
+                                - generic [ref=f10e218]:
+                                  - text: "Public:"
+                                  - strong [ref=f10e220]: 1 Gbps
+                                - text: ":"
+                                - generic [ref=f10e222]:
+                                  - text: "Private:"
+                                  - strong [ref=f10e224]: 1 Gbps
+                                - text: ":"
+                            - 'cell "Price €99.99 Installation fees: €99.99" [ref=f10e225] [cursor=pointer]':
+                              - generic [ref=f10e226]: Price
+                              - generic [ref=f10e228]:
+                                - generic [ref=f10e229]: €99.99
+                                - generic [ref=f10e232]:
+                                  - text: "Installation fees:"
+                                  - generic [ref=f10e233]: €99.99
+                            - cell "Compare" [ref=f10e234]:
+                              - generic [ref=f10e237]:
+                                - checkbox
+                                - generic [ref=f10e238] [cursor=pointer]
+                            - cell [ref=f10e239]:
+                              - link "Configure" [ref=f10e242] [cursor=pointer]:
+                                - /url: https://eco.ovhcloud.com/en-ie/rise/rise-m/
+                      - generic [ref=f10e245]:
+                        - text: ": : : : : : : : : : : :"
+                        - row [ref=f10e246]:
+                          - generic [ref=f10e247]:
+                            - cell "Name RISE-L" [ref=f10e248] [cursor=pointer]:
+                              - generic [ref=f10e251]:
+                                - generic [ref=f10e252]: Name
+                                - generic [ref=f10e253]: RISE-L
+                            - 'cell "CPU CPU: AMD RYZEN 9 9950X 16 c / 32 t 4.3 GHz / 5.7 GHz" [ref=f10e256] [cursor=pointer]':
+                              - generic [ref=f10e257]: CPU
+                              - generic [ref=f10e258]:
+                                - generic [ref=f10e260]:
+                                  - text: "CPU:"
+                                  - strong [ref=f10e262]:
+                                    - generic [ref=f10e263]: AMD RYZEN 9 9950X 16 c / 32 t 4.3 GHz / 5.7 GHz
+                                - text: ":"
+                            - cell "RAM 128 GB" [ref=f10e264] [cursor=pointer]:
+                              - generic [ref=f10e265]: RAM
+                              - strong [ref=f10e269]:
+                                - generic [ref=f10e270]: 128 GB
+                            - cell "Storage 2 x 960 GB" [ref=f10e271] [cursor=pointer]:
+                              - generic [ref=f10e272]: Storage
+                              - strong [ref=f10e276]:
+                                - generic [ref=f10e277]: 2 x 960 GB
+                            - 'cell "Bandwidth Public: 1 Gbps Private: 1 Gbps" [ref=f10e278] [cursor=pointer]':
+                              - generic [ref=f10e279]: Bandwidth
+                              - generic [ref=f10e280]:
+                                - generic [ref=f10e282]:
+                                  - text: "Public:"
+                                  - strong [ref=f10e284]: 1 Gbps
+                                - text: ":"
+                                - generic [ref=f10e286]:
+                                  - text: "Private:"
+                                  - strong [ref=f10e288]: 1 Gbps
+                                - text: ":"
+                            - 'cell "Price €149.99 Installation fees: €149.99" [ref=f10e289] [cursor=pointer]':
+                              - generic [ref=f10e290]: Price
+                              - generic [ref=f10e292]:
+                                - generic [ref=f10e293]: €149.99
+                                - generic [ref=f10e296]:
+                                  - text: "Installation fees:"
+                                  - generic [ref=f10e297]: €149.99
+                            - cell "Compare" [ref=f10e298]:
+                              - generic [ref=f10e301]:
+                                - checkbox
+                                - generic [ref=f10e302] [cursor=pointer]
+                            - cell [ref=f10e303]:
+                              - link "Configure" [ref=f10e306] [cursor=pointer]:
+                                - /url: https://eco.ovhcloud.com/en-ie/rise/rise-l/
+                      - generic [ref=f10e309]:
+                        - text: ": : : : : : : : : : : :"
+                        - row [ref=f10e310]:
+                          - generic [ref=f10e311]:
+                            - cell "Name RISE-XL New" [ref=f10e312] [cursor=pointer]:
+                              - generic [ref=f10e315]:
+                                - generic [ref=f10e316]: Name
+                                - generic [ref=f10e317]:
+                                  - generic [ref=f10e318]: RISE-XL
+                                  - generic [ref=f10e320]: New
+                            - 'cell "CPU CPU: AMD EPYC TURIN 9455 48 c / 96 t 3.15 GHz / 4.4 GHz" [ref=f10e326] [cursor=pointer]':
+                              - generic [ref=f10e327]: CPU
+                              - generic [ref=f10e328]:
+                                - generic [ref=f10e330]:
+                                  - text: "CPU:"
+                                  - strong [ref=f10e332]:
+                                    - generic [ref=f10e333]: AMD EPYC TURIN 9455 48 c / 96 t 3.15 GHz / 4.4 GHz
+                                - text: ":"
+                            - cell "RAM 128 GB" [ref=f10e334] [cursor=pointer]:
+                              - generic [ref=f10e335]: RAM
+                              - strong [ref=f10e339]:
+                                - generic [ref=f10e340]: 128 GB
+                            - cell "Storage 2 x 1.92 TB" [ref=f10e341] [cursor=pointer]:
+                              - generic [ref=f10e342]: Storage
+                              - strong [ref=f10e346]:
+                                - generic [ref=f10e347]: 2 x 1.92 TB
+                            - 'cell "Bandwidth Public: 1 Gbps - 3 Gbps Private: 1 Gbps - 2 Gbps" [ref=f10e348] [cursor=pointer]':
+                              - generic [ref=f10e349]: Bandwidth
+                              - generic [ref=f10e350]:
+                                - generic [ref=f10e352]:
+                                  - text: "Public:"
+                                  - strong [ref=f10e354]: 1 Gbps - 3 Gbps
+                                - text: ":"
+                                - generic [ref=f10e356]:
+                                  - text: "Private:"
+                                  - strong [ref=f10e358]: 1 Gbps - 2 Gbps
+                                - text: ":"
+                            - 'cell "Price €299.99 Installation fees: €299.99" [ref=f10e359] [cursor=pointer]':
+                              - generic [ref=f10e360]: Price
+                              - generic [ref=f10e362]:
+                                - generic [ref=f10e363]: €299.99
+                                - generic [ref=f10e366]:
+                                  - text: "Installation fees:"
+                                  - generic [ref=f10e367]: €299.99
+                            - cell "Compare" [ref=f10e368]:
+                              - generic [ref=f10e371]:
+                                - checkbox
+                                - generic [ref=f10e372] [cursor=pointer]
+                            - cell [ref=f10e373]:
+                              - link "Configure" [ref=f10e376] [cursor=pointer]:
+                                - /url: https://eco.ovhcloud.com/en-ie/rise/rise-xl/
+                    - button "Show more servers" [ref=f10e381] [cursor=pointer]
+                  - generic [ref=f10e389]:
+                    - text: ": : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : :"
+                    - generic [ref=f10e390]:
+                      - group [ref=f10e393]:
+                        - heading "Advance" [level=3] [ref=f10e395] [cursor=pointer]
+                        - generic [ref=f10e398]:
+                          - table [ref=f10e399]:
+                            - generic [ref=f10e400]:
+                              - paragraph [ref=f10e402]:
+                                - text: Versatile servers for small and medium businesses.
+                                - link "Discover the Advance range " [ref=f10e403] [cursor=pointer]:
+                                  - /url: https://www.ovhcloud.com/en-ie/bare-metal/advance/
+                              - button "Open all" [ref=f10e406] [cursor=pointer]
+                            - generic [ref=f10e412]:
+                              - columnheader "Name" [ref=f10e413]
+                              - columnheader "CPU" [ref=f10e415]
+                              - columnheader "RAM" [ref=f10e417]
+                              - columnheader "Storage" [ref=f10e419]
+                              - columnheader "Bandwidth" [ref=f10e421]
+                              - columnheader "Price ex. VAT/month (From)" [ref=f10e423]:
+                                - generic [ref=f10e424]: Price ex. VAT/month
+                                - generic [ref=f10e425]: (From)
+                              - columnheader "Compare" [ref=f10e426]
+                            - generic [ref=f10e428]:
+                              - generic [ref=f10e429]:
+                                - text: ": : : : : : : : : : : : : : : : : : : : : : : : : : : : : :"
+                                - row [ref=f10e430]:
+                                  - generic [ref=f10e431]:
+                                    - cell "Name Advance-3 2024" [ref=f10e432] [cursor=pointer]:
+                                      - generic [ref=f10e435]:
+                                        - generic [ref=f10e436]: Name
+                                        - generic [ref=f10e437]:
+                                          - generic [ref=f10e438]: Advance-3
+                                          - generic [ref=f10e440]: "2024"
+                                    - 'cell "CPU CPU: AMD EPYC 4464P 12 c / 24 t 3.7 GHz / 5.4 GHz" [ref=f10e441] [cursor=pointer]':
+                                      - generic [ref=f10e442]: CPU
+                                      - generic [ref=f10e443]:
+                                        - generic [ref=f10e445]:
+                                          - text: "CPU:"
+                                          - strong [ref=f10e447]:
+                                            - generic [ref=f10e448]: AMD EPYC 4464P 12 c / 24 t 3.7 GHz / 5.4 GHz
+                                        - text: ": : : :"
+                                    - cell "RAM 64 GB to 192 GB" [ref=f10e449] [cursor=pointer]:
+                                      - generic [ref=f10e450]: RAM
+                                      - strong [ref=f10e454]:
+                                        - generic [ref=f10e455]: 64 GB to 192 GB
+                                    - cell "Storage 2 x 960 GB - 4 x 7.68 TB" [ref=f10e456] [cursor=pointer]:
+                                      - generic [ref=f10e457]: Storage
+                                      - strong [ref=f10e461]:
+                                        - generic [ref=f10e462]: 2 x 960 GB - 4 x 7.68 TB
+                                    - 'cell "Bandwidth Public: 1 Gbps - 5 Gbps Private: 25 Gbps" [ref=f10e463] [cursor=pointer]':
+                                      - generic [ref=f10e464]: Bandwidth
+                                      - generic [ref=f10e465]:
+                                        - generic [ref=f10e467]:
+                                          - text: "Public:"
+                                          - strong [ref=f10e469]: 1 Gbps - 5 Gbps
+                                        - text: ": : : :"
+                                        - generic [ref=f10e471]:
+                                          - text: "Private:"
+                                          - strong [ref=f10e473]: 25 Gbps
+                                        - text: ": : : :"
+                                    - 'cell "Price €199.99 Installation fees: €199.99" [ref=f10e474] [cursor=pointer]':
+                                      - generic [ref=f10e475]: Price
+                                      - generic [ref=f10e477]:
+                                        - generic [ref=f10e478]: €199.99
+                                        - generic [ref=f10e481]:
+                                          - text: "Installation fees:"
+                                          - generic [ref=f10e482]: €199.99
+                                    - cell "Compare" [ref=f10e483]:
+                                      - generic [ref=f10e486]:
+                                        - checkbox
+                                        - generic [ref=f10e487] [cursor=pointer]
+                                    - cell [ref=f10e488]:
+                                      - link "Configure" [ref=f10e491] [cursor=pointer]:
+                                        - /url: https://www.ovhcloud.com/en-ie/bare-metal/advance/adv-3/
+                              - generic [ref=f10e494]:
+                                - text: ": : : : : : : : : : : : : : : : : : : : : : : : : : : : : :"
+                                - row [ref=f10e495]:
+                                  - generic [ref=f10e496]:
+                                    - cell "Name Advance-1 2024" [ref=f10e497] [cursor=pointer]:
+                                      - generic [ref=f10e500]:
+                                        - generic [ref=f10e501]: Name
+                                        - generic [ref=f10e502]:
+                                          - generic [ref=f10e503]: Advance-1
+                                          - generic [ref=f10e505]: "2024"
+                                    - 'cell "CPU CPU: AMD EPYC 4244P 6 c / 12 t 3.8 GHz / 5.1 GHz" [ref=f10e506] [cursor=pointer]':
+                                      - generic [ref=f10e507]: CPU
+                                      - generic [ref=f10e508]:
+                                        - generic [ref=f10e510]:
+                                          - text: "CPU:"
+                                          - strong [ref=f10e512]:
+                                            - generic [ref=f10e513]: AMD EPYC 4244P 6 c / 12 t 3.8 GHz / 5.1 GHz
+                                        - text: ": : : :"
+                                    - cell "RAM 32 GB to 192 GB" [ref=f10e514] [cursor=pointer]:
+                                      - generic [ref=f10e515]: RAM
+                                      - strong [ref=f10e519]:
+                                        - generic [ref=f10e520]: 32 GB to 192 GB
+                                    - cell "Storage 2 x 960 GB - 4 x 7.68 TB" [ref=f10e521] [cursor=pointer]:
+                                      - generic [ref=f10e522]: Storage
+                                      - strong [ref=f10e526]:
+                                        - generic [ref=f10e527]: 2 x 960 GB - 4 x 7.68 TB
+                                    - 'cell "Bandwidth Public: 1 Gbps - 5 Gbps Private: 25 Gbps" [ref=f10e528] [cursor=pointer]':
+                                      - generic [ref=f10e529]: Bandwidth
+                                      - generic [ref=f10e530]:
+                                        - generic [ref=f10e532]:
+                                          - text: "Public:"
+                                          - strong [ref=f10e534]: 1 Gbps - 5 Gbps
+                                        - text: ": : : :"
+                                        - generic [ref=f10e536]:
+                                          - text: "Private:"
+                                          - strong [ref=f10e538]: 25 Gbps
+                                        - text: ": : : :"
+                                    - 'cell "Price €114.99 Installation fees: €114.99" [ref=f10e539] [cursor=pointer]':
+                                      - generic [ref=f10e540]: Price
+                                      - generic [ref=f10e542]:
+                                        - generic [ref=f10e543]: €114.99
+                                        - generic [ref=f10e546]:
+                                          - text: "Installation fees:"
+                                          - generic [ref=f10e547]: €114.99
+                                    - cell "Compare" [ref=f10e548]:
+                                      - generic [ref=f10e551]:
+                                        - checkbox
+                                        - generic [ref=f10e552] [cursor=pointer]
+                                    - cell [ref=f10e553]:
+                                      - link "Configure" [ref=f10e556] [cursor=pointer]:
+                                        - /url: https://www.ovhcloud.com/en-ie/bare-metal/advance/adv-1/
+                              - generic [ref=f10e559]:
+                                - text: ": : : : : : : : : : : : : : : : : : : : : : : : : : : : : :"
+                                - row [ref=f10e560]:
+                                  - generic [ref=f10e561]:
+                                    - cell "Name Advance-STOR 2024" [ref=f10e562] [cursor=pointer]:
+                                      - generic [ref=f10e565]:
+                                        - generic [ref=f10e566]: Name
+                                        - generic [ref=f10e567]:
+                                          - generic [ref=f10e568]: Advance-STOR
+                                          - generic [ref=f10e570]: "2024"
+                                    - 'cell "CPU CPU: AMD EPYC 4344P 8 c / 16 t 3.8 GHz / 5.3 GHz" [ref=f10e571] [cursor=pointer]':
+                                      - generic [ref=f10e572]: CPU
+                                      - generic [ref=f10e573]:
+                                        - generic [ref=f10e575]:
+                                          - text: "CPU:"
+                                          - strong [ref=f10e577]:
+                                            - generic [ref=f10e578]: AMD EPYC 4344P 8 c / 16 t 3.8 GHz / 5.3 GHz
+                                        - text: ": : : :"
+                                    - cell "RAM 32 GB to 192 GB" [ref=f10e579] [cursor=pointer]:
+                                      - generic [ref=f10e580]: RAM
+                                      - strong [ref=f10e584]:
+                                        - generic [ref=f10e585]: 32 GB to 192 GB
+                                    - cell "Storage 2 x 22 TB - 8 x 22 TB" [ref=f10e586] [cursor=pointer]:
+                                      - generic [ref=f10e587]: Storage
+                                      - strong [ref=f10e591]:
+                                        - generic [ref=f10e592]: 2 x 22 TB - 8 x 22 TB
+                                    - 'cell "Bandwidth Public: 1 Gbps - 5 Gbps Private: 25 Gbps" [ref=f10e593] [cursor=pointer]':
+                                      - generic [ref=f10e594]: Bandwidth
+                                      - generic [ref=f10e595]:
+                                        - generic [ref=f10e597]:
+                                          - text: "Public:"
+                                          - strong [ref=f10e599]: 1 Gbps - 5 Gbps
+                                        - text: ": : : :"
+                                        - generic [ref=f10e601]:
+                                          - text: "Private:"
+                                          - strong [ref=f10e603]: 25 Gbps
+                                        - text: ": : : :"
+                                    - 'cell "Price €264.99 Installation fees: €264.99" [ref=f10e604] [cursor=pointer]':
+                                      - generic [ref=f10e605]: Price
+                                      - generic [ref=f10e607]:
+                                        - generic [ref=f10e608]: €264.99
+                                        - generic [ref=f10e611]:
+                                          - text: "Installation fees:"
+                                          - generic [ref=f10e612]: €264.99
+                                    - cell "Compare" [ref=f10e613]:
+                                      - generic [ref=f10e616]:
+                                        - checkbox
+                                        - generic [ref=f10e617] [cursor=pointer]
+                                    - cell [ref=f10e618]:
+                                      - link "Configure" [ref=f10e621] [cursor=pointer]:
+                                        - /url: https://www.ovhcloud.com/en-ie/bare-metal/advance/adv-stor/
+                              - generic [ref=f10e624]:
+                                - text: ": : : : : : : : : : : : : : : : : : : : : : : : : : : : : :"
+                                - row [ref=f10e625]:
+                                  - generic [ref=f10e626]:
+                                    - cell "Name Advance-4 2024" [ref=f10e627] [cursor=pointer]:
+                                      - generic [ref=f10e630]:
+                                        - generic [ref=f10e631]: Name
+                                        - generic [ref=f10e632]:
+                                          - generic [ref=f10e633]: Advance-4
+                                          - generic [ref=f10e635]: "2024"
+                                    - 'cell "CPU CPU: AMD EPYC 4584PX 16 c / 32 t 4.2 GHz / 5.7 GHz" [ref=f10e636] [cursor=pointer]':
+                                      - generic [ref=f10e637]: CPU
+                                      - generic [ref=f10e638]:
+                                        - generic [ref=f10e640]:
+                                          - text: "CPU:"
+                                          - strong [ref=f10e642]:
+                                            - generic [ref=f10e643]: AMD EPYC 4584PX 16 c / 32 t 4.2 GHz / 5.7 GHz
+                                        - text: ": : : :"
+                                    - cell "RAM 64 GB to 192 GB" [ref=f10e644] [cursor=pointer]:
+                                      - generic [ref=f10e645]: RAM
+                                      - strong [ref=f10e649]:
+                                        - generic [ref=f10e650]: 64 GB to 192 GB
+                                    - cell "Storage 2 x 960 GB - 4 x 7.68 TB" [ref=f10e651] [cursor=pointer]:
+                                      - generic [ref=f10e652]: Storage
+                                      - strong [ref=f10e656]:
+                                        - generic [ref=f10e657]: 2 x 960 GB - 4 x 7.68 TB
+                                    - 'cell "Bandwidth Public: 1 Gbps - 5 Gbps Private: 25 Gbps" [ref=f10e658] [cursor=pointer]':
+                                      - generic [ref=f10e659]: Bandwidth
+                                      - generic [ref=f10e660]:
+                                        - generic [ref=f10e662]:
+                                          - text: "Public:"
+                                          - strong [ref=f10e664]: 1 Gbps - 5 Gbps
+                                        - text: ": : : :"
+                                        - generic [ref=f10e666]:
+                                          - text: "Private:"
+                                          - strong [ref=f10e668]: 25 Gbps
+                                        - text: ": : : :"
+                                    - 'cell "Price €254.99 Installation fees: €254.99" [ref=f10e669] [cursor=pointer]':
+                                      - generic [ref=f10e670]: Price
+                                      - generic [ref=f10e672]:
+                                        - generic [ref=f10e673]: €254.99
+                                        - generic [ref=f10e676]:
+                                          - text: "Installation fees:"
+                                          - generic [ref=f10e677]: €254.99
+                                    - cell "Compare" [ref=f10e678]:
+                                      - generic [ref=f10e681]:
+                                        - checkbox
+                                        - generic [ref=f10e682] [cursor=pointer]
+                                    - cell [ref=f10e683]:
+                                      - link "Configure" [ref=f10e686] [cursor=pointer]:
+                                        - /url: https://www.ovhcloud.com/en-ie/bare-metal/advance/adv-4/
+                              - text: ": : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : :"
+                          - button "Show more servers" [ref=f10e691] [cursor=pointer]
+                      - group [ref=f10e698]:
+                        - heading "Game" [level=3] [ref=f10e700] [cursor=pointer]
+                        - generic [ref=f10e703]:
+                          - table [ref=f10e704]:
+                            - generic [ref=f10e705]:
+                              - paragraph [ref=f10e707]:
+                                - text: Servers optimised for video games and streaming platforms.
+                                - link "Discover the Game range " [ref=f10e708] [cursor=pointer]:
+                                  - /url: https://www.ovhcloud.com/en-ie/bare-metal/game/
+                              - button "Open all" [ref=f10e711] [cursor=pointer]
+                            - generic [ref=f10e717]:
+                              - columnheader "Name" [ref=f10e718]
+                              - columnheader "CPU" [ref=f10e720]
+                              - columnheader "RAM" [ref=f10e722]
+                              - columnheader "Storage" [ref=f10e724]
+                              - columnheader "Bandwidth" [ref=f10e726]
+                              - columnheader "Price ex. VAT/month (From)" [ref=f10e728]:
+                                - generic [ref=f10e729]: Price ex. VAT/month
+                                - generic [ref=f10e730]: (From)
+                              - columnheader "Compare" [ref=f10e731]
+                            - generic [ref=f10e733]:
+                              - generic [ref=f10e734]:
+                                - text: ": : : : : : : : : :"
+                                - row [ref=f10e735]:
+                                  - generic [ref=f10e736]:
+                                    - cell "Name Game-1 2026" [ref=f10e737] [cursor=pointer]:
+                                      - generic [ref=f10e740]:
+                                        - generic [ref=f10e741]: Name
+                                        - generic [ref=f10e742]:
+                                          - generic [ref=f10e743]: Game-1
+                                          - generic [ref=f10e745]: "2026"
+                                    - 'cell "CPU CPU: AMD RYZEN 7 9800X3D 8 c / 16 t 4.7 GHz / 5.2 GHz" [ref=f10e746] [cursor=pointer]':
+                                      - generic [ref=f10e747]: CPU
+                                      - generic [ref=f10e748]:
+                                        - generic [ref=f10e750]:
+                                          - text: "CPU:"
+                                          - strong [ref=f10e752]:
+                                            - generic [ref=f10e753]: AMD RYZEN 7 9800X3D 8 c / 16 t 4.7 GHz / 5.2 GHz
+                                        - text: ":"
+                                    - cell "RAM 64 GB to 256 GB" [ref=f10e754] [cursor=pointer]:
+                                      - generic [ref=f10e755]: RAM
+                                      - strong [ref=f10e759]:
+                                        - generic [ref=f10e760]: 64 GB to 256 GB
+                                    - cell "Storage 2 x 960 GB" [ref=f10e761] [cursor=pointer]:
+                                      - generic [ref=f10e762]: Storage
+                                      - strong [ref=f10e766]:
+                                        - generic [ref=f10e767]: 2 x 960 GB
+                                    - 'cell "Bandwidth Public: 1 Gbps" [ref=f10e768] [cursor=pointer]':
+                                      - generic [ref=f10e769]: Bandwidth
+                                      - generic [ref=f10e770]:
+                                        - generic [ref=f10e772]:
+                                          - text: "Public:"
+                                          - strong [ref=f10e774]: 1 Gbps
+                                        - text: ":"
+                                        - generic:
+                                          - generic:
+                                            - generic:
+                                              - strong
+                                    - 'cell "Price €279.99 Installation fees: €279.99" [ref=f10e775] [cursor=pointer]':
+                                      - generic [ref=f10e776]: Price
+                                      - generic [ref=f10e778]:
+                                        - generic [ref=f10e779]: €279.99
+                                        - generic [ref=f10e782]:
+                                          - text: "Installation fees:"
+                                          - generic [ref=f10e783]: €279.99
+                                    - cell "Compare" [ref=f10e784]:
+                                      - generic [ref=f10e787]:
+                                        - checkbox
+                                        - generic [ref=f10e788] [cursor=pointer]
+                                    - cell [ref=f10e789]:
+                                      - link "Configure" [ref=f10e792] [cursor=pointer]:
+                                        - /url: https://www.ovhcloud.com/en-ie/bare-metal/game/game-1/
+                              - generic [ref=f10e795]:
+                                - text: ": : : : : : : : : :"
+                                - row [ref=f10e796]:
+                                  - generic [ref=f10e797]:
+                                    - cell "Name Game-2 2026" [ref=f10e798] [cursor=pointer]:
+                                      - generic [ref=f10e801]:
+                                        - generic [ref=f10e802]: Name
+                                        - generic [ref=f10e803]:
+                                          - generic [ref=f10e804]: Game-2
+                                          - generic [ref=f10e806]: "2026"
+                                    - 'cell "CPU CPU: AMD RYZEN 9 9950X3D 16 c / 32 t 4.3 GHz / 5.7 GHz" [ref=f10e807] [cursor=pointer]':
+                                      - generic [ref=f10e808]: CPU
+                                      - generic [ref=f10e809]:
+                                        - generic [ref=f10e811]:
+                                          - text: "CPU:"
+                                          - strong [ref=f10e813]:
+                                            - generic [ref=f10e814]: AMD RYZEN 9 9950X3D 16 c / 32 t 4.3 GHz / 5.7 GHz
+                                        - text: ":"
+                                    - cell "RAM 64 GB to 256 GB" [ref=f10e815] [cursor=pointer]:
+                                      - generic [ref=f10e816]: RAM
+                                      - strong [ref=f10e820]:
+                                        - generic [ref=f10e821]: 64 GB to 256 GB
+                                    - cell "Storage 2 x 960 GB" [ref=f10e822] [cursor=pointer]:
+                                      - generic [ref=f10e823]: Storage
+                                      - strong [ref=f10e827]:
+                                        - generic [ref=f10e828]: 2 x 960 GB
+                                    - 'cell "Bandwidth Public: 1 Gbps" [ref=f10e829] [cursor=pointer]':
+                                      - generic [ref=f10e830]: Bandwidth
+                                      - generic [ref=f10e831]:
+                                        - generic [ref=f10e833]:
+                                          - text: "Public:"
+                                          - strong [ref=f10e835]: 1 Gbps
+                                        - text: ":"
+                                        - generic:
+                                          - generic:
+                                            - generic:
+                                              - strong
+                                    - 'cell "Price €313.99 Installation fees: €313.99" [ref=f10e836] [cursor=pointer]':
+                                      - generic [ref=f10e837]: Price
+                                      - generic [ref=f10e839]:
+                                        - generic [ref=f10e840]: €313.99
+                                        - generic [ref=f10e843]:
+                                          - text: "Installation fees:"
+                                          - generic [ref=f10e844]: €313.99
+                                    - cell "Compare" [ref=f10e845]:
+                                      - generic [ref=f10e848]:
+                                        - checkbox
+                                        - generic [ref=f10e849] [cursor=pointer]
+                                    - cell [ref=f10e850]:
+                                      - link "Configure" [ref=f10e853] [cursor=pointer]:
+                                        - /url: https://www.ovhcloud.com/en-ie/bare-metal/game/game-2/
+                          - button "Show more servers" [ref=f10e858] [cursor=pointer]
+                      - group [ref=f10e865]:
+                        - heading "Scale" [level=3] [ref=f10e867] [cursor=pointer]
+                        - generic [ref=f10e870]:
+                          - table [ref=f10e871]:
+                            - generic [ref=f10e872]:
+                              - paragraph [ref=f10e874]:
+                                - text: Servers designed for complex, high-resilience infrastructure.
+                                - link "Discover the Scale range " [ref=f10e875] [cursor=pointer]:
+                                  - /url: https://www.ovhcloud.com/en-ie/bare-metal/scale/
+                              - button "Open all" [ref=f10e878] [cursor=pointer]
+                            - generic [ref=f10e884]:
+                              - columnheader "Name" [ref=f10e885]
+                              - columnheader "CPU" [ref=f10e887]
+                              - columnheader "RAM" [ref=f10e889]
+                              - columnheader "Storage" [ref=f10e891]
+                              - columnheader "Bandwidth" [ref=f10e893]
+                              - columnheader "Price ex. VAT/month (From)" [ref=f10e895]:
+                                - generic [ref=f10e896]: Price ex. VAT/month
+                                - generic [ref=f10e897]: (From)
+                              - columnheader "Compare" [ref=f10e898]
+                            - generic [ref=f10e900]:
+                              - generic [ref=f10e901]:
+                                - text: ": : : : : : : : : : : : : : : : : : : : : : : : : : : : : :"
+                                - row [ref=f10e902]:
+                                  - generic [ref=f10e903]:
+                                    - cell "Name Scale-i1 2024" [ref=f10e904] [cursor=pointer]:
+                                      - generic [ref=f10e907]:
+                                        - generic [ref=f10e908]: Name
+                                        - generic [ref=f10e909]:
+                                          - generic [ref=f10e910]: Scale-i1
+                                          - generic [ref=f10e912]: "2024"
+                                    - 'cell "CPU CPU: Intel Xeon Gold 6426Y 16 c / 32 t 2.5 GHz / 4.1 GHz" [ref=f10e913] [cursor=pointer]':
+                                      - generic [ref=f10e914]: CPU
+                                      - generic [ref=f10e915]:
+                                        - generic [ref=f10e917]:
+                                          - text: "CPU:"
+                                          - strong [ref=f10e919]:
+                                            - generic [ref=f10e920]: Intel Xeon Gold 6426Y 16 c / 32 t 2.5 GHz / 4.1 GHz
+                                        - text: ": : : :"
+                                    - cell "RAM 128 GB to 1 TB" [ref=f10e921] [cursor=pointer]:
+                                      - generic [ref=f10e922]: RAM
+                                      - strong [ref=f10e926]:
+                                        - generic [ref=f10e927]: 128 GB to 1 TB
+                                    - cell "Storage 2 x 1.92 TB - 6 x 7.68 TB" [ref=f10e928] [cursor=pointer]:
+                                      - generic [ref=f10e929]: Storage
+                                      - strong [ref=f10e933]:
+                                        - generic [ref=f10e934]: 2 x 1.92 TB - 6 x 7.68 TB
+                                    - 'cell "Bandwidth Public: 1 Gbps - 25 Gbps Private: 50 Gbps" [ref=f10e935] [cursor=pointer]':
+                                      - generic [ref=f10e936]: Bandwidth
+                                      - generic [ref=f10e937]:
+                                        - generic [ref=f10e939]:
+                                          - text: "Public:"
+                                          - strong [ref=f10e941]: 1 Gbps - 25 Gbps
+                                        - text: ": : : :"
+                                        - generic [ref=f10e943]:
+                                          - text: "Private:"
+                                          - strong [ref=f10e945]: 50 Gbps
+                                        - text: ": : : :"
+                                    - 'cell "Price €539.99 Installation fees: €539.99" [ref=f10e946] [cursor=pointer]':
+                                      - generic [ref=f10e947]: Price
+                                      - generic [ref=f10e949]:
+                                        - generic [ref=f10e950]: €539.99
+                                        - generic [ref=f10e953]:
+                                          - text: "Installation fees:"
+                                          - generic [ref=f10e954]: €539.99
+                                    - cell "Compare" [ref=f10e955]:
+                                      - generic [ref=f10e958]:
+                                        - checkbox
+                                        - generic [ref=f10e959] [cursor=pointer]
+                                    - cell [ref=f10e960]:
+                                      - link "Configure" [ref=f10e963] [cursor=pointer]:
+                                        - /url: https://www.ovhcloud.com/en-ie/bare-metal/scale/scale-i1/
+                              - generic [ref=f10e966]:
+                                - text: ": : : : : : : : : : : : : : : : : : : : : : : : : : : : : :"
+                                - row [ref=f10e967]:
+                                  - generic [ref=f10e968]:
+                                    - cell "Name Scale-i2 2024" [ref=f10e969] [cursor=pointer]:
+                                      - generic [ref=f10e972]:
+                                        - generic [ref=f10e973]: Name
+                                        - generic [ref=f10e974]:
+                                          - generic [ref=f10e975]: Scale-i2
+                                          - generic [ref=f10e977]: "2024"
+                                    - 'cell "CPU CPU: Intel Xeon Gold 6442Y 24 c / 48 t 2.6 GHz / 4 GHz" [ref=f10e978] [cursor=pointer]':
+                                      - generic [ref=f10e979]: CPU
+                                      - generic [ref=f10e980]:
+                                        - generic [ref=f10e982]:
+                                          - text: "CPU:"
+                                          - strong [ref=f10e984]:
+                                            - generic [ref=f10e985]: Intel Xeon Gold 6442Y 24 c / 48 t 2.6 GHz / 4 GHz
+                                        - text: ": : : :"
+                                    - cell "RAM 128 GB to 1 TB" [ref=f10e986] [cursor=pointer]:
+                                      - generic [ref=f10e987]: RAM
+                                      - strong [ref=f10e991]:
+                                        - generic [ref=f10e992]: 128 GB to 1 TB
+                                    - cell "Storage 2 x 1.92 TB - 6 x 7.68 TB" [ref=f10e993] [cursor=pointer]:
+                                      - generic [ref=f10e994]: Storage
+                                      - strong [ref=f10e998]:
+                                        - generic [ref=f10e999]: 2 x 1.92 TB - 6 x 7.68 TB
+                                    - 'cell "Bandwidth Public: 1 Gbps - 25 Gbps Private: 50 Gbps" [ref=f10e1000] [cursor=pointer]':
+                                      - generic [ref=f10e1001]: Bandwidth
+                                      - generic [ref=f10e1002]:
+                                        - generic [ref=f10e1004]:
+                                          - text: "Public:"
+                                          - strong [ref=f10e1006]: 1 Gbps - 25 Gbps
+                                        - text: ": : : :"
+                                        - generic [ref=f10e1008]:
+                                          - text: "Private:"
+                                          - strong [ref=f10e1010]: 50 Gbps
+                                        - text: ": : : :"
+                                    - 'cell "Price €579.99 Installation fees: €579.99" [ref=f10e1011] [cursor=pointer]':
+                                      - generic [ref=f10e1012]: Price
+                                      - generic [ref=f10e1014]:
+                                        - generic [ref=f10e1015]: €579.99
+                                        - generic [ref=f10e1018]:
+                                          - text: "Installation fees:"
+                                          - generic [ref=f10e1019]: €579.99
+                                    - cell "Compare" [ref=f10e1020]:
+                                      - generic [ref=f10e1023]:
+                                        - checkbox
+                                        - generic [ref=f10e1024] [cursor=pointer]
+                                    - cell [ref=f10e1025]:
+                                      - link "Configure" [ref=f10e1028] [cursor=pointer]:
+                                        - /url: https://www.ovhcloud.com/en-ie/bare-metal/scale/scale-i2/
+                              - generic [ref=f10e1031]:
+                                - text: ": : : : : : : : : : : : : : : : : : : : : : : : : : : : : :"
+                                - row [ref=f10e1032]:
+                                  - generic [ref=f10e1033]:
+                                    - cell "Name Scale-i3 2024" [ref=f10e1034] [cursor=pointer]:
+                                      - generic [ref=f10e1037]:
+                                        - generic [ref=f10e1038]: Name
+                                        - generic [ref=f10e1039]:
+                                          - generic [ref=f10e1040]: Scale-i3
+                                          - generic [ref=f10e1042]: "2024"
+                                    - 'cell "CPU CPU: Intel Xeon Gold 6438M 32 c / 64 t 2.2 GHz / 3.9 GHz" [ref=f10e1043] [cursor=pointer]':
+                                      - generic [ref=f10e1044]: CPU
+                                      - generic [ref=f10e1045]:
+                                        - generic [ref=f10e1047]:
+                                          - text: "CPU:"
+                                          - strong [ref=f10e1049]:
+                                            - generic [ref=f10e1050]: Intel Xeon Gold 6438M 32 c / 64 t 2.2 GHz / 3.9 GHz
+                                        - text: ": : : :"
+                                    - cell "RAM 128 GB to 1 TB" [ref=f10e1051] [cursor=pointer]:
+                                      - generic [ref=f10e1052]: RAM
+                                      - strong [ref=f10e1056]:
+                                        - generic [ref=f10e1057]: 128 GB to 1 TB
+                                    - cell "Storage 2 x 1.92 TB - 6 x 7.68 TB" [ref=f10e1058] [cursor=pointer]:
+                                      - generic [ref=f10e1059]: Storage
+                                      - strong [ref=f10e1063]:
+                                        - generic [ref=f10e1064]: 2 x 1.92 TB - 6 x 7.68 TB
+                                    - 'cell "Bandwidth Public: 1 Gbps - 25 Gbps Private: 50 Gbps" [ref=f10e1065] [cursor=pointer]':
+                                      - generic [ref=f10e1066]: Bandwidth
+                                      - generic [ref=f10e1067]:
+                                        - generic [ref=f10e1069]:
+                                          - text: "Public:"
+                                          - strong [ref=f10e1071]: 1 Gbps - 25 Gbps
+                                        - text: ": : : :"
+                                        - generic [ref=f10e1073]:
+                                          - text: "Private:"
+                                          - strong [ref=f10e1075]: 50 Gbps
+                                        - text: ": : : :"
+                                    - 'cell "Price €609.99 Installation fees: €609.99" [ref=f10e1076] [cursor=pointer]':
+                                      - generic [ref=f10e1077]: Price
+                                      - generic [ref=f10e1079]:
+                                        - generic [ref=f10e1080]: €609.99
+                                        - generic [ref=f10e1083]:
+                                          - text: "Installation fees:"
+                                          - generic [ref=f10e1084]: €609.99
+                                    - cell "Compare" [ref=f10e1085]:
+                                      - generic [ref=f10e1088]:
+                                        - checkbox
+                                        - generic [ref=f10e1089] [cursor=pointer]
+                                    - cell [ref=f10e1090]:
+                                      - link "Configure" [ref=f10e1093] [cursor=pointer]:
+                                        - /url: https://www.ovhcloud.com/en-ie/bare-metal/scale/scale-i3/
+                              - generic [ref=f10e1096]:
+                                - text: ": : : : : : : : : : : : : : : : : : : : : : : : : : : : : :"
+                                - row [ref=f10e1097]:
+                                  - generic [ref=f10e1098]:
+                                    - cell "Name Scale-a1 2024" [ref=f10e1099] [cursor=pointer]:
+                                      - generic [ref=f10e1102]:
+                                        - generic [ref=f10e1103]: Name
+                                        - generic [ref=f10e1104]:
+                                          - generic [ref=f10e1105]: Scale-a1
+                                          - generic [ref=f10e1107]: "2024"
+                                    - 'cell "CPU CPU: AMD EPYC GENOA 9124 16 c / 32 t 3 GHz / 3.6 GHz" [ref=f10e1108] [cursor=pointer]':
+                                      - generic [ref=f10e1109]: CPU
+                                      - generic [ref=f10e1110]:
+                                        - generic [ref=f10e1112]:
+                                          - text: "CPU:"
+                                          - strong [ref=f10e1114]:
+                                            - generic [ref=f10e1115]: AMD EPYC GENOA 9124 16 c / 32 t 3 GHz / 3.6 GHz
+                                        - text: ": : : :"
+                                    - cell "RAM 128 GB to 1 TB" [ref=f10e1116] [cursor=pointer]:
+                                      - generic [ref=f10e1117]: RAM
+                                      - strong [ref=f10e1121]:
+                                        - generic [ref=f10e1122]: 128 GB to 1 TB
+                                    - cell "Storage 2 x 1.92 TB - 6 x 7.68 TB" [ref=f10e1123] [cursor=pointer]:
+                                      - generic [ref=f10e1124]: Storage
+                                      - strong [ref=f10e1128]:
+                                        - generic [ref=f10e1129]: 2 x 1.92 TB - 6 x 7.68 TB
+                                    - 'cell "Bandwidth Public: 1 Gbps - 25 Gbps Private: 50 Gbps" [ref=f10e1130] [cursor=pointer]':
+                                      - generic [ref=f10e1131]: Bandwidth
+                                      - generic [ref=f10e1132]:
+                                        - generic [ref=f10e1134]:
+                                          - text: "Public:"
+                                          - strong [ref=f10e1136]: 1 Gbps - 25 Gbps
+                                        - text: ": : : :"
+                                        - generic [ref=f10e1138]:
+                                          - text: "Private:"
+                                          - strong [ref=f10e1140]: 50 Gbps
+                                        - text: ": : : :"
+                                    - 'cell "Price €539.99 Installation fees: €539.99" [ref=f10e1141] [cursor=pointer]':
+                                      - generic [ref=f10e1142]: Price
+                                      - generic [ref=f10e1144]:
+                                        - generic [ref=f10e1145]: €539.99
+                                        - generic [ref=f10e1148]:
+                                          - text: "Installation fees:"
+                                          - generic [ref=f10e1149]: €539.99
+                                    - cell "Compare" [ref=f10e1150]:
+                                      - generic [ref=f10e1153]:
+                                        - checkbox
+                                        - generic [ref=f10e1154] [cursor=pointer]
+                                    - cell [ref=f10e1155]:
+                                      - link "Configure" [ref=f10e1158] [cursor=pointer]:
+                                        - /url: https://www.ovhcloud.com/en-ie/bare-metal/scale/scale-a1/
+                              - text: ": : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : :"
+                          - button "Show more servers" [ref=f10e1163] [cursor=pointer]
+                      - group [ref=f10e1170]:
+                        - heading "High Grade" [level=3] [ref=f10e1172] [cursor=pointer]
+                        - generic [ref=f10e1175]:
+                          - table [ref=f10e1176]:
+                            - generic [ref=f10e1177]:
+                              - paragraph [ref=f10e1179]:
+                                - text: The most powerful servers, optimised for critical loads.
+                                - link "Discover the High Grade range " [ref=f10e1180] [cursor=pointer]:
+                                  - /url: https://www.ovhcloud.com/en-ie/bare-metal/high-grade/
+                              - button "Open all" [ref=f10e1183] [cursor=pointer]
+                            - generic [ref=f10e1189]:
+                              - columnheader "Name" [ref=f10e1190]
+                              - columnheader "CPU" [ref=f10e1192]
+                              - columnheader "RAM" [ref=f10e1194]
+                              - columnheader "Storage" [ref=f10e1196]
+                              - columnheader "Bandwidth" [ref=f10e1198]
+                              - columnheader "Price ex. VAT/month (From)" [ref=f10e1200]:
+                                - generic [ref=f10e1201]: Price ex. VAT/month
+                                - generic [ref=f10e1202]: (From)
+                              - columnheader "Compare" [ref=f10e1203]
+                            - generic [ref=f10e1205]:
+                              - generic [ref=f10e1206]:
+                                - text: ": : : : : : : : : : : : : : : : : : : : : : : : : : : : : :"
+                                - row [ref=f10e1207]:
+                                  - generic [ref=f10e1208]:
+                                    - cell "Name HGR-STOR-1 2024" [ref=f10e1209] [cursor=pointer]:
+                                      - generic [ref=f10e1212]:
+                                        - generic [ref=f10e1213]: Name
+                                        - generic [ref=f10e1214]:
+                                          - generic [ref=f10e1215]: HGR-STOR-1
+                                          - generic [ref=f10e1217]: "2024"
+                                    - 'cell "CPU CPU: Intel Xeon Gold 6554S 36 c / 72 t 2.2 GHz / 3 GHz" [ref=f10e1218] [cursor=pointer]':
+                                      - generic [ref=f10e1219]: CPU
+                                      - generic [ref=f10e1220]:
+                                        - generic [ref=f10e1222]:
+                                          - text: "CPU:"
+                                          - strong [ref=f10e1224]:
+                                            - generic [ref=f10e1225]: Intel Xeon Gold 6554S 36 c / 72 t 2.2 GHz / 3 GHz
+                                        - text: ": : : :"
+                                    - cell "RAM 128 GB to 768 GB" [ref=f10e1226] [cursor=pointer]:
+                                      - generic [ref=f10e1227]: RAM
+                                      - strong [ref=f10e1231]:
+                                        - generic [ref=f10e1232]: 128 GB to 768 GB
+                                    - cell "Storage 24 x 22 TB - 36 x 22 TB + 2 x 15.36 TB" [ref=f10e1233] [cursor=pointer]:
+                                      - generic [ref=f10e1234]: Storage
+                                      - strong [ref=f10e1238]:
+                                        - generic [ref=f10e1239]: 24 x 22 TB - 36 x 22 TB + 2 x 15.36 TB
+                                    - 'cell "Bandwidth Public: 1 Gbps - 25 Gbps Private: 50 Gbps" [ref=f10e1240] [cursor=pointer]':
+                                      - generic [ref=f10e1241]: Bandwidth
+                                      - generic [ref=f10e1242]:
+                                        - generic [ref=f10e1244]:
+                                          - text: "Public:"
+                                          - strong [ref=f10e1246]: 1 Gbps - 25 Gbps
+                                        - text: ": : : :"
+                                        - generic [ref=f10e1248]:
+                                          - text: "Private:"
+                                          - strong [ref=f10e1250]: 50 Gbps
+                                        - text: ": : : :"
+                                    - 'cell "Price €1,464.99 Installation fees: €1,464.99" [ref=f10e1251] [cursor=pointer]':
+                                      - generic [ref=f10e1252]: Price
+                                      - generic [ref=f10e1254]:
+                                        - generic [ref=f10e1255]: €1,464.99
+                                        - generic [ref=f10e1258]:
+                                          - text: "Installation fees:"
+                                          - generic [ref=f10e1259]: €1,464.99
+                                    - cell "Compare" [ref=f10e1260]:
+                                      - generic [ref=f10e1263]:
+                                        - checkbox
+                                        - generic [ref=f10e1264] [cursor=pointer]
+                                    - cell [ref=f10e1265]:
+                                      - link "Configure" [ref=f10e1268] [cursor=pointer]:
+                                        - /url: https://www.ovhcloud.com/en-ie/bare-metal/high-grade/hgr-stor-1/
+                              - generic [ref=f10e1271]:
+                                - text: ": : : : : : : : : : : : : : : : : : : : : : : : : : : : : :"
+                                - row [ref=f10e1272]:
+                                  - generic [ref=f10e1273]:
+                                    - cell "Name HGR-SDS-2 2024" [ref=f10e1274] [cursor=pointer]:
+                                      - generic [ref=f10e1277]:
+                                        - generic [ref=f10e1278]: Name
+                                        - generic [ref=f10e1279]:
+                                          - generic [ref=f10e1280]: HGR-SDS-2
+                                          - generic [ref=f10e1282]: "2024"
+                                    - 'cell "CPU CPU: Dual Intel Xeon Gold 6542Y 2x24 c / 2x48 t 2.9 GHz / 3.6 GHz" [ref=f10e1283] [cursor=pointer]':
+                                      - generic [ref=f10e1284]: CPU
+                                      - generic [ref=f10e1285]:
+                                        - generic [ref=f10e1287]:
+                                          - text: "CPU:"
+                                          - strong [ref=f10e1289]:
+                                            - generic [ref=f10e1290]: Dual Intel Xeon Gold 6542Y 2x24 c / 2x48 t 2.9 GHz / 3.6 GHz
+                                        - text: ": : : :"
+                                    - cell "RAM 256 GB to 1.5 TB" [ref=f10e1291] [cursor=pointer]:
+                                      - generic [ref=f10e1292]: RAM
+                                      - strong [ref=f10e1296]:
+                                        - generic [ref=f10e1297]: 256 GB to 1.5 TB
+                                    - cell "Storage 6 x 7.68 TB - 24 x 15.36 TB" [ref=f10e1298] [cursor=pointer]:
+                                      - generic [ref=f10e1299]: Storage
+                                      - strong [ref=f10e1303]:
+                                        - generic [ref=f10e1304]: 6 x 7.68 TB - 24 x 15.36 TB
+                                    - 'cell "Bandwidth Public: 1 Gbps - 25 Gbps Private: 50 Gbps" [ref=f10e1305] [cursor=pointer]':
+                                      - generic [ref=f10e1306]: Bandwidth
+                                      - generic [ref=f10e1307]:
+                                        - generic [ref=f10e1309]:
+                                          - text: "Public:"
+                                          - strong [ref=f10e1311]: 1 Gbps - 25 Gbps
+                                        - text: ": : : :"
+                                        - generic [ref=f10e1313]:
+                                          - text: "Private:"
+                                          - strong [ref=f10e1315]: 50 Gbps
+                                        - text: ": : : :"
+                                    - 'cell "Price €1,589.99 Installation fees: €1,589.99" [ref=f10e1316] [cursor=pointer]':
+                                      - generic [ref=f10e1317]: Price
+                                      - generic [ref=f10e1319]:
+                                        - generic [ref=f10e1320]: €1,589.99
+                                        - generic [ref=f10e1323]:
+                                          - text: "Installation fees:"
+                                          - generic [ref=f10e1324]: €1,589.99
+                                    - cell "Compare" [ref=f10e1325]:
+                                      - generic [ref=f10e1328]:
+                                        - checkbox
+                                        - generic [ref=f10e1329] [cursor=pointer]
+                                    - cell [ref=f10e1330]:
+                                      - link "Configure" [ref=f10e1333] [cursor=pointer]:
+                                        - /url: https://www.ovhcloud.com/en-ie/bare-metal/high-grade/hgr-sds-2/
+                              - generic [ref=f10e1336]:
+                                - text: ": : : : : : : : : : : : : : : : : : : : : : : : : : : : : :"
+                                - row [ref=f10e1337]:
+                                  - generic [ref=f10e1338]:
+                                    - cell "Name HGR-SDS-1 2024" [ref=f10e1339] [cursor=pointer]:
+                                      - generic [ref=f10e1342]:
+                                        - generic [ref=f10e1343]: Name
+                                        - generic [ref=f10e1344]:
+                                          - generic [ref=f10e1345]: HGR-SDS-1
+                                          - generic [ref=f10e1347]: "2024"
+                                    - 'cell "CPU CPU: Dual Intel Xeon Gold 5515+ 2x8 c / 2x16 t 3.2 GHz / 3.6 GHz" [ref=f10e1348] [cursor=pointer]':
+                                      - generic [ref=f10e1349]: CPU
+                                      - generic [ref=f10e1350]:
+                                        - generic [ref=f10e1352]:
+                                          - text: "CPU:"
+                                          - strong [ref=f10e1354]:
+                                            - generic [ref=f10e1355]: Dual Intel Xeon Gold 5515+ 2x8 c / 2x16 t 3.2 GHz / 3.6 GHz
+                                        - text: ": : : :"
+                                    - cell "RAM 256 GB to 1.5 TB" [ref=f10e1356] [cursor=pointer]:
+                                      - generic [ref=f10e1357]: RAM
+                                      - strong [ref=f10e1361]:
+                                        - generic [ref=f10e1362]: 256 GB to 1.5 TB
+                                    - cell "Storage 6 x 7.68 TB - 24 x 15.36 TB" [ref=f10e1363] [cursor=pointer]:
+                                      - generic [ref=f10e1364]: Storage
+                                      - strong [ref=f10e1368]:
+                                        - generic [ref=f10e1369]: 6 x 7.68 TB - 24 x 15.36 TB
+                                    - 'cell "Bandwidth Public: 1 Gbps - 25 Gbps Private: 50 Gbps" [ref=f10e1370] [cursor=pointer]':
+                                      - generic [ref=f10e1371]: Bandwidth
+                                      - generic [ref=f10e1372]:
+                                        - generic [ref=f10e1374]:
+                                          - text: "Public:"
+                                          - strong [ref=f10e1376]: 1 Gbps - 25 Gbps
+                                        - text: ": : : :"
+                                        - generic [ref=f10e1378]:
+                                          - text: "Private:"
+                                          - strong [ref=f10e1380]: 50 Gbps
+                                        - text: ": : : :"
+                                    - 'cell "Price €1,401.99 Installation fees: €1,401.99" [ref=f10e1381] [cursor=pointer]':
+                                      - generic [ref=f10e1382]: Price
+                                      - generic [ref=f10e1384]:
+                                        - generic [ref=f10e1385]: €1,401.99
+                                        - generic [ref=f10e1388]:
+                                          - text: "Installation fees:"
+                                          - generic [ref=f10e1389]: €1,401.99
+                                    - cell "Compare" [ref=f10e1390]:
+                                      - generic [ref=f10e1393]:
+                                        - checkbox
+                                        - generic [ref=f10e1394] [cursor=pointer]
+                                    - cell [ref=f10e1395]:
+                                      - link "Configure" [ref=f10e1398] [cursor=pointer]:
+                                        - /url: https://www.ovhcloud.com/en-ie/bare-metal/high-grade/hgr-sds-1/
+                              - generic [ref=f10e1401]:
+                                - text: ": : : : : : : : : : : :"
+                                - row [ref=f10e1402]:
+                                  - generic [ref=f10e1403]:
+                                    - cell "Name HGR-SAP-1" [ref=f10e1404] [cursor=pointer]:
+                                      - generic [ref=f10e1407]:
+                                        - generic [ref=f10e1408]: Name
+                                        - generic [ref=f10e1409]: HGR-SAP-1
+                                    - 'cell "CPU CPU: Dual Intel Xeon Gold 6226R 2x16 c / 2x32 t 2.9 GHz / 3.9 GHz" [ref=f10e1412] [cursor=pointer]':
+                                      - generic [ref=f10e1413]: CPU
+                                      - generic [ref=f10e1414]:
+                                        - generic [ref=f10e1416]:
+                                          - text: "CPU:"
+                                          - strong [ref=f10e1418]:
+                                            - generic [ref=f10e1419]: Dual Intel Xeon Gold 6226R 2x16 c / 2x32 t 2.9 GHz / 3.9 GHz
+                                        - text: ":"
+                                    - cell "RAM 192 GB to 384 GB" [ref=f10e1420] [cursor=pointer]:
+                                      - generic [ref=f10e1421]: RAM
+                                      - strong [ref=f10e1425]:
+                                        - generic [ref=f10e1426]: 192 GB to 384 GB
+                                    - cell "Storage 6 x 3.84 TB - 24 x 3.84 TB" [ref=f10e1427] [cursor=pointer]:
+                                      - generic [ref=f10e1428]: Storage
+                                      - strong [ref=f10e1432]:
+                                        - generic [ref=f10e1433]: 6 x 3.84 TB - 24 x 3.84 TB
+                                    - 'cell "Bandwidth Public: 1 Gbps - 10 Gbps Private: 50 Gbps" [ref=f10e1434] [cursor=pointer]':
+                                      - generic [ref=f10e1435]: Bandwidth
+                                      - generic [ref=f10e1436]:
+                                        - generic [ref=f10e1438]:
+                                          - text: "Public:"
+                                          - strong [ref=f10e1440]: 1 Gbps - 10 Gbps
+                                        - text: ":"
+                                        - generic [ref=f10e1442]:
+                                          - text: "Private:"
+                                          - strong [ref=f10e1444]: 50 Gbps
+                                        - text: ":"
+                                    - 'cell "Price €1,254.99 Installation fees: €1,254.99 Free" [ref=f10e1445] [cursor=pointer]':
+                                      - generic [ref=f10e1446]: Price
+                                      - generic [ref=f10e1448]:
+                                        - generic [ref=f10e1449]: €1,254.99
+                                        - generic [ref=f10e1452]:
+                                          - text: "Installation fees:"
+                                          - generic [ref=f10e1453]: €1,254.99
+                                          - generic [ref=f10e1455]: Free
+                                    - cell "Compare" [ref=f10e1456]:
+                                      - generic [ref=f10e1459]:
+                                        - checkbox
+                                        - generic [ref=f10e1460] [cursor=pointer]
+                                    - cell [ref=f10e1461]:
+                                      - link "Configure" [ref=f10e1464] [cursor=pointer]:
+                                        - /url: https://www.ovhcloud.com/en-ie/bare-metal/high-grade/hgr-sap-1/
+                              - text: ": : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : :"
+                          - button "Show more servers" [ref=f10e1469] [cursor=pointer]
+                    - text: 
+                  - link "Ecorange serveurs OVHcloud Dedicated servers for affordable and scalable projects Explore our Eco servers, designed to last longer – without compromise on availability, security and performance." [ref=f10e1482] [cursor=pointer]:
+                    - /url: https://eco.ovhcloud.com/en-ie/
+                    - generic [ref=f10e1485]:
+                      - img "Ecorange serveurs OVHcloud" [ref=f10e1489]
+                      - generic [ref=f10e1490]:
+                        - generic [ref=f10e1491]: Dedicated servers for affordable and scalable projects
+                        - paragraph [ref=f10e1493]: Explore our Eco servers, designed to last longer – without compromise on availability, security and performance.
+                        - button [ref=f10e1495]:
+                          - generic [ref=f10e1496]: From €9.99 ex. VAT/month
+                  - generic [ref=f10e1506]:
+                    - heading "How much does a dedicated server cost?" [level=3] [ref=f10e1508]
+                    - generic [ref=f10e1509]:
+                      - paragraph [ref=f10e1510]: "The price of a dedicated server will vary depending on a number of factors, such as the type of server, hardware specifications and operating system. The server can be single or dual processor. Ensure you opt for a solution that is equipped with the right level of hardware resources for your project: e.g., CPU, RAM, storage space, network. The volume of RAM, storage and processing power required will contribute to the overall cost of your machine."
+                      - paragraph [ref=f10e1511]: "The type of operating system and any additional software you choose to install on the server may also affect the price. With our dedicated servers, we offer a selection of free open-source operating systems, as well as paid licences for the most popular options: Linux distributions such as Ubuntu, CentOS, Fedora and Debian, and the Windows Server operating system."
+            - button [ref=f10e1513] [cursor=pointer]
+            - button "Plan a call" [ref=f10e1520] [cursor=pointer]
+          - generic [ref=f10e1523]: 1 *To ensure your data remains sovereign and completely isolated, the US billing, support and Control Panel are distinct from those you use with your European, Asian or North American account.
+      - contentinfo [ref=f10e1525]:
+        - generic [ref=f10e1529]:
+          - navigation [ref=f10e1530]:
+            - generic [ref=f10e1535]:
+              - list [ref=f10e1536]:
+                - listitem [ref=f10e1537]:
+                  - generic [ref=f10e1538]:
+                    - text: Tools
+                    - list [ref=f10e1540]:
+                      - listitem [ref=f10e1541]: My customer account
+                      - listitem [ref=f10e1542]: Webmail
+                      - listitem [ref=f10e1543]: API
+                      - listitem [ref=f10e1544]: Procedure
+                      - listitem [ref=f10e1545]: Mailing lists
+                      - listitem [ref=f10e1546]: Status
+                      - listitem [ref=f10e1547]:
+                        - link "Whois" [ref=f10e1548] [cursor=pointer]:
+                          - /url: https://www.ovhcloud.com/en-ie/domains/whois/
+                      - listitem [ref=f10e1549]: Domain contact
+                      - listitem [ref=f10e1550]: Report abuse (abuse@ovh.net)
+                      - listitem [ref=f10e1551]:
+                        - link "WHOIS information disclosure request" [ref=f10e1552] [cursor=pointer]:
+                          - /url: https://www.ovhcloud.com/en-ie/whois-disclosure/
+                - listitem [ref=f10e1553]:
+                  - generic [ref=f10e1554]:
+                    - text: Intellectual property
+                    - list [ref=f10e1556]:
+                      - listitem [ref=f10e1557]:
+                        - link "Trademarks" [ref=f10e1558] [cursor=pointer]:
+                          - /url: https://www.ovhcloud.com/en-ie/intellectual-property/trademark/
+                      - listitem [ref=f10e1559]:
+                        - link "Kimsufi" [ref=f10e1560] [cursor=pointer]:
+                          - /url: https://www.kimsufi.com/en-ie/
+              - list [ref=f10e1561]:
+                - listitem [ref=f10e1562]:
+                  - generic [ref=f10e1563]:
+                    - text: Support
+                    - list [ref=f10e1565]:
+                      - listitem [ref=f10e1566]:
+                        - link "Help centre" [ref=f10e1567] [cursor=pointer]:
+                          - /url: https://docs.ovhcloud.com/en/
+                      - listitem [ref=f10e1568]:
+                        - link "Guides" [ref=f10e1569] [cursor=pointer]:
+                          - /url: https://docs.ovhcloud.com/en
+                      - listitem [ref=f10e1570]:
+                        - link "Learning Centre" [ref=f10e1571] [cursor=pointer]:
+                          - /url: https://www.ovhcloud.com/en-ie/learn/
+                      - listitem [ref=f10e1572]:
+                        - link "Glossary" [ref=f10e1573] [cursor=pointer]:
+                          - /url: https://www.ovhcloud.com/en-ie/glossary/
+                      - listitem [ref=f10e1574]:
+                        - link "Community" [ref=f10e1575] [cursor=pointer]:
+                          - /url: https://community.ovhcloud.com
+                      - listitem [ref=f10e1576]: Support levels
+                - listitem [ref=f10e1577]:
+                  - generic [ref=f10e1578]:
+                    - text: Contact us
+                    - list [ref=f10e1580]:
+                      - paragraph [ref=f10e1582]:
+                        - strong [ref=f10e1583]: OVHcloud Customer Service
+                        - text: Monday to Friday, 9am to 6pm +353 (0) 1 691 72 83 Local call rate
+              - list [ref=f10e1584]:
+                - listitem [ref=f10e1585]:
+                  - generic [ref=f10e1586]:
+                    - text: News
+                    - list [ref=f10e1588]:
+                      - listitem [ref=f10e1589]: Press
+                      - listitem [ref=f10e1590]:
+                        - link "Blog" [ref=f10e1591] [cursor=pointer]:
+                          - /url: https://blog.ovhcloud.com/
+                - listitem [ref=f10e1592]:
+                  - generic [ref=f10e1593]:
+                    - text: Social networks
+                    - list [ref=f10e1595]:
+                      - listitem [ref=f10e1596]:
+                        - navigation [ref=f10e1597]:
+                          - listitem [ref=f10e1598]:
+                            - link "X logo" [ref=f10e1599] [cursor=pointer]:
+                              - /url: https://twitter.com/OVHcloud
+                              - img "X logo"
+                          - listitem [ref=f10e1600]:
+                            - link "linkedin logo" [ref=f10e1601] [cursor=pointer]:
+                              - /url: https://www.linkedin.com/company/ovhgroup/
+                              - img "linkedin logo"
+                          - listitem [ref=f10e1602]:
+                            - link "facebook logo" [ref=f10e1603] [cursor=pointer]:
+                              - /url: https://www.facebook.com/ovhcom/
+                              - img "facebook logo"
+                          - listitem [ref=f10e1604]:
+                            - link "youtube logo" [ref=f10e1605] [cursor=pointer]:
+                              - /url: https://www.youtube.com/channel/UCGl9Y5S09EX-3lLfAdWsW_A
+                              - img "youtube logo"
+                          - listitem [ref=f10e1606]:
+                            - generic [ref=f10e1607] [cursor=pointer]:
+                              - img "twitch logo"
+                          - listitem [ref=f10e1608]:
+                            - generic [ref=f10e1609] [cursor=pointer]:
+                              - img "discord logo"
+                          - listitem [ref=f10e1610]:
+                            - generic [ref=f10e1611] [cursor=pointer]:
+                              - img "blog logo"
+                          - listitem:
+                            - generic:
+                              - img "github logo"
+                      - listitem
+              - list [ref=f10e1612]:
+                - listitem [ref=f10e1613]:
+                  - generic [ref=f10e1614]:
+                    - text: Keep in touch
+                    - list [ref=f10e1616]:
+                      - iframe [ref=f10e1618]
+          - navigation [ref=f10e1619]:
+            - list [ref=f10e1622]:
+              - listitem [ref=f10e1623]: © Copyright 1999-2026 OVH SAS. |
+              - listitem [ref=f10e1624]: Legal notices |
+              - listitem [ref=f10e1625]: Contracts |
+              - listitem [ref=f10e1626]: Data protection |
+              - listitem [ref=f10e1627]:
+                - link "Manage my cookies" [ref=f10e1628] [cursor=pointer]:
+                  - /url: ""
+                - text: "|"
+              - listitem [ref=f10e1629]: Rights and obligations of domain name holders |
+              - listitem [ref=f10e1630]: ICANN documentation for domain name holders |
+              - listitem [ref=f10e1631]: Payments |
+              - listitem [ref=f10e1632]:
+                - link "Sitemap" [ref=f10e1633] [cursor=pointer]:
+                  - /url: https://www.ovhcloud.com/en-ie/sitemap/
+                - text: "|"
+              - listitem [ref=f10e1634]: About OVHcloud |
+              - listitem [ref=f10e1635]: OVHcloud recruits
+          - paragraph [ref=f10e1638]: In accordance with the 2006/112/CE Directive, modified on 01/01/2015, prices exclude VAT. VAT may vary according to the customer's country of residence.
+    - text: "|| * * *"
+  - alert [ref=f10e1639]

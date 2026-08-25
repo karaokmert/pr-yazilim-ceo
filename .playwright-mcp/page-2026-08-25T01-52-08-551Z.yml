@@ -1,0 +1,352 @@
+- generic [active] [ref=f30e1]:
+  - generic [ref=f30e2]:
+    - generic [ref=f30e3]:
+      - generic [ref=f30e5]:
+        - button "Skip to Header" [ref=f30e6] [cursor=pointer]
+        - button "Skip to Main Content" [ref=f30e7] [cursor=pointer]
+        - button "Skip to Footer" [ref=f30e8] [cursor=pointer]
+      - banner [ref=f30e9]:
+        - generic [ref=f30e10]:
+          - paragraph [ref=f30e14]:
+            - 'link "Now Available: Public Cloud Free Trials. Get €200 to try it for free for up to 30 days " [ref=f30e15] [cursor=pointer]':
+              - /url: https://www.leaseweb.com/en/products-services/cloud/public-cloud
+          - generic [ref=f30e17]:
+            - generic [ref=f30e20]:
+              - link [ref=f30e21] [cursor=pointer]:
+                - /url: /en/
+              - img "undefined" [ref=f30e23]
+            - generic [ref=f30e24]:
+              - generic [ref=f30e27]:
+                - link "Blog" [ref=f30e30] [cursor=pointer]:
+                  - /url: https://blog.leaseweb.com/
+                - link "Knowledge Base" [ref=f30e33] [cursor=pointer]:
+                  - /url: https://kb.leaseweb.com/
+                - link "Developer API" [ref=f30e36] [cursor=pointer]:
+                  - /url: http://developer.leaseweb.com/
+                - link "Status" [ref=f30e39] [cursor=pointer]:
+                  - /url: https://www.leasewebstatus.com/
+                - link "Customer Portal" [ref=f30e42] [cursor=pointer]:
+                  - /url: https://secure.leaseweb.com/
+              - generic [ref=f30e44]:
+                - navigation [ref=f30e47]:
+                  - list [ref=f30e49]:
+                    - listitem [ref=f30e50]:
+                      - generic [ref=f30e51]: Why Leaseweb
+                    - listitem [ref=f30e52]:
+                      - generic [ref=f30e53]: Products
+                    - listitem [ref=f30e54]:
+                      - generic [ref=f30e55]: Solutions
+                    - listitem [ref=f30e56]:
+                      - generic [ref=f30e57]: Resources
+                    - listitem [ref=f30e58]:
+                      - generic [ref=f30e59]: About Us
+                    - listitem [ref=f30e60]:
+                      - link "Videos" [ref=f30e62] [cursor=pointer]:
+                        - /url: /en/resources/videos
+                    - listitem [ref=f30e63]:
+                      - link "Contact" [ref=f30e65] [cursor=pointer]:
+                        - /url: /en/contact
+                    - listitem [ref=f30e66]:
+                      - link "Promotions" [ref=f30e68] [cursor=pointer]:
+                        - /url: /en/promotions
+                - generic [ref=f30e69] [cursor=pointer]
+                - generic [ref=f30e75] [cursor=pointer]:
+                  - text: 
+                  - generic [ref=f30e76]: EN 
+                - link "Sign in" [ref=f30e79] [cursor=pointer]:
+                  - /url: "#"
+                - link "0 items currently in your cart" [ref=f30e82] [cursor=pointer]:
+                  - /url: /en/cart
+                  - generic [ref=f30e84]: "0"
+        - text:  
+      - main [ref=f30e85]:
+        - generic [ref=f30e86]:
+          - navigation [ref=f30e93]:
+            - list [ref=f30e95]:
+              - listitem [ref=f30e96]:
+                - link "All Featured" [ref=f30e98] [cursor=pointer]:
+                  - /url: /en/products-services/dedicated-servers
+              - listitem [ref=f30e99]:
+                - link "High Performance Server" [ref=f30e101] [cursor=pointer]:
+                  - /url: /en/products-services/dedicated-servers/high-performance-server
+              - listitem [ref=f30e102]:
+                - link "GPU Server" [ref=f30e104] [cursor=pointer]:
+                  - /url: /en/products-services/dedicated-servers/gpu-server
+              - listitem [ref=f30e105]:
+                - link "High Bandwidth Server" [ref=f30e107] [cursor=pointer]:
+                  - /url: /en/products-services/dedicated-servers/high-bandwidth-server
+              - listitem [ref=f30e108]:
+                - link "Gaming Server" [ref=f30e110] [cursor=pointer]:
+                  - /url: /en/products-services/dedicated-servers/gaming-server
+              - listitem [ref=f30e111]:
+                - link "Storage Server" [ref=f30e113] [cursor=pointer]:
+                  - /url: /en/products-services/dedicated-servers/storage-server
+              - listitem [ref=f30e114]:
+                - link "AMD Server" [ref=f30e116] [cursor=pointer]:
+                  - /url: /en/products-services/dedicated-servers/amd-server
+              - listitem [ref=f30e117]:
+                - link "Ampere Server" [ref=f30e119] [cursor=pointer]:
+                  - /url: /en/products-services/dedicated-servers/ampere-server
+          - generic [ref=f30e120]:
+            - img "dark-blue-bg.webp" [ref=f30e126]
+            - heading "Key Benefits" [level=2] [ref=f30e131]
+            - heading "Find optimal GPU server solution to empower your CPU" [level=2] [ref=f30e143]
+            - img "GPU servers" [ref=f30e156]
+            - heading "Featured GPU Servers" [level=2] [ref=f30e161]
+            - generic [ref=f30e163]:
+              - generic [ref=f30e166]:
+                - link "HP DL385 G11 (8SFF) 2x AMD EPYC 9334 - 2x H200 Dual AMD EPYC 9334 - 32 cores - 2,7 GHz HP DL385 G11 (8SFF) NVID H200 Tensor Core GPU Starting from Ram 128 GB Disks 2x960GB SSD MU Traffic 30 TB Delivery 5 days CA$ 4,558.37PM Excl. VAT Configure" [ref=f30e168] [cursor=pointer]:
+                  - /url: /en/configure/vc/product/entityKey/DEDSER02_NEW_ORDER_PREMIUM_DL385G11-9334-2xH200
+                  - heading "HP DL385 G11 (8SFF) 2x AMD EPYC 9334 - 2x H200" [level=3] [ref=f30e169]
+                  - generic [ref=f30e170]:
+                    - generic [ref=f30e171]:
+                      - generic [ref=f30e172]: Dual AMD EPYC 9334 - 32 cores - 2,7 GHz
+                      - generic [ref=f30e173]: HP DL385 G11 (8SFF)
+                      - generic "NVID H200 Tensor Core GPU" [ref=f30e174]
+                    - generic [ref=f30e175]:
+                      - generic [ref=f30e176]: Starting from
+                      - generic [ref=f30e178]:
+                        - generic [ref=f30e179]: Ram
+                        - generic [ref=f30e180]: 128 GB
+                      - generic [ref=f30e181]:
+                        - generic [ref=f30e182]: Disks
+                        - generic [ref=f30e183]: 2x960GB SSD MU
+                      - generic [ref=f30e184]:
+                        - generic [ref=f30e185]: Traffic
+                        - generic [ref=f30e186]: 30 TB
+                      - generic [ref=f30e187]:
+                        - generic [ref=f30e188]: Delivery
+                        - generic [ref=f30e189]: 5 days
+                  - generic [ref=f30e191]:
+                    - text: CA$ 4,558.37PM
+                    - generic [ref=f30e192]: Excl. VAT
+                  - generic [ref=f30e193]: Configure
+                - link "HP DL385 G11 (8SFF) 2x AMD EPYC 9334 - H100 Dual AMD EPYC 9334 - 32 cores - 2,7 GHz HP DL385 G11 (8SFF) NVID H100 Tensor Core GPU Starting from Ram 128 GB Disks 2x960GB SSD MU Traffic 30 TB Delivery 5 days CA$ 2,294.59PM Excl. VAT Configure" [ref=f30e196] [cursor=pointer]:
+                  - /url: /en/configure/vc/product/entityKey/DEDSER02_NEW_ORDER_PREMIUM_DL385G11-9334-H100
+                  - heading "HP DL385 G11 (8SFF) 2x AMD EPYC 9334 - H100" [level=3] [ref=f30e197]
+                  - generic [ref=f30e198]:
+                    - generic [ref=f30e199]:
+                      - generic [ref=f30e200]: Dual AMD EPYC 9334 - 32 cores - 2,7 GHz
+                      - generic [ref=f30e201]: HP DL385 G11 (8SFF)
+                      - generic "NVID H100 Tensor Core GPU" [ref=f30e202]
+                    - generic [ref=f30e203]:
+                      - generic [ref=f30e204]: Starting from
+                      - generic [ref=f30e206]:
+                        - generic [ref=f30e207]: Ram
+                        - generic [ref=f30e208]: 128 GB
+                      - generic [ref=f30e209]:
+                        - generic [ref=f30e210]: Disks
+                        - generic [ref=f30e211]: 2x960GB SSD MU
+                      - generic [ref=f30e212]:
+                        - generic [ref=f30e213]: Traffic
+                        - generic [ref=f30e214]: 30 TB
+                      - generic [ref=f30e215]:
+                        - generic [ref=f30e216]: Delivery
+                        - generic [ref=f30e217]: 5 days
+                  - generic [ref=f30e219]:
+                    - text: CA$ 2,294.59PM
+                    - generic [ref=f30e220]: Excl. VAT
+                  - generic [ref=f30e221]: Configure
+                - link "Dell R7525 (16SFF+8NVMe) 2x AMD EPYC 7413 - L40S Dual AMD EPYC 7413 - 24 cores - 2,65 GHz Dell R7525 (16SFF+8NVMe) NVID L40S Tensor Core GPU Starting from Ram 128 GB Disks 2x960GB SSD MU Traffic 30 TB Delivery  1 hour * CA$ 758.70PM Excl. VAT Configure" [ref=f30e224] [cursor=pointer]:
+                  - /url: /en/configure/vc/product/entityKey/DEDSER02_NEW_ORDER_PREMIUM_R7525-16SFF8NVME-7413-L40S
+                  - heading "Dell R7525 (16SFF+8NVMe) 2x AMD EPYC 7413 - L40S" [level=3] [ref=f30e225]
+                  - generic [ref=f30e226]:
+                    - generic [ref=f30e227]:
+                      - generic [ref=f30e228]: Dual AMD EPYC 7413 - 24 cores - 2,65 GHz
+                      - generic [ref=f30e229]: Dell R7525 (16SFF+8NVMe)
+                      - generic "NVID L40S Tensor Core GPU" [ref=f30e230]
+                    - generic [ref=f30e231]:
+                      - generic [ref=f30e232]: Starting from
+                      - generic [ref=f30e234]:
+                        - generic [ref=f30e235]: Ram
+                        - generic [ref=f30e236]: 128 GB
+                      - generic [ref=f30e237]:
+                        - generic [ref=f30e238]: Disks
+                        - generic [ref=f30e239]: 2x960GB SSD MU
+                      - generic [ref=f30e240]:
+                        - generic [ref=f30e241]: Traffic
+                        - generic [ref=f30e242]: 30 TB
+                      - generic [ref=f30e243]:
+                        - generic [ref=f30e244]: Delivery
+                        - generic [ref=f30e245]:  1 hour *
+                  - generic [ref=f30e247]:
+                    - text: CA$ 758.70PM
+                    - generic [ref=f30e248]: Excl. VAT
+                  - generic [ref=f30e249]: Configure
+                - link "Dell R750 (16SFF+8NVMe) 2x Intel Xeon 5318Y - L4 Dual Intel Xeon 5318Y - 24 cores - 2,1 GHz Dell R750 (16SFF+8NVMe) Nvidia L4 Tensor Core GPU Starting from Ram 128 GB Disks 2x960GB SSD WI Traffic 30 TB Delivery  1 hour * € 396.01PM Excl. VAT Configure" [ref=f30e252] [cursor=pointer]:
+                  - /url: /en/configure/vc/product/entityKey/DEDSER02_NEW_ORDER_BUSINESS_R750-16SFF8NVME-5318Y-L4
+                  - heading "Dell R750 (16SFF+8NVMe) 2x Intel Xeon 5318Y - L4" [level=3] [ref=f30e253]
+                  - generic [ref=f30e254]:
+                    - generic [ref=f30e255]:
+                      - generic [ref=f30e256]: Dual Intel Xeon 5318Y - 24 cores - 2,1 GHz
+                      - generic [ref=f30e257]: Dell R750 (16SFF+8NVMe)
+                      - generic "Nvidia L4 Tensor Core GPU" [ref=f30e258]
+                    - generic [ref=f30e259]:
+                      - generic [ref=f30e260]: Starting from
+                      - generic [ref=f30e262]:
+                        - generic [ref=f30e263]: Ram
+                        - generic [ref=f30e264]: 128 GB
+                      - generic [ref=f30e265]:
+                        - generic [ref=f30e266]: Disks
+                        - generic [ref=f30e267]: 2x960GB SSD WI
+                      - generic [ref=f30e268]:
+                        - generic [ref=f30e269]: Traffic
+                        - generic [ref=f30e270]: 30 TB
+                      - generic [ref=f30e271]:
+                        - generic [ref=f30e272]: Delivery
+                        - generic [ref=f30e273]:  1 hour *
+                  - generic [ref=f30e275]:
+                    - text: € 396.01PM
+                    - generic [ref=f30e276]: Excl. VAT
+                  - generic [ref=f30e277]: Configure
+              - paragraph [ref=f30e281]:
+                - text: "*If this is your first order with this Leaseweb Sales Entity, your order may take longer due to the"
+                - link "KYC customer verification." [ref=f30e282] [cursor=pointer]:
+                  - /url: /about-us/legal/know-your-customer
+          - heading "Included in all GPU Servers" [level=2] [ref=f30e290]
+          - heading "Ideal for usage in:" [level=2] [ref=f30e297]
+          - generic [ref=f30e308]:
+            - heading "Dedicated Server Partners" [level=2] [ref=f30e310]
+            - link "Learn more" [ref=f30e313] [cursor=pointer]:
+              - /url: /en/products-services/dedicated-servers/technology-partners
+          - generic [ref=f30e318]:
+            - heading "Get started today!" [level=2] [ref=f30e319]
+            - paragraph [ref=f30e320]:
+              - button "Start Live Chat" [ref=f30e321] [cursor=pointer]
+              - button "Email Us" [ref=f30e322] [cursor=pointer]
+            - paragraph [ref=f30e323]:
+              - text: Or
+              - link [ref=f30e324] [cursor=pointer]:
+                - /url: /en/contact
+                - strong [ref=f30e325]: click here
+              - text: to see our full list of contact options.
+      - contentinfo [ref=f30e326]:
+        - generic [ref=f30e328]:
+          - generic [ref=f30e329]:
+            - navigation "Footer links" [ref=f30e334]:
+              - heading "Links" [level=4] [ref=f30e335]
+              - list "Links" [ref=f30e337]:
+                - listitem [ref=f30e338]:
+                  - link "Customer Portal. 1 of 6" [ref=f30e340] [cursor=pointer]:
+                    - /url: https://secure.leaseweb.com
+                    - text: Customer Portal
+                - listitem [ref=f30e341]:
+                  - link "Status. 2 of 6" [ref=f30e343] [cursor=pointer]:
+                    - /url: https://www.leasewebstatus.com/
+                    - text: Status
+                - listitem [ref=f30e344]:
+                  - link "Leaseweb Blog. 3 of 6" [ref=f30e346] [cursor=pointer]:
+                    - /url: http://blog.leaseweb.com/
+                    - text: Leaseweb Blog
+                - listitem [ref=f30e347]:
+                  - link "Knowledge Base. 4 of 6" [ref=f30e349] [cursor=pointer]:
+                    - /url: https://kb.leaseweb.com/
+                    - text: Knowledge Base
+                - listitem [ref=f30e350]:
+                  - link "API Documentation. 5 of 6" [ref=f30e352] [cursor=pointer]:
+                    - /url: http://developer.leaseweb.com/
+                    - text: API Documentation
+                - listitem [ref=f30e353]:
+                  - link "Leaseweb Labs. 6 of 6" [ref=f30e355] [cursor=pointer]:
+                    - /url: https://labs.leaseweb.com/
+                    - text: Leaseweb Labs
+              - heading "About Leaseweb" [level=4] [ref=f30e356]
+              - list "About Leaseweb" [ref=f30e358]:
+                - listitem [ref=f30e359]:
+                  - link "Our Story. 1 of 5" [ref=f30e361] [cursor=pointer]:
+                    - /url: /en/about-us
+                    - text: Our Story
+                - listitem [ref=f30e362]:
+                  - link "Careers. 2 of 5" [ref=f30e364] [cursor=pointer]:
+                    - /url: /en/about-us/career
+                    - text: Careers
+                - listitem [ref=f30e365]:
+                  - link "Press Releases. 3 of 5" [ref=f30e367] [cursor=pointer]:
+                    - /url: /en/press/releases
+                    - text: Press Releases
+                - listitem [ref=f30e368]:
+                  - link "Events. 4 of 5" [ref=f30e370] [cursor=pointer]:
+                    - /url: /en/about-us/events
+                    - text: Events
+                - listitem [ref=f30e371]:
+                  - link "Contact. 5 of 5" [ref=f30e373] [cursor=pointer]:
+                    - /url: /en/contact
+                    - text: Contact
+              - heading "Legal & Compliance" [level=4] [ref=f30e374]
+              - list "Legal & Compliance" [ref=f30e376]:
+                - listitem [ref=f30e377]:
+                  - link "General. 1 of 7" [ref=f30e379] [cursor=pointer]:
+                    - /url: /en/about-us/legal
+                    - text: General
+                - listitem [ref=f30e380]:
+                  - link "Sales Contract. 2 of 7" [ref=f30e382] [cursor=pointer]:
+                    - /url: /en/about-us/legal/sales-contract
+                    - text: Sales Contract
+                - listitem [ref=f30e383]:
+                  - link "Privacy and Personal Data Protection. 3 of 7" [ref=f30e385] [cursor=pointer]:
+                    - /url: /en/about-us/legal/personal-data-protection-acts
+                    - text: Privacy and Personal Data Protection
+                - listitem [ref=f30e386]:
+                  - link "Abuse Handling & Transparancy Reports. 4 of 7" [ref=f30e388] [cursor=pointer]:
+                    - /url: /en/about-us/legal/abuse-handling
+                    - text: Abuse Handling & Transparancy Reports
+                - listitem [ref=f30e389]:
+                  - link "KYC Customer Verification. 5 of 7" [ref=f30e391] [cursor=pointer]:
+                    - /url: /en/about-us/legal/know-your-customer
+                    - text: KYC Customer Verification
+                - listitem [ref=f30e392]:
+                  - link "Website Terms of Use & Cookie Statement. 6 of 7" [ref=f30e394] [cursor=pointer]:
+                    - /url: /en/about-us/legal/website-terms-of-use-cookie-statement
+                    - text: Website Terms of Use & Cookie Statement
+                - listitem [ref=f30e395]:
+                  - link "Impressum. 7 of 7" [ref=f30e397] [cursor=pointer]:
+                    - /url: /en/about-us/legal/impressum
+                    - text: Impressum
+            - paragraph [ref=f30e399]: ©2026 Leaseweb. All Rights Reserved.
+          - generic [ref=f30e403]:
+            - generic [ref=f30e404]:
+              - generic [ref=f30e405]: Sign up for our newsletter
+              - generic [ref=f30e406]:
+                - generic [ref=f30e407]: Stay up to date with the latest news about Leaseweb solutions, events, special offers and more by subscribing to our monthly newsletter.
+                - generic [ref=f30e409]:
+                  - group [ref=f30e410]:
+                    - generic [ref=f30e411]:
+                      - generic [ref=f30e412]: First name*
+                      - textbox "First name*" [ref=f30e414]:
+                        - /placeholder: ""
+                    - generic [ref=f30e415]:
+                      - generic [ref=f30e416]: Business Email Address*
+                      - textbox "Business Email Address*" [ref=f30e418]:
+                        - /placeholder: ""
+                  - group [ref=f30e419]:
+                    - list [ref=f30e425]:
+                      - listitem [ref=f30e426]:
+                        - generic [ref=f30e427]:
+                          - checkbox "Consent is given to receive marketing communications from Leaseweb, including offers and product updates. Unsubscribing is possible at any time.*" [ref=f30e428] [cursor=pointer]
+                          - generic [ref=f30e429]:
+                            - paragraph [ref=f30e430]: Consent is given to receive marketing communications from Leaseweb, including offers and product updates. Unsubscribing is possible at any time.
+                            - text: "*"
+                  - button "Submit" [ref=f30e433] [cursor=pointer]
+            - generic [ref=f30e434]:
+              - generic [ref=f30e435]: Visit/Follow us
+              - list [ref=f30e438]:
+                - listitem [ref=f30e439]:
+                  - link "Facebook" [ref=f30e440] [cursor=pointer]:
+                    - /url: http://www.facebook.com/leaseweb
+                - listitem [ref=f30e442]:
+                  - link "Twitter" [ref=f30e443] [cursor=pointer]:
+                    - /url: http://www.twitter.com/leaseweb
+                - listitem [ref=f30e445]:
+                  - link "LinkedIn" [ref=f30e446] [cursor=pointer]:
+                    - /url: http://www.linkedin.com/company/242620
+                - listitem [ref=f30e448]:
+                  - link "YouTube" [ref=f30e449] [cursor=pointer]:
+                    - /url: https://www.youtube.com/user/LeaseWeb
+    - generic: Scroll to top
+  - iframe [ref=f30e453]:
+    
+  - status [ref=f30e454]
+  - generic [ref=f30e455]:
+    - button "Live Chat" [ref=f30e456] [cursor=pointer]
+    - iframe [ref=f30e457]:
+      - img "Button" [ref=f39e4] [cursor=pointer]

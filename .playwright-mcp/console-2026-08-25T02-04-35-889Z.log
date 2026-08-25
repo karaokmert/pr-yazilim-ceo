@@ -1,0 +1,2 @@
+[     642ms] [LOG] Init federation for tracking API @ https://www.ovhcloud.com/modules/custom/ovh_sentry/dist/sentry.min.js?v=1.0.3:4
+[    1498ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ https://chatbot.ovhcloud.com/webcallback/CC_Care_API/calendar?entityCode=WCUK&currentDateTime=2026-08-25T02:04:37.158Z:0

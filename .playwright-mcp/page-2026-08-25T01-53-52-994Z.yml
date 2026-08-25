@@ -1,0 +1,750 @@
+- generic [active] [ref=f101e1]:
+  - banner [ref=f101e2]:
+    - generic [ref=f101e4]:
+      - generic [ref=f101e5]: Cloud VPS and Bare Metal Servers for Less
+      - generic [ref=f101e7]:
+        - button "Flag of GLOBAL $ / EN" [ref=f101e11] [cursor=pointer]:
+          - generic [ref=f101e12]:
+            - img "Flag of GLOBAL" [ref=f101e14]
+            - generic [ref=f101e15]: $
+            - text: /
+            - generic [ref=f101e16]: EN
+        - navigation [ref=f101e22]:
+          - list [ref=f101e23]:
+            - listitem [ref=f101e24]:
+              - link [ref=f101e25] [cursor=pointer]:
+                - /url: https://help.contabo.com/en/support/home
+                - paragraph [ref=f101e29]: Help
+            - listitem [ref=f101e30]:
+              - link [ref=f101e31] [cursor=pointer]:
+                - /url: https://my.contabo.com/account/login
+                - paragraph [ref=f101e35]: Login
+            - listitem [ref=f101e36]:
+              - link [ref=f101e37] [cursor=pointer]:
+                - /url: https://contabo.com/en/register/email/
+                - paragraph [ref=f101e41]: Sign Up
+    - generic [ref=f101e43]:
+      - link "Contabo GmbH" [ref=f101e46] [cursor=pointer]:
+        - /url: /en/
+        - img "Contabo GmbH" [ref=f101e48]
+      - navigation [ref=f101e53]:
+        - list [ref=f101e54]:
+          - listitem [ref=f101e55]:
+            - paragraph [ref=f101e60] [cursor=pointer]: VPS
+          - listitem [ref=f101e63]:
+            - paragraph [ref=f101e68] [cursor=pointer]: Dedicated Server
+          - listitem [ref=f101e71]:
+            - paragraph [ref=f101e76] [cursor=pointer]: Apps & Panels
+          - listitem [ref=f101e79]:
+            - paragraph [ref=f101e84] [cursor=pointer]: More
+          - listitem [ref=f101e87]:
+            - link [ref=f101e88] [cursor=pointer]:
+              - /url: /en/pricing
+              - paragraph [ref=f101e92]: Pricing
+          - listitem [ref=f101e93]:
+            - paragraph [ref=f101e98] [cursor=pointer]: Company
+  - main [ref=f101e101]:
+    - generic [ref=f101e103]:
+      - img "Dedicated Servers Hero Image" [ref=f101e105]
+      - generic [ref=f101e109]:
+        - generic [ref=f101e110]:
+          - generic [ref=f101e112]:
+            - img "icon-ds-white" [ref=f101e115]
+            - generic [ref=f101e116]: DEDICATED SERVERS
+          - generic [ref=f101e119]:
+            - heading [level=1] [ref=f101e120]:
+              - strong [ref=f101e121]: Raw Bare Metal Power You Can Rely On
+            - paragraph [ref=f101e122]: "Fully dedicated resources to serve your projects and plans, featuring:"
+            - list [ref=f101e123]:
+              - listitem [ref=f101e124]:
+                - text: Cutting-edge
+                - strong [ref=f101e125]: AMD CPUs
+                - text: and
+                - strong [ref=f101e126]: RAM
+                - text: configurationsfor your workloads
+              - listitem [ref=f101e127]:
+                - text: Top-tier
+                - strong [ref=f101e128]: security
+                - text: and
+                - strong [ref=f101e129]: support
+                - text: that doesn't sleep, so you can
+              - listitem [ref=f101e130]:
+                - text: No Setup Fees,
+                - strong [ref=f101e131]: unlimited traffic
+                - text: and IPMI (iLO) included
+        - img "dedicated-servers-hero-foreground-ds-push-image" [ref=f101e134]
+    - generic [ref=f101e136]:
+      - generic [ref=f101e139]:
+        - heading "AMD Ryzen 12 Cores" [level=2] [ref=f101e141]
+        - generic [ref=f101e142]:
+          - generic [ref=f101e143]:
+            - generic [ref=f101e144]:
+              - generic [ref=f101e145]: $179.00
+              - generic [ref=f101e147]:
+                - generic [ref=f101e148]: "131"
+                - generic [ref=f101e149]:
+                  - generic [ref=f101e150]: "75"
+                  - generic [ref=f101e151]:
+                    - generic [ref=f101e152]: $
+                    - generic [ref=f101e153]: / month
+              - generic [ref=f101e154]: $131.75
+            - generic [ref=f101e156]: for the first 12 months
+            - link "Get Started" [ref=f101e161] [cursor=pointer]:
+              - /url: ./amd-ryzen-12-cores?addons=2046&image=ubuntu.345&ds-storage=9999.1._.P&qty=1&contract=12
+          - generic [ref=f101e165]:
+            - generic [ref=f101e167]:
+              - generic [ref=f101e168]: 12 x 3.70 GHz
+              - generic [ref=f101e169]: AMD Ryzen 9 7900
+            - generic [ref=f101e171]:
+              - generic [ref=f101e172]: 64 GB RAM
+              - generic [ref=f101e173]: Up to 128 GB RAM
+            - generic [ref=f101e175]:
+              - generic [ref=f101e176]: 1 TB NVMe
+              - generic [ref=f101e177]: More storage available
+            - generic [ref=f101e178]: Unlimited Traffic*
+            - generic [ref=f101e181]: 1 Gbit/s Port
+        - generic [ref=f101e184]: Limited Special Offer
+      - generic [ref=f101e189]:
+        - heading "AMD Genoa 24 Cores" [level=2] [ref=f101e191]
+        - generic [ref=f101e192]:
+          - generic [ref=f101e193]:
+            - generic [ref=f101e194]:
+              - generic [ref=f101e195]: $239.00
+              - generic [ref=f101e197]:
+                - generic [ref=f101e198]: "215"
+                - generic [ref=f101e199]:
+                  - generic [ref=f101e200]: "10"
+                  - generic [ref=f101e201]:
+                    - generic [ref=f101e202]: $
+                    - generic [ref=f101e203]: / month
+              - generic [ref=f101e204]: $215.10
+            - generic [ref=f101e206]: for the first 12 months
+            - link "Get Started" [ref=f101e211] [cursor=pointer]:
+              - /url: ./amd-genoa-24-cores/?addons=1073,2046&image=ubuntu.345&ds-storage=9999.2.hardware-raid-1.P&qty=1&contract=12
+          - generic [ref=f101e215]:
+            - generic [ref=f101e217]:
+              - generic [ref=f101e218]: 24 x 2.50 GHz (3.70 max)
+              - generic [ref=f101e219]: AMD EPYC 9224
+            - generic [ref=f101e221]:
+              - generic [ref=f101e222]: 128 GB REG ECC
+              - generic [ref=f101e223]: Up to 768 GB RAM
+            - generic [ref=f101e225]:
+              - generic [ref=f101e226]: 2x 1 TB SSD
+              - generic [ref=f101e227]: More storage available
+            - generic [ref=f101e228]: Unlimited Traffic*
+            - generic [ref=f101e231]: 1 Gbit/s Port
+      - generic [ref=f101e236]:
+        - heading "AMD Turin 32 Cores" [level=2] [ref=f101e238]
+        - generic [ref=f101e239]:
+          - generic [ref=f101e240]:
+            - generic [ref=f101e241]:
+              - generic [ref=f101e242]: $479.00
+              - generic [ref=f101e244]:
+                - generic [ref=f101e245]: "431"
+                - generic [ref=f101e246]:
+                  - generic [ref=f101e247]: "10"
+                  - generic [ref=f101e248]:
+                    - generic [ref=f101e249]: $
+                    - generic [ref=f101e250]: / month
+              - generic [ref=f101e251]: $431.10
+            - generic [ref=f101e253]: for the first 12 months
+            - link "Get Started" [ref=f101e258] [cursor=pointer]:
+              - /url: ./ds-40/?addons=666,2046&image=ubuntu.345&ds-storage=9999.2.raid-software-1.P&qty=1&contract=12
+          - generic [ref=f101e262]:
+            - generic [ref=f101e264]:
+              - generic [ref=f101e265]: 32 x 3.55 GHz (4.20 max)
+              - generic [ref=f101e266]: AMD EPYC 9355P
+            - generic [ref=f101e268]:
+              - generic [ref=f101e269]: 128 GB RAM
+              - generic [ref=f101e270]: Up to 768 GB RAM
+            - generic [ref=f101e272]:
+              - generic [ref=f101e273]: 2 x 1 TB NVMe
+              - generic [ref=f101e274]: More storage available
+            - generic [ref=f101e275]: Unlimited Traffic*
+            - generic [ref=f101e279]:
+              - generic [ref=f101e280]: 1 Gbit/s Port
+              - generic [ref=f101e281]: 10 Gbit/s Port available
+      - generic [ref=f101e284]:
+        - heading "AMD Turin 64 Cores" [level=2] [ref=f101e286]
+        - generic [ref=f101e287]:
+          - generic [ref=f101e288]:
+            - generic [ref=f101e289]:
+              - generic [ref=f101e290]: $839.00
+              - generic [ref=f101e292]:
+                - generic [ref=f101e293]: "755"
+                - generic [ref=f101e294]:
+                  - generic [ref=f101e295]: "10"
+                  - generic [ref=f101e296]:
+                    - generic [ref=f101e297]: $
+                    - generic [ref=f101e298]: / month
+              - generic [ref=f101e299]: $755.10
+            - generic [ref=f101e301]: for the first 12 months
+            - link "Get Started" [ref=f101e306] [cursor=pointer]:
+              - /url: ./ds-50/?addons=666,2046&image=ubuntu.345&ds-storage=9999.2.raid-software-1.P&qty=1&contract=12
+          - generic [ref=f101e310]:
+            - generic [ref=f101e312]:
+              - generic [ref=f101e313]: 64 x 3.20 GHz (4.20 max)
+              - generic [ref=f101e314]: AMD EPYC 9555P
+            - generic [ref=f101e316]:
+              - generic [ref=f101e317]: 192 GB RAM
+              - generic [ref=f101e318]: Up to 1152 GB RAM
+            - generic [ref=f101e320]:
+              - generic [ref=f101e321]: 2 x 1 TB NVMe
+              - generic [ref=f101e322]: More storage available
+            - generic [ref=f101e323]: Unlimited Traffic*
+            - generic [ref=f101e327]:
+              - generic [ref=f101e328]: 1 Gbit/s Port
+              - generic [ref=f101e329]: 10 Gbit/s Port available
+    - generic [ref=f101e331]:
+      - generic [ref=f101e334]:
+        - heading "9 Regions, 11 Locations, Global Availability" [level=2] [ref=f101e336]
+        - generic [ref=f101e337]: Host your server with low latency wherever you and your users need it
+      - img "Map Location en" [ref=f101e342]
+    - generic [ref=f101e346]:
+      - heading "Operating Systems, Apps, and Deployment Options for Your Dedicated Server" [level=2] [ref=f101e348]
+      - generic [ref=f101e349]: Customize your server with the right set of tools for database hosting, ecommerce, Windows, software testing, AI/Machine Learning, hosting reselling, and more
+    - generic [ref=f101e353]:
+      - generic [ref=f101e354]:
+        - button "Most Popular" [ref=f101e355] [cursor=pointer]
+        - button "Operating Systems" [ref=f101e357] [cursor=pointer]
+        - button "Panels & Apps" [ref=f101e359] [cursor=pointer]
+      - generic [ref=f101e363]:
+        - generic [ref=f101e365]:
+          - img "Icon Ubuntu" [ref=f101e367]
+          - generic [ref=f101e368]: Ubuntu
+        - generic [ref=f101e371]:
+          - img "image windows" [ref=f101e374]
+          - generic [ref=f101e375]: Windows
+        - generic [ref=f101e378]:
+          - img "Icon CentOS" [ref=f101e380]
+          - generic [ref=f101e381]: CentOS
+        - generic [ref=f101e384]:
+          - img "vps-page-tab-panel-plesk" [ref=f101e387]
+          - generic [ref=f101e388]: Plesk
+        - generic [ref=f101e391]:
+          - img "icon cpanel" [ref=f101e394]
+          - generic [ref=f101e395]: cPanel
+        - generic [ref=f101e398]:
+          - img "vps-page-tab-panel-proxmox" [ref=f101e401]
+          - generic [ref=f101e402]: Proxmox
+        - generic [ref=f101e405]:
+          - img "vps-page-tab-panel-docker" [ref=f101e408]
+          - generic [ref=f101e409]: Docker
+    - heading "To Be the Best, You Need to Work with the Best" [level=2] [ref=f101e416]
+    - img "Best Brands" [ref=f101e421]
+    - heading "The Contabo Difference" [level=2] [ref=f101e427]
+    - generic [ref=f101e429]:
+      - generic [ref=f101e432]:
+        - img "Reason Incredible Prices" [ref=f101e435]
+        - generic [ref=f101e436]:
+          - generic [ref=f101e437]: Top Performance at Fair Prices
+          - paragraph [ref=f101e441]: Our VPS hosting plans with modern CPUs, RAM, and NVMe deliver cheap VPS options without compromise. Setup fees on selected products allow us to keep our base prices as low as possible.
+      - generic [ref=f101e444]:
+        - img "Reason Global Availability" [ref=f101e447]
+        - generic [ref=f101e448]:
+          - generic [ref=f101e449]: Global Availability
+          - paragraph [ref=f101e453]:
+            - text: Get the most out of your server wherever you are. Twelve strategic
+            - link "Locations" [ref=f101e454] [cursor=pointer]:
+              - /url: https://contabo.com/en/locations/
+            - text: in nine global regions ensure low latency and
+            - link "SLA-backed" [ref=f101e455] [cursor=pointer]:
+              - /url: https://contabo.com/en/legal/terms-and-conditions/
+            - text: reliability.
+      - generic [ref=f101e458]:
+        - img "Reason First-class Support" [ref=f101e461]
+        - generic [ref=f101e462]:
+          - generic [ref=f101e463]: Support That Never Sleeps
+          - paragraph [ref=f101e467]: Round-the-clock, award-winning, English-speaking support that’s just a call or click away - plus live chat, self-help resources, and tutorial videos.
+      - generic [ref=f101e470]:
+        - img "Reason Focus on Security" [ref=f101e473]
+        - generic [ref=f101e474]:
+          - generic [ref=f101e475]: Security is Our Priority
+          - paragraph [ref=f101e479]:
+            - text: We protect your data like it’s our own with
+            - link "DDoS protection" [ref=f101e480] [cursor=pointer]:
+              - /url: https://contabo.com/en/ddos-protection/
+            - text: and strict internal procedures. As our co-founder puts it, "we are obsessed with security."
+      - generic [ref=f101e483]:
+        - img "Reason World-class Quality" [ref=f101e486]
+        - generic [ref=f101e487]:
+          - generic [ref=f101e488]: Quality That Delivers
+          - paragraph [ref=f101e492]: Over 20 years strong and always improving, we’re committed to cloud hosting that maximizes your value without compromising on quality.
+      - generic [ref=f101e495]:
+        - img "Reason Awards and Recognitions" [ref=f101e498]
+        - generic [ref=f101e499]:
+          - generic [ref=f101e500]: Awards and Recognitions
+          - paragraph [ref=f101e504]:
+            - text: There's a reason many of our
+            - link "awards" [ref=f101e505] [cursor=pointer]:
+              - /url: https://contabo.com/en/about-us/#awards-in-detail
+            - text: say "Top Choice". Our ratings for superior speed, helpful customer service, and great value speak for themselves.
+    - heading "What Makes our Bare Metal Better than the Rest?" [level=2] [ref=f101e511]
+    - generic [ref=f101e513]:
+      - generic [ref=f101e516]:
+        - img "Icon Power" [ref=f101e519]
+        - generic [ref=f101e520]:
+          - generic [ref=f101e521]: 100% Dedicated Resources
+          - paragraph [ref=f101e525]: Take total control with resources that are 100% yours. No sharing, no interruptions - just peak performance for your most demanding projects.
+      - generic [ref=f101e528]:
+        - img "what you get features in storage vps lots of ssd" [ref=f101e531]
+        - generic [ref=f101e532]:
+          - generic [ref=f101e533]: Customizable Storage
+          - paragraph [ref=f101e537]:
+            - text: Choose from a range of
+            - link "HDD, SSD, and NVMe SSD storage options" [ref=f101e538] [cursor=pointer]:
+              - /url: https://contabo.com/blog/nvme-vs-ssd-vs-hdd/
+            - text: . Our flexible software and hardware RAID configurations make scaling simple.
+      - generic [ref=f101e541]:
+        - img "Flexibility" [ref=f101e544]
+        - generic [ref=f101e545]:
+          - generic [ref=f101e546]: Tailored Hardware Solutions
+          - paragraph [ref=f101e550]: Set up and scale your hardware configuration for any project. Custom setups might take a bit longer, but the boost in performance is worth the wait.
+      - generic [ref=f101e553]:
+        - img "Icon Traffic alt" [ref=f101e556]
+        - generic [ref=f101e557]:
+          - generic [ref=f101e558]: Unlimited Traffic
+          - paragraph [ref=f101e562]: Enjoy unlimited data transfer from 1 Gbit/s to 10 Gbit/s (subject to our fair usage policy). Locations like Australia and Japan offer specific transfer rates.
+      - generic [ref=f101e565]:
+        - img "Icon GPU Solutions" [ref=f101e568]
+        - generic [ref=f101e569]:
+          - generic [ref=f101e570]: True Graphics Power
+          - paragraph [ref=f101e574]:
+            - text: Turn your Bare Metal server into a powerhouse for everything from
+            - link "AI & Machine Learning" [ref=f101e575] [cursor=pointer]:
+              - /url: https://contabo.com/en/ai-and-machine-learning/
+            - text: to
+            - link "crypto mining" [ref=f101e576] [cursor=pointer]:
+              - /url: https://contabo.com/blog/can-i-use-contabo-servers-for-crypto/
+            - text: with NVIDIA Tesla and GeForce GT GPUs.
+      - generic [ref=f101e579]:
+        - img "Virtual Machine Instance" [ref=f101e582]
+        - generic [ref=f101e583]:
+          - generic [ref=f101e584]: Virtual Machine Hosting
+          - paragraph [ref=f101e588]: Master your VM hosting with AMD EPYC CPUs featuring next-level multithreading, together with top-tier hypervisors and software like Proxmox VE.
+      - generic [ref=f101e591]:
+        - img "icon_network" [ref=f101e594]
+        - generic [ref=f101e595]:
+          - generic [ref=f101e596]: Exclusive IP Addresses
+          - paragraph [ref=f101e600]:
+            - text: Each server comes with unique IPv4 and IPv6 addresses. You can also
+            - link "configure extra IPs" [ref=f101e601] [cursor=pointer]:
+              - /url: https://contabo.com/blog/configuring-additional-ip-addresses/
+            - text: to scale with your growing network demands.
+      - generic [ref=f101e604]:
+        - img "icon-private-network" [ref=f101e607]
+        - generic [ref=f101e608]:
+          - generic [ref=f101e609]: Create Private Networks
+          - paragraph [ref=f101e613]:
+            - text: Build your own virtual private clouds with our
+            - link "private networking" [ref=f101e614] [cursor=pointer]:
+              - /url: https://contabo.com/en/private-networking/
+            - text: features. Isolate your traffic flow to maximize both security and efficiency.
+      - generic [ref=f101e617]:
+        - img "Icon DNS Management alt" [ref=f101e620]
+        - generic [ref=f101e621]:
+          - generic [ref=f101e622]: DNS and Domain Flexibility
+          - paragraph [ref=f101e626]:
+            - link "Manage DNS settings" [ref=f101e627] [cursor=pointer]:
+              - /url: https://contabo.com/blog/dns-feature-contabo-customer-control-panel/
+            - text: easily through our control panel, with options for
+            - link "domain purchasing" [ref=f101e628] [cursor=pointer]:
+              - /url: https://contabo.com/en/domains/
+            - text: or transferring, facilitating seamless integration.
+      - generic [ref=f101e631]:
+        - img "icon ddos protection" [ref=f101e634]
+        - generic [ref=f101e635]:
+          - generic [ref=f101e636]: Always-On DDoS Protection
+          - paragraph [ref=f101e640]:
+            - text: Our infrastructure is equipped with
+            - link "always-on DDoS protection" [ref=f101e641] [cursor=pointer]:
+              - /url: https://contabo.com/en/ddos-protection/
+            - text: ", safeguarding your digital assets against attacks and ensuring uninterrupted operations."
+      - generic [ref=f101e644]:
+        - img "Easy Installation" [ref=f101e647]
+        - generic [ref=f101e648]:
+          - generic [ref=f101e649]: Remote Management Features
+          - paragraph [ref=f101e653]: Take control from anywhere with IPMI (iLO) for advanced remote server management. Pair it with our private networking for a rock-solid remote setup.
+      - generic [ref=f101e656]:
+        - img "Icon Webinterface" [ref=f101e659]
+        - generic [ref=f101e660]:
+          - generic [ref=f101e661]: Web UI for Easy Management
+          - paragraph [ref=f101e665]:
+            - text: Our intuitive
+            - link "Customer Control Panel" [ref=f101e666] [cursor=pointer]:
+              - /url: https://new.contabo.com/
+            - text: simplifies the management of your server, putting efficient oversight and administration right at your fingertips.
+    - generic [ref=f101e670]:
+      - heading "Trusted by Thousands Worldwide" [level=2] [ref=f101e672]
+      - generic [ref=f101e673]: With over two decades in the business, we've built a reputation that speaks for itself
+    - generic [ref=f101e675]:
+      - generic [ref=f101e676]:
+        - generic [ref=f101e677]: 275,000+
+        - generic [ref=f101e678]: Customers Worldwide
+      - generic [ref=f101e679]:
+        - generic [ref=f101e680]: 23 Years
+        - generic [ref=f101e681]: In Business
+      - generic [ref=f101e682]:
+        - generic [ref=f101e683]: "190"
+        - generic [ref=f101e684]: Countries Served
+      - generic [ref=f101e685]:
+        - generic [ref=f101e686]: 17,500+
+        - generic [ref=f101e687]: Dedicated Servers
+    - generic [ref=f101e689]:
+      - img "Customer-Support-image" [ref=f101e692]
+      - generic [ref=f101e696]:
+        - heading [level=2] [ref=f101e697]:
+          - strong [ref=f101e698]: First-class Customer Support
+        - paragraph [ref=f101e699]
+        - paragraph [ref=f101e700]:
+          - text: A
+          - strong [ref=f101e701]: premium support experience
+          - text: for every customer is one of our cornerstones. Our team of highly-trained human support agents is here to help you 24/7, 365 days a year. We believe in offering many ways to find a solution, so you can get help instantly via live chat, explore our extensive self-support resources, or learn from our practical tutorial videos.
+        - paragraph [ref=f101e702]
+        - paragraph [ref=f101e703]: You don't have to take our word for it - our customers agree, with thousands of reviews earning us a 4.5 score on Trustpilot.
+        - paragraph [ref=f101e704]
+        - paragraph [ref=f101e705]:
+          - text: Learn more about the
+          - link "Contabo Support Experience" [ref=f101e706] [cursor=pointer]:
+            - /url: https://contabo.com/en/customer-support/#support-experience
+          - text: .
+    - generic [ref=f101e708]:
+      - heading "See Why Customers Love Contabo" [level=2] [ref=f101e712]
+      - generic [ref=f101e714]:
+        - generic [ref=f101e715]:
+          - button "Previous" [ref=f101e716] [cursor=pointer]
+          - generic [ref=f101e719]:
+            - generic [ref=f101e722]:
+              - generic [ref=f101e723]: "\"If there is a host I recommend, then Contabo is it. At first I was thinking if I should go for Contabo or not due to the amount of people saying it was a scam or that stuff like bandwidth and etc were not really unlimited or at X speed, but I risked and I can say that all the specs they advertise are true.\""
+              - generic [ref=f101e724]:
+                - generic [ref=f101e725]: Pedro Miguel Ramos
+                - text: ","
+                - generic [ref=f101e726]:
+                  - text: Portugal
+                  - img "Portugal" [ref=f101e727]
+            - generic [ref=f101e730]:
+              - generic [ref=f101e731]: "\"I have absolutely zero hesitation in giving Contabo 5 stars for their product and service. Customer for nearly 4 years now on the dedicated server side, having worked through a small range of their offerings. I wish to high heaven my budget could extend to the platinum dual-core EPYC servers as the benchmarks are through the roof!!\""
+              - generic [ref=f101e732]:
+                - generic [ref=f101e733]: John
+                - text: ","
+                - generic [ref=f101e734]:
+                  - text: United Kingdom
+                  - img "United Kingdom" [ref=f101e735]
+            - generic [ref=f101e738]:
+              - generic [ref=f101e739]: "\"I have been using Contabo resources for several years. I have used several VPS for both the web and the remote desktop and now I have purchased a dedicated server. Great service, few downs and unbeatable prices.\""
+              - generic [ref=f101e740]:
+                - generic [ref=f101e741]: Queen Srl
+                - text: ","
+                - generic [ref=f101e742]:
+                  - text: Italy
+                  - img "Italy" [ref=f101e743]
+            - generic [ref=f101e746]:
+              - generic [ref=f101e747]: "\"Honestly the best cheapest provider for a VPS/Dedicated Server, phoned up the support number and was surprised by the fast response, dialled me straight to an agent instead of wasting my time in a queue.\""
+              - generic [ref=f101e748]:
+                - generic [ref=f101e749]: Huss Lol
+                - text: ","
+                - generic [ref=f101e750]:
+                  - text: United Kingdom
+                  - img "United Kingdom" [ref=f101e751]
+            - generic [ref=f101e754]:
+              - generic [ref=f101e755]: "\"With the Contabo Linux Cluster we have achieved a 99.99% availability in our SaaS last year, and thanks to the excellent service of Contabo, we can expand the capacity of the cluster in just a few hours, according to the growth of our business. \""
+              - generic [ref=f101e756]:
+                - generic [ref=f101e757]: Jorge Antonio Quirós Ramírez
+                - text: ","
+                - generic [ref=f101e758]:
+                  - text: Costa Rica
+                  - img "Costa Rica" [ref=f101e759]
+          - button "next" [ref=f101e760] [cursor=pointer]
+        - generic [ref=f101e763]:
+          - button "Page 1" [ref=f101e764] [cursor=pointer]
+          - button "Page 2" [ref=f101e765] [cursor=pointer]
+          - button "Page 3" [ref=f101e766] [cursor=pointer]
+          - button "Page 4" [ref=f101e767] [cursor=pointer]
+          - button "Page 5" [ref=f101e768] [cursor=pointer]
+    - generic [ref=f101e774]:
+      - paragraph [ref=f101e775]:
+        - strong [ref=f101e776]: "Minimum initial contract length:"
+        - text: 1 month |
+        - strong [ref=f101e777]: "Minimum following contract length:"
+        - text: Equal to the initial contract length |
+        - strong [ref=f101e778]: "Minimum cancellation notice:"
+        - text: None (pre-paid) or 4 weeks (post-paid)
+        - strong [ref=f101e779]: .
+      - paragraph [ref=f101e780]
+      - paragraph [ref=f101e781]: The price displayed is the effective monthly rate for a 12-month subscription including applicable taxes.
+      - paragraph [ref=f101e782]
+      - paragraph [ref=f101e783]:
+        - emphasis [ref=f101e784]: "*Incoming traffic is unlimited and unmetered. No extra charges apply. To maintain fair network performance for all customers, traffic usage must align with typical server workloads. If the usage is exceptionally high or disruptive, Contabo reserves the right to throttle servers at its own discretion. Such measures are rare and only applied to preserve fair access."
+      - paragraph [ref=f101e785]
+      - paragraph [ref=f101e786]:
+        - text: ⚡
+        - strong [ref=f101e787]: Fast provisioning of Dedicated Servers terms and conditions
+        - text: :Limited to one order per customer (max. 5 servers). Standard configurations only. No identity verification required. No order notes accepted. Automated payments only. Credit available upon request (50 EUR, 50 GBP or 60 USD). Resulted credit can only be used for renewals or additional services.
+    - generic [ref=f101e789]:
+      - heading "Need help with large infrastructure setups or bulk orders?" [level=2] [ref=f101e794]
+      - link "Talk to Our Sales Team" [ref=f101e800] [cursor=pointer]:
+        - /url: https://contabo.com/en/sales/
+    - generic [ref=f101e804]:
+      - generic [ref=f101e806]:
+        - heading "Dedicated Server FAQs" [level=1] [ref=f101e808]
+        - generic [ref=f101e809]: Frequently Asked Questions about Dedicated Server Hosting
+      - generic [ref=f101e811]:
+        - group [ref=f101e812]:
+          - generic "What is a Dedicated Server?" [ref=f101e813] [cursor=pointer]
+        - group [ref=f101e817]:
+          - generic "Why use a Dedicated Server?" [ref=f101e818] [cursor=pointer]
+        - group [ref=f101e822]:
+          - generic "How does Dedicated Server hosting work?" [ref=f101e823] [cursor=pointer]
+        - group [ref=f101e827]:
+          - generic "How much does a Dedicated Server cost?" [ref=f101e828] [cursor=pointer]
+        - group [ref=f101e832]:
+          - generic "Can I customize my Dedicated Server?" [ref=f101e833] [cursor=pointer]
+        - group [ref=f101e837]:
+          - generic "What projects and applications can I use Dedicated Servers for?" [ref=f101e838] [cursor=pointer]
+        - group [ref=f101e842]:
+          - generic "What payment methods are available?" [ref=f101e843] [cursor=pointer]
+        - group [ref=f101e847]:
+          - generic "Which Dedicated Server configuration is right for me?" [ref=f101e848] [cursor=pointer]
+        - group [ref=f101e852]:
+          - generic "Can I change my Dedicated Server's hardware configuration later on?" [ref=f101e853] [cursor=pointer]
+        - group [ref=f101e857]:
+          - generic "Which operating systems are available for my Dedicated Server?" [ref=f101e858] [cursor=pointer]
+        - group [ref=f101e862]:
+          - generic "Do you offer custom operating system installation with specific parameters?" [ref=f101e863] [cursor=pointer]
+        - group [ref=f101e867]:
+          - generic "What hypervisors are available with my Dedicated Server?" [ref=f101e868] [cursor=pointer]
+        - group [ref=f101e872]:
+          - generic "Do you offer hosting control panels for Dedicated Servers?" [ref=f101e873] [cursor=pointer]
+        - group [ref=f101e877]:
+          - generic "What's the difference between your Dedicated Servers, Virtual Dedicated Servers (VDS), and Virtual Private Servers (VPS)?" [ref=f101e878] [cursor=pointer]
+  - contentinfo [ref=f101e882]:
+    - generic [ref=f101e887]:
+      - generic [ref=f101e890]:
+        - heading "Keep in touch" [level=2] [ref=f101e891]
+        - generic [ref=f101e892]:
+          - generic [ref=f101e893]: Latest News and Deals from us. No spam guarantee!
+          - generic [ref=f101e894]:
+            - generic [ref=f101e895]: Email
+            - textbox "Enter your email address" [ref=f101e896]
+          - button "Subscribe" [ref=f101e897]
+          - paragraph [ref=f101e901]:
+            - text: The
+            - link "privacy statement" [ref=f101e902] [cursor=pointer]:
+              - /url: https://contabo.com/en-us/legal/privacy/
+            - text: holds information on the involved data processing and right to withdraw consent.
+      - generic [ref=f101e905]:
+        - link "Facebook" [ref=f101e906] [cursor=pointer]:
+          - /url: https://www.facebook.com/ContaboCom/
+          - img "Facebook" [ref=f101e908]
+        - link "LinkedIn" [ref=f101e909] [cursor=pointer]:
+          - /url: https://www.linkedin.com/company/contabo-gmbh
+          - img "LinkedIn" [ref=f101e911]
+        - link "X" [ref=f101e912] [cursor=pointer]:
+          - /url: https://contabo.com/en/auto-backup/
+          - img "X" [ref=f101e914]
+        - link "YouTube" [ref=f101e915] [cursor=pointer]:
+          - /url: https://www.youtube.com/c/ContaboCom
+          - img "YouTube" [ref=f101e917]
+    - generic [ref=f101e922]:
+      - generic [ref=f101e923]:
+        - paragraph [ref=f101e926]: Products
+        - generic [ref=f101e927]:
+          - link [ref=f101e928] [cursor=pointer]:
+            - /url: https://contabo.com/en/vps/
+            - paragraph [ref=f101e930]: Cloud VPS
+          - link [ref=f101e931] [cursor=pointer]:
+            - /url: https://contabo.com/en/vds/
+            - paragraph [ref=f101e933]: Cloud VDS (Virtual Dedicated Server)
+          - link [ref=f101e934] [cursor=pointer]:
+            - /url: https://contabo.com/en/dedicated-servers/
+            - paragraph [ref=f101e936]: Dedicated Servers
+          - link [ref=f101e937] [cursor=pointer]:
+            - /url: https://contabo.com/en/server-outlet/
+            - paragraph [ref=f101e939]: Server Deals
+          - link [ref=f101e940] [cursor=pointer]:
+            - /url: https://contabo.com/en/storage-vps/
+            - paragraph [ref=f101e942]: Storage VPS
+          - link [ref=f101e943] [cursor=pointer]:
+            - /url: https://contabo.com/en/private-networking/
+            - paragraph [ref=f101e945]: Private Networking
+          - link [ref=f101e946] [cursor=pointer]:
+            - /url: https://contabo.com/en/contabo-api/
+            - paragraph [ref=f101e948]: Contabo API
+          - link [ref=f101e949] [cursor=pointer]:
+            - /url: https://contabo.com/en/contabo-cli/
+            - paragraph [ref=f101e951]: Contabo CLI
+          - link [ref=f101e952] [cursor=pointer]:
+            - /url: https://contabo.com/en/custom-images/
+            - paragraph [ref=f101e954]: Custom Images
+          - link [ref=f101e955] [cursor=pointer]:
+            - /url: https://contabo.com/en/cloud-init/
+            - paragraph [ref=f101e957]: Cloud Init
+          - link [ref=f101e958] [cursor=pointer]:
+            - /url: https://contabo.com/en/domains/
+            - paragraph [ref=f101e960]: Domains
+          - link [ref=f101e961] [cursor=pointer]:
+            - /url: https://contabo.com/en/windows-servers-vps/
+            - paragraph [ref=f101e963]: Windows VPS
+          - link [ref=f101e964] [cursor=pointer]:
+            - /url: https://contabo.com/en/cpanel-vps-server/
+            - paragraph [ref=f101e966]: cPanel VPS
+          - link [ref=f101e967] [cursor=pointer]:
+            - /url: https://contabo.com/en/forex-vps/
+            - paragraph [ref=f101e969]: Forex VPS
+          - link [ref=f101e970] [cursor=pointer]:
+            - /url: https://contabo.com/en/gpu-cloud/
+            - paragraph [ref=f101e972]: GPU Solutions
+          - link [ref=f101e973] [cursor=pointer]:
+            - /url: https://contabo.com/en/pricing/
+            - paragraph [ref=f101e975]: Pricing
+      - generic [ref=f101e976]:
+        - paragraph [ref=f101e979]: Solutions
+        - generic [ref=f101e980]:
+          - link [ref=f101e981] [cursor=pointer]:
+            - /url: https://contabo.com/en/crypto/
+            - paragraph [ref=f101e983]: Crypto Solutions
+          - link [ref=f101e984] [cursor=pointer]:
+            - /url: https://contabo.com/en/cpanel-servers/
+            - paragraph [ref=f101e986]: cPanel
+          - link [ref=f101e987] [cursor=pointer]:
+            - /url: https://contabo.com/en/plesk-servers/
+            - paragraph [ref=f101e989]: Plesk
+          - link [ref=f101e990] [cursor=pointer]:
+            - /url: https://contabo.com/en/windows-licenses/
+            - paragraph [ref=f101e992]: Windows
+          - link [ref=f101e993] [cursor=pointer]:
+            - /url: https://contabo.com/en/ddos-protection/
+            - paragraph [ref=f101e995]: DDOS Protection
+          - link [ref=f101e996] [cursor=pointer]:
+            - /url: https://contabo.com/en/ci-cd-pipelines/
+            - paragraph [ref=f101e998]: CI/CD Pipelines
+          - link [ref=f101e999] [cursor=pointer]:
+            - /url: https://contabo.com/en/database-hosting/
+            - paragraph [ref=f101e1001]: Database Hosting
+          - link [ref=f101e1002] [cursor=pointer]:
+            - /url: https://contabo.com/en/ecommerce-hosting/
+            - paragraph [ref=f101e1004]: eCommerce Hosting
+          - link [ref=f101e1005] [cursor=pointer]:
+            - /url: https://contabo.com/en/nextcloud-hosting/
+            - paragraph [ref=f101e1007]: Nextcloud
+          - link [ref=f101e1008] [cursor=pointer]:
+            - /url: https://contabo.com/en/mail-server/
+            - paragraph [ref=f101e1010]: Self-Hosted Mail
+          - link [ref=f101e1011] [cursor=pointer]:
+            - /url: https://contabo.com/en/cdn-vshosting
+            - paragraph [ref=f101e1013]: CDN from vshosting
+      - generic [ref=f101e1014]:
+        - paragraph [ref=f101e1017]: Locations
+        - generic [ref=f101e1018]:
+          - link [ref=f101e1019] [cursor=pointer]:
+            - /url: https://contabo.com/en/locations/
+            - paragraph [ref=f101e1021]: Location Overview
+          - link [ref=f101e1022] [cursor=pointer]:
+            - /url: https://contabo.com/en/locations/europe/
+            - paragraph [ref=f101e1024]: Europe
+          - link [ref=f101e1025] [cursor=pointer]:
+            - /url: https://contabo.com/en/locations/united-kingdom/
+            - paragraph [ref=f101e1027]: United Kingdom
+          - link [ref=f101e1028] [cursor=pointer]:
+            - /url: https://contabo.com/en/locations/united-states/
+            - paragraph [ref=f101e1030]: United States
+          - link [ref=f101e1031] [cursor=pointer]:
+            - /url: https://contabo.com/en/locations/asia-singapore/
+            - paragraph [ref=f101e1033]: Singapore
+          - link [ref=f101e1034] [cursor=pointer]:
+            - /url: https://contabo.com/en/locations/asia-japan/
+            - paragraph [ref=f101e1036]: Japan
+          - link [ref=f101e1037] [cursor=pointer]:
+            - /url: https://contabo.com/en/locations/australia/
+            - paragraph [ref=f101e1039]: Australia
+          - link [ref=f101e1040] [cursor=pointer]:
+            - /url: https://contabo.com/en/locations/india/
+            - paragraph [ref=f101e1042]: India
+      - generic [ref=f101e1043]:
+        - paragraph [ref=f101e1046]: Company
+        - generic [ref=f101e1047]:
+          - link [ref=f101e1048] [cursor=pointer]:
+            - /url: https://contabo.com/en/about-us/
+            - paragraph [ref=f101e1050]: About Us
+          - link [ref=f101e1051] [cursor=pointer]:
+            - /url: https://contabo.com/en/sustainability/
+            - paragraph [ref=f101e1053]: Sustainability
+          - link [ref=f101e1054] [cursor=pointer]:
+            - /url: https://contabo.com/en/careers/
+            - paragraph [ref=f101e1056]: Join our Team
+          - link [ref=f101e1057] [cursor=pointer]:
+            - /url: https://contabo.com/en/legal/terms-and-conditions/
+            - paragraph [ref=f101e1059]: Terms and Conditions
+          - link [ref=f101e1060] [cursor=pointer]:
+            - /url: https://contabo.com/en/legal/privacy/
+            - paragraph [ref=f101e1062]: Privacy
+          - link [ref=f101e1063] [cursor=pointer]:
+            - /url: https://contabo.com/en/legal/impressum/
+            - paragraph [ref=f101e1065]: Legal Notice
+          - link [ref=f101e1066] [cursor=pointer]:
+            - /url: https://contabo.com/en/affiliate-program/
+            - paragraph [ref=f101e1068]: Affiliate Program
+          - link [ref=f101e1069] [cursor=pointer]:
+            - /url: https://contabo.com/blog/
+            - paragraph [ref=f101e1071]: Blog
+          - link [ref=f101e1072] [cursor=pointer]:
+            - /url: https://contabo.com/en/locations/
+            - paragraph [ref=f101e1074]: Location Overview
+      - generic [ref=f101e1075]:
+        - paragraph [ref=f101e1078]: Contact & Help
+        - generic [ref=f101e1079]:
+          - link [ref=f101e1080] [cursor=pointer]:
+            - /url: https://help.contabo.com/de/support/home
+            - paragraph [ref=f101e1082]: Support
+          - link [ref=f101e1083] [cursor=pointer]:
+            - /url: https://contabo.com/en/sales/
+            - paragraph [ref=f101e1085]: Sales
+          - link [ref=f101e1086] [cursor=pointer]:
+            - /url: https://contabo.com/blog/tutorials/
+            - paragraph [ref=f101e1088]: Tutorials
+          - link [ref=f101e1089] [cursor=pointer]:
+            - /url: https://contabo.com/en/customer-support/faq/
+            - paragraph [ref=f101e1091]: FAQ
+          - link [ref=f101e1092] [cursor=pointer]:
+            - /url: https://contabo-status.com/
+            - paragraph [ref=f101e1094]: Server Status
+          - link [ref=f101e1095] [cursor=pointer]:
+            - /url: https://contabo.com/en/order-status/
+            - paragraph [ref=f101e1097]: Order Status
+          - link [ref=f101e1098] [cursor=pointer]:
+            - /url: https://contabo.com/en/abuse/
+            - paragraph [ref=f101e1100]: Abuse
+    - generic [ref=f101e1102]:
+      - generic [ref=f101e1103]:
+        - link "Contabo GmbH" [ref=f101e1105] [cursor=pointer]:
+          - /url: /en/
+          - img "Contabo GmbH" [ref=f101e1107]
+        - generic [ref=f101e1108]: Cloud VPS and Bare Metal Servers for Less
+      - generic [ref=f101e1109]:
+        - img "PayPal" [ref=f101e1112]
+        - img "Visa" [ref=f101e1115]
+        - img "MasterCard" [ref=f101e1118]
+        - img "American Express" [ref=f101e1121]
+        - generic [ref=f101e1122]:
+          - img "Privacy Protected" [ref=f101e1124]
+          - paragraph [ref=f101e1128]:
+            - strong [ref=f101e1129]: Privacy
+            - text: Protected
+        - generic [ref=f101e1130]:
+          - img "Secure Checkout" [ref=f101e1132]
+          - paragraph [ref=f101e1136]:
+            - strong [ref=f101e1137]: Secure
+            - text: Checkout
+    - generic [ref=f101e1138]: © Contabo 2003-2026
+  - dialog [ref=f101e1143]:
+    - generic [ref=f101e1144]:
+      - heading [level=2] [ref=f101e1145]:
+        - strong [ref=f101e1146]: About cookies on this site
+      - paragraph [ref=f101e1147]: We use cookies to collect and analyse information on site performance and usage, to provide social media features and to enhance and customise content and advertisements.
+      - paragraph [ref=f101e1148]:
+        - link "Learn more" [ref=f101e1149] [cursor=pointer]:
+          - /url: https://contabo.com/en/legal/cookie-policy/
+    - generic [ref=f101e1150]:
+      - button "Allow all cookies" [ref=f101e1151] [cursor=pointer]
+      - button "Deny all" [ref=f101e1152] [cursor=pointer]
+      - button "Cookie settings" [ref=f101e1153] [cursor=pointer]

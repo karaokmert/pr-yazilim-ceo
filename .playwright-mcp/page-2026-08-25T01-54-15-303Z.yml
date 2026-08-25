@@ -1,0 +1,860 @@
+- generic [active] [ref=f104e1]:
+  - generic [ref=f104e2]:
+    - navigation [ref=f104e3]:
+      - generic [ref=f104e5]:
+        - link "ionos logo" [ref=f104e7] [cursor=pointer]:
+          - /url: https://www.ionos.de
+          - img "ionos logo" [ref=f104e8]
+        - generic [ref=f104e9]:
+          - link "Jetzt anrufen:0721/170 5522" [ref=f104e11] [cursor=pointer]:
+            - /url: "tel: 0721/170 5522"
+            - img "phone icon" [ref=f104e12]
+            - text: 0721 / 170 5522
+          - button "Über Uns" [ref=f104e15] [cursor=pointer]
+          - button "Support" [ref=f104e18] [cursor=pointer]
+          - button "Login" [ref=f104e21] [cursor=pointer]
+      - navigation [ref=f104e22]:
+        - generic [ref=f104e24]:
+          - button "Neu Momentum KI" [ref=f104e25] [cursor=pointer]:
+            - generic [ref=f104e26]: Neu
+            - generic [ref=f104e27]: Momentum KI
+          - button "Domains" [ref=f104e28] [cursor=pointer]
+          - button "E-Mail & Office" [ref=f104e30] [cursor=pointer]
+          - button "Website" [ref=f104e32] [cursor=pointer]
+          - button "Onlineshop" [ref=f104e34] [cursor=pointer]
+          - button "WordPress" [ref=f104e36] [cursor=pointer]
+          - button "Hosting" [ref=f104e38] [cursor=pointer]
+          - button "Server" [ref=f104e40] [cursor=pointer]
+          - button "Cloud" [ref=f104e42] [cursor=pointer]
+          - button "Internet & Mobilfunk" [ref=f104e44] [cursor=pointer]
+    - generic [ref=f104e50]:
+      - heading "GPU Server" [level=1] [ref=f104e51]
+      - heading "Leistung neu definiert – mit RTX PRO 6000 GPUs auf dedizierter Hardware" [level=2] [ref=f104e53]
+      - list [ref=f104e56]:
+        - listitem [ref=f104e57]:
+          - paragraph [ref=f104e60]:
+            - text: Neue NVIDIA RTX PRO 6000 Blackwell Hochleistungs-GPUs verfügbar
+            - generic [ref=f104e61]: NEU
+        - listitem [ref=f104e62]:
+          - paragraph [ref=f104e65]: Unübertroffene Performance für komplexe KI- und Datenaufgaben
+        - listitem [ref=f104e66]:
+          - paragraph [ref=f104e69]: Gehostet in sicheren und zuverlässigen Rechenzentren
+        - listitem [ref=f104e70]:
+          - paragraph [ref=f104e73]: Flexible Preise – basierend auf Ihrem tatsächlichen Verbrauch
+      - link "Pakete & Preise ansehen" [ref=f104e78] [cursor=pointer]:
+        - /url: /server/gpu-server#preise
+    - link "trustpilot-logo trustpilot-rating-star-5 22454 Bewertungen – Hervorragend" [ref=f104e92] [cursor=pointer]:
+      - /url: https://de.trustpilot.com/review/ionos.de?linkid=ct.btn.trustpilot
+      - generic [ref=f104e93]:
+        - img "trustpilot-logo" [ref=f104e95]
+        - generic [ref=f104e96]:
+          - img "trustpilot-rating-star-5" [ref=f104e98]
+          - strong [ref=f104e100]:
+            - generic [ref=f104e101]: 22454 Bewertungen –
+            - generic [ref=f104e102]: Hervorragend
+    - generic [ref=f104e108]:
+      - generic [ref=f104e109]:
+        - img "IONOS" [ref=f104e110]
+        - paragraph [ref=f104e111]: GPU Server
+      - generic [ref=f104e112]:
+        - link "scroll to top" [ref=f104e113] [cursor=pointer]:
+          - /url: "#"
+        - list [ref=f104e115]:
+          - listitem [ref=f104e116]:
+            - link "Vorteile" [ref=f104e117] [cursor=pointer]:
+              - /url: /server/gpu-server#vorteile
+          - listitem [ref=f104e118]:
+            - link "Pakete & Preise" [ref=f104e119] [cursor=pointer]:
+              - /url: /server/gpu-server#preise
+          - listitem [ref=f104e120]:
+            - link "Standorte" [ref=f104e121] [cursor=pointer]:
+              - /url: /server/gpu-server#standorte
+          - listitem [ref=f104e122]:
+            - link "Anwendungsbeispiele" [ref=f104e123] [cursor=pointer]:
+              - /url: /server/gpu-server#anwendungsbeispiele
+          - listitem [ref=f104e124]:
+            - link "Fragen & Antworten" [ref=f104e125] [cursor=pointer]:
+              - /url: /server/gpu-server#faq
+    - generic [ref=f104e128]:
+      - generic [ref=f104e129]:
+        - heading "Leistung, Sicherheit und Flexibilität – genau nach Ihrem Bedarf." [level=2] [ref=f104e130]
+        - generic [ref=f104e132]: Beschleunigen Sie Ihre KI- und Data-Projekte mit leistungsstarker Infrastruktur, skalieren Sie bei Bedarf und zahlen Sie nur, was Sie nutzen.
+      - generic [ref=f104e134]:
+        - img "Frau arbeitet an Laptop mit IONOS Software zur Website-Analyse." [ref=f104e136]
+        - generic [ref=f104e137]:
+          - generic [ref=f104e140] [cursor=pointer]:
+            - generic [ref=f104e141]: Maximale Leistung
+            - generic [ref=f104e143]: Profitieren Sie von schnellerer und effizienterer Bearbeitung rechenintensiver Workloads durch zahlreiche parallele Cores.
+          - generic [ref=f104e147] [cursor=pointer]:
+            - generic [ref=f104e148]: Serverstandort Deutschland
+            - generic [ref=f104e150]: Sicheres Hosting „Made in Germany“, ISO‑27001-zertifiziert und DSGVO-konform – für reibungslose Workloads.
+          - generic [ref=f104e154] [cursor=pointer]:
+            - generic [ref=f104e155]: Minutengenaue Abrechnung
+            - generic [ref=f104e157]: Zahlen Sie nur für das, was Sie tatsächlich nutzen – minutengenau und ohne Mindestlaufzeit. Löschen Sie Ihren Server, endet die Abrechnung sofort.
+    - generic [ref=f104e161]:
+      - generic [ref=f104e162]:
+        - heading "Jetzt leistungsstarken GPU Server mieten für schnelle KI-, Rendering- und Compute-Workloads." [level=2] [ref=f104e164]
+        - generic [ref=f104e166]: Wählen Sie zwischen leistungsstarken GPUs von NVIDIA und Intel – kombiniert mit dedizierter Hardware, NVMe-Storage und viel RAM für anspruchsvolle Anwendungen.
+      - generic [ref=f104e173]:
+        - generic [ref=f104e175]:
+          - generic [ref=f104e177]: GPU
+          - generic [ref=f104e178]: CPU
+          - generic [ref=f104e179]: RAM & Storage
+          - generic [ref=f104e180]: Preis
+        - generic [ref=f104e181]:
+          - generic [ref=f104e185]:
+            - paragraph [ref=f104e188]:
+              - strong [ref=f104e189]: AP1-10 GPU
+            - paragraph [ref=f104e192]:
+              - strong [ref=f104e193]: NVIDIA® Tesla T4
+              - text: Turing 16 GB GDDR6
+            - paragraph [ref=f104e198]:
+              - strong [ref=f104e199]: AMD EPYC™ 7302P
+              - text: Zen 2 (Rome) 16 C/32 T 3,0-3,3 GHz
+            - paragraph [ref=f104e205]:
+              - strong [ref=f104e206]: 128 GB
+              - text: DDR4 ECC
+              - strong [ref=f104e208]: 1.000 GB
+              - text: NVMe SSD (2 x 1.000 GB) Hardware RAID 1
+            - generic [ref=f104e211]:
+              - generic [ref=f104e212]:
+                - generic [ref=f104e213]:
+                  - generic [ref=f104e214]: "0"
+                  - generic [ref=f104e216]:
+                    - generic [ref=f104e217]: "8194"
+                    - generic [ref=f104e218]: €
+                  - generic [ref=f104e219]: ",/Stunde"
+                - generic [ref=f104e220]:
+                  - generic [ref=f104e221]: = max.
+                  - generic [ref=f104e222]: "590"
+                  - generic [ref=f104e223]: ","
+                  - generic [ref=f104e224]: "00"
+                  - generic [ref=f104e225]: €
+                  - generic [ref=f104e226]: /Monat
+                - generic [ref=f104e227]: Einrichtung 590 €
+              - link "Konfigurieren" [ref=f104e230] [cursor=pointer]:
+                - /url: https://mein.ionos.de/server-configuration/?skipContractSelection=true&skipDomainCheck=true&cmsIdentifier=tariff-bmc-gpu-nv-t4&locale=de-de&pageName=server/gpu-server
+          - generic [ref=f104e235]:
+            - paragraph [ref=f104e238]:
+              - strong [ref=f104e239]: AP2-10 GPU
+            - paragraph [ref=f104e242]:
+              - strong [ref=f104e243]: NVIDIA® A10
+              - text: Ampere 24 GB GDDR6
+            - paragraph [ref=f104e248]:
+              - strong [ref=f104e249]: AMD EPYC™ 7313P
+              - text: Zen 3 (Milan) 16 C/32 T 3,0-3,7 GHz
+            - paragraph [ref=f104e255]:
+              - strong [ref=f104e256]: 128 GB
+              - text: DDR4 ECC
+              - strong [ref=f104e258]: 960 GB
+              - text: NVMe SSD (2 x 960 GB) Hardware RAID 1
+            - generic [ref=f104e261]:
+              - generic [ref=f104e262]:
+                - generic [ref=f104e263]:
+                  - generic [ref=f104e264]: "1"
+                  - generic [ref=f104e266]:
+                    - generic [ref=f104e267]: "0417"
+                    - generic [ref=f104e268]: €
+                  - generic [ref=f104e269]: ",/Stunde"
+                - generic [ref=f104e270]:
+                  - generic [ref=f104e271]: = max.
+                  - generic [ref=f104e272]: "750"
+                  - generic [ref=f104e273]: ","
+                  - generic [ref=f104e274]: "00"
+                  - generic [ref=f104e275]: €
+                  - generic [ref=f104e276]: /Monat
+                - generic [ref=f104e277]: Einrichtung 750 €
+              - link "Konfigurieren" [ref=f104e280] [cursor=pointer]:
+                - /url: https://mein.ionos.de/server-configuration/?skipContractSelection=true&skipDomainCheck=true&cmsIdentifier=tariff-bmc-gpu-nv-a10&locale=de-de&pageName=server/gpu-server
+          - generic [ref=f104e285]:
+            - paragraph [ref=f104e288]:
+              - strong [ref=f104e289]: IP3-10 GPU
+            - paragraph [ref=f104e292]:
+              - strong [ref=f104e293]: Intel Flex 170
+              - text: Data Center GPU 16 GB GDDR6
+            - paragraph [ref=f104e298]:
+              - strong [ref=f104e299]: Intel Xeon Gold 5412U
+              - text: Sapphire Rapids 24 C/48 T 2,1-3,9 GHz
+            - paragraph [ref=f104e305]:
+              - strong [ref=f104e306]: 256 GB
+              - text: DDR5 ECC
+              - strong [ref=f104e308]: 1,92 TB
+              - text: NVMe SSD (2 x 1,92 TB) Hardware RAID 1
+            - generic [ref=f104e311]:
+              - generic [ref=f104e312]:
+                - generic [ref=f104e313]:
+                  - generic [ref=f104e314]: "1"
+                  - generic [ref=f104e316]:
+                    - generic [ref=f104e317]: "0972"
+                    - generic [ref=f104e318]: €
+                  - generic [ref=f104e319]: ",/Stunde"
+                - generic [ref=f104e320]:
+                  - generic [ref=f104e321]: = max.
+                  - generic [ref=f104e322]: "790"
+                  - generic [ref=f104e323]: ","
+                  - generic [ref=f104e324]: "00"
+                  - generic [ref=f104e325]: €
+                  - generic [ref=f104e326]: /Monat
+                - generic [ref=f104e327]: Einrichtung 790 €
+              - link "Konfigurieren" [ref=f104e330] [cursor=pointer]:
+                - /url: https://mein.ionos.de/server-configuration/?skipContractSelection=true&skipDomainCheck=true&cmsIdentifier=tariff-bmc-gpu-i-f170&locale=de-de&pageName=server/gpu-server
+          - generic [ref=f104e334]:
+            - generic [ref=f104e335]: Brandneues Modell
+            - generic [ref=f104e336]:
+              - paragraph [ref=f104e339]:
+                - strong [ref=f104e340]: IP4-50 GPU
+              - paragraph [ref=f104e343]:
+                - strong [ref=f104e344]: NVIDIA® RTX PRO 6000
+                - text: Blackwell 96 GB GDDR7
+              - paragraph [ref=f104e349]:
+                - strong [ref=f104e350]: 2 x Intel Xeon 6517P
+                - text: Granite Rapids 16 C/32 T 3,2-4,2 GHz
+              - paragraph [ref=f104e356]:
+                - strong [ref=f104e357]: 256 GB
+                - text: DDR5 ECC
+                - strong [ref=f104e359]: 1,92 TB
+                - text: NVMe SSD (2 x 1,92 TB) Hardware RAID 1
+              - generic [ref=f104e362]:
+                - generic [ref=f104e363]:
+                  - generic [ref=f104e364]:
+                    - generic [ref=f104e365]: "2"
+                    - generic [ref=f104e367]:
+                      - generic [ref=f104e368]: "5000"
+                      - generic [ref=f104e369]: €
+                    - generic [ref=f104e370]: ",/Stunde"
+                  - generic [ref=f104e371]:
+                    - generic [ref=f104e372]: = max.
+                    - generic [ref=f104e373]: "1800"
+                    - generic [ref=f104e374]: ","
+                    - generic [ref=f104e375]: "00"
+                    - generic [ref=f104e376]: €
+                    - generic [ref=f104e377]: /Monat
+                  - generic [ref=f104e378]: Einrichtung 1800 €
+                - link "Konfigurieren" [ref=f104e381] [cursor=pointer]:
+                  - /url: https://mein.ionos.de/server-configuration/?skipContractSelection=true&skipDomainCheck=true&cmsIdentifier=tariff-bmc-gpu-ip4-50&locale=de-de&pageName=server/gpu-server
+        - paragraph [ref=f104e385]:
+          - text: Preise inkl. MwSt. Angebote sind nur für begrenzte Zeit gültig und sind teils abhängig von Mindestvertragslaufzeiten.
+          - link "Hier" [ref=f104e386] [cursor=pointer]:
+            - /url: https://www.ionos.de/terms-gtc/terms/
+          - text: finden Sie unsere Allgemeinen Geschäftsbedingungen.
+    - generic [ref=f104e389]:
+      - generic [ref=f104e390]:
+        - heading "Globale Infrastruktur, lokale Präsenz." [level=2] [ref=f104e392]
+        - generic [ref=f104e394]: Wählen Sie aus strategischen Standorten in Deutschland, Frankreich, Spanien, Großbritannien und den USA – für hohe Verfügbarkeit und regionale Compliance.
+      - 'img "Weltkarte mit markierten Rechenzentrums-Standorten in den USA, Deutschland, Frankreich, Spanien und dem Vereinigten Königreich: steht für globale Infrastruktur mit lokaler Datenverfügbarkeit und Compliance." [ref=f104e399]'
+    - generic [ref=f104e402]:
+      - generic [ref=f104e403]:
+        - heading "Entdecken Sie weitere Server-Optionen." [level=2] [ref=f104e405]
+        - generic [ref=f104e407]: Durchstöbern Sie unsere weiteren Dedicated-Server-Angebote, um die Konfiguration zu finden, die am besten zu Ihren Arbeitslasten, Leistungszielen und Ihrem Budget passt.
+      - generic [ref=f104e410]:
+        - generic [ref=f104e411]:
+          - 'img "Intel-Logo: steht für Server mit Intel-Prozessoren und bewährter Performance." [ref=f104e414]'
+          - generic [ref=f104e415]:
+            - generic [ref=f104e417]:
+              - generic [ref=f104e418]: Intel® Server
+              - generic [ref=f104e420]: Entdecken Sie unsere Intel Server mit Intel® Xeon® E3 und skalierbaren Intel® Xeon® Prozessoren.
+            - link "Server entdecken" [ref=f104e423] [cursor=pointer]:
+              - /url: /server/intel-server
+        - generic [ref=f104e424]:
+          - 'img "AMD-Logo: steht für Server mit AMD-Prozessoren und bewährter Performance." [ref=f104e427]'
+          - generic [ref=f104e428]:
+            - generic [ref=f104e430]:
+              - generic [ref=f104e431]: AMD Server
+              - generic [ref=f104e433]: Entdecken Sie unsere neue AMD-Server-Familie mit den aktuellsten Ryzen Pro und EPYC-Prozessoren.
+            - link "Server entdecken" [ref=f104e436] [cursor=pointer]:
+              - /url: /server/amd-server
+        - generic [ref=f104e437]:
+          - img "Ein Server mit einem Prozentzeichen-Symbol darüber." [ref=f104e440]
+          - generic [ref=f104e441]:
+            - generic [ref=f104e443]:
+              - generic [ref=f104e444]: Server Power Deals
+              - generic [ref=f104e446]: Bewährte Dedicated Server zu besonders günstigem Preis.
+            - link "Server entdecken" [ref=f104e449] [cursor=pointer]:
+              - /url: /server/value-dedicated-server
+        - generic [ref=f104e450]:
+          - img "Ein Dokumenten-Icon, das einen Ordner und ein Blatt Papier darstellt." [ref=f104e453]
+          - generic [ref=f104e454]:
+            - generic [ref=f104e456]:
+              - generic [ref=f104e457]: Storage Server
+              - generic [ref=f104e459]: Entdecken Sie unsere Storage-Server mit bis zu 80 TB Datenspeicher, separatem OS-Speicher.
+            - link "Server entdecken" [ref=f104e462] [cursor=pointer]:
+              - /url: /server/storage-server
+    - generic [ref=f104e465]:
+      - generic [ref=f104e466]:
+        - heading "Branchenführende Partnerschaften." [level=2] [ref=f104e468]
+        - generic [ref=f104e470]: Wir arbeiten mit branchenführenden Experten zusammen, um sicherzustellen, dass Sie von bester Leistung, Verfügbarkeit und Zuverlässigkeit profitieren.
+      - generic [ref=f104e475]:
+        - list [ref=f104e478]:
+          - listitem [ref=f104e479]:
+            - img "Intel Logo in Blau." [ref=f104e481]
+          - listitem [ref=f104e482]:
+            - img "AMD-Logo in Schwarz und Grau" [ref=f104e484]
+          - listitem [ref=f104e485]:
+            - img "micron Logo" [ref=f104e487]
+          - listitem [ref=f104e488]:
+            - img "Samsung Logo" [ref=f104e490]
+          - listitem [ref=f104e491]:
+            - img "Ubuntu Logo" [ref=f104e493]
+          - listitem [ref=f104e494]:
+            - img "Debian Logo" [ref=f104e496]
+          - listitem [ref=f104e497]:
+            - img "plesk Logo" [ref=f104e499]
+          - listitem [ref=f104e500]:
+            - img "Supermicro Logo" [ref=f104e502]
+          - listitem [ref=f104e503]:
+            - img "Proxmox Logo" [ref=f104e505]
+        - list [ref=f104e508]:
+          - listitem [ref=f104e509]:
+            - img "Intel Logo in Blau." [ref=f104e511]
+          - listitem [ref=f104e512]:
+            - img "AMD-Logo in Schwarz und Grau" [ref=f104e514]
+          - listitem [ref=f104e515]:
+            - img "micron Logo" [ref=f104e517]
+          - listitem [ref=f104e518]:
+            - img "Samsung Logo" [ref=f104e520]
+          - listitem [ref=f104e521]:
+            - img "Ubuntu Logo" [ref=f104e523]
+          - listitem [ref=f104e524]:
+            - img "Debian Logo" [ref=f104e526]
+          - listitem [ref=f104e527]:
+            - img "plesk Logo" [ref=f104e529]
+          - listitem [ref=f104e530]:
+            - img "Supermicro Logo" [ref=f104e532]
+          - listitem [ref=f104e533]:
+            - img "Proxmox Logo" [ref=f104e535]
+        - list [ref=f104e538]:
+          - listitem [ref=f104e539]:
+            - img "Intel Logo in Blau." [ref=f104e541]
+          - listitem [ref=f104e542]:
+            - img "AMD-Logo in Schwarz und Grau" [ref=f104e544]
+          - listitem [ref=f104e545]:
+            - img "micron Logo" [ref=f104e547]
+          - listitem [ref=f104e548]:
+            - img "Samsung Logo" [ref=f104e550]
+          - listitem [ref=f104e551]:
+            - img "Ubuntu Logo" [ref=f104e553]
+          - listitem [ref=f104e554]:
+            - img "Debian Logo" [ref=f104e556]
+          - listitem [ref=f104e557]:
+            - img "plesk Logo" [ref=f104e559]
+          - listitem [ref=f104e560]:
+            - img "Supermicro Logo" [ref=f104e562]
+          - listitem [ref=f104e563]:
+            - img "Proxmox Logo" [ref=f104e565]
+    - generic [ref=f104e568]:
+      - generic [ref=f104e569]:
+        - img "trustpilot-logo"
+        - img "trustpilot-rating-star-5" [ref=f104e570]
+      - generic [ref=f104e571]:
+        - text: IONOS | ionos.de –
+        - link "22454 Bewertungen" [ref=f104e572] [cursor=pointer]:
+          - /url: https://de.trustpilot.com/review/ionos.de?linkid=ct.btn.trustpilot
+        - text: – TrustScore 4.3 von 5
+      - generic [ref=f104e573]:
+        - generic [ref=f104e574]:
+          - generic [ref=f104e575]:
+            - img "trustpilot-rating-star-5"
+            - paragraph [ref=f104e576]: Michael Schmid
+            - paragraph [ref=f104e577]: Jul 29 2026
+          - generic [ref=f104e578]:
+            - heading "Sehr netter und kompetenter Kontakt" [level=5] [ref=f104e579]
+            - paragraph [ref=f104e581]: Sehr netter und kompetenter Kontakt. Mein Anliegen wurde schnell und vollständig gelöst! Danke! Sehr guter Kundennservice durch einen echten und kompetenten Mitarbeiter.
+        - generic [ref=f104e582]:
+          - generic [ref=f104e583]:
+            - img "trustpilot-rating-star-5"
+            - paragraph [ref=f104e584]: Rolf-Peter Medler
+            - paragraph [ref=f104e585]: Jul 23 2026
+          - generic [ref=f104e586]:
+            - heading "10 von 10 Punkten!" [level=5] [ref=f104e587]
+            - paragraph [ref=f104e589]: 10 von 10 Punkten! So stellt man sich perfekten Kundenservice vor – und erlebt ihn heute leider nur noch selten. Ich wurde ungewöhnlich schnell mit einer Servicemitarbeiterin von IONOS verbunden. Von Beginn an war sie außerordentlich freundlich, geduldig und aufmerksam. Mit gezielten Fragen hat sie meine Wünsche schnell verstanden und sofort erkannt, dass ich als IT-Laie verständliche Erklärungen brauche. Statt mit Fachbegriffen zu arbeiten, erklärte sie die Zusammenhänge klar und nachvollziehbar. Dabei entdeckte sie sogar mehrere Fehlfunktionen, die ich selbst unbeabsichtigt verursacht hatte, erklärte mir deren Ursache und beseitigte sie Schritt für Schritt. Am Ende funktionierte wieder alles – und ich hatte das gute Gefühl, nicht nur ein Problem gelöst, sondern auch etwas gelernt zu haben. Ein Service, wie man ihn sich wünscht, den man heute aber leider nur noch sehr selten erlebt. Für Kompetenz, Freundlichkeit, Geduld und echte Kundenorientierung vergebe ich mit voller Überzeugung 10 von 10 Punkten.
+        - generic [ref=f104e590]:
+          - generic [ref=f104e591]:
+            - img "trustpilot-rating-star-5"
+            - paragraph [ref=f104e592]: Gallini
+            - paragraph [ref=f104e593]: Jul 22 2026
+          - generic [ref=f104e594]:
+            - heading "Ich bin seit 26 Jahre Kunde und meine…" [level=5] [ref=f104e595]
+            - paragraph [ref=f104e597]: Ich bin seit 26 Jahre Kunde und meine Anliegen wurden perfekt gelöst. Sehr freundliche Mitarbeiter und sehr kompetent.
+      - link "Mehr Informationen" [ref=f104e599] [cursor=pointer]:
+        - /url: https://de.trustpilot.com/trust/how-reviews-work
+    - generic [ref=f104e603]:
+      - generic [ref=f104e604]:
+        - heading "Bewährte Skalierbarkeit. Geprüfte Zuverlässigkeit." [level=2] [ref=f104e606]
+        - generic [ref=f104e608]: Unsere langjährige Expertise und belastbare Infrastruktur sorgen dafür, dass Ihre Workloads sicher, stabil und jederzeit verfügbar bleiben.
+      - generic [ref=f104e611]:
+        - generic [ref=f104e615]:
+          - heading "> 38.000" [level=2] [ref=f104e616]
+          - generic [ref=f104e618]: Dedizierte und Bare-Metal-Server
+        - generic [ref=f104e622]:
+          - heading "6" [level=2] [ref=f104e623]
+          - generic [ref=f104e625]: Rechenzentren
+        - generic [ref=f104e629]:
+          - heading "> 99,995 %" [level=2] [ref=f104e630]
+          - generic [ref=f104e632]: Server-Verfügbarkeit
+        - generic [ref=f104e636]:
+          - heading "25+" [level=2] [ref=f104e637]
+          - generic [ref=f104e639]: Jahre im Betrieb
+    - generic [ref=f104e642]:
+      - generic [ref=f104e643]:
+        - heading "Keine Kompromisse. Absolute Sicherheit." [level=2] [ref=f104e645]
+        - generic [ref=f104e647]: Wechseln Sie mit Vertrauen in eine dedizierte Umgebung – mit Hardware der Enterprise-Klasse und erfahrenem Support, der Ihr Unternehmen online und bereit für die Zukunft hält.
+      - generic [ref=f104e650]:
+        - list [ref=f104e653]:
+          - listitem [ref=f104e654]: 100% Enterprise-Hardware für maximale Stabilität
+          - listitem [ref=f104e655]: RAID auf allen Servern für höhere Ausfallsicherheit
+          - listitem [ref=f104e656]: Schutz vor Hackern sowie DDoS-Angriffen
+          - listitem [ref=f104e657]: Experten-Team für Dedicated-Server-Support
+          - listitem [ref=f104e658]: Voller Root-Zugriff für maximale Kontrolle
+        - 'img "IONOS-Oberfläche mit Sicherheits-Symbol und Hinweis „24/7 Support“: steht für zuverlässigen Schutz und rund um die Uhr verfügbaren Support." [ref=f104e660]'
+    - generic [ref=f104e663]:
+      - generic [ref=f104e664]:
+        - heading "Entwickelt für KI, Daten und Leistung." [level=2] [ref=f104e666]
+        - generic [ref=f104e668]: Führen Sie komplexe Modelle aus, verarbeiten Sie riesige Datensätze und beschleunigen Sie grafikintensive Arbeitsabläufe mit einer dedizierten GPU-Infrastruktur.
+      - generic [ref=f104e671]:
+        - generic [ref=f104e672]:
+          - generic [ref=f104e675]:
+            - generic [ref=f104e676]:
+              - 'img "Server mit Balkendiagramm: steht für High-Performance-Computing zur schnellen Verarbeitung großer Datenmengen." [ref=f104e678]'
+              - generic [ref=f104e679]:
+                - heading "High-Performance-Computing" [level=3] [ref=f104e680]
+                - generic [ref=f104e682]:
+                  - paragraph [ref=f104e683]: Verarbeiten Sie große Datenmengen mit hoher Geschwindigkeit, um komplexe Berechnungen, Simulationen und zeitkritische Entscheidungsprozesse zu unterstützen.
+                  - paragraph [ref=f104e684]:
+                    - strong [ref=f104e685]: "Am besten geeignet für:"
+                  - list [ref=f104e686]:
+                    - listitem [ref=f104e687]:
+                      - generic [ref=f104e689]: Wissenschaftliche Simulationen
+                    - listitem [ref=f104e690]:
+                      - generic [ref=f104e692]: Finanzielle Risikomodellierung
+                    - listitem [ref=f104e693]:
+                      - generic [ref=f104e695]: Echtzeit-Prognosen
+            - generic [ref=f104e699]:
+              - heading [level=4] [ref=f104e701]
+              - generic [ref=f104e703]: Go back
+          - generic [ref=f104e708]:
+            - generic [ref=f104e709]:
+              - 'img "Gehirn auf Plattform: steht für Deep Learning mit GPU-beschleunigtem Training komplexer Modelle." [ref=f104e711]'
+              - generic [ref=f104e712]:
+                - heading "Deep Learning" [level=3] [ref=f104e713]
+                - generic [ref=f104e715]:
+                  - paragraph [ref=f104e716]: Nutzen Sie dedizierte GPU-Leistung, um Deep-Learning-Workloads schneller und effizienter zu trainieren und auszuführen – auch bei großen, komplexen Datensätzen.
+                  - paragraph [ref=f104e717]:
+                    - strong [ref=f104e718]: "Am besten geeignet für:"
+                  - list [ref=f104e719]:
+                    - listitem [ref=f104e720]:
+                      - generic [ref=f104e722]: Bilderkennungsmodelle
+                    - listitem [ref=f104e723]:
+                      - generic [ref=f104e725]: Natural Language Processing
+                    - listitem [ref=f104e726]:
+                      - generic [ref=f104e728]: Spracherkennungssysteme
+            - generic [ref=f104e732]:
+              - heading [level=4] [ref=f104e734]
+              - generic [ref=f104e736]: Go back
+          - generic [ref=f104e741]:
+            - generic [ref=f104e742]:
+              - 'img "Balkendiagramm: steht für Big-Data-Analyse zur Auswertung und Gewinnung von Erkenntnissen aus Daten." [ref=f104e744]'
+              - generic [ref=f104e745]:
+                - heading "Big-Data-Analyse" [level=3] [ref=f104e746]
+                - generic [ref=f104e748]:
+                  - paragraph [ref=f104e749]: Analysieren Sie große Datenmengen schneller, um Muster aufzudecken, die Berichterstattung zu verbessern und umsetzbare geschäftliche Erkenntnisse zu gewinnen.
+                  - paragraph [ref=f104e750]:
+                    - strong [ref=f104e751]: "Am besten geeignet für:"
+                  - list [ref=f104e752]:
+                    - listitem [ref=f104e753]:
+                      - generic [ref=f104e755]: Groß angelegte Datenverarbeitung
+                    - listitem [ref=f104e756]:
+                      - generic [ref=f104e758]: Business Intelligence-Analysen
+                    - listitem [ref=f104e759]:
+                      - generic [ref=f104e761]: Predictive Analytics Pipelines
+            - generic [ref=f104e765]:
+              - heading [level=4] [ref=f104e767]
+              - generic [ref=f104e769]: Go back
+          - generic [ref=f104e774]:
+            - generic [ref=f104e775]:
+              - 'img "Gehirn- und KI-Icon: steht für KI-Anwendungen, Automatisierung und autonome Agenten auf leistungsstarker Infrastruktur." [ref=f104e777]'
+              - generic [ref=f104e778]:
+                - heading "KI-Training" [level=3] [ref=f104e779]
+                - generic [ref=f104e781]:
+                  - paragraph [ref=f104e782]: Beschleunigen Sie das Training von KI-Modellen durch parallele GPU-Verarbeitung, die speziell für anspruchsvolle Machine-Learning-Workloads entwickelt wurde.
+                  - paragraph [ref=f104e783]:
+                    - strong [ref=f104e784]: "Am besten geeignet für:"
+                  - list [ref=f104e785]:
+                    - listitem [ref=f104e786]:
+                      - generic [ref=f104e788]: Training von Open-Source-LLMs
+                    - listitem [ref=f104e789]:
+                      - generic [ref=f104e791]: Bilderkennungs-Training
+                    - listitem [ref=f104e792]:
+                      - generic [ref=f104e794]: Entwicklung maßgeschneiderter KI-Lösungen
+            - generic [ref=f104e798]:
+              - heading [level=4] [ref=f104e800]
+              - generic [ref=f104e802]: Go back
+          - generic [ref=f104e807]:
+            - generic [ref=f104e808]:
+              - 'img "Netzwerk- und KI-Icon: steht für Modellinferenz und KI-Anwendungen in Echtzeit." [ref=f104e810]'
+              - generic [ref=f104e811]:
+                - heading "Modellinferenz & KI-Anwendungen" [level=3] [ref=f104e812]
+                - generic [ref=f104e814]:
+                  - paragraph [ref=f104e815]: Stellen Sie KI-Modelle mit geringer Latenz und zuverlässiger Leistung für Echtzeitanwendungen in der Produktion bereit.
+                  - paragraph [ref=f104e816]:
+                    - strong [ref=f104e817]: "Am besten geeignet für:"
+                  - list [ref=f104e818]:
+                    - listitem [ref=f104e819]:
+                      - generic [ref=f104e821]: Chatbot-Antworten
+                    - listitem [ref=f104e822]:
+                      - generic [ref=f104e824]: Bildgenerierung
+                    - listitem [ref=f104e825]:
+                      - generic [ref=f104e827]: Empfehlungssysteme
+            - generic [ref=f104e831]:
+              - heading [level=4] [ref=f104e833]
+              - generic [ref=f104e835]: Go back
+          - generic [ref=f104e840]:
+            - generic [ref=f104e841]:
+              - 'img "3D-Würfel und Werkzeug: steht für 3D-Rendering und Visual Computing für grafikintensive Anwendungen." [ref=f104e843]'
+              - generic [ref=f104e844]:
+                - heading "3D-Rendering & Visual Computing" [level=3] [ref=f104e845]
+                - generic [ref=f104e847]:
+                  - paragraph [ref=f104e848]: Beschleunigen Sie grafikintensive Arbeitsabläufe für Rendering, Simulationen und die Produktion visueller Inhalte.
+                  - paragraph [ref=f104e849]:
+                    - strong [ref=f104e850]: "Am besten geeignet für:"
+                  - list [ref=f104e851]:
+                    - listitem [ref=f104e852]:
+                      - generic [ref=f104e854]: 3D-Rendering
+                    - listitem [ref=f104e855]:
+                      - generic [ref=f104e857]: Verarbeitung von Videoeffekten
+                    - listitem [ref=f104e858]:
+                      - generic [ref=f104e860]: Architektonische Visualisierung
+            - generic [ref=f104e864]:
+              - heading [level=4] [ref=f104e866]
+              - generic [ref=f104e868]: Go back
+        - generic [ref=f104e871]:
+          - generic [ref=f104e872]:
+            - button "Go to slide 1" [ref=f104e873] [cursor=pointer]
+            - button "Go to slide 2" [ref=f104e874] [cursor=pointer]
+            - button "Go to slide 3" [ref=f104e875] [cursor=pointer]
+            - button "Go to slide 4" [ref=f104e876] [cursor=pointer]
+            - button "Go to slide 5" [ref=f104e877] [cursor=pointer]
+            - button "Go to slide 6" [ref=f104e878] [cursor=pointer]
+          - generic [ref=f104e879]:
+            - button "Move slider to previous slide" [ref=f104e880] [cursor=pointer]
+            - button "Move slider to next slide" [ref=f104e882] [cursor=pointer]
+    - generic [ref=f104e887]:
+      - generic [ref=f104e888]:
+        - img "Mitarbeiter telefoniert, daneben Auszeichnungen „Kundenservice des Jahres 2026“ und „European Contact Centre Awards 2023 Highly Commended“." [ref=f104e889]
+        - 'img "Zwei Auszeichnungen: \"Gewählt zum Kundenservice des Jahres 2026\" und \"Highly Commended\" bei den European Contact Centre & Customer Service Awards 2023."'
+      - generic [ref=f104e891]:
+        - heading "Nur bei IONOS" [level=3] [ref=f104e892]
+        - generic [ref=f104e895]:
+          - heading "Ihr persönlicher Berater" [level=3] [ref=f104e896]
+          - paragraph [ref=f104e898]: Mit IONOS profitieren Sie von modernster KI. Gleichzeitig steht Ihnen nach Ihrer Bestellung Ihr persönlicher Berater zur Verfügung, der Sie kennt und jederzeit fachkundig berät.
+          - heading "24/7 Experten-Support" [level=3] [ref=f104e899]
+          - paragraph [ref=f104e901]: Bei technischen Fragen hilft Ihnen unser mehrfach ausgezeichnetes Experten-Team – jederzeit per Telefon, Chat oder E-Mail.
+        - link "0721 / 170 5522" [ref=f104e903] [cursor=pointer]:
+          - /url: tel:0721 / 170 5522
+    - generic [ref=f104e906]:
+      - heading "Mit IONOS setzen Sie auf den Marktführer." [level=2] [ref=f104e909]
+      - list [ref=f104e911]:
+        - listitem [ref=f104e912]:
+          - img "Goldenes Emblem mit einer weißen „1\" auf dunkelblauem Hintergrund, umrahmt von einem goldenen Lorbeerkranz, als Symbol für den ersten Platz oder eine Auszeichnung." [ref=f104e913]
+          - heading [level=3] [ref=f104e917]:
+            - text: in Deutschland und Europa die
+            - strong [ref=f104e918]: Nummer 1.
+        - listitem [ref=f104e919]:
+          - img "Ein Pokal in Hellblau mit einem Stern in der Mitte, seitlichen Henkeln und einem gestuften Sockel." [ref=f104e921]
+          - generic [ref=f104e922]:
+            - generic [ref=f104e923]: Der erste und größte Hoster
+            - generic [ref=f104e925]: 30 Jahre Erfahrung. 7 Millionen Kunden.
+        - listitem [ref=f104e926]:
+          - img "Gewählt zum Kundenservice des Jahres 2026" [ref=f104e928]
+          - generic [ref=f104e929]:
+            - generic [ref=f104e930]: Bester Kundenservice
+            - generic [ref=f104e932]: mehr als 20-fach ausgezeichnet.
+        - listitem [ref=f104e933]:
+          - img "Schwarzes Quadrat mit den deutschen Nationalfarben Rot und Gold als Balken in der unteren rechten Ecke" [ref=f104e935]
+          - generic [ref=f104e936]:
+            - generic [ref=f104e937]: Bund und Länder vertrauen IONOS
+            - generic [ref=f104e939]: dem souveränen, DSGVO-konformen, mehrfach zertifizierten Anbieter.
+        - listitem [ref=f104e940]:
+          - img "MDAX-Logo in Blau und Weiß" [ref=f104e942]
+          - generic [ref=f104e943]:
+            - generic [ref=f104e944]: Als einziger Hoster börsennotiert
+            - generic [ref=f104e946]: gelistet an der renommierten Wertpapierbörse Frankfurt.
+        - listitem [ref=f104e947]:
+          - generic [ref=f104e949]:
+            - generic [ref=f104e950]: Modernste Rechenzentren
+            - generic [ref=f104e952]: Tier IV, 100 % Grüner Strom.
+        - listitem [ref=f104e953]:
+          - generic [ref=f104e955]:
+            - generic [ref=f104e956]: 100 % DSGVO-konform
+            - generic [ref=f104e958]: IONOS garantiert höchste Datenschutz-Standards nach EU-Vorgaben.
+        - listitem [ref=f104e959]:
+          - img "Eine Person mit einem Headset und einer Sprechmuschel, als Symbol für Callcenter oder Kundensupport." [ref=f104e961]
+          - generic [ref=f104e962]:
+            - generic [ref=f104e963]: 24/7 Experten-Support
+            - generic [ref=f104e965]: "Nur bei IONOS: Ihr persönlicher Berater."
+        - listitem [ref=f104e966]:
+          - generic [ref=f104e968]:
+            - generic [ref=f104e969]: Fair & transparent
+            - generic [ref=f104e971]: Kostenlos 1 Monat testen ohne versteckte Kosten.
+    - generic [ref=f104e974]:
+      - generic [ref=f104e975]:
+        - heading "GPU Server – FAQ" [level=2] [ref=f104e977]
+        - generic [ref=f104e979]: Antworten auf häufig gestellte Fragen zum Thema.
+      - generic [ref=f104e982]:
+        - button [ref=f104e983] [cursor=pointer]:
+          - heading "Kann der Dedicated GPU Server zum Machine Learning eingesetzt werden?" [level=3] [ref=f104e984]
+        - paragraph [ref=f104e992]: Ja, die in unseren Grafikkarten-Servern verwendeten NVIDIA® GPUs beschleunigen diverse Workloads wie z.B. Deep-Learning-Training und -Inferenz. Somit sind die Server perfekt für diesen Anwendungsfall geeignet.
+      - generic [ref=f104e993]:
+        - button [ref=f104e994] [cursor=pointer]:
+          - heading "Ist der Server für Rendering im Bereich VFX oder 3D-Design geeignet?" [level=3] [ref=f104e995]
+        - paragraph [ref=f104e1003]: Ja. Die hier verwendete Grafikkarte beinhaltet Tensor-Multipräzisions-Recheneinheiten sowie neue RT-Recheneinheiten – die ideale Lösung für schwierige Rendering-Aufgaben.
+      - generic [ref=f104e1004]:
+        - button [ref=f104e1005] [cursor=pointer]:
+          - heading "Eignen sich Grafikkarten-Server zum Gaming?" [level=3] [ref=f104e1006]
+        - paragraph [ref=f104e1014]: Grundsätzlich lässt sich der Dedicated GPU Server auch zum Spielen grafisch anspruchsvoller Games nutzen.
+    - generic [ref=f104e1017]:
+      - generic [ref=f104e1018]:
+        - heading "IONOS – Digital an Ihrer Seite" [level=2] [ref=f104e1020]
+        - generic [ref=f104e1022]: Von der Auswahl einer Domain bis zur eigenen Cloud-Infrastruktur.
+      - generic [ref=f104e1025]:
+        - generic [ref=f104e1026]:
+          - list [ref=f104e1027]:
+            - listitem [ref=f104e1028]:
+              - link [ref=f104e1029] [cursor=pointer]:
+                - /url: /server/root-server
+                - img "Product Icon für Server mit Bedienelementen" [ref=f104e1030]
+                - text: Root Server
+            - listitem [ref=f104e1031]:
+              - link [ref=f104e1032] [cursor=pointer]:
+                - /url: /cloud/sql-server-hosting
+                - img "Ein Dokument mit einem Eselsohr in der oberen rechten Ecke, überlagert von einem gestapelten Datenbank-Zylinder." [ref=f104e1033]
+                - text: SQL-Server-Hosting
+            - listitem [ref=f104e1034]:
+              - link "Plesk-Lizenz mieten" [ref=f104e1035] [cursor=pointer]:
+                - /url: /server/plesk-lizenz-mieten
+            - listitem [ref=f104e1036]:
+              - link [ref=f104e1037] [cursor=pointer]:
+                - /url: /hosting/ftp-server-mieten
+                - img "Webhosting-Icon" [ref=f104e1038]
+                - text: FTP Server mieten
+            - listitem [ref=f104e1039]:
+              - link [ref=f104e1040] [cursor=pointer]:
+                - /url: /server/server-mieten
+                - img "Icon dedizierter Server" [ref=f104e1041]
+                - text: vServer kaufen
+            - listitem [ref=f104e1042]:
+              - link [ref=f104e1043] [cursor=pointer]:
+                - /url: /domains/kostenlose-domain
+                - img "Icon mehrere Domains" [ref=f104e1044]
+                - text: Kostenlose Domain
+          - list [ref=f104e1045]:
+            - listitem [ref=f104e1046]:
+              - link [ref=f104e1047] [cursor=pointer]:
+                - /url: /server
+                - img "Dedicated-Server Icon" [ref=f104e1048]
+                - text: Server
+            - listitem [ref=f104e1049]:
+              - link "Game Server" [ref=f104e1050] [cursor=pointer]:
+                - /url: /cloud/game-server
+            - listitem [ref=f104e1051]:
+              - link [ref=f104e1052] [cursor=pointer]:
+                - /url: /hosting/php-extended-support
+                - img "Webhosting-Icon" [ref=f104e1053]
+                - text: PHP 7
+            - listitem [ref=f104e1054]:
+              - link [ref=f104e1055] [cursor=pointer]:
+                - /url: /hosting/business-hosting
+                - img "Icon für Business Hosting" [ref=f104e1056]
+                - text: Business Hosting
+            - listitem [ref=f104e1057]:
+              - link "vServer kostenlos" [ref=f104e1058] [cursor=pointer]:
+                - /url: /server/free-vps
+            - listitem [ref=f104e1059]:
+              - link [ref=f104e1060] [cursor=pointer]:
+                - /url: /hosting/webspace
+                - img "Webhosting-Icon" [ref=f104e1061]
+                - text: Webspace
+          - list [ref=f104e1062]:
+            - listitem [ref=f104e1063]:
+              - link "Free cloud server" [ref=f104e1064] [cursor=pointer]:
+                - /url: /cloud/free-cloud-server
+            - listitem [ref=f104e1065]:
+              - link "Managed Kubernetes" [ref=f104e1066] [cursor=pointer]:
+                - /url: https://cloud.ionos.de/managed/kubernetes
+            - listitem [ref=f104e1067]:
+              - link "IONOS CLOUD Object Storage" [ref=f104e1068] [cursor=pointer]:
+                - /url: https://cloud.ionos.de/storage/object-storage
+            - listitem [ref=f104e1069]:
+              - link "Private Cloud" [ref=f104e1070] [cursor=pointer]:
+                - /url: https://cloud.ionos.de/private-cloud
+            - listitem [ref=f104e1071]:
+              - link [ref=f104e1072] [cursor=pointer]:
+                - /url: /sicherheit/kostenloses-ssl
+                - img "SSL-Zertifikat Icon" [ref=f104e1073]
+                - text: SSL kostenlos
+            - listitem [ref=f104e1074]:
+              - link [ref=f104e1075] [cursor=pointer]:
+                - /url: /domains/ai-domain
+                - img ".ai-Domain Icon" [ref=f104e1076]
+                - text: .ai-Domain
+        - generic [ref=f104e1077]:
+          - button "previousSlideButton" [ref=f104e1078] [cursor=pointer]
+          - generic [ref=f104e1080]:
+            - button "sliderButton" [ref=f104e1081] [cursor=pointer]
+            - button "sliderButton" [ref=f104e1082] [cursor=pointer]
+            - button "sliderButton" [ref=f104e1083] [cursor=pointer]
+          - button "nextSlideButton" [ref=f104e1084] [cursor=pointer]
+    - contentinfo [ref=f104e1086]:
+      - generic [ref=f104e1087]:
+        - generic [ref=f104e1089]:
+          - generic [ref=f104e1092]:
+            - generic [ref=f104e1093]: Unternehmen
+            - link "Über IONOS" [ref=f104e1095] [cursor=pointer]:
+              - /url: /unternehmen
+            - link "IONOS Group" [ref=f104e1097] [cursor=pointer]:
+              - /url: https://www.ionos-group.com/
+            - link "Management" [ref=f104e1099] [cursor=pointer]:
+              - /url: /management
+            - link "Newsroom" [ref=f104e1101] [cursor=pointer]:
+              - /url: https://www.ionos.de/newsroom/
+            - link "AGB" [ref=f104e1103] [cursor=pointer]:
+              - /url: https://www.ionos.de/terms-gtc/terms
+            - link "Datenschutz" [ref=f104e1105] [cursor=pointer]:
+              - /url: /datenschutzerklaerung
+            - link "Jugendschutz" [ref=f104e1107] [cursor=pointer]:
+              - /url: /jugendschutz
+            - link "Cookies" [ref=f104e1109] [cursor=pointer]:
+              - /url: /cookies
+            - link "Sicherheit" [ref=f104e1111] [cursor=pointer]:
+              - /url: /sicherheit
+            - link "Jobs" [ref=f104e1113] [cursor=pointer]:
+              - /url: https://jobs.ionos.de/
+            - link "Impressum" [ref=f104e1115] [cursor=pointer]:
+              - /url: /impressum
+            - link "Whistleblower Programme" [ref=f104e1117] [cursor=pointer]:
+              - /url: https://ionos.integrityline.com/
+            - link "1&1 DSL und Mobilfunk" [ref=f104e1119] [cursor=pointer]:
+              - /url: https://www.1und1.de
+            - link "Cloud Computing" [ref=f104e1121] [cursor=pointer]:
+              - /url: https://cloud.ionos.de/
+            - link "Barrierefreiheit" [ref=f104e1123] [cursor=pointer]:
+              - /url: /accessibility
+          - generic [ref=f104e1125]:
+            - generic [ref=f104e1126]:
+              - generic [ref=f104e1127]: Community
+              - link "Startup Guide" [ref=f104e1129] [cursor=pointer]:
+                - /url: https://www.ionos.de/digitalguide/startup/
+              - link "Digital Guide" [ref=f104e1131] [cursor=pointer]:
+                - /url: https://www.ionos.de/digitalguide/
+              - link "IONOS Experten Podcast" [ref=f104e1133] [cursor=pointer]:
+                - /url: https://inside.ionos.de/
+              - link "IONOS Blog" [ref=f104e1135] [cursor=pointer]:
+                - /url: https://ionos.blog
+              - link "Ressourcen" [ref=f104e1137] [cursor=pointer]:
+                - /url: https://www.ionos.de/ressourcen
+            - generic [ref=f104e1138]:
+              - generic [ref=f104e1139]: Partnerprogramme
+              - link "IONOS Agentur-Partnerprogramm" [ref=f104e1141] [cursor=pointer]:
+                - /url: /agentur-partner
+              - link "IONOS Agentur-Partnernetzwerk" [ref=f104e1143] [cursor=pointer]:
+                - /url: https://partnernetzwerk.ionos.de/agency-partners
+              - link "IONOS Cloud Channel-Partnerprogramm" [ref=f104e1145] [cursor=pointer]:
+                - /url: https://cloud.ionos.de/partner
+              - link "IONOS Cloud-Marktplatz" [ref=f104e1147] [cursor=pointer]:
+                - /url: https://partnernetwork.cloud.ionos.de/software-solutions/search
+              - link "IONOS Cloud ISV-Partnerprogramm" [ref=f104e1149] [cursor=pointer]:
+                - /url: https://cloud.ionos.de/partner/isv
+              - link "IONOS Cloud Start-up-Programm" [ref=f104e1151] [cursor=pointer]:
+                - /url: https://cloud.ionos.de/startup-programm
+              - link "Affiliate-Programm" [ref=f104e1153] [cursor=pointer]:
+                - /url: /agentur-partner/affiliate
+              - link "Kunden werben Kunden (powered by Aklamio)" [ref=f104e1155] [cursor=pointer]:
+                - /url: https://ionos.aklamio.com/de-de?source=AKLA006D
+          - generic [ref=f104e1158]:
+            - generic [ref=f104e1159]: Support
+            - link "Kontakt" [ref=f104e1161] [cursor=pointer]:
+              - /url: /kontakt
+            - link "Online Support" [ref=f104e1163] [cursor=pointer]:
+              - /url: https://contact.ionos.de/contact
+            - link "Hilfe-Center" [ref=f104e1165] [cursor=pointer]:
+              - /url: https://www.ionos.de/hilfe/
+            - link "Mein IONOS" [ref=f104e1167] [cursor=pointer]:
+              - /url: https://mein.ionos.de/
+            - link "IONOS-App" [ref=f104e1169] [cursor=pointer]:
+              - /url: /ionos-app
+            - link "Echtheit einer IONOS E-Mail prüfen" [ref=f104e1171] [cursor=pointer]:
+              - /url: https://phishing-contact.ionos.com/de
+            - link "IT Sicherheit" [ref=f104e1173] [cursor=pointer]:
+              - /url: /it-security
+            - link "Statusübersicht" [ref=f104e1175] [cursor=pointer]:
+              - /url: https://www.ionos-status.de/
+            - link "Digitalisierung" [ref=f104e1177] [cursor=pointer]:
+              - /url: /digitalisierung
+            - link "Verträge hier kündigen" [ref=f104e1179] [cursor=pointer]:
+              - /url: https://mein.ionos.de/account/termination-form
+            - link "Vertrag widerrufen" [ref=f104e1181] [cursor=pointer]:
+              - /url: https://mein.ionos.de/account/contract/withdrawal
+            - link "Abuse" [ref=f104e1183] [cursor=pointer]:
+              - /url: https://www.ionos.de/terms-gtc/domains/abuse/
+            - link "Anträge auf Zugang zu Domainregistrierungsdaten" [ref=f104e1185] [cursor=pointer]:
+              - /url: https://registrar.ionos.de/domains_raa/complaints?market=de_DE
+          - generic [ref=f104e1187]:
+            - link [ref=f104e1188] [cursor=pointer]:
+              - /url: https://www.ionos.de
+              - img "IONOS logo" [ref=f104e1189]
+            - paragraph [ref=f104e1190]: © 2026 IONOS SE
+            - img "green energy" [ref=f104e1191]
+            - link "Umwelt und Klima" [ref=f104e1192] [cursor=pointer]:
+              - /url: /umwelt
+        - separator [ref=f104e1193]
+        - generic [ref=f104e1195]:
+          - generic [ref=f104e1196]:
+            - link [ref=f104e1197] [cursor=pointer]:
+              - /url: https://www.instagram.com/ionos.official
+              - img "instagram_logo" [ref=f104e1198]
+            - link [ref=f104e1199] [cursor=pointer]:
+              - /url: https://www.facebook.com/ionos.deutschland/
+              - img "facebook_logo" [ref=f104e1200]
+            - link [ref=f104e1201] [cursor=pointer]:
+              - /url: https://www.youtube.com/channel/UCxmSSccDhxkHkk9_djQseeg/featured
+              - img "YouTube logo" [ref=f104e1202]
+            - link [ref=f104e1203] [cursor=pointer]:
+              - /url: https://ionos.ly/IONOS_IN
+              - img "LinkedIn logo" [ref=f104e1204]
+            - link [ref=f104e1205] [cursor=pointer]:
+              - /url: https://www.tiktok.com/@ionos.global
+              - img "tiktok_logo" [ref=f104e1206]
+          - button "Cookies" [ref=f104e1208] [cursor=pointer]
+          - button "Deutschland" [ref=f104e1211] [cursor=pointer]
+        - paragraph [ref=f104e1214]:
+          - text: Preise inkl. MwSt., Angebote sind nur für begrenzte Zeit gültig und sind teils abhängig von Mindestvertragslaufzeiten.
+          - link "Hier" [ref=f104e1215] [cursor=pointer]:
+            - /url: https://www.ionos.de/terms-gtc/terms
+          - text: finden Sie unsere Allgemeinen Geschäftsbedingungen.
+  - alert [ref=f104e1216]
+  - generic [ref=f104e1220]:
+    - generic [ref=f104e1221]:
+      - heading "Cookie-Einstellungen" [level=3] [ref=f104e1222]
+      - paragraph [ref=f104e1224]:
+        - paragraph [ref=f104e1225]:
+          - text: Wir setzen Cookies ein, um unsere Webseiten optimal für Sie zu gestalten, unsere Produkte für Sie zu verbessern sowie Ihnen zusammen mit Drittanbietern interessengerechte Werbung anzuzeigen. In den
+          - button "Einstellungen" [ref=f104e1226] [cursor=pointer]
+          - text: können Sie auswählen, welche Cookies Sie zulassen wollen, sowie Ihre Auswahl jederzeit ändern. Weitere Infos finden Sie in unserer
+          - link "Richtlinie zur Verwendung von Cookies" [ref=f104e1227] [cursor=pointer]:
+            - /url: https://www.ionos.de/cookies
+          - text: und in unseren
+          - link "Datenschutzhinweisen" [ref=f104e1228] [cursor=pointer]:
+            - /url: https://www.ionos.de/datenschutzerklaerung
+          - text: . Technisch notwendige Cookies werden auch bei der Auswahl von
+          - button "ablehnen" [ref=f104e1229] [cursor=pointer]
+          - text: gesetzt.
+        - paragraph [ref=f104e1230]:
+          - text: Mit einem Klick auf "
+          - button "Akzeptieren" [ref=f104e1231] [cursor=pointer]
+          - text: "\" stimmen Sie der Verarbeitung und der Übermittlung Ihrer Daten an Drittländer zu."
+          - generic [ref=f104e1232] [cursor=pointer]
+      - link "Impressum" [ref=f104e1235] [cursor=pointer]:
+        - /url: https://www.ionos.de/impressum
+    - generic [ref=f104e1237]:
+      - button "Akzeptieren" [ref=f104e1239] [cursor=pointer]
+      - button "Ablehnen" [ref=f104e1241] [cursor=pointer]
+      - button "Einstellungen" [ref=f104e1243] [cursor=pointer]
