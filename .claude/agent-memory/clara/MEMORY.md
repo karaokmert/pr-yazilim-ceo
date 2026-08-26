@@ -28,6 +28,7 @@
 - [Kapsam sorusu PA'ya](feedback_kapsam_sorusu_pa_ya.md) — **ölçüm sorusu Clara'nın, KAPSAM sorusu PA'nın**; ölçüm riski verir, kapsamın sınırını vermez
 - [Sessizlik yoklaması](feedback_sessizlik_yoklamasi.md) — 5 dk'dan fazla sessizlik varsa yokla; gözetimsiz çalışmada zorunlu
 - [Seçenek sunma — YASAK](feedback_secenek_sunma.md) — problemi getir, kararı Mert versin; şık listesi sessizce çerçeve dayatıyor
+- [Merak sorusuna amaç sorma](feedback_merak_amac_sorma.md) — bağlam tartma İŞ için; merakla gezerken "neden soruyorsun" denmez, açıp İÇİNE bakılır
 - [Cevap uzunluğu ve karar alma](feedback_cevap_uzunlugu.md) — bir bulgu/üç paragraf/tek soru; izin sorulmaz, yazılır ve bildirilir
 - [ARGE iş emri değil](feedback_arge_is_emri_degil.md) — "nasıl yapılır" sorusuna cevap ver ve DUR; fiil yoksa emir yoktur
 - [Günlük kayıt düzeni](feedback_gunluk_kayit.md) — bulgu `gunluk/{tarih}.md`'ye; ayrı dosya yalnız karar/fikir/referans için
