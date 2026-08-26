@@ -1,9 +1,13 @@
 ---
 name: project-durum
-description: Son kapanış dokümanının adresi ve tek cümlelik durum — her oturum açılışında İLK okunur
+description: Açık işlerin adresi — açılışta OKUNMAZ; yalnız Mert 'eski işin devamı' derse ya da bir konu sorulursa bakılır
 metadata:
   type: project
 ---
+
+⚠️ **Bu dosya açılışta okunmaz.** Açılış `AskUserQuestion` ile başlar; burası
+yalnız Mert *"eski işin devamı"* dediğinde ya da bir konu sorulduğunda açılır.
+→ `kararlar/2026-08-26-acilis-sirasi-soruyla-baslar.md`
 
 **Son iş: GPU/LLM ARGE araştırması (EV, 2026-08-25 gece).**
 Kapanış: `gunluk/ev/2026-08-25-kapanis-gpu-llm-arge.md`
