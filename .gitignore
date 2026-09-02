@@ -17,3 +17,6 @@ session-report-*.html
 
 # Silinen dosyalar — geri alinabilir, git'e gitmez
 .trash/
+
+# Artifact HTML kaynakları — yayınlanan sayfa asıl, dosya ara ürün
+.artifacts/
