@@ -10,6 +10,9 @@
 - [Sahada ölçüm YOK](feedback_sahada_olcum_yok.md) — kod okursam mesajlar bekler; evde tersi, ayıran şey MOD
 - [Kanal: merkez inbox'ı](feedback_kanal_merkez_inbox.md) — agent bana yazar; her açılışta eskiyi arşivle, yeni kur ("en yeni = aktif")
 - [Fabrika iş zinciri](project_fabrika_is_zinciri.md) — Clara→PAM→PAD→PQA→push onayı; kural dayatılmaz, işi anlat
+- [Sprint planlama akışı](sprint-planlama-akisi.md) — Çarşamba ritüeli: Sheets kaynak / ClickUp kayıt, kişi kişi ilerlenir; ad eşlemeleri, rate limit sınırı
+- [ClickUp sprint mekaniği](clickup-sprint-mekanigi.md) — sprinte alma "Sonraki Sprint" checkbox'ı ile; sprint listesine elle EKLENMEZ
+- [PR Yazılım ekibi](pryazilim-ekip.md) — kim ne yapıyor, ClickUp user ID'leri, hangi projelerde
 
 ## Mert
 
