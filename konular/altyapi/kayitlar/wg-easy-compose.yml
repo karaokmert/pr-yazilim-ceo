@@ -14,6 +14,18 @@
 # Ayrica: image :15'e sabitlendi (latest birakilmaz - bugunku arizanin kaynagi tam
 # olarak oydu) ve restart: unless-stopped eklendi (sunucu yeniden baslarsa VPN
 # kendiliginden kalksin).
+#
+# BILINEN RISK - kurulum penceresi (2026-09-02'de kayda gecti):
+#   v15 parolayi env ile almiyor, ilk acilista web sihirbazindan kuruyor. Yani panel
+#   ayaga kalktigi an ile parola konuldugu an arasinda korumasiz bir pencere var; o
+#   aralikta panele ulasan kurulumu ele gecirebilir. wg-easy v15'in kendi tasarimi,
+#   compose ile kapatilamaz. Onlem: panel portu disariya acikken beklenmez, kurulum
+#   ilk aciliste hemen tamamlanir.
+#
+# NET_ADMIN + SYS_MODULE genis yetkilerdir ama WireGuard'in kernel modulune erismesi
+# icin sarttir - kaldirilamaz.
+#
+# NOT: Bu dosya bir KAYITTIR, calisan yapilandirma degil. Gercek deploy Coolify'da.
 
 services:
   wg-easy:
