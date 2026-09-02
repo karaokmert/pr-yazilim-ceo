@@ -1,0 +1,36 @@
+# wg-easy — Coolify compose (2026-08-28)
+#
+# Coolify'in hazir sablonu v14 icindi; image latest cektigi icin v15 geliyordu ve
+# ikisi konusmuyordu -> container acilir acilmaz oluyordu (Exited).
+#
+# Sablona gore uc degisiklik:
+#   1. entrypoint blogu SILINDI  - v14'un `wgpw` aracini cagiriyordu, v15'te yok.
+#                                   Exited'in sebebi buydu.
+#   2. _PASSWORD satiri SILINDI  - v15 okumuyor; parola ilk acilista web sihirbazindan.
+#   3. WG_HOST IP'ye sabitlendi  - sablon ${SERVICE_FQDN_WIREGUARDEASY} diyordu ama
+#                                   sunucuda henuz domain yok. Bos kalirsa panel acilir,
+#                                   HICBIR client baglanamaz.
+#
+# Ayrica: image :15'e sabitlendi (latest birakilmaz - bugunku arizanin kaynagi tam
+# olarak oydu) ve restart: unless-stopped eklendi (sunucu yeniden baslarsa VPN
+# kendiliginden kalksin).
+
+services:
+  wg-easy:
+    image: 'ghcr.io/wg-easy/wg-easy:15'
+    environment:
+      - SERVICE_URL_WIREGUARDEASY_51821
+      - 'WG_HOST=65.109.150.95'      # KRITIK: istemcilerin baglanacagi adres
+      - 'LANG=${LANG:-en}'
+      - WG_PORT=51820                 # VPN server portu
+    volumes:
+      - 'wg-easy:/etc/wireguard'      # KRITIK: yedekle. Kaybolursa TUM peer configleri olur.
+    ports:
+      - '51820:51820/udp'             # KRITIK: acik degilse panel acilir, kimse baglanamaz
+    cap_add:
+      - NET_ADMIN
+      - SYS_MODULE                    # WireGuard kernel modulu erisimi
+    sysctls:
+      - net.ipv4.conf.all.src_valid_mark=1
+      - net.ipv4.ip_forward=1         # paket yonlendirme (full-tunnel icin sart)
+    restart: unless-stopped
