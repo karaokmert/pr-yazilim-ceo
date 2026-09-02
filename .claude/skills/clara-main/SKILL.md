@@ -144,6 +144,63 @@ değişmez.
 
 ---
 
+# 4 · Yeni proje gereksinim üretimi
+
+Bir proje fikri ham geldiğinde onu karara hazır hâle getirmek.
+
+⚠️ **Bu iş yarım öğrenildi (2026-09-02).** Sıra üç adım: **konuş → doküman → task.**
+Yalnız birinci adım yaşandı; ikinci ve üçüncü adım geldiğinde buraya yazılacak.
+
+## Neyden sorumlusun
+
+**Gereksinimin kendisinden** — çözümden değil. Mert'in düzeltmesi: *"Maliyeti değil de
+işi planlasak? Önce gerçekten gereksinimi düşünsen, sadece gereksinimi geliştirmeye
+odaklansan, sonra çözüm ve nasıl yaparızı konuşsak?"*
+
+Gereksinim aşamasında sorulacaklar: kim kullanacak · ne zaman kullanılacak · hangi
+soruya cevap arıyor · bugün nasıl yapıyor · nerede tıkanıyor · veri nereden geliyor.
+
+Sorulmayacaklar: mimari · senkron yönü · maliyet · teknoloji · repo · kim yapacak.
+Çözüm tarafında bir tuzak görürsen **not düş, sorma** — doküman aşamasında açık karar
+olarak yazılır.
+
+## Nasıl yürütülür
+
+**Tek soru, sırayla.** Mert bir paragrafla anlatır, sen soru sorarak açarsın. Her soru
+bir öncekinin cevabı üstüne kurulur; aynı anda iki soru sorulmaz.
+
+**Gerçek bir proje üzerinden.** Soyut anlatım kalıp üretir, kalıp yanlış yerde
+uygulanır. Mert'in tercihi: *"gerçek bir proje var, buradan öğrenelim istiyorum."*
+
+**Doküman erken yazılmaz.** *"Daha doküman yazmak için çok erken değil mi?"* — gereksinim
+oturmadan yazmaya geçme.
+
+## Ekran taslağı istenirse
+
+⚠️ **Menülerin neye göre bölüneceğini önce sor.** Ölçüldü ve tutmadı: Clara ekranları
+**sorulardan** kurdu (kim boş, kâr mı zarar mı), Mert **varlıklardan** bekliyordu
+(Müşteriler · Projeler · Taskler · Plan · Maliyet). Bir artifact boşa gitti.
+
+Mert'in kurgusu doğruydu: **bir yönetim programı varlık üzerinden gezilir, rapor
+üzerinden değil.** Sorular o varlıkların içindeki görünümlerdir.
+
+## Nereye yazarsın
+
+`konular/{proje-adi}/BILINMESI-GEREKENLER.md` — gereksinim, açık kararlar, elenen
+seçenekler ve gerekçeleri.
+
+Ham bir ürün fikri ise `fikirler/{ad}/HAM-FIKIR.md` — ölçülmemiş olanlar açıkça
+işaretlenir.
+
+## Hangi skill
+
+Henüz ayrı bir skill yok. `clara-is-disiplini` (bağlam tartma, analiz birleştirme) ve
+`clara-behavior` (soru sorma düzeni) yeterli oluyor. Doküman ve task adımları yaşandıkça
+buraya eklenecek — ayrı skill gerekirse o zaman açılır.
+
+
+---
+
 # Üç repo
 
 - **`pr-yazilim-ceo`** — sen: kanonun, skill'lerin, kayıtların. **Yazarsın.**

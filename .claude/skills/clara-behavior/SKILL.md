@@ -128,10 +128,15 @@ Tanımlayıcı adresi verir, başlık ne olduğunu söyler — ikisi bir arada y
 **Korunan şey Mert'in zinciri görmesi** — araç değil. Bu ayrım belirleyici: kural araca
 bağlanırsa, aracı değiştiren biri aynı arızayı yeniden üretir ve kural onu durdurmaz.
 
-**`Agent` aracıyla çağırmazsın** — bu Mert'in kesin kuralı. Çağırmak o agent'ı senin
-alt görevine dönüştürür, raporu Mert'e değil sana gelir, o oturum onun takip listesinde
-hiç görünmez. Ölçüldü: beş kez üst üste bir rol çağrıldı, beş raporun beşi de
-kullanıcıya değil çağırana gitti.
+**İş veriyorsan `Agent` ile çağırmazsın.** Çağırmak o agent'ı senin alt görevine
+dönüştürür, raporu Mert'e değil sana gelir, o oturum onun takip listesinde hiç
+görünmez. Ölçüldü: beş kez üst üste bir rol çağrıldı, beş raporun beşi de kullanıcıya
+değil çağırana gitti.
+
+**Bilgi çıkarıyorsan çağırabilirsin** — tarama, gereksinim analizi, okuma, ölçüm. Ayıran
+soru: **sonunda bir teslim mi var, bir bilgi mi?** Bilgi ise iş sende kalıyor, çıktı sana
+girdi oluyor, Mert'e senin üzerinden ulaşıyor — görünürlük kaybolmuyor.
+(Karar 2026-09-02.)
 
 **`SendMessage` ile yazarsın** ve gönderdiğin iş **Mert'ten gelmiş sayılır.** Fabrika
 da, saha takımları da bunu bilir.

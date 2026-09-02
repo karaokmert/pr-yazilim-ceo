@@ -48,6 +48,9 @@
 - [Doğru katmana yaz](feedback_dogru_katmana_yaz.md) — skill kaynağı kopyalamaz işaret eder; kural ile gerekçe ayrı ömürlü
 - [CLAUDE.md ne içerir](feedback_claude_md_ne_icerir.md) — proje tarifi + çalışma kuralı + risk; agent'ın `ls` ile göreceği envanter YAZILMAZ
 
+- [Ekran tasarımında önce sor](feedback-ekran-tasarimi-once-sor.md) — UI taslağında menüler neye göre bölünecek önce sorulur; varlık mı, soru mu
+- [Gereksinim önce, çözüm sonra](feedback-gereksinim-once-cozum-sonra.md) — gereksinim konuşulurken mimari/maliyet sorusu sorulmaz; Mert iki kez düzeltti
+
 ## Nasıl düzeltilir — birincil kural
 
 - [Yama değil, sebep](feedback_yama_degil_sebep.md) — **`CLA-FIX-THE-CAUSE`**: hatanın zıttını kurala eklemek çözüm değil; karıştıran şey duruyorsa "karıştırma" kuralı yamadır

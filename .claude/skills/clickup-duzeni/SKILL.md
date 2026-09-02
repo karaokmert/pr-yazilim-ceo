@@ -95,6 +95,63 @@ Karşılaştırma: `grep` tam eşleşir ya da hiç bulmaz. ClickUp araması **bu
 getirir, bulması gerekeni de kaçırır.** Bu yüzden bir şey arıyorsan ClickUp'ı tek kaynak
 sayma — repo'da `grep` kesin.
 
+## Task'ın dokümanı nasıl bulunur — ölçüldü 2026-09-02
+
+**Doküman task'ın altında DEĞİL.** Projenin ana dokümanının alt sayfası olarak duruyor
+ve bağ **dokümandan task'a** doğru kuruluyor (doküman gövdesinde task linki var). Bu
+yüzden task tarafında hiçbir alan dolu görünmez: `description` boş, `linked_tasks` boş,
+`dependencies` boş, ek dosya yok, ilişki custom field'ı yok.
+
+⚠️ ClickUp arayüzünde bu bağ **"Related items → Referenced by → Docs"** olarak görünür.
+Ekranda duran şeyin API'de karşılığı olmaması **yokluk değil, yanlış uç** demektir.
+
+**Bulmanın tek yolu arama:**
+
+```
+clickup_search(keywords="<task adı>", filters={"asset_types": ["doc"]})
+```
+
+Dönen kayıtta üç alan işe yarar: `pageId` (sayfanın kendisi), `id` (ana dokümanın ID'si),
+`pageHierarchy` (nerede durduğu). Sonra içerik okunur:
+
+```
+clickup_get_document_pages(document_id=<id>, page_ids=[<pageId>], content_format="text/md")
+```
+
+**Neden `/docs` ucu bulamıyor:** `v3/workspaces/{ws}/docs` yalnız **ana dokümanları**
+listeliyor — alt sayfalar orada yok ve ada göre arama parametresi de yok. 195 ana doküman
+gelir, aradığın sayfa içlerinde görünmez. Ölçüldü: doğru parametrelerle (`cursor`,
+`archived=true`) çekildi, yine yok.
+
+**Ölçülen örnek:** PRY-18054 (LO - Bölge Yönetimi Revizeleri) → ana doküman
+`qa5p6-94775` ("ListON - Doküman") → sayfa `qa5p6-236635`, 3.189 karakter gereksinim.
+
+Ayıran soru: **task'ta doküman görünmüyorsa "dokümansız" mı, yoksa aramadım mı?**
+Aranmadıysa bu bir ölçüm değil.
+
+## API ile çalışma — MCP tıkandığında
+
+MCP kendi token'ıyla çalışıyor ve tükendiğinde saatlerce bekletiyor
+(*"113 dakika"* ölçüldü 2026-09-02). ClickUp'ın kendi limiti bu değil:
+**token başına dakikada 100 istek** (Business planı).
+
+Ayrı bir token ayrı penceredir — ölçüldü: MCP 113 dakika beklerken curl `HTTP 200`
+döndü, `x-ratelimit-remaining: 99`.
+
+Token: `~/.config/pryazilim/clickup.env` (600 izinli, repoda değil).
+Workspace: `24450758`.
+
+```bash
+source ~/.config/pryazilim/clickup.env
+curl -s -H "Authorization: $CLICKUP_TOKEN" "https://api.clickup.com/api/v2/..."
+```
+
+**Asıl kazanç limit değil, çağrı sayısı:** MCP task'ları tek tek getiriyor; API'de
+`team/{id}/task` tek istekte 100 task veriyor. 96 task'lık Sprint 7 tek çağrıda geldi.
+
+⚠️ Sayfalama parametresi v3'te **`cursor`** — `next_cursor` deprecated ve sessizce
+eksik sonuç döndürür.
+
 ## Neyin nerede durduğu
 
 **ClickUp** — sprint yapısı, iş dokümanları, task'lar, statüler. Sebebi: Mert her yerden
