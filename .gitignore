@@ -20,3 +20,12 @@ session-report-*.html
 
 # Artifact HTML kaynakları — yayınlanan sayfa asıl, dosya ara ürün
 .artifacts/
+
+# Remember plugin kendi kaydini tutuyor — surec ciktisi, kayit degil
+.remember/
+
+# Playwright sayfa dokumleri — tek seferlik
+.playwright-mcp/
+
+# Ekran goruntusu artiklari
+colab-*.png

@@ -1,5 +1,0 @@
-# Oturum özetleri git'e girer — yarım kesilen bir oturumun izi kaybolmasın.
-# Karar: 2026-08-04, Mert. Öncesi `*` idi, yani hiçbir şey girmiyordu.
-# Teknik artıklar dışarıda kalır:
-logs/
-tmp/
