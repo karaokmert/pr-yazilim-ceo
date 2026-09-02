@@ -152,3 +152,93 @@ compose ayarları, güvenlik felsefesi, fatura notları.
 
 ⚠️ İkisi de Claude Desktop'ta yürütülen bir oturumun devir paketi (2026-08-26). O oturum
 kapandı; buradan devam ediyoruz.
+
+---
+
+## Trafik logu ve reklam engelleme — karar ve mekanik (2026-09-02)
+
+**Mert'in kararı: trafik logu tutulacak.** Gerekçesi bir politika: *"şirket
+bilgisayarlarını kişisel işler için kullanmamaları gerekiyor, bankacılık işlemlerini
+kendi pc'lerinden yapmaları gerekiyor."*
+
+⚠️ **Clara'nın itirazı kayda geçsin — karar buna rağmen verildi.** İtiraz üç
+noktadaydı: (1) kural kişisel trafiği şirket makinesinden *uzak tutmayı* amaçlıyor,
+çözüm ise onu şirket sunucusuna *yazıyor* — kural tutulursa log boş kalır, tutulmazsa
+istenmeyen veri birikir. (2) VPN sürekli açık değil (Karar 2), yani log "şirket
+bilgisayarında ne yapıldığını" değil "VPN açıkken ne yapıldığını" ölçer; bunlar aynı
+küme değil. (3) Gözetim sebebi kaldırmıyor, üstüne katman ekliyor — sebebi kaldıran şey
+engellemek ya da politikanın sonuç doğurması. Sunulan alternatif (DNS filtresiyle
+engelleme, kayıt tutmadan) reddedildi.
+
+**WireGuard bu logu vermez.** `wg show` yalnız peer'ın son handshake'ini ve toplam bayt
+sayısını verir — hedef adres tutmaz. "Kim nereye gitti" tünelde değil **çıkışta**
+cevaplanır.
+
+### Kurulacak yapı — AdGuard Home
+
+Tek bileşen iki işi birden yapıyor: **sorgu kaydı** (hangi client, hangi saat, hangi
+alan adı) ve **reklam engelleme**. İkincisi Mert'in ayrı sorusundan çıktı — mobilde
+uygulama reklamları VPN üstünden, cihaza hiçbir şey kurmadan engelleniyor.
+
+Katmanlar ve ne verdikleri:
+
+**DNS logu** — okunabilir olanı verir (isim, IP değil). Tek başına **delik**: DoH
+kullanan tarayıcı ve doğrudan IP'ye giden trafik görünmez. Bu yüzden DoH engelleme
+listesi + tünelden çıkan 53 portunun zorla AdGuard'a yönlendirilmesi **kurulumun
+parçası**, opsiyon değil. Eksikse log "temiz" çıkar ve temiz olduğu için doğru sanılır.
+
+**NAT/conntrack kaydı** — baypası yakalar ama isim değil numara verir, hacmi büyük.
+Clara'nın önerisi: **şimdilik kurulmaz.** Ancak "biri kasten atlatıyor" şüphesi doğarsa
+gerekir; şimdi kurmak okunmayacak veri biriktirmek olur.
+
+**Tam paket kaydı** — kapsam dışı bırakıldı. Full-tunnel'da bu, ekibin bankacılık
+oturumunu diske yazmak demek.
+
+### Kurulum sırası — bozulursa ekip internetsiz kalır
+
+AdGuard **önce** kurulur ve çalıştığı doğrulanır, **sonra** wg-easy'nin
+`WG_DEFAULT_DNS` değeri ona çevrilir. Ters sırada: tüneldeki herkes ad çözemez.
+
+⚠️ DNS değiştikten sonra **mevcut client config'leri eski DNS'i kullanmaya devam eder.**
+Her cihazın config'i yeniden indirilip kurulmalı — yoksa ne reklam engellenir ne log
+dolar, ve bu sessizce olur.
+
+### Reklam engellemenin sınırları (soruldu, ölçülmedi — bilinen davranış)
+
+YouTube reklamı geçmez (reklam videoyla aynı adresten gelir), uygulama içi sponsorlu
+içerik geçmez (aynı sebep), bazı uygulamalar reklam ağı engellenince açılmaz —
+istisna yazmak bir bakım işi. Ve VPN sürekli açık olmadığı için bu "reklamsız telefon"
+değil, "VPN açıkken reklamsız".
+
+⚠️ Bir gerilim: reklam engelleme ekibin **kişisel** kullanımını iyileştiriyor, yani
+VPN'i kişisel işler için açık tutmayı cazip hâle getiriyor — trafik logunun gerekçesiyle
+ters yöne bakıyor.
+
+### Düzeltilen hata — ölçmeden söylenen
+
+Clara *"Coolify'da AdGuard hazır şablonu var"* dedi; **ölçmedi**, başka Coolify
+kurulumlarından hatırladığını elindeki bilgi gibi kullandı. Mert *"coolify'da yok
+gibi"* deyince düzeltildi.
+
+Doğrusu: AdGuard Home kendi başına çalışan açık kaynak bir uygulama (`adguard/adguardhome`),
+şablon olup olmaması hiçbir şeyi değiştirmiyor — Coolify'ın **Docker Compose**
+seçeneğiyle compose kendimiz yazılır. Ve bu **daha iyi**: wg-easy'nin Exited arızası tam
+olarak şablondan çıkmıştı. Şablon yoksa o tuzak da yok.
+
+⚠️ Ders (tekrar): *hatırladığın da bir kayıttır ve en kırılgan olanıdır.* Bir platformun
+neyi barındırdığı, o platforma bakılarak söylenir.
+
+### Kurulumdan önce ölçülecek — sunucuya girilmediği için yapılamadı
+
+**53 portu EX44'te boşta mı.** Ubuntu'da `systemd-resolved` çoğu zaman tutar; tutuyorsa
+AdGuard kalkmaz ve belirtisi yine *"kurdum ama Exited"* olur — wg-easy'nin aynısı.
+
+**wg-easy bugün client'lara hangi DNS'i veriyor.** Değiştirilecek değerin bugünkü hâli
+görülmeden ayar yazılmaz.
+
+### Açık karar — Mert'in
+
+**Sorgu kaydının saklama süresi** (24 saat / 7 / 30 / 90 gün). Kurulumun içine yazılıyor;
+sonradan "şu tarihten öncesini sil" demek birikmiş veriyi geri almaz. İki karar daha
+aynı yerde bekliyor: **ekip bilecek mi** (bildirilmeden tutulan kayıt hem KVKK tarafında
+sorunlu hem de öğrenildiğinde asıl zararı güven tarafında verir) ve **kim okuyabilecek**.
