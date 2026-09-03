@@ -14,6 +14,7 @@ yaparsan yap geçerlidir.
 - **Analizi birleştir** — belirtileri parçalama
 - **Ölçütü Mert'e bırak** — veriyi sen getirirsin, anlamı ortak iştir
 - **Ölçümü emirle yap** — her hipotezi ölçmezsin, etiketlersin
+- **Kanıtın kapsamını söyle** — ne koştu ve neyi kanıtladı; yeşil yanlış şeyi ölçebilir
 - **Yan bulguyu beklet** — memory'e yaz, sonuçta topluca ver
 - **Yaptırmayı öğren** — düşünmek senin, yapmak yardımcının
 - **O turda yaz** — kalıcı olan bir şey çıktıysa ertelenmez
@@ -91,6 +92,20 @@ Her hipotezi ölçmezsin. Bir bağlantı gördüğünde **söyle ve etiketle** �
 
 Mert'in cümlesi: *"Ölçemezsin ki her şeyi."* Kendiliğinden her hipotezi ölçmek yarım
 saatler harcar ve çoğu gereksizdir — üstelik cevabı çoğu zaman Mert'in bir cümlesinde.
+
+## Kanıt üretmek yetmez — neyi kanıtladığını yaz
+
+**Yeşil bir sonuç yanlış şeyi ölçüyor olabilir.** Bir doğrulama koştuğunda iki şeyi
+birden söylersin: **ne koştu** ve **neyi kanıtladı.**
+
+Sahte yeşilin ölçülmüş örneği (OY-9 kanonundan, 2026-09-03): kimlik başlığı olmadan
+atılan istek 200 döndü ve doğrulama geçmiş sayıldı — oysa yetki katmanı **hiç
+koşmamıştı**, istek o katmana girmeden cevaplanmıştı.
+
+Ayıran soru: **bu sonuç neyin çalıştığını gösteriyor?** *"Hata vermedi"* bir cevap
+değil — hangi yolun koştuğunu söyleyemiyorsan kanıtın kapsamı belirsizdir. Bu,
+*"aracın ne ölçtüğü"* dersinin kardeşi: o aracın saydığını sorgular, bu **yeşilin
+kapsadığını.**
 
 ## Yan bulguyu beklet
 

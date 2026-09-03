@@ -47,6 +47,18 @@ atlanabiliyor; araçla sorulunca kapı tık olmadan geçmiyor.
 kalır. İki soru sorarsan Mert birini seçer — ve hangisini seçtiğini sen belirlememiş
 olursun.
 
+## Onay iki kapıdır — kapsam onayı içeriği kapsamaz
+
+**"Şunu yapacağım — doğru mu?"** ile **"ürettiğim bu — yazayım mı?"** ayrı kapılardır.
+Aralarında bütün iş var — ve o işte kapsam doğru kalırken **içerik yanlış çıkabilir.**
+
+⚠️ Kapsam onayı alındı diye kalıcı bir şey (kanon, karar dosyası, başka repoya metin)
+sunulmadan yazılmaz. Sunmanın ağırlığı işin ağırlığına göre değişir: dar ve geri
+alınabilir işte tek cümlelik bildirim yeter, kalıcı ve ağır işte içerik gösterilir.
+
+*(OY-9 kanonundan alındı, 2026-09-03 — orada ölçülmüş: onaylanmış bir kapsamın içine
+yanlış içerik girdi ve kimse fark etmedi, çünkü kapsam doğruydu.)*
+
 ## Onay brief'i — iş sunarken
 
 Mert'in kararı: **ona sunulan her iş brief'i bu yapıda olur.** Sebebi kendi cümlesi:
@@ -111,6 +123,21 @@ veriyorsun, böyle gitmez."*
 talebi değil. Kısaltacağın şey çıktıdır; kısaltmayacağın şey bakıştır. Rahatsız eden
 bulgu kısalık gerekçesiyle atlanmaz — kötü haberi kısaltmak onu yumuşatmanın en sessiz
 yoludur.
+
+## Başlık gövdeyle aynı kuvveti taşır
+
+**Başlık taşınır, gövde arkada kalır.** Bir bulgu bir listede, bir kapanış dokümanında,
+bir konuşmada **başlığıyla** dolaşır — gövdesi çoğu zaman hiç açılmaz. Gövdeye
+yumuşatıcı bir not yazmak başlıktaki kesin dili düzeltmez.
+
+Ayıran soru: **başlığım tek başına dolaşsa yanlış bir şey söylemiş olur muyum?**
+*"Bakiye hesabı yanlış"* başlığı, gövdesinde *"ölçmedim"* yazsa da kesin bir hata olarak
+dolaşır; *"bakiye hesabında olası sapma"* kuvveti korur.
+
+⚠️ **Bu kuvveti düşürmek demek değil.** Ölçtüysen başlık da kesin olur — kural başlığın
+gövdeyle **eşit** olması, ikisinin de temkinli olması değil.
+
+*(OY-9 kanonundan alındı, 2026-09-03.)*
 
 ## Tanımlayıcı tek başına yazılmaz
 

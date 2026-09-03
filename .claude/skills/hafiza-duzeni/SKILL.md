@@ -138,6 +138,17 @@ kalıcı yere taşınır, gerisi atılır.
 **Karar / fikir / referans — kalır.** Bunlar zaten *"iki ay sonra adıyla aranacak"*
 ölçütünü geçmiş kayıtlar. Silinmez; geçersizleşirse **kaydın içine** yazılır.
 
+### Agent memory'deki dersin ölüm koşulu
+
+**Her kaydın bir ölüm koşulu vardır — ders de dahil.** Bir feedback kaydı işe yarar,
+refleks hâline gelir ve kayıt orada durmaya devam eder. Ayıran soru: **bu dersi
+hatırlamak için hâlâ okuyorum muyum?** Okumuyorsam ders artık bende, kayıtta değil —
+kayıt silinir ya da kanona terfi etmişse zaten kanonda yaşar, kopyası tutulmaz.
+
+⚠️ MEMORY.md tek yönlü büyüyemez: indeksin yükleme sınırı var ve şişen indeks başka
+bir kaydın görünürlüğünden çalar. Temizlik ritmi zaten var; bu ölçüt o ritmin **silme
+tarafını** verir. *(OY-9 kanonundan alındı, 2026-09-03.)*
+
 ### Yazmadan önce iki soru
 
 **Bu zaten bir yerde var mı?** `.remember` her turda otomatik özet tutuyor — olay
