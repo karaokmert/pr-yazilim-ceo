@@ -1,1 +1,0 @@
-/Users/karaok/p/fabrika-v2/agents/fabrika-korgoz.md

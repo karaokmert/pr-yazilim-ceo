@@ -63,7 +63,8 @@ sadece ekleme.
 - bir **ölçüm ya da bulgu** kalıcı referans olacaksa → `konular/{konu}/incelemeler/`
 
 Bir karar **uygulandığında** kaydı `konular/{konu}/uygulananlar/` altına taşınır
-(kaynak dosyalar `.trash`'e). Üçünün ortak yanı: iki ay sonra **adıyla aranacak**
+(kaynak dosyalar repo kökündeki `trash/` altına — hiçbir şey doğrudan silinmez,
+oraya taşınır; Mert'in kararı 2026-09-03). Üçünün ortak yanı: iki ay sonra **adıyla aranacak**
 olmaları.
 
 ## Konu klasörü — yazma ve okuma AYNI soruyu sorar

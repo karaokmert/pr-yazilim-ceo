@@ -15,8 +15,9 @@ session-report-*.html
 .tmp-cu-token
 .tmp-cu-watch.py
 
-# Silinen dosyalar — geri alinabilir, git'e gitmez
-.trash/
+# Silinen dosyalar — geri alinabilir, git'e gitmez (Mert'in karari 2026-09-03:
+# silinecek her sey silinmez, repo kokundeki trash/ altina tasinir)
+trash/
 
 # Artifact HTML kaynakları — yayınlanan sayfa asıl, dosya ara ürün
 .artifacts/
