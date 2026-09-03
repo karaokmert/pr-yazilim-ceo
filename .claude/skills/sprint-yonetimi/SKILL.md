@@ -148,9 +148,8 @@ sorusunun cevabı orada.
 
 Çift kayıt gibi görünür, değil: biri *ne* karar verildiği, diğeri *neden.* ClickUp'ta
 arama güvenilmez ve versiyon geçmişi yok (`clickup-duzeni` skill'inde ölçüldü), o yüzden
-gerekçe repoda durur.
-
-Ve `HARITA.md`'ye satır eklenir — haritasız kayıt kaybolur.
+gerekçe repoda durur. (Ayrıca bir indeks tutulmaz — klasör listesi haritadır;
+karar 2026-09-03.)
 
 ## Sprint içinde çıkan ara işler
 
@@ -158,7 +157,7 @@ Sprint yürürken yeni işler çıkar: bir bulgu, bir bugfix, bir ARGE sorusu. B
 **task olarak girer** — böylece "elimizde ne kaldı" ClickUp'tan yönetilir.
 
 Ama **bulgu task değildir.** Bir ölçüm sonucu, bir gözlem, bir örüntü → günlüğe yazılır
-(`gunluk/{tarih}.md`). Task açmak onu iş kalemine çevirir ve liste karışır.
+(`gunluk/{proje}/{tarih}.md`). Task açmak onu iş kalemine çevirir ve liste karışır.
 
 Ayıran soru: **bunun yapılacak bir hâli var mı?** Yoksa nottur.
 

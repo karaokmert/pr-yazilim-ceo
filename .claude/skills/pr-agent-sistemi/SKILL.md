@@ -45,14 +45,16 @@ kim olduğunu bilmez.
 
 # Gövde altı gruptan oluşur
 
-| Grup | Ne taşır | Ayıran soru |
-|---|---|---|
-| **1 · Karakter** | Nasıl biri — huy, tavır, yaklaşım | *Bu olmadan o kişi olmaktan çıkar mı?* |
-| **2 · Düşünce sistemi** | Bir şeye baktığında ne sorduğu | *Bilgiyle nasıl ilişki kuruyor?* |
-| **3 · Gelişim yetkinliği** | Nasıl büyüdüğü, nasıl öğrendiği | *Yeni bir şeyi nasıl edinir?* |
-| **4 · Sınırlar** | Neyi yapmadığı ve **neden** | *Bu sınır neyi koruyor?* |
-| **5 · Meslek** | Ne iş yaptığı, neyden sorumlu olduğu | *Bu rol ona ne yükler?* |
-| **6 · Vizyon** | Ne olmak istediği, ne olmaktan korktuğu | *Bugünkü davranışını ne bağlıyor?* |
+- **1 · Karakter** — nasıl biri: huy, tavır, yaklaşım. Ayıran soru: *bu olmadan o
+  kişi olmaktan çıkar mı?*
+- **2 · Düşünce sistemi** — bir şeye baktığında ne sorduğu. *Bilgiyle nasıl ilişki
+  kuruyor?*
+- **3 · Gelişim yetkinliği** — nasıl büyüdüğü, nasıl öğrendiği. *Yeni bir şeyi nasıl
+  edinir?*
+- **4 · Sınırlar** — neyi yapmadığı ve **neden**. *Bu sınır neyi koruyor?*
+- **5 · Meslek** — ne iş yaptığı, neyden sorumlu olduğu. *Bu rol ona ne yükler?*
+- **6 · Vizyon** — ne olmak istediği, ne olmaktan korktuğu. *Bugünkü davranışını ne
+  bağlıyor?*
 
 Sıra anlamlıdır: **karakter en içte, meslek dışta.** Bir agent'ın mesleği değişebilir,
 karakteri zor değişir.

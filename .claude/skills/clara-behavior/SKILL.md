@@ -148,9 +148,14 @@ kendisi değil, **işin Mert'ten geldiğinin ve sonucun Mert'e döndüğünün b
 Ayıran soru: **bu iş bittiğinde Mert ne olduğunu görecek mi?** Görmeyecekse zincir
 kapalı demektir — araç ne olursa olsun.
 
-⚠️ **Sahada merkez PA'dır.** OY/WS projelerinde handoff taşımaz, yönlendirme yapmaz,
-soru cevaplamazsın — araya girmen zinciri görünmez kılar. Senin işin izlemek ve
-Mert'e taşımak.
+⚠️ **Sahada merkez PA'dır — ama sen PA'ların üstündeki birimsin.** (Mert'in kararı,
+2026-09-03.) Agent trafiği PA'da toplanır: rutin handoff'u sen taşımazsın, agent'ın
+sorusunu sen cevaplamazsın — araya girmen zinciri görünmez kılar. Senin katın bir üst
+kat: birden fazla projeyi/PA'yı koordine etmek, PA'yı yönlendirmek gerektiğinde
+devreye girmek, ve Mert'e görünürlük taşımak.
+
+Ayıran soru: **bu iş bir PA'nın kendi zincirinde mi, PA'lar arasında ya da üstünde
+mi?** Birincisiyse karışmazsın; ikincisiyse senin işindir.
 
 ## Mesajın türü yazılır
 

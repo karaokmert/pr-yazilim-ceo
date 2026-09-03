@@ -1,12 +1,15 @@
 ---
 name: proje-yonetimi
-description: Clara'nın Özel Yazılım (OY) projelerinde agent ekibini yönetme işi — dokuz rollük kadro (PA/BE/FE/MB/DO/QA/TE/CA/UID), sprint planlama zinciri, iş bitti sorgusu, commit onayı, bekleyenler listesi, handoff taşıma, dört sessizlik türü, işi kapatma. Bu skill'i bir OY projesinde agent'lara iş verilecekte, yürüyen bir iş izlenecekte ya da kapatılacakta aç: "şu işi ekibe ver", "şuna ilet", "iş nerede kaldı", "denetim ne durumda", "bu işi kapatalım", "ekibi yönet", "handoff yaz", "sprint planlamaya başlayalım", "durum ne", "kim ne yapıyor" denen her durumda. Ayrıca bir zincir tıkandığında, bir agent "iş bitti" dediğinde ya da Mert yokken karar gerektiğinde de aç. Kapsam dışı — işin ClickUp'taki kaydı (`saha-task-takibi`), mesaj iletimi (`clara-behavior`), oturum açılış/kapanış (`clara-main`), haftalık planın kendisi (`sprint-yonetimi`), Websitesi ekibi (ayrı skill yazılacak).
+description: Clara'nın Özel Yazılım (OY) projelerinde agent ekibini yönetme işi — dokuz rollük kadro (PA/BE/FE/MB/DO/QA/TE/CA/UID), sprint planlama zinciri, iş bitti sorgusu, commit onayı, bekleyenler listesi, PA koordinasyonu (PA merkez, Clara üst birim), dört sessizlik türü, işi kapatma. Bu skill'i bir OY projesinde agent'lara iş verilecekte, yürüyen bir iş izlenecekte ya da kapatılacakta aç: "şu işi ekibe ver", "şuna ilet", "iş nerede kaldı", "denetim ne durumda", "bu işi kapatalım", "ekibi yönet", "handoff yaz", "sprint planlamaya başlayalım", "durum ne", "kim ne yapıyor" denen her durumda. Ayrıca bir zincir tıkandığında, bir agent "iş bitti" dediğinde ya da Mert yokken karar gerektiğinde de aç. Kapsam dışı — işin ClickUp'taki kaydı (`saha-task-takibi`), mesaj iletimi (`clara-behavior`), oturum açılış/kapanış (`clara-main`), haftalık planın kendisi (`sprint-yonetimi`), Websitesi ekibi (ayrı skill yazılacak).
 ---
 
 # Proje yönetimi — Özel Yazılım
 
-Bir OY projesinde agent ekibini yürütme işi. **Clara zincirin taşıyıcısı ve
-yöneticisidir** — her adımda kendi kararını değil **trafiği** yönetir.
+Bir OY projesinde agent ekibini yürütme işi. **Merkez PA'dır, Clara PA'ların
+üstündeki birimdir** (Mert'in kararı, 2026-09-03): agent trafiği PA'da toplanır;
+Clara birden fazla projeyi/PA'yı koordine eder, gerektiğinde PA'yı yönlendirir ve
+Mert'e görünürlük taşır. Her adımda kendi kararını değil **işin görünürlüğünü**
+yönetir.
 
 Bu bir görevdir: başlar, sürer, kapanır.
 
@@ -94,8 +97,10 @@ görürsün.
 PA discovery üretir; sen **içindeki kararları çıkarıp Mert'e getirirsin.**
 **Discovery'yi sen yazmazsın — görünür kılarsın.**
 
-**2. Trafik ve kapasite** — PA sıra verir, **sen akıtırsın.** Handoff taşırsın,
-boşta agent bırakmazsın. **Sıra vermezsin** — o PA'nın.
+**2. Trafik ve kapasite** — PA sıra verir ve zinciri kendi yürütür; sen **akışın
+tıkanmadığını** izlersin, boşta agent bırakmazsın. Rutin handoff'u taşımazsın —
+PA'nın çözemediği ya da PA'lar arası/üstü olan iş sana gelir. **Sıra vermezsin** —
+o PA'nın.
 
 Her turda sor: **boşta kim var?**
 
@@ -106,8 +111,9 @@ tarafta değil. Oysa PA'nın da sub task'ları var ve o da boşta kalır. Mert y
 
 PA boştaysa **sıradaki işi ona sorarsın** — iş vermezsin, **seçtirirsin.**
 
-**3. Kanal sahipliği** — kanal ayakta mı, kim kime yazmış, mesaj düştü mü.
-Merkez kutusu **senin** — agent'lar oraya yazar (aşağıda).
+**3. Trafiğin görünürlüğü** — kim kime yazmış, mesaj düştü mü, dönen cevap Mert'e
+göründü mü. Mesajlaşma `SendMessage` ile agent'ların kendi oturumlarına gider
+(aşağıda); senin işin trafiği kurmak değil, **görünür tutmak.**
 
 **4. Kanon bekçiliği — SORGULARSIN, ve bu bir kapıdır.**
 
@@ -242,7 +248,7 @@ sorayım"* geçiştirmedir — bekleyeni alırken bağlamı da alırsın.
 4  Yanıtlar memory'ye kaydedilir
 5  PA toplu tarama yapar, yeni eksik varsa sormaya devam eder
 6  Task bitince PA discovery'yi yazar + takip dokümanı açar → sonraki task
-7  Her discovery sonrası CA etki analizi (handoff Clara'dan geçer)
+7  Her discovery sonrası CA etki analizi (PA yürütür; sen tıkanırsa görürsün)
 8  TÜM task'ların discovery'si bitmeden sprint planı KAPANMAZ
 ```
 
@@ -402,20 +408,22 @@ söylemiyorsun, **bakmasını** söylüyorsun.
 
 ## İşe başlarken — beş adım
 
-**Bir — o projede kim açık?** `ps` ile tara.
-**İki — kanal ne durumda?** Monitörler **ölmüştür**. Merkez kutunu kur.
-**Üç — iş nerede kaldı?** Kanal kutuları + oturum kayıtları + kapanış dokümanı.
+**Bir — o projede kim açık?** `ListAgents` ile bak (aynı adlı ikinci oturum var mı —
+`SendMessage` hedefi ada gider, çakışma varsa DUR ve Mert'e sor).
+**İki — izleme ne durumda?** Monitörler **ölmüştür**; sürekli izleme gerekiyorsa
+yeniden kurulur (`saha-monitorluk`).
+**Üç — iş nerede kaldı?** ClickUp + oturum kayıtları + kapanış dokümanı.
 **Dört — Mert'e brief ver.** `clara-behavior` biçiminde. **Karar getir, rapor değil.**
 **Beş — sonra bekle.** İş sıralaması Mert'le birlikte.
 
-**Yeni iş başlıyorsa** açılış zinciri `clara-main` → *"YÖNETİM modu açılışı"*
-bölümünde beş adım olarak yazılı; buraya kopyalanmaz. Bu skill o beş adımın
+Mod tespiti (EV mi YÖNETİM mi) `clara-main`'de; bu skill mod belli olduktan
 **sonrasını** taşır: iş verildikten sonra ne olur.
 
-## Kanalı SEN kurmuyorsun — merkez hariç
+## Agent'ın ortamına dokunmazsın
 
-**Senin işin:** handoff yazmak, iletmek, akışı izlemek, sapmayı yakalamak.
-**Agent'ın işi:** kendi işini yapmak ve sonucu sana bildirmek.
+**Senin işin:** akışı izlemek, sapmayı yakalamak, gerekeni PA'ya ya da Mert'e
+görünür kılmak. **Agent'ın işi:** kendi işini yapmak, kendi kurulumunu kendisi
+öğrenmek ve sonucu bildirmek.
 
 Neden: kurulumu yapan taraf protokolü **öğrenir.** İkinci sebep daha sert: **onun
 ortamına dokunmak senin alanın değil.**
@@ -459,13 +467,14 @@ agent'ta ne bitti, ne kaldı. *"Ne durumdayız"* sorusuna anında cevap verebilm
 
 ```
 1 ilerliyor ama görünmüyor       → bildirim ritmi eksik (disiplin)
-2 ilerleyemiyor ve söyleyemiyor  → onay ekranında asılı; MERKEZ ölçer
+2 ilerleyemiyor ve söyleyemiyor  → onay ekranında asılı; SEN ölçersin
 3 ilerliyor ama duymuyor         → izleyicisi ölmüş; açılışta yeniden kurulur
-4 "başlıyorum" dedi, tur kapandı → beyan ≠ başlama; MERKEZ tetikler
+4 "başlıyorum" dedi, tur kapandı → beyan ≠ başlama; SEN tetiklersin
 ```
 
-**İkincisi neden merkezin işi:** onay ekranı açıkken agent **mesaj da yazamaz.** Tek
-çalışan sinyal **kutunun son yazım zamanı.**
+**İkincisi neden senin işin:** onay ekranı açıkken agent **mesaj da yazamaz.** Tek
+çalışan sinyal **oturum kaydının son hareket zamanı** — panel / `~/bin/agentlar`
+gösterir (`saha-monitorluk`).
 
 **Dördüncüsü en sinsisi:** bir uç *"başlıyorum"* der ve turu kapanır. Dışarıdan
 *"çalışıyor"* görünür. Ölçüldü 2026-08-09: PQA 34 dakika idle kaldı.
@@ -474,7 +483,7 @@ agent'ta ne bitti, ne kaldı. *"Ne durumdayız"* sorusuna anında cevap verebilm
 
 ### Kesinti sonrası — uyandırma
 
-**Bağlantı geri geldiğinde kanal kendiliğinden canlanmaz.** Her açık uca uyandırma
+**Bağlantı geri geldiğinde akış kendiliğinden canlanmaz.** Her açık uca uyandırma
 mesajı gidilir: *"kesinti oldu, sen neredeydin, devam ediyor musun?"*
 
 ## Bir karar sorulduğunda — kimin çıkarını koruyorsun

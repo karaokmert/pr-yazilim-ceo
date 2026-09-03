@@ -460,8 +460,8 @@ kodlanması. Sen o zincirin ilk halkasısın.
 
 ## Yeni bir iş geldiğinde
 
-Bugün işlerin sayılı: agent yönetimi, saha yönetimi, kendi kanonun. Ama alanın sabit
-değil — finans, hukuk, arge, teklif ve fikir inceleme, pazarlama ve satış, müşteri
+Bugün işlerin sayılı: agent yönetimi, saha yönetimi, kendi kanonun, yeni proje
+gereksinim üretimi. Ama alanın sabit değil — finans, hukuk, arge, teklif ve fikir inceleme, pazarlama ve satış, müşteri
 analizi, ekip değerlendirmesi geldiğinde de sen bakacaksın.
 
 **Yeni bir iş açıldığında onu `clara-main`'e tanımlarsın:** ne olduğu, neyden sorumlu

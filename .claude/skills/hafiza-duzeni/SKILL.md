@@ -43,32 +43,38 @@ sorgulanabilir. Adayı sorgulanabilir yerde tutmak erken kesinleşmeyi önler.
 
 **Üç eşik, üç yer:**
 
-| Durum | Nereye | Ölçüt |
-|---|---|---|
-| Bir aday çıkarım, tek vaka | agent memory | sebebiyle yazılır, bekler |
-| Gerekçe, ölçüm kaydı, karar | `konular/{konu}/` | aylarca sonra adıyla aranacak |
-| Taranmış, tekrar eden davranış | body ya da skill | tek vaka yetmez |
+- **Bir aday çıkarım, tek vaka** → agent memory — sebebiyle yazılır, bekler
+- **Gerekçe, ölçüm kaydı, karar** → `konular/{konu}/` — aylarca sonra adıyla aranacak
+- **Taranmış, tekrar eden davranış** → body ya da skill — tek vaka yetmez
 
 Ayıran soru: **bu çıkarım kaç vakada görüldü?** Bir ise memory. Birden fazla
 ise ya da ölçümle doğrulandıysa kanona adaydır.
 
 ## Repo dosyası — günlük mü, ayrı dosya mı
 
-**Varsayılan yer `gunluk/{tarih}.md`.** Her bulgu bir başlık, aynı gün aynı dosyaya
-eklenir. Klasör açmak, `HARITA.md` satırı yazmak, ayrı dosya kurmak **yok** — sadece
-ekleme.
+**Varsayılan yer `gunluk/{proje}/{tarih}.md`** (EV'de `{proje}` = `ev`). Her bulgu
+bir başlık, aynı gün aynı dosyaya eklenir. Klasör açmak, ayrı dosya kurmak **yok** —
+sadece ekleme.
 
 **Ayrı dosya yalnız üç durumda açılır:**
+
+- bir **karar** verildiğinde → `konular/{konu}/kararlar/`
+- bir **fikir** olgunlaştığında → `konular/{konu}/fikirler/`
+- bir **ölçüm ya da bulgu** kalıcı referans olacaksa → `konular/{konu}/incelemeler/`
+
+Bir karar **uygulandığında** kaydı `konular/{konu}/uygulananlar/` altına taşınır
+(kaynak dosyalar `.trash`'e). Üçünün ortak yanı: iki ay sonra **adıyla aranacak**
+olmaları.
 
 ## Konu klasörü — yazma ve okuma AYNI soruyu sorar
 
 **Bir işe başlarken ve bir işi bitirirken sorulan soru tektir: bu hangi konunun
 dosyası?**
 
-Kayıtlar `konular/{konu}/` altında durur. Sekiz konu: `clara` · `agent-kanonu` ·
-`fabrika` · `clickup-is-takibi` · `kanal-iletisim` · `memory-duzeni` · `olcum-arama` ·
-`saha-yonetimi`. Her birinde `kararlar/` · `incelemeler/` · `fikirler/` ve tek bir
-elle yazılan dosya: **`BILINMESI-GEREKENLER.md`**.
+Kayıtlar `konular/{konu}/` altında durur; **konuların listesi klasörün kendisidir**
+(`ls konular/`), buraya sabit liste yazılmaz — yazılan liste bayatlar. Her konuda
+`kararlar/` · `incelemeler/` · `fikirler/` ve tek bir elle yazılan dosya:
+**`BILINMESI-GEREKENLER.md`**.
 
 **İŞE BAŞLARKEN o konunun `BILINMESI-GEREKENLER.md`'si AÇILIR** — ölçülmüş tuzaklar
 orada, hepsi sahada fiilen çarptı. Sonra gerekiyorsa `kararlar/` ve `incelemeler/`
@@ -93,42 +99,18 @@ dayanağıysa saklanır.
 kaydın metninde değildi — arama onu hiç görmedi. Sebebi yapısal: **benzerlik anlamı
 ölçer, doğruluğu ölçmez.**
 
-## Ne zaman YAZMAZSIN — ve ne zaman silersin
+## Ne zaman YAZMAZSIN
 
 Yazma tetikleri bir dosya açar; hiçbiri kapatmaz. **Yalnız yazma tetiği olan bir düzen
-şişer.**
+şişer.** Ölçüldü (2026-08-07): bir günde **90 dosyaya yazıldı, 10 dosya okundu**; iki
+deneyin ham dökümü (**4.571 satır**) bulgusu üç ayrı yere işlendiği hâlde duruyordu.
+Ve bir oturumda 11 ayrı dosya açıldı, Mert *"çok gereksiz dosya işi yapıyoruz"* dedi.
+Haklıydı — her ölçüm bir dosyayı hak etmiyor, **çoğu bir satırı hak ediyor.**
 
-**Ham girdi işlendikten sonra SİLİNİR.** Bir deneyin ham çıktısı, bir taramanın dökümü
-— bunlar **girdi**, kayıt değil. Bulgusu çıkarılıp kayda geçtiğinde ham hâli gider.
-Ayıran soru: **bunu iki ay sonra biri açarsa, çıkarılmış bulgudan fazlasını öğrenir
-mi?** Öğrenmiyorsa artık.
+Silme ve ömür kuralları aşağıda ("Kaydın ömrü") — tek yerde durur, burada
+tekrarlanmaz.
 
-**Aynı olay iki yere yazılmaz.** `.remember` her turda otomatik özet tutuyor — olay
-anlatısı oraya zaten giriyor. Günlüğe yazılacak şey olayın kendisi değil, **bulgusu.**
-
-**Bir günde ikinci dosya açılmaz.** Aynı günün ikinci, üçüncü dosyası açılacaksa dur —
-o gün için zaten bir günlük var, başlık ekle. Ayrı dosya yalnız üç şey için:
-**karar** · **fikir** · **aylarca dönülecek referans**.
-
-**Kapanışta ölçülür.** Bir iş biterken: bu iş kaç dosya açtı, kaçı hâlâ gerekli?
-Gereksiz olan aynı anda silinir — sonraya bırakılan temizlik yapılmıyor.
-
-Ölçüldü (2026-08-07): bir günde **90 dosyaya yazıldı, 10 dosya okundu**; iki deneyin
-ham dökümü (**4.571 satır**) bulgusu üç ayrı yere işlendiği hâlde duruyordu.
-
-- bir **karar** verildiğinde → `konular/{konu}/kararlar/`
-- bir **fikir** olgunlaştığında → `konular/{konu}/fikirler/`
-- bir **ölçüm ya da bulgu** çıktığında → `konular/{konu}/incelemeler/`
-- bir karar **uygulandığında** → `konular/{konu}/uygulananlar/` (kaynak dosyalar `.trash`'e)
-
-Üçünün ortak yanı: iki ay sonra **adıyla aranacak** olmaları. Ayrı dosya açıldıysa
-`HARITA.md` satırı da yazılır — haritasız kayıt kaybolur.
-
-Gerekçe ölçüldü: bir oturumda 11 ayrı dosya açıldı ve Mert *"çok gereksiz dosya işi
-yapıyoruz"* dedi. Haklıydı — her ölçüm bir dosyayı hak etmiyor, **çoğu bir satırı hak
-ediyor.**
-
-**Ve dosya Mert'e göstermek için yazılmıyor.** Kendi cümlesi: *"memory'yi ben okumuyorum
+**Dosya Mert'e göstermek için yazılmıyor.** Kendi cümlesi: *"memory'yi ben okumuyorum
 ama dosyayı da okumuyorum, bu senin kayıt defterin."* Ayıran soru *"Mert görecek mi"*
 değil — **"bu ne kadar birikecek ve nasıl bulunacak?"**
 
@@ -267,8 +249,8 @@ alakasız olan. Etiket metne giriyor ama sıralamayı belirleyecek ağırlık ta
 bedeli kabul edildi çünkü asıl ihtiyaç (*"hangi projede nerede kaldık"*) bir
 **yapı** sorusu.
 
-Qdrant koleksiyonları silinmedi, duruyor. *"Eski bir kararı kelimesini
-hatırlamadan ara"* ihtiyacı doğarsa ikinci katman olarak eklenebilir — şimdilik
-ihtiyaç doğmadı, kapasite kurulmuyor.
+⚠️ **Qdrant sonradan tamamen kapatıldı** (2026-08-15, Mert: *"mantıklı bulmadık ve
+kullanmadık, o nedenle kapattım"*). Yukarıdaki karşılaştırma tarihçedir; bugün ikinci
+katman yok — ayrıntı `arama-disiplini` skill'inde.
 
 Gerekçenin tamamı: `konular/memory-duzeni/uygulananlar/2026-08-07-saha-kaydi-knowledge-graph.md`
