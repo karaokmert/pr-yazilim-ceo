@@ -156,6 +156,22 @@ Memory (MEMORY.md + dosyaları) **çalışma tezgahı ve indeks** olarak yaşama
 devam eder: hızlı erişim işaretleri, oturum içi taslaklar. Kural: gövde hafızada,
 indekste işaret. Belirsizse **sor.**
 
+**Hafıza yaşam döngüsü (karar 2026-09-04):**
+
+- **Güncelleme = sürümleme, üstüne yazmak değil.** Bilgi değişince YENİ kayıt
+  yazılır (`onceki` alanı eskiyi işaret eder); eski kaydın **içeriğinin başına**
+  `[GEÇERSİZ — yerine: <yeni-id>]` eklenip aynı ID ile yeniden store edilir.
+  İçeriğe eklemek şart — yalnız etikete yazılan geçersizlik aramada görünmez
+  (ölçüldü: etiketli eski kayıt aramada yine birinci geldi).
+- **Silme yalnız iki durumda:** hiç doğru olmamış kayıt ve test verisi —
+  geçersizleme serbest, gerçek silme onay ister. Eskiyen doğru SİLİNMEZ.
+- **Bayatlamayı üç an yakalar:** yazmadan önce çelişen kayıt aranır (bulunca
+  geçersizlenir — mükerrer de böyle önlenir) · bir kayda dayanmadan önce tarih
+  ve geçerlilik kontrol edilir, çelişki sessizce ezilmez · bakım rutininde
+  `acik-is` kayıtları taranıp kapananlar işaretlenir.
+- **Tarihli sınıflar (kapanis) sürümlenmez** — onlar günün fotoğrafıdır,
+  "en yeni tarihli olan geçerli" kuralıyla okunur.
+
 → Eski kayıt mekaniği (dosya/graph düzeni): `hafiza-duzeni` skill'i — geçiş
 dönemi referansı; çelişirse bu bölüm ve 2026-09-04 kararları kazanır.
 
