@@ -5,6 +5,7 @@
 - [PAM'e iletilecek iş listesi](project_pam_is_listesi.md) — hazır gereksinimler; brief biçimi ilk sırada
 
 - [Durum](project_durum.md) — açık işler; açılışta OKUNMAZ, yalnız "eski işin devamı" denince bakılır
+- [Sprint süre otomasyonu](project_sprint_sure_otomasyonu.md) — n8n canlı: lıve-dev/completed geçişinde in progress süresi atanan adına yazılır; assignee alanı admin token'la çalışır (ölçüldü)
 - [Açılış soruyla başlar](feedback_acilis_soruyla_baslar.md) — ilk hareket AskUserQuestion: ARGE / Yeni iş / Eski işin devamı; kapanış SONRA okunur
 - [Sahada yetkilerim](feedback_proje_yonetimi_yetkileri.md) — "kanonunu aç kontrol et" · **commit onayı bende, PUSH onayı Mert'te** · Mert yokken karar
 - [İç araç geliştirme](feedback_ic_arac_gelistirme.md) — müşteri projesine kod YAZMAM; iç araçlara (fork, ekip tool'u) Mert'le birlikte yazarım
@@ -59,6 +60,7 @@
 ## Araçlar ve adlar
 
 - [Model adları](reference_model_adlari.md) — `fable` / `claude-fable-5` çalışıyor, `5.1` YOK; frontmatter'da sondaki boşluk sessizce düşürüyor
+- [ClickUp token yeri](reference_clickup_token_yeri.md) — `~/.zshenv` → `CLICKUP_TOKEN` (pk_, Bearer'sız); mcp-auth önbelleğindeki API'de ÇALIŞMAZ, yenilenince eskisi ölür
 
 ## Arama — nasıl aranır
 

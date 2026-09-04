@@ -59,6 +59,13 @@ kurdu.
 ⚠️ `clickup_update_task` **parent alanını değiştiremiyor** — bir task'ı alt görev
 yapmak arayüzden yapılır. Mükerrer varsa taşımak yerine kapatmak daha pratik.
 
+## Günlük sprint kontrolü (karar 2026-09-04)
+
+Sprint kurulduktan sonra **Mert isteyince** ("durum ne") günlük kontrol çıkarılır —
+otomatik değil, Mert'in tercihi. İçerik üç kalem: kimde ne açık · ne bekliyor ve
+**kaç gündür** · tabloya/tarihe göre kayan işler. Bitenler sayılmaz. Kaynak ClickUp,
+task'ların "Sprint" custom field'ı üzerinden taranır.
+
 ## Rate limit — gerçek sınır
 
 2026-09-02'de ~330 yazma (256 kapatma + 70 task açma/güncelleme) sonrası ClickUp

@@ -141,14 +141,23 @@ Bir teşhis, bir ölçüt, bir karar gerekçesi, bir açık soru — hepsi evet.
 *"Netleşince yazarım"* en çok kaybettiren cümledir: konuşma netleşerek bitmez, başka
 konuya kayar ya da gün biter. **Yarım da yazılır.**
 
-⚠️ **Ama her şey kanona yazılmaz.** Memory bir arşiv değil **çalışma tezgahı:** konuşma
-sürerken oraya yazılır, iş somutlaşıp dokümana ya da kanona geçince temizlenir, sonucu
-kalır.
+⚠️ **Kalıcı kaydın evi HAFIZA'dır** (karar 2026-09-04: dosya yalnız kanon taşır).
+Bir karar, ders, kazanım, teşhis ya da açık soru çıktığı **o turda** `hafiza`
+MCP'siyle yazılır: `qdrant_store` — içerik = hüküm (kısa, **belirti diliyle**:
+bunu yaşayan yarın nasıl arar?), metadata = `tur` (karar/kazanim/kapanis/tercih/
+acik-is) · `proje` · `yazan` · `tarih` · `etiketler` · `detay` (ID'ler, mekanizma,
+tam anlatım) · gerekiyorsa `iliskili`. Bir kayıt bir fikir taşır — blok yığılmaz.
 
-**Ayıran soru: bu bir karar mı, olgunlaşan bir bilgi mi?** Karar → dosya. Olgunlaşan
-bilgi, beliren bir tercih, *"şöyle düşünüyorum"* → memory. Belirsizse **sor.**
+**Hafızaya girmeyen:** salt iş durumu (evi ClickUp) · her adımın anlatısı ·
+kanon metni (evi skill/gövde). Ayıran soru: *bu satır ClickUp'a ya da kanona
+bakınca öğrenilebilir mi?* Öğrenilebiliyorsa hafızaya girmez.
 
-→ Kayıt mekaniği ve konu klasörü düzeni: `hafiza-duzeni` skill'i.
+Memory (MEMORY.md + dosyaları) **çalışma tezgahı ve indeks** olarak yaşamaya
+devam eder: hızlı erişim işaretleri, oturum içi taslaklar. Kural: gövde hafızada,
+indekste işaret. Belirsizse **sor.**
+
+→ Eski kayıt mekaniği (dosya/graph düzeni): `hafiza-duzeni` skill'i — geçiş
+dönemi referansı; çelişirse bu bölüm ve 2026-09-04 kararları kazanır.
 
 ## Her iş aynı ağırlıkta değil
 
