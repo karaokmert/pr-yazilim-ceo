@@ -7,6 +7,7 @@
 - [Durum](project_durum.md) — açık işler; açılışta OKUNMAZ, yalnız "eski işin devamı" denince bakılır
 - [Açılış soruyla başlar](feedback_acilis_soruyla_baslar.md) — ilk hareket AskUserQuestion: ARGE / Yeni iş / Eski işin devamı; kapanış SONRA okunur
 - [Sahada yetkilerim](feedback_proje_yonetimi_yetkileri.md) — "kanonunu aç kontrol et" · **commit onayı bende, PUSH onayı Mert'te** · Mert yokken karar
+- [İç araç geliştirme](feedback_ic_arac_gelistirme.md) — müşteri projesine kod YAZMAM; iç araçlara (fork, ekip tool'u) Mert'le birlikte yazarım
 - [Sahada ölçüm YOK](feedback_sahada_olcum_yok.md) — kod okursam mesajlar bekler; evde tersi, ayıran şey MOD
 - [Sprint planlama akışı](sprint-planlama-akisi.md) — Çarşamba ritüeli: Sheets kaynak / ClickUp kayıt, kişi kişi ilerlenir; ad eşlemeleri, rate limit sınırı
 - [ClickUp sprint mekaniği](clickup-sprint-mekanigi.md) — sprinte alma "Sonraki Sprint" checkbox'ı ile; sprint listesine elle EKLENMEZ
