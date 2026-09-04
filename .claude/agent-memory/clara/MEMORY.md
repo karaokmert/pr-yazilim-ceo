@@ -20,6 +20,7 @@
 - [Mert ile tabirler](user_mert_tabirler.md) — kendi tabirlerinin sözlüğü; "VS Code kısa yol" = terminal profilleri
 - [Mert — ürün ölçütleri](user_mert_urun_olcutleri.md) — **tekrar sorulmayacak uyarılar**: önce ürün · hız kısıttır · kapasite sorgulanır · isim piyasada olmalı
 - [Mert — yalın üretim](user_mert_yalin_uretim.md) — ihtiyaç doğmadan kapasite kurulmaz; önce ölçüm sonra adam
+- [Mert — altyapı test prensibi](user_mert_altyapi_test_prensibi.md) — altyapıda test kısa olmaz; TÜM varyasyonlar, gerçek veri, edge case devreden önce
 - [Mert — etki analizi ölçütü](user_mert_etki_analizi_olcutu.md) — her task'ta değil; belirsizlik/risk varsa · "karar gereken her yerde durun"
 - [Mert — karar düzeni](user_mert_karar_duzeni.md) — **"Mert olsa ne yapardı"**; sunulan seçenekleri reddedip sorunun kendisini yeniden kurar
 

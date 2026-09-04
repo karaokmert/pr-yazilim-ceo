@@ -1,66 +1,82 @@
-# Agent hafızası — kurulum planı
+# Agent hafızası — kurulum planı (v2)
 
-Tarih: 2026-09-04 · Durum: Mert onayı bekliyor
-Zemin kararı: Coolify (bkz. `konular/altyapi/kararlar/2026-09-04-arac-sunucusu-zemini-coolify.md`)
+Tarih: 2026-09-04 · Resim Mert onaylı ("aynen süperiz")
+Kimlik: **PR Venture Studio'nun ilk AI altyapı servisi** — `rag.prventurestudio.com`
+Gereksinim ve ufuk: `BILINMESI-GEREKENLER.md` · Zemin: Coolify/EX44 (karar dosyası altyapı konusunda)
 
 ---
 
-## Aşama 1 · Sunucu kurulumu — Coolify paneli (birlikte)
+## Aşama 1 · Servisleri ayağa kaldırmak (Mert panelde, Clara yanında)
 
-**1.1** Coolify'da "hafiza" için yer açılır (proje/environment).
+**1.1 Qdrant** — katalog şablonundan kuruldu/kuruluyor. Kontroller:
+- Image `latest` değil sabit sürüm: `qdrant/qdrant:v1.19.0` (wg-easy dersi:
+  şablon + latest ikilisi sessiz kırılma üretir).
+- Volume `/qdrant/storage` ✓ · `QDRANT__SERVICE__API_KEY` ✓ (değer 1Password'e).
+- **Adres:** `rag.prventurestudio.com` — Mert'in kararı: servis domain'le açılır,
+  VPN-only değil.
 
-**1.2 Qdrant kurulur** — resmi image (`qdrant/qdrant`), kalıcı disk bağlanır
-(kayıtlar container silinse de yaşar), API anahtarı konur.
-*Doğrulama:* VPN içinden sağlık ucu cevap veriyor mu.
+**1.2 DNS + SSL** — tools.pryazilim.com dersi uygulanır:
+- A kaydı `rag.prventurestudio.com` → 65.109.150.95, önce **DNS-only** (gri bulut).
+- Coolify domain alanına `https://rag.prventurestudio.com` → Let's Encrypt
+  sertifikayı kendisi alır.
+- Cloudflare proxy'si sonradan açılacaksa önce SSL modu **Full (strict)**.
+- HTTPS geldiğinde "API anahtarı şifresiz gidiyor" riski kapanır.
 
-**1.3 Çevirmen kurulur** — TEI image (CPU sürümü), model:
-`intfloat/multilingual-e5-base`. Kalıcı disk bağlanır — model bir kez iner,
-yeniden başlatmada tekrar inmez (bilgisayardaki cache derdinin sunucuda
-tekrarlanmaması bu satıra bağlı).
-*Doğrulama:* tek istekle "merhaba" gönderilir, sayı listesi dönüyor mu.
+**1.3 Çevirmen (TEI)** — ikinci servis: `text-embeddings-inference` (CPU imajı,
+v1.9.3), model `intfloat/multilingual-e5-base`, model cache'i için volume.
+Anahtar: TEI'nin kendi `API_KEY` env'i var (Bearer token ister) — 2026-09-04'te
+README'den doğrulandı; Clara'nın "anahtar desteği yok" ön bilgisi YANLIŞTI,
+düzeltildi. Domain'le açılır + anahtar zorunlu.
 
-**1.4** İki servis de dışa kapalı — erişim yalnız VPN içinden.
+**1.4 Sağlık testleri** — Qdrant: `/healthz` · TEI: tek cümle çevirisi.
+Her testte neyin kanıtlandığı yazılır.
 
-Tahmin: yarım saatlik panel işi. İkimiz birlikte: sen panelde, ben adım adım.
+⚠️ **AÇIK İŞ (Mert'in kararı):** güvenlik sıkılaştırma (VPN/erişim daraltma)
+kurulumlar bitince. Kapanınca buraya KAPANDI notu düşülür.
+Güncelleme 2026-09-04 12:48: HTTPS + API anahtarı devreye girdikten sonra
+Mert gerçek kayıtlarla (Clara'nın karar/hafıza içeriği) büyük test kararı
+verdi — bilinçli risk kabulü; hassas olmayan iç know-how sınıfı veri.
 
 ---
 
 ## Aşama 2 · Fork düzeltmesi — `karaokmert/qdrant-mcp` (birlikte)
 
-**2.1** Çevirmen adresi ayarlanabilir yapılır — bugün OpenAI'ye sabitlenmiş
-(`embeddings/openai.py:37`); env değişkeni eklenir, bizim sunucuyu gösterir.
-
-**2.2** e5 işaretleri eklenir — kaydederken metnin başına `passage: `,
-ararken `query: `. Konmadan da çalışır ama arama kalitesi sessizce düşer;
-o yüzden bu adım atlanamaz.
-
-**2.3** `.env.example` yeni ayarlarla güncellenir.
-
-İş bölümü: ben yazarım → değişikliği satır satır sana gösteririm → push senin.
+- Çevirmen adresi env'den (bugün `embeddings/openai.py:37` OpenAI'ye sabit).
+- e5 önekleri: kayıtta `passage: `, aramada `query: `.
+- `.env.example` güncellenir.
+- İş bölümü: Clara yazar → satır satır gösterir → push Mert.
 
 ---
 
 ## Aşama 3 · Uçtan uca doğrulama
 
-**3.1** Bilgisayardan MCP ile bir cümle kaydedilir, **farklı kelimelerle**
-aranır — anlam araması testi (örn. "fatura kesemedim" kaydet, "ödeme belgesi
-düzenlenemedi" ile ara).
-
-**3.2** Kanıtın kapsamı yazılır: çevirinin sunucuda koştuğu ayrıca doğrulanır
-(bilgisayarda model yok — asıl vaat bu).
+- Bir cümle kaydet, FARKLI kelimelerle ara (anlam testi).
+- Çevirinin sunucuda koştuğu ayrıca kanıtlanır (bilgisayarda model yok).
 
 ---
 
-## Aşama 4 · "Hafızaya ne yazılacak" kararı — ayrı konuşma
+## Aşama 4 · Pilot: Clara
 
-Kutu boş başlar. Hangi agent, hangi koleksiyona, neyi, ne zaman yazar/okur —
-bu Mert'le ayrı bir masada. Geçen Qdrant denemesi bu soru cevapsız kaldığı
-için ölmüştü; bu sefer kurulumdan sonra ilk iş bu.
+- Clara'ya koleksiyon açılır; hibrit düzen: `MEMORY.md` indeks lokalde
+  (hızlı kayıtlar + koleksiyon işaretleri + arama kuralları), gövdeler merkezde.
+- Kural sistemi OY `memory-management` skill'inden uyarlanır.
+- Beğenilirse → **fabrikaya talep:** memory-management + settings skill'lerinin
+  merkezi hafızaya uyarlanması, agent'lara yayılması (plugin kurulumunda API
+  key + kendi koleksiyonunu açma akışı).
+
+---
+
+## Aşama 5 · Değer ölçümü
+
+Bir ay kullanım: kim ne aradı, buldu mu, işe yaradı mı → devam / büyüt / kapat.
+Ufuk: ürün altyapısı — ilk test adayı Keba AI bağlantısı (o gün tasarlanır,
+bugün kurulmaz; Qdrant'ın anahtar+koleksiyon modeli kapıyı açık tutuyor).
 
 ---
 
 ## Bu planda OLMAYANLAR
 
-- K8s / altyapı değişikliği — ayrı karar, kapandı (Coolify kalıyor).
-- Müşteri projelerine dokunuş — yok.
-- Agent kanonlarına "hafızayı kullan" kuralı — Aşama 4'ten önce yazılmaz.
+- K8s / altyapı değişikliği (kapandı — Coolify kalıyor)
+- Müşteri projelerine dokunuş
+- Multi-tenant ürün altyapısı (kapı açık, inşaat yok)
+- Agent kanonlarına hafıza kuralı (fabrika devrinden önce yazılmaz)

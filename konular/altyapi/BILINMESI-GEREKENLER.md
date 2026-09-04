@@ -155,6 +155,23 @@ kapandı; buradan devam ediyoruz.
 
 ---
 
+## Domain stratejisi (Mert, 2026-09-04)
+
+Üç domain, üç ayrı kimlik:
+
+- **pryazilim.net** — dev ortamları; dev domain'leri buraya bağlanır.
+- **pryazilim.com** — şirketin ana domaini; bazı araçlar subdomain olarak
+  burada (`tools.pryazilim.com` = Coolify paneli).
+- **prventurestudio.com** — **AI işlerinin yürütüldüğü şirket.** AI araçları
+  subdomain olarak buradan başlar; ilk örnek: `rag.prventurestudio.com`
+  (agent hafızası / RAG servisi).
+
+⚠️ Bu ayrım bir adresleme tercihi değil, kurumsal yapı: AI tarafı ayrı şirket
+kimliğiyle (PR Venture Studio) büyüyor. Bir AI aracına adres verilirken önce
+hangi şirkete ait olduğu sorulur.
+
+---
+
 ## Trafik logu ve reklam engelleme — karar ve mekanik (2026-09-02)
 
 **Mert'in kararı: trafik logu tutulacak.** Gerekçesi bir politika: *"şirket

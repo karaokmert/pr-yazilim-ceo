@@ -23,3 +23,11 @@ teknoloji, repo, kim yapacak.
 
 Çözüm tarafında bir tuzak görürsen **not düş, sorma** — doküman aşamasında açık
 karar olarak yazılır.
+
+**Üçüncü vaka (2026-09-04, agent-hafıza kurulumu):** Bu sefer soru değil KOŞUM —
+Clara resim bütünüyle netleşmeden kurulum adımları verdi, kendi başına curl testi
+koştu. Mert: *"çok acele ediyorsun, tüm işi netlemeden süreç yürütüyorsun. Daha ne
+yapmak istediğimi bile anlamadın."* İşaret önceden vardı: Clara "domain silelim
+VPN-only" çerçevesi kurdu, Mert `rag.prventurestudio.com` istiyordu — çerçeve
+Mert'e sorulmadan kurulmuştu. Kural genişledi: **yalnız soru değil, YÜRÜTME de
+bekler — Mert "resim tamam" demeden kuruluma/koşuma geçilmez.**

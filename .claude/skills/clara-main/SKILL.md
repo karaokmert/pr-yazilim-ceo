@@ -244,9 +244,14 @@ Bir ARGE turu skill'e ya da role dönebilir; başlangıç odur, devamı değil.
 **Yeni iş seçildiyse** — dinlenir. Bağlam Mert'ten gelir, dosyadan değil. İşin adı
 netleştiğinde o konunun geçmişi açılır.
 
-**Eski işin devamı seçildiyse** — o zaman kapanış okunur: `gunluk/{proje}/` altındaki en
-yeni kapanış dokümanı. Beş şey söyler: ne bitti · ne yarım kaldı · Mert'in kararını
-bekleyen · ölçüldü ama çözülmedi · bir sonraki hareket.
+**Eski işin devamı seçildiyse** — o zaman kapanış okunur: **önce hafızadan**
+(`hafiza` MCP'si → `qdrant_find`, `tur=kapanis` filtresi + proje etiketi; araç
+yoksa `konular/agent-hafiza/test/hafiza_ara.py`). Kapanış kaydı beş şey söyler:
+ne bitti · ne yarım kaldı · Mert'in kararını bekleyen · ölçüldü ama çözülmedi ·
+bir sonraki hareket. ⚠️ Geçiş dönemi: hafızada kayıt yoksa `gunluk/{proje}/`
+altındaki en yeni kapanış dosyasına düşülür — 2026-09-04 öncesi kapanışlar
+dosyada yaşıyor. (Karar 2026-09-04: dosya yalnız kanon taşır, kayıt sınıfının
+evi hafızadır — gerekçesi hafızada, `konu=hafiza` kayıtlarında.)
 
 ⚠️ **Yalnız kendi modunun kapanışını oku.** `gunluk/` proje bazlı ayrışır; başka
 projenin kapanışı bu oturumun işi değildir — okunmaz, **özetlenmez.** (Ölçüldü: tek
@@ -288,12 +293,16 @@ kapanıyor.**
 **1 · Kalıcı olan ne varsa yazılır.** Bir teşhis, bir ölçüt, bir karar gerekçesi, bir
 açık soru. **Yarım da yazılır.** → yöntemi `clara-is-disiplini`'de.
 
-**2 · Kapanış dokümanı yazılır** — `gunluk/{proje}/{tarih}-kapanis.md` (EV'de `{proje}`
-= `ev`, YÖNETİM'de projenin adı).
+**2 · Kapanış kaydı HAFIZAYA yazılır** — `hafiza` koleksiyonuna (`qdrant_store`),
+dosyaya değil (karar 2026-09-04: kayıt sınıfının evi hafıza). Şema: içerik =
+kapanışın özü (hüküm gibi, belirti diliyle aranabilir); metadata = `tur: kapanis`
+· `proje` (EV'de `ev`, YÖNETİM'de projenin adı) · `yazan: clara` · `tarih` ·
+`detay` (tam anlatım) · `iliskili` (ilgili karar/kazanım kayıtları).
 
-Beş bölüm: **ne bitti** (commit hash'leriyle) · **ne yarım kaldı** (nerede, kimde, ne
-bekliyor) · **Mert'in kararını bekleyen** (her birinin neden onun kararı olduğu) ·
-**ölçüldü ama çözülmedi** · **bir sonraki hareket** (tek cümle).
+Beş bölüm değişmedi: **ne bitti** (commit hash'leriyle) · **ne yarım kaldı**
+(nerede, kimde, ne bekliyor) · **Mert'in kararını bekleyen** (her birinin neden
+onun kararı olduğu) · **ölçüldü ama çözülmedi** · **bir sonraki hareket** (tek
+cümle). Hepsi `detay` alanına; özü içeriğe.
 
 ⚠️ Bu doküman **sonraki oturum için** yazılır, Mert için değil. Mert konuşmayı
 hatırlıyor; sonraki oturum hatırlamıyor.

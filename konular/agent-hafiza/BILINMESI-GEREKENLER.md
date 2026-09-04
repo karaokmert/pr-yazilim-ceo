@@ -105,6 +105,52 @@ içerik sınıfı: **proje dersleri · kararlar · skill önerileri · kişisel
 tercihler.** Tüketici: plugin'lerle dağıtılan saha ekipleri (OY/WS/n8n) +
 Clara. Dağıtım kanalı: MCP tanımı plugin'lere eklenir.
 
+## Kurumsal konum ve ufuk (Mert, 2026-09-04)
+
+Bu araç bir iç deney değil — **PR Venture Studio'nun (AI şirketi) ilk altyapı
+servisi.** Adresi `rag.prventurestudio.com` (domain stratejisi:
+`konular/altyapi/BILINMESI-GEREKENLER.md`).
+
+Mert'in ufku: *"şimdilik bizim agentların hafızası ama ileride ürünlere de
+altyapı olabilir — mesela Keba AI projesini buraya bağlayarak test ederiz."*
+
+⚠️ Tasarım sonucu: ürün kapısı bugün KURULMAZ (yalın üretim) ama KAPATILMAZ —
+Qdrant'ın API key + koleksiyon modeli ayrımı zaten taşıyor; bugünkü tek
+gereği adres/SSL/erişimin baştan düzgün kurulması. Keba AI projesi Clara'ya
+henüz anlatılmadı — bağlama günü gelince tanışılacak.
+
+## Büyük test sonuçları (2026-09-04, mE5-base)
+
+**Kayıt yöntemi:** hüküm > blok. 16 soruluk sette hüküm yöntemi 15/15 ilk
+sırada (İngilizce, tek kelime, belirti dili dahil); blok yöntemi 3 soruda
+kaçırdı — en öğreticisi "lisans": doğru bilgi büyük blokta gömülünce 5.
+sıraya düştü. **Bir kayıt bir fikir taşır.** Filtre yalnız hüküm yönteminde
+anlamlı. Eşik bandı: doğru 0.82-0.88, alakasız ~0.77 — "cevap yok" eşiği
+~0.80 adayı, büyük veriyle yeniden ölçülecek.
+
+**Mükerrer hüküm bulgusu:** iki ayrı kaynaktan çıkarılan benzer hükümler
+sıralamada birbiriyle yarışıyor (ikisi de doğru ama sıra bölünüyor) —
+yükleme hattına tekilleştirme adımı gerekecek.
+
+**Kanal testi (kör agent, 8 soru — local dosya vs Qdrant):**
+- Doğruluk: İKİSİ DE 8/8. Bu repo iyi örgütlü olduğu için grep tarafı da bulabildi.
+- Maliyet: Qdrant 8 araç çağrısı / ~92K token / 75 sn · Dosya 15 çağrı /
+  ~116K token / 95 sn. Qdrant soru başına TEK aramayla, sabit ve öngörülebilir
+  maliyetle cevapladı.
+- Derinlik farkı: dosya tarafı iki soruda daha zengin cevap verdi (örn.
+  sprint custom field ID'si ham dosyada var, hüküm özetinde yok).
+- **Tasarım sonucu: iki kanal rakip değil KATMAN.** Hafıza ilk durak (ucuz,
+  tek arama, hüküm + kaynak adresi) → derinlik gerekirse adresteki dosya
+  açılır. "Hüküm merkezde, doküman repo'da" ilkesi kanal testiyle doğrulandı;
+  kaynak_adres alanı bu köprünün kendisi.
+- Sınır: tek koşum, tek repo, 8 soru — varyans ölçülmedi; dosya tarafının
+  başarısı bu reponun düzenli oluşuna borçlu, çapraz-proje soruda ölçülmedi.
+
+Test düzeneği: `test/hafiza_testi.py` (tekrar koşulabilir) · veri:
+`test/gercek_hukumler.jsonl` (120 hüküm + 36 elle) · arama CLI:
+`test/hafiza_ara.py`. Bekleyen: mE5-large karşılaştırması (MODEL_ID değişimi
+Mert'te).
+
 ## Açık kalanlar
 
 1. **Koleksiyon şeması ve sahiplik kuralları** — Clara önerisi Mert'le
