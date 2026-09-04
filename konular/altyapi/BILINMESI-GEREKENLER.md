@@ -236,6 +236,34 @@ AdGuard kalkmaz ve belirtisi yine *"kurdum ama Exited"* olur — wg-easy'nin ayn
 **wg-easy bugün client'lara hangi DNS'i veriyor.** Değiştirilecek değerin bugünkü hâli
 görülmeden ayar yazılmaz.
 
+## tools.pryazilim.com "too many redirects" — çözüldü (2026-09-04)
+
+**Belirti:** Coolify paneline domain verildi (`tools.pryazilim.com`), Cloudflare'dan
+SSL açıldı, önce çalıştı, sonra tarayıcı "too many redirects" verdi.
+
+**Asıl sebep SSL modu değil, DNS kaydıydı.** A kaydı EX44'ü (65.109.150.95) değil
+**178.105.134.101**'i gösteriyordu — Hetzner **Cloud** (Nürnberg) tarafında başka bir
+makine. Cloudflare proxy açıkken bu görünmüyordu (dig hep CF IP'lerini döndürüyor);
+proxy kapatılınca ortaya çıktı. 307 döngüsünü o yanlış makinedeki servis üretiyordu.
+
+**Çözüm:** Mert A kaydını 65.109.150.95'e çevirdi (proxy DNS-only). DNS düzelir
+düzelmez Coolify Let's Encrypt sertifikasını kendisi aldı (04:03 UTC), panel açıldı.
+Mert tarafında tarayıcı hâlâ döngü gösterdi — macOS DNS flush
+(`dscacheutil -flushcache` + `killall -HUP mDNSResponder`) çözdü.
+
+⚠️ **Dersler:**
+- *"Too many redirects" görüldüğünde ilk ölçüm SSL modu değil, DNS'in doğru makineye
+  bakıp bakmadığıdır.* Proxy açıkken `dig` origin'i göstermez — proxy kapatılmadan ya
+  da CF DNS panelinden bakılmadan kayıt doğrulanamaz.
+- Cloudflare proxy'si (turuncu bulut) tekrar açılacaksa **önce SSL modu "Full
+  (strict)"** yapılır — origin'de artık geçerli LE sertifikası var; Flexible'da
+  Coolify'ın "Redirect HTTP to HTTPS" ayarıyla döngü geri gelir.
+- Sunucu tarafı düzeldikten sonra istemcide arıza sürerse tarayıcı 301 önbelleği ve
+  OS DNS önbelleği şüphelidir — gizli pencere ilk test.
+
+**Durum notu:** `tools.pryazilim.com` = Coolify panelinin kendi adresi (instance URL).
+178.105.134.101'in hangi makine olduğu sorulmadı/netleşmedi — Cloud projelerinden biri.
+
 ### Açık karar — Mert'in
 
 **Sorgu kaydının saklama süresi** (24 saat / 7 / 30 / 90 gün). Kurulumun içine yazılıyor;

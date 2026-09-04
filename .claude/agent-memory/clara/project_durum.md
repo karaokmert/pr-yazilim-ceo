@@ -9,40 +9,37 @@ metadata:
 yalnız Mert *"eski işin devamı"* dediğinde ya da bir konu sorulduğunda açılır.
 → `kararlar/2026-08-26-acilis-sirasi-soruyla-baslar.md`
 
-**Son iş: GPU/LLM ARGE araştırması (EV, 2026-08-25 gece).**
-Kapanış: `gunluk/ev/2026-08-25-kapanis-gpu-llm-arge.md`
-Plan: `incelemeler/gpu-llm-test-kurulumu/ARGE-PLANI.md` (sabah okunacak)
-
-## BİLMEDEN İŞE BAŞLAMA
-
-**1. Clara 2026-08-23'te sıfırdan yeniden kuruldu.** Gövde altı grup; omurga üç skill
-(`clara-main`, `clara-is-disiplini`, `clara-behavior`) ve bunları açılışta açan hook
-`~/.claude/hooks/agent-omurga-acilis.sh`. Skill'ler preload EDİLMİYOR.
-
-**2. Yetki devri yapıldı.** Yetki sınırı yok, tek onay kapısı Mert. Agent'ı `Agent`
-ile ÇAĞIRMAK yasak, `SendMessage` ile İLETMEK serbest.
-
-**3. Fabrika `fabrika-v2`'de, üç rol: FPA / FPD / FQA.**
-
-**4. Qdrant KAPALI.** `grep -l` kullanma, satır göster (`-h`).
+**Son iş: tools.pryazilim.com redirect arızası çözüldü (EV, 2026-09-04 sabah).**
+Kapanış: `gunluk/ev/2026-09-04-kapanis-coolify-dns.md`
+Coolify paneli artık `https://tools.pryazilim.com` üzerinden erişilebilir —
+**SSH'sız yönetim yolu açıldı.** Mert: "VPN konusuna devam edeceğiz."
 
 ## AÇIK — devam eden
 
-**GPU/LLM ARGE turu — sabah kurulacak.** Sunucu kiralanacak (OVH, saatlik,
-taahhütsüz), üstüne sırayla 5 model kurulup test edilecek. Üç karar Mert'te:
-makine seçimi (H100 80GB 2,80€/sa vs L40S 48GB 1,40€/sa) · model listesi ·
-Türkçe testinin ağırlığı.
-⚠️ OVH'de instance STOP faturayı KESMİYOR — SHELVE gerekiyor (gecede 33,60€).
+**VPN / AdGuard turu (altyapı).** Sıradaki: sunucu durumu ölçümü (wg-easy ayakta mı ·
+53 portu boşta mı · client'lara hangi DNS dağıtılıyor) → AdGuard compose.
+Artık Coolify paneli açık olduğundan SSH açılmasa da panel üzerinden ilerlenebilir.
+Mert'in 4 açık kararı duruyor: EX44 SSH erişimi (1Password'da EX44 anahtarı yok,
+agent bazen tümden boş = 1Password kilitli) · log saklama süresi · ekip bilecek mi ·
+kim okuyacak. → `konular/altyapi/BILINMESI-GEREKENLER.md`
 
-**Mert'ten iki rakam bekleniyor** (5 kez soruldu, gelmedi): aylık gerçek Claude
-harcaması · gerçekte kaç token bağlam kullanıldığı. İkisi de kiralama kararını
-belirliyor.
+**Dünden (2026-09-03) bilinçli açılmayanlar:** sprint takip sistemi · proje
+ekonomisi aracı · PA-üstü rol saha sınaması · fabrika eleştiri turu
+(`fabrika-v2/docs/oy-9/00-ELESTIRILER.md` FPA'da işlenmedi) · MEMORY.md'ye ölüm
+koşulu temizliği.
 
-**Fabrika teslimi bekleniyor.** Üç gövde yazıldı (`8b62b61` fabrika reposunda).
-Teslimde sorulacak üç kalem: `konular/fabrika-kisilik/TESLIMDE-SORULACAK.md`.
-⚠️ Mert'in kararı: *"iş bitti derlerse sor, o zamana kadar bekle."*
+## BİLMEDEN İŞE BAŞLAMA
 
-**Fabrikaya handoff (23 Ağustos'tan devreden)** — Clara gövdesinin altı grubu ve
-zayıflık kuralı fabrikaya anlatımla geçmeli.
+**1. Clara 2026-08-23'te sıfırdan kuruldu.** Omurga üç skill, hook açtırıyor,
+preload yok.
 
-**`oy-cache-bloklari`** — iş emri yazıldı (`8d443d6`), FPD'ye hiç gitmedi.
+**2. Yetki devri:** sınır yok, tek onay kapısı Mert. `Agent` ile iş verilmez,
+`SendMessage` ile iletilir; bilgi çıkarma için `Agent` serbest (2026-09-02).
+
+**3. Fabrika `fabrika-v2`:** FPA / FPD / FQA.
+
+**4. Qdrant KAPALI.** `grep -l` değil satır göster.
+
+**5. EX44 `pr-tools`:** 65.109.150.95 (Hetzner dedicated, Helsinki). Coolify v4,
+wg-easy v15, panel `tools.pryazilim.com`. 178.105.134.101 = Hetzner Cloud'da başka
+makine (kimliği netleşmedi).
