@@ -1,0 +1,130 @@
+[
+  {
+    "soru": "aramada neden her seferinde farklı sonuç buluyorum",
+    "beklenen": "grep-satir-gosterme-disiplini",
+    "sira": "2",
+    "ilk_skor": 0.84354883,
+    "ilk_kod": "uc-arac-uc-soru",
+    "notu": "farklı kelime"
+  },
+  {
+    "soru": "yeni bir self hosted aracı hangi platforma kuruyoruz",
+    "beklenen": "coolify-zemin",
+    "sira": "1",
+    "ilk_skor": 0.84377,
+    "ilk_kod": "coolify-zemin",
+    "notu": "farklı kelime"
+  },
+  {
+    "soru": "docker imajının sürümünü latest bırakmak sakıncalı mı",
+    "beklenen": "latest-image-birakilmaz",
+    "sira": "1",
+    "ilk_skor": 0.8852762,
+    "ilk_kod": "latest-image-birakilmaz",
+    "notu": "yakın kelime"
+  },
+  {
+    "soru": "Mert'e uzun detaylı rapor mu yazmalıyım",
+    "beklenen": "mert-kisa-cevap",
+    "sira": "1",
+    "ilk_skor": 0.84898263,
+    "ilk_kod": "mert-kisa-cevap",
+    "notu": "farklı kelime"
+  },
+  {
+    "soru": "başka bir agent'a görevi nasıl iletirim",
+    "beklenen": "agent-cagirma",
+    "sira": "1",
+    "ilk_skor": 0.84430426,
+    "ilk_kod": "agent-cagirma",
+    "notu": "farklı kelime"
+  },
+  {
+    "soru": "site sürekli kendine yönlendiriyor ve açılmıyor",
+    "beklenen": "redirect-dns",
+    "sira": "1",
+    "ilk_skor": 0.8859818,
+    "ilk_kod": "redirect-dns",
+    "notu": "belirti dili"
+  },
+  {
+    "soru": "Türkçe için hangi gömme modelini seçmeliyiz",
+    "beklenen": "model-secim",
+    "sira": "1",
+    "ilk_skor": 0.8382719,
+    "ilk_kod": "model-secim",
+    "notu": "farklı kelime"
+  },
+  {
+    "soru": "arama cümlesinin başına bir ek koymak gerekiyor muydu",
+    "beklenen": "e5-onek",
+    "sira": "1",
+    "ilk_skor": 0.8467692,
+    "ilk_kod": "e5-onek",
+    "notu": "dolaylı anlatım"
+  },
+  {
+    "soru": "haftalık planlama hangi gün ve nasıl yapılır",
+    "beklenen": "sprint-carsamba",
+    "sira": "1",
+    "ilk_skor": 0.84348476,
+    "ilk_kod": "sprint-carsamba",
+    "notu": "farklı kelime"
+  },
+  {
+    "soru": "bir hatayı yeni kural ekleyerek çözmek doğru mu",
+    "beklenen": "yama-degil-sebep",
+    "sira": "2",
+    "ilk_skor": 0.888958,
+    "ilk_kod": "sebep-kaldirilir",
+    "notu": "farklı kelime"
+  },
+  {
+    "soru": "which day do we do sprint planning",
+    "beklenen": "sprint-carsamba",
+    "sira": "1",
+    "ilk_skor": 0.85670733,
+    "ilk_kod": "sprint-carsamba",
+    "notu": "EDGE: İngilizce"
+  },
+  {
+    "soru": "lisans",
+    "beklenen": "hf-lisans",
+    "sira": "1",
+    "ilk_skor": 0.81094044,
+    "ilk_kod": "hf-lisans",
+    "notu": "EDGE: tek kelime"
+  },
+  {
+    "soru": "akvaryum balığı bakımı nasıl yapılır",
+    "beklenen": null,
+    "sira": "-",
+    "ilk_skor": 0.77629095,
+    "ilk_kod": "latest-image-birakilmaz",
+    "notu": "EDGE: alakasız"
+  },
+  {
+    "soru": "indirilen model dosyaları neden sürekli kayboluyor",
+    "beklenen": "fastembed-cache",
+    "sira": "1",
+    "ilk_skor": 0.8391155,
+    "ilk_kod": "fastembed-cache",
+    "notu": "belirti dili"
+  },
+  {
+    "soru": "işi nasıl sunmalıyım",
+    "beklenen": "mert-onay-brief",
+    "sira": "1",
+    "ilk_skor": 0.82830024,
+    "ilk_kod": "mert-onay-brief",
+    "notu": "filtre: tur=tercih (blokta filtresiz)"
+  },
+  {
+    "soru": "iki farklı yoldan yapılan işte kayıt neden bozuluyor",
+    "beklenen": "iki-yol-bir-kayit",
+    "sira": "1",
+    "ilk_skor": 0.883383,
+    "ilk_kod": "iki-yol-bir-kayit",
+    "notu": "farklı kelime"
+  }
+]

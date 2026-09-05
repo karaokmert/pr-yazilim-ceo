@@ -1,0 +1,164 @@
+{"soru": "Bilgisayarımda embedding modeli çalıştırınca cache dolup taşıyor, sürekli disk sorunu yaşıyorum", "beklenen_dosya": "konular/agent-hafiza/BILINMESI-GEREKENLER.md", "tip": "belirti"}
+{"soru": "Türkçe metinler için hangi açık kaynak embedding modeli en iyi performansı veriyor", "beklenen_dosya": "konular/agent-hafiza/BILINMESI-GEREKENLER.md", "tip": "dogal"}
+{"soru": "TR-MTEB retrieval skoru", "beklenen_dosya": "konular/agent-hafiza/BILINMESI-GEREKENLER.md", "tip": "anahtar"}
+{"soru": "Which benchmark was used to pick the Turkish embedding model instead of making up custom questions?", "beklenen_dosya": "konular/agent-hafiza/BILINMESI-GEREKENLER.md", "tip": "ingilizce"}
+{"soru": "Anlamsal hafıza servisinin hangi ay için değer ölçümü planlanmış, kim karar verecek devam mı kapat mı", "beklenen_dosya": "konular/agent-hafiza/PLAN.md", "tip": "dogal"}
+{"soru": "Yeni kurduğumuz vektör veritabanına bağlanan çeviri servisinin sağlık kontrolü nasıl yapılıyor, tek cümle çevirip mi bakıyoruz", "beklenen_dosya": "konular/agent-hafiza/PLAN.md", "tip": "belirti"}
+{"soru": "TEI API_KEY", "beklenen_dosya": "konular/agent-hafiza/PLAN.md", "tip": "anahtar"}
+{"soru": "Bir agent'ın önündeki kural dosyaları üç ayrı seviyede tutuluyor ama hangisinin ne zaman yüklendiği belli değil, işe yaramayan bilgiyle karşılaşıyorum", "beklenen_dosya": "konular/agent-kanonu/BILINMESI-GEREKENLER.md", "tip": "belirti"}
+{"soru": "Bir kural yazarken önkoşulun sağlanmadığı durumu düşünmezsek ne olur", "beklenen_dosya": "konular/agent-kanonu/BILINMESI-GEREKENLER.md", "tip": "dogal"}
+{"soru": "Geçmişte alınmış bir karar var ama kod hâlâ eskisini yapıyor, kimse fark etmemiş bu tutarsızlığı nasıl önleriz", "beklenen_dosya": "konular/agent-kanonu/BILINMESI-GEREKENLER.md", "tip": "belirti"}
+{"soru": "Prod'a çıkış sonrası sürüm etiketi atma zorunluluğu neden kaldırılmıştı", "beklenen_dosya": "konular/agent-kanonu/kararlar/2026-08-05-release-tag-sistemi-kaldirildi.md", "tip": "dogal"}
+{"soru": "Bir sürüm etiketleme adımı beş kişiden geçip sonunda hiçbir fayda sağlamamış, bunun kaydı nerede", "beklenen_dosya": "konular/agent-kanonu/kararlar/2026-08-05-release-tag-sistemi-kaldirildi.md", "tip": "belirti"}
+{"soru": "release tag rollback SHA", "beklenen_dosya": "konular/agent-kanonu/kararlar/2026-08-05-release-tag-sistemi-kaldirildi.md", "tip": "anahtar"}
+{"soru": "Dokuz farklı ekip üyesinin açılış metninde birebir aynı paragraf var ama skiller sadece iki kelimeyle geçiyor, bunu nasıl güçlendiririz", "beklenen_dosya": "konular/agent-kanonu/kararlar/2026-08-14-body-acilis-paragrafi.md", "tip": "belirti"}
+{"soru": "Ekip üyesi tanımlarına isim ve sayı yazmama kuralının gerekçesi ne", "beklenen_dosya": "konular/agent-kanonu/kararlar/2026-08-14-body-acilis-paragrafi.md", "tip": "dogal"}
+{"soru": "role özel kuyruk BE pryazilim.core", "beklenen_dosya": "konular/agent-kanonu/kararlar/2026-08-14-body-acilis-paragrafi.md", "tip": "anahtar"}
+{"soru": "İş-skill eşleme tablosu bir role özgü tanımda var ama başka birinde hiç yok, bu eksikliği kimse fark etmemiş neden", "beklenen_dosya": "konular/agent-kanonu/kararlar/2026-08-16-body-haritalari-turetilecek.md", "tip": "belirti"}
+{"soru": "Aynı bilgiyi iki yerde elle tutmanın çift kaynak sorunu nasıl çözülür, silmeden", "beklenen_dosya": "konular/agent-kanonu/kararlar/2026-08-16-body-haritalari-turetilecek.md", "tip": "dogal"}
+{"soru": "Bir kanon metninde geliştiriciye özel yazılmış bir örnek cümle diğer rollerde anlamsız kalıyordu, sonunda ne yapıldı", "beklenen_dosya": "konular/agent-kanonu/kararlar/2026-08-16-tip2-dustu-ornek-cikariliyor.md", "tip": "belirti"}
+{"soru": "Skile deneyim mi kural mı yazılmalı, bir cümlenin yarın da doğru kalıp kalmayacağı nasıl test edilir", "beklenen_dosya": "konular/agent-kanonu/kararlar/2026-08-16-tip2-dustu-ornek-cikariliyor.md", "tip": "dogal"}
+{"soru": "Araç listesi kısıtlamasının kaldırılıp yerine kural konmasının sebebi neydi", "beklenen_dosya": "konular/agent-kanonu/uygulananlar/2026-08-05_10-agent-kanon-duzeni.md", "tip": "dogal"}
+{"soru": "preload skill sayısı kaç tane", "beklenen_dosya": "konular/agent-kanonu/uygulananlar/2026-08-05_10-agent-kanon-duzeni.md", "tip": "anahtar"}
+{"soru": "Kubernetes ingress route nasıl tanımlanır", "beklenen_dosya": null, "tip": "negatif"}
+{"soru": "Sunucumuza yeni bir araç kuracağız ama container zemini olarak ne kullanacağımıza karar vermemiz lazım, K8s mi başka bir şey mi", "beklenen_dosya": "konular/altyapi/kararlar/2026-09-04-arac-sunucusu-zemini-coolify.md", "tip": "belirti"}
+{"soru": "Kullandığımız self-hosted araç panelinin container orkestrasyonu Kubernetes'i destekliyor mu", "beklenen_dosya": "konular/altyapi/kararlar/2026-09-04-arac-sunucusu-zemini-coolify.md", "tip": "dogal"}
+{"soru": "Ekip cihazlarımızdan bankacılık ve dış sunuculara erişim tek bir sabit adresten geçmeli, hangi çözümü kurmalıyız", "beklenen_dosya": "konular/altyapi/kararlar/2026-08-28-vpn-kararlari.md", "tip": "belirti"}
+{"soru": "Neden mesh VPN yerine merkezi VPN tercih edildi", "beklenen_dosya": "konular/altyapi/kararlar/2026-08-28-vpn-kararlari.md", "tip": "dogal"}
+{"soru": "full-tunnel split-tunnel gecikme", "beklenen_dosya": "konular/altyapi/kararlar/2026-08-28-vpn-kararlari.md", "tip": "anahtar"}
+{"soru": "What is the tradeoff of always-on full-tunnel VPN routing all team traffic through one location?", "beklenen_dosya": "konular/altyapi/kararlar/2026-08-28-vpn-kararlari.md", "tip": "ingilizce"}
+{"soru": "Sunucumuzda WireGuard paneli kurulu ama hiçbir cihaz bağlanamıyor, çalışıyor gibi görünüyor ama tünel kurulmuyor", "beklenen_dosya": "konular/altyapi/BILINMESI-GEREKENLER.md", "tip": "belirti"}
+{"soru": "Sabit sunucu IP'si müşteriye verilen bir taahhüt hâline gelince makine değişince ne oluyor", "beklenen_dosya": "konular/altyapi/BILINMESI-GEREKENLER.md", "tip": "dogal"}
+{"soru": "AdGuard Home DNS filtresi reklam engelleme", "beklenen_dosya": "konular/altyapi/BILINMESI-GEREKENLER.md", "tip": "anahtar"}
+{"soru": "Panelimize domain bağladık, SSL de açtık ama tarayıcı sürekli yönlendirme döngüsüne giriyor, sayfa hiç açılmıyor", "beklenen_dosya": "konular/altyapi/BILINMESI-GEREKENLER.md", "tip": "belirti"}
+{"soru": "Yeni kurulan bir sunucuda disk sağlığı test edilmeden önce sağlayıcının kendi testine güvenilebilir mi", "beklenen_dosya": "konular/altyapi/BILINMESI-GEREKENLER.md", "tip": "dogal"}
+{"soru": "En iyi akvaryum filtresi hangisi, balıklarım için ne önerirsiniz", "beklenen_dosya": null, "tip": "negatif"}
+{"soru": "Bir asistan agent'ı farklı bilgisayarlardan açılıyor ama hepsi aynı proje klasöründeymiş gibi görünüyor, hangi projede olduğunu doğru göstermiyor", "beklenen_dosya": "konular/clara/kararlar/2026-08-13-clara-cd-kaldirildi.md", "tip": "belirti"}
+{"soru": "Sembolik link kullanan bir kısayoldan cd komutu neden kaldırıldı", "beklenen_dosya": "konular/clara/kararlar/2026-08-13-clara-cd-kaldirildi.md", "tip": "dogal"}
+{"soru": "lsof cwd proje tespiti", "beklenen_dosya": "konular/clara/kararlar/2026-08-13-clara-cd-kaldirildi.md", "tip": "anahtar"}
+{"soru": "Kullanıcıya soru sorulacak kutuda dosya adı ve kod parçası geçiyor ama açıklaması başka yerde yazılı, kutu tek başına anlaşılmıyor", "beklenen_dosya": "konular/clara/kararlar/2026-08-13-question-baslik-ve-tanimlayici.md", "tip": "belirti"}
+{"soru": "Bir görev numarası tek başına paylaşıldığında neden yetersiz sayılıyor", "beklenen_dosya": "konular/clara/kararlar/2026-08-13-question-baslik-ve-tanimlayici.md", "tip": "dogal"}
+{"soru": "Ekip lideri kanal yönetimini asistana bir türlü devredemiyor, her iş kendi onayında tıkanıp kalıyor", "beklenen_dosya": "konular/clara/kararlar/2026-08-14-clara-sahada-tasiyici.md", "tip": "belirti"}
+{"soru": "Yorum yapmadan yalnızca mesaj taşıyan bir rolün üç kontrolü nedir", "beklenen_dosya": "konular/clara/kararlar/2026-08-14-clara-sahada-tasiyici.md", "tip": "dogal"}
+{"soru": "Bir asistan artık üretim ekibine doğrudan iş verip süreci yönetebiliyor ama hâlâ karar veremiyor, sınır nerede çizildi", "beklenen_dosya": "konular/clara/kararlar/2026-08-16-clara-fabrikaya-is-verebilir.md", "tip": "belirti"}
+{"soru": "Bir agent diğerine iş verdiğinde raporun kullanıcıya değil çağırana gitmesi sorunu nasıl aşıldı", "beklenen_dosya": "konular/clara/kararlar/2026-08-16-clara-fabrikaya-is-verebilir.md", "tip": "dogal"}
+{"soru": "Bir CEO'ya sorulacak sorular hiç açıklama yapılmadan direkt seçenek olarak sunulunca ne sorunu çıkıyor", "beklenen_dosya": "konular/clara/kararlar/2026-08-16-once-aciklama-sonra-soru.md", "tip": "belirti"}
+{"soru": "Soru sormadan önce açıklamanın üç parçası nedir", "beklenen_dosya": "konular/clara/kararlar/2026-08-16-once-aciklama-sonra-soru.md", "tip": "dogal"}
+{"soru": "AskUserQuestion açıklama sırası", "beklenen_dosya": "konular/clara/kararlar/2026-08-16-once-aciklama-sonra-soru.md", "tip": "anahtar"}
+{"soru": "Onaylanmış bir iş devrini artık kullanıcı elle taşımak yerine asistan doğrudan iletebiliyor, bu neyi riske atıyor", "beklenen_dosya": "konular/clara/kararlar/2026-08-19-handoff-sendmessage-ile-iletilir.md", "tip": "belirti"}
+{"soru": "SendMessage ile iş devri iletilirken onay şartı hâlâ geçerli mi", "beklenen_dosya": "konular/clara/kararlar/2026-08-19-handoff-sendmessage-ile-iletilir.md", "tip": "dogal"}
+{"soru": "Bir asistanın kendi kayıtlarına 12 eşleşme olduğu hâlde önce 0 eşleşme dediği bir vaka var, bu ne anlama geliyor", "beklenen_dosya": "konular/clara/kararlar/2026-08-19-ogrenme-dongusu.md", "tip": "belirti"}
+{"soru": "İtirazın öğrenme kanalı olması ilkesi ne diyor", "beklenen_dosya": "konular/clara/kararlar/2026-08-19-ogrenme-dongusu.md", "tip": "dogal"}
+{"soru": "memory terfi eşiği tarama", "beklenen_dosya": "konular/clara/kararlar/2026-08-19-ogrenme-dongusu.md", "tip": "anahtar"}
+{"soru": "Raporda satır sayısındaki büyük düşüşü övmüşüz ama içeriğe hiç bakmamışız, bu yaklaşımın sorunu ne", "beklenen_dosya": "konular/clara/kararlar/2026-08-19-sayi-olcum-degildir.md", "tip": "belirti"}
+{"soru": "Bir sayının kanıt sayılıp sayılmadığını ayıran soru nedir", "beklenen_dosya": "konular/clara/kararlar/2026-08-19-sayi-olcum-degildir.md", "tip": "dogal"}
+{"soru": "Does a metric like line count reduction actually measure content quality?", "beklenen_dosya": "konular/clara/kararlar/2026-08-19-sayi-olcum-degildir.md", "tip": "ingilizce"}
+{"soru": "Bir yönetim asistanının tanımı sıfırdan yeniden yazılırken hangi katmanlara bölündü", "beklenen_dosya": "konular/clara/kararlar/2026-08-23-clara-yeniden-kuruldu.md", "tip": "dogal"}
+{"soru": "Açılışta hiçbir skil yüklenmediği bir oturumda sadece bir tanesi tetiklendi, sebebi neydi ve nasıl çözüldü", "beklenen_dosya": "konular/clara/kararlar/2026-08-23-clara-yeniden-kuruldu.md", "tip": "belirti"}
+{"soru": "clara-acilis.sh SessionStart hook", "beklenen_dosya": "konular/clara/kararlar/2026-08-23-clara-yeniden-kuruldu.md", "tip": "anahtar"}
+{"soru": "Bir kişinin sabit departmanı yok, ihtiyaç duyulan her alanda görev alıyor, bu nasıl tanımlanmış", "beklenen_dosya": "konular/clara/kararlar/2026-08-23-clara-yeniden-tanimlandi.md", "tip": "dogal"}
+{"soru": "Bir asistan üç kez arka arkaya patronu yokmuş gibi otomatik karar mekanizmaları tasarlamış, bu nasıl düzeltildi", "beklenen_dosya": "konular/clara/kararlar/2026-08-23-clara-yeniden-tanimlandi.md", "tip": "belirti"}
+{"soru": "Bir kişinin gövde tanımı neden bir sözleşme değil karakter olarak yazılmalı", "beklenen_dosya": "konular/clara/kararlar/2026-08-23-govde-yeniden-yazildi.md", "tip": "dogal"}
+{"soru": "clara-ex-emekli eski govde", "beklenen_dosya": "konular/clara/kararlar/2026-08-23-govde-yeniden-yazildi.md", "tip": "anahtar"}
+{"soru": "Bir yönetici sadece soru iletmek isterken iş devri de iletiyormuş gibi bir karışıklık çıktı, hangisi serbest hangisi değil", "beklenen_dosya": "konular/clara/kararlar/2026-08-23-iletim-soru-icin-serbest.md", "tip": "belirti"}
+{"soru": "Soru, bilgi, iş ve onay mesaj türlerinden hangileri asistan tarafından iletilebiliyor", "beklenen_dosya": "konular/clara/kararlar/2026-08-23-iletim-soru-icin-serbest.md", "tip": "dogal"}
+{"soru": "Bir kural değiştiğinde ona dayanan açıklama cümlesi güncellenmeden kalıyor, bunu kimlik taraması neden yakalayamıyor", "beklenen_dosya": "konular/clara/kararlar/BEKLEYEN-cerceve-cumlesi-geride-kaliyor.md", "tip": "belirti"}
+{"soru": "Bir kural kaldırıldığında ona dayanan çerçeve cümleleri hangi mekanizmayla bulunacak, bu karara bağlanmış mı", "beklenen_dosya": "konular/clara/kararlar/BEKLEYEN-cerceve-cumlesi-geride-kaliyor.md", "tip": "dogal"}
+{"soru": "Bir yönetim asistanının 23 farklı kararla şekillenen kanonunda hangi üç şey kendisi değiştiremiyor", "beklenen_dosya": "konular/clara/uygulananlar/2026-08-02_13-clara-kanonu-kuruldu.md", "tip": "dogal"}
+{"soru": "İspanya'ya turistik vize başvurusu için hangi belgeler gerekiyor", "beklenen_dosya": null, "tip": "negatif"}
+{"soru": "ClickUp'ta bir görevin süresini iki farklı yerden okuyunca birbirinden çok farklı sayılar çıkıyor, hangisi doğru", "beklenen_dosya": "konular/clickup-is-takibi/BILINMESI-GEREKENLER.md", "tip": "belirti"}
+{"soru": "status_history in progress süre ölçümü", "beklenen_dosya": "konular/clickup-is-takibi/BILINMESI-GEREKENLER.md", "tip": "anahtar"}
+{"soru": "ClickUp'ta yorum yazarken yatay çizgi kullanmak neden sorun çıkarıyor", "beklenen_dosya": "konular/clickup-is-takibi/BILINMESI-GEREKENLER.md", "tip": "dogal"}
+{"soru": "Görev yönetim aracına yazı yazarken kota aşıldı uyarısı aldık, bu esnada üretilen kayıtları nereye koymalıyız", "beklenen_dosya": "konular/clickup-is-takibi/BILINMESI-GEREKENLER.md", "tip": "belirti"}
+{"soru": "Haftalık planlama neden repoda değil görev yönetim aracında tutuluyor", "beklenen_dosya": "konular/clickup-is-takibi/uygulananlar/2026-08-05_11-sprint-ve-planlama-duzeni.md", "tip": "dogal"}
+{"soru": "önce plan sonra görev listesi sonra koşum", "beklenen_dosya": "konular/clickup-is-takibi/uygulananlar/2026-08-05_11-sprint-ve-planlama-duzeni.md", "tip": "anahtar"}
+{"soru": "Bir ekip üyesi kendi işine ait olmayan bir alt görevin durumunu değiştirmiş, bu neden yasak ve nasıl anlaşılıyor kimin görevi olduğu", "beklenen_dosya": "konular/clickup-is-takibi/uygulananlar/2026-08-12-clickup-task-takip-duzeni.md", "tip": "belirti"}
+{"soru": "Alt görev kapatma yetkisi kimde, kanıt zorunluluğu nasıl tanımlanıyor", "beklenen_dosya": "konular/clickup-is-takibi/uygulananlar/2026-08-12-clickup-task-takip-duzeni.md", "tip": "dogal"}
+{"soru": "Bilgisayarımda proje klasörleri hiç silinmiyor ve disk sürekli doluyor, hangi klasör en çok yer kaplıyor öğrenmek istiyorum", "beklenen_dosya": "konular/disk-doluluk/BILINMESI-GEREKENLER.md", "tip": "belirti"}
+{"soru": "turbo cacheMaxSize cacheMaxAge", "beklenen_dosya": "konular/disk-doluluk/BILINMESI-GEREKENLER.md", "tip": "anahtar"}
+{"soru": "Build cache limiti sadece yeni türetilen projelere mi uygulanıyor, eski projeler nasıl etkileniyor", "beklenen_dosya": "konular/disk-doluluk/BILINMESI-GEREKENLER.md", "tip": "dogal"}
+{"soru": "Bir Apple imzalama anahtarı diskte duruyor ama yedeği olup olmadığı bilinmiyor, ne yapılmalı", "beklenen_dosya": "konular/disk-doluluk/BILINMESI-GEREKENLER.md", "tip": "belirti"}
+{"soru": "Should I set up automatic periodic cleanup for unused node_modules and build caches across projects?", "beklenen_dosya": "konular/disk-doluluk/BILINMESI-GEREKENLER.md", "tip": "ingilizce"}
+{"soru": "Agent üretim ekibinin dosyaları iki farklı repoda duruyor ve hangisinin geçerli olduğu belli değil, aynı isimli dosyalar var", "beklenen_dosya": "konular/fabrika/BILINMESI-GEREKENLER.md", "tip": "belirti"}
+{"soru": "Bir yönetim asistanı üretim ekibine doğrudan iş verebiliyor mu yoksa devir bloğu mu yazması gerekiyor", "beklenen_dosya": "konular/fabrika/BILINMESI-GEREKENLER.md", "tip": "dogal"}
+{"soru": "Aynı adımı iki farklı kaynak iki farklı role vermiş, kod incelemeyi tamamlayan ile yayına iten kişi çakışıyor", "beklenen_dosya": "konular/fabrika/kararlar/2026-08-14-push-pqa-da-kaliyor.md", "tip": "belirti"}
+{"soru": "Yayına alma (push) yetkisi denetleyen role mi verilmeli, gerekçesi ne", "beklenen_dosya": "konular/fabrika/kararlar/2026-08-14-push-pqa-da-kaliyor.md", "tip": "dogal"}
+{"soru": "Bir yazılım paketinin sürümü sekiz commit birikmiş olmasına rağmen neden hemen artırılmadı", "beklenen_dosya": "konular/fabrika/kararlar/2026-08-16-plugin-surumu-erteleniyor.md", "tip": "dogal"}
+{"soru": "Ekip bir güncelleme komutu çalıştırdı ama hiçbir yeni değişikliği almadı, repo güncel görünüyor ama sahada eski davranış var", "beklenen_dosya": "konular/fabrika/kararlar/2026-08-16-plugin-surumu-erteleniyor.md", "tip": "belirti"}
+{"soru": "Bir geliştirme aracının bağımlılığında bilinen bir güvenlik açığı var ama güncellemek kırıcı bir geçiş gerektiriyor, ne yapıldı", "beklenen_dosya": "konular/fabrika/kararlar/2026-08-18-vsx-esbuild-acik-kabul.md", "tip": "belirti"}
+{"soru": "Bir geliştirme bağımlılığındaki bilinen güvenlik zafiyeti hangi koşulda kabul edilip ertelenir", "beklenen_dosya": "konular/fabrika/kararlar/2026-08-18-vsx-esbuild-acik-kabul.md", "tip": "dogal"}
+{"soru": "Üç ayrı repo arasında hangisinin kanon barındırdığı hangisinin sadece ürün barındırdığı karışmış durumda", "beklenen_dosya": "konular/fabrika/kararlar/2026-08-23-uc-repo-ayrimi.md", "tip": "belirti"}
+{"soru": "Üreten ekip ile üretilen takımların ayrı repolarda tutulmasının gerekçesi ne", "beklenen_dosya": "konular/fabrika/kararlar/2026-08-23-uc-repo-ayrimi.md", "tip": "dogal"}
+{"soru": "Eski bir üretim ekibinin dosyaları taşınmamış repoda duruyor, biri orayı açarsa ne olur", "beklenen_dosya": "konular/fabrika/kararlar/2026-08-23-uc-repo-ayrimi.md", "tip": "belirti"}
+{"soru": "Yerel kopya dosyaların merkezi pakete bağlanması (symlink) neden tercih edildi", "beklenen_dosya": "konular/fabrika/uygulananlar/2026-08-04_11-fabrika-duzeni.md", "tip": "dogal"}
+{"soru": "Bir yapay zekâ model paylaşım platformunda milyonlarca kez indirilmiş ama beğenisi sıfıra yakın kayıtlar var, bunlara güvenmeli miyim", "beklenen_dosya": "konular/hugging-face/BILINMESI-GEREKENLER.md", "tip": "belirti"}
+{"soru": "Model lisansında 'other' yazması ne anlama gelir", "beklenen_dosya": "konular/hugging-face/BILINMESI-GEREKENLER.md", "tip": "dogal"}
+{"soru": "safetensors bin format güvenlik", "beklenen_dosya": "konular/hugging-face/BILINMESI-GEREKENLER.md", "tip": "anahtar"}
+{"soru": "Bir görsel üretim modelinin kendisi ticari kullanılamıyor ama ürettiği çıktılar kullanılabiliyor, bu ayrım nasıl işliyor", "beklenen_dosya": "konular/hugging-face/BILINMESI-GEREKENLER.md", "tip": "belirti"}
+{"soru": "What does an abliterated model mean and what is the trade-off in removing its refusal behavior?", "beklenen_dosya": "konular/hugging-face/BILINMESI-GEREKENLER.md", "tip": "ingilizce"}
+{"soru": "Açık kaynak modellerin şirketler tarafından ücretsiz yayınlanmasının arkasındaki ticari motivasyon nedir", "beklenen_dosya": "konular/hugging-face/BILINMESI-GEREKENLER.md", "tip": "dogal"}
+{"soru": "Bir agent arası mesajlaşma sisteminde oturum kapandıktan sonra izleyici görev de kapanıyor ama kutu hâlâ açık görünüyor, kimse fark etmiyor bunu", "beklenen_dosya": "konular/kanal-iletisim/BILINMESI-GEREKENLER.md", "tip": "belirti"}
+{"soru": "Bir mesajlaşma kutusunun hâlâ canlı olduğunu anlamanın tek geçerli yolu ne", "beklenen_dosya": "konular/kanal-iletisim/BILINMESI-GEREKENLER.md", "tip": "dogal"}
+{"soru": "send.py TASK INFO QUESTION CLOSE tip adları", "beklenen_dosya": "konular/kanal-iletisim/BILINMESI-GEREKENLER.md", "tip": "anahtar"}
+{"soru": "Bir betiğin çıktısını boru hattıyla başka bir komuta aktarınca hata kodu yanlış görünüyor, sebebini bulamıyoruz", "beklenen_dosya": "konular/kanal-iletisim/BILINMESI-GEREKENLER.md", "tip": "belirti"}
+{"soru": "Mesajlaşma kutusu adı sistemin belirlediği kısaltmadan türetilmeye çalışılınca neden bulunamıyor", "beklenen_dosya": "konular/kanal-iletisim/BILINMESI-GEREKENLER.md", "tip": "dogal"}
+{"soru": "Bir oturum açılış otomasyonu artık kimseye mesajlaşma kutusu kurma talimatı vermiyor, bu neden kaldırıldı", "beklenen_dosya": "konular/kanal-iletisim/kararlar/2026-08-13-kanal-hooku-kaldirildi.md", "tip": "belirti"}
+{"soru": "Kutu adı zaman damgasından üretilince aynı rol tekrar açıldığında ne oluyor", "beklenen_dosya": "konular/kanal-iletisim/kararlar/2026-08-13-kanal-hooku-kaldirildi.md", "tip": "dogal"}
+{"soru": "İzleyen bir merkez olmadan da mesaj kaybolmuyor deniyordu ama 201 tane okunmamış mesaj birikmiş, bu çelişki nasıl açıklanıyor", "beklenen_dosya": "konular/kanal-iletisim/kararlar/2026-08-13-merkez-kapisi-korunuyor.md", "tip": "belirti"}
+{"soru": "Bir kuralın iki farklı bölümü birbiriyle çelişen şeyler söylüyor, hangisi kazanmalı", "beklenen_dosya": "konular/kanal-iletisim/kararlar/2026-08-13-merkez-kapisi-korunuyor.md", "tip": "dogal"}
+{"soru": "Bir ekip üyesi kendi ölçtüğü arızanın da içinde olduğu bir vakada tarafsız kalabilir mi", "beklenen_dosya": "konular/kanal-iletisim/kararlar/2026-08-13-merkez-kapisi-korunuyor.md", "tip": "dogal"}
+{"soru": "İki farklı mesajlaşma yöntemi aynı anda kullanılınca kimse hangi kanaldan haber geleceğini bilemiyor, karışıklık yaratıyor", "beklenen_dosya": "konular/kanal-iletisim/kararlar/2026-08-16-iki-yol-ikisi-de-komut.md", "tip": "belirti"}
+{"soru": "Dosya tabanlı kanal ile SendMessage aracı arasında seçim kime ait", "beklenen_dosya": "konular/kanal-iletisim/kararlar/2026-08-16-iki-yol-ikisi-de-komut.md", "tip": "dogal"}
+{"soru": "Bir ekip üyesi mesajları ekrana basıyor ama karşı tarafa hiç iletmiyor, o kişi işini yaptığını sanıyor ama karşı taraf hiçbir şey almamış oluyor", "beklenen_dosya": "konular/kanal-iletisim/kararlar/2026-08-16-trafik-duzeni-pam-merkez.md", "tip": "belirti"}
+{"soru": "Ekrana basmak ile mesajı gerçekten iletmek arasındaki fark nedir", "beklenen_dosya": "konular/kanal-iletisim/kararlar/2026-08-16-trafik-duzeni-pam-merkez.md", "tip": "dogal"}
+{"soru": "PAM takım lideri trafik düzeni", "beklenen_dosya": "konular/kanal-iletisim/kararlar/2026-08-16-trafik-duzeni-pam-merkez.md", "tip": "anahtar"}
+{"soru": "Agent'lar arası mesajlaşma sistemi neden herkesin birbirine değil de tek bir merkeze yazması şeklinde kuruldu", "beklenen_dosya": "konular/kanal-iletisim/uygulananlar/2026-08-05-agent-iletisim-kanali.md", "tip": "dogal"}
+{"soru": "Mesaj başına ayrı bir dosya kullanmanın çakışmayı önlemedeki rolü nedir", "beklenen_dosya": "konular/kanal-iletisim/uygulananlar/2026-08-05-agent-iletisim-kanali.md", "tip": "dogal"}
+{"soru": "Hafıza dosyasına bir talimat yazdık ama agent onu hiç uygulamadı çünkü gerçek bilgi başka bir dosyadaymış, o dosyayı hiç açmamış", "beklenen_dosya": "konular/memory-duzeni/BILINMESI-GEREKENLER.md", "tip": "belirti"}
+{"soru": "Bir agent'ın kısa hafızasındaki bilgi kurumsal kurala aykırıysa hangisi kazanıyor", "beklenen_dosya": "konular/memory-duzeni/BILINMESI-GEREKENLER.md", "tip": "dogal"}
+{"soru": "auto-injection 200 satır 25KB limit", "beklenen_dosya": "konular/memory-duzeni/BILINMESI-GEREKENLER.md", "tip": "anahtar"}
+{"soru": "Sahadan gelen gözlemler ve kararlar bir dosyaya mı yoksa başka bir yapıya mı yazılmalı, hızlı değişen bilgi için hangisi uygun", "beklenen_dosya": "konular/memory-duzeni/uygulananlar/2026-08-07-saha-kaydi-knowledge-graph.md", "tip": "dogal"}
+{"soru": "varlık ilişki grafiği saha kaydı", "beklenen_dosya": "konular/memory-duzeni/uygulananlar/2026-08-07-saha-kaydi-knowledge-graph.md", "tip": "anahtar"}
+{"soru": "Aynı soruyu iki kez arattım, birinde bir dosya açığa çıktı diğerinde farklı bir kelime kullanınca hiç bulamadım", "beklenen_dosya": "konular/olcum-arama/BILINMESI-GEREKENLER.md", "tip": "belirti"}
+{"soru": "Bir arama sonucu skoru içeriğin doğru cevap olduğunu garanti eder mi", "beklenen_dosya": "konular/olcum-arama/BILINMESI-GEREKENLER.md", "tip": "dogal"}
+{"soru": "En yeni futbol taktik trendleri nelerdir, gegenpressing nasıl uygulanır", "beklenen_dosya": null, "tip": "negatif"}
+{"soru": "grep ile arama yaparken sadece dosya adı listesi görüyorum ama hangi satırın cevap olduğunu bulamıyorum, dosya dosya açmam mı gerekiyor", "beklenen_dosya": "konular/olcum-arama/kararlar/2026-08-16-vektor-cikti-grep-disiplini-girdi.md", "tip": "belirti"}
+{"soru": "grep -l ile -h bayrağı arasındaki fark ne, hangisi cevabı doğrudan gösteriyor", "beklenen_dosya": "konular/olcum-arama/kararlar/2026-08-16-vektor-cikti-grep-disiplini-girdi.md", "tip": "dogal"}
+{"soru": "Kurumumuz anlamsal arama aracını kapattı ama kanonda hâlâ ona yönlendiren bir kural duruyordu, bu ölü kural nasıl fark edildi", "beklenen_dosya": "konular/olcum-arama/kararlar/2026-08-16-vektor-cikti-grep-disiplini-girdi.md", "tip": "belirti"}
+{"soru": "Görev yönetim aracının API'si aynı anda çok fazla istek gönderilince yavaşlıyor ve saatlerce bloke oluyor, planlama yaparken bunu nasıl aşarız", "beklenen_dosya": "konular/proje-ekonomisi-araci/BILINMESI-GEREKENLER.md", "tip": "belirti"}
+{"soru": "Plan birimi ile ölçüm biriminin ayrılmasının sebebi ne, proje mi blok mu ölçülüyor", "beklenen_dosya": "konular/proje-ekonomisi-araci/BILINMESI-GEREKENLER.md", "tip": "dogal"}
+{"soru": "taahhüt plan süresi blok yerleşimi zinciri", "beklenen_dosya": "konular/proje-ekonomisi-araci/BILINMESI-GEREKENLER.md", "tip": "anahtar"}
+{"soru": "İki iş bloğu arasında boşluk bırakılmış çünkü müşteri onayı bekleniyor, bir görev gecikirse sonraki blok otomatik kaymalı mı", "beklenen_dosya": "konular/proje-ekonomisi-araci/BILINMESI-GEREKENLER.md", "tip": "belirti"}
+{"soru": "Bir planlama aracını mevcut görev yönetim sistemine bağımlı kurarsak sonradan ürünleştirmek neden zorlaşır", "beklenen_dosya": "konular/proje-ekonomisi-araci/BILINMESI-GEREKENLER.md", "tip": "dogal"}
+{"soru": "Bir ekip üyesine yedi iş verildi ama takip listesinde yalnızca üçü görünüyor, geri kalan dördü kayboldu sanki hiç verilmemiş gibi", "beklenen_dosya": "konular/saha-yonetimi/BILINMESI-GEREKENLER.md", "tip": "belirti"}
+{"soru": "Bir agent'ın boşta beklemesi tek başına verimsizlik sayılır mı, hangi durumlar ayrılmalı", "beklenen_dosya": "konular/saha-yonetimi/BILINMESI-GEREKENLER.md", "tip": "dogal"}
+{"soru": "commit onayı push onayı kim verir", "beklenen_dosya": "konular/saha-yonetimi/BILINMESI-GEREKENLER.md", "tip": "anahtar"}
+{"soru": "Bir yönetim asistanı sahada işler henüz bitmemişken iki kez sonucu erkenden değerlendirmeye kalktı, bu neden yanlış", "beklenen_dosya": "konular/saha-yonetimi/kararlar/2026-08-17-saha-olcum-disiplini.md", "tip": "belirti"}
+{"soru": "Yarım kalmış bir oturumdan bulgu çıkarmanın iki riski nedir", "beklenen_dosya": "konular/saha-yonetimi/kararlar/2026-08-17-saha-olcum-disiplini.md", "tip": "dogal"}
+{"soru": "Should measurement of field results wait until the session transcript is complete?", "beklenen_dosya": "konular/saha-yonetimi/kararlar/2026-08-17-saha-olcum-disiplini.md", "tip": "ingilizce"}
+{"soru": "Görev yönetim sisteminde 256 görev tamamlandı olarak işaretli görünüyor ama kapanış tarihi boş, sistem bunları hâlâ açık iş sanıyor", "beklenen_dosya": "konular/sprint-planlama/BILINMESI-GEREKENLER.md", "tip": "belirti"}
+{"soru": "Haftalık sprint listeleri neden hep boş görünüyor, üyelik nasıl tutuluyor", "beklenen_dosya": "konular/sprint-planlama/BILINMESI-GEREKENLER.md", "tip": "dogal"}
+{"soru": "Sonraki Sprint checkbox custom field", "beklenen_dosya": "konular/sprint-planlama/BILINMESI-GEREKENLER.md", "tip": "anahtar"}
+{"soru": "Bir kişiye haftalık planda dört iş verilmiş görünüyor ama görev yönetim sisteminde sadece bir tanesi kayıtlı ve o da kapalı", "beklenen_dosya": "konular/sprint-planlama/BILINMESI-GEREKENLER.md", "tip": "belirti"}
+{"soru": "Aynı başlıklı görevden birden fazla kopya açılması nasıl bir alışkanlık sorunundan kaynaklanıyor", "beklenen_dosya": "konular/sprint-planlama/BILINMESI-GEREKENLER.md", "tip": "dogal"}
+{"soru": "Bir proje klasöründeki gizli araç dosyaları silinip yerine merkezi pakete bağlanan kısayollar konmuş ama bu değişiklik hiç kaydedilmemiş", "beklenen_dosya": "konular/web-sitesi-repo-durumu/BILINMESI-GEREKENLER.md", "tip": "belirti"}
+{"soru": "İki proje klasörü aynı uzak depoyu ve aynı son kaydı gösteriyor ama içerikleri farklı, hangisi silinmeli", "beklenen_dosya": "konular/web-sitesi-repo-durumu/BILINMESI-GEREKENLER.md", "tip": "dogal"}
+{"soru": "trendyol-siparis trendyol-siparis-2 çift kopya", "beklenen_dosya": "konular/web-sitesi-repo-durumu/BILINMESI-GEREKENLER.md", "tip": "anahtar"}
+{"soru": "İsimleri birbirine çok benzeyen iki proje klasörü var, biri diğerinin kopyası mı yoksa tamamen ayrı bir proje mi anlayamıyorum", "beklenen_dosya": "konular/web-sitesi-repo-durumu/BILINMESI-GEREKENLER.md", "tip": "belirti"}
+{"soru": "Ev sahibi köpeğim için en iyi mama markası hangisi, günde kaç öğün beslemeliyim", "beklenen_dosya": null, "tip": "negatif"}
+{"soru": "Şirketimizin üç ayrı alan adı stratejisi var, yeni bir yapay zekâ aracına hangi alan adının altında yer verilmeli", "beklenen_dosya": "konular/altyapi/BILINMESI-GEREKENLER.md", "tip": "belirti"}
+{"soru": "Docker Compose ile bir servis kurarken imaj sürümünü latest bırakmanın riski nedir", "beklenen_dosya": "konular/altyapi/kararlar/2026-08-28-vpn-kararlari.md", "tip": "dogal"}
+{"soru": "Terraform ile multi-cloud altyapı nasıl yönetilir", "beklenen_dosya": null, "tip": "negatif"}
+{"soru": "React state yönetiminde Redux mu Zustand mı tercih edilmeli", "beklenen_dosya": null, "tip": "negatif"}
+{"soru": "Bir CEO'nun asistanının kendi kanonuna dokunma yetkisi var ama üç şey hâlâ dokunulmaz kalıyor, bunlar ne", "beklenen_dosya": "konular/clara/uygulananlar/2026-08-02_13-clara-kanonu-kuruldu.md", "tip": "belirti"}
+{"soru": "Bir agent kendi kararını doğrularken önce yanlış sonuç bulup ısrar edilince doğrusuna ulaştı, bu neyi öğretiyor", "beklenen_dosya": "konular/clara/kararlar/2026-08-19-ogrenme-dongusu.md", "tip": "belirti"}
+{"soru": "Qdrant koleksiyonlarında hangi mesafe metriği (cosine mi euclidean mi) kullanılıyor", "beklenen_dosya": null, "tip": "negatif"}
+{"soru": "Kubernetes'te bir StatefulSet ile PersistentVolumeClaim nasıl eşleştirilir", "beklenen_dosya": null, "tip": "negatif"}
+{"soru": "Coolify'da bir servisin health check aralığını dakika bazında nasıl özelleştiririm", "beklenen_dosya": null, "tip": "negatif"}
+{"soru": "ClickUp'ta bir otomasyon kuralı oluştururken webhook imzasını nasıl doğrularım", "beklenen_dosya": null, "tip": "negatif"}
+{"soru": "GitHub Actions'ta bir job'ın matrix stratejisiyle paralel çalıştırılması nasıl kurulur", "beklenen_dosya": null, "tip": "negatif"}
+{"soru": "Bugün İstanbul'da hava durumu nasıl, yağmur yağacak mı", "beklenen_dosya": null, "tip": "negatif"}
+{"soru": "En sağlıklı Akdeniz diyeti tarifleri nelerdir, haftalık liste verir misin", "beklenen_dosya": null, "tip": "negatif"}
+{"soru": "PostgreSQL'de bir tabloya partition eklemek performansı nasıl etkiler", "beklenen_dosya": null, "tip": "negatif"}
+{"soru": "Bir yönetim asistanının asla değiştiremediği üç sert sınır neler", "beklenen_dosya": "konular/clara/BILINMESI-GEREKENLER.md", "tip": "dogal"}
+{"soru": "Bir hatayı iki kere kaydedip üstüne gitmeyen bir asistan aslında hatayı düzeltmiş sayılır mı", "beklenen_dosya": "konular/clara/BILINMESI-GEREKENLER.md", "tip": "belirti"}

@@ -1,0 +1,326 @@
+{
+  "y-dokuman": {
+    "kayit_sayisi": 52,
+    "n_pozitif": 149,
+    "n_negatif": 15,
+    "hit1": 0.6309,
+    "hit5": 0.8389,
+    "mrr10": 0.7139,
+    "tip_kirilim": {
+      "belirti": {
+        "n": 59,
+        "hit1_oran": 0.6102,
+        "hit5_oran": 0.8136,
+        "mrr": 0.6872
+      },
+      "dogal": {
+        "n": 60,
+        "hit1_oran": 0.6167,
+        "hit5_oran": 0.8333,
+        "mrr": 0.7082
+      },
+      "anahtar": {
+        "n": 24,
+        "hit1_oran": 0.625,
+        "hit5_oran": 0.875,
+        "mrr": 0.7222
+      },
+      "ingilizce": {
+        "n": 6,
+        "hit1_oran": 1.0,
+        "hit5_oran": 1.0,
+        "mrr": 1.0
+      }
+    },
+    "ilk_skor_dogru": {
+      "min": 0.7737,
+      "medyan": 0.8418,
+      "maks": 0.8818,
+      "n": 94
+    },
+    "ilk_skor_yanlis": {
+      "min": 0.8015,
+      "medyan": 0.838,
+      "maks": 0.8632,
+      "n": 55
+    },
+    "ilk_skor_negatif": {
+      "min": 0.7654,
+      "medyan": 0.8267,
+      "maks": 0.8504,
+      "n": 15
+    },
+    "marj_dogru_medyan_eksi_negatif_medyan": 0.015,
+    "maliyet_ortalama_ilk5_karakter": 15667.2
+  },
+  "y-paragraf": {
+    "kayit_sayisi": 833,
+    "n_pozitif": 149,
+    "n_negatif": 15,
+    "hit1": 0.7919,
+    "hit5": 0.9664,
+    "mrr10": 0.8675,
+    "tip_kirilim": {
+      "belirti": {
+        "n": 59,
+        "hit1_oran": 0.661,
+        "hit5_oran": 0.9322,
+        "mrr": 0.7725
+      },
+      "dogal": {
+        "n": 60,
+        "hit1_oran": 0.8333,
+        "hit5_oran": 0.9833,
+        "mrr": 0.9029
+      },
+      "anahtar": {
+        "n": 24,
+        "hit1_oran": 0.9583,
+        "hit5_oran": 1.0,
+        "mrr": 0.9792
+      },
+      "ingilizce": {
+        "n": 6,
+        "hit1_oran": 1.0,
+        "hit5_oran": 1.0,
+        "mrr": 1.0
+      }
+    },
+    "ilk_skor_dogru": {
+      "min": 0.8151,
+      "medyan": 0.8636,
+      "maks": 0.9143,
+      "n": 118
+    },
+    "ilk_skor_yanlis": {
+      "min": 0.8334,
+      "medyan": 0.8543,
+      "maks": 0.8947,
+      "n": 31
+    },
+    "ilk_skor_negatif": {
+      "min": 0.7825,
+      "medyan": 0.8284,
+      "maks": 0.8607,
+      "n": 15
+    },
+    "marj_dogru_medyan_eksi_negatif_medyan": 0.0352,
+    "maliyet_ortalama_ilk5_karakter": 1109.2
+  },
+  "y-paragraf-baslik": {
+    "kayit_sayisi": 833,
+    "n_pozitif": 149,
+    "n_negatif": 15,
+    "hit1": 0.7852,
+    "hit5": 0.9329,
+    "mrr10": 0.8541,
+    "tip_kirilim": {
+      "belirti": {
+        "n": 59,
+        "hit1_oran": 0.661,
+        "hit5_oran": 0.8983,
+        "mrr": 0.7609
+      },
+      "dogal": {
+        "n": 60,
+        "hit1_oran": 0.85,
+        "hit5_oran": 0.9333,
+        "mrr": 0.8978
+      },
+      "anahtar": {
+        "n": 24,
+        "hit1_oran": 0.875,
+        "hit5_oran": 1.0,
+        "mrr": 0.9375
+      },
+      "ingilizce": {
+        "n": 6,
+        "hit1_oran": 1.0,
+        "hit5_oran": 1.0,
+        "mrr": 1.0
+      }
+    },
+    "ilk_skor_dogru": {
+      "min": 0.8193,
+      "medyan": 0.8618,
+      "maks": 0.9146,
+      "n": 117
+    },
+    "ilk_skor_yanlis": {
+      "min": 0.8167,
+      "medyan": 0.8498,
+      "maks": 0.8968,
+      "n": 32
+    },
+    "ilk_skor_negatif": {
+      "min": 0.7742,
+      "medyan": 0.8173,
+      "maks": 0.8505,
+      "n": 15
+    },
+    "marj_dogru_medyan_eksi_negatif_medyan": 0.0445,
+    "maliyet_ortalama_ilk5_karakter": 1454.4
+  },
+  "y-cumle": {
+    "kayit_sayisi": 2521,
+    "n_pozitif": 149,
+    "n_negatif": 15,
+    "hit1": 0.7047,
+    "hit5": 0.906,
+    "mrr10": 0.7898,
+    "tip_kirilim": {
+      "belirti": {
+        "n": 59,
+        "hit1_oran": 0.6441,
+        "hit5_oran": 0.8475,
+        "mrr": 0.7344
+      },
+      "dogal": {
+        "n": 60,
+        "hit1_oran": 0.6833,
+        "hit5_oran": 0.9167,
+        "mrr": 0.7804
+      },
+      "anahtar": {
+        "n": 24,
+        "hit1_oran": 0.875,
+        "hit5_oran": 1.0,
+        "mrr": 0.925
+      },
+      "ingilizce": {
+        "n": 6,
+        "hit1_oran": 0.8333,
+        "hit5_oran": 1.0,
+        "mrr": 0.8889
+      }
+    },
+    "ilk_skor_dogru": {
+      "min": 0.804,
+      "medyan": 0.8691,
+      "maks": 0.9175,
+      "n": 105
+    },
+    "ilk_skor_yanlis": {
+      "min": 0.8254,
+      "medyan": 0.8556,
+      "maks": 0.8976,
+      "n": 44
+    },
+    "ilk_skor_negatif": {
+      "min": 0.7959,
+      "medyan": 0.826,
+      "maks": 0.8612,
+      "n": 15
+    },
+    "marj_dogru_medyan_eksi_negatif_medyan": 0.0432,
+    "maliyet_ortalama_ilk5_karakter": 360.2
+  },
+  "y-parca": {
+    "kayit_sayisi": 268,
+    "n_pozitif": 149,
+    "n_negatif": 15,
+    "hit1": 0.7383,
+    "hit5": 0.9329,
+    "mrr10": 0.8152,
+    "tip_kirilim": {
+      "belirti": {
+        "n": 59,
+        "hit1_oran": 0.661,
+        "hit5_oran": 0.9322,
+        "mrr": 0.7613
+      },
+      "dogal": {
+        "n": 60,
+        "hit1_oran": 0.7333,
+        "hit5_oran": 0.9167,
+        "mrr": 0.8165
+      },
+      "anahtar": {
+        "n": 24,
+        "hit1_oran": 0.875,
+        "hit5_oran": 0.9583,
+        "mrr": 0.8984
+      },
+      "ingilizce": {
+        "n": 6,
+        "hit1_oran": 1.0,
+        "hit5_oran": 1.0,
+        "mrr": 1.0
+      }
+    },
+    "ilk_skor_dogru": {
+      "min": 0.7963,
+      "medyan": 0.8564,
+      "maks": 0.8985,
+      "n": 110
+    },
+    "ilk_skor_yanlis": {
+      "min": 0.8282,
+      "medyan": 0.8469,
+      "maks": 0.8702,
+      "n": 39
+    },
+    "ilk_skor_negatif": {
+      "min": 0.7709,
+      "medyan": 0.8301,
+      "maks": 0.8533,
+      "n": 15
+    },
+    "marj_dogru_medyan_eksi_negatif_medyan": 0.0263,
+    "maliyet_ortalama_ilk5_karakter": 3631.6
+  },
+  "y-hukum": {
+    "kayit_sayisi": 129,
+    "n_pozitif": 149,
+    "n_negatif": 15,
+    "hit1": 0.698,
+    "hit5": 0.8725,
+    "mrr10": 0.7739,
+    "tip_kirilim": {
+      "belirti": {
+        "n": 59,
+        "hit1_oran": 0.6441,
+        "hit5_oran": 0.8814,
+        "mrr": 0.7503
+      },
+      "dogal": {
+        "n": 60,
+        "hit1_oran": 0.7167,
+        "hit5_oran": 0.9,
+        "mrr": 0.7953
+      },
+      "anahtar": {
+        "n": 24,
+        "hit1_oran": 0.7917,
+        "hit5_oran": 0.7917,
+        "mrr": 0.7917
+      },
+      "ingilizce": {
+        "n": 6,
+        "hit1_oran": 0.6667,
+        "hit5_oran": 0.8333,
+        "mrr": 0.7222
+      }
+    },
+    "ilk_skor_dogru": {
+      "min": 0.804,
+      "medyan": 0.8567,
+      "maks": 0.9162,
+      "n": 104
+    },
+    "ilk_skor_yanlis": {
+      "min": 0.7697,
+      "medyan": 0.837,
+      "maks": 0.9139,
+      "n": 45
+    },
+    "ilk_skor_negatif": {
+      "min": 0.7689,
+      "medyan": 0.8061,
+      "maks": 0.8451,
+      "n": 15
+    },
+    "marj_dogru_medyan_eksi_negatif_medyan": 0.0506,
+    "maliyet_ortalama_ilk5_karakter": 1103.7
+  }
+}

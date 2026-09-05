@@ -1,0 +1,36 @@
+/Users/karaok/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+=== Sorular okunuyor ===
+soru sayısı: 164
+
+=== Soru embed'leri alınıyor (query: önekiyle) ===
+  embed: 32/164
+  embed: 64/164
+  embed: 96/164
+  embed: 128/164
+  embed: 160/164
+  embed: 164/164
+embed süresi: 9.8sn
+
+=== Koleksiyon kayıt sayıları ===
+  y-dokuman: 52
+  y-paragraf: 833
+  y-paragraf-baslik: 833
+  y-cumle: 2521
+  y-parca: 268
+  y-hukum: 129
+
+=== Arama koşumu ===
+  20/164 soru işlendi (120/984 arama, 47sn)
+  40/164 soru işlendi (240/984 arama, 93sn)
+  60/164 soru işlendi (360/984 arama, 139sn)
+  80/164 soru işlendi (480/984 arama, 185sn)
+  100/164 soru işlendi (600/984 arama, 232sn)
+  120/164 soru işlendi (720/984 arama, 277sn)
+  140/164 soru işlendi (840/984 arama, 323sn)
+  160/164 soru işlendi (960/984 arama, 369sn)
+  164/164 soru işlendi (984/984 arama, 378sn)
+
+Toplam arama: 984, süre: 378.3sn
+
+Ham sonuç dosyası: /Users/karaok/p/pr-yazilim-ceo/konular/agent-hafiza/test/deney-kayit-yontemi/kosum-sonuc.json

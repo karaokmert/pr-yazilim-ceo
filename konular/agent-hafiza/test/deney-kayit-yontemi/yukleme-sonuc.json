@@ -1,0 +1,38 @@
+{
+  "toplam_embed_cagri": 144,
+  "toplam_embed_saniye": 531.8990783691406,
+  "istatistikler": {
+    "y-dokuman": {
+      "uretilen": 52,
+      "yuklenen": 52,
+      "qdrant_count": 52
+    },
+    "y-paragraf": {
+      "uretilen": 833,
+      "yuklenen": 833,
+      "qdrant_count": 833
+    },
+    "y-paragraf-baslik": {
+      "uretilen": 833,
+      "yuklenen": 833,
+      "qdrant_count": 833
+    },
+    "y-cumle": {
+      "uretilen": 2521,
+      "yuklenen": 2521,
+      "qdrant_count": 2521
+    },
+    "y-parca": {
+      "uretilen": 268,
+      "yuklenen": 268,
+      "qdrant_count": 268
+    },
+    "y-hukum": {
+      "uretilen": 129,
+      "yuklenen": 129,
+      "qdrant_count": 129,
+      "toplam_hafiza_large_point": 156
+    }
+  },
+  "uyarilar": []
+}

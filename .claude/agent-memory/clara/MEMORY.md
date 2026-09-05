@@ -14,6 +14,9 @@
 - [ClickUp sprint mekaniği](clickup-sprint-mekanigi.md) — sprinte alma "Sonraki Sprint" checkbox'ı ile; sprint listesine elle EKLENMEZ
 - [PR Yazılım ekibi](pryazilim-ekip.md) — kim ne yapıyor, ClickUp user ID'leri, hangi projelerde
 
+- [Soru-analiz sırası](feedback_soru-analiz-sirasi.md) — AskUserQuestion seçimdir; karşılıklı değerlendirme bitmeden karar sorusu sorulmaz
+- [Sahiplik: üret](feedback_sahiplik-uret.md) — emanet alanda literatürü araştır, kararı ver, bitmiş tasarım sun; "o mu bu mu" sorma
+
 ## Mert
 
 - [Mert — profil](user_mert_profil.md) — nasıl çalışır, ne bekler; itiraz ister, kısa ister, izin sorulmasını istemez

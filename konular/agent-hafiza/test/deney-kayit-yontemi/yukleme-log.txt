@@ -1,0 +1,184 @@
+/Users/karaok/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+=== Korpus okunuyor ===
+korpus.txt: 52 yol
+okunan dosya: 52
+
+=== y-dokuman ===
+  üretilen kayıt sayısı: 52
+    y-dokuman: 32/52 yüklendi
+    y-dokuman: 52/52 yüklendi
+
+=== y-paragraf ===
+  üretilen kayıt sayısı: 833
+    y-paragraf: 32/833 yüklendi
+    y-paragraf: 64/833 yüklendi
+    y-paragraf: 96/833 yüklendi
+    y-paragraf: 128/833 yüklendi
+    y-paragraf: 160/833 yüklendi
+    y-paragraf: 192/833 yüklendi
+    y-paragraf: 224/833 yüklendi
+    y-paragraf: 256/833 yüklendi
+    y-paragraf: 288/833 yüklendi
+    y-paragraf: 320/833 yüklendi
+    y-paragraf: 352/833 yüklendi
+    y-paragraf: 384/833 yüklendi
+    y-paragraf: 416/833 yüklendi
+    y-paragraf: 448/833 yüklendi
+    y-paragraf: 480/833 yüklendi
+    y-paragraf: 512/833 yüklendi
+    y-paragraf: 544/833 yüklendi
+    y-paragraf: 576/833 yüklendi
+    y-paragraf: 608/833 yüklendi
+    y-paragraf: 640/833 yüklendi
+    y-paragraf: 672/833 yüklendi
+    y-paragraf: 704/833 yüklendi
+    y-paragraf: 736/833 yüklendi
+    y-paragraf: 768/833 yüklendi
+    y-paragraf: 800/833 yüklendi
+    y-paragraf: 832/833 yüklendi
+    y-paragraf: 833/833 yüklendi
+
+=== y-paragraf-baslik ===
+  üretilen kayıt sayısı: 833
+    y-paragraf-baslik: 32/833 yüklendi
+    y-paragraf-baslik: 64/833 yüklendi
+    y-paragraf-baslik: 96/833 yüklendi
+    y-paragraf-baslik: 128/833 yüklendi
+    y-paragraf-baslik: 160/833 yüklendi
+    y-paragraf-baslik: 192/833 yüklendi
+    y-paragraf-baslik: 224/833 yüklendi
+    y-paragraf-baslik: 256/833 yüklendi
+    y-paragraf-baslik: 288/833 yüklendi
+    y-paragraf-baslik: 320/833 yüklendi
+    y-paragraf-baslik: 352/833 yüklendi
+    y-paragraf-baslik: 384/833 yüklendi
+    y-paragraf-baslik: 416/833 yüklendi
+    y-paragraf-baslik: 448/833 yüklendi
+    y-paragraf-baslik: 480/833 yüklendi
+    y-paragraf-baslik: 512/833 yüklendi
+    y-paragraf-baslik: 544/833 yüklendi
+    y-paragraf-baslik: 576/833 yüklendi
+    y-paragraf-baslik: 608/833 yüklendi
+    y-paragraf-baslik: 640/833 yüklendi
+    y-paragraf-baslik: 672/833 yüklendi
+    y-paragraf-baslik: 704/833 yüklendi
+    y-paragraf-baslik: 736/833 yüklendi
+    y-paragraf-baslik: 768/833 yüklendi
+    y-paragraf-baslik: 800/833 yüklendi
+    y-paragraf-baslik: 832/833 yüklendi
+    y-paragraf-baslik: 833/833 yüklendi
+
+=== y-cumle ===
+  üretilen kayıt sayısı: 2521
+    y-cumle: 32/2521 yüklendi
+    y-cumle: 64/2521 yüklendi
+    y-cumle: 96/2521 yüklendi
+    y-cumle: 128/2521 yüklendi
+    y-cumle: 160/2521 yüklendi
+    y-cumle: 192/2521 yüklendi
+    y-cumle: 224/2521 yüklendi
+    y-cumle: 256/2521 yüklendi
+    y-cumle: 288/2521 yüklendi
+    y-cumle: 320/2521 yüklendi
+    y-cumle: 352/2521 yüklendi
+    y-cumle: 384/2521 yüklendi
+    y-cumle: 416/2521 yüklendi
+    y-cumle: 448/2521 yüklendi
+    y-cumle: 480/2521 yüklendi
+    y-cumle: 512/2521 yüklendi
+    y-cumle: 544/2521 yüklendi
+    y-cumle: 576/2521 yüklendi
+    y-cumle: 608/2521 yüklendi
+    y-cumle: 640/2521 yüklendi
+    y-cumle: 672/2521 yüklendi
+    y-cumle: 704/2521 yüklendi
+    y-cumle: 736/2521 yüklendi
+    y-cumle: 768/2521 yüklendi
+    y-cumle: 800/2521 yüklendi
+    y-cumle: 832/2521 yüklendi
+    y-cumle: 864/2521 yüklendi
+    y-cumle: 896/2521 yüklendi
+    y-cumle: 928/2521 yüklendi
+    y-cumle: 960/2521 yüklendi
+    y-cumle: 992/2521 yüklendi
+    y-cumle: 1024/2521 yüklendi
+    y-cumle: 1056/2521 yüklendi
+    y-cumle: 1088/2521 yüklendi
+    y-cumle: 1120/2521 yüklendi
+    y-cumle: 1152/2521 yüklendi
+    y-cumle: 1184/2521 yüklendi
+    y-cumle: 1216/2521 yüklendi
+    y-cumle: 1248/2521 yüklendi
+    y-cumle: 1280/2521 yüklendi
+    y-cumle: 1312/2521 yüklendi
+    y-cumle: 1344/2521 yüklendi
+    y-cumle: 1376/2521 yüklendi
+    y-cumle: 1408/2521 yüklendi
+    y-cumle: 1440/2521 yüklendi
+    y-cumle: 1472/2521 yüklendi
+    y-cumle: 1504/2521 yüklendi
+    y-cumle: 1536/2521 yüklendi
+    y-cumle: 1568/2521 yüklendi
+    y-cumle: 1600/2521 yüklendi
+    y-cumle: 1632/2521 yüklendi
+    y-cumle: 1664/2521 yüklendi
+    y-cumle: 1696/2521 yüklendi
+    y-cumle: 1728/2521 yüklendi
+    y-cumle: 1760/2521 yüklendi
+    y-cumle: 1792/2521 yüklendi
+    y-cumle: 1824/2521 yüklendi
+    y-cumle: 1856/2521 yüklendi
+    y-cumle: 1888/2521 yüklendi
+    y-cumle: 1920/2521 yüklendi
+    y-cumle: 1952/2521 yüklendi
+    y-cumle: 1984/2521 yüklendi
+    y-cumle: 2016/2521 yüklendi
+    y-cumle: 2048/2521 yüklendi
+    y-cumle: 2080/2521 yüklendi
+    y-cumle: 2112/2521 yüklendi
+    y-cumle: 2144/2521 yüklendi
+    y-cumle: 2176/2521 yüklendi
+    y-cumle: 2208/2521 yüklendi
+    y-cumle: 2240/2521 yüklendi
+    y-cumle: 2272/2521 yüklendi
+    y-cumle: 2304/2521 yüklendi
+    y-cumle: 2336/2521 yüklendi
+    y-cumle: 2368/2521 yüklendi
+    y-cumle: 2400/2521 yüklendi
+    y-cumle: 2432/2521 yüklendi
+    y-cumle: 2464/2521 yüklendi
+    y-cumle: 2496/2521 yüklendi
+    y-cumle: 2521/2521 yüklendi
+
+=== y-parca ===
+  üretilen kayıt sayısı: 268
+    y-parca: 32/268 yüklendi
+    y-parca: 64/268 yüklendi
+    y-parca: 96/268 yüklendi
+    y-parca: 128/268 yüklendi
+    y-parca: 160/268 yüklendi
+    y-parca: 192/268 yüklendi
+    y-parca: 224/268 yüklendi
+    y-parca: 256/268 yüklendi
+    y-parca: 268/268 yüklendi
+
+=== y-hukum ===
+  hafiza-large'dan scroll ile point çekiliyor (with_vector=true)...
+  hafiza-large toplam point: 156
+
+
+========== RAPOR ==========
+Toplam embed API çağrısı: 144
+Toplam embed süresi: 531.90 saniye
+
+y-dokuman: {"uretilen": 52, "yuklenen": 52, "qdrant_count": 52}
+y-paragraf: {"uretilen": 833, "yuklenen": 833, "qdrant_count": 833}
+y-paragraf-baslik: {"uretilen": 833, "yuklenen": 833, "qdrant_count": 833}
+y-cumle: {"uretilen": 2521, "yuklenen": 2521, "qdrant_count": 2521}
+y-parca: {"uretilen": 268, "yuklenen": 268, "qdrant_count": 268}
+y-hukum: {"uretilen": 129, "yuklenen": 129, "qdrant_count": 129, "toplam_hafiza_large_point": 156}
+
+Uyarı yok.
+
+Sonuç dosyası: /Users/karaok/p/pr-yazilim-ceo/konular/agent-hafiza/test/deney-kayit-yontemi/yukleme-sonuc.json
