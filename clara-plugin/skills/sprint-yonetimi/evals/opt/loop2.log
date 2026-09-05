@@ -1,0 +1,106 @@
+Split: 13 train, 7 test (holdout=0.4)
+
+============================================================
+Iteration 1/4
+Description: Clara'nın haftalık sprint planlama ve yürütme yöntemi — Çarşamba ritüeli, işi anlamadan yazmama disiplini, zorunlu sıra çıkarma, doküman-task akışı ve sprint içinde çıkan ara işlerin yönetimi. Bu skill'i "sprint planı yapalım / sprint planlama / bu hafta ne yapacağız / sprinte alalım / görev N'e başla / sprint nerede kaldı / sprinti kapatalım" denen her durumda kullan. Ayrıca bir iş listesi haftalık kapsama bölünecekse, işler arası bağımlılık çıkarılacaksa ya da yarım kalmış bir sprint devralınacaksa da kullan — planlama sırası bu skill'de yazılı ve sırası bozulduğunda iş yanlış tanımlanıyor. Kapsam dışı — ClickUp mekaniği (`clickup-duzeni` skill'i), proje sprint'leri (PA'nın alanı).
+============================================================
+Train: 21/39 correct, precision=100% recall=0% accuracy=54% (190.2s)
+  [FAIL] rate=0/3 expected=True: görev 2'ye başla
+  [FAIL] rate=0/3 expected=True: şu 4 işi haftalık kapsama bölmek istiyorum ama hangisi hangi
+  [FAIL] rate=0/3 expected=True: önümüzdeki hafta neler yapacağız oturup konuşalım. ben anlat
+  [FAIL] rate=0/3 expected=True: sprinti kapatalım, çarşamba oldu
+  [FAIL] rate=0/3 expected=True: sprint planı yapalım
+  [PASS] rate=0/3 expected=False: backend-developer.md kaç kopya var ekosistemde? grep çekip s
+  [FAIL] rate=0/3 expected=True: clara selam. bugün çarşamba, oturup bu haftayı planlayalım. 
+  [PASS] rate=0/3 expected=False: EGELI prod'a çıktı mı? PR #178'in durumuna bakabilir misin
+  [PASS] rate=0/3 expected=False: GOAT projesinde PA'nın açtığı sprint task'larına bakabilir m
+  [PASS] rate=0/3 expected=False: bu ölçümü günlüğe yaz — clickup araması gövdedeki tam kelime
+  [PASS] rate=0/3 expected=False: clickup'ta clara space'ine bir doküman sayfası aç, adı ARGE 
+  [PASS] rate=0/3 expected=False: OY ekibinin iş akışını değiştirmek istiyorum, hangi agentlar
+  [PASS] rate=0/3 expected=False: web-pa ile web-do arasındaki kanal deneyinin sonuçlarını oku
+Test : 12/21 correct, precision=100% recall=0% accuracy=57% (0.0s)
+  [FAIL] rate=0/3 expected=True: geçen hafta başladığımız sprint nerede kalmıştı? bitmeyen iş
+  [FAIL] rate=0/3 expected=True: bu işi de sprinte alalım — kanal testinde çıkan şu bulgu var
+  [FAIL] rate=0/3 expected=True: yeni bir iş anlatacağım sana, dinle sonra dokümante et. fabr
+  [PASS] rate=0/3 expected=False: fabrika ekibinin agent body'lerini oku bakalım, PQA ile PCA'
+  [PASS] rate=0/3 expected=False: şu task'ın statüsünü on hold'a çek, 42 saattir bekliyor
+  [PASS] rate=0/3 expected=False: kanal sisteminde iki BE açılırsa izolasyon nereden sağlanır?
+  [PASS] rate=0/3 expected=False: bir fikrim var — fabrikaya koordinatör alsak nasıl olur? ne 
+
+Improving description...
+Proposed (39.1s): Bu skill, Clara ile Mert'in **haftalık iş döngüsünü** yürütür. Şu durumlarda aç:
+
+- Haftayı/sprinti planlamaya oturulduğunda ("bu hafta ne yapacağız", "oturup planlayalım", "sprint planı", "elimde birkaç iş var sıralayamadım")
+- Elde bir iş listesi varsa ve bölünmesi, sıralanması, bağımlılık/darboğaz çıkarılması gerekiyorsa
+- Bir işe/göreve başlanacaksa ("görev N'e başla"), sprint durumu sorulduğunda, yarım sprint devralınırken
+- Sprint kapanışında ("sprinti kapatalım", Çarşamba geldiğinde)
+- Sprint sürerken çıkan ara iş/bulgu task mı not mu diye ayrılacağında
+
+Skill planlama oturumunun **zorunlu sırasını** taşır: önce Mert anlatır Clara dinler, sonra sorulur, kontroller yapılır, doküman yazılır, en son task açılır. Sıra bozulunca iş yanlış tanımlanır — bu yüzden planlamaya girerken skill'i **önce** aç, konuşmaya dalmadan.
+
+Kapsam dışı: ClickUp mekaniği (`clickup-duzeni`), müşteri proje sprint'leri (PA).
+
+============================================================
+Iteration 2/4
+Description: Bu skill, Clara ile Mert'in **haftalık iş döngüsünü** yürütür. Şu durumlarda aç:
+
+- Haftayı/sprinti planlamaya oturulduğunda ("bu hafta ne yapacağız", "oturup planlayalım", "sprint planı", "elimde birkaç iş var sıralayamadım")
+- Elde bir iş listesi varsa ve bölünmesi, sıralanması, bağımlılık/darboğaz çıkarılması gerekiyorsa
+- Bir işe/göreve başlanacaksa ("görev N'e başla"), sprint durumu sorulduğunda, yarım sprint devralınırken
+- Sprint kapanışında ("sprinti kapatalım", Çarşamba geldiğinde)
+- Sprint sürerken çıkan ara iş/bulgu task mı not mu diye ayrılacağında
+
+Skill planlama oturumunun **zorunlu sırasını** taşır: önce Mert anlatır Clara dinler, sonra sorulur, kontroller yapılır, doküman yazılır, en son task açılır. Sıra bozulunca iş yanlış tanımlanır — bu yüzden planlamaya girerken skill'i **önce** aç, konuşmaya dalmadan.
+
+Kapsam dışı: ClickUp mekaniği (`clickup-duzeni`), müşteri proje sprint'leri (PA).
+============================================================
+Train: 21/39 correct, precision=100% recall=0% accuracy=54% (1099.1s)
+  [FAIL] rate=0/3 expected=True: görev 2'ye başla
+  [FAIL] rate=0/3 expected=True: şu 4 işi haftalık kapsama bölmek istiyorum ama hangisi hangi
+  [FAIL] rate=0/3 expected=True: sprinti kapatalım, çarşamba oldu
+  [FAIL] rate=0/3 expected=True: önümüzdeki hafta neler yapacağız oturup konuşalım. ben anlat
+  [FAIL] rate=0/3 expected=True: clara selam. bugün çarşamba, oturup bu haftayı planlayalım. 
+  [FAIL] rate=0/3 expected=True: sprint planı yapalım
+  [PASS] rate=0/3 expected=False: backend-developer.md kaç kopya var ekosistemde? grep çekip s
+  [PASS] rate=0/3 expected=False: EGELI prod'a çıktı mı? PR #178'in durumuna bakabilir misin
+  [PASS] rate=0/3 expected=False: GOAT projesinde PA'nın açtığı sprint task'larına bakabilir m
+  [PASS] rate=0/3 expected=False: bu ölçümü günlüğe yaz — clickup araması gövdedeki tam kelime
+  [PASS] rate=0/3 expected=False: clickup'ta clara space'ine bir doküman sayfası aç, adı ARGE 
+  [PASS] rate=0/3 expected=False: OY ekibinin iş akışını değiştirmek istiyorum, hangi agentlar
+  [PASS] rate=0/3 expected=False: web-pa ile web-do arasındaki kanal deneyinin sonuçlarını oku
+Test : 12/21 correct, precision=100% recall=0% accuracy=57% (0.0s)
+  [FAIL] rate=0/3 expected=True: geçen hafta başladığımız sprint nerede kalmıştı? bitmeyen iş
+  [FAIL] rate=0/3 expected=True: bu işi de sprinte alalım — kanal testinde çıkan şu bulgu var
+  [FAIL] rate=0/3 expected=True: yeni bir iş anlatacağım sana, dinle sonra dokümante et. fabr
+  [PASS] rate=0/3 expected=False: fabrika ekibinin agent body'lerini oku bakalım, PQA ile PCA'
+  [PASS] rate=0/3 expected=False: şu task'ın statüsünü on hold'a çek, 42 saattir bekliyor
+  [PASS] rate=0/3 expected=False: bir fikrim var — fabrikaya koordinatör alsak nasıl olur? ne 
+  [PASS] rate=0/3 expected=False: kanal sisteminde iki BE açılırsa izolasyon nereden sağlanır?
+
+Improving description...
+Proposed (1133.7s): Use for Clara ve Mert'in kendi haftalık iş döngüsü (Çarşamba–Çarşamba sprint). Aç:
+
+- "sprint planı yapalım", "bu hafta / önümüzdeki hafta ne yapacağız", "oturup planlayalım", "ben anlatayım sen dinle" gibi bir planlama oturumu başlarken
+- Kafada/elde birkaç iş varken bunlar haftalık kapsama bölünecek, sıraya konacak, bağımlılık veya darboğaz çıkarılacaksa
+- "görev N'e başla", "sprint nerede kaldı", yarım sprint devralınırken
+- "sprinti kapatalım" / Çarşamba kapanışında
+- Sprint sürerken çıkan bulgu task mı not mu diye ayrılırken
+
+Planlama oturumu başlıyorsa konuşmaya dalmadan **önce** bu skill'i aç: zorunlu sıra (anla → sor → kontrol et → doküman → task) burada yazılı ve sıra bozulunca iş yanlış tanımlanıyor.
+
+Kapsam dışı: ClickUp araç mekaniği (`clickup-duzeni`), müşteri projelerinin sprint/task'ları (PA'nın alanı).
+
+============================================================
+Iteration 3/4
+Description: Use for Clara ve Mert'in kendi haftalık iş döngüsü (Çarşamba–Çarşamba sprint). Aç:
+
+- "sprint planı yapalım", "bu hafta / önümüzdeki hafta ne yapacağız", "oturup planlayalım", "ben anlatayım sen dinle" gibi bir planlama oturumu başlarken
+- Kafada/elde birkaç iş varken bunlar haftalık kapsama bölünecek, sıraya konacak, bağımlılık veya darboğaz çıkarılacaksa
+- "görev N'e başla", "sprint nerede kaldı", yarım sprint devralınırken
+- "sprinti kapatalım" / Çarşamba kapanışında
+- Sprint sürerken çıkan bulgu task mı not mu diye ayrılırken
+
+Planlama oturumu başlıyorsa konuşmaya dalmadan **önce** bu skill'i aç: zorunlu sıra (anla → sor → kontrol et → doküman → task) burada yazılı ve sıra bozulunca iş yanlış tanımlanıyor.
+
+Kapsam dışı: ClickUp araç mekaniği (`clickup-duzeni`), müşteri projelerinin sprint/task'ları (PA'nın alanı).
+============================================================

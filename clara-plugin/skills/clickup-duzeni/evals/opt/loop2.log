@@ -1,0 +1,60 @@
+Split: 13 train, 7 test (holdout=0.4)
+
+============================================================
+Iteration 1/4
+Description: Clara'nın ClickUp çalışma düzeni — doküman hiyerarşisi, task açma kuralı, isimlendirme, statü seti ve ölçülmüş araç sınırları. Bu skill'i ClickUp'a bir şey yazılacağı, bir task açılacağı ya da güncelleneceği, bir doküman sayfası kurulacağı, bir işin statüsü değişeceği ve "bunu ClickUp'a alalım / task açalım / dokümana yazalım / nerede duruyor" gibi her durumda kullan. Ayrıca ClickUp'ta bir şey ararken de kullan — arama güvenilmez ve bunun ölçülmüş sınırları burada yazılı. Kapsam dışı — proje task'ları (`ozel-yazilim:clickup` skill'i, PA'nın alanı); burası yalnız Clara space'i.
+============================================================
+Train: 21/39 correct, precision=100% recall=0% accuracy=54% (191.6s)
+  [FAIL] rate=0/3 expected=True: task'ın açıklamasını güncelle, detay dokümanının linkini ekl
+  [FAIL] rate=0/3 expected=True: görevler listesinde hangi statüler var? at risk diye bir şey
+  [FAIL] rate=0/3 expected=True: bu işi clickup'a alalım, task açalım
+  [FAIL] rate=0/3 expected=True: clickup'ta 'preload' geçen bir doküman var mı? aramaya çalış
+  [FAIL] rate=0/3 expected=True: clickup'ta clara space'ine bir doküman sayfası aç, adı ARGE 
+  [FAIL] rate=0/3 expected=True: şu task'ın statüsünü on hold'a çek, 42 saattir bekliyor ve h
+  [PASS] rate=0/3 expected=False: fabrika ekibinin agent body'lerini oku bakalım, PQA ile PCA'
+  [PASS] rate=0/3 expected=False: bugün çarşamba, oturup bu haftayı planlayalım. elimde 5-6 iş
+  [PASS] rate=0/3 expected=False: sprinti kapatalım, bitmeyen işleri yeni haftaya taşı
+  [PASS] rate=0/3 expected=False: OY projelerinde 20 oturum açık, hangisi ne kadar beklemede? 
+  [PASS] rate=0/3 expected=False: bir fikrim var, fabrikaya koordinatör alsak nasıl olur? ne d
+  [PASS] rate=0/3 expected=False: kanal sisteminde iki BE açılırsa izolasyon nereden sağlanır,
+  [PASS] rate=0/3 expected=False: görev 2'ye başla
+Test : 12/21 correct, precision=100% recall=0% accuracy=57% (0.0s)
+  [FAIL] rate=0/3 expected=True: clara doc altında kaç sayfa var, listeyi çıkarabilir misin? 
+  [FAIL] rate=0/3 expected=True: şu iki task arasına bağımlılık kur, ikincisi birincisini bek
+  [PASS] rate=0/3 expected=False: şu 4 işi haftalık kapsama bölmek istiyorum ama hangisi hangi
+  [FAIL] rate=0/3 expected=True: dün yazdığım sprint sayfasını güncellemem lazım, yedi işin a
+  [PASS] rate=0/3 expected=False: bu ölçümü kayda geçir — clickup araması gövdedeki tam kelime
+  [PASS] rate=0/3 expected=False: GOAT'ta PA'nın açtığı task'lara bakabilir misin, #PRY-17484 
+  [PASS] rate=0/3 expected=False: web sitesi projesinde clickup'tan gelen müşteri talebini dis
+
+Improving description...
+Proposed (37.5s): Clara'nın kendi ClickUp alanı (Clara space, `Görevler` listesi, `CLARA DOC` dokümanı) ile ilgili HER işte bu skill'i aç — okuma dahil. Kapsam: task açma/güncelleme (başlık, açıklama, doküman linki gömme, bağımlılık, comment), statü değiştirme veya "hangi statüler var" sorusu, doküman sayfası açma/güncelleme/hiyerarşi kurma, ClickUp'ta bir şey arama ya da "nerede duruyor / bulamadım" durumu, bir işin ClickUp'a alınması. Skill hem düzeni (isimlendirme, sayfa hiyerarşisi, sekiz statü seti, task→doküman bağı, task açma ön koşulu) hem de ölçülmüş araç tuzaklarını taşır: yazma rastgele hata veriyor, sayfa silinemiyor, güncelleme içeriği tamamen eziyor, arama yanlış sonuç getirip doğrusunu kaçırıyor. Bu tuzakları bilmeden ClickUp aracı çağırmak sessiz veri kaybı üretir — bu yüzden ClickUp MCP aracına dokunmadan önce oku. Kapsam dışı: müşteri proje task'ları (`ozel-yazilim:clickup`).
+
+============================================================
+Iteration 2/4
+Description: Clara'nın kendi ClickUp alanı (Clara space, `Görevler` listesi, `CLARA DOC` dokümanı) ile ilgili HER işte bu skill'i aç — okuma dahil. Kapsam: task açma/güncelleme (başlık, açıklama, doküman linki gömme, bağımlılık, comment), statü değiştirme veya "hangi statüler var" sorusu, doküman sayfası açma/güncelleme/hiyerarşi kurma, ClickUp'ta bir şey arama ya da "nerede duruyor / bulamadım" durumu, bir işin ClickUp'a alınması. Skill hem düzeni (isimlendirme, sayfa hiyerarşisi, sekiz statü seti, task→doküman bağı, task açma ön koşulu) hem de ölçülmüş araç tuzaklarını taşır: yazma rastgele hata veriyor, sayfa silinemiyor, güncelleme içeriği tamamen eziyor, arama yanlış sonuç getirip doğrusunu kaçırıyor. Bu tuzakları bilmeden ClickUp aracı çağırmak sessiz veri kaybı üretir — bu yüzden ClickUp MCP aracına dokunmadan önce oku. Kapsam dışı: müşteri proje task'ları (`ozel-yazilim:clickup`).
+============================================================
+Train: 21/39 correct, precision=100% recall=0% accuracy=54% (2130.4s)
+  [FAIL] rate=0/3 expected=True: bu işi clickup'a alalım, task açalım
+  [FAIL] rate=0/3 expected=True: task'ın açıklamasını güncelle, detay dokümanının linkini ekl
+  [FAIL] rate=0/3 expected=True: görevler listesinde hangi statüler var? at risk diye bir şey
+  [FAIL] rate=0/3 expected=True: clickup'ta 'preload' geçen bir doküman var mı? aramaya çalış
+  [PASS] rate=0/3 expected=False: fabrika ekibinin agent body'lerini oku bakalım, PQA ile PCA'
+  [FAIL] rate=0/3 expected=True: clickup'ta clara space'ine bir doküman sayfası aç, adı ARGE 
+  [FAIL] rate=0/3 expected=True: şu task'ın statüsünü on hold'a çek, 42 saattir bekliyor ve h
+  [PASS] rate=0/3 expected=False: OY projelerinde 20 oturum açık, hangisi ne kadar beklemede? 
+  [PASS] rate=0/3 expected=False: bugün çarşamba, oturup bu haftayı planlayalım. elimde 5-6 iş
+  [PASS] rate=0/3 expected=False: sprinti kapatalım, bitmeyen işleri yeni haftaya taşı
+  [PASS] rate=0/3 expected=False: görev 2'ye başla
+  [PASS] rate=0/3 expected=False: kanal sisteminde iki BE açılırsa izolasyon nereden sağlanır,
+  [PASS] rate=0/3 expected=False: bir fikrim var, fabrikaya koordinatör alsak nasıl olur? ne d
+Test : 12/21 correct, precision=100% recall=0% accuracy=57% (0.0s)
+  [FAIL] rate=0/3 expected=True: clara doc altında kaç sayfa var, listeyi çıkarabilir misin? 
+  [PASS] rate=0/3 expected=False: şu 4 işi haftalık kapsama bölmek istiyorum ama hangisi hangi
+  [FAIL] rate=0/3 expected=True: şu iki task arasına bağımlılık kur, ikincisi birincisini bek
+  [FAIL] rate=0/3 expected=True: dün yazdığım sprint sayfasını güncellemem lazım, yedi işin a
+  [PASS] rate=0/3 expected=False: bu ölçümü kayda geçir — clickup araması gövdedeki tam kelime
+  [PASS] rate=0/3 expected=False: GOAT'ta PA'nın açtığı task'lara bakabilir misin, #PRY-17484 
+  [PASS] rate=0/3 expected=False: web sitesi projesinde clickup'tan gelen müşteri talebini dis
+
+Improving description...

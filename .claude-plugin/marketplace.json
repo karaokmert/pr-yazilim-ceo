@@ -1,0 +1,15 @@
+{
+  "name": "clara-market",
+  "owner": {
+    "name": "PR Yazılım"
+  },
+  "description": "Clara'nın dağıtım noktası — tek plugin, tek repo (pr-yazilim-ceo).",
+  "plugins": [
+    {
+      "name": "clara",
+      "displayName": "Clara — PR Yazılım CEO Asistanı",
+      "source": "./clara-plugin",
+      "description": "Clara'nın masaüstü bedeni: gövde + 12 skill + açılış hook'u + hafıza MCP (remote)."
+    }
+  ]
+}

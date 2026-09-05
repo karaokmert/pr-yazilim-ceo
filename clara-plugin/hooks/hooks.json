@@ -1,0 +1,15 @@
+{
+  "description": "Açılışta agent'ın gövdesindeki skills: listesini okuyup omurga skill'lerini açmasını söyler — skill'ler preload edilmediği için (ölçüldü 2026-08-23) fiilen yükleyen bu direktiftir.",
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "${CLAUDE_PLUGIN_ROOT}/hooks/agent-omurga-acilis.sh"
+          }
+        ]
+      }
+    ]
+  }
+}
