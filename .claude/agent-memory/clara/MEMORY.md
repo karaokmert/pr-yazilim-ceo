@@ -54,6 +54,7 @@
 
 - [Ekran tasarımında önce sor](feedback-ekran-tasarimi-once-sor.md) — UI taslağında menüler neye göre bölünecek önce sorulur; varlık mı, soru mu
 - [Gereksinim önce, çözüm sonra](feedback-gereksinim-once-cozum-sonra.md) — gereksinim konuşulurken mimari/maliyet sorusu sorulmaz; Mert iki kez düzeltti
+- [Boşluk tespiti asıl değer](feedback_gereksinim_bosluk_tespiti.md) — "bulamadım" deyip soruya çevir; Mert onayladı: "benim görmediğimi görürsün"
 
 ## Nasıl düzeltilir — birincil kural
 
