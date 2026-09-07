@@ -162,7 +162,13 @@ BT Products'ta 11 doküman + Keba'da 3 doküman bu akışla üretildi).
    boşluklar kapanınca yazılır.
 3. **Taslağı ekranda göster, onay al** — kapsam onayı içeriği kapsamaz.
 4. **Onayla birlikte:** ClickUp sayfası (İş Planı / modül dokümanı altına) + task
-   (Full Stack bağı) + **milestone kaydını hafızaya yenile** (günün fotoğrafı).
+   (Full Stack bağı) + **milestone kaydını hafızaya yenile** — ve **önceki milestone
+   kaydını geçersizle**: metadata'ya `durum: gecersiz` + `yerine: <yeni-id>`, içeriğin
+   başına `[GEÇERSİZ — yerine: <id>]` damgası, aynı ID ile yeniden store. ⚠️ Elemeyi
+   yapan METADATA alanıdır (`durum: gecersiz` — MCP find bunu süzer); içerik damgası
+   yalnız insan okunurluğu için. Ölçüldü (2026-09-07): `gecersiz: true` gibi başka
+   alan adı İŞLEMEZ, kayıt aramada dönmeye devam eder; `durum: gecersiz` yazılınca
+   elendi.
 
 **Task dokümanı standardı hafızada:** `tur=standart, konu=task-dokumani-standardi`
 kaydı (anatomi + hiyerarşi + yazım kuralları) ve `tur=ders` düzeltme kayıtları.

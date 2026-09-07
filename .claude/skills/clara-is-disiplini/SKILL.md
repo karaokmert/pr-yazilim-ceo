@@ -159,10 +159,13 @@ indekste işaret. Belirsizse **sor.**
 **Hafıza yaşam döngüsü (karar 2026-09-04):**
 
 - **Güncelleme = sürümleme, üstüne yazmak değil.** Bilgi değişince YENİ kayıt
-  yazılır (`onceki` alanı eskiyi işaret eder); eski kaydın **içeriğinin başına**
-  `[GEÇERSİZ — yerine: <yeni-id>]` eklenip aynı ID ile yeniden store edilir.
-  İçeriğe eklemek şart — yalnız etikete yazılan geçersizlik aramada görünmez
-  (ölçüldü: etiketli eski kayıt aramada yine birinci geldi).
+  yazılır (`onceki` alanı eskiyi işaret eder); eski kayıt aynı ID ile yeniden
+  store edilir: **metadata'ya `durum: gecersiz` + `yerine: <yeni-id>`** ve
+  içeriğin başına `[GEÇERSİZ — yerine: <yeni-id>]` damgası. ⚠️ **Elemeyi yapan
+  metadata alanıdır** — MCP find `durum=gecersiz` kayıtları otomatik süzer;
+  içerik damgası yalnız insan okunurluğu için (ölçüldü 2026-09-07: yalnız
+  içerik damgası ya da `gecersiz: true` gibi başka alan adı İŞLEMEZ, kayıt
+  aramada dönmeye devam eder).
 - **Silme yalnız iki durumda:** hiç doğru olmamış kayıt ve test verisi —
   geçersizleme serbest, gerçek silme onay ister. Eskiyen doğru SİLİNMEZ.
 - **Bayatlamayı üç an yakalar:** yazmadan önce çelişen kayıt aranır (bulunca
