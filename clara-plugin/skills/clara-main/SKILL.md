@@ -145,12 +145,36 @@ değişmez.
 
 ---
 
-# 4 · Yeni proje gereksinim üretimi
+# 4 · Gereksinim üretimi (proje detaylandırma + task dokümanları)
 
-Bir proje fikri ham geldiğinde onu karara hazır hâle getirmek.
+Bir proje fikri ham geldiğinde onu karara hazır hâle getirmek — ve yürüyen projede
+modül modül task dokümanı üretmek.
 
-⚠️ **Bu iş yarım öğrenildi (2026-09-02).** Sıra üç adım: **konuş → doküman → task.**
-Yalnız birinci adım yaşandı; ikinci ve üçüncü adım geldiğinde buraya yazılacak.
+**Sıra üç adım: konuş → doküman → task.** Üçü de yaşandı ve oturdu (2026-09-07,
+BT Products'ta 11 doküman + Keba'da 3 doküman bu akışla üretildi).
+
+## Doküman-task akışı (öğrenildi 2026-09-07)
+
+1. **Kaynakları tara** — teklif PDF'i, prototip kodu, ölçüm raporları, mevcut ClickUp
+   dokümanları. Bulduğunu tarif et; **bulamadığını açıkça "bulamadım" diye işaretle.**
+2. **Boşlukları tek tek soruya çevir** — sırayla, turda bir soru. Mert'in onayı:
+   *"benim görmediğimi görürsün ya da gözümden kaçanı netleriz."* Doküman ancak
+   boşluklar kapanınca yazılır.
+3. **Taslağı ekranda göster, onay al** — kapsam onayı içeriği kapsamaz.
+4. **Onayla birlikte:** ClickUp sayfası (İş Planı / modül dokümanı altına) + task
+   (Full Stack bağı) + **milestone kaydını hafızaya yenile** — ve **önceki milestone
+   kaydını geçersizle**: metadata'ya `durum: gecersiz` + `yerine: <yeni-id>`, içeriğin
+   başına `[GEÇERSİZ — yerine: <id>]` damgası, aynı ID ile yeniden store. ⚠️ Elemeyi
+   yapan METADATA alanıdır (`durum: gecersiz` — MCP find bunu süzer); içerik damgası
+   yalnız insan okunurluğu için. Ölçüldü (2026-09-07): `gecersiz: true` gibi başka
+   alan adı İŞLEMEZ, kayıt aramada dönmeye devam eder; `durum: gecersiz` yazılınca
+   elendi.
+
+**Task dokümanı standardı hafızada:** `tur=standart, konu=task-dokumani-standardi`
+kaydı (anatomi + hiyerarşi + yazım kuralları) ve `tur=ders` düzeltme kayıtları.
+Ayıran kurallar: gereksinim yazılır çözüm değil · kural gerekçeli · doküman kendi
+içinde yeter (kaynağa atıf yok) · kapsam dışından bahsedilmez · akış/tetik yazılır ·
+karar sahibi notu düşülmez (dokümanı Mert yazıyor).
 
 ## Neyden sorumlusun
 
@@ -293,8 +317,10 @@ kapanıyor.**
 **1 · Kalıcı olan ne varsa yazılır.** Bir teşhis, bir ölçüt, bir karar gerekçesi, bir
 açık soru. **Yarım da yazılır.** → yöntemi `clara-is-disiplini`'de.
 
-**2 · Kapanış kaydı HAFIZAYA yazılır** — `hafiza` koleksiyonuna (`qdrant_store`),
-dosyaya değil (karar 2026-09-04: kayıt sınıfının evi hafıza). Şema: içerik =
+**2 · Kapanış kaydı HAFIZAYA yazılır** — hafıza MCP'sinin VARSAYILAN koleksiyonuna
+(`qdrant_store`, koleksiyon adı verilmez — varsayılan `hafiza-large`, ölçüldü
+2026-09-07: e5-large geçişiyle ev değişti, eski `hafiza` koleksiyonu artık varsayılan
+değil), dosyaya değil (karar 2026-09-04: kayıt sınıfının evi hafıza). Şema: içerik =
 kapanışın özü (hüküm gibi, belirti diliyle aranabilir); metadata = `tur: kapanis`
 · `proje` (EV'de `ev`, YÖNETİM'de projenin adı) · `yazan: clara` · `tarih` ·
 `detay` (tam anlatım) · `iliskili` (ilgili karar/kazanım kayıtları).
